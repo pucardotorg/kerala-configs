@@ -1,0 +1,80 @@
+serviceMaps:
+  serviceName: scheduler-services
+  mappings:
+    - version: 1.0
+      description: Persists Hearing details in tables
+      fromTopic: schedule-hearing
+      isTransaction: true
+      queryMaps:
+        - query: INSERT INTO hearing_booking (courtId,judgeId,caseId,hearingBookingId,date,eventType,title,description,status,startTime,endTime,createdBy,lastModifiedBy,createdTime, lastModifiedTime) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?);
+          basePath: $.*
+          jsonMaps:
+            - jsonPath: $.*.courtId
+
+            - jsonPath: $.*.judgeId
+
+            - jsonPath: $.*.caseId
+
+            - jsonPath: $.*.hearingBookingId
+
+            - jsonPath: $.*.date
+
+            - jsonPath: $.*.eventType
+
+            - jsonPath: $.*.title
+
+            - jsonPath: $.*.description
+
+            - jsonPath: $.*.status
+
+            - jsonPath: $.*.startTime
+
+            - jsonPath: $.*.endTime
+
+            - jsonPath: $.*.auditDetails.createdBy
+
+            - jsonPath: $.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.*.auditDetails.createdTime
+
+            - jsonPath: $.*.auditDetails.lastModifiedTime
+
+
+
+    - version: 1.0
+      description: Update hearing applications in table
+      fromTopic: update-schedule-hearing
+      isTransaction: true
+      queryMaps:
+        - query: UPDATE hearing_booking SET courtId =?,judgeId=?,caseId =?,hearingBookingId =?,date =?,eventType=?,title =?,description =?,status =?,startTime =?,endTime =?,createdBy =?,lastModifiedBy =?,createdTime =?, lastModifiedTime =? WHERE hearing_booking_id=?;
+          basePath: $.*
+          jsonMaps:
+            - jsonPath: $.*.courtId
+
+            - jsonPath: $.*.judgeId
+
+            - jsonPath: $.*.caseId
+
+            - jsonPath: $.*.hearingBookingId
+
+            - jsonPath: $.*.date
+
+            - jsonPath: $.*.eventType
+
+            - jsonPath: $.*.title
+
+            - jsonPath: $.*.description
+
+            - jsonPath: $.*.status
+
+            - jsonPath: $.*.startTime
+
+            - jsonPath: $.*.endTime
+
+            - jsonPath: $.*.auditDetails.createdBy
+
+            - jsonPath: $.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.*.auditDetails.createdTime
+
+            - jsonPath: $.*.auditDetails.lastModifiedTime
