@@ -1,0 +1,42 @@
+serviceMaps:
+  serviceName: scheduler-services
+  mappings:
+    - version: 1.0
+      description: Persists Judge calendar details in table
+      fromTopic: judge-calendar
+      isTransaction: true
+      queryMaps:
+        - query: INSERT INTO judge_calendar_rules (judgeId, id, ruleType, date, notes, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,?) ON CONFLICT (judgeId, date) DO UPDATE SET ruleType = ?, notes = ? ,createdBy =?,lastModifiedBy =?,createdTime =?, lastModifiedTime =? WHERE id=?;
+          basPath: $.*
+          jsonMaps:
+            - jsonPath: $.*.judgeId
+
+            - jsonPath: $.*.id
+
+            - jsonPath: $.*.ruleType
+
+            - jsonPath: $.*.date
+
+            - jsonPath: $.*.notes
+
+            - jsonPath: $.*.auditDetails.createdBy
+
+            - jsonPath: $.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.*.auditDetails.createdTime
+
+            - jsonPath: $.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.*.ruleType
+
+            - jsonPath: $.*.notes
+
+            - jsonPath: $.*.auditDetails.createdBy
+
+            - jsonPath: $.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.*.auditDetails.createdTime
+
+            - jsonPath: $.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.*.id
