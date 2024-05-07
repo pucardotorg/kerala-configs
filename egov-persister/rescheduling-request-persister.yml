@@ -6,8 +6,7 @@ serviceMaps:
       fromTopic: reschedule-hearing
       isTransaction: true
       queryMaps:
-
-        - query: INSERT INTO hearing_booking_reschedule_request(hearingBookingId,rescheduledRequestId,requesterId,reason,status,actionComment,createdBy,lastModifiedBy,createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO hearing_booking_reschedule_request(hearing_booking_id,reschedule_request_id,requester_id,reason,status,action_comment,created_by,last_modified_by,created_time, last_modified_time ,row_version ,tenant_id ,court_id ,judge_id ,documents) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,? ,? ,?);
           basePath: $.*
           jsonMaps:
             - jsonPath: $.*.hearingBookingId
@@ -33,13 +32,25 @@ serviceMaps:
             - jsonPath: $.*.auditDetails.createdTime
 
             - jsonPath: $.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.*.rowVersion
+
+            - jsonPath: $.*.tenantId
+
+            - jsonPath: $.*.judgeId
+
+            - jsonPath: $.*.caseId
+
+            - jsonPath: $.*.documents
+               type:JSON
+               dbType:JSONB
 
     - version: 1.0
       description: Update Reschedule request in table
       fromTopic: update-reschedule-hearing
       isTransaction: true
       queryMaps:
-        - query: UPDATE hearing_booking_reschedule_request SET hearingBookingId =?,rescheduledRequestId =?,requesterId =?,reason =?,status =?,actionComment =?,createdBy =?,lastModifiedBy =?,createdTime =?, lastModifiedTime =? WHERE rescheduledRequestId=?;
+        - query: UPDATE hearing_booking_reschedule_request SET hearing_booking_id =?,reschedule_request_id =?,requester_id =?,reason =?,status =?,action_comment =?,created_by =?,last_modified_by =?,created_time =?, last_modified_time =? ,row_version =? ,tenant_id =?,court_id =? ,judge_id =? ,documents =? WHERE reschedule_request_id=?;
           basePath: $.*
           jsonMaps:
             - jsonPath: $.*.hearingBookingId
@@ -65,3 +76,15 @@ serviceMaps:
             - jsonPath: $.*.auditDetails.createdTime
 
             - jsonPath: $.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.*.rowVersion
+
+            - jsonPath: $.*.tenantId
+
+            - jsonPath: $.*.judgeId
+
+            - jsonPath: $.*.caseId
+
+            - jsonPath: $.*.documents
+               type:JSON
+               dbType:JSONB
