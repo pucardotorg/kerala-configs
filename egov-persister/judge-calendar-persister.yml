@@ -3,11 +3,11 @@ serviceMaps:
   mappings:
     - version: 1.0
       description: Persists Judge calendar details in table
-      fromTopic: judge-calendar
+      fromTopic: judge-calendar-update
       isTransaction: true
       queryMaps:
-        - query: INSERT INTO judge_calendar_rules (judge_id, id, rule_type, date, notes, created_by, last_modified_by, created_time, last_modified_time, row_version, tenant_id) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?) ON CONFLICT (judgeId, date) DO UPDATE SET rule_type = ?, notes = ? ,last_modified_by =?, last_modified_time =? ,row_version =row_version +1 ,tenant_id WHERE id=?;
-          basPath: $.*
+        - query: INSERT INTO judge_calendar_rules (judge_id, id, rule_type, date, notes, created_by, last_modified_by, created_time, last_modified_time, row_version, tenant_id) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?) ON CONFLICT (judge_id, date) DO UPDATE SET rule_type = ?, notes = ? ,last_modified_by =?, last_modified_time =? ,row_version =judge_calendar_rules.row_version +1 ,tenant_id =?;
+          basePath: $.*
           jsonMaps:
             - jsonPath: $.*.judgeId
 
@@ -39,8 +39,5 @@ serviceMaps:
 
             - jsonPath: $.*.auditDetails.lastModifiedTime
 
-            - jsonPath: $.*.rowVersion
-
             - jsonPath: $.*.tenantId
 
-            - jsonPath: $.*.id
