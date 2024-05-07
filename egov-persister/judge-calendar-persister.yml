@@ -6,7 +6,7 @@ serviceMaps:
       fromTopic: judge-calendar
       isTransaction: true
       queryMaps:
-        - query: INSERT INTO judge_calendar_rules (judgeId, id, ruleType, date, notes, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,?) ON CONFLICT (judgeId, date) DO UPDATE SET ruleType = ?, notes = ? ,createdBy =?,lastModifiedBy =?,createdTime =?, lastModifiedTime =? WHERE id=?;
+        - query: INSERT INTO judge_calendar_rules (judge_id, id, rule_type, date, notes, created_by, last_modified_by, created_time, last_modified_time, row_version, tenant_id) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?) ON CONFLICT (judgeId, date) DO UPDATE SET rule_type = ?, notes = ? ,last_modified_by =?, last_modified_time =? ,row_version =row_version +1 ,tenant_id WHERE id=?;
           basPath: $.*
           jsonMaps:
             - jsonPath: $.*.judgeId
@@ -27,16 +27,20 @@ serviceMaps:
 
             - jsonPath: $.*.auditDetails.lastModifiedTime
 
+            - jsonPath: $.*.rowVersion
+
+            - jsonPath: $.*.tenantId
+
             - jsonPath: $.*.ruleType
 
             - jsonPath: $.*.notes
 
-            - jsonPath: $.*.auditDetails.createdBy
-
             - jsonPath: $.*.auditDetails.lastModifiedBy
 
-            - jsonPath: $.*.auditDetails.createdTime
-
             - jsonPath: $.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.*.rowVersion
+
+            - jsonPath: $.*.tenantId
 
             - jsonPath: $.*.id
