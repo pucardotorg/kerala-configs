@@ -1,47 +1,70 @@
 serviceMaps:
-  - serviceName: AsyncSubmissionService
-    mappings:
-      - version: 1.0
-        description: Persists async submissions
-        fromTopic: save-async-submissions
-        isTransaction: true
-        isAuditEnabled: true
-        queryMaps:
-          - query: INSERT INTO async_submission (court_id, case_id, async_submission_id, submission_type, title, description, status, submission_date, response_date, created_by, created_time, last_modified_by, last_modified_time, row_version, tenant_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-            basePath: $.asyncSubmissions.*
-            jsonMaps:
-              - jsonPath: $.asyncSubmissions.submissionId
-              - jsonPath: $.asyncSubmissions.courtId
-              - jsonPath: $.asyncSubmissions.caseId
-              - jsonPath: $.asyncSubmissions.submissionId
-              - jsonPath: $.asyncSubmissions.submissionType
-              - jsonPath: $.asyncSubmissions.title
-              - jsonPath: $.asyncSubmissions.description
-              - jsonPath: $.asyncSubmissions.status
-              - jsonPath: $.asyncSubmissions.submissionDate
-              - jsonPath: $.asyncSubmissions.responseDate
-              - jsonPath: $.asyncSubmissions.auditDetails.createdBy
-              - jsonPath: $.asyncSubmissions.auditDetails.createdTime
-              - jsonPath: $.asyncSubmissions.auditDetails.lastModifiedBy
-              - jsonPath: $.asyncSubmissions.auditDetails.lastModifiedTime
-              - jsonPath: $.asyncSubmissions.rowVersion
-              - jsonPath: $.asyncSubmissions.tenantId
+  serviceName: AsyncSubmissionService
+  mappings:
+    - version: 1.0
+      description: Persists async submissions
+      fromTopic: save-async-submissions
+      isTransaction: true
+      isAuditEnabled: true
+      queryMaps:
+        - query: INSERT INTO async_submission (court_id, case_id, async_submission_id, submission_type, title, description, status, submission_date, response_date, created_by, created_time, last_modified_by, last_modified_time, row_version, tenant_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: $.asyncSubmissions.*
+          jsonMaps:
+            - jsonPath: $.asyncSubmissions.submissionId
 
-      - version: 1.0
-        description: Updates async submissions
-        fromTopic: update-async-submissions
-        isTransaction: true
-        isAuditEnabled: true
-        queryMaps:
-          - query: UPDATE async_submission SET submission_type = ?, status = ?, submission_date = ?, response_date = ?, last_modified_by = ?, last_modified_time = ?, row_version = ? WHERE async_submission_id = ?;
-            basePath: $.asyncSubmissions.*
-            jsonMaps:
-              - jsonPath: $.asyncSubmissions.submissionType
-              - jsonPath: $.asyncSubmissions.status
-              - jsonPath: $.asyncSubmissions.submissionDate
-              - jsonPath: $.asyncSubmissions.responseDate
-              - jsonPath: $.asyncSubmissions.auditDetails.lastModifiedBy
-              - jsonPath: $.asyncSubmissions.auditDetails.lastModifiedTime
-              - jsonPath: $.asyncSubmissions.rowVersion
-              - jsonPath: $.asyncSubmissions.tenantId
-              - jsonPath: $.asyncSubmissions.submissionId
+            - jsonPath: $.asyncSubmissions.courtId
+
+            - jsonPath: $.asyncSubmissions.caseId
+
+            - jsonPath: $.asyncSubmissions.submissionId
+
+            - jsonPath: $.asyncSubmissions.submissionType
+
+            - jsonPath: $.asyncSubmissions.title
+
+            - jsonPath: $.asyncSubmissions.description
+
+            - jsonPath: $.asyncSubmissions.status
+
+            - jsonPath: $.asyncSubmissions.submissionDate
+
+            - jsonPath: $.asyncSubmissions.responseDate
+
+            - jsonPath: $.asyncSubmissions.auditDetails.createdBy
+
+            - jsonPath: $.asyncSubmissions.auditDetails.createdTime
+
+            - jsonPath: $.asyncSubmissions.auditDetails.lastModifiedBy
+
+            - jsonPath: $.asyncSubmissions.auditDetails.lastModifiedTime
+
+            - jsonPath: $.asyncSubmissions.rowVersion
+
+            - jsonPath: $.asyncSubmissions.tenantId
+
+    - version: 1.0
+      description: Updates async submissions
+      fromTopic: update-async-submissions
+      isTransaction: true
+      isAuditEnabled: true
+      queryMaps:
+        - query: UPDATE async_submission SET submission_type = ?, status = ?, submission_date = ?, response_date = ?, last_modified_by = ?, last_modified_time = ?, row_version = ? WHERE async_submission_id = ?;
+          basePath: $.asyncSubmissions.*
+          jsonMaps:
+            - jsonPath: $.asyncSubmissions.submissionType
+
+            - jsonPath: $.asyncSubmissions.status
+
+            - jsonPath: $.asyncSubmissions.submissionDate
+
+            - jsonPath: $.asyncSubmissions.responseDate
+
+            - jsonPath: $.asyncSubmissions.auditDetails.lastModifiedBy
+
+            - jsonPath: $.asyncSubmissions.auditDetails.lastModifiedTime
+
+            - jsonPath: $.asyncSubmissions.rowVersion
+
+            - jsonPath: $.asyncSubmissions.tenantId
+
+            - jsonPath: $.asyncSubmissions.submissionId
