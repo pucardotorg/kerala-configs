@@ -8,22 +8,22 @@ serviceMaps:
       isAuditEnabled: true
       queryMaps:
         - query: INSERT INTO cause_list (court_id, judge_id, tenant_id, case_id, case_title, litigant_names, hearing_type, tentative_slot, case_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
-          basePath: $.CauseList.*
+          basePath: CauseList.*
           jsonMaps:
-            - jsonPath: $.CauseList.*.court_id
+            - jsonPath: $.CauseList.*.courtId
 
-            - jsonPath: $.CauseList.*.judge_id
+            - jsonPath: $.CauseList.*.judgeId
 
-            - jsonPath: $.CauseList.*.tenant_id
+            - jsonPath: $.CauseList.*.tenantId
 
-            - jsonPath: $.CauseList.*.case_id
+            - jsonPath: $.CauseList.*.caseId
 
-            - jsonPath: $.CauseList.*.case_title
+            - jsonPath: $.CauseList.*.caseTitle
 
-            - jsonPath: $.CauseList.*.litigant_names
+            - jsonPath: $.CauseList.*.litigantNames
 
-            - jsonPath: $.CauseList.*.hearing_type
+            - jsonPath: $.CauseList.*.typeOfHearing
 
-            - jsonPath: $.CauseList.*.tentative_slot
+            - jsonPath: $.CauseList.*.tentativeSlot
 
-            - jsonPath: $.CauseList.*.case_date
+            - jsonPath: $.CauseList.*.caseDate
