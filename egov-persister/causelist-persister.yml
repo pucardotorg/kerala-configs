@@ -1,0 +1,29 @@
+serviceMaps:
+  serviceName: CauseList-Service
+  mappings:
+    - version: 1.0
+      description: Persists the cause list data
+      fromTopic: insert-cause-list
+      isTransaction: true
+      isAuditEnabled: true
+      queryMaps:
+        - query: INSERT INTO cause_list (court_id, judge_id, tenant_id, case_id, case_title, litigant_names, hearing_type, tentative_slot, case_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: CauseList.*
+          jsonMaps:
+            - jsonPath: $.CauseList.*.courtId
+
+            - jsonPath: $.CauseList.*.judgeId
+
+            - jsonPath: $.CauseList.*.tenantId
+
+            - jsonPath: $.CauseList.*.caseId
+
+            - jsonPath: $.CauseList.*.caseTitle
+
+            - jsonPath: $.CauseList.*.litigantNames
+
+            - jsonPath: $.CauseList.*.typeOfHearing
+
+            - jsonPath: $.CauseList.*.tentativeSlot
+
+            - jsonPath: $.CauseList.*.caseDate

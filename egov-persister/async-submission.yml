@@ -1,0 +1,68 @@
+serviceMaps:
+  serviceName: AsyncSubmissionService
+  mappings:
+    - version: 1.0
+      description: Persists async submissions
+      fromTopic: insert-async-submissions
+      isTransaction: true
+      isAuditEnabled: true
+      queryMaps:
+        - query: INSERT INTO async_submission (async_submission_id, court_id, case_id, judge_id, submission_type, title, description, status, submission_date, response_date, created_by, created_time, last_modified_by, last_modified_time, row_version, tenant_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: AsyncSubmissions.*
+          jsonMaps:
+            - jsonPath: $.AsyncSubmissions.*.submissionId
+
+            - jsonPath: $.AsyncSubmissions.*.courtId
+
+            - jsonPath: $.AsyncSubmissions.*.caseId
+
+            - jsonPath: $.AsyncSubmissions.*.judgeId
+
+            - jsonPath: $.AsyncSubmissions.*.submissionType
+
+            - jsonPath: $.AsyncSubmissions.*.title
+
+            - jsonPath: $.AsyncSubmissions.*.description
+
+            - jsonPath: $.AsyncSubmissions.*.status
+
+            - jsonPath: $.AsyncSubmissions.*.submissionDate
+
+            - jsonPath: $.AsyncSubmissions.*.responseDate
+
+            - jsonPath: $.AsyncSubmissions.*.auditDetails.createdBy
+
+            - jsonPath: $.AsyncSubmissions.*.auditDetails.createdTime
+
+            - jsonPath: $.AsyncSubmissions.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.AsyncSubmissions.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.AsyncSubmissions.*.rowVersion
+
+            - jsonPath: $.AsyncSubmissions.*.tenantId
+
+    - version: 1.0
+      description: Updates async submissions
+      fromTopic: update-async-submissions
+      isTransaction: true
+      isAuditEnabled: true
+      queryMaps:
+        - query: UPDATE async_submission SET submission_type = ?, status = ?, submission_date = ?, response_date = ?, last_modified_by = ?, last_modified_time = ?, row_version = ? WHERE async_submission_id = ?;
+          basePath: AsyncSubmissions.*
+          jsonMaps:
+            - jsonPath: $.AsyncSubmissions.*.submissionType
+
+            - jsonPath: $.AsyncSubmissions.*.status
+
+            - jsonPath: $.AsyncSubmissions.*.submissionDate
+
+            - jsonPath: $.AsyncSubmissions.*.responseDate
+
+            - jsonPath: $.AsyncSubmissions.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.AsyncSubmissions.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.AsyncSubmissions.*.rowVersion
+
+            - jsonPath: $.AsyncSubmissions.*.submissionId
