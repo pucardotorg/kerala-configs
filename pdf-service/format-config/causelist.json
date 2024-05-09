@@ -84,8 +84,8 @@
             "*"
           ],
           "body": [
-            "[{\"text\":\"S No.\",\"border\":[true,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"Case Number\",\"border\":[false,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"Type of Hearing\",\"border\":[false,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"Tentative Slot\",\"border\":[false,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"Advocate Names\",\"border\":[false,true,true,true],\"style\":\"receipt-table-key\"}]",
-            "{{#causeLists}}[{\"text\":\"{{index}}\",\"border\":[true,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"{{caseId}}\",\"border\":[false,true,true,true]},{\"text\":\"{{typeOfHearing}}\",\"border\":[false,true,true,true]},{\"text\":\"{{tentativeSlot}}\",\"border\":[false,true,true,true]},{\"text\":\"{{litigantNames}}\",\"border\":[false,true,true,true]}]{{/causeLists}}"
+            "[{\"text\":\"S No.\",\"border\":[true,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"Case Number\",\"border\":[false,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"Type of Hearing\",\"border\":[false,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"Tentative Slot\",\"border\":[false,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"Party Names\",\"border\":[false,true,true,true],\"style\":\"receipt-table-key\"}]",
+            "{{#causeLists}}[{\"text\":\"{{index}}\",\"border\":[true,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"{{caseId}}\",\"border\":[false,true,true,true]},{\"text\":\"{{typeOfHearing}}\",\"border\":[false,true,true,true]},{\"text\":\"{{tentativeSlot}}\",\"border\":[false,true,true,true]},{\"text\":\"{{caseTitle}}\",\"border\":[false,true,true,true]}]{{/causeLists}}"
           ]
         },
         "layout": {}
