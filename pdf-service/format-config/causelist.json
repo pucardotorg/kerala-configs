@@ -76,6 +76,7 @@
       {
         "style": "pt-reciept-citizen-table",
         "table": {
+          "headerRows": 1,
           "widths": [
             30,
             "*",
@@ -164,6 +165,7 @@
         "color": "#484848",
         "fontSize": 10
       }
-    }
+    },
+    "footer": "(function(currentPage, pageCount) { return currentPage.toString() + ' of ' + pageCount; })"
   }
 }
