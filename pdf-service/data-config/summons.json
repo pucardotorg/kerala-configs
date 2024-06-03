@@ -1,0 +1,64 @@
+{
+  "key": "summons",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.SummonDetails",
+    "entityIdPath": "$.OrderDetails.orderId",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "respondentName",
+                "value": {
+                  "path": "$.respondentDetails.respondentName"
+                }
+              },
+              {
+                "variable": "respondentAddress",
+                "value": {
+                  "path": "$.respondentDetails.respondentAddress"
+                }
+              },
+              {
+                "variable": "caseType",
+                "value": {
+                  "path": "$.orderDetails.caseType"
+                }
+              },
+              {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.complainantDetails.complainantName"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.orderDetails.judgeName"
+                }
+              },
+              {
+                "variable": "hearingDate",
+                "value": {
+                  "path": "$.orderDetails.hearingDate"
+                }
+              },
+              {
+                "variable": "issueDate",
+                "value": {
+                  "path": "$.orderDetails.issueDate"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
