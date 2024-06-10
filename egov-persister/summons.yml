@@ -7,36 +7,37 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
-        - query: INSERT INTO summons (summons_id, order_id, tenant_id, order_type, channel_name, is_accepted_by_channel, request_date, status_of_delivery, additional_fields, created_by, last_modified_by, created_time, last_modified_time, row_version) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO summons_delivery (summons_id, case_id, tenant_id, doc_type, channel_name, payment_fees, payment_transaction_id, payment_status, is_accepted_by_channel, channel_acknowledgement_id, delivery_request_date, delivery_status, additional_fields, created_by, last_modified_by, created_time, last_modified_time, row_version) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: c.*
           jsonMaps:
-            - jsonPath: $.Summons.*.summonsId
+            - jsonPath: $.SummonsDelivery.summonsId
 
-            - jsonPath: $.Summons.*.orderId
+            - jsonPath: $.SummonsDelivery.orderId
 
-            - jsonPath: $.Summons.*.tenantId
+            - jsonPath: $.SummonsDelivery.tenantId
 
-            - jsonPath: $.Summons.*.orderType
+            - jsonPath: $.SummonsDelivery.orderType
 
-            - jsonPath: $.Summons.*.channelName
+            - jsonPath: $.SummonsDelivery.channelName
 
-            - jsonPath: $.Summons.*.isAcceptedByChannel
+            - jsonPath: $.SummonsDelivery.isAcceptedByChannel
 
-            - jsonPath: $.Summons.*.requestDate
+            - jsonPath: $.SummonsDelivery.requestDate
 
-            - jsonPath: $.Summons.*.statusOfDelivery
+            - jsonPath: $.SummonsDelivery.statusOfDelivery
 
-            - jsonPath: $.Summons.*.additionalFields
+            - jsonPath: $.SummonsDelivery.additionalFields
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.SummonsDelivery.auditDetails.createdBy
 
-            - jsonPath: $.Summons.*.auditDetails.createdBy
+            - jsonPath: $.SummonsDelivery.auditDetails.createdTime
 
-            - jsonPath: $.Summons.*.auditDetails.createdTime
+            - jsonPath: $.SummonsDelivery.auditDetails.lastModifiedBy
 
-            - jsonPath: $.Summons.*.auditDetails.lastModifiedBy
+            - jsonPath: $.SummonsDelivery.auditDetails.lastModifiedTime
 
-            - jsonPath: $.Summons.*.auditDetails.lastModifiedTime
-
-            - jsonPath: $.Summons.*.rowVersion
+            - jsonPath: $.SummonsDelivery.rowVersion
 
     - version: 1.0
       description: Updates Summons
@@ -44,19 +45,20 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
-        - query: UPDATE summons SET is_accepted_by_channel = ?, status_of_delivery = ?, additional_fields = ?, last_modified_by = ?, last_modified_time = ?, row_version = ? WHERE summons_id = ?;
+        - query: UPDATE summons_delivery SET is_accepted_by_channel = ?, delivery_status = ?, additional_fields = ?, last_modified_by = ?, last_modified_time = ?, row_version = ? WHERE summons_id = ?;
           basePath: Summons.*
           jsonMaps:
-            - jsonPath: $.Summons.*.isAcceptedByChannel
+            - jsonPath: $.SummonsDelivery.isAcceptedByChannel
 
-            - jsonPath: $.Summons.*.statusOfDelivery
+            - jsonPath: $.SummonsDelivery.statusOfDelivery
 
-            - jsonPath: $.Summons.*.additionalFields
+            - jsonPath: $.SummonsDelivery.additionalFields
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.SummonsDelivery.auditDetails.lastModifiedBy
 
-            - jsonPath: $.Summons.*.auditDetails.lastModifiedBy
+            - jsonPath: $.SummonsDelivery.auditDetails.lastModifiedTime
 
-            - jsonPath: $.Summons.*.auditDetails.lastModifiedTime
+            - jsonPath: $.SummonsDelivery.rowVersion
 
-            - jsonPath: $.Summons.*.rowVersion
-
-            - jsonPath: $.Summons.*.submissionId
+            - jsonPath: $.SummonsDelivery.summonsId
