@@ -61,7 +61,7 @@
             ],
             [
               {
-                "text": "WHEREAS your attendance is necessary to answer to a charge of {{caseType}}, you are hereby required to appear in person (or by pleader, as the case may be) before the {{judgeName}} of {{courtName}} on the day of {{hearingDate}}. Herein fail not.",
+                "text": "WHEREAS your attendance is necessary to answer to a charge of {{caseCharge}}, you are hereby required to appear in person (or by pleader, as the case may be) before the {{judgeName}} of {{courtName}} on the day of {{hearingDate}}. Herein fail not.",
                 "style": "form-sub-body"
               }
             ]

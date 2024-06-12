@@ -15,43 +15,50 @@
               {
                 "variable": "respondentName",
                 "value": {
-                  "path": "$.respondentDetails.name"
+                  "path": "$.respondentDetails.name",
+                  "defaultValue": "NA"
                 }
               },
               {
                 "variable": "respondentAddress",
                 "value": {
-                  "path": "$.respondentDetails.address"
+                  "path": "$.respondentDetails.address",
+                  "defaultValue": "NA"
                 }
               },
               {
-                "variable": "caseType",
+                "variable": "caseCharge",
                 "value": {
-                  "path": "$.caseDetails.caseType"
+                  "path": "$.caseDetails.caseCharge",
+                  "defaultValue": "NA"
                 }
               },
               {
                 "variable": "judgeName",
                 "value": {
-                  "path": "$.caseDetails.judgeName"
+                  "path": "$.caseDetails.judgeName",
+                  "defaultValue": "NA"
                 }
               },
               {
                 "variable": "courtName",
                 "value": {
-                  "path": "$.caseDetails.courtName"
+                  "path": "$.caseDetails.courtName",
+                  "defaultValue": "NA"
                 }
               },
               {
                 "variable": "hearingDate",
                 "value": {
-                  "path": "$.caseDetails.hearingDate"
+                  "path": "$.caseDetails.hearingDate",
+                  "defaultValue": "NA"
                 }
               },
               {
                 "variable": "issueDate",
                 "value": {
-                  "path": "$.summonDetails.issueDate"
+                  "path": "$.summonDetails.issueDate",
+                  "defaultValue": "NA"
                 }
               }
             ]
