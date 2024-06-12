@@ -3,8 +3,8 @@
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
-    "baseKeyPath": "$.SummonDetails",
-    "entityIdPath": "$.OrderDetails.orderId",
+    "baseKeyPath": "$.TaskSummon",
+    "entityIdPath": "$.SummonDetails.summonId",
     "isCommonTableBorderRequired": true,
     "mappings": [
       {
@@ -15,43 +15,43 @@
               {
                 "variable": "respondentName",
                 "value": {
-                  "path": "$.respondentDetails.respondentName"
+                  "path": "$.respondentDetails.name"
                 }
               },
               {
                 "variable": "respondentAddress",
                 "value": {
-                  "path": "$.respondentDetails.respondentAddress"
+                  "path": "$.respondentDetails.address"
                 }
               },
               {
                 "variable": "caseType",
                 "value": {
-                  "path": "$.orderDetails.caseType"
-                }
-              },
-              {
-                "variable": "complainantName",
-                "value": {
-                  "path": "$.complainantDetails.complainantName"
+                  "path": "$.caseDetails.caseType"
                 }
               },
               {
                 "variable": "judgeName",
                 "value": {
-                  "path": "$.orderDetails.judgeName"
+                  "path": "$.caseDetails.judgeName"
+                }
+              },
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.caseDetails.courtName"
                 }
               },
               {
                 "variable": "hearingDate",
                 "value": {
-                  "path": "$.orderDetails.hearingDate"
+                  "path": "$.caseDetails.hearingDate"
                 }
               },
               {
                 "variable": "issueDate",
                 "value": {
-                  "path": "$.orderDetails.issueDate"
+                  "path": "$.summonDetails.issueDate"
                 }
               }
             ]
