@@ -67,7 +67,22 @@
             ]
           ]
         },
-        "layout": "noBorders"
+        "layout": "noBorders",
+        "margin": [
+          0,
+          20,
+          0,
+          20
+        ]
+      },
+      {
+        "text": "",
+        "margin": [
+          0,
+          20,
+          0,
+          0
+        ]
       },
       {
         "style": "footer-content",
@@ -85,18 +100,24 @@
             [
               {
                 "text": "Seal of the Court",
-                "style": "footer-text"
+                "style": "footer-seal"
               }
             ],
             [
               {
                 "text": "Signature",
-                "style": "footer-bottom"
+                "style": "footer-signature"
               }
             ]
           ]
         },
-        "layout": "noBorders"
+        "layout": "noBorders",
+        "margin": [
+          0,
+          20,
+          0,
+          0
+        ]
       }
     ],
     "styles": {
@@ -163,13 +184,24 @@
           0,
           15,
           0,
-          -40
+          15
         ],
         "bold": true,
         "color": "#000000",
-        "alignment": "center"
+        "alignment": "left"
       },
-      "footer-bottom": {
+      "footer-seal": {
+        "margin": [
+          0,
+          15,
+          0,
+          20
+        ],
+        "bold": true,
+        "color": "#000000",
+        "alignment": "left"
+      },
+      "footer-signature": {
         "margin": [
           0,
           50,
