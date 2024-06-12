@@ -7,10 +7,10 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
-        - query: INSERT INTO summons_delivery (summons_id, case_id, tenant_id, doc_type, channel_name, payment_fees, payment_transaction_id, payment_status, is_accepted_by_channel, channel_acknowledgement_id, delivery_request_date, delivery_status, additional_fields, created_by, last_modified_by, created_time, last_modified_time, row_version) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO summons_delivery (summon_id, case_id, tenant_id, doc_type, channel_name, payment_fees, payment_transaction_id, payment_status, is_accepted_by_channel, channel_acknowledgement_id, delivery_request_date, delivery_status, additional_fields, created_by, last_modified_by, created_time, last_modified_time, row_version) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: c.*
           jsonMaps:
-            - jsonPath: $.SummonsDelivery.summonsId
+            - jsonPath: $.SummonsDelivery.summonId
 
             - jsonPath: $.SummonsDelivery.orderId
 
@@ -20,11 +20,19 @@ serviceMaps:
 
             - jsonPath: $.SummonsDelivery.channelName
 
+            - jsonPath: $.SummonsDelivery.paymentFees
+
+            - jsonPath: $.SummonsDelivery.paymentTransactionId
+
+            - jsonPath: $.SummonsDelivery.paymentStatus
+
             - jsonPath: $.SummonsDelivery.isAcceptedByChannel
 
-            - jsonPath: $.SummonsDelivery.requestDate
+            - jsonPath: $.SummonsDelivery.channelAcknowledgementId
 
-            - jsonPath: $.SummonsDelivery.statusOfDelivery
+            - jsonPath: $.SummonsDelivery.deliveryRequestDate
+
+            - jsonPath: $.SummonsDelivery.deliveryStatus
 
             - jsonPath: $.SummonsDelivery.additionalFields
               type: JSON
@@ -50,7 +58,7 @@ serviceMaps:
           jsonMaps:
             - jsonPath: $.SummonsDelivery.isAcceptedByChannel
 
-            - jsonPath: $.SummonsDelivery.statusOfDelivery
+            - jsonPath: $.SummonsDelivery.deliveryStatus
 
             - jsonPath: $.SummonsDelivery.additionalFields
               type: JSON
@@ -61,4 +69,4 @@ serviceMaps:
 
             - jsonPath: $.SummonsDelivery.rowVersion
 
-            - jsonPath: $.SummonsDelivery.summonsId
+            - jsonPath: $.SummonsDelivery.summonId
