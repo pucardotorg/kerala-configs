@@ -1,0 +1,185 @@
+{
+  "key": "summons",
+  "config": {
+    "content": [
+      {
+        "style": "tl-head",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "THE SECOND SCHEDULE",
+                    "style": "form-header"
+                  },
+                  {
+                    "text": "(See section 476)",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "FORM NO.1",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "SUMMONS TO AN ACCUSED PERSON",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "(See section 61)",
+                    "style": "form-sub-header"
+                  }
+                ],
+                "alignment": "center",
+                "margin": [
+                  0,
+                  20,
+                  0,
+                  20
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "form-body",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "To {{respondentName}} of {{respondentAddress}}",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "WHEREAS your attendance is necessary to answer to a charge of {{caseCharge}}, you are hereby required to appear in person (or by pleader, as the case may be) before the {{judgeName}} of {{courtName}} on the day of {{hearingDate}}. Herein fail not.",
+                "style": "form-sub-body"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "footer-content",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Dated, this day of {{issueDate}}.",
+                "style": "footer-text"
+              }
+            ],
+            [
+              {
+                "text": "Seal of the Court",
+                "style": "footer-text"
+              }
+            ],
+            [
+              {
+                "text": "Signature",
+                "style": "footer-bottom"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "tl-head": {
+        "fillColor": "white",
+        "margin": [
+          -41,
+          -41,
+          -41,
+          0
+        ]
+      },
+      "form-header": {
+        "color": "#484848",
+        "fontFamily": "Roboto",
+        "fontSize": 16,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+      "form-sub-header": {
+        "color": "#484848",
+        "fontFamily": "Roboto",
+        "fontSize": 13,
+        "letterSpacing": 1.6,
+        "margin": [
+          0,
+          6,
+          0,
+          0
+        ]
+      },
+      "form-body": {
+        "fontSize": 12,
+        "color": "#484848",
+        "margin": [
+          -25,
+          18,
+          -8,
+          -8
+        ]
+      },
+      "form-sub-body": {
+        "fontSize": 12,
+        "color": "#484848",
+        "margin": [
+          -25,
+          30,
+          -8,
+          -8
+        ]
+      },
+      "footer-content": {
+        "color": "#484848",
+        "fontSize": 8,
+        "margin": [
+          30,
+          -20,
+          0,
+          0
+        ]
+      },
+      "footer-text": {
+        "margin": [
+          0,
+          15,
+          0,
+          -40
+        ],
+        "bold": true,
+        "color": "#000000",
+        "alignment": "center"
+      },
+      "footer-bottom": {
+        "margin": [
+          0,
+          50,
+          0,
+          0
+        ],
+        "bold": true,
+        "color": "#000000",
+        "alignment": "right"
+      }
+    }
+  }
+}
