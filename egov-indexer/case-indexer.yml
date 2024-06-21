@@ -12,7 +12,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.cases
           customJsonMapping:
-            indexMapping: {"Data":{"caseDetails":{},"history":{}}}
+            indexMapping: { "Data": { "caseDetails": {}, "history": {} } }
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.caseDetails.id
@@ -32,6 +32,12 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.courtId
               - inJsonPath: $.benchId
                 outJsonPath: $.Data.caseDetails.benchId
+              - inJsonPath: $.judgeId
+                outJsonPath: $.Data.caseDetails.judgeId
+              - inJsonPath: $.stage
+                outJsonPath: $.Data.caseDetails.stage
+              - inJsonPath: $.substage
+                outJsonPath: $.Data.caseDetails.substage
               - inJsonPath: $.filingDate
                 outJsonPath: $.Data.caseDetails.filingDate
               - inJsonPath: $.registrationDate
@@ -58,8 +64,37 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.additionalDetails
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
-                queryParam: businessIds=$.caseNumber,tenantId=$.tenantId,history=true
-                apiRequest: { "RequestInfo": { "apiId": "","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "pg","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "pg" } ] } } }
+                queryParam: businessIds=$.filingNumber,tenantId=$.tenantId,history=true
+                apiRequest:
+                  {
+                    "RequestInfo":
+                      {
+                        "apiId": "",
+                        "ver": "1.0",
+                        "ts": 1502890899493,
+                        "action": "asd",
+                        "did": "4354648646",
+                        "key": "xyz",
+                        "msgId": "654654",
+                        "requesterId": "61",
+                        "authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8",
+                        "userInfo":
+                          {
+                            "id": 1,
+                            "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067",
+                            "type": "EMPLOYEE",
+                            "tenantId": "pg",
+                            "roles":
+                              [
+                                {
+                                  "name": "Employee",
+                                  "code": "EMPLOYEE",
+                                  "tenantId": "pg",
+                                },
+                              ],
+                          },
+                      },
+                  }
                 uriResponseMapping:
                   - inJsonPath: $.ProcessInstances
                     outJsonPath: $.Data.history
@@ -78,7 +113,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.cases
           customJsonMapping:
-            indexMapping: {"Data":{"caseDetails":{},"history":{}}}
+            indexMapping: { "Data": { "caseDetails": {}, "history": {} } }
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.caseDetails.id
@@ -98,6 +133,12 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.courtId
               - inJsonPath: $.benchId
                 outJsonPath: $.Data.caseDetails.benchId
+              - inJsonPath: $.judgeId
+                outJsonPath: $.Data.caseDetails.judgeId
+              - inJsonPath: $.stage
+                outJsonPath: $.Data.caseDetails.stage
+              - inJsonPath: $.substage
+                outJsonPath: $.Data.caseDetails.substage
               - inJsonPath: $.filingDate
                 outJsonPath: $.Data.caseDetails.filingDate
               - inJsonPath: $.registrationDate
@@ -124,8 +165,37 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.additionalDetails
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
-                queryParam: businessIds=$.caseNumber,tenantId=$.tenantId,history=true
-                apiRequest: { "RequestInfo": { "apiId": "","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "pg","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "pg" } ] } } }
+                queryParam: businessIds=$.filingNumber,tenantId=$.tenantId,history=true
+                apiRequest:
+                  {
+                    "RequestInfo":
+                      {
+                        "apiId": "",
+                        "ver": "1.0",
+                        "ts": 1502890899493,
+                        "action": "asd",
+                        "did": "4354648646",
+                        "key": "xyz",
+                        "msgId": "654654",
+                        "requesterId": "61",
+                        "authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8",
+                        "userInfo":
+                          {
+                            "id": 1,
+                            "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067",
+                            "type": "EMPLOYEE",
+                            "tenantId": "pg",
+                            "roles":
+                              [
+                                {
+                                  "name": "Employee",
+                                  "code": "EMPLOYEE",
+                                  "tenantId": "pg",
+                                },
+                              ],
+                          },
+                      },
+                  }
                 uriResponseMapping:
                   - inJsonPath: $.ProcessInstances
                     outJsonPath: $.Data.history
