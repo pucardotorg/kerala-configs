@@ -12,7 +12,7 @@ serviceMaps:
           jsonMaps:
             - jsonPath: $.SummonsDelivery.summonId
 
-            - jsonPath: $.SummonsDelivery.orderId
+            - jsonPath: $.SummonsDelivery.caseId
 
             - jsonPath: $.SummonsDelivery.tenantId
 
