@@ -1,0 +1,186 @@
+ServiceMaps:
+  serviceName: Reschedule service
+  version: 1.0.0
+  mappings:
+    - topic: reschedule-hearing
+      configKey: INDEX
+      indexes:
+        - name: reschedule-index-test
+          type: general
+          id: $.rescheduledRequestId
+          isBulk: false
+          timeStampField: $.auditDetails.createdTime
+          jsonPath: $.reScheduleHearing
+          customJsonMapping:
+            indexMapping:
+              {
+                "Data":
+                  { "reScheduleHearing": {}, "history": {}, "auditDetails": {} },
+              }
+            fieldMapping:
+              - inJsonPath: $.rescheduledRequestId
+                outJsonPath: $.Data.reScheduleHearing.rescheduledRequestId
+              - inJsonPath: $.hearingBookingId
+                outJsonPath: $.Data.reScheduleHearing.hearingBookingId
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.reScheduleHearing.tenantId
+              - inJsonPath: $.judgeId
+                outJsonPath: $.Data.reScheduleHearing.judgeId
+              - inJsonPath: $.caseId
+                outJsonPath: $.Data.reScheduleHearing.caseId
+              - inJsonPath: $.requesterId
+                outJsonPath: $.Data.reScheduleHearing.requesterId
+              - inJsonPath: $.reason
+                outJsonPath: $.Data.reScheduleHearing.reason
+              - inJsonPath: $.availableAfter
+                outJsonPath: $.Data.reScheduleHearing.availableAfter
+              - inJsonPath: $.status
+                outJsonPath: $.Data.reScheduleHearing.status
+              - inJsonPath: $.actionComment
+                outJsonPath: $.Data.reScheduleHearing.actionComment
+              - inJsonPath: $.auditDetails.createdBy
+                outJsonPath: $.Data.auditDetails.createdBy
+              - inJsonPath: $.auditDetails.lastModifiedBy
+                outJsonPath: $.Data.auditDetails.lastModifiedBy
+              - inJsonPath: $.auditDetails.createdTime
+                outJsonPath: $.Data.auditDetails.createdTime
+              - inJsonPath: $.auditDetails.lastModifiedTime
+                outJsonPath: $.Data.auditDetails.lastModifiedTime
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.reScheduleHearing.documents
+              - inJsonPath: $.suggestedDates
+                outJsonPath: $.Data.reScheduleHearing.suggestedDates
+              - inJsonPath: $.availableDates
+                outJsonPath: $.Data.reScheduleHearing.availableDates
+            externalUriMapping:
+              - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
+                queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
+                apiRequest:
+                  {
+                    "RequestInfo":
+                      {
+                        "apiId": "",
+                        "ver": "1.0",
+                        "ts": 1502890899493,
+                        "action": "asd",
+                        "did": "4354648646",
+                        "key": "xyz",
+                        "msgId": "654654",
+                        "requesterId": "61",
+                        "authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8",
+                        "userInfo":
+                          {
+                            "id": 1,
+                            "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067", //fixme:update uuid for solution
+                            "type": "EMPLOYEE",
+                            "tenantId": "kl",
+                            "roles":
+                              [
+                                {
+                                  "name": "Employee",
+                                  "code": "EMPLOYEE",
+                                  "tenantId": "kl",
+                                },
+                              ],
+                          },
+                      },
+                  }
+                uriResponseMapping:
+                  - inJsonPath: $.ProcessInstances
+                    outJsonPath: $.Data.history
+                  - inJsonPath: $.ProcessInstances[0]
+                    outJsonPath: $.Data.currentProcessInstance
+                  - inJsonPath: $.ProcessInstances[0].state.uuid
+                    outJsonPath: $.Data.status
+
+
+    - topic: update-reschedule-hearing
+      configKey: INDEX
+      indexes:
+        - name: reschedule-index-test
+          type: general
+          id: $.id
+          isBulk: false
+          timeStampField: $.auditDetails.createdTime
+          jsonPath: $.reScheduleHearing
+          customJsonMapping:
+            indexMapping:
+              {
+                "Data":
+                  { "reScheduleHearing": {}, "history": {}, "auditDetails": {} },
+              }
+            fieldMapping:
+              - inJsonPath: $.rescheduledRequestId
+                outJsonPath: $.Data.reScheduleHearing.rescheduledRequestId
+              - inJsonPath: $.hearingBookingId
+                outJsonPath: $.Data.reScheduleHearing.hearingBookingId
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.reScheduleHearing.tenantId
+              - inJsonPath: $.judgeId
+                outJsonPath: $.Data.reScheduleHearing.judgeId
+              - inJsonPath: $.caseId
+                outJsonPath: $.Data.reScheduleHearing.caseId
+              - inJsonPath: $.requesterId
+                outJsonPath: $.Data.reScheduleHearing.requesterId
+              - inJsonPath: $.reason
+                outJsonPath: $.Data.reScheduleHearing.reason
+              - inJsonPath: $.availableAfter
+                outJsonPath: $.Data.reScheduleHearing.availableAfter
+              - inJsonPath: $.status
+                outJsonPath: $.Data.reScheduleHearing.status
+              - inJsonPath: $.actionComment
+                outJsonPath: $.Data.reScheduleHearing.actionComment
+              - inJsonPath: $.auditDetails.createdBy
+                outJsonPath: $.Data.auditDetails.createdBy
+              - inJsonPath: $.auditDetails.lastModifiedBy
+                outJsonPath: $.Data.auditDetails.lastModifiedBy
+              - inJsonPath: $.auditDetails.createdTime
+                outJsonPath: $.Data.auditDetails.createdTime
+              - inJsonPath: $.auditDetails.lastModifiedTime
+                outJsonPath: $.Data.auditDetails.lastModifiedTime
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.reScheduleHearing.documents
+              - inJsonPath: $.suggestedDates
+                outJsonPath: $.Data.reScheduleHearing.suggestedDates
+              - inJsonPath: $.availableDates
+                outJsonPath: $.Data.reScheduleHearing.availableDates
+            externalUriMapping:
+              - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
+                queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
+                apiRequest:
+                  {
+                    "RequestInfo":
+                      {
+                        "apiId": "",
+                        "ver": "1.0",
+                        "ts": 1502890899493,
+                        "action": "asd",
+                        "did": "4354648646",
+                        "key": "xyz",
+                        "msgId": "654654",
+                        "requesterId": "61",
+                        "authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8", //fixme:
+                        "userInfo":
+                          {
+                            "id": 1,
+                            "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067", //fixme:
+                            "type": "EMPLOYEE",
+                            "tenantId": "kl",
+                            "roles":
+                              [
+                                {
+                                  "name": "Employee",
+                                  "code": "EMPLOYEE",
+                                  "tenantId": "kl",
+                                },
+                              ],
+                          },
+                      },
+                  }
+                uriResponseMapping:
+                  - inJsonPath: $.ProcessInstances
+                    outJsonPath: $.Data.history
+                  - inJsonPath: $.ProcessInstances[0]
+                    outJsonPath: $.Data.currentProcessInstance
+                  - inJsonPath: $.ProcessInstances[0].state.uuid
+                    outJsonPath: $.Data.status
