@@ -71,7 +71,7 @@ ServiceMaps:
                         "userInfo":
                           {
                             "id": 1,
-                            "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067", //fixme:update uuid for solution
+                            "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067",
                             "type": "EMPLOYEE",
                             "tenantId": "kl",
                             "roles":
@@ -159,11 +159,11 @@ ServiceMaps:
                         "key": "xyz",
                         "msgId": "654654",
                         "requesterId": "61",
-                        "authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8", //fixme:
+                        "authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8",
                         "userInfo":
                           {
                             "id": 1,
-                            "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067", //fixme:
+                            "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067",
                             "type": "EMPLOYEE",
                             "tenantId": "kl",
                             "roles":
