@@ -3,8 +3,8 @@
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
-    "baseKeyPath": "$.TaskSummon",
-    "entityIdPath": "$.SummonDetails.summonId",
+    "baseKeyPath": "$.Task",
+    "entityIdPath": "$.Task.taskNumber",
     "isCommonTableBorderRequired": true,
     "mappings": [
       {
@@ -15,49 +15,49 @@
               {
                 "variable": "respondentName",
                 "value": {
-                  "path": "$.respondentDetails.name",
+                  "path": "$.taskDetails.respondentDetails.name",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "respondentAddress",
                 "value": {
-                  "path": "$.respondentDetails.address",
+                  "path": "$.taskDetails.respondentDetails.address",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "caseCharge",
                 "value": {
-                  "path": "$.caseDetails.caseCharge",
-                  "defaultValue": "NA"
+                  "path": "$.taskDetails.caseDetails.caseCharge",
+                  "defaultValue": "U/s. 138 of N.I.ACT"
                 }
               },
               {
                 "variable": "judgeName",
                 "value": {
-                  "path": "$.caseDetails.judgeName",
+                  "path": "$.taskDetails.caseDetails.judgeName",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "courtName",
                 "value": {
-                  "path": "$.caseDetails.courtName",
+                  "path": "$.taskDetails.caseDetails.courtName",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "hearingDate",
                 "value": {
-                  "path": "$.caseDetails.hearingDate",
+                  "path": "$.taskDetails.caseDetails.hearingDate",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "issueDate",
                 "value": {
-                  "path": "$.summonDetails.issueDate",
+                  "path": "$.taskDetails.summonDetails.issueDate",
                   "defaultValue": "NA"
                 }
               }
