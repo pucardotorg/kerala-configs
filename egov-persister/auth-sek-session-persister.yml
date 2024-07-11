@@ -7,14 +7,15 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
-        - query: INSERT INTO auth_sek_session_data (auth_token, tenant_id, decrypted_sek, bill_id, task_number, total_due, mobile_number, paid_by, session_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO auth_sek_session_data (auth_token, tenant_id, decrypted_sek, bill_id, business_service, service_number, total_due, mobile_number, paid_by, session_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: AuthSek
           jsonMaps:
             - jsonPath: $.AuthSek.authToken
             - jsonPath: $.AuthSek.tenantId
             - jsonPath: $.AuthSek.decryptedSek
             - jsonPath: $.AuthSek.billId
-            - jsonPath: $.AuthSek.taskNumber
+            - jsonPath: $.AuthSek.businessService
+            - jsonPath: $.AuthSek.serviceNumber
             - jsonPath: $.AuthSek.totalDue
             - jsonPath: $.AuthSek.mobileNumber
             - jsonPath: $.AuthSek.paidBy
