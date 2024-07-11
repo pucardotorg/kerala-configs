@@ -3,8 +3,8 @@
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
-    "baseKeyPath": "$.Task",
-    "entityIdPath": "$.Task.taskNumber",
+    "baseKeyPath": "$.task",
+    "entityIdPath": "$.task.taskNumber",
     "isCommonTableBorderRequired": true,
     "mappings": [
       {
