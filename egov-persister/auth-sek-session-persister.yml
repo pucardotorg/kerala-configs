@@ -11,7 +11,6 @@ serviceMaps:
           basePath: AuthSek
           jsonMaps:
             - jsonPath: $.AuthSek.authToken
-            - jsonPath: $.AuthSek.tenantId
             - jsonPath: $.AuthSek.decryptedSek
             - jsonPath: $.AuthSek.billId
             - jsonPath: $.AuthSek.businessService
