@@ -27,7 +27,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
-          - query: INSERT INTO treasury_payment_data (department_id, grn, challan_timestamp, bank_ref_no, bank_timestamp, bank_code, status, cin, amount,party_name,remark_status,remarks) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          - query: INSERT INTO treasury_payment_data (department_id, grn, challan_timestamp, bank_ref_no, bank_timestamp, bank_code, status, cin, amount, party_name, remark_status, remarks, filestore_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
             basePath: TreasuryPaymentData
             jsonMaps:
               - jsonPath: $.TreasuryPaymentData.departmentId
@@ -42,3 +42,4 @@ serviceMaps:
               - jsonPath: $.TreasuryPaymentData.partyName
               - jsonPath: $.TreasuryPaymentData.remarkStatus
               - jsonPath: $.TreasuryPaymentData.remarks
+              - jsonPath: $.TreasuryPaymentData.fileStoreId
