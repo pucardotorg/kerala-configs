@@ -26,8 +26,20 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.caseDescription
               - inJsonPath: $.filingNumber
                 outJsonPath: $.Data.caseDetails.filingNumber
-              - inJsonPath: $.caseNumber
-                outJsonPath: $.Data.caseDetails.caseNumber
+              - inJsonPath: $.courtCaseNumber
+                outJsonPath: $.Data.caseDetails.courtCaseNumber
+              - inJsonPath: $.cnrNumber
+                outJsonPath: $.Data.caseDetails.cnrNumber
+              - inJsonPath: $.caseDetails
+                outJsonPath: $.Data.caseDetails.caseDetails
+              - inJsonPath: $.statutesAndSections
+                outJsonPath: $.Data.caseDetails.statutesAndSections
+              - inJsonPath: $.litigants
+                outJsonPath: $.Data.caseDetails.litigants
+              - inJsonPath: $.representatives
+                outJsonPath: $.Data.caseDetails.representatives
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.caseDetails.documents
               - inJsonPath: $.courtId
                 outJsonPath: $.Data.caseDetails.courtId
               - inJsonPath: $.benchId
@@ -42,6 +54,8 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.filingDate
               - inJsonPath: $.registrationDate
                 outJsonPath: $.Data.caseDetails.registrationDate
+              - inJsonPath: $.judgementDate
+                outJsonPath: $.Data.caseDetails.judgementDate
               - inJsonPath: $.caseCategory
                 outJsonPath: $.Data.caseDetails.caseCategory
               - inJsonPath: $.natureOfPleading
@@ -52,6 +66,8 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.isActive
               - inJsonPath: $.remarks
                 outJsonPath: $.Data.caseDetails.remarks
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.caseDetails.workflow
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.caseDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
@@ -127,8 +143,20 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.caseDescription
               - inJsonPath: $.filingNumber
                 outJsonPath: $.Data.caseDetails.filingNumber
-              - inJsonPath: $.caseNumber
-                outJsonPath: $.Data.caseDetails.caseNumber
+              - inJsonPath: $.courtCaseNumber
+                outJsonPath: $.Data.caseDetails.courtCaseNumber
+              - inJsonPath: $.cnrNumber
+                outJsonPath: $.Data.caseDetails.cnrNumber
+              - inJsonPath: $.caseDetails
+                outJsonPath: $.Data.caseDetails.caseDetails
+              - inJsonPath: $.statutesAndSections
+                outJsonPath: $.Data.caseDetails.statutesAndSections
+              - inJsonPath: $.litigants
+                outJsonPath: $.Data.caseDetails.litigants
+              - inJsonPath: $.representatives
+                outJsonPath: $.Data.caseDetails.representatives
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.caseDetails.documents
               - inJsonPath: $.courtId
                 outJsonPath: $.Data.caseDetails.courtId
               - inJsonPath: $.benchId
@@ -143,6 +171,8 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.filingDate
               - inJsonPath: $.registrationDate
                 outJsonPath: $.Data.caseDetails.registrationDate
+              - inJsonPath: $.judgementDate
+                outJsonPath: $.Data.caseDetails.judgementDate
               - inJsonPath: $.caseCategory
                 outJsonPath: $.Data.caseDetails.caseCategory
               - inJsonPath: $.natureOfPleading
@@ -153,6 +183,8 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.isActive
               - inJsonPath: $.remarks
                 outJsonPath: $.Data.caseDetails.remarks
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.caseDetails.workflow
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.caseDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
