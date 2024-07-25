@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
-        - query: INSERT INTO dristi_epost_tracker (process_number, tenant_id, file_store_id, task_number, tracking_number, pincode, address, delivery_status, remarks, additionalDetails, row_version, booking_date, received_date, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_epost_tracker (process_number, tenant_id, file_store_id, task_number, tracking_number, pincode, address, delivery_status, remarks, additional_details, row_version, booking_date, received_date, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: EPostTracker
           jsonMaps:
             - jsonPath: $.EPostTracker.processNumber
@@ -36,9 +36,18 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
-        - query: UPDATE dristi_epost_tracker SET delivery_status = ?, tracking_number = ? WHERE process_number = ?;
+        - query: UPDATE dristi_epost_tracker SET delivery_status = ?, tracking_number = ?, remarks = ? , received_date = ?, additional_details = ?, row_version = ?,  lastModifiedBy = ?, lastModifiedTime = ?  WHERE process_number = ?;
           basePath: EPostTracker
           jsonMaps:
             - jsonPath: $.EPostTracker.deliveryStatus
             - jsonPath: $.EPostTracker.trackingNumber
+            - jsonPath: $.EPostTracker.remarks
+            - jsonPath: $.EPostTracker.receivedDate
+            - jsonPath: $.EPostTracker.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.EPostTracker.receivedDate
+            - jsonPath: $.EPostTracker.rowVersion
+            - jsonPath: $.EPostTracker.auditDetails.lastModifiedBy
+            - jsonPath: $.EPostTracker.auditDetails.lastModifiedTime
             - jsonPath: $.EPostTracker.processNumber
