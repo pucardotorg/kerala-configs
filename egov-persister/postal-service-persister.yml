@@ -56,4 +56,3 @@ serviceMaps:
             - jsonPath: $.*.auditDetails.lastModifiedTime
 
             - jsonPath: $.*.postalServiceId
-	
