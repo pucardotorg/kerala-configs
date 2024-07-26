@@ -43,4 +43,3 @@ serviceMaps:
               - jsonPath: $.TreasuryPaymentData.remarkStatus
               - jsonPath: $.TreasuryPaymentData.remarks
               - jsonPath: $.TreasuryPaymentData.fileStoreId
-	
