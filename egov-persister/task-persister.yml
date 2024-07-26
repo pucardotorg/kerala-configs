@@ -5,11 +5,12 @@ serviceMaps:
       description: Persists task details in tables
       fromTopic: save-task-application
       isTransaction: true
+      isAuditEnabled: true
       module: TASK
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
-      auditAttributeBasePath: $.task
+      auditAttributeBasePath: task
       queryMaps:
 
         - query: INSERT INTO dristi_task(id, tenantId, orderId, filingNumber, cnrNumber, taskNumber, createdDate, dateCloseBy, dateClosed, taskDescription, taskType, taskDetails, status, assignedTo, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
@@ -71,11 +72,16 @@ serviceMaps:
       description: Update task details in tables
       fromTopic: update-task-application
       isTransaction: true
+      isAuditEnabled: true
+      module: TASK
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: task
       queryMaps:
-        - query: INSERT INTO dristi_task(id, tenantId, orderId, filingNumber, cnrNumber, taskNumber, createdDate, dateCloseBy, dateClosed, taskDescription, taskType, taskDetails, status, assignedTo, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, orderId = EXCLUDED.orderId, filingNumber = EXCLUDED.filingNumber, taskNumber = EXCLUDED.taskNumber, cnrNumber = EXCLUDED.cnrNumber, createdDate = EXCLUDED.createdDate, dateCloseBy = EXCLUDED.dateCloseBy, dateClosed = EXCLUDED.dateClosed, taskDescription = EXCLUDED.taskDescription, taskType = EXCLUDED.taskType, taskDetails = EXCLUDED.taskDetails, assignedTo = EXCLUDED.assignedTo, status = EXCLUDED.status, isactive = EXCLUDED.isactive, additionaldetails = EXCLUDED.additionaldetails, createdby = EXCLUDED.createdby, lastmodifiedby = EXCLUDED.lastmodifiedby, createdtime = EXCLUDED.createdtime, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
+        - query: UPDATE dristi_task SET tenantId=?, orderId=?, filingNumber=?, cnrNumber=?, taskNumber=?, createdDate=?, dateCloseBy=?, dateClosed=?, taskDescription=?, taskType=?, taskDetails=?, status=?, assignedTo=?, isActive=?, additionalDetails=?, lastModifiedBy=?, lastModifiedTime=? WHERE id=?;
           basePath: task
           jsonMaps:
-            - jsonPath: $.task.id
             - jsonPath: $.task.tenantId
             - jsonPath: $.task.orderId
             - jsonPath: $.task.filingNumber
@@ -97,10 +103,9 @@ serviceMaps:
             - jsonPath: $.task.additionalDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.task.auditDetails.createdBy
             - jsonPath: $.task.auditDetails.lastModifiedBy
-            - jsonPath: $.task.auditDetails.createdTime
             - jsonPath: $.task.auditDetails.lastModifiedTime
+            - jsonPath: $.task.id
 
         - query: INSERT INTO dristi_task_amount(id, amount, type, task_id, paymentRefNumber, status, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET amount = EXCLUDED.amount, paymentRefNumber = EXCLUDED.paymentRefNumber, type = EXCLUDED.type, task_id = EXCLUDED.task_id, additionalDetails = EXCLUDED.additionalDetails, status = EXCLUDED.status;
           basePath: task.amount

@@ -5,6 +5,11 @@ serviceMaps:
       description: Persists the schema definition
       fromTopic: save-mdms-schema-definition
       isTransaction: true
+      isAuditEnabled: true
+      module: MDMS
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: $.SchemaDefinition
       queryMaps:
         - query: INSERT INTO eg_mdms_schema_definition (id ,tenantid, code, description, definition, isactive, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: $.SchemaDefinition

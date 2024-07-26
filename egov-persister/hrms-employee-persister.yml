@@ -6,6 +6,11 @@ serviceMaps:
     description: Persists employee details in the table
     fromTopic: save-hrms-employee
     isTransaction: true
+    isAuditEnabled: true
+    module: HRMS-EMPLOYEE
+    objecIdJsonPath: $.id
+    tenantIdJsonPath: $.tenantId
+    auditAttributeBasePath: Employees.*
     queryMaps:
     - query: INSERT INTO eg_hrms_employee(tenantid, id, uuid, code, dateOfAppointment, employeestatus, employeetype, active, createdby, createddate, lastmodifiedby, lastModifiedDate, reactivateemployee) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
@@ -41,7 +46,7 @@ serviceMaps:
 
 
 
-    - query: INSERT INTO eg_hrms_assignment(tenantid, uuid, position, department, designation, fromdate, todate, govtordernumber, reportingto, isHOD, iscurrentassignment, employeeid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_hrms_assignment(tenantid, uuid, position, department, designation, courtroom, fromdate, todate, govtordernumber, reportingto, isHOD, iscurrentassignment, employeeid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
       basePath: Employees.*.assignments.*
       jsonMaps:
@@ -56,6 +61,8 @@ serviceMaps:
       - jsonPath: $.Employees.*.assignments.*.department
 
       - jsonPath: $.Employees.*.assignments.*.designation
+
+      - jsonPath: $.Employees.*.assignments.*.courtroom
 
       - jsonPath: $.Employees.*.assignments.*.fromDate
 
@@ -241,6 +248,11 @@ serviceMaps:
     description: Persists employee details in the table
     fromTopic: update-hrms-employee
     isTransaction: true
+    isAuditEnabled: true
+    module: HRMS-EMPLOYEE
+    objecIdJsonPath: $.id
+    tenantIdJsonPath: $.tenantId
+    auditAttributeBasePath: Employees.*
     queryMaps:
     - query: DELETE from eg_hrms_employee WHERE uuid=?
 
@@ -283,7 +295,7 @@ serviceMaps:
 
 
 
-    - query: INSERT INTO eg_hrms_assignment(tenantid, uuid, position, department, designation, fromdate, todate, govtordernumber, reportingto, isHOD, iscurrentassignment, employeeid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_hrms_assignment(tenantid, uuid, position, department, designation, courtroom, fromdate, todate, govtordernumber, reportingto, isHOD, iscurrentassignment, employeeid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
       basePath: Employees.*.assignments.*
       jsonMaps:
@@ -298,6 +310,8 @@ serviceMaps:
       - jsonPath: $.Employees.*.assignments.*.department
 
       - jsonPath: $.Employees.*.assignments.*.designation
+
+      - jsonPath: $.Employees.*.assignments.*.courtroom
 
       - jsonPath: $.Employees.*.assignments.*.fromDate
 
