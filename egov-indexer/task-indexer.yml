@@ -32,6 +32,10 @@ ServiceMaps:
                 outJsonPath: $.Data.taskDetails.dateClosed
               - inJsonPath: $.taskNumber
                 outJsonPath: $.Data.taskDetails.taskNumber
+              - inJsonPath: $.cnrNumber
+                outJsonPath: $.Data.taskDetails.cnrNumber
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.taskDetails.documents
               - inJsonPath: $.taskType
                 outJsonPath: $.Data.taskDetails.taskType
               - inJsonPath: $.amount
@@ -44,6 +48,8 @@ ServiceMaps:
                 outJsonPath: $.Data.taskDetails.isActive
               - inJsonPath: $.assignedTo
                 outJsonPath: $.Data.taskDetails.assignedTo
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.taskDetails.workflow
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.taskDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
@@ -121,6 +127,10 @@ ServiceMaps:
                 outJsonPath: $.Data.taskDetails.filingNumber
               - inJsonPath: $.taskNumber
                 outJsonPath: $.Data.taskDetails.taskNumber
+              - inJsonPath: $.cnrNumber
+                outJsonPath: $.Data.taskDetails.cnrNumber
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.taskDetails.documents
               - inJsonPath: $.dateCloseBy
                 outJsonPath: $.Data.taskDetails.dateCloseBy
               - inJsonPath: $.dateClosed
@@ -137,6 +147,8 @@ ServiceMaps:
                 outJsonPath: $.Data.taskDetails.isActive
               - inJsonPath: $.assignedTo
                 outJsonPath: $.Data.taskDetails.assignedTo
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.taskDetails.workflow
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.taskDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
