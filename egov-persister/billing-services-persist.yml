@@ -5,6 +5,11 @@ serviceMaps:
    name: bill create
    description: create bill in egbs_bill
    fromTopic: save-bill-db
+   isAuditEnabled: true
+   module: BILLING
+   objecIdJsonPath: $.id
+   tenantIdJsonPath: $.tenantId
+   auditAttributeBasePath: $.Bills.*
    queryMaps: 
     - query: INSERT into egbs_bill (id, tenantid, payeename, payeeaddress, payeeemail, isactive, iscancelled, createdby, createddate, lastmodifiedby, lastmodifieddate) values(?,?,?,?,?,?,?,?,?,?,?)
       basePath: $.Bills.*
@@ -136,6 +141,11 @@ serviceMaps:
    description: create demand in  egbs_demand
    fromTopic: save-demand
    isTransaction: true
+   isAuditEnabled: true
+   module: BILLING
+   objecIdJsonPath: $.id
+   tenantIdJsonPath: $.tenantId
+   auditAttributeBasePath: $.Demands.*
    queryMaps: 
     - query: INSERT INTO egbs_demand (id,consumerCode,consumerType,businessService,owner,taxPeriodFrom,taxPeriodTo,minimumAmountPayable,createdby,lastModifiedby,createdtime,lastModifiedtime,tenantid) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?);
       basePath: $.Demands.*
@@ -219,6 +229,11 @@ serviceMaps:
    description: update demand in  egbs_demand
    fromTopic: update-demand
    isTransaction: true
+   isAuditEnabled: true
+   module: BILLING
+   objecIdJsonPath: $.id
+   tenantIdJsonPath: $.tenantId
+   auditAttributeBasePath: $.Demands.*
    queryMaps: 
     - query: UPDATE egbs_demand SET consumerCode=?,consumerType=?,businessService=?,owner=?,taxPeriodFrom=?,taxPeriodTo=?,minimumAmountPayable=?,lastModifiedby=?,lastModifiedtime=? WHERE id=? AND tenantid=?;
       basePath: $.Demands.*

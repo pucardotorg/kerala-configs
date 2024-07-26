@@ -5,6 +5,11 @@ serviceMaps:
       description: Persists advocate details in tables
       fromTopic: save-advocate-application
       isTransaction: true
+      isAuditEnabled: true
+      module: ADVOCATE
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: advocate
       queryMaps:
         - query: INSERT INTO dristi_advocate(id,tenantId,applicationNumber,status,barRegistrationNumber,advocateType,organisationID,individualId,isActive, additionalDetails,createdBy,lastModifiedBy,createdTime,lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?);
           basePath: advocate
@@ -42,6 +47,11 @@ serviceMaps:
       description: Update advocate details in tables
       fromTopic: update-advocate-application
       isTransaction: true
+      isAuditEnabled: true
+      module: ADVOCATE
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: advocate
       queryMaps:
         - query: UPDATE  dristi_advocate SET status =?, isActive =?,lastModifiedBy =?,lastModifiedTime = ? where id =?;
           basePath: advocate

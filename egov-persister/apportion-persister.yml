@@ -5,6 +5,11 @@ serviceMaps:
     description: Persists apportioning request
     fromTopic: save-apportion-request
     isTransaction: true
+    isAuditEnabled: true
+    module: APPORTION
+    objecIdJsonPath: $.id
+    tenantIdJsonPath: $.tenantId
+    auditAttributeBasePath: Bills.*
     queryMaps:
 
     - query: INSERT INTO eg_appr_bills_request(billId,tenantid,mobileNumber,payerName,payerAddress,payerEmail,paidBy,taxAndPayments,isActive,isCancelled,billDetails,createdBy,createdTime) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
@@ -45,6 +50,11 @@ serviceMaps:
     description: Persists apportioning response
     fromTopic: save-apportion-response
     isTransaction: true
+    isAuditEnabled: true
+    module: APPORTION
+    objecIdJsonPath: $.id
+    tenantIdJsonPath: $.tenantId
+    auditAttributeBasePath: Bills.*
     queryMaps:
 
     - query: INSERT INTO eg_appr_bills_response(billId,tenantid,mobileNumber,payerName,payerAddress,payerEmail,paidBy,taxAndPayments,isActive,isCancelled,billDetails,createdBy,createdTime) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
@@ -83,6 +93,11 @@ serviceMaps:
   - version: 1.0
     description: Persists apportioning request
     fromTopic: save-apportion-bill-request
+    isAuditEnabled: true
+    module: APPORTION
+    objecIdJsonPath: $.id
+    tenantIdJsonPath: $.tenantId
+    auditAttributeBasePath: Bills.*
     isTransaction: true
     queryMaps:
 
@@ -124,6 +139,11 @@ serviceMaps:
     description: Persists apportioning response
     fromTopic: save-apportion-bill-response
     isTransaction: true
+    isAuditEnabled: true
+    module: APPORTION
+    objecIdJsonPath: $.id
+    tenantIdJsonPath: $.tenantId
+    auditAttributeBasePath: Bills.*
     queryMaps:
 
     - query: INSERT INTO eg_appr_bills_response(billId,tenantid,mobileNumber,payerName,payerAddress,payerEmail,paidBy,taxAndPayments,isActive,isCancelled,billDetails,createdBy,createdTime) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
@@ -164,6 +184,11 @@ serviceMaps:
     description: Persists apportioning request
     fromTopic: save-apportion-demand-request
     isTransaction: true
+    isAuditEnabled: true
+    module: APPORTION
+    objecIdJsonPath: $.id
+    tenantIdJsonPath: $.tenantId
+    auditAttributeBasePath: Demands.*
     queryMaps:
 
     - query: INSERT INTO eg_appr_demand_request(demandId,tenantid,consumerCode,demandDetails,taxPeriodFrom,taxPeriodTo,status,createdBy,createdTime) VALUES (?,?,?,?,?,?,?,?,?)
@@ -194,6 +219,11 @@ serviceMaps:
     description: Persists apportioning response
     fromTopic: save-apportion-demand-response
     isTransaction: true
+    isAuditEnabled: true
+    module: APPORTION
+    objecIdJsonPath: $.id
+    tenantIdJsonPath: $.tenantId
+    auditAttributeBasePath: Demands.*
     queryMaps:
 
     - query: INSERT INTO eg_appr_demand_response(demandId,tenantid,consumerCode,demandDetails,taxPeriodFrom,taxPeriodTo,status,createdBy,createdTime) VALUES (?,?,?,?,?,?,?,?,?)

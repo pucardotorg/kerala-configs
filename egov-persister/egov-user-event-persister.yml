@@ -6,6 +6,11 @@ serviceMaps:
     description: Persists events into the table
     fromTopic: save-user-events
     isTransaction: true
+    isAuditEnabled: true
+    module: USER-EVENT
+    objecIdJsonPath: $.id
+    tenantIdJsonPath: $.tenantId
+    auditAttributeBasePath: events.*
     queryMaps:
     - query: INSERT INTO eg_usrevents_events(tenantid, id, source, eventtype, category, name, postedby, referenceid, description, status, eventdetails, actions, recepient, createdby, createdtime, lastmodifiedby, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
@@ -74,6 +79,11 @@ serviceMaps:
     description: Updates event details in the table
     fromTopic: update-user-events
     isTransaction: true
+    isAuditEnabled: true
+    module: USER-EVENT
+    objecIdJsonPath: $.id
+    tenantIdJsonPath: $.tenantId
+    auditAttributeBasePath: events.*
     queryMaps:
     - query: UPDATE eg_usrevents_events SET description = ?, status = ?, name = ?, category = ?, eventdetails = ?, actions = ?, recepient = ? , lastmodifiedby = ?, lastmodifiedtime = ? WHERE id = ?;
 
@@ -136,6 +146,11 @@ serviceMaps:
     description: Persists user last login details
     fromTopic: user-events-lat
     isTransaction: true
+    isAuditEnabled: true
+    module: USER-EVENT
+    objecIdJsonPath: $.id
+    tenantIdJsonPath: $.tenantId
+    auditAttributeBasePath: events.*
     queryMaps:      
     - query: INSERT INTO eg_usrevents_user_lat(userid, lastaccesstime) VALUES (?, ?) ON CONFLICT (userid) DO UPDATE SET lastaccesstime = ?;
 
