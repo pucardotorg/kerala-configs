@@ -2,7 +2,7 @@ ServiceMaps:
   serviceName: order services
   version: 1.0.0
   mappings:
-    - topic: save-order-application
+    - topic: save-order-transform
       configKey: INDEX
       indexes:
         - name: order-index
@@ -20,14 +20,22 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.tenantId
               - inJsonPath: $.applicationNumber
                 outJsonPath: $.Data.orderDetails.applicationNumber
+              - inJsonPath: $.orderType
+                outJsonPath: $.Data.orderDetails.orderType
               - inJsonPath: $.filingNumber
                 outJsonPath: $.Data.orderDetails.filingNumber
               - inJsonPath: $.hearingNumber
                 outJsonPath: $.Data.orderDetails.hearingNumber
               - inJsonPath: $.orderNumber
                 outJsonPath: $.Data.orderDetails.orderNumber
+              - inJsonPath: $.linkedOrderNumber
+                outJsonPath: $.Data.orderDetails.linkedOrderNumber
               - inJsonPath: $.cnrNumber
                 outJsonPath: $.Data.orderDetails.cnrNumber
+              - inJsonPath: $.orderCategory
+                outJsonPath: $.Data.orderDetails.orderCategory
+              - inJsonPath: $.createdDate
+                outJsonPath: $.Data.orderDetails.createdDate
               - inJsonPath: $.status
                 outJsonPath: $.Data.orderDetails.status
               - inJsonPath: $.comments
@@ -40,6 +48,8 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.issuedBy
               - inJsonPath: $.isActive
                 outJsonPath: $.Data.orderDetails.isActive
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.orderDetails.workflow
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.orderDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
@@ -61,7 +71,7 @@ ServiceMaps:
                     outJsonPath: $.Data.currentProcessInstance
                   - inJsonPath: $.ProcessInstances[0].state.uuid
                     outJsonPath: $.Data.status
-    - topic: update-order-application
+    - topic: update-order-transform
       configKey: INDEX
       indexes:
         - name: order-index
@@ -87,6 +97,14 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.orderNumber
               - inJsonPath: $.cnrNumber
                 outJsonPath: $.Data.orderDetails.cnrNumber
+              - inJsonPath: $.linkedOrderNumber
+                outJsonPath: $.Data.orderDetails.linkedOrderNumber
+              - inJsonPath: $.orderType
+                outJsonPath: $.Data.orderDetails.orderType
+              - inJsonPath: $.orderCategory
+                outJsonPath: $.Data.orderDetails.orderCategory
+              - inJsonPath: $.createdDate
+                outJsonPath: $.Data.orderDetails.createdDate
               - inJsonPath: $.status
                 outJsonPath: $.Data.orderDetails.status
               - inJsonPath: $.comments
@@ -99,6 +117,8 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.issuedBy
               - inJsonPath: $.isActive
                 outJsonPath: $.Data.orderDetails.isActive
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.orderDetails.workflow
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.orderDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
