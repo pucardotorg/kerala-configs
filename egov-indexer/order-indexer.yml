@@ -20,14 +20,22 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.tenantId
               - inJsonPath: $.applicationNumber
                 outJsonPath: $.Data.orderDetails.applicationNumber
+              - inJsonPath: $.orderType
+                outJsonPath: $.Data.orderDetails.orderType
               - inJsonPath: $.filingNumber
                 outJsonPath: $.Data.orderDetails.filingNumber
               - inJsonPath: $.hearingNumber
                 outJsonPath: $.Data.orderDetails.hearingNumber
               - inJsonPath: $.orderNumber
                 outJsonPath: $.Data.orderDetails.orderNumber
+              - inJsonPath: $.linkedOrderNumber
+                outJsonPath: $.Data.orderDetails.linkedOrderNumber
               - inJsonPath: $.cnrNumber
                 outJsonPath: $.Data.orderDetails.cnrNumber
+              - inJsonPath: $.orderCategory
+                outJsonPath: $.Data.orderDetails.orderCategory
+              - inJsonPath: $.createdDate
+                outJsonPath: $.Data.orderDetails.createdDate
               - inJsonPath: $.status
                 outJsonPath: $.Data.orderDetails.status
               - inJsonPath: $.comments
@@ -40,6 +48,8 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.issuedBy
               - inJsonPath: $.isActive
                 outJsonPath: $.Data.orderDetails.isActive
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.orderDetails.workflow
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.orderDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
@@ -53,7 +63,7 @@ ServiceMaps:
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.orderNumber,tenantId=$.tenantId,history=true
-                apiRequest: { "RequestInfo": { "apiId": "","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "pg","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "pg" } ] } } }
+                apiRequest: { "RequestInfo": { "apiId": "","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "kl","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "kl" } ] } } }
                 uriResponseMapping:
                   - inJsonPath: $.ProcessInstances
                     outJsonPath: $.Data.history
@@ -87,6 +97,14 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.orderNumber
               - inJsonPath: $.cnrNumber
                 outJsonPath: $.Data.orderDetails.cnrNumber
+              - inJsonPath: $.linkedOrderNumber
+                outJsonPath: $.Data.orderDetails.linkedOrderNumber
+              - inJsonPath: $.orderType
+                outJsonPath: $.Data.orderDetails.orderType
+              - inJsonPath: $.orderCategory
+                outJsonPath: $.Data.orderDetails.orderCategory
+              - inJsonPath: $.createdDate
+                outJsonPath: $.Data.orderDetails.createdDate
               - inJsonPath: $.status
                 outJsonPath: $.Data.orderDetails.status
               - inJsonPath: $.comments
@@ -99,6 +117,8 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.issuedBy
               - inJsonPath: $.isActive
                 outJsonPath: $.Data.orderDetails.isActive
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.orderDetails.workflow
               - inJsonPath: $.auditDetails.createdBy
                 outJsonPath: $.Data.orderDetails.createdBy
               - inJsonPath: $.auditDetails.lastModifiedBy
@@ -112,7 +132,149 @@ ServiceMaps:
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.orderNumber,tenantId=$.tenantId,history=true
-                apiRequest: { "RequestInfo": { "apiId": "","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "pg","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "pg" } ] } } }
+                apiRequest: { "RequestInfo": { "apiId": "","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "kl","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "kl" } ] } } }
+                uriResponseMapping:
+                  - inJsonPath: $.ProcessInstances
+                    outJsonPath: $.Data.history
+                  - inJsonPath: $.ProcessInstances[0]
+                    outJsonPath: $.Data.currentProcessInstance
+                  - inJsonPath: $.ProcessInstances[0].state.uuid
+                    outJsonPath: $.Data.status
+
+    - topic: save-order-transform
+      configKey: INDEX
+      indexes:
+        - name: order-index
+          type: general
+          id: $.id
+          isBulk: false
+          timeStampField: $.auditDetails.createdTime
+          jsonPath: $.order
+          customJsonMapping:
+            indexMapping: { "Data": { "orderDetails": { },"history": { } } }
+            fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.orderDetails.id
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.orderDetails.tenantId
+              - inJsonPath: $.applicationNumber
+                outJsonPath: $.Data.orderDetails.applicationNumber
+              - inJsonPath: $.orderType
+                outJsonPath: $.Data.orderDetails.orderType
+              - inJsonPath: $.filingNumber
+                outJsonPath: $.Data.orderDetails.filingNumber
+              - inJsonPath: $.hearingNumber
+                outJsonPath: $.Data.orderDetails.hearingNumber
+              - inJsonPath: $.orderNumber
+                outJsonPath: $.Data.orderDetails.orderNumber
+              - inJsonPath: $.linkedOrderNumber
+                outJsonPath: $.Data.orderDetails.linkedOrderNumber
+              - inJsonPath: $.cnrNumber
+                outJsonPath: $.Data.orderDetails.cnrNumber
+              - inJsonPath: $.orderCategory
+                outJsonPath: $.Data.orderDetails.orderCategory
+              - inJsonPath: $.createdDate
+                outJsonPath: $.Data.orderDetails.createdDate
+              - inJsonPath: $.status
+                outJsonPath: $.Data.orderDetails.status
+              - inJsonPath: $.comments
+                outJsonPath: $.Data.orderDetails.comments
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.orderDetails.documents
+              - inJsonPath: $.statuteSection
+                outJsonPath: $.Data.orderDetails.statuteSection
+              - inJsonPath: $.issuedBy
+                outJsonPath: $.Data.orderDetails.issuedBy
+              - inJsonPath: $.isActive
+                outJsonPath: $.Data.orderDetails.isActive
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.orderDetails.workflow
+              - inJsonPath: $.auditDetails.createdBy
+                outJsonPath: $.Data.orderDetails.createdBy
+              - inJsonPath: $.auditDetails.lastModifiedBy
+                outJsonPath: $.Data.orderDetails.lastModifiedBy
+              - inJsonPath: $.auditDetails.createdTime
+                outJsonPath: $.Data.orderDetails.createdTime
+              - inJsonPath: $.auditDetails.lastModifiedTime
+                outJsonPath: $.Data.orderDetails.lastModifiedTime
+              - inJsonPath: $.additionalDetails
+                outJsonPath: $.Data.orderDetails.additionalDetails
+            externalUriMapping:
+              - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
+                queryParam: businessIds=$.orderNumber,tenantId=$.tenantId,history=true
+                apiRequest: { "RequestInfo": { "apiId": "","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "kl","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "kl" } ] } } }
+                uriResponseMapping:
+                  - inJsonPath: $.ProcessInstances
+                    outJsonPath: $.Data.history
+                  - inJsonPath: $.ProcessInstances[0]
+                    outJsonPath: $.Data.currentProcessInstance
+                  - inJsonPath: $.ProcessInstances[0].state.uuid
+                    outJsonPath: $.Data.status
+
+    - topic: save-task-order-transform
+      configKey: INDEX
+      indexes:
+        - name: order-index
+          type: general
+          id: $.id
+          isBulk: false
+          timeStampField: $.auditDetails.createdTime
+          jsonPath: $.order
+          customJsonMapping:
+            indexMapping: { "Data": { "orderDetails": { },"history": { } } }
+            fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.orderDetails.id
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.orderDetails.tenantId
+              - inJsonPath: $.applicationNumber
+                outJsonPath: $.Data.orderDetails.applicationNumber
+              - inJsonPath: $.orderType
+                outJsonPath: $.Data.orderDetails.orderType
+              - inJsonPath: $.filingNumber
+                outJsonPath: $.Data.orderDetails.filingNumber
+              - inJsonPath: $.hearingNumber
+                outJsonPath: $.Data.orderDetails.hearingNumber
+              - inJsonPath: $.orderNumber
+                outJsonPath: $.Data.orderDetails.orderNumber
+              - inJsonPath: $.linkedOrderNumber
+                outJsonPath: $.Data.orderDetails.linkedOrderNumber
+              - inJsonPath: $.cnrNumber
+                outJsonPath: $.Data.orderDetails.cnrNumber
+              - inJsonPath: $.orderCategory
+                outJsonPath: $.Data.orderDetails.orderCategory
+              - inJsonPath: $.createdDate
+                outJsonPath: $.Data.orderDetails.createdDate
+              - inJsonPath: $.status
+                outJsonPath: $.Data.orderDetails.status
+              - inJsonPath: $.comments
+                outJsonPath: $.Data.orderDetails.comments
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.orderDetails.documents
+              - inJsonPath: $.statuteSection
+                outJsonPath: $.Data.orderDetails.statuteSection
+              - inJsonPath: $.issuedBy
+                outJsonPath: $.Data.orderDetails.issuedBy
+              - inJsonPath: $.isActive
+                outJsonPath: $.Data.orderDetails.isActive
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.orderDetails.workflow
+              - inJsonPath: $.auditDetails.createdBy
+                outJsonPath: $.Data.orderDetails.createdBy
+              - inJsonPath: $.auditDetails.lastModifiedBy
+                outJsonPath: $.Data.orderDetails.lastModifiedBy
+              - inJsonPath: $.auditDetails.createdTime
+                outJsonPath: $.Data.orderDetails.createdTime
+              - inJsonPath: $.auditDetails.lastModifiedTime
+                outJsonPath: $.Data.orderDetails.lastModifiedTime
+              - inJsonPath: $.additionalDetails
+                outJsonPath: $.Data.orderDetails.additionalDetails
+              - inJsonPath: $.task
+                outJsonPath: $.Data.orderDetails.task
+            externalUriMapping:
+              - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
+                queryParam: businessIds=$.orderNumber,tenantId=$.tenantId,history=true
+                apiRequest: { "RequestInfo": { "apiId": "","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "kl","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "kl" } ] } } }
                 uriResponseMapping:
                   - inJsonPath: $.ProcessInstances
                     outJsonPath: $.Data.history

@@ -249,7 +249,7 @@ ServiceMaps:
               - inJsonPath: $.auditDetails
                 outJsonPath: $.Data.auditDetails
               - inJsonPath: $.order
-                outJsonPath: $.Data.order
+                outJsonPath: $.Data.applicationDetails.order
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
