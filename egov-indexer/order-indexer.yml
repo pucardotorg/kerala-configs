@@ -2,7 +2,7 @@ ServiceMaps:
   serviceName: order services
   version: 1.0.0
   mappings:
-    - topic: save-order-application
+    - topic: save-order-transform
       configKey: INDEX
       indexes:
         - name: order-index
@@ -71,7 +71,7 @@ ServiceMaps:
                     outJsonPath: $.Data.currentProcessInstance
                   - inJsonPath: $.ProcessInstances[0].state.uuid
                     outJsonPath: $.Data.status
-    - topic: update-order-application
+    - topic: update-order-transform
       configKey: INDEX
       indexes:
         - name: order-index
