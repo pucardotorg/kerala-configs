@@ -46,30 +46,8 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.comment
               - inJsonPath: $.isActive
                 outJsonPath: $.Data.applicationDetails.isActive
-              - inJsonPath: $.statuteSection.id
-                outJsonPath: $.Data.statuteSection.id
-              - inJsonPath: $.statuteSection.tenantId
-                outJsonPath: $.Data.statuteSection.tenantId
-              - inJsonPath: $.statuteSection.statute
-                outJsonPath: $.Data.statuteSection.statute
-              - inJsonPath: $.statuteSection.sections
-                outJsonPath: $.Data.statuteSection.sections
-              - inJsonPath: $.statuteSection.subsections
-                outJsonPath: $.Data.statuteSection.subsections
-              - inJsonPath: $.statuteSection.additionalDetails
-                outJsonPath: $.Data.statuteSection.additionalDetails
-              - inJsonPath: $.statuteSection.strSections
-                outJsonPath: $.Data.statuteSection.strSections
-              - inJsonPath: $.statuteSection.strSubsections
-                outJsonPath: $.Data.statuteSection.strSubsections
-              - inJsonPath: $.statuteSection.auditDetails.createdBy
-                outJsonPath: $.Data.statuteSection.auditDetails.createdBy
-              - inJsonPath: $.statuteSection.auditDetails.lastModifiedBy
-                outJsonPath: $.Data.statuteSection.auditDetails.lastModifiedBy
-              - inJsonPath: $.statuteSection.auditDetails.createdTime
-                outJsonPath: $.Data.statuteSection.auditDetails.createdTime
-              - inJsonPath: $.statuteSection.auditDetails.lastModifiedTime
-                outJsonPath: $.Data.statuteSection.auditDetails.lastModifiedTime
+              - inJsonPath: $.statuteSection
+                outJsonPath: $.Data.statuteSection
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.applicationDetails.additionalDetails
               - inJsonPath: $.documents
@@ -134,30 +112,8 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.comment
               - inJsonPath: $.isActive
                 outJsonPath: $.Data.applicationDetails.isActive
-              - inJsonPath: $.statuteSection.id
-                outJsonPath: $.Data.statuteSection.id
-              - inJsonPath: $.statuteSection.tenantId
-                outJsonPath: $.Data.statuteSection.tenantId
-              - inJsonPath: $.statuteSection.statute
-                outJsonPath: $.Data.statuteSection.statute
-              - inJsonPath: $.statuteSection.sections
-                outJsonPath: $.Data.statuteSection.sections
-              - inJsonPath: $.statuteSection.subsections
-                outJsonPath: $.Data.statuteSection.subsections
-              - inJsonPath: $.statuteSection.additionalDetails
-                outJsonPath: $.Data.statuteSection.additionalDetails
-              - inJsonPath: $.statuteSection.strSections
-                outJsonPath: $.Data.statuteSection.strSections
-              - inJsonPath: $.statuteSection.strSubsections
-                outJsonPath: $.Data.statuteSection.strSubsections
-              - inJsonPath: $.statuteSection.auditDetails.createdBy
-                outJsonPath: $.Data.statuteSection.auditDetails.createdBy
-              - inJsonPath: $.statuteSection.auditDetails.lastModifiedBy
-                outJsonPath: $.Data.statuteSection.auditDetails.lastModifiedBy
-              - inJsonPath: $.statuteSection.auditDetails.createdTime
-                outJsonPath: $.Data.statuteSection.auditDetails.createdTime
-              - inJsonPath: $.statuteSection.auditDetails.lastModifiedTime
-                outJsonPath: $.Data.statuteSection.auditDetails.lastModifiedTime
+              - inJsonPath: $.statuteSection
+                outJsonPath: $.Data.statuteSection
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.applicationDetails.additionalDetails
               - inJsonPath: $.documents
@@ -222,30 +178,8 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.comment
               - inJsonPath: $.isActive
                 outJsonPath: $.Data.applicationDetails.isActive
-              - inJsonPath: $.statuteSection.id
-                outJsonPath: $.Data.statuteSection.id
-              - inJsonPath: $.statuteSection.tenantId
-                outJsonPath: $.Data.statuteSection.tenantId
-              - inJsonPath: $.statuteSection.statute
-                outJsonPath: $.Data.statuteSection.statute
-              - inJsonPath: $.statuteSection.sections
-                outJsonPath: $.Data.statuteSection.sections
-              - inJsonPath: $.statuteSection.subsections
-                outJsonPath: $.Data.statuteSection.subsections
-              - inJsonPath: $.statuteSection.additionalDetails
-                outJsonPath: $.Data.statuteSection.additionalDetails
-              - inJsonPath: $.statuteSection.strSections
-                outJsonPath: $.Data.statuteSection.strSections
-              - inJsonPath: $.statuteSection.strSubsections
-                outJsonPath: $.Data.statuteSection.strSubsections
-              - inJsonPath: $.statuteSection.auditDetails.createdBy
-                outJsonPath: $.Data.statuteSection.auditDetails.createdBy
-              - inJsonPath: $.statuteSection.auditDetails.lastModifiedBy
-                outJsonPath: $.Data.statuteSection.auditDetails.lastModifiedBy
-              - inJsonPath: $.statuteSection.auditDetails.createdTime
-                outJsonPath: $.Data.statuteSection.auditDetails.createdTime
-              - inJsonPath: $.statuteSection.auditDetails.lastModifiedTime
-                outJsonPath: $.Data.statuteSection.auditDetails.lastModifiedTime
+              - inJsonPath: $.statuteSection
+                outJsonPath: $.Data.statuteSection
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.applicationDetails.additionalDetails
               - inJsonPath: $.documents
