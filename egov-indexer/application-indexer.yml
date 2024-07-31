@@ -46,8 +46,6 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.comment
               - inJsonPath: $.isActive
                 outJsonPath: $.Data.applicationDetails.isActive
-              - inJsonPath: $.statuteSection
-                outJsonPath: $.Data.statuteSection
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.applicationDetails.additionalDetails
               - inJsonPath: $.documents
@@ -112,8 +110,6 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.comment
               - inJsonPath: $.isActive
                 outJsonPath: $.Data.applicationDetails.isActive
-              - inJsonPath: $.statuteSection
-                outJsonPath: $.Data.statuteSection
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.applicationDetails.additionalDetails
               - inJsonPath: $.documents
@@ -178,8 +174,6 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.comment
               - inJsonPath: $.isActive
                 outJsonPath: $.Data.applicationDetails.isActive
-              - inJsonPath: $.statuteSection
-                outJsonPath: $.Data.statuteSection
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.applicationDetails.additionalDetails
               - inJsonPath: $.documents
