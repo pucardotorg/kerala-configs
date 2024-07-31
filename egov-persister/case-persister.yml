@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CASE
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: cases
@@ -187,7 +187,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CASE
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: cases
@@ -367,7 +367,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CASE
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: $
@@ -386,7 +386,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CASE
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: $
       queryMaps:
@@ -416,7 +416,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CASE
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: $
       queryMaps:
@@ -461,7 +461,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CASE
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: $
       queryMaps:
@@ -486,7 +486,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CASE
-      objectIdJsonPath: $.filingNumber
+      objecIdJsonPath: $.filingNumber
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: caseOverallStatus
@@ -507,7 +507,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CASE
-      objectIdJsonPath: $.caseFilingNumber
+      objecIdJsonPath: $.caseFilingNumber
       tenantIdJsonPath: $.RequestInfo.userInfo.uuid.tenantId
       transactionCodeJsonPath: $.caseFilingNumber
       auditAttributeBasePath: $
@@ -521,3 +521,23 @@ serviceMaps:
             - jsonPath: $.auditDetails.lastModifiedBy
             - jsonPath: $.auditDetails.lastModifiedTime
             - jsonPath: $.caseFilingNumber
+
+    - version: 1.0
+      description: Update case outcome in tables
+      fromTopic: case-outcome-topic
+      isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objecIdJsonPath: $.filingNumber
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: outcome
+      queryMaps:
+        - query: UPDATE  dristi_cases SET outcome =?, lastmodifiedby = ?, lastmodifiedtime = ? where filingnumber =? and tenantid =?;
+          basePath: outcome
+          jsonMaps:
+            - jsonPath: $.outcome.outcome
+            - jsonPath: $.outcome.auditDetails.lastModifiedBy
+            - jsonPath: $.outcome.auditDetails.lastModifiedTime
+            - jsonPath: $.outcome.filingNumber
+            - jsonPath: $.outcome.tenantId
