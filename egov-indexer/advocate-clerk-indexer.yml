@@ -28,7 +28,7 @@ ServiceMaps:
               - inJsonPath: $.clerk.auditDetails.lastModifiedTime
                 outJsonPath: $.Data.auditDetails.lastModifiedTime
             externalUriMapping:
-              - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.clerk.applicationNumber,tenantId=$.clerk.tenantId,history=true
                 apiRequest:
                   {
@@ -67,7 +67,7 @@ ServiceMaps:
                     outJsonPath: $.Data.currentProcessInstance
                   - inJsonPath: $.ProcessInstances[0].state.uuid
                     outJsonPath: $.Data.status
-              - path: http://individual.egov:8080/individual/v1/_search
+              - path: http://individual:8080/individual/v1/_search
                 queryParam: limit=1000,offset=0,tenantId=$.clerk.tenantId,includeDeleted=true
                 apiRequest:
                   {
@@ -144,7 +144,7 @@ ServiceMaps:
               - inJsonPath: $.clerk.auditDetails
                 outJsonPath: $.Data.auditDetails
             externalUriMapping:
-              - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.clerk.applicationNumber,tenantId=$.clerk.tenantId,history=true
                 apiRequest:
                   {
@@ -183,7 +183,7 @@ ServiceMaps:
                     outJsonPath: $.Data.currentProcessInstance
                   - inJsonPath: $.ProcessInstances[0].state.uuid
                     outJsonPath: $.Data.status
-              - path: http://individual.egov:8080/individual/v1/_search
+              - path: http://individual:8080/individual/v1/_search
                 queryParam: limit=1000,offset=0,tenantId=$.clerk.tenantId,includeDeleted=true
                 apiRequest:
                   {
