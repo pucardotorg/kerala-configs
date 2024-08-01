@@ -29,19 +29,19 @@ serviceMaps:
             - jsonPath: $.IcopsTracker.receivedDate
 
     - version: 1.0
-      description: Persists EPost tracker data
-      fromTopic: update-epost-tracker
+      description: Persists icops tracker data
+      fromTopic: update-icops-tracker
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
         - query: UPDATE dristi_kerala_icops SET delivery_status = ?, remarks = ? , received_date = ?, additional_details = ?, row_version = ?  WHERE process_number = ?;
-          basePath: EPostTracker
+          basePath: IcopsTracker
           jsonMaps:
-            - jsonPath: $.EPostTracker.deliveryStatus
-            - jsonPath: $.EPostTracker.remarks
-            - jsonPath: $.EPostTracker.receivedDate
-            - jsonPath: $.EPostTracker.additionalDetails
+            - jsonPath: $.IcopsTracker.deliveryStatus
+            - jsonPath: $.IcopsTracker.remarks
+            - jsonPath: $.IcopsTracker.receivedDate
+            - jsonPath: $.IcopsTracker.additionalDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.EPostTracker.rowVersion
-            - jsonPath: $.EPostTracker.processNumber
+            - jsonPath: $.IcopsTracker.rowVersion
+            - jsonPath: $.IcopsTracker.processNumber
