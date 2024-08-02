@@ -1,0 +1,71 @@
+{
+  "key": "summons-accused",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.task",
+    "entityIdPath": "$.task.taskNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "respondentName",
+                "value": {
+                  "path": "$.taskDetails.respondentDetails.name",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "respondentAddress",
+                "value": {
+                  "path": "$.taskDetails.respondentDetails.address",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseCharge",
+                "value": {
+                  "path": "$.taskDetails.caseDetails.caseCharge",
+                  "defaultValue": "U/s. 138 of N.I.ACT"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.taskDetails.caseDetails.judgeName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.taskDetails.caseDetails.courtName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "hearingDate",
+                "value": {
+                  "path": "$.taskDetails.caseDetails.hearingDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "issueDate",
+                "value": {
+                  "path": "$.taskDetails.summonDetails.issueDate",
+                  "defaultValue": "NA"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
