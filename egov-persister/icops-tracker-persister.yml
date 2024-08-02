@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
-        - query: INSERT INTO dristi_kerala_icops (process_number, tenant_id, task_number, task_type, file_store_id, task_details, delivery_status, remarks, additional_details, booking_date, received_date, row_version, acknowledgement_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_kerala_icops (process_number, tenant_id, task_number, task_type, file_store_id, task_details, delivery_status, remarks, additional_details, row_version, acknowledgement_id, booking_date, received_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: IcopsTracker
           jsonMaps:
             - jsonPath: $.IcopsTracker.processNumber
