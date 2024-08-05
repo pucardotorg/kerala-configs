@@ -6,7 +6,7 @@ serviceMaps:
       fromTopic: schedule-hearing
       isTransaction: true
       queryMaps:
-        - query: INSERT INTO hearing_booking (court_id,judge_id,case_id,hearing_booking_id,hearing_date,event_type,title,description,status,start_time,end_time,created_by,last_modified_by,created_time, last_modified_time,row_version,tenant_id ,reschedule_request_id) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?);
+        - query: INSERT INTO hearing_booking (court_id,judge_id,case_id,hearing_booking_id,hearing_date,hearing_type,title,description,status,start_time,end_time,created_by,last_modified_by,created_time, last_modified_time,row_version,tenant_id ,reschedule_request_id) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?);
           basePath: $.*
           jsonMaps:
             - jsonPath: $.*.courtId
@@ -17,9 +17,9 @@ serviceMaps:
 
             - jsonPath: $.*.hearingBookingId
 
-            - jsonPath: $.*.date
+            - jsonPath: $.*.hearingDate
 
-            - jsonPath: $.*.eventType
+            - jsonPath: $.*.hearingType
 
             - jsonPath: $.*.title
 
@@ -52,7 +52,7 @@ serviceMaps:
       fromTopic: update-schedule-hearing
       isTransaction: true
       queryMaps:
-        - query: UPDATE hearing_booking SET court_id =?,judge_id=?,case_id =?,hearing_date =?,event_type=?,title =?,description =?,status =?,start_time =?,end_time =?,created_by =?,last_modified_by =?,created_time =?, last_modified_time =? ,row_version =?, tenant_id =? ,reschedule_request_id =? WHERE hearing_booking_id=?;
+        - query: UPDATE hearing_booking SET court_id =?,judge_id=?,case_id =?,hearing_date =?,hearing_type=?,title =?,description =?,status =?,start_time =?,end_time =?,created_by =?,last_modified_by =?,created_time =?, last_modified_time =? ,row_version =?, tenant_id =? ,reschedule_request_id =? WHERE hearing_booking_id=?;
           basePath: $.*
           jsonMaps:
             - jsonPath: $.*.courtId
@@ -61,9 +61,9 @@ serviceMaps:
 
             - jsonPath: $.*.caseId
 
-            - jsonPath: $.*.date
+            - jsonPath: $.*.hearingDate
 
-            - jsonPath: $.*.eventType
+            - jsonPath: $.*.hearingType
 
             - jsonPath: $.*.title
 
