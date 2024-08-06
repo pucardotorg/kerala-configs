@@ -8,31 +8,31 @@ serviceMaps:
       queryMaps:
         - query: INSERT INTO reschedule_request_opt_out_detail (individual_id, judge_id, case_id, reschedule_request_id, opt_out_dates, created_by, created_time, last_modified_by, last_modified_time, tenant_id ,row_version)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?);
-          basePath: $.*
+          basePath: $
           jsonMaps:
-            - jsonPath: $.*.individualId
+            - jsonPath: $.individualId
 
-            - jsonPath: $.*.judgeId
+            - jsonPath: $.judgeId
 
-            - jsonPath: $.*.caseId
+            - jsonPath: $.caseId
 
-            - jsonPath: $.*.rescheduleRequestId
+            - jsonPath: $.rescheduleRequestId
 
-            - jsonPath: $.*.optOutDates
+            - jsonPath: $.optOutDates
               type: JSON
               dbType: JSONB
 
-            - jsonPath: $.*.auditDetails.createdBy
+            - jsonPath: $.auditDetails.createdBy
 
-            - jsonPath: $.*.auditDetails.createdTime
+            - jsonPath: $.auditDetails.createdTime
 
-            - jsonPath: $.*.auditDetails.lastModifiedBy
+            - jsonPath: $.auditDetails.lastModifiedBy
 
-            - jsonPath: $.*.auditDetails.lastModifiedTime
+            - jsonPath: $.auditDetails.lastModifiedTime
 
-            - jsonPath: $.*.tenantId
+            - jsonPath: $.tenantId
 
-            - jsonPath: $.*.rowVersion
+            - jsonPath: $.rowVersion
 
     - version: 1.0
       description: Updates reschedule request opt-out details
@@ -42,28 +42,28 @@ serviceMaps:
         - query: UPDATE reschedule_request_opt_out_detail
             SET judge_id = ?, case_id = ?, reschedule_request_id = ?, opt_out_dates = ?, created_by = ?, created_time = ?, last_modified_by = ?, last_modified_time = ?, tenant_id = ?
             WHERE individual_id = ? AND reschedule_request_id = ?;
-          basePath: $.*
+          basePath: $
           jsonMaps:
-            - jsonPath: $.*.judgeId
+            - jsonPath: $.judgeId
 
-            - jsonPath: $.*.caseId
+            - jsonPath: $.caseId
 
-            - jsonPath: $.*.optOutDates
+            - jsonPath: $.optOutDates
               type: JSON
               dbType: JSONB
 
-            - jsonPath: $.*.auditDetails.createdBy
+            - jsonPath: $.auditDetails.createdBy
 
-            - jsonPath: $.*.auditDetails.createdTime
+            - jsonPath: $.auditDetails.createdTime
 
-            - jsonPath: $.*.auditDetails.lastModifiedBy
+            - jsonPath: $.auditDetails.lastModifiedBy
 
-            - jsonPath: $.*.auditDetails.lastModifiedTime
+            - jsonPath: $.auditDetails.lastModifiedTime
 
-            - jsonPath: $.*.tenantId
+            - jsonPath: $.tenantId
 
-            - jsonPath: $.*.individualId
+            - jsonPath: $.individualId
 
-            - jsonPath: $.*.rescheduleRequestId
+            - jsonPath: $.rescheduleRequestId
 
-            - jsonPath: $.*.rowVersion
+            - jsonPath: $.rowVersion
