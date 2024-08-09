@@ -1,0 +1,306 @@
+{
+  "key": "witness-deposition",
+  "config": {
+    "defaultStyle": {
+      "font": "Cambay"
+    },
+    "pageMargins": [80, 40, 80, 40],
+    "content": [
+      {
+        "style": "header",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "Deposition of Witnesses",
+                "style": "title",
+                "alignment": "center"
+              }
+            ],
+            [
+              {
+                "text": "(Chapter 1 [XXIII], Criminal Procedure Code)",
+                "style": "subtitle",
+                "alignment": "center"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "content",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "IN THE COURT OF {{courtName}}",
+                "style": "contentTitle",
+                "alignment": "center"
+              }
+            ],
+            [
+              {
+                "text": "{{caseName}} and {{filingNumber}}",
+                "style": "contentTitle",
+                "alignment": "center"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "content",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              { "text": "Calendar", "style": "label", "colSpan": 1 }
+            ],
+            [
+              { "text": "Miscellaneous", "style": "label" }
+            ],
+            [
+              { "text": "{{caseNumber}} of {{caseYear}}", "style": "label", "alignment": "right" }
+            ],
+            [
+              { "text": "Committal Proceeding Sessions", "style": "label", "colSpan": 1 }
+            ],
+            [
+              { "text": "Deposition of Prosecution Witness for Court", "style": "label" }
+            ],
+            [
+              { "text": "Date of commencement of examination", "style": "label" }
+            ],
+            [
+              { "text": "Name  : {{name}}", "style": "label" }
+            ],
+            [
+              { "text": "Sex  : {{name}}", "style": "label" }
+            ],
+            [
+              { "text": "Father's name  : {{fatherName}}", "style": "label" }
+            ],
+            [
+              { "text": "Village  : {{village}}", "style": "label" }
+            ],
+            [
+              { "text": "Taluk  : {{taluk}}", "style": "label" }
+            ],
+            [
+              { "text": "Calling  : {{calling}}", "style": "label" }
+            ],
+            [
+              { "text": "Age  : {{age}}.", "style": "label" }
+            ],
+            [
+              { "text": "Solemnly affirmed on the {{hearingDate}} ", "style": "label" }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "header",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "For seal to be affixed in Exhibits",
+                "style": "title",
+                "alignment": "center"
+              }
+            ],
+            [
+              {
+                "text": "(Rule 62(5) Criminal Rules of Practice, Kerala)",
+                "style": "subtitle",
+                "alignment": "center"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "content",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "IN THE COURT OF {{courtName}}",
+                "style": "contentTitle",
+                "alignment": "center"
+              }
+            ],
+            [
+              {
+                "text": "{{caseName}} and {{filingNumber}}",
+                "style": "contentTitle",
+                "alignment": "center"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "content",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              { "text": "Marked as: ........", "style": "label" }
+            ],
+            [
+              { "text": "Marked through: ........", "style": "label" }
+            ],
+            [
+              { "text": "(whether subject to proof) Date: .....", "style": "value" }
+            ],
+            [
+              { "text": "___________________", "style": "label", "alignment": "right" }
+            ],
+            [
+              { "text": "Judge/Magistrate", "style": "label", "alignment": "right" }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "header",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "Examination of the accused",
+                "style": "title",
+                "alignment": "center"
+              }
+            ],
+            [
+              {
+                "text": "(Section 281, Criminal Procedure Code)",
+                "style": "subtitle",
+                "alignment": "center"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "content",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "IN THE COURT OF {{courtName}}",
+                "style": "contentTitle",
+                "alignment": "center"
+              }
+            ],
+            [
+              {
+                "text": "{{caseName}} and {{filingNumber}}",
+                "style": "contentTitle",
+                "alignment": "center"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "content",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              { "text": "Calendar", "style": "label" }
+            ],
+            [
+              { "text": "Miscellaneous Case No ", "style": "label" }
+            ],
+            [
+              { "text": "{{caseNumber}} of {{caseYear}}", "style": "label", "alignment": "right" }
+            ],
+            [
+              { "text": "Committal Proceedings", "style": "label" }
+            ],
+            [
+              { "text": "Sessions", "style": "label" }
+            ],
+            [
+              { "text": "Statement of Accused", "style": "label" }
+            ],
+            [
+              { "text": "Name  : {{name}}", "style": "label" }
+            ],
+            [
+              { "text": "Sex  : {{name}}", "style": "label" }
+            ],
+            [
+              { "text": "Father's name  : {{fatherName}}", "style": "label" }
+            ],
+            [
+              { "text": "Village  : {{village}}", "style": "label" }
+            ],
+            [
+              { "text": "Taluk  : {{taluk}}", "style": "label" }
+            ],
+            [
+              { "text": "Calling  : {{calling}}", "style": "label" }
+            ],
+            [
+              { "text": "Age  : {{age}}.", "style": "label" }
+            ],
+            [
+              { "text": "Date  : {{hearingDate}}.", "style": "label", "alignment": "right" }
+            ],
+            [
+              { "text": "Deposition  :  {{deposition}}", "style": "label" }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true
+      },
+      "title": {
+        "fontSize": 18,
+        "bold": true,
+        "margin": [0, 20, 20, 10]
+      },
+      "subtitle": {
+        "fontSize": 12,
+        "margin": [0, 0, 0, 10],
+        "bold": false
+      },
+      "contentTitle": {
+        "fontSize": 12,
+        "margin": [0, 0, 0, 10],
+        "bold": false
+      },
+      "content": {
+        "fontSize": 12
+      },
+      "label": {
+        "bold": false
+      },
+      "value": {}
+    }
+  }
+}
