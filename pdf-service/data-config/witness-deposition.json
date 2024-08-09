@@ -1,0 +1,126 @@
+{
+  "key": "witness-deposition",
+  "DataConfigs": {
+    "serviceName": "rainmaker-bpa",
+    "version": "1.0.0",
+    "baseKeyPath": "$.WitnessDepositions.*",
+    "entityIdPath": "$.hearingId",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtId"
+                },
+                "type": "function",
+                "format": "if(type == 'CJFCM_KOLLAM') { return 'Court of the Judicial First Class Magistrate Kollam' ;} return 'Court of the Kollam'; "
+              },
+              {
+                "variable": "caseNumber",
+                "value":{
+                  "path":"$.caseNumber"
+                },
+                "default": ""
+              },
+              {
+                "variable": "caseYear",
+                "value":{
+                  "path":"$.caseYear"
+                },
+                "default": ""
+              },
+              {
+                "variable": "caseName",
+                "value":{
+                  "path":"$.caseName"
+                },
+                "default": ""
+              },
+              {
+                "variable": "filingNumber",
+                "value":{
+                  "path":"$.filingNumber"
+                },
+                "default": ""
+              },
+              {
+                "variable": "hearingDate",
+                "value": {
+                  "path": "$.hearingDate"
+                },
+                "default": ""
+              },
+              {
+                "variable": "name",
+                "value": {
+                  "path": "$.name"
+                },
+                "default": ""
+              },
+              {
+                "variable": "age",
+                "value": {
+                  "path": "$.age"
+                },
+                "default": ""
+              },
+              {
+                "variable": "gender",
+                "value": {
+                  "path": "$.gender"
+                },
+                "default": ""
+              },
+              {
+                "variable": "mobileNumber",
+                "value": {
+                  "path": "$.mobileNumber"
+                },
+                "default": ""
+              },
+              {
+                "variable": "fatherName",
+                "value": {
+                  "path": "$.fatherName"
+                },
+                "default": ""
+              },
+              {
+                "variable": "calling",
+                "value": {
+                  "path": "$.caste"
+                },
+                "default": ""
+              },
+              {
+                "variable": "village",
+                "value": {
+                  "path": "$.village"
+                },
+                "default": ""
+              },
+              {
+                "variable": "taluk",
+                "value": {
+                  "path": "$.taluk"
+                },
+                "default": ""
+              },
+              {
+                "variable": "deposition",
+                "value": {
+                  "path": "$.deposition"
+                },
+                "default": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
