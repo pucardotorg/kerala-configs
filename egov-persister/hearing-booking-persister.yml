@@ -53,40 +53,40 @@ serviceMaps:
       isTransaction: true
       queryMaps:
         - query: UPDATE hearing_booking SET court_id =?,judge_id=?,case_id =?,hearing_date =?,hearing_type=?,title =?,description =?,status =?,start_time =?,end_time =?,created_by =?,last_modified_by =?,created_time =?, last_modified_time =? ,row_version =?, tenant_id =? ,reschedule_request_id =? WHERE hearing_booking_id=?;
-          basePath: $.*
+          basePath: $
           jsonMaps:
-            - jsonPath: $.*.courtId
+            - jsonPath: $.courtId
 
-            - jsonPath: $.*.judgeId
+            - jsonPath: $.judgeId
 
-            - jsonPath: $.*.caseId
+            - jsonPath: $.caseId
 
-            - jsonPath: $.*.hearingDate
+            - jsonPath: $.hearingDate
 
-            - jsonPath: $.*.hearingType
+            - jsonPath: $.hearingType
 
-            - jsonPath: $.*.title
+            - jsonPath: $.title
 
-            - jsonPath: $.*.description
+            - jsonPath: $.description
 
-            - jsonPath: $.*.status
+            - jsonPath: $.status
 
-            - jsonPath: $.*.startTime
+            - jsonPath: $.startTime
 
-            - jsonPath: $.*.endTime
+            - jsonPath: $.endTime
 
-            - jsonPath: $.*.auditDetails.createdBy
+            - jsonPath: $.auditDetails.createdBy
 
-            - jsonPath: $.*.auditDetails.lastModifiedBy
+            - jsonPath: $.auditDetails.lastModifiedBy
 
-            - jsonPath: $.*.auditDetails.createdTime
+            - jsonPath: $.auditDetails.createdTime
 
-            - jsonPath: $.*.auditDetails.lastModifiedTime
+            - jsonPath: $.auditDetails.lastModifiedTime
 
-            - jsonPath: $.*.rowVersion
+            - jsonPath: $.rowVersion
 
-            - jsonPath: $.*.tenantId
+            - jsonPath: $.tenantId
 
-            - jsonPath: $.*.rescheduleRequestId
+            - jsonPath: $.rescheduleRequestId
 
-            - jsonPath: $.*.hearingBookingId
+            - jsonPath: $.hearingBookingId
