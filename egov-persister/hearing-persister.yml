@@ -93,7 +93,15 @@ serviceMaps:
             - jsonPath: $.hearing.additionalDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.hearing.notes
-            - jsonPath: $.hearing.auditDetails.lastModifiedBy
-            - jsonPath: $.hearing.auditDetails.lastModifiedTime
+
+        - query: INSERT INTO dristi_hearing_document(id,fileStore,documentUid,documentType,hearingId,additionalDetails) VALUES (?, ?, ?, ?, ?, ?);
+          basePath: hearing.documents.*
+          jsonMaps:
+            - jsonPath: $.hearing.documents.*.id
+            - jsonPath: $.hearing.documents.*.fileStore
+            - jsonPath: $.hearing.documents.*.documentUid
+            - jsonPath: $.hearing.documents.*.documentType
             - jsonPath: $.hearing.id
+            - jsonPath: $.hearing.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
