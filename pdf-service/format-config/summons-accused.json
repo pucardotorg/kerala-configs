@@ -3,7 +3,7 @@
   "config": {
     "content": [
       {
-        "style": "tl-head",
+        "style": "form-header",
         "table": {
           "widths": [
             "*"
@@ -13,24 +13,36 @@
               {
                 "stack": [
                   {
-                    "text": "THE SECOND SCHEDULE",
+                    "text": "FORM NO.1",
                     "style": "form-header"
                   },
                   {
-                    "text": "(See section 476)",
-                    "style": "form-sub-header"
+                    "text": "IN {{courtName}}",
+                    "style": "form-header"
                   },
                   {
-                    "text": "FORM NO.1",
-                    "style": "form-sub-header"
+                    "text": "Summary Trial No. {{caseNumber}} of {{caseYear}}",
+                    "style": "form-header"
                   },
                   {
                     "text": "SUMMONS TO AN ACCUSED PERSON",
-                    "style": "form-sub-header"
+                    "style": "form-sub-header",
+                    "alignment": "left"
                   },
                   {
-                    "text": "(See section 61)",
-                    "style": "form-sub-header"
+                    "text": "{{caseName}}",
+                    "style": "form-sub-header",
+                    "alignment": "right"
+                  },
+                  {
+                    "text": "(See section 63)",
+                    "style": "form-sub-header",
+                    "alignment": "left"
+                  },
+                  {
+                    "text": "{{hearingDate}}",
+                    "style": "form-sub-header",
+                    "alignment": "right"
                   }
                 ],
                 "alignment": "center",
@@ -55,13 +67,19 @@
           "body": [
             [
               {
-                "text": "To {{respondentName}} of {{respondentAddress}}",
+                "text": "To {{respondentName}} ",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": "WHEREAS your attendance is necessary to answer to a charge of {{caseCharge}}, you are hereby required to appear in person (or by pleader, as the case may be) before the {{judgeName}} of {{courtName}} on the day of {{hearingDate}}. Herein fail not.",
+                "text": " of {{#respondentAddress}} {{locality}} {{pincode}} {{district}} {{city}}  {{sate}}  {{/respondentAddress}}",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "WHEREAS your attendance is necessary to answer to a charge U/s. 138 of N.I ACT, you are hereby required to appear in person (or by pleader, as the case may be) before the (Magistrate) of {{judgeName}} on the {{hearingDate}}. Herein fail not.",
                 "style": "form-sub-body"
               }
             ]
@@ -76,7 +94,7 @@
         ]
       },
       {
-        "style": "footer-content",
+        "style": "closing-content",
         "table": {
           "widths": [
             "*"
@@ -84,20 +102,32 @@
           "body": [
             [
               {
-                "text": "Dated, this day of {{issueDate}}.",
-                "style": "footer-text"
+                "text": "Dated, this {{issueDate}}.",
+                "style": "closing-text"
               }
             ],
             [
               {
                 "text": "Seal of the Court",
-                "style": "footer-seal"
+                "style": "closing-seal"
               }
             ],
             [
               {
                 "text": "Signature",
-                "style": "footer-signature"
+                "style": "closing-signature"
+              }
+            ],
+            [
+              {
+                "text": "Address: JFCM 1, District and Sessions Court, Civil Station, Kollam, Kerala, 691013",
+                "style": "closing-signature"
+              }
+            ],
+            [
+              {
+                "text": "",
+                "style": "closing-signature"
               }
             ]
           ]
@@ -109,18 +139,193 @@
           0,
           0
         ]
-      }
-    ],
-    "styles": {
-      "tl-head": {
-        "fillColor": "white",
+      },
+      {
+        "style": "footer-content",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Visit dristi.gov.in for more information",
+                "style": "footer-body"
+              }
+            ],
+            [
+              {
+                "text": "The process is system generated and transmitted in a secured manner by authorised user, as such a physical copy is not required.",
+                "style": "footer-body"
+              }
+            ],
+            [
+              {
+                "text": "Next Page",
+                "style": "footer-page",
+                "pageBreak":  "before"
+
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
         "margin": [
-          -41,
-          -41,
-          -41,
+          0,
+          20,
+          0,
           0
         ]
       },
+      {
+        "style": "annexure-header",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "Annexure",
+                    "style": "annexure-header"
+                  }
+                ],
+                "alignment": "center",
+                "margin": [
+                  0,
+                  20,
+                  0,
+                  20
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "annexure-content",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Please see below for further information about your case {{cnrNumber}}. You can also find this information and related documents by scanning the QR code on page 1 or on dristi.gov.in (herein after referred to as “Portal”).",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": "1. How to Access Your Case Information and Documents",
+                "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: XXXXXX. Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the <> tab on the Portal.",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": "2. Understanding More About Cheque Bounce Cases",
+                "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "text": " You can find more information about cheque bounce cases, your legal rights, and obligations, on bit.ly.",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": "3. What to do next if you wish to contest the case filed against you?",
+                "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "text": " Confirm your representation: You may hire a lawyer to represent yourself or appear as a party in person which means you represent yourself in court proceedings. Please visit Kerala Bar Council website (Link here) for a contact directory of lawyers.",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": " Join the Case: Log in to the Portal & enter the 6-digit code (XXXXXX) to access your case details.",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": " Apply for Bail: Information on how to apply for bail and required documents is available on this link <bit.ly>. To apply for bail, please use <> tab on the Portal.",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": " Request a different hearing date: If you cannot attend your hearing on {{hearingDate}}, you can request a new date through the Portal.",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": "4. Options for Quicker Resolution of Your Case",
+                "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "text": " You may choose to settle the case with the complainant. This can be a quicker and simpler way to resolve the dispute. To settle the case, you may approach the complainant directly, or you may sign up for a Lok Adalat/Mediation Session that is overseen by the court. You may find more information about Lok Adalat here <bit.ly.>.",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": " If you choose to settle the case, you may inform the court after joining the case on the Portal.",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": "Need Help?",
+                "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "text": " If you have any questions or need help, please visit your nearest e-Sewa Kendra or contact <add the number here>",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": "Privacy notice:",
+                "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "text": " The court gets a notification when you open this summons or click on any of the above links. This information is only accessible to the Judiciary, and will be used only for the purpose of determining whether you received and viewed this communication, in accordance with this Privacy Policy.",
+                "style": "annexure-content"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [
+          0,
+          20,
+          0,
+          20
+        ]
+      }
+    ],
+    "styles": {
       "form-header": {
         "color": "#484848",
         "fontFamily": "Roboto",
@@ -160,17 +365,17 @@
           -8
         ]
       },
-      "footer-content": {
+      "closing-content": {
         "color": "#484848",
         "fontSize": 11,
         "margin": [
-          30,
-          -20,
-          0,
-          0
+          20,
+          20,
+          20,
+          20
         ]
       },
-      "footer-text": {
+      "closing-text": {
         "margin": [
           0,
           15,
@@ -181,7 +386,7 @@
         "color": "#000000",
         "alignment": "left"
       },
-      "footer-seal": {
+      "closing-seal": {
         "margin": [
           0,
           15,
@@ -192,7 +397,7 @@
         "color": "#000000",
         "alignment": "left"
       },
-      "footer-signature": {
+      "closing-signature": {
         "margin": [
           0,
           50,
@@ -202,6 +407,61 @@
         "bold": true,
         "color": "#000000",
         "alignment": "right"
+      },
+      "footer-content": {
+        "color": "#484848",
+        "fontSize": 11,
+        "margin": [
+          20,
+          20,
+          20,
+          20
+        ]
+      },
+      "footer-text": {
+        "margin": [
+          0,
+          15,
+          0,
+          15
+        ]
+      },
+      "footer-page": {
+        "margin": [
+          0,
+          15,
+          0,
+          15
+        ]
+      },
+      "annexure-header": {
+        "color": "#484848",
+        "fontFamily": "Roboto",
+        "fontSize": 16,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+      "annexure-sub-header": {
+        "color": "#484848",
+        "fontFamily": "Roboto",
+        "fontSize": 13,
+        "letterSpacing": 1.6,
+        "margin": [
+          0,
+          6,
+          0,
+          0
+        ]
+      },
+      "annexure-content": {
+        "fontSize": 12,
+        "color": "#484848",
+        "margin": [
+          -25,
+          18,
+          -8,
+          -8
+        ]
       }
     }
   }
