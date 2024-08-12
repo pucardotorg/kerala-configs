@@ -4,7 +4,7 @@
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$.task",
-    "entityIdPath": "$.task.taskNumber",
+    "entityIdPath": "$.task.id",
     "isCommonTableBorderRequired": true,
     "mappings": [
       {
@@ -12,6 +12,13 @@
         "mappings": [
           {
             "direct": [
+              {
+                "variable": "cnrNumber",
+                "value": {
+                  "path": "$.cnrNumber",
+                  "defaultValue": "NA"
+                }
+              },
               {
                 "variable": "respondentName",
                 "value": {
@@ -27,10 +34,10 @@
                 }
               },
               {
-                "variable": "caseCharge",
+                "variable": "caseName",
                 "value": {
-                  "path": "$.taskDetails.caseDetails.caseCharge",
-                  "defaultValue": "U/s. 138 of N.I.ACT"
+                  "path": "$.taskDetails.caseDetails.title",
+                  "defaultValue": "NA"
                 }
               },
               {
@@ -50,14 +57,28 @@
               {
                 "variable": "hearingDate",
                 "value": {
-                  "path": "$.taskDetails.caseDetails.hearingDate",
+                  "path": "$.taskDetails.caseDetails.hearingDateString",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.taskDetails.caseDetails.caseNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.taskDetails.caseDetails.caseYear",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "issueDate",
                 "value": {
-                  "path": "$.taskDetails.summonDetails.issueDate",
+                  "path": "$.taskDetails.summonDetails.issueDateString",
                   "defaultValue": "NA"
                 }
               }
