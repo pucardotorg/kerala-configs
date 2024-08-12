@@ -1,6 +1,10 @@
 {
   "key": "summons-accused",
   "config": {
+    "defaultStyle": {
+      "font": "Cambay"
+    },
+    "pageMargins": [60, 30, 60, 30],
     "content": [
       {
         "style": "form-header",
