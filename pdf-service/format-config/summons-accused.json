@@ -77,7 +77,7 @@
             ],
             [
               {
-                "text": " of {{#respondentAddress}} {{locality}} {{pincode}} {{district}} {{city}}  {{sate}}  {{/respondentAddress}}",
+                "text": "{{respondentAddress}}",
                 "style": "form-sub-body"
               }
             ],
