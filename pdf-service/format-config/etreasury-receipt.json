@@ -12,9 +12,26 @@
     ],
     "content": [
       {
-        "text": "Pay In Slip",
-        "style": "header",
+        "image": "{{logoImage}}",
+        "width": 61.25,
+        "height": 61.25,
         "alignment": "center"
+      },
+      {
+        "stack": [
+          {
+            "text": "ECourts - Pay In Slip",
+            "style": "header",
+            "alignment": "center"
+          }
+        ],
+        "alignment": "center",
+        "margin": [
+          0,
+          10,
+          0,
+          0
+        ]
       },
       {
         "table": {
