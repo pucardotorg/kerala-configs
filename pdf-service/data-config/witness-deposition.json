@@ -3,7 +3,7 @@
   "DataConfigs": {
     "serviceName": "rainmaker-bpa",
     "version": "1.0.0",
-    "baseKeyPath": "$.witnessDepositions.*",
+    "baseKeyPath": "$.WitnessDepositions.*",
     "entityIdPath": "$.hearingId",
     "isCommonTableBorderRequired": true,
     "mappings": [
