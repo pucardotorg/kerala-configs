@@ -838,7 +838,7 @@
                 "style": "tableData"
               },
               {
-                "text": "{{address}}",
+                "text": "{{#address}} {{locality}}, {{city}}, {{district}}, {{pincode}}, {{state}} {{/address}}",
                 "style": "tableData"
               }
             ],
