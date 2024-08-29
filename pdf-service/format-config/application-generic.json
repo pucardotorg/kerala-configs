@@ -1,0 +1,129 @@
+{
+  "key": "application-generic",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtComplex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "caseType",
+                "value": {
+                  "path": "$.caseType"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "applicationName",
+                "value": {
+                  "path": "$.applicationName"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "courtDesignation",
+                "value": {
+                  "path": "$.courtDesignation"
+                }
+              },
+              {
+                "variable": "addressOfTheCourt",
+                "value": {
+                  "path": "$.addressOfTheCourt"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.complainantName"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "prayerOptional",
+                "value": {
+                  "path": "$.prayerOptional"
+                }
+              },
+              {
+                "variable": "purposeOfApplication",
+                "value": {
+                  "path": "$.purposeOfApplication"
+                }
+              },
+              {
+                "variable": "advocateSignature",
+                "value": {
+                  "path": "$.advocateSignature"
+                }
+              },
+              {
+                "variable": "advocateName",
+                "value": {
+                  "path": "$.advocateName"
+                }
+              },
+              {
+                "variable": "barRegistrationNumber",
+                "value": {
+                  "path": "$.barRegistrationNumber"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

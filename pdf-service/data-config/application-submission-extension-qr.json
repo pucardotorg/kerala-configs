@@ -1,0 +1,168 @@
+{
+  "key": "application-submission-extension",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtComplex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "caseType",
+                "value": {
+                  "path": "$.caseType"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "courtDesignation",
+                "value": {
+                  "path": "$.courtDesignation"
+                }
+              },
+              {
+                "variable": "addressOfTheCourt",
+                "value": {
+                  "path": "$.addressOfTheCourt"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                },
+                "type": "date"
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "advocateName",
+                "value": {
+                  "path": "$.advocateName"
+                }
+              },
+              {
+                "variable": "documentSubmissionName",
+                "value": {
+                  "path": "$.documentSubmissionName"
+                }
+              },
+              {
+                "variable": "documentId",
+                "value": {
+                  "path": "$.documentId"
+                }
+              },
+              {
+                "variable": "originalSubmissionDate",
+                "value": {
+                  "path": "$.originalSubmissionDate"
+                }
+              },
+              {
+                "variable": "requestedSubmissionDate",
+                "value": {
+                  "path": "$.requestedSubmissionDate"
+                }
+              },
+              {
+                "variable": "extensionReason",
+                "value": {
+                  "path": "$.extensionReason"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "day",
+                "value": {
+                  "path": "$.day"
+                }
+              },
+              {
+                "variable": "month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
+                "variable": "advocateSignature",
+                "value": {
+                  "path": "$.advocateSignature"
+                }
+              },
+              {
+                "variable": "barRegistrationNumber",
+                "value": {
+                  "path": "$.barRegistrationNumber"
+                }
+              },
+              {
+                "variable": "qrCodeUrl",
+                "value": {
+                  "path": "$.qrCodeUrl"
+                }
+              }
+            ]
+          },
+          {
+            "qrcodeConfig": [
+              {
+                "variable": "qrCodeImage",
+                "value": "{{qrCodeUrl}}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
