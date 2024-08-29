@@ -29,24 +29,44 @@
                     "style": "form-header"
                   },
                   {
-                    "text": "SUMMONS TO AN ACCUSED PERSON",
-                    "style": "form-sub-header",
-                    "alignment": "left"
+                    "table": {
+                      "widths": ["*", "*"],
+                      "body": [
+                        [
+                          {
+                            "text": "SUMMONS TO AN ACCUSED PERSON",
+                            "style": "form-sub-header",
+                            "alignment": "left"
+                          },
+                          {
+                            "text": "{{caseName}}",
+                            "style": "form-sub-header",
+                            "alignment": "right"
+                          }
+                        ]
+                      ]
+                    },
+                    "layout": "noBorders"
                   },
                   {
-                    "text": "{{caseName}}",
-                    "style": "form-sub-header",
-                    "alignment": "right"
-                  },
-                  {
-                    "text": "(See section 63)",
-                    "style": "form-sub-header",
-                    "alignment": "left"
-                  },
-                  {
-                    "text": "{{hearingDate}}",
-                    "style": "form-sub-header",
-                    "alignment": "right"
+                    "table": {
+                      "widths": ["*", "*"],
+                      "body": [
+                        [
+                          {
+                            "text": "(See section 63)",
+                            "style": "form-sub-header",
+                            "alignment": "left"
+                          },
+                          {
+                            "text": "Next Date: {{hearingDate}}",
+                            "style": "form-sub-header",
+                            "alignment": "right"
+                          }
+                        ]
+                      ]
+                    },
+                    "layout": "noBorders"
                   }
                 ],
                 "alignment": "center",
@@ -154,7 +174,8 @@
                 "image": "{{qrCodeImage}}",
                 "width": 180,
                 "height": 180,
-                "style": "qr-code"
+                "style": "qr-code",
+                "alignment": "center"
               }
             ]
           ]
@@ -184,8 +205,7 @@
               {
                 "text": "Next Page",
                 "style": "footer-page",
-                "pageBreak":  "before"
-
+                "alignment": "right"
               }
             ]
           ]
@@ -197,6 +217,10 @@
           0,
           0
         ]
+      },
+      {
+        "text": "",
+        "pageBreak":  "before"
       },
       {
         "style": "annexure-header",
@@ -352,16 +376,16 @@
         "fontFamily": "Roboto",
         "fontSize": 16,
         "bold": true,
-        "letterSpacing": 0.74
+        "letterSpacing": 0.5
       },
       "form-sub-header": {
         "color": "#484848",
         "fontFamily": "Roboto",
         "fontSize": 13,
-        "letterSpacing": 1.6,
+        "letterSpacing": 0.6,
         "margin": [
           0,
-          6,
+          5,
           0,
           0
         ]
@@ -370,38 +394,38 @@
         "fontSize": 12,
         "color": "#484848",
         "margin": [
-          -25,
-          18,
-          -8,
-          -8
+          -10,
+          10,
+          -5,
+          -5
         ]
       },
       "form-sub-body": {
         "fontSize": 12,
         "color": "#484848",
         "margin": [
-          -25,
-          30,
-          -8,
-          -8
+          -10,
+          10,
+          -5,
+          -5
         ]
       },
       "closing-content": {
         "color": "#484848",
         "fontSize": 11,
         "margin": [
-          20,
-          20,
-          20,
-          20
+          10,
+          10,
+          10,
+          10
         ]
       },
       "closing-text": {
         "margin": [
           0,
-          15,
+          10,
           0,
-          15
+          0
         ],
         "bold": true,
         "color": "#000000",
@@ -410,9 +434,9 @@
       "closing-seal": {
         "margin": [
           0,
-          15,
+          10,
           0,
-          20
+          0
         ],
         "bold": true,
         "color": "#000000",
@@ -421,7 +445,7 @@
       "closing-signature": {
         "margin": [
           0,
-          50,
+          10,
           0,
           0
         ],
@@ -433,26 +457,26 @@
         "color": "#484848",
         "fontSize": 11,
         "margin": [
-          20,
-          20,
-          20,
-          20
+          10,
+          10,
+          10,
+          10
         ]
       },
       "footer-text": {
         "margin": [
           0,
-          15,
+          10,
           0,
-          15
+          0
         ]
       },
       "footer-page": {
         "margin": [
           0,
-          15,
+          10,
           0,
-          15
+          0
         ]
       },
       "annexure-header": {
@@ -460,16 +484,16 @@
         "fontFamily": "Roboto",
         "fontSize": 16,
         "bold": true,
-        "letterSpacing": 0.74
+        "letterSpacing": 0.5
       },
       "annexure-sub-header": {
         "color": "#484848",
         "fontFamily": "Roboto",
         "fontSize": 13,
-        "letterSpacing": 1.6,
+        "letterSpacing": 0.6,
         "margin": [
           0,
-          6,
+          5,
           0,
           0
         ]
@@ -478,10 +502,10 @@
         "fontSize": 12,
         "color": "#484848",
         "margin": [
-          -25,
-          18,
-          -8,
-          -8
+          -15,
+          10,
+          -5,
+          -5
         ]
       }
     }
