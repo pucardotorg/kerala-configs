@@ -1,133 +1,190 @@
 {
   "key": "order-bail-acceptance-qr",
-  "DataConfigs": {
-    "serviceName": "rainmaker-common",
-    "version": "1.0.0",
-    "baseKeyPath": "$.Data.*",
-    "entityIdPath": "$.id",
-    "isCommonTableBorderRequired": true,
-    "mappings": [
+  "config": {
+    "content": [
       {
-        "topic": "common-pdf-generation-3",
-        "mappings": [
-          {
-            "direct": [
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
               {
-                "variable": "courtName",
-                "value": {
-                  "path": "$.courtName"
-                }
-              },
-              {
-                "variable": "courtPlace",
-                "value": {
-                  "path": "$.courtPlace"
-                }
-              },
-              {
-                "variable": "state",
-                "value": {
-                  "path": "$.state"
-                }
-              },
-              {
-                "variable": "caseNumber",
-                "value": {
-                  "path": "$.caseNumber"
-                }
-              },
-              {
-                "variable": "caseYear",
-                "value": {
-                  "path": "$.caseYear"
-                }
-              },
-              {
-                "variable": "applicantName",
-                "value": {
-                  "path": "$.applicantName"
-                }
-              },
-              {
-                "variable": "dateOfApplication",
-                "value": {
-                  "path": "$.dateOfApplication"
-                }
-              },
-              {
-                "variable": "briefSummaryOfBail",
-                "value": {
-                  "path": "$.briefSummaryOfBail"
-                }
-              },
-              {
-                "variable": "date",
-                "value": {
-                  "path": "$.date"
-                }
-              },
-              {
-                "variable": "partyName",
-                "value": {
-                  "path": "$.partyName"
-                }
-              },
-              {
-                "variable": "documentNameList",
-                "value": {
-                  "path": "$.complainants.*"
-                },
-                "type": "index",
-                "format": "var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
-              },
-              {
-                "variable": "bailType",
-                "value": {
-                  "path": "$.bailType"
-                }
-              },
-              {
-                "variable": "conditionOfBail",
-                "value": {
-                  "path": "$.conditionOfBail"
-                }
-              },
-              {
-                "variable": "judgeSignature",
-                "value": {
-                  "path": "$.judgeSignature"
-                }
-              },
-              {
-                "variable": "judgeName",
-                "value": {
-                  "path": "$.judgeName"
-                }
-              },
-              {
-                "variable": "courtSeal",
-                "value": {
-                  "path": "$.courtSeal"
-                }
-              },
-              {
-                "variable": "qrCodeUrl",
-                "value": {
-                  "path": "$.qrCodeUrl"
-                }
+                "stack": [
+                  {
+                    "text": "In the Court of {{courtName}}, {{courtPlace}}, {{state}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No: {{caseNumber}} of {{caseYear}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In the matter of: {{caseNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "ORDER",
+                    "style": "orderTitle"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "This matter comes before the Court on the Application for Bail filed by {{applicantName}}, Advocate for {{partyName}}, on {{dateOfApplication}}.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has considered the Application for Bail, which asserts that {{briefSummaryOfBail}}; and",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, including",
+                    "style": "contentText"
+                  },
+                  "{{#documentNameList}}",
+                  {
+                    "table": {
+                      "widths": [150, "*"],
+                      "body": [
+                        {
+                          "text": "{{documentName}}",
+                          "style": "tableData"
+                        }
+                      ],
+                      "border": [true, true, true, true]
+                    }
+                  },
+                  {
+                    "text": "",
+                    "margin": [0, 0, 0, 20]
+                  },
+                  "{{/documentNameList}}",
+                  {
+                    "text": "WHEREAS, the Court has taken into account the seriousness of the allegations and the likelihood of the Applicant appearing for further proceedings; and",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has considered the relevant legal provisions regarding bail;",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The Application for Bail by {{partyName}} is GRANTED.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The type of bail granted is {{bailType}}.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{bailType}} The conditions of bail include {{conditionOfBail}}.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "IT IS SO ORDERED.",
+                    "style": "orderText"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Judge, District {{courtName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{courtSeal}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
               }
             ]
-          },
-          {
-            "qrcodeConfig": [
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
               {
-                "variable": "qrCodeImage",
-                "value": "{{qrCodeUrl}}"
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
               }
             ]
-          }
-        ]
+          ]
+        },
+        "layout": "noBorders"
       }
-    ]
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "caseName": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "caseNumber": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderTitle": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderName": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 20]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "contentText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [0, 10, 0, 20]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 0]
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
+      }
+    }
   }
 }

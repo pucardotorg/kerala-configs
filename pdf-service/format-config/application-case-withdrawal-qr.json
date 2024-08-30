@@ -1,173 +1,207 @@
 {
   "key": "application-case-withdrawal",
-  "DataConfigs": {
-    "serviceName": "rainmaker-common",
-    "version": "1.0.0",
-    "baseKeyPath": "$.Data.*",
-    "entityIdPath": "$.id",
-    "isCommonTableBorderRequired": true,
-    "mappings": [
+  "config": {
+    "content": [
       {
-        "topic": "common-pdf-generation-3",
-        "mappings": [
-          {
-            "direct": [
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
               {
-                "variable": "courtComplex",
-                "value": {
-                  "path": "$.courtComplex"
-                }
-              },
-              {
-                "variable": "caseType",
-                "value": {
-                  "path": "$.caseType"
-                }
-              },
-              {
-                "variable": "caseNumber",
-                "value": {
-                  "path": "$.caseNumber"
-                }
-              },
-              {
-                "variable": "caseYear",
-                "value": {
-                  "path": "$.caseYear"
-                }
-              },
-              {
-                "variable": "caseName",
-                "value": {
-                  "path": "$.caseName"
-                }
-              },
-              {
-                "variable": "caseNo",
-                "value": {
-                  "path": "$.caseNo"
-                }
-              },
-              {
-                "variable": "originalCourt",
-                "value": {
-                  "path": "$.originalCourt"
-                }
-              },
-              {
-                "variable": "newCourt",
-                "value": {
-                  "path": "$.newCourt"
-                }
-              },
-              {
-                "variable": "judgeName",
-                "value": {
-                  "path": "$.judgeName"
-                }
-              },
-              {
-                "variable": "courtDesignation",
-                "value": {
-                  "path": "$.courtDesignation"
-                }
-              },
-              {
-                "variable": "addressOfTheCourt",
-                "value": {
-                  "path": "$.addressOfTheCourt"
-                }
-              },
-              {
-                "variable": "date",
-                "value": {
-                  "path": "$.date"
-                }
-              },
-              {
-                "variable": "partyName",
-                "value": {
-                  "path": "$.partyName"
-                }
-              },
-              {
-                "variable": "partyType",
-                "value": {
-                  "path": "$.partyType"
-                }
-              },
-              {
-                "variable": "additionalComments",
-                "value": {
-                  "path": "$.additionalComments"
-                }
-              },
-              {
-                "variable": "grounds",
-                "value": {
-                  "path": "$.grounds"
-                }
-              },
-              {
-                "variable": "reliefSought",
-                "value": {
-                  "path": "$.reliefSought"
-                }
-              },
-              {
-                "variable": "day",
-                "value": {
-                  "path": "$.day"
-                }
-              },
-              {
-                "variable": "month",
-                "value": {
-                  "path": "$.month"
-                }
-              },
-              {
-                "variable": "year",
-                "value": {
-                  "path": "$.year"
-                }
-              },
-              {
-                "variable": "advocateSignature",
-                "value": {
-                  "path": "$.advocateSignature"
-                }
-              },
-              {
-                "variable": "advocateName",
-                "value": {
-                  "path": "$.advocateName"
-                }
-              },
-              {
-                "variable": "barRegistrationNumber",
-                "value": {
-                  "path": "$.barRegistrationNumber"
-                }
-              },
-              {
-                "variable": "qrCodeUrl",
-                "value": {
-                  "path": "$.qrCodeUrl"
-                }
+                "stack": [
+                  {
+                    "text": "IN THE COURT OF {{courtComplex}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{caseType}}/Case No. {{caseNumber}} of {{caseYear}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "{{caseName}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "TRANSFER PETITION SEEKING TRANSFER OF CRIMINAL COMPLAINT BEARING",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "text": "NO. {{caseNo}} FROM {{originalCourt}} TO {{newCourt}}",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "text": "To,",
+                    "style": "subTitle"
+                  },
+                  {
+                    "text": "The Honorable {{judgeName}}/{{courtDesignation}},",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{addressOfTheCourt}}",
+                    "style": "address"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "Subject: Application for Withdrawal of Case",
+                    "style": "subjectText"
+                  },
+                  {
+                    "text": "My client, {{partyName}}, {{partyType}}, hereby submits this application before this Honorable Court seeking withdrawal of the case of {{caseNo}} - {{caseName}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "The reasons for the withdrawal of the case are detailed below:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "This petition seeks the transfer of the criminal complaint bearing No. {{caseNo}} from {{originalCourt}} to {{newCourt}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Grounds:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{grounds}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "The petitioner assures and undertakes to the Hon'ble Court that this request is made in good faith and will not prejudice the other party.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Therefore, the petitioner humbly requests the Hon'ble Court to consider this petition and grant the transfer of the aforementioned criminal complaint from {{originalCourt}} to {{newCourt}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Prayer:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{reliefSought}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Verification:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "I, {{partyName}}, do hereby verify that the contents are correct and true to the best of my knowledge and personal belief and no part of it is false and nothing material has been concealed therein.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Affirmed on this {{day}} day of {{month}}, {{year}}.",
+                    "style": "date"
+                  },
+                  {
+                    "text": "{{advocateSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{advocateName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{barRegistrationNumber}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Advocate for {{partyName}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
               }
             ]
-          },
-          {
-            "qrcodeConfig": [
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
               {
-                "variable": "qrCodeImage",
-                "value": "{{qrCodeUrl}}"
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
               }
             ]
-          }
-        ]
+          ]
+        },
+        "layout": "noBorders"
       }
-    ]
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 0]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 0]
+      },
+      "applicationTitle": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 20, 0, 10]
+      },
+      "subTitle": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 0]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "bold": true,
+        "margin": [0, 0, 0, 10]
+      },
+      "subjectText": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      },
+      "address": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, -10, 0, 10]
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      }
+    }
   }
 }
