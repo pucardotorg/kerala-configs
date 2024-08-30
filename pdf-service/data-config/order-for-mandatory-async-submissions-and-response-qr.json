@@ -1,5 +1,5 @@
 {
-  "key": "application-generic-qr",
+  "key": "order-for-mandatory-async-submissions-and-response-qr",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -13,15 +13,21 @@
           {
             "direct": [
               {
-                "variable": "courtComplex",
+                "variable": "courtName",
                 "value": {
-                  "path": "$.courtComplex"
+                  "path": "$.courtName"
                 }
               },
               {
-                "variable": "caseType",
+                "variable": "courtPlace",
                 "value": {
-                  "path": "$.caseType"
+                  "path": "$.courtPlace"
+                }
+              },
+              {
+                "variable": "courtState",
+                "value": {
+                  "path": "$.courtState"
                 }
               },
               {
@@ -31,45 +37,9 @@
                 }
               },
               {
-                "variable": "caseYear",
+                "variable": "year",
                 "value": {
-                  "path": "$.caseYear"
-                }
-              },
-              {
-                "variable": "caseName",
-                "value": {
-                  "path": "$.caseName"
-                }
-              },
-              {
-                "variable": "applicationName",
-                "value": {
-                  "path": "$.applicationName"
-                }
-              },
-              {
-                "variable": "judgeName",
-                "value": {
-                  "path": "$.judgeName"
-                }
-              },
-              {
-                "variable": "courtDesignation",
-                "value": {
-                  "path": "$.courtDesignation"
-                }
-              },
-              {
-                "variable": "addressOfTheCourt",
-                "value": {
-                  "path": "$.addressOfTheCourt"
-                }
-              },
-              {
-                "variable": "date",
-                "value": {
-                  "path": "$.date"
+                  "path": "$.year"
                 }
               },
               {
@@ -79,9 +49,21 @@
                 }
               },
               {
-                "variable": "complainantName",
+                "variable": "listOfDocument",
                 "value": {
-                  "path": "$.complainantName"
+                  "path": "$.listOfDocument"
+                }
+              },
+              {
+                "variable": "deadlineForSubmission",
+                "value": {
+                  "path": "$.deadlineForSubmission"
+                }
+              },
+              {
+                "variable": "respondentName",
+                "value": {
+                  "path": "$.respondentName"
                 }
               },
               {
@@ -91,33 +73,33 @@
                 }
               },
               {
-                "variable": "prayerOptional",
+                "variable": "date",
                 "value": {
-                  "path": "$.prayerOptional"
+                  "path": "$.date"
                 }
               },
               {
-                "variable": "purposeOfApplication",
+                "variable": "month",
                 "value": {
-                  "path": "$.purposeOfApplication"
+                  "path": "$.month"
                 }
               },
               {
-                "variable": "advocateSignature",
+                "variable": "judgeSignature",
                 "value": {
-                  "path": "$.advocateSignature"
+                  "path": "$.judgeSignature"
                 }
               },
               {
-                "variable": "advocateName",
+                "variable": "judgeName",
                 "value": {
-                  "path": "$.advocateName"
+                  "path": "$.judgeName"
                 }
               },
               {
-                "variable": "barRegistrationNumber",
+                "variable": "courtSeal",
                 "value": {
-                  "path": "$.barRegistrationNumber"
+                  "path": "$.courtSeal"
                 }
               },
               {

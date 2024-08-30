@@ -1,5 +1,5 @@
 {
-  "key": "order-bail-rejection-qr",
+  "key": "order-for-mandatory-async-submissions-and-response",
   "config": {
     "content": [
       {
@@ -10,11 +10,11 @@
               {
                 "stack": [
                   {
-                    "text": "In the Court of {{courtName}}, {{courtPlace}}, {{state}}",
+                    "text": "In the Court of {{courtName}}, {{courtPlace}}, {{courtState}}",
                     "style": "header"
                   },
                   {
-                    "text": "Case No: {{caseNumber}} of {{caseYear}}",
+                    "text": "Case No. {{caseNumber}} of {{year}}",
                     "style": "header"
                   },
                   {
@@ -26,53 +26,35 @@
                     "style": "orderTitle"
                   },
                   {
-                    "text": "{{date}}",
-                    "style": "date"
-                  },
-                  {
-                    "text": "This matter comes before the Court on the Application for Bail filed by {{applicantName}}, Advocate for {{partyName}}, on {{dateOfApplication}}.",
+                    "text": "This matter comes before the Court upon consideration regarding the submission of evidence by the parties and the scheduling of the next hearing.",
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has considered the Application for Bail, which asserts that {{briefSummaryOfBail}}; and",
+                    "text": "The Court orders the following:",
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, including",
-                    "style": "contentText"
-                  },
-                  "{{#documentNameList}}",
-                  {
-                    "table": {
-                      "widths": [150, "*"],
-                      "body": [
-                        {
-                          "text": "{{documentName}}",
-                          "style": "tableData"
-                        }
-                      ],
-                      "border": [true, true, true, true]
-                    }
-                  },
-                  {
-                    "text": "",
-                    "margin": [0, 0, 0, 20]
-                  },
-                  "{{/documentNameList}}",
-                  {
-                    "text": "WHEREAS, the Court has taken into account the seriousness of the allegations, the potential risk to public safety, and the likelihood of the Applicant appearing for further proceedings; and",
+                    "text": "The {{partyName}} shall submit their respective evidence and documents as listed {{listOfDocument}} through the court's online portal no later than {{deadlineForSubmission}}. The submission should include all relevant materials intended to be relied upon during the proceedings.",
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has considered the relevant legal provisions regarding bail;",
+                    "text": "{{respondentName}}, The opposing party(ies) shall have the opportunity to review the submitted evidence and documents and provide their responses, if any, within {{deadlineForSubmission}}, also through the court's online portal.",
                     "style": "contentText"
                   },
                   {
-                    "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
+                    "text": "It is further ordered that failure to comply with the deadlines set forth in this order may result in sanctions or adverse rulings, as deemed appropriate by the court.",
                     "style": "contentText"
                   },
                   {
-                    "text": "The Application for Bail by {{partyName}} is DENIED. The Applicant shall remain in custody pending further proceedings.",
+                    "text": "This order shall be served upon all parties to the case and their respective legal representatives, and shall be posted on the court's online portal for access and reference.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "Given under my hand and the seal of this Court on this {{date}} day of {{month}}, {{year}}.",
                     "style": "contentText"
                   },
                   {
@@ -88,7 +70,7 @@
                     "style": "signature"
                   },
                   {
-                    "text": "Judge, District {{courtName}}",
+                    "text": "Judge, {{courtName}}",
                     "style": "signature"
                   },
                   {
@@ -98,23 +80,6 @@
                 ],
                 "alignment": "left",
                 "margin": [0, 20, 0, 20]
-              }
-            ]
-          ]
-        },
-        "layout": "noBorders"
-      },
-      {
-        "style": "ws-head",
-        "table": {
-          "widths": ["*"],
-          "body": [
-            [
-              {
-                "image": "{{qrCodeImage}}",
-                "width": 180,
-                "height": 180,
-                "style": "qr-code"
               }
             ]
           ]
