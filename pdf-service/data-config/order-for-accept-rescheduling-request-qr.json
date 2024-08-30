@@ -1,5 +1,5 @@
 {
-  "key": "application-generic-qr",
+  "key": "order-for-accept-rescheduling-request-qr",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -13,27 +13,9 @@
           {
             "direct": [
               {
-                "variable": "courtComplex",
+                "variable": "courtName",
                 "value": {
-                  "path": "$.courtComplex"
-                }
-              },
-              {
-                "variable": "caseType",
-                "value": {
-                  "path": "$.caseType"
-                }
-              },
-              {
-                "variable": "caseNumber",
-                "value": {
-                  "path": "$.caseNumber"
-                }
-              },
-              {
-                "variable": "caseYear",
-                "value": {
-                  "path": "$.caseYear"
+                  "path": "$.courtName"
                 }
               },
               {
@@ -43,27 +25,9 @@
                 }
               },
               {
-                "variable": "applicationName",
+                "variable": "caseNumber",
                 "value": {
-                  "path": "$.applicationName"
-                }
-              },
-              {
-                "variable": "judgeName",
-                "value": {
-                  "path": "$.judgeName"
-                }
-              },
-              {
-                "variable": "courtDesignation",
-                "value": {
-                  "path": "$.courtDesignation"
-                }
-              },
-              {
-                "variable": "addressOfTheCourt",
-                "value": {
-                  "path": "$.addressOfTheCourt"
+                  "path": "$.caseNumber"
                 }
               },
               {
@@ -79,9 +43,21 @@
                 }
               },
               {
-                "variable": "complainantName",
+                "variable": "applicationId",
                 "value": {
-                  "path": "$.complainantName"
+                  "path": "$.applicationId"
+                }
+              },
+              {
+                "variable": "reasonForRescheduling",
+                "value": {
+                  "path": "$.reasonForRescheduling"
+                }
+              },
+              {
+                "variable": "originalHearingDate",
+                "value": {
+                  "path": "$.originalHearingDate"
                 }
               },
               {
@@ -91,33 +67,21 @@
                 }
               },
               {
-                "variable": "prayerOptional",
+                "variable": "judgeSignature",
                 "value": {
-                  "path": "$.prayerOptional"
+                  "path": "$.judgeSignature"
                 }
               },
               {
-                "variable": "purposeOfApplication",
+                "variable": "judgeName",
                 "value": {
-                  "path": "$.purposeOfApplication"
+                  "path": "$.judgeName"
                 }
               },
               {
-                "variable": "advocateSignature",
+                "variable": "courtSeal",
                 "value": {
-                  "path": "$.advocateSignature"
-                }
-              },
-              {
-                "variable": "advocateName",
-                "value": {
-                  "path": "$.advocateName"
-                }
-              },
-              {
-                "variable": "barRegistrationNumber",
-                "value": {
-                  "path": "$.barRegistrationNumber"
+                  "path": "$.courtSeal"
                 }
               },
               {

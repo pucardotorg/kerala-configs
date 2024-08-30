@@ -1,5 +1,5 @@
 {
-  "key": "order-bail-rejection-qr",
+  "key": "order-for-rejection-rescheduling-request-qr",
   "config": {
     "content": [
       {
@@ -10,15 +10,11 @@
               {
                 "stack": [
                   {
-                    "text": "In the Court of {{courtName}}, {{courtPlace}}, {{state}}",
+                    "text": "In the Court of {{courtName}}",
                     "style": "header"
                   },
                   {
-                    "text": "Case No: {{caseNumber}} of {{caseYear}}",
-                    "style": "header"
-                  },
-                  {
-                    "text": "In the matter of: {{caseNumber}}",
+                    "text": "{{caseName}} and {{caseNumber}}",
                     "style": "header"
                   },
                   {
@@ -30,41 +26,15 @@
                     "style": "date"
                   },
                   {
-                    "text": "This matter comes before the Court on the Application for Bail filed by {{applicantName}}, Advocate for {{partyName}}, on {{dateOfApplication}}.",
+                    "text": "This matter comes before the Court for the purpose of considering the request for rescheduling the hearing date in the above-captioned case.",
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has considered the Application for Bail, which asserts that {{briefSummaryOfBail}}; and",
+                    "text": "WHEREAS, {{partyName}} has/have filed a request {{applicationId}} for the rescheduling of the hearing date, citing {{reasonForRescheduling}};",
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, including",
-                    "style": "contentText"
-                  },
-                  "{{#documentNameList}}",
-                  {
-                    "table": {
-                      "widths": [150, "*"],
-                      "body": [
-                        {
-                          "text": "{{documentName}}",
-                          "style": "tableData"
-                        }
-                      ],
-                      "border": [true, true, true, true]
-                    }
-                  },
-                  {
-                    "text": "",
-                    "margin": [0, 0, 0, 20]
-                  },
-                  "{{/documentNameList}}",
-                  {
-                    "text": "WHEREAS, the Court has taken into account the seriousness of the allegations, the potential risk to public safety, and the likelihood of the Applicant appearing for further proceedings; and",
-                    "style": "contentText"
-                  },
-                  {
-                    "text": "WHEREAS, the Court has considered the relevant legal provisions regarding bail;",
+                    "text": "WHEREAS, after due consideration, the Court finds that sufficient cause for rescheduling has not been demonstrated;",
                     "style": "contentText"
                   },
                   {
@@ -72,12 +42,20 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "The Application for Bail by {{partyName}} is DENIED. The Applicant shall remain in custody pending further proceedings.",
+                    "text": "The request for rescheduling the hearing date in the above-captioned case is hereby DENIED for the following reasons {{reasonForRescheduling}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The original hearing date scheduled for  {{originalHearingDate}} shall remain in effect.",
                     "style": "contentText"
                   },
                   {
                     "text": "IT IS SO ORDERED.",
                     "style": "orderText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
                   },
                   {
                     "text": "{{judgeSignature}}",
@@ -88,7 +66,7 @@
                     "style": "signature"
                   },
                   {
-                    "text": "Judge, District {{courtName}}",
+                    "text": "Judge, {{courtName}}",
                     "style": "signature"
                   },
                   {
