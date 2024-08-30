@@ -49,18 +49,6 @@
                 }
               },
               {
-                "variable": "originalCourt",
-                "value": {
-                  "path": "$.originalCourt"
-                }
-              },
-              {
-                "variable": "newCourt",
-                "value": {
-                  "path": "$.newCourt"
-                }
-              },
-              {
                 "variable": "judgeName",
                 "value": {
                   "path": "$.judgeName"
