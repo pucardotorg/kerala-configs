@@ -91,18 +91,6 @@
                 }
               },
               {
-                "variable": "originalCourt",
-                "value": {
-                  "path": "$.originalCourt"
-                }
-              },
-              {
-                "variable": "newCourt",
-                "value": {
-                  "path": "$.newCourt"
-                }
-              },
-              {
                 "variable": "day",
                 "value": {
                   "path": "$.day"
