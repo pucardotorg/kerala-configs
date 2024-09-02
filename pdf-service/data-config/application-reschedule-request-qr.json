@@ -103,24 +103,6 @@
                 }
               },
               {
-                "variable": "day",
-                "value": {
-                  "path": "$.day"
-                }
-              },
-              {
-                "variable": "month",
-                "value": {
-                  "path": "$.month"
-                }
-              },
-              {
-                "variable": "year",
-                "value": {
-                  "path": "$.year"
-                }
-              },
-              {
                 "variable": "advocateSignature",
                 "value": {
                   "path": "$.advocateSignature"

@@ -46,7 +46,7 @@
                     "style": "subjectText"
                   },
                   {
-                    "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court seeking to reschedule the hearing date in the matter of {{caseName}} : {{caseNumber}}.",
+                    "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court seeking to reschedule the hearing date in the matter of {{caseName}} {{caseNumber}}.",
                     "style": "bodyText"
                   },
                   {
@@ -54,12 +54,12 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{additionalComments}}",
+                    "text": "I respectfully request the Court's consideration to reschedule the hearing date. Thank you for considering this request. I remain available to provide any further information or clarification that the Court may require.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Dated this {{day}} day of {{month}}, {{year}}.",
-                    "style": "date"
+                    "text": "{{additionalComments}}",
+                    "style": "bodyText"
                   },
                   {
                     "text": "{{advocateSignature}}",
