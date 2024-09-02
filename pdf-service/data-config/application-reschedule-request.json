@@ -1,5 +1,5 @@
 {
-  "key": "application-generic",
+  "key": "application-reschedule-request",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -43,12 +43,6 @@
                 }
               },
               {
-                "variable": "applicationName",
-                "value": {
-                  "path": "$.applicationName"
-                }
-              },
-              {
                 "variable": "judgeName",
                 "value": {
                   "path": "$.judgeName"
@@ -85,21 +79,27 @@
                 }
               },
               {
+                "variable": "initialHearingDate",
+                "value": {
+                  "path": "$.initialHearingDate"
+                }
+              },
+              {
+                "variable": "reasonForReschedule",
+                "value": {
+                  "path": "$.reasonForReschedule"
+                }
+              },
+              {
+                "variable": "proposed_Hearing_Date",
+                "value": {
+                  "path": "$.proposed_Hearing_Date"
+                }
+              },
+              {
                 "variable": "additionalComments",
                 "value": {
                   "path": "$.additionalComments"
-                }
-              },
-              {
-                "variable": "prayer",
-                "value": {
-                  "path": "$.prayer"
-                }
-              },
-              {
-                "variable": "reasonForApplication",
-                "value": {
-                  "path": "$.reasonForApplication"
                 }
               },
               {

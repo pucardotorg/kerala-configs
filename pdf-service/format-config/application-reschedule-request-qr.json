@@ -1,5 +1,5 @@
 {
-  "key": "application-generic-qr",
+  "key": "application-reschedule-request-qr",
   "config": {
     "content": [
       {
@@ -22,7 +22,7 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "{{applicationName}}",
+                    "text": "APPLICATION FOR RESCHEDULING OF HEARING DATE",
                     "style": "applicationTitle"
                   },
                   {
@@ -42,11 +42,15 @@
                     "style": "date"
                   },
                   {
-                    "text": "Subject: {{applicationName}}",
+                    "text": "Subject: Application for Rescheduling of Hearing Date",
                     "style": "subjectText"
                   },
                   {
-                    "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court seeking {{reasonForApplication}}",
+                    "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court seeking to reschedule the hearing date in the matter of {{caseName}} : {{caseNumber}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "The case was originally posted for hearing on {{initialHearingDate}}. However, due to {{reasonForReschedule}}, attending the hearing will not be possible. My client and I will make ourselves available for the same for all dates after {{proposed_Hearing_Date}}.",
                     "style": "bodyText"
                   },
                   {
@@ -54,16 +58,8 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Prayer:",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "{{prayer}}",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "I remain available to provide any further information or clarification that the Court may require.",
-                    "style": "bodyText"
+                    "text": "Dated this {{day}} day of {{month}}, {{year}}.",
+                    "style": "date"
                   },
                   {
                     "text": "{{advocateSignature}}",
@@ -160,11 +156,6 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, -10, 0, 10]
-      },
-      "qr-code": {
-        "color": "#000000",
-        "alignment": "left",
-        "margin": [0, 0, 0, 0]
       }
     }
   }

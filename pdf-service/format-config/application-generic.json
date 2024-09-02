@@ -46,7 +46,7 @@
                     "style": "subjectText"
                   },
                   {
-                    "text": "My client, {{partyName}}, the {{complainantName}}, hereby submits this application before this Honorable Court seeking {{purposeOfApplication}}",
+                    "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court seeking {{reasonForApplication}}",
                     "style": "bodyText"
                   },
                   {
@@ -54,11 +54,11 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Prayer: [If Prayer field is filled]",
-                    "style": "subjectText"
+                    "text": "Prayer:",
+                    "style": "bodyText"
                   },
                   {
-                    "text": "{{prayerOptional}}",
+                    "text": "{{prayer}}",
                     "style": "bodyText"
                   },
                   {

@@ -79,9 +79,9 @@
                 }
               },
               {
-                "variable": "complainantName",
+                "variable": "partyType",
                 "value": {
-                  "path": "$.complainantName"
+                  "path": "$.partyType"
                 }
               },
               {
@@ -91,15 +91,33 @@
                 }
               },
               {
-                "variable": "prayerOptional",
+                "variable": "prayer",
                 "value": {
-                  "path": "$.prayerOptional"
+                  "path": "$.prayer"
                 }
               },
               {
-                "variable": "purposeOfApplication",
+                "variable": "reasonForApplication",
                 "value": {
-                  "path": "$.purposeOfApplication"
+                  "path": "$.reasonForApplication"
+                }
+              },
+              {
+                "variable": "day",
+                "value": {
+                  "path": "$.day"
+                }
+              },
+              {
+                "variable": "month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
                 }
               },
               {
