@@ -91,9 +91,9 @@
                 }
               },
               {
-                "variable": "proposed_Hearing_Date",
+                "variable": "proposedHearingDate",
                 "value": {
-                  "path": "$.proposed_Hearing_Date"
+                  "path": "$.proposedHearingDate"
                 }
               },
               {
