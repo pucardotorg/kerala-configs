@@ -46,20 +46,20 @@
                     "style": "subjectText"
                   },
                   {
-                    "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court seeking to reschedule the hearing date in the matter of {{caseName}} : {{caseNumber}}.",
+                    "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court seeking to reschedule the hearing date in the matter of {{caseName}} {{caseNumber}}.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "The case was originally posted for hearing on {{initialHearingDate}}. However, due to {{reasonForReschedule}}, attending the hearing will not be possible. My client and I will make ourselves available for the same for all dates after {{proposed_Hearing_Date}}.",
+                    "text": "The case was originally posted for hearing on {{initialHearingDate}}. However, due to {{reasonForReschedule}}, attending the hearing will not be possible. My client and I will make ourselves available for the same for all dates after {{proposedHearingDate}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "I respectfully request the Court's consideration to reschedule the hearing date. Thank you for considering this request. I remain available to provide any further information or clarification that the Court may require.",
                     "style": "bodyText"
                   },
                   {
                     "text": "{{additionalComments}}",
                     "style": "bodyText"
-                  },
-                  {
-                    "text": "Dated this {{day}} day of {{month}}, {{year}}.",
-                    "style": "date"
                   },
                   {
                     "text": "{{advocateSignature}}",

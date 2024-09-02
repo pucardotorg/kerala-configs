@@ -91,33 +91,15 @@
                 }
               },
               {
-                "variable": "proposed_Hearing_Date",
+                "variable": "proposedHearingDate",
                 "value": {
-                  "path": "$.proposed_Hearing_Date"
+                  "path": "$.proposedHearingDate"
                 }
               },
               {
                 "variable": "additionalComments",
                 "value": {
                   "path": "$.additionalComments"
-                }
-              },
-              {
-                "variable": "day",
-                "value": {
-                  "path": "$.day"
-                }
-              },
-              {
-                "variable": "month",
-                "value": {
-                  "path": "$.month"
-                }
-              },
-              {
-                "variable": "year",
-                "value": {
-                  "path": "$.year"
                 }
               },
               {
