@@ -50,7 +50,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "The case was originally posted for hearing on {{initialHearingDate}}. However, due to {{reasonForReschedule}}, attending the hearing will not be possible. My client and I will make ourselves available for the same for all dates after {{proposed_Hearing_Date}}.",
+                    "text": "The case was originally posted for hearing on {{initialHearingDate}}. However, due to {{reasonForReschedule}}, attending the hearing will not be possible. My client and I will make ourselves available for the same for all dates after {{proposedHearingDate}}.",
                     "style": "bodyText"
                   },
                   {
