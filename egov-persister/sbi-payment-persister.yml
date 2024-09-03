@@ -1,0 +1,92 @@
+serviceMaps:
+  serviceName: TransactionService
+  mappings:
+    - version: 1.0
+      description: Persists transaction details
+      fromTopic: save-transaction-details
+      isTransaction: true
+      isAuditEnabled: true
+      queryMaps:
+        - query: INSERT INTO transaction_details (merchant_id, operating_mode, merchant_country, merchant_currency, posting_amount, other_details, success_url, fail_url, aggregator_id, merchant_order_number, merchant_customer_id, pay_mode, access_medium, transaction_source, created_by, last_modified_by, created_time, last_modified_time, transaction_status, sbi_epay_ref_id, reason, bank_code, bank_reference_number, transaction_date, cin, total_fee_gst, row_number, ref1, ref2, ref3, ref4, ref5, ref6, ref7, ref8, ref9) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: TransactionDetails
+          jsonMaps:
+            - jsonPath: $.TransactionDetails.merchantId
+            - jsonPath: $.TransactionDetails.operatingMode
+            - jsonPath: $.TransactionDetails.merchantCountry
+            - jsonPath: $.TransactionDetails.merchantCurrency
+            - jsonPath: $.TransactionDetails.postingAmount
+            - jsonPath: $.TransactionDetails.otherDetails
+            - jsonPath: $.TransactionDetails.successUrl
+            - jsonPath: $.TransactionDetails.failUrl
+            - jsonPath: $.TransactionDetails.aggregatorId
+            - jsonPath: $.TransactionDetails.merchantOrderNumber
+            - jsonPath: $.TransactionDetails.merchantCustomerId
+            - jsonPath: $.TransactionDetails.payMode
+            - jsonPath: $.TransactionDetails.accessMedium
+            - jsonPath: $.TransactionDetails.transactionSource
+            - jsonPath: $.TransactionDetails.auditDetails.createdBy
+            - jsonPath: $.TransactionDetails.auditDetails.lastModifiedBy
+            - jsonPath: $.TransactionDetails.auditDetails.createdTime
+            - jsonPath: $.TransactionDetails.auditDetails.lastModifiedTime
+            - jsonPath: $.TransactionDetails.transactionStatus
+            - jsonPath: $.TransactionDetails.sbiEpayRefId
+            - jsonPath: $.TransactionDetails.reason
+            - jsonPath: $.TransactionDetails.bankCode
+            - jsonPath: $.TransactionDetails.bankReferenceNumber
+            - jsonPath: $.TransactionDetails.transactionDate
+            - jsonPath: $.TransactionDetails.cin
+            - jsonPath: $.TransactionDetails.totalFeeGst
+            - jsonPath: $.TransactionDetails.rowNumber
+            - jsonPath: $.TransactionDetails.ref1
+            - jsonPath: $.TransactionDetails.ref2
+            - jsonPath: $.TransactionDetails.ref3
+            - jsonPath: $.TransactionDetails.ref4
+            - jsonPath: $.TransactionDetails.ref5
+            - jsonPath: $.TransactionDetails.ref6
+            - jsonPath: $.TransactionDetails.ref7
+            - jsonPath: $.TransactionDetails.ref8
+            - jsonPath: $.TransactionDetails.ref9
+
+    - version: 1.0
+      description: Updates transaction details
+      fromTopic: update-transaction-details
+      isTransaction: true
+      isAuditEnabled: true
+      queryMaps:
+        - query: UPDATE transaction_details SET merchant_id = ?, operating_mode = ?, merchant_country = ?, merchant_currency = ?, posting_amount = ?, other_details = ?, success_url = ?, fail_url = ?, aggregator_id = ?, merchant_customer_id = ?, pay_mode = ?, access_medium = ?, transaction_source = ?, last_modified_by = ?, last_modified_time = ?, transaction_status = ?, sbi_epay_ref_id = ?, reason = ?, bank_code = ?, bank_reference_number = ?, transaction_date = ?, cin = ?, total_fee_gst = ?, row_number = ?, ref1 = ?, ref2 = ?, ref3 = ?, ref4 = ?, ref5 = ?, ref6 = ?, ref7 = ?, ref8 = ?, ref9 = ? WHERE merchant_order_number = ?;
+          basePath: TransactionDetails
+          jsonMaps:
+            - jsonPath: $.TransactionDetails.merchantId
+            - jsonPath: $.TransactionDetails.operatingMode
+            - jsonPath: $.TransactionDetails.merchantCountry
+            - jsonPath: $.TransactionDetails.merchantCurrency
+            - jsonPath: $.TransactionDetails.postingAmount
+            - jsonPath: $.TransactionDetails.otherDetails
+            - jsonPath: $.TransactionDetails.successUrl
+            - jsonPath: $.TransactionDetails.failUrl
+            - jsonPath: $.TransactionDetails.aggregatorId
+            - jsonPath: $.TransactionDetails.merchantCustomerId
+            - jsonPath: $.TransactionDetails.payMode
+            - jsonPath: $.TransactionDetails.accessMedium
+            - jsonPath: $.TransactionDetails.transactionSource
+            - jsonPath: $.TransactionDetails.auditDetails.lastModifiedBy
+            - jsonPath: $.TransactionDetails.auditDetails.lastModifiedTime
+            - jsonPath: $.TransactionDetails.transactionStatus
+            - jsonPath: $.TransactionDetails.sbiEpayRefId
+            - jsonPath: $.TransactionDetails.reason
+            - jsonPath: $.TransactionDetails.bankCode
+            - jsonPath: $.TransactionDetails.bankReferenceNumber
+            - jsonPath: $.TransactionDetails.transactionDate
+            - jsonPath: $.TransactionDetails.cin
+            - jsonPath: $.TransactionDetails.totalFeeGst
+            - jsonPath: $.TransactionDetails.rowNumber
+            - jsonPath: $.TransactionDetails.ref1
+            - jsonPath: $.TransactionDetails.ref2
+            - jsonPath: $.TransactionDetails.ref3
+            - jsonPath: $.TransactionDetails.ref4
+            - jsonPath: $.TransactionDetails.ref5
+            - jsonPath: $.TransactionDetails.ref6
+            - jsonPath: $.TransactionDetails.ref7
+            - jsonPath: $.TransactionDetails.ref8
+            - jsonPath: $.TransactionDetails.ref9
+            - jsonPath: $.TransactionDetails.merchantOrderNumber
