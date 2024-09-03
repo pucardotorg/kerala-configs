@@ -1,5 +1,5 @@
 {
-  "key": "application-submission-extension-qr",
+  "key": "application-for-checkout-request",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -64,8 +64,7 @@
                 "variable": "date",
                 "value": {
                   "path": "$.date"
-                },
-                "type": "date"
+                }
               },
               {
                 "variable": "partyName",
@@ -74,39 +73,27 @@
                 }
               },
               {
-                "variable": "advocateName",
+                "variable": "partyType",
                 "value": {
-                  "path": "$.advocateName"
+                  "path": "$.partyType"
                 }
               },
               {
-                "variable": "documentSubmissionName",
+                "variable": "initialHearingDate",
                 "value": {
-                  "path": "$.documentSubmissionName"
+                  "path": "$.initialHearingDate"
                 }
               },
               {
-                "variable": "documentId",
+                "variable": "reasonForReschedule",
                 "value": {
-                  "path": "$.documentId"
+                  "path": "$.reasonForReschedule"
                 }
               },
               {
-                "variable": "originalSubmissionDate",
+                "variable": "proposedHearingDate",
                 "value": {
-                  "path": "$.originalSubmissionDate"
-                }
-              },
-              {
-                "variable": "requestedSubmissionDate",
-                "value": {
-                  "path": "$.requestedSubmissionDate"
-                }
-              },
-              {
-                "variable": "extensionReason",
-                "value": {
-                  "path": "$.extensionReason"
+                  "path": "$.proposedHearingDate"
                 }
               },
               {
@@ -116,27 +103,15 @@
                 }
               },
               {
-                "variable": "day",
-                "value": {
-                  "path": "$.day"
-                }
-              },
-              {
-                "variable": "month",
-                "value": {
-                  "path": "$.month"
-                }
-              },
-              {
-                "variable": "year",
-                "value": {
-                  "path": "$.year"
-                }
-              },
-              {
                 "variable": "advocateSignature",
                 "value": {
                   "path": "$.advocateSignature"
+                }
+              },
+              {
+                "variable": "advocateName",
+                "value": {
+                  "path": "$.advocateName"
                 }
               },
               {
@@ -144,20 +119,6 @@
                 "value": {
                   "path": "$.barRegistrationNumber"
                 }
-              },
-              {
-                "variable": "qrCodeUrl",
-                "value": {
-                  "path": "$.qrCodeUrl"
-                }
-              }
-            ]
-          },
-          {
-            "qrcodeConfig": [
-              {
-                "variable": "qrCodeImage",
-                "value": "{{qrCodeUrl}}"
               }
             ]
           }
