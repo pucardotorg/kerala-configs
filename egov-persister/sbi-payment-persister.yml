@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
-        - query: INSERT INTO transaction_details (merchant_id, operating_mode, merchant_country, merchant_currency, posting_amount, other_details, aggregator_id, merchant_order_number, merchant_customer_id, pay_mode, access_medium, transaction_source, created_by, last_modified_by, created_time, last_modified_time, tenant_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO transaction_details (merchant_id, operating_mode, merchant_country, merchant_currency, posting_amount, other_details, aggregator_id, merchant_order_number, merchant_customer_id, pay_mode, access_medium, transaction_source, created_by, last_modified_by, created_time, last_modified_time, tenant_id, bill_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: TransactionDetails
           jsonMaps:
             - jsonPath: $.TransactionDetails.MerchantId
@@ -27,6 +27,7 @@ serviceMaps:
             - jsonPath: $.TransactionDetails.AuditDetails.createdTime
             - jsonPath: $.TransactionDetails.AuditDetails.lastModifiedTime
             - jsonPath: $.TransactionDetails.tenantId
+            - jsonPath: $.TransactionDetails.billId
 
     - version: 1.0
       description: Updates transaction details
