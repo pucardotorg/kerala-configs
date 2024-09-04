@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
-        - query: INSERT INTO transaction_details (merchant_id, operating_mode, merchant_country, merchant_currency, posting_amount, other_details, aggregator_id, merchant_order_number, merchant_customer_id, pay_mode, access_medium, transaction_source, created_by, last_modified_by, created_time, last_modified_time, tenant_id, bill_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO transaction_details (merchant_id, operating_mode, merchant_country, merchant_currency, posting_amount, other_details, aggregator_id, merchant_order_number, merchant_customer_id, pay_mode, access_medium, transaction_source, created_by, last_modified_by, created_time, last_modified_time, tenant_id, bill_id, total_due, business_service, service_number, payer_name, paid_by, mobile_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ?);
           basePath: TransactionDetails
           jsonMaps:
             - jsonPath: $.TransactionDetails.MerchantId
@@ -28,6 +28,12 @@ serviceMaps:
             - jsonPath: $.TransactionDetails.AuditDetails.lastModifiedTime
             - jsonPath: $.TransactionDetails.tenantId
             - jsonPath: $.TransactionDetails.billId
+            - jsonPath: $.TransactionDetails.totalDue
+            - jsonPath: $.TransactionDetails.businessService
+            - jsonPath: $.TransactionDetails.serviceNumber
+            - jsonPath: $.TransactionDetails.payerName
+            - jsonPath: $.TransactionDetails.paidBy
+            - jsonPath: $.TransactionDetails.mobileNumber
 
     - version: 1.0
       description: Updates transaction details
