@@ -13,11 +13,15 @@ serviceMaps:
       auditAttributeBasePath: application
       queryMaps:
 
-        - query: INSERT INTO dristi_application(id, tenantId, caseId, filingNumber, cnrNumber, referenceId, createdDate, applicationCreatedBy, onBehalfOf, applicationType, applicationNumber, statuteSection,issuedBy, status, comment, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_application(id, tenantId, applicationDetails, reasonForApplication, caseId, filingNumber, cnrNumber, referenceId, createdDate, applicationCreatedBy, onBehalfOf, applicationType, applicationNumber, statuteSection,issuedBy, status, comment, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: application
           jsonMaps:
             - jsonPath: $.application.id
             - jsonPath: $.application.tenantId
+            - jsonPath: $.application.applicationDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.application.reasonForApplication
             - jsonPath: $.application.caseId
             - jsonPath: $.application.filingNumber
             - jsonPath: $.application.cnrNumber
@@ -71,10 +75,14 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: application
       queryMaps:
-        - query: UPDATE dristi_application SET tenantId=?,caseId=?,filingNumber=?,cnrNumber=?,referenceId=?,createdDate=?,applicationCreatedBy=?,onBehalfOf=?,applicationType=?,applicationNumber=?,statuteSection=?,issuedBy=?,status=?,comment=?,isActive=?,additionalDetails=?,lastModifiedBy=?,lastModifiedTime=? WHERE id=? ;
+        - query: UPDATE dristi_application SET tenantId=?, applicationDetails=?, reasonForApplication=?, caseId=?,filingNumber=?,cnrNumber=?,referenceId=?,createdDate=?,applicationCreatedBy=?,onBehalfOf=?,applicationType=?,applicationNumber=?,statuteSection=?,issuedBy=?,status=?,comment=?,isActive=?,additionalDetails=?,lastModifiedBy=?,lastModifiedTime=? WHERE id=? ;
           basePath: application
           jsonMaps:
             - jsonPath: $.application.tenantId
+            - jsonPath: $.application.applicationDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.application.reasonForApplication
             - jsonPath: $.application.caseId
             - jsonPath: $.application.filingNumber
             - jsonPath: $.application.cnrNumber
