@@ -1,0 +1,215 @@
+{
+  "key": "application-bail-bond",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "IN THE COURT OF {{courtComplex}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{caseType}}/Case No. {{caseNumber}} of {{caseYear}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "{{caseName}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "APPLICATION FOR BAIL - Bail bond",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "text": "To,",
+                    "style": "subTitle"
+                  },
+                  {
+                    "text": "The Honorable {{judgeName}}/{{courtDesignation}},",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{addressOfTheCourt}}",
+                    "style": "address"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "Subject: Application for Bail - Bail bond",
+                    "style": "subjectText"
+                  },
+                  {
+                    "text": "{{partyName}}, represented by Advocate {{advocateName}}, respectfully submits as follows:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Brief Summary of the Circumstances Leading to the Bail Application: The applicant has been accused under {{statuteAndAct}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "List of Attached Documents:",
+                    "style": "bodyText"
+                  },
+                  "{{#documentNameList}}",
+                  {
+                    "table": {
+                      "widths": [150, "*"],
+                      "body": [
+                        {
+                          "text": "{{documentName}}",
+                          "style": "tableData"
+                        }
+                      ],
+                      "border": [true, true, true, true]
+                    }
+                  },
+                  {
+                    "text": "",
+                    "margin": [0, 0, 0, 20]
+                  },
+                  "{{/documentNameList}}",
+                  {
+                    "text": "The following documents are attached in support of this bail application:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "The applicant believes that the grant of bail is justified in this case for the following reasons:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{reasonForApplication}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "The applicant assures and undertakes to the Hon'ble Court that this request is made in good faith and that the applicant will abide by all conditions imposed by the Court. The applicant also undertakes to appear before the Court as and when required.",
+                    "style": "bodyText"
+                  },
+
+                  {
+                    "text": "Therefore, the applicant humbly requests the Hon'ble Court to consider this application and grant bail on such terms and conditions as the Court may deem fit and proper.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Dated this {{day}} day of {{month}}, {{year}}.",
+                    "style": "date"
+                  },
+                  {
+                    "text": "{{advocateSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{advocateName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{barRegistrationNumber}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Advocate for {{partyName}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 0]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 0]
+      },
+      "applicationTitle": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 20, 0, 10]
+      },
+      "subTitle": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 0]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "bold": true,
+        "margin": [0, 0, 0, 10]
+      },
+      "subjectText": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      },
+      "address": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, -10, 0, 10]
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      }
+    }
+  }
+}

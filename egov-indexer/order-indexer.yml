@@ -34,6 +34,8 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.cnrNumber
               - inJsonPath: $.orderCategory
                 outJsonPath: $.Data.orderDetails.orderCategory
+              - inJsonPath: $.orderDetails
+                outJsonPath: $.Data.orderDetails.orderDetails
               - inJsonPath: $.createdDate
                 outJsonPath: $.Data.orderDetails.createdDate
               - inJsonPath: $.status
@@ -103,6 +105,8 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.orderType
               - inJsonPath: $.orderCategory
                 outJsonPath: $.Data.orderDetails.orderCategory
+              - inJsonPath: $.orderDetails
+                outJsonPath: $.Data.orderDetails.orderDetails
               - inJsonPath: $.createdDate
                 outJsonPath: $.Data.orderDetails.createdDate
               - inJsonPath: $.status
@@ -129,6 +133,8 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.lastModifiedTime
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.orderDetails.additionalDetails
+              - inJsonPath: $.task
+                outJsonPath: $.Data.orderDetails.taskDetails
             externalUriMapping:
               - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.orderNumber,tenantId=$.tenantId,history=true

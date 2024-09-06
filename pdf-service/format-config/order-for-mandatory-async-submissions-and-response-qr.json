@@ -1,0 +1,164 @@
+{
+  "key": "order-for-mandatory-async-submissions-and-response",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "In the Court of {{courtName}}, {{courtPlace}}, {{courtState}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No. {{caseNumber}} of {{year}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In the matter of: {{caseNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "ORDER",
+                    "style": "orderTitle"
+                  },
+                  {
+                    "text": "This matter comes before the Court upon consideration regarding the submission of evidence by the parties and the scheduling of the next hearing.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The Court orders the following:",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The {{partyName}} shall submit their respective evidence and documents as listed {{listOfDocument}} through the court's online portal no later than {{deadlineForSubmission}}. The submission should include all relevant materials intended to be relied upon during the proceedings.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{respondentName}}, The opposing party(ies) shall have the opportunity to review the submitted evidence and documents and provide their responses, if any, within {{deadlineForSubmission}}, also through the court's online portal.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "It is further ordered that failure to comply with the deadlines set forth in this order may result in sanctions or adverse rulings, as deemed appropriate by the court.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "This order shall be served upon all parties to the case and their respective legal representatives, and shall be posted on the court's online portal for access and reference.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "Given under my hand and the seal of this Court on this {{date}} day of {{month}}, {{year}}.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "IT IS SO ORDERED.",
+                    "style": "orderText"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Judge, {{courtName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{courtSeal}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "caseName": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "caseNumber": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderTitle": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderName": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 20]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "contentText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [0, 10, 0, 20]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 0]
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
+      }
+    }
+  }
+}

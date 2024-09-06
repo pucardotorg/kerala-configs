@@ -1,0 +1,162 @@
+{
+  "key": "application-reschedule-request-qr",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "IN THE COURT OF {{courtComplex}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{caseType}}/Case No. {{caseNumber}} of {{caseYear}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "{{caseName}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "APPLICATION FOR RESCHEDULING OF HEARING DATE",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "text": "To,",
+                    "style": "subTitle"
+                  },
+                  {
+                    "text": "The Honorable {{judgeName}}/{{courtDesignation}},",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{addressOfTheCourt}}",
+                    "style": "address"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "Subject: Application for Rescheduling of Hearing Date",
+                    "style": "subjectText"
+                  },
+                  {
+                    "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court seeking to reschedule the hearing date in the matter of {{caseName}} {{caseNumber}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "The case was originally posted for hearing on {{initialHearingDate}}. However, due to {{reasonForReschedule}}, attending the hearing will not be possible. My client and I will make ourselves available for the same for all dates after {{proposedHearingDate}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "I respectfully request the Court's consideration to reschedule the hearing date. Thank you for considering this request. I remain available to provide any further information or clarification that the Court may require.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{advocateSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{advocateName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{barRegistrationNumber}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Advocate for {{partyName}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 0]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 0]
+      },
+      "applicationTitle": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 20, 0, 10]
+      },
+      "subTitle": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 0]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "bold": true,
+        "margin": [0, 0, 0, 10]
+      },
+      "subjectText": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      },
+      "address": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, -10, 0, 10]
+      }
+    }
+  }
+}

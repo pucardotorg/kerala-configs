@@ -1,0 +1,111 @@
+{
+  "key": "order-for-mandatory-async-submissions-and-response",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "courtPlace",
+                "value": {
+                  "path": "$.courtPlace"
+                }
+              },
+              {
+                "variable": "courtState",
+                "value": {
+                  "path": "$.courtState"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "listOfDocument",
+                "value": {
+                  "path": "$.listOfDocument"
+                }
+              },
+              {
+                "variable": "deadlineForSubmission",
+                "value": {
+                  "path": "$.deadlineForSubmission"
+                }
+              },
+              {
+                "variable": "respondentName",
+                "value": {
+                  "path": "$.respondentName"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "courtSeal",
+                "value": {
+                  "path": "$.courtSeal"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

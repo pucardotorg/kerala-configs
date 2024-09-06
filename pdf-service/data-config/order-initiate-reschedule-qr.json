@@ -1,10 +1,10 @@
 {
-  "key": "summons-accused-qr",
+  "key": "order-initiate-reschedule-qr",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
-    "baseKeyPath": "$.summonsPdf",
-    "entityIdPath": "$.cnrNumber",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
     "isCommonTableBorderRequired": true,
     "mappings": [
       {
@@ -13,79 +13,87 @@
           {
             "direct": [
               {
-                "variable": "cnrNumber",
-                "value": {
-                  "path": "$.cnrNumber",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "respondentName",
-                "value": {
-                  "path": "$.respondentName",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "respondentAddress",
-                "value": {
-                  "path": "$.respondentAddress",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "caseName",
-                "value": {
-                  "path": "$.caseName",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "judgeName",
-                "value": {
-                  "path": "$.judgeName",
-                  "defaultValue": "NA"
-                }
-              },
-              {
                 "variable": "courtName",
                 "value": {
-                  "path": "$.courtName",
-                  "defaultValue": "NA"
+                  "path": "$.courtName"
                 }
               },
               {
-                "variable": "hearingDate",
+                "variable": "place",
                 "value": {
-                  "path": "$.hearingDate",
-                  "defaultValue": "NA"
+                  "path": "$.place"
+                }
+              },
+              {
+                "variable": "state",
+                "value": {
+                  "path": "$.state"
                 }
               },
               {
                 "variable": "caseNumber",
                 "value": {
-                  "path": "$.caseNumber",
-                  "defaultValue": "NA"
+                  "path": "$.caseNumber"
                 }
               },
               {
-                "variable": "caseYear",
+                "variable": "year",
                 "value": {
-                  "path": "$.caseYear",
-                  "defaultValue": "NA"
+                  "path": "$.year"
                 }
               },
               {
-                "variable": "issueDate",
+                "variable": "caseName",
                 "value": {
-                  "path": "$.issueDate",
-                  "defaultValue": "NA"
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "Date",
+                "value": {
+                  "path": "$.Date"
+                }
+              },
+              {
+                "variable": "originalHearingDate",
+                "value": {
+                  "path": "$.originalHearingDate"
+                }
+              },
+              {
+                "variable": "Year",
+                "value": {
+                  "path": "$.Year"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "courtSeal",
+                "value": {
+                  "path": "$.courtSeal"
                 }
               },
               {
                 "variable": "qrCodeUrl",
                 "value": {
-                  "path": "$.embeddedUrl"
+                  "path": "$.qrCodeUrl"
                 }
               }
             ]
@@ -103,4 +111,3 @@
     ]
   }
 }
-

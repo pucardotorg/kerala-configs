@@ -1,0 +1,125 @@
+{
+  "key": "order-accept-voluntary-qr",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "courtPlace",
+                "value": {
+                  "path": "$.courtPlace"
+                }
+              },
+              {
+                "variable": "state",
+                "value": {
+                  "path": "$.state"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear"
+                }
+              },
+              {
+                "variable": "applicantName",
+                "value": {
+                  "path": "$.applicantName"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "submissionDate",
+                "value": {
+                  "path": "$.submissionDate"
+                }
+              },
+              {
+                "variable": "applicationNumber",
+                "value": {
+                  "path": "$.applicationNumber"
+                }
+              },
+              {
+                "variable": "submissionType",
+                "value": {
+                  "path": "$.submissionType"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "courtSeal",
+                "value": {
+                  "path": "$.courtSeal"
+                }
+              },
+              {
+                "variable": "qrCodeUrl",
+                "value": {
+                  "path": "$.qrCodeUrl"
+                }
+              }
+            ]
+          },
+          {
+            "qrcodeConfig": [
+              {
+                "variable": "qrCodeImage",
+                "value": "{{qrCodeUrl}}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
