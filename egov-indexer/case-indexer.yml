@@ -2,7 +2,7 @@ ServiceMaps:
   serviceName: case services
   version: 1.0.0
   mappings:
-    - topic: save-case-application
+    - topic: save-case-transform
       configKey: INDEX
       indexes:
         - name: case-index
@@ -50,11 +50,11 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.stage
               - inJsonPath: $.substage
                 outJsonPath: $.Data.caseDetails.substage
-              - inJsonPath: $.filingDate
+              - inJsonPath: $.dates.filingDate
                 outJsonPath: $.Data.caseDetails.filingDate
-              - inJsonPath: $.registrationDate
+              - inJsonPath: $.dates.registrationDate
                 outJsonPath: $.Data.caseDetails.registrationDate
-              - inJsonPath: $.judgementDate
+              - inJsonPath: $.dates.judgementDate
                 outJsonPath: $.Data.caseDetails.judgementDate
               - inJsonPath: $.caseCategory
                 outJsonPath: $.Data.caseDetails.caseCategory
@@ -119,7 +119,7 @@ ServiceMaps:
                   - inJsonPath: $.ProcessInstances[0].state.uuid
                     outJsonPath: $.Data.status
 
-    - topic: update-case-application
+    - topic: update-case-transform
       configKey: INDEX
       indexes:
         - name: case-index
@@ -167,11 +167,11 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.stage
               - inJsonPath: $.substage
                 outJsonPath: $.Data.caseDetails.substage
-              - inJsonPath: $.filingDate
+              - inJsonPath: $.dates.filingDate
                 outJsonPath: $.Data.caseDetails.filingDate
-              - inJsonPath: $.registrationDate
+              - inJsonPath: $.dates.registrationDate
                 outJsonPath: $.Data.caseDetails.registrationDate
-              - inJsonPath: $.judgementDate
+              - inJsonPath: $.dates.judgementDate
                 outJsonPath: $.Data.caseDetails.judgementDate
               - inJsonPath: $.caseCategory
                 outJsonPath: $.Data.caseDetails.caseCategory
@@ -284,11 +284,11 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.stage
               - inJsonPath: $.substage
                 outJsonPath: $.Data.caseDetails.substage
-              - inJsonPath: $.filingDate
+              - inJsonPath: $.dates.filingDate
                 outJsonPath: $.Data.caseDetails.filingDate
-              - inJsonPath: $.registrationDate
+              - inJsonPath: $.dates.registrationDate
                 outJsonPath: $.Data.caseDetails.registrationDate
-              - inJsonPath: $.judgementDate
+              - inJsonPath: $.dates.judgementDate
                 outJsonPath: $.Data.caseDetails.judgementDate
               - inJsonPath: $.caseCategory
                 outJsonPath: $.Data.caseDetails.caseCategory
