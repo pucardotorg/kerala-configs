@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: false
       module: OCR
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
       queryMaps:
