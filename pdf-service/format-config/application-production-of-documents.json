@@ -57,6 +57,12 @@
                     "text": "These documents are as follows:",
                     "style": "bodyText"
                   },
+                  "{{#documentList}}",
+                  {
+                    "text": "{{documentType}}",
+                    "style": "bodyText"
+                  },
+                  "{{/documentList}}",
                   {
                     "text": "{{nameOfDocument}}",
                     "style": "bodyText"
