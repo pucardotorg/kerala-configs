@@ -22,7 +22,7 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "APPLICATION FOR BAIL - Bail bond",
+                    "text": "{{applicationTitle}}",
                     "style": "applicationTitle"
                   },
                   {
