@@ -42,7 +42,7 @@
                     "style": "date"
                   },
                   {
-                    "text": "Subject: Application for Bail - Bail bond",
+                    "text": "Subject: {{subjectText}}",
                     "style": "subjectText"
                   },
                   {
@@ -50,11 +50,19 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Brief Summary of the Circumstances Leading to the Bail Application: The applicant has been accused under {{statuteAndAct}}.",
+                    "text": "Brief Summary of the Circumstances Leading to the Bail Application:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "The applicant has been accused under {{statuteAndAct}}.",
                     "style": "bodyText"
                   },
                   {
                     "text": "List of Attached Documents:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "The following documents are attached in support of this bail application:",
                     "style": "bodyText"
                   },
                   "{{#documentList}}",
@@ -63,10 +71,6 @@
                     "style": "bodyText"
                   },
                   "{{/documentList}}",
-                  {
-                    "text": "The following documents are attached in support of this bail application:",
-                    "style": "bodyText"
-                  },
                   {
                     "text": "The applicant believes that the grant of bail is justified in this case for the following reasons:",
                     "style": "bodyText"
