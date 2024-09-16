@@ -57,24 +57,12 @@
                     "text": "List of Attached Documents:",
                     "style": "bodyText"
                   },
-                  "{{#documentNameList}}",
+                  "{{#documentList}}",
                   {
-                    "table": {
-                      "widths": [150, "*"],
-                      "body": [
-                        {
-                          "text": "{{documentName}}",
-                          "style": "tableData"
-                        }
-                      ],
-                      "border": [true, true, true, true]
-                    }
+                    "text": "{{documentType}}",
+                    "style": "bodyText"
                   },
-                  {
-                    "text": "",
-                    "margin": [0, 0, 0, 20]
-                  },
-                  "{{/documentNameList}}",
+                  "{{/documentList}}",
                   {
                     "text": "The following documents are attached in support of this bail application:",
                     "style": "bodyText"
