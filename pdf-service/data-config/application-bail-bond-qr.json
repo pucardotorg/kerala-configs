@@ -85,6 +85,12 @@
                 }
               },
               {
+                "variable": "applicationTitle",
+                "value": {
+                  "path": "$.applicationTitle"
+                }
+              },
+              {
                 "variable": "reasonForApplication",
                 "value": {
                   "path": "$.reasonForApplication"
