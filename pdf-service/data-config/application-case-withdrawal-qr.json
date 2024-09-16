@@ -91,33 +91,9 @@
                 }
               },
               {
-                "variable": "grounds",
+                "variable": "reasonForWithdrawal",
                 "value": {
-                  "path": "$.grounds"
-                }
-              },
-              {
-                "variable": "reliefSought",
-                "value": {
-                  "path": "$.reliefSought"
-                }
-              },
-              {
-                "variable": "day",
-                "value": {
-                  "path": "$.day"
-                }
-              },
-              {
-                "variable": "month",
-                "value": {
-                  "path": "$.month"
-                }
-              },
-              {
-                "variable": "year",
-                "value": {
-                  "path": "$.year"
+                  "path": "$.reasonForWithdrawal"
                 }
               },
               {
