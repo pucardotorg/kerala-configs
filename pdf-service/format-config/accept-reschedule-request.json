@@ -4,9 +4,7 @@
     "content": [
       {
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -48,17 +46,15 @@
                     "style": "orderText"
                   },
                   {
-                    "text": "The hearing date in the above-captioned case scheduled for {{originalHearingDate}} is hereby RESCHEDULED. A new date shall be communicated to the parties in due course.",
+                    "text": "The hearing date in the above-captioned case scheduled for {{originalHearingDate}} is hereby due to be RESCHEDULED for {{reasonForRescheduling}}.",
                     "style": "bodyText"
                   },
-                  {
-                    "text": "All parties and their counsels shall make necessary arrangements to appear at the rescheduled hearing.",
-                    "style": "bodyText"
-                  },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "additionalComments"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "IT IS SO ORDERED.",
                     "style": "orderText"
@@ -81,12 +77,7 @@
                   }
                 ],
                 "alignment": "left",
-                "margin": [
-                  0,
-                  20,
-                  0,
-                  20
-                ]
+                "margin": [0, 20, 0, 20]
               }
             ]
           ]
@@ -99,82 +90,42 @@
         "fontSize": 14,
         "bold": true,
         "alignment": "center",
-        "margin": [
-          0,
-          0,
-          0,
-          0
-        ]
+        "margin": [0, 0, 0, 0]
       },
       "caseNameNumber": {
         "fontSize": 14,
         "bold": true,
         "alignment": "center",
-        "margin": [
-          0,
-          0,
-          0,
-          10
-        ]
+        "margin": [0, 0, 0, 10]
       },
       "orderTitle": {
         "fontSize": 14,
         "bold": true,
         "alignment": "left",
-        "margin": [
-          0,
-          20,
-          0,
-          0
-        ]
+        "margin": [0, 20, 0, 0]
       },
       "date": {
         "fontSize": 12,
         "bold": true,
         "alignment": "left",
-        "margin": [
-          0,
-          0,
-          0,
-          10
-        ]
+        "margin": [0, 0, 0, 10]
       },
       "bodyText": {
         "fontSize": 11,
-        "margin": [
-          0,
-          10,
-          0,
-          10
-        ]
+        "margin": [0, 10, 0, 10]
       },
       "orderText": {
         "fontSize": 12,
-        "margin": [
-          0,
-          20,
-          0,
-          10
-        ]
+        "margin": [0, 20, 0, 10]
       },
       "additionalComments": {
         "fontSize": 11,
-        "margin": [
-          0,
-          10,
-          0,
-          0
-        ]
+        "margin": [0, 10, 0, 0]
       },
       "signature": {
         "fontSize": 12,
         "alignment": "left",
-        "margin": [
-          0,
-          0,
-          0,
-          0
-        ]
+        "margin": [0, 0, 0, 0]
       }
     }
   }

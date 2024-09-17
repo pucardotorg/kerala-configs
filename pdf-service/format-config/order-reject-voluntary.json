@@ -53,10 +53,12 @@
                     "text": "IT IS SO ORDERED.",
                     "style": "orderText"
                   },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "contentText"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "{{judgeSignature}}",
                     "style": "signature"
