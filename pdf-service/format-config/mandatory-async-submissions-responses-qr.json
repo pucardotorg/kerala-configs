@@ -4,9 +4,7 @@
     "content": [
       {
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -41,10 +39,12 @@
                         "text": "The {{parties}} shall submit their respective evidence and documents as listed {{documentList}} through the court’s online portal no later than {{evidenceSubmissionDeadline}}. The submission should include all relevant materials intended to be relied upon during the proceedings.",
                         "style": "listItem"
                       },
+                      "{{#responseSubmissionDeadline}}",
                       {
                         "text": "{{ifResponse}}, the opposing party(ies) shall have the opportunity to review the submitted evidence and documents and provide their responses, if any, within {{responseSubmissionDeadline}} also through the court’s online portal.",
                         "style": "listItem"
                       },
+                      "{{/responseSubmissionDeadline}}",
                       {
                         "text": "It is further ordered that failure to comply with the deadlines set forth in this order may result in sanctions or adverse rulings, as deemed appropriate by the court.",
                         "style": "listItem"
@@ -56,10 +56,12 @@
                     "text": "This order shall be served upon all parties to the case and their respective legal representatives, and shall be posted on the court’s online portal for access and reference.",
                     "style": "bodyText"
                   },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "additionalComments"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "Given under my hand and the seal of this Court on this {{Date}} day of {{Month}}, {{Year}}.",
                     "style": "bodyText"
@@ -86,12 +88,7 @@
                   }
                 ],
                 "alignment": "left",
-                "margin": [
-                  0,
-                  0,
-                  0,
-                  20
-                ]
+                "margin": [0, 0, 0, 20]
               }
             ]
           ]
@@ -121,88 +118,43 @@
         "fontSize": 14,
         "bold": true,
         "alignment": "center",
-        "margin": [
-          0,
-          20,
-          0,
-          0
-        ]
+        "margin": [0, 20, 0, 0]
       },
       "subHeader": {
         "fontSize": 14,
         "alignment": "center",
         "bold": true,
-        "margin": [
-          0,
-          0,
-          0,
-          0
-        ]
+        "margin": [0, 0, 0, 0]
       },
       "orderTitle": {
         "fontSize": 16,
         "bold": true,
         "alignment": "center",
-        "margin": [
-          0,
-          10,
-          0,
-          10
-        ]
+        "margin": [0, 10, 0, 10]
       },
       "bodyText": {
         "fontSize": 11,
-        "margin": [
-          0,
-          10,
-          0,
-          10
-        ]
+        "margin": [0, 10, 0, 10]
       },
       "orderText": {
         "fontSize": 12,
-        "margin": [
-          0,
-          10,
-          0,
-          10
-        ]
+        "margin": [0, 10, 0, 10]
       },
       "list": {
-        "margin": [
-          20,
-          10,
-          0,
-          10
-        ]
+        "margin": [20, 10, 0, 10]
       },
       "listItem": {
         "fontSize": 11,
-        "margin": [
-          0,
-          5,
-          0,
-          5
-        ]
+        "margin": [0, 5, 0, 5]
       },
       "additionalComments": {
         "fontSize": 11,
-        "margin": [
-          0,
-          10,
-          0,
-          10
-        ]
+        "margin": [0, 10, 0, 10]
       },
       "signature": {
         "fontSize": 12,
         "alignment": "left",
-        "margin": [
-          0,
-          0,
-          0,
-          0
-        ]
+        "margin": [0, 0, 0, 0]
       },
       "qr-code": {
         "color": "#000000",

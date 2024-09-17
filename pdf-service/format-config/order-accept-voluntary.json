@@ -49,10 +49,12 @@
                     "text": "The {{submissionType}} made by {{partyName}} with Submission ID {{applicationNumber}} on {{submissionDate}} is hereby ACCEPTED.",
                     "style": "contentText"
                   },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "contentText"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "IT IS SO ORDERED.",
                     "style": "orderText"

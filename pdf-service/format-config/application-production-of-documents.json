@@ -57,12 +57,16 @@
                     "text": "These documents are as follows:",
                     "style": "bodyText"
                   },
-                  "{{#documentList}}",
                   {
-                    "text": "{{documentType}}",
-                    "style": "bodyText"
+                    "ul": [
+                      "{{#documentList}}",
+                      {
+                        "text": "{{index}} {{documentType}}",
+                        "style": "bodyText"
+                      },
+                      "{{/documentList}}"
+                    ]
                   },
-                  "{{/documentList}}",
                   {
                     "text": "{{nameOfDocument}}",
                     "style": "bodyText"
@@ -79,10 +83,12 @@
                     "text": "Therefore, the petitioner humbly requests the Hon'ble Court to consider this application and grant permission to produce the aforementioned documents/evidence.",
                     "style": "bodyText"
                   },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "bodyText"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "Dated this {{day}} day of {{month}}, {{year}}.",
                     "style": "date"

@@ -50,7 +50,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "This Application seeks an extension of the deadline for submission of {{documentSubmissionName}} in the above-mentioned case. The details of the extension request are set out below:",
+                    "text": "This Application seeks an extension of the deadline for submission of {{documentSubmissionName}} - {{documentId}} in the above-mentioned case. The details of the extension request are set out below:",
                     "style": "bodyText"
                   },
                   {

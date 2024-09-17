@@ -49,10 +49,12 @@
                     "text": "The hearing date in the above-captioned case scheduled for {{originalHearingDate}} is hereby due to be RESCHEDULED.",
                     "style": "contentText"
                   },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "contentText"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "IT IS SO ORDERED.",
                     "style": "orderText"
