@@ -14,7 +14,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}} of {{year}}",
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
                     "style": "header"
                   },
                   {
@@ -51,15 +51,15 @@
                   },
                   {
                     "text": "1. The Motion to Withdraw the Case filed by {{partyName}} is GRANTED.",
-                    "style": "contentText"
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "2. The case, {{caseName}}, Case Number {{caseNumber}}, is hereby DISMISSED without prejudice.",
-                    "style": "contentText"
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "3. Each party shall bear its own costs and attorney’s fees unless otherwise agreed by the parties.",
-                    "style": "contentText"
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "{{additionalComments}}",
@@ -150,6 +150,11 @@
         "fontSize": 11,
         "alignment": "left",
         "margin": [0, 10, 0, 10]
+      },
+      "ponitwiseText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [15, 0, 0, 5]
       },
       "orderText": {
         "fontSize": 12,

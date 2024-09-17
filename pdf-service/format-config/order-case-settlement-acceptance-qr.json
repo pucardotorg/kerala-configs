@@ -59,19 +59,19 @@
                   },
                   {
                     "text": "1. The settlement agreement between {{partyName}} and {{otherPartyName}} is hereby APPROVED.",
-                    "style": "contentText"
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "2. The case, {{caseName}}, Case Number {{caseNumber}}, is hereby DISMISSED with prejudice.",
-                    "style": "contentText"
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "3. Each party shall bear its own costs and attorney’s fees unless otherwise specified in the settlement agreement.",
-                    "style": "contentText"
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "4. The Court retains jurisdiction to enforce the terms of the settlement agreement if necessary.",
-                    "style": "contentText"
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "{{additionalComments}}",
@@ -162,6 +162,11 @@
         "fontSize": 11,
         "alignment": "left",
         "margin": [0, 10, 0, 10]
+      },
+       "ponitwiseText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [15, 0, 0, 5]
       },
       "orderText": {
         "fontSize": 12,

@@ -51,15 +51,15 @@
                   },
                   {
                     "text": "1. Approve the settlement agreement attached herewith.",
-                    "style": "bodyText"
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "2. Dismiss the case, {{caseName}}, Case Number {{caseNumber}}, with prejudice.",
-                    "style": "bodyText"
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "3. Allow both parties to bear their own costs and attorney’s fees as specified in the settlement agreement.",
-                    "style": "bodyText"
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "Verification:",
@@ -133,6 +133,11 @@
         "fontSize": 12,
         "bold": true,
         "margin": [0, 10, 0, 10]
+      },
+      "ponitwiseText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [15, 0, 0, 5]
       },
       "bodyText": {
         "fontSize": 11,

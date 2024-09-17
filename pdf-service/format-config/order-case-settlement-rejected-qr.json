@@ -26,7 +26,7 @@
                     "style": "orderTitle"
                   },
                   {
-                    "text": "Settlement of Case by {{partyName}} and {{otherPartyName}}",
+                    "text": "Rejection of Settlement of Case by {{partyName}} and {{otherPartyName}}",
                     "style": "orderText"
                   },
                   {
@@ -59,19 +59,15 @@
                   },
                   {
                     "text": "1. The settlement agreement between {{partyName}} and {{otherPartyName}} is hereby REJECTED.",
-                    "style": "contentText"
+                    "style": "ponitwiseText"
                   },
                   {
-                    "text": "2. The case, {{caseName}}, Case Number {{caseNumber}}, is hereby DISMISSED with prejudice.",
-                    "style": "contentText"
+                    "text": "2. The case, {{caseName}}, Case Number {{caseNumber}}, shall proceed in accordance with the Court's schedule and procedures.",
+                    "style": "ponitwiseText"
                   },
                   {
-                    "text": "3. Each party shall bear its own costs and attorney’s fees unless otherwise specified in the settlement agreement.",
-                    "style": "contentText"
-                  },
-                  {
-                    "text": "4. The Court retains jurisdiction to enforce the terms of the settlement agreement if necessary.",
-                    "style": "contentText"
+                    "text": "3. Each party shall continue to bear its own costs and attorney’s fees unless otherwise ordered by the Court.",
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "{{additionalComments}}",
@@ -162,6 +158,11 @@
         "fontSize": 11,
         "alignment": "left",
         "margin": [0, 10, 0, 10]
+      },
+      "ponitwiseText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [15, 0, 0, 5]
       },
       "orderText": {
         "fontSize": 12,

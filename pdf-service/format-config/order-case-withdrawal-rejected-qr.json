@@ -14,7 +14,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}} of {{year}}",
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
                     "style": "header"
                   },
                   {
@@ -51,11 +51,11 @@
                   },
                   {
                     "text": "1. The Motion to Withdraw the Case filed by {{partyName}} is DENIED.",
-                    "style": "contentText"
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "2. The case, {{caseName}}, Case Number {{caseNumber}}, shall proceed in accordance with the Court's schedule and procedures.",
-                    "style": "contentText"
+                    "style": "ponitwiseText"
                   },
                   {
                     "text": "{{additionalComments}}",
@@ -146,6 +146,11 @@
         "fontSize": 11,
         "alignment": "left",
         "margin": [0, 10, 0, 10]
+      },
+      "ponitwiseText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [15, 0, 0, 5]
       },
       "orderText": {
         "fontSize": 12,

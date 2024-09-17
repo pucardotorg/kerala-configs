@@ -37,9 +37,9 @@
                 }
               },
               {
-                "variable": "year",
+                "variable": "caseYear",
                 "value": {
-                  "path": "$.year"
+                  "path": "$.caseYear"
                 }
               },
               {
