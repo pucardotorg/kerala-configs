@@ -22,8 +22,12 @@
                     "style": "header"
                   },
                   {
-                    "text": "Rejection of Submission",
+                    "text": "Order",
                     "style": "orderTitle"
+                  },
+                  {
+                    "text": "Rejection of Submission",
+                    "style": "date"
                   },
                   {
                     "text": "{{date}}",
