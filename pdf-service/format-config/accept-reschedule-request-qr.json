@@ -118,7 +118,7 @@
       "orderTitle": {
         "fontSize": 14,
         "bold": true,
-        "alignment": "left",
+        "alignment": "center",
         "margin": [0, 20, 0, 0]
       },
       "date": {

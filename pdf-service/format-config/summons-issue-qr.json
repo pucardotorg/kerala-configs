@@ -18,7 +18,7 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "In the matter of: {{caseName}}",
+                    "text": "In the matter of: {{caseNumber}}",
                     "style": "subHeader"
                   },
                   {
