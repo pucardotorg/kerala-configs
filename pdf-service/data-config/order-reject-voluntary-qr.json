@@ -37,6 +37,12 @@
                 }
               },
               {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
                 "variable": "caseYear",
                 "value": {
                   "path": "$.caseYear"

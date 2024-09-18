@@ -74,6 +74,10 @@
                     "style": "bodyText"
                   },
                   {
+                    "text": "{{additionalComments}}",
+                    "style": "bodyText"
+                  },
+                  {
                     "text": "Dated this {{day}} day of {{month}}, {{year}}.",
                     "style": "date"
                   },
