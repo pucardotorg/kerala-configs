@@ -1,0 +1,63 @@
+{
+  "key": "causelist-format",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.SlotList",
+    "entityIdPath": "$.*.slotId",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$[0].CauseList[0].judgeId"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "designation",
+                "value": {
+                  "path": "$[0].CauseList[0].designation"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$[0].CauseList[0].caseDate"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "AdmissionHearing",
+                "value": {
+                  "path": "$"
+                },
+                "type": "index",
+                "format": " var i = 0; var filteredCases = type.filter(function(caseItem){return caseItem.hearingType === 'AdmissionHearing';}); for (i=0;i< filteredCases.length;i++) {filteredCases[i]['index'] = i + 1;} return filteredCases;"
+              },
+              {
+                "variable": "SlotList",
+                "value": {
+                  "path": "$"
+                },
+                "type": "index",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              },
+              {
+                "variable": "logoImage",
+                "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
+                "type": "image"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

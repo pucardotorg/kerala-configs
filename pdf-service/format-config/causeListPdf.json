@@ -1,0 +1,230 @@
+{
+  "key": "causelist-format",
+  "config": {
+    "pageSize": "A4",
+    "content": [
+      {
+        "image": "{{logoImage}}",
+        "width": 50,
+        "height": 50,
+        "absolutePosition": {
+          "x": 30,
+          "y": 10
+        }
+      },
+      {
+        "image": "{{logoImage}}",
+        "width": 50,
+        "height": 50,
+        "absolutePosition": {
+          "x": 0,
+          "y": 10
+        },
+        "alignment": "right"
+      },
+      {
+        "image": "{{logoImage}}",
+        "width": 50,
+        "height": 50,
+        "absolutePosition": {
+          "x": 80,
+          "y": 10
+        }
+      },
+      {
+        "text": "Court Complex",
+        "alignment": "center",
+        "color": "black",
+        "style": "court-complex"
+      },
+      {
+        "text": "In The Court of: {{judgeName}}, {{designation}}",
+        "alignment": "center",
+        "color": "black",
+        "style": "judge-header"
+      },
+      {
+        "text": "Criminal Cases Listed on {{date}}",
+        "alignment": "center",
+        "color": "black",
+        "style": "criminal-case-header"
+      },
+      {
+        "table": {
+          "widths": [
+            "*",
+            "*",
+            "*",
+            "*",
+            "*"
+          ],
+          "headerRows": 1,
+          "body": [
+            [
+              {
+                "text": "SI No.",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Case Type/Case Number/Case Year",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Parties",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Advocates",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Pending Applications",
+                "style": "table-header",
+                "alignment": "center"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "",
+        "{{#SlotList}}": true
+      },
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "table": {
+                  "widths": ["*", "*"],
+                  "body": [
+                    [
+                      {
+                        "text": "{{slotId}}",
+                        "border": [false, false, false, false]
+                      },
+                      {
+                        "text": "{{slotTime}}",
+                        "alignment": "right",
+                        "border": [false, false, false, false]
+                      }
+                    ]
+                  ]
+                },
+                "layout": "noBorders"
+              }
+            ],
+            [
+              {
+                "table": {
+                  "widths": ["*"],
+                  "body": [
+                    [
+                      {
+                        "text": "{{hearingType}}",
+                        "alignment": "center"
+                      }
+                    ]
+                  ]
+                },
+                "layout": "noBorders"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "",
+        "{{#CauseList}}": true
+      },
+      {
+        "table": {
+          "widths": ["*", "*", "*", "*", "*"],
+          "body": [
+            [
+              {
+                "text": "{{index}}",
+                "style": "tableData",
+                "alignment": "center"
+              },
+              {
+                "text": "{{caseId}}",
+                "style": "tableData",
+                "alignment": "center"
+              },
+              {
+                "text": "{{caseTitle}}",
+                "style": "tableData",
+                "alignment": "center"
+              },
+              {
+                "text": "{{litigantNames}}",
+                "style": "tableData",
+                "alignment": "center"
+              },
+              {
+                "text": "{{pendingApplications}}",
+                "style": "tableData",
+                "alignment": "center"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "",
+        "{{/CauseList}}": true
+      },
+      {
+        "text": "",
+        "{{/SlotList}}": true
+      },
+      {
+        "text": "Disclaimer: This is a system-generated Causelist.",
+        "alignment": "left",
+        "color": "#d029d9",
+        "absolutePosition": {
+          "x": 40,
+          "y": 775
+        }
+      }
+    ],
+    "styles": {
+      "judge-header": {
+        "fontSize": 12,
+        "bold": true,
+        "color": "black",
+        "margin": [10, 0, 10, 30]
+      },
+      "criminal-case-header": {
+        "fontSize": 12,
+        "bold": true,
+        "color": "black",
+        "margin": [0, 0, 0, 30]
+      },
+      "court-complex": {
+        "fontSize": 12,
+        "bold": true,
+        "color": "black",
+        "margin": [0, 50, 0, 50]
+      },
+      "table-header": {
+        "fontSize": 10,
+        "bold": true,
+        "color": "white",
+        "fillColor": "#088F8F",
+        "alignment": "center",
+        "margin": [10, 10, 10, 10]
+      },
+      "tableData": {
+        "fontSize": 10,
+        "color": "black"
+      }
+    }
+  }
+}
