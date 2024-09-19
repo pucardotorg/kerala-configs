@@ -22,7 +22,7 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "APPLICATION FOR BAIL - Bail bond",
+                    "text": "{{applicationTitle}}",
                     "style": "applicationTitle"
                   },
                   {
@@ -42,7 +42,7 @@
                     "style": "date"
                   },
                   {
-                    "text": "Subject: Application for Bail - Bail bond",
+                    "text": "Subject: {{subjectText}}",
                     "style": "subjectText"
                   },
                   {
@@ -50,42 +50,34 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Brief Summary of the Circumstances Leading to the Bail Application: The applicant has been accused under {{statuteAndAct}}.",
+                    "text": "Brief Summary of the Circumstances Leading to the Bail Application:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "The applicant has been accused under {{statuteAndAct}}.",
                     "style": "bodyText"
                   },
                   {
                     "text": "List of Attached Documents:",
                     "style": "bodyText"
                   },
-                  "{{#documentNameList}}",
-                  {
-                    "table": {
-                      "widths": [150, "*"],
-                      "body": [
-                        {
-                          "text": "{{documentName}}",
-                          "style": "tableData"
-                        }
-                      ],
-                      "border": [true, true, true, true]
-                    }
-                  },
-                  {
-                    "text": "",
-                    "margin": [0, 0, 0, 20]
-                  },
-                  "{{/documentNameList}}",
                   {
                     "text": "The following documents are attached in support of this bail application:",
                     "style": "bodyText"
                   },
+                  "{{#documentList}}",
+                  {
+                    "text": "{{documentType}}",
+                    "style": "bodyText"
+                  },
+                  "{{/documentList}}",
                   {
                     "text": "The applicant believes that the grant of bail is justified in this case for the following reasons:",
                     "style": "bodyText"
                   },
                   {
                     "text": "{{reasonForApplication}}",
-                    "style": "bodyText"
+                    "style": "reasonForApplication"
                   },
                   {
                     "text": "The applicant assures and undertakes to the Hon'ble Court that this request is made in good faith and that the applicant will abide by all conditions imposed by the Court. The applicant also undertakes to appear before the Court as and when required.",
@@ -168,6 +160,10 @@
       "bodyText": {
         "fontSize": 11,
         "margin": [0, 10, 0, 10]
+      },
+      "reasonForApplication": {
+        "fontSize": 11,
+        "margin": [0, 15, 0, 10]
       },
       "additionalComments": {
         "fontSize": 11,

@@ -42,21 +42,31 @@
                     "style": "orderText"
                   },
                   {
-                    "text": "The hearing in the above-captioned case is hereby RESCHEDULED to {{newHearingDate}}.",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "All parties and their counsels shall make necessary arrangements to appear at the rescheduled hearing.",
-                    "style": "bodyText"
+                    "ol": [
+                      {
+                        "text": "The hearing in the above-captioned case is hereby PRE-LISTED for {{originalHearingDate}}.",
+                        "style": "bodyText"
+                      },
+                      {
+                        "text": "The hearing in the above-captioned case is hereby RESCHEDULED to {{newHearingDate}}.",
+                        "style": "bodyText"
+                      },
+                      {
+                        "text": "All parties and their counsels shall make necessary arrangements to appear at the rescheduled hearing.",
+                        "style": "bodyText"
+                      }
+                    ]
                   },
                   {
                     "text": "IT IS SO ORDERED.",
                     "style": "orderText"
                   },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "additionalComments"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "{{judgeSignature}}",
                     "style": "signature"

@@ -57,10 +57,12 @@
                     "text": "These documents are as follows:",
                     "style": "bodyText"
                   },
+                  "{{#documentList}}",
                   {
-                    "text": "{{nameOfDocument}}",
+                    "text": "{{documentType}}",
                     "style": "bodyText"
                   },
+                  "{{/documentList}}",
                   {
                     "text": "The petitioner believes that the production of the aforementioned documents/evidence is crucial for a fair and just adjudication of the present case. These documents/evidence are essential to {{reasonForApplication}}.",
                     "style": "bodyText"
@@ -73,10 +75,12 @@
                     "text": "Therefore, the petitioner humbly requests the Hon'ble Court to consider this application and grant permission to produce the aforementioned documents/evidence.",
                     "style": "bodyText"
                   },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "bodyText"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "Dated this {{day}} day of {{month}}, {{year}}.",
                     "style": "date"

@@ -1,5 +1,5 @@
 {
-  "key": "application-for-checkout-request",
+  "key": "application-for-checkout-request-qr",
   "config": {
     "content": [
       {
@@ -54,13 +54,15 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "I respectfully request the Court's consideration to checkout the hearing date. Thank you for considering this request. I remain available to provide any further information or clarification that the Court may require.",
+                    "text": "I respectfully request the Court's consideration to reschedule the hearing date. Thank you for considering this request. I remain available to provide any further information or clarification that the Court may require.",
                     "style": "bodyText"
                   },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "bodyText"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "{{advocateSignature}}",
                     "style": "signature"
@@ -80,6 +82,23 @@
                 ],
                 "alignment": "left",
                 "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
               }
             ]
           ]

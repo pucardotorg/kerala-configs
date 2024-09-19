@@ -41,24 +41,12 @@
                     "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, including",
                     "style": "contentText"
                   },
-                  "{{#documentNameList}}",
+                  "{{#documentList}}",
                   {
-                    "table": {
-                      "widths": [150, "*"],
-                      "body": [
-                        {
-                          "text": "{{documentName}}",
-                          "style": "tableData"
-                        }
-                      ],
-                      "border": [true, true, true, true]
-                    }
+                    "text": "{{documentType}}",
+                    "style": "bodyText"
                   },
-                  {
-                    "text": "",
-                    "margin": [0, 0, 0, 20]
-                  },
-                  "{{/documentNameList}}",
+                  "{{/documentList}}",
                   {
                     "text": "WHEREAS, the Court has taken into account the seriousness of the allegations and the likelihood of the Applicant appearing for further proceedings; and",
                     "style": "contentText"

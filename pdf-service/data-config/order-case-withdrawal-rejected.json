@@ -1,0 +1,111 @@
+{
+  "key": "order-case-withdrawal-rejected",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "place",
+                "value": {
+                  "path": "$.place"
+                }
+              },
+              {
+                "variable": "state",
+                "value": {
+                  "path": "$.state"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "partyType",
+                "value": {
+                  "path": "$.partyType"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "dateOfMotion",
+                "value": {
+                  "path": "$.dateOfMotion"
+                }
+              },
+              {
+                "variable": "summaryReasonForWithdrawal",
+                "value": {
+                  "path": "$.summaryReasonForWithdrawal"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "courtSeal",
+                "value": {
+                  "path": "$.courtSeal"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

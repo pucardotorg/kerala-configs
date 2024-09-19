@@ -79,9 +79,9 @@
                 }
               },
               {
-                "variable": "nameOfDocument",
+                "variable": "documentList",
                 "value": {
-                  "path": "$.nameOfDocument"
+                  "path": "$.documentList.*"
                 }
               },
               {

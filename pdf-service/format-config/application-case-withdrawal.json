@@ -54,44 +54,20 @@
                     "style": "bodyText"
                   },
                   {
+                    "text": "{{reasonForWithdrawal}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "I respectfully request this Honorable Court to grant permission for the withdrawal of the case and to pass appropriate orders in this regard.",
+                    "style": "bodyText"
+                  },
+                  {
                     "text": "{{additionalComments}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Grounds:",
+                    "text": "Thank you for your consideration of this petition.",
                     "style": "bodyText"
-                  },
-                  {
-                    "text": "{{grounds}}",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "The petitioner assures and undertakes to the Hon'ble Court that this request is made in good faith and will not prejudice the other party.",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "Therefore, the petitioner humbly requests the Hon'ble Court to consider this application and grant permission to produce the aforementioned documents/evidence.",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "Prayer:",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "{{reliefSought}}",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "Verification:",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "I, {{partyName}}, do hereby verify that the contents are correct and true to the best of my knowledge and personal belief and no part of it is false and nothing material has been concealed therein.",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "Affirmed on this {{day}} day of {{month}}, {{year}}.",
-                    "style": "date"
                   },
                   {
                     "text": "{{advocateSignature}}",

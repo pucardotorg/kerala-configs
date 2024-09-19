@@ -49,10 +49,12 @@
                     "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court seeking {{reasonForApplication}}",
                     "style": "bodyText"
                   },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "bodyText"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "Prayer:",
                     "style": "bodyText"
