@@ -48,7 +48,7 @@
                         "style": "bodyText"
                       },
                       {
-                        "text": "The hearing in the above-captioned case is hereby RESCHEDULED to {{newHearingDate}}.",
+                        "text": "The next hearing is subsequently SCHEDULED to  {{newHearingDate}}.",
                         "style": "bodyText"
                       },
                       {
