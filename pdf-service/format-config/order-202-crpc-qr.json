@@ -88,7 +88,7 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "Given under my hand and the seal of this Court on this {{date}} day of {{month}}, {{year}}.",
+                    "text": "Given under my hand and the seal of this Court on this {{day}} day of {{month}}, {{year}}.",
                     "style": "bodyText"
                   },
                   {

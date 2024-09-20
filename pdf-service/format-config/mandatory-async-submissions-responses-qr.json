@@ -63,7 +63,7 @@
                   },
                   "{{/additionalComments}}",
                   {
-                    "text": "Given under my hand and the seal of this Court on this {{Date}} day of {{Month}}, {{Year}}.",
+                    "text": "Given under my hand and the seal of this Court on this {{day}} day of {{Month}}, {{Year}}.",
                     "style": "bodyText"
                   },
                   {
