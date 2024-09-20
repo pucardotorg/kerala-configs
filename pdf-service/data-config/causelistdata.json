@@ -4,7 +4,7 @@
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$.SlotList",
-    "entityIdPath": "$.*.slotId",
+    "entityIdPath": "$.*.slotName",
     "isCommonTableBorderRequired": true,
     "mappings": [
       {
@@ -34,12 +34,11 @@
                 "type": "string"
               },
               {
-                "variable": "AdmissionHearing",
+                "variable": "courtId",
                 "value": {
-                  "path": "$"
+                  "path": "$[0].CauseList[0].courtId"
                 },
-                "type": "index",
-                "format": " var i = 0; var filteredCases = type.filter(function(caseItem){return caseItem.hearingType === 'AdmissionHearing';}); for (i=0;i< filteredCases.length;i++) {filteredCases[i]['index'] = i + 1;} return filteredCases;"
+                "type": "string"
               },
               {
                 "variable": "SlotList",
@@ -47,10 +46,20 @@
                   "path": "$"
                 },
                 "type": "index",
-                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+                "format": "var i = 0; var j = 0; for (i = 0; i < type.length; i++) { for (j = 0; j < type[i]['CauseList'].length; j++) { type[i]['CauseList'][j]['index'] = j + 1; } } return type;"
               },
               {
-                "variable": "logoImage",
+                "variable": "nationalEmblem",
+                "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
+                "type": "image"
+              },
+              {
+                "variable": "DistrictCourtImage",
+                "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
+                "type": "image"
+              },
+              {
+                "variable": "onCourtsLogo",
                 "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
                 "type": "image"
               }

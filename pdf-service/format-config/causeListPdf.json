@@ -4,7 +4,7 @@
     "pageSize": "A4",
     "content": [
       {
-        "image": "{{logoImage}}",
+        "image": "{{nationalEmblem}}",
         "width": 50,
         "height": 50,
         "absolutePosition": {
@@ -13,7 +13,7 @@
         }
       },
       {
-        "image": "{{logoImage}}",
+        "image": "{{onCourtsLogo}}",
         "width": 50,
         "height": 50,
         "absolutePosition": {
@@ -23,7 +23,7 @@
         "alignment": "right"
       },
       {
-        "image": "{{logoImage}}",
+        "image": "{{DistrictCourtImage}}",
         "width": 50,
         "height": 50,
         "absolutePosition": {
@@ -32,7 +32,7 @@
         }
       },
       {
-        "text": "Court Complex",
+        "text": "{{courtId}}",
         "alignment": "center",
         "color": "black",
         "style": "court-complex"
@@ -52,11 +52,11 @@
       {
         "table": {
           "widths": [
-            "*",
-            "*",
-            "*",
-            "*",
-            "*"
+            "10%",
+            "30%",
+            "30%",
+            "15%",
+            "15%"
           ],
           "headerRows": 1,
           "body": [
@@ -67,7 +67,7 @@
                 "alignment": "center"
               },
               {
-                "text": "Case Type/Case Number/Case Year",
+                "text": "Case Type/Case Number/Year",
                 "style": "table-header",
                 "alignment": "center"
               },
@@ -96,22 +96,39 @@
       },
       {
         "table": {
-          "widths": ["*"],
+          "widths": [
+            "*"
+          ],
           "body": [
             [
               {
                 "table": {
-                  "widths": ["*", "*"],
+                  "widths": [
+                    "50%",
+                    "50%"
+                  ],
                   "body": [
                     [
                       {
-                        "text": "{{slotId}}",
-                        "border": [false, false, false, false]
+                        "text": "{{slotName}}",
+                        "border": [
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "slot-id"
                       },
                       {
                         "text": "{{slotTime}}",
                         "alignment": "right",
-                        "border": [false, false, false, false]
+                        "border": [
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "slot-time"
                       }
                     ]
                   ]
@@ -122,12 +139,15 @@
             [
               {
                 "table": {
-                  "widths": ["*"],
+                  "widths": [
+                    "*"
+                  ],
                   "body": [
                     [
                       {
                         "text": "{{hearingType}}",
-                        "alignment": "center"
+                        "alignment": "center",
+                        "style": "hearing-type"
                       }
                     ]
                   ]
@@ -144,32 +164,38 @@
       },
       {
         "table": {
-          "widths": ["*", "*", "*", "*", "*"],
+          "widths": [
+            "10%",
+            "30%",
+            "30%",
+            "15%",
+            "15%"
+          ],
           "body": [
             [
               {
                 "text": "{{index}}",
-                "style": "tableData",
+                "style": "table-data",
                 "alignment": "center"
               },
               {
-                "text": "{{caseId}}",
-                "style": "tableData",
+                "text": "{{caseNumber}}",
+                "style": "table-data",
                 "alignment": "center"
               },
               {
                 "text": "{{caseTitle}}",
-                "style": "tableData",
+                "style": "table-data",
                 "alignment": "center"
               },
               {
                 "text": "{{litigantNames}}",
-                "style": "tableData",
+                "style": "table-data",
                 "alignment": "center"
               },
               {
-                "text": "{{pendingApplications}}",
-                "style": "tableData",
+                "text": "{{applicationNumber}}",
+                "style": "table-data",
                 "alignment": "center"
               }
             ]
@@ -196,22 +222,37 @@
     ],
     "styles": {
       "judge-header": {
-        "fontSize": 12,
+        "fontSize": 14,
         "bold": true,
         "color": "black",
-        "margin": [10, 0, 10, 30]
+        "margin": [
+          10,
+          10,
+          10,
+          20
+        ]
       },
       "criminal-case-header": {
         "fontSize": 12,
         "bold": true,
         "color": "black",
-        "margin": [0, 0, 0, 30]
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ]
       },
       "court-complex": {
-        "fontSize": 12,
+        "fontSize": 16,
         "bold": true,
         "color": "black",
-        "margin": [0, 50, 0, 50]
+        "margin": [
+          0,
+          20,
+          0,
+          30
+        ]
       },
       "table-header": {
         "fontSize": 10,
@@ -219,11 +260,37 @@
         "color": "white",
         "fillColor": "#088F8F",
         "alignment": "center",
-        "margin": [10, 10, 10, 10]
+        "margin": [
+          5,
+          5,
+          5,
+          5
+        ]
       },
-      "tableData": {
+      "table-data": {
         "fontSize": 10,
+        "color": "black",
+        "alignment": "center",
+        "margin": [
+          5,
+          5,
+          5,
+          5
+        ]
+      },
+      "slot-id": {
+        "fontSize": 12,
+        "bold": true,
         "color": "black"
+      },
+      "slot-time": {
+        "fontSize": 12,
+        "color": "black"
+      },
+      "hearing-type": {
+        "fontSize": 12,
+        "bold": true,
+        "color": "#555"
       }
     }
   }
