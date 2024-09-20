@@ -1,5 +1,5 @@
 {
-  "key": "summons-accused",
+  "key": "notice-qr",
   "config": {
     "defaultStyle": {
       "font": "Cambay"
@@ -23,7 +23,7 @@
                   {
                     "text": "NOTICE TO ACCUSED",
                     "style": "form-sub-header",
-                    "alignment": "left"
+                    "alignment": "center"
                   },
                   {
                     "text": "(Under Sections 223, Bharatiya Nagarik Suraksha Sanhita, 2023)",

@@ -1,5 +1,5 @@
 {
-  "key": "summons-accused",
+  "key": "notice-qr",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -73,6 +73,12 @@
                 "value": {
                   "path": "$.issueDate",
                   "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "qrCodeUrl",
+                "value": {
+                  "path": "$.embeddedUrl"
                 }
               }
             ]
