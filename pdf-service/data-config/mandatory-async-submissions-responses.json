@@ -93,6 +93,12 @@
                 }
               },
               {
+                "variable": "day",
+                "value": {
+                  "path": "$.day"
+                }
+              },
+              {
                 "variable": "Month",
                 "value": {
                   "path": "$.Month"

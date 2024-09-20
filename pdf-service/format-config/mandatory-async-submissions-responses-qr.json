@@ -39,12 +39,10 @@
                         "text": "The {{parties}} shall submit their respective evidence and documents as listed {{documentList}} through the court’s online portal no later than {{evidenceSubmissionDeadline}}. The submission should include all relevant materials intended to be relied upon during the proceedings.",
                         "style": "listItem"
                       },
-                      "{{#responseSubmissionDeadline}}",
                       {
-                        "text": "{{ifResponse}}, the opposing party(ies) shall have the opportunity to review the submitted evidence and documents and provide their responses, if any, within {{responseSubmissionDeadline}} also through the court’s online portal.",
+                        "text": "{{ifResponse}}, the opposing party(ies) shall {{#responseSubmissionDeadline}}not {{/responseSubmissionDeadline}}have the opportunity to review the submitted evidence and documents and provide their responses{{#responseSubmissionDeadline}} , if any, within {{responseSubmissionDeadline}} also through the court’s online portal.{{/responseSubmissionDeadline}}",
                         "style": "listItem"
                       },
-                      "{{/responseSubmissionDeadline}}",
                       {
                         "text": "It is further ordered that failure to comply with the deadlines set forth in this order may result in sanctions or adverse rulings, as deemed appropriate by the court.",
                         "style": "listItem"
@@ -63,7 +61,7 @@
                   },
                   "{{/additionalComments}}",
                   {
-                    "text": "Given under my hand and the seal of this Court on this {{Date}} day of {{Month}}, {{Year}}.",
+                    "text": "Given under my hand and the seal of this Court on this {{day}} day of {{Month}}, {{Year}}.",
                     "style": "bodyText"
                   },
                   {
