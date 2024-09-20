@@ -65,12 +65,16 @@
                     "text": "The following documents are attached in support of this bail application:",
                     "style": "bodyText"
                   },
-                  "{{#documentList}}",
                   {
-                    "text": "{{documentType}}",
-                    "style": "bodyText"
+                    "ul": [
+                      "{{#documentList}}",
+                      {
+                        "text": "{{documentType}}",
+                        "style": "bodyText"
+                      },
+                      "{{/documentList}}"
+                    ]
                   },
-                  "{{/documentList}}",
                   {
                     "text": "The applicant believes that the grant of bail is justified in this case for the following reasons:",
                     "style": "bodyText"

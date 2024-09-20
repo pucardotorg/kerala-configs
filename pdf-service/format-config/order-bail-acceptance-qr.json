@@ -41,12 +41,16 @@
                     "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, including",
                     "style": "contentText"
                   },
-                  "{{#documentList}}",
                   {
-                    "text": "{{documentType}}",
-                    "style": "bodyText"
+                    "ul": [
+                      "{{#documentList}}",
+                      {
+                        "text": "{{documentType}}",
+                        "style": "bodyText"
+                      },
+                      "{{/documentList}}"
+                    ]
                   },
-                  "{{/documentList}}",
                   {
                     "text": "WHEREAS, the Court has taken into account the seriousness of the allegations and the likelihood of the Applicant appearing for further proceedings; and",
                     "style": "contentText"
