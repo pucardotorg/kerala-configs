@@ -57,12 +57,16 @@
                     "text": "These documents are as follows:",
                     "style": "bodyText"
                   },
-                  "{{#documentList}}",
                   {
-                    "text": "{{documentType}}",
-                    "style": "bodyText"
+                    "ul": [
+                      "{{#documentList}}",
+                      {
+                        "text": "{{documentType}}",
+                        "style": "bodyText"
+                      },
+                      "{{/documentList}}"
+                    ]
                   },
-                  "{{/documentList}}",
                   {
                     "text": "The petitioner believes that the production of the aforementioned documents/evidence is crucial for a fair and just adjudication of the present case. These documents/evidence are essential to {{reasonForApplication}}.",
                     "style": "bodyText"
