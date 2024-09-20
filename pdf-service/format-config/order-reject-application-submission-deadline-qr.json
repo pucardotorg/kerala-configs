@@ -1,0 +1,178 @@
+{
+  "key": "order-reject-application-submission-deadline-qr",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "In the Court of {{courtName}}, {{place}}, {{state}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "ORDER",
+                    "style": "orderTitle"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "This matter comes before the Court on the Applicant's Motion (or Application) for Extension of Deadline for Submission of {{originalSubmissionName}}, filed by {{applicantName}}, Advocate for {{partyName}}, on {{applicationFiledDate}}.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court, by Order dated {{orderDate}}, set the deadline for submission of the {{originalSubmissionName}} as {{originalDeadlineDate}}; and",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Applicant has filed a Motion (or Application) seeking an extension of the deadline for submission of the {{originalSubmissionName}} to {{requestedDeadlineDate}}; and",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has reviewed the Motion (or Application) and any supporting documentation (if any) submitted by the Applicant; and",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The Applicant's Motion (or Application) for Extension of Deadline for Submission of the {{originalSubmissionName}} is DENIED.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{reasonForRejection}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "IT IS SO ORDERED.",
+                    "style": "orderText"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Judge, {{courtName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{courtSeal}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "caseName": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "caseNumber": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderTitle": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderName": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 20]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "contentText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "ponitwiseText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [15, 0, 0, 5]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [0, 10, 0, 20]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 0]
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      }
+    }
+  }
+}
