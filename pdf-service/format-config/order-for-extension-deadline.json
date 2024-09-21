@@ -56,7 +56,7 @@
                         "style": "contentText"
                       },
                       {
-                        "text": "The deadline for submission of the {{originalSubmissionName}} is EXTENDED from {{originalDeadlineDate}} to {{newDealineDate}}.",
+                        "text": "The deadline for submission of the {{originalSubmissionName}} is EXTENDED from {{originalDeadlineDate}} to {{newDeadlineDate}}.",
                         "style": "contentText"
                       }
                     ],
