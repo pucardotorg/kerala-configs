@@ -97,9 +97,9 @@
                 }
               },
               {
-                "variable": "newDealineDate",
+                "variable": "newDeadlineDate",
                 "value": {
-                  "path": "$.newDealineDate"
+                  "path": "$.newDeadlineDate"
                 }
               },
               {
