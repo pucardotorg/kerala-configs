@@ -46,7 +46,7 @@
                     "style": "subjectText"
                   },
                   {
-                    "text": "My client, {{partyName}}, {{partyType}}, hereby submits this application before this Honorable Court seeking withdrawal of the case of {{caseNo}} - {{caseName}}.",
+                    "text": "My client, {{partyName}}, {{partyType}}, hereby submits this application before this Honorable Court seeking withdrawal of the case of {{caseName}} - {{caseNo}}.",
                     "style": "bodyText"
                   },
                   {
