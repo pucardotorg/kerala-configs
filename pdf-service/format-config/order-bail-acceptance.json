@@ -64,16 +64,20 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "The Application for Bail by {{partyName}} is GRANTED.",
-                    "style": "contentText"
-                  },
-                  {
-                    "text": "The type of bail granted is {{bailType}}.",
-                    "style": "contentText"
-                  },
-                  {
-                    "text": "{{bailType}} The conditions of bail include {{conditionOfBail}}.",
-                    "style": "contentText"
+                    "ul": [
+                      {
+                        "text": "The Application for Bail by {{partyName}} is GRANTED.",
+                        "style": "contentText"
+                      },
+                      {
+                        "text": "The type of bail granted is {{bailType}}.",
+                        "style": "contentText"
+                      },
+                      {
+                        "text": "{{bailType}} The conditions of bail include {{conditionOfBail}}.",
+                        "style": "contentText"
+                      }
+                    ]
                   },
                   {
                     "text": "IT IS SO ORDERED.",
