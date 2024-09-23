@@ -32,10 +32,27 @@
         }
       },
       {
-        "text": "{{courtId}}",
-        "alignment": "center",
-        "color": "black",
-        "style": "court-complex"
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "{{courtId}}",
+                "alignment": "center",
+                "color": "black",
+                "style": "court-complex",
+                "border": [
+                  false,
+                  false,
+                  false,
+                  true
+                ]
+              }
+            ]
+          ]
+        }
       },
       {
         "text": "In The Court of: {{judgeName}}, {{designation}}",
@@ -53,10 +70,10 @@
         "table": {
           "widths": [
             "10%",
-            "30%",
-            "30%",
-            "15%",
-            "15%"
+            "20%",
+            "20%",
+            "20%",
+            "30%"
           ],
           "headerRows": 1,
           "body": [
@@ -120,7 +137,7 @@
                         "style": "slot-id"
                       },
                       {
-                        "text": "{{slotTime}}",
+                        "text": "{{slotStartTime}} - {{slotEndTime}}",
                         "alignment": "right",
                         "border": [
                           false,
@@ -166,10 +183,10 @@
         "table": {
           "widths": [
             "10%",
-            "30%",
-            "30%",
-            "15%",
-            "15%"
+            "20%",
+            "20%",
+            "20%",
+            "30%"
           ],
           "body": [
             [
@@ -189,14 +206,38 @@
                 "alignment": "center"
               },
               {
-                "text": "{{litigantNames}}",
+                "stack": [
+                  {
+                    "text": "",
+                    "{{#advocateNames}}": true
+                  },
+                  {
+                    "text": "{{.}}"
+                  },
+                  {
+                    "text": "",
+                    "{{/advocateNames}}": true
+                  }
+                ],
                 "style": "table-data",
-                "alignment": "center"
+                "alignment": "left"
               },
               {
-                "text": "{{applicationNumber}}",
+                "stack": [
+                  {
+                    "text": "",
+                    "{{#applicationNumbers}}": true
+                  },
+                  {
+                    "text": "{{.}}"
+                  },
+                  {
+                    "text": "",
+                    "{{/applicationNumbers}}": true
+                  }
+                ],
                 "style": "table-data",
-                "alignment": "center"
+                "alignment": "left"
               }
             ]
           ]
@@ -249,7 +290,7 @@
         "color": "black",
         "margin": [
           0,
-          20,
+          50,
           0,
           30
         ]

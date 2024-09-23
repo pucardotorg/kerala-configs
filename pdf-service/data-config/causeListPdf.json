@@ -29,7 +29,7 @@
               {
                 "variable": "date",
                 "value": {
-                  "path": "$[0].CauseList[0].caseDate"
+                  "path": "$[0].CauseList[0].caseRegistrationDate"
                 },
                 "type": "string"
               },
