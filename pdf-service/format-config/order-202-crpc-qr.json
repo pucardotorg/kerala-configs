@@ -1,5 +1,5 @@
 {
-  "key": "order-bail-acceptance-qr",
+  "key": "order-202-crpc-qr",
   "config": {
     "content": [
       {
@@ -18,7 +18,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "In the matter of: {{caseNumber}}",
+                    "text": "In the matter of: {{caseName}}",
                     "style": "header"
                   },
                   {
@@ -26,64 +26,70 @@
                     "style": "orderTitle"
                   },
                   {
-                    "text": "{{date}}",
-                    "style": "date"
-                  },
-                  {
-                    "text": "This matter comes before the Court on the Application for Bail filed by {{applicantName}}, Advocate for {{partyName}}, on {{dateOfApplication}}.",
+                    "text": "This matter comes before the Court upon the application of the complainant, {{complainantName}}, under Section 202 of the Code of Criminal Procedure, seeking an inquiry by the police into the alleged commission of an offense by the respondent, {{respondentName}}.",
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has considered the Application for Bail, which asserts that {{briefSummaryOfBail}}; and",
+                    "text": "The Court, having considered the application and the material placed before it, is of the opinion that a prima facie case exists against the respondent. Therefore, in exercise of the powers conferred upon it under Section 202 of the Code of Criminal Procedure, the Court directs the police to conduct an inquiry into the matter.",
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, including",
+                    "text": "The police are hereby directed to:",
                     "style": "contentText"
                   },
                   {
-                    "ul": [
-                      "{{#documentList}}",
+                    "ol": [
                       {
-                        "text": "{{documentType}}",
-                        "style": "bodyText"
-                      },
-                      "{{/documentList}}"
-                    ],
-                    "style": "list"
-                  },
-                  {
-                    "text": "WHEREAS, the Court has taken into account the seriousness of the allegations and the likelihood of the Applicant appearing for further proceedings; and",
-                    "style": "contentText"
-                  },
-                  {
-                    "text": "WHEREAS, the Court has considered the relevant legal provisions regarding bail;",
-                    "style": "contentText"
-                  },
-                  {
-                    "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
-                    "style": "contentText"
-                  },
-                  {
-                    "text": "The Application for Bail by {{partyName}} is GRANTED subject to the conditions set out below:",
-                    "style": "contentText"
-                  },
-                  {
-                    "ul": [
-                      {
-                        "text": "The type of bail granted is {{bailType}}.",
+                        "text": "Register an FIR under Section {{section}} of the Indian Penal Code (IPC) or any other relevant provision of law",
                         "style": "contentText"
                       },
                       {
-                        "text": "{{bailType}} The conditions of bail include {{conditionOfBail}}.",
+                        "text": "Conduct a thorough investigation into the allegations made by the complainant.",
+                        "style": "contentText"
+                      },
+                      {
+                        "text": "Submit a report to the Court within {{numberOfDays} days from the date of receipt of this order, detailing the findings of the inquiry and the steps taken by the police.",
                         "style": "contentText"
                       }
                     ],
                     "style": "list"
                   },
                   {
-                    "text": "IT IS SO ORDERED.",
-                    "style": "orderText"
+                    "text": "The police are further directed to:",
+                    "style": "contentText"
+                  },
+                  {
+                    "ol": [
+                      {
+                        "text": "Serve a copy of this order upon the respondent.",
+                        "style": "contentText"
+                      },
+                      {
+                        "text": "Inform the respondent of the allegations made against them and their right to be heard.",
+                        "style": "contentText"
+                      },
+                      {
+                        "text": "Record the statement of the respondent, if they so desire, and include it in the inquiry report.",
+                        "style": "contentText"
+                      }
+                    ],
+                    "style": "list"
+                  },
+                  {
+                    "text": "The police shall conduct the inquiry in a fair and impartial manner and shall not be influenced by any extraneous considerations.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "This order shall be communicated to the police by the Court, and the police shall act upon it expeditiously.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "Given under my hand and the seal of this Court on this {{day}} day of {{month}}, {{year}}.",
+                    "style": "bodyText"
                   },
                   {
                     "text": "{{judgeSignature}}",
@@ -94,7 +100,7 @@
                     "style": "signature"
                   },
                   {
-                    "text": "Judge, District {{courtName}}",
+                    "text": "Judge, District Court of {{courtName}}",
                     "style": "signature"
                   },
                   {
@@ -184,7 +190,7 @@
         "color": "black"
       },
       "list": {
-        "margin": [20, 0, 0, 10]
+        "margin": [20, 10, 0, 10]
       },
       "listItem": {
         "fontSize": 11,

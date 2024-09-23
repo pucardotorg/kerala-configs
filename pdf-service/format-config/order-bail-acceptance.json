@@ -41,12 +41,17 @@
                     "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, including",
                     "style": "contentText"
                   },
-                  "{{#documentList}}",
                   {
-                    "text": "{{documentType}}",
-                    "style": "bodyText"
+                    "ul": [
+                      "{{#documentList}}",
+                      {
+                        "text": "{{documentType}}",
+                        "style": "bodyText"
+                      },
+                      "{{/documentList}}"
+                    ],
+                    "style": "list"
                   },
-                  "{{/documentList}}",
                   {
                     "text": "WHEREAS, the Court has taken into account the seriousness of the allegations and the likelihood of the Applicant appearing for further proceedings; and",
                     "style": "contentText"
@@ -60,16 +65,21 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "The Application for Bail by {{partyName}} is GRANTED.",
+                    "text": "The Application for Bail by {{partyName}} is GRANTED subject to the conditions set out below:",
                     "style": "contentText"
                   },
                   {
-                    "text": "The type of bail granted is {{bailType}}.",
-                    "style": "contentText"
-                  },
-                  {
-                    "text": "{{bailType}} The conditions of bail include {{conditionOfBail}}.",
-                    "style": "contentText"
+                    "ul": [
+                      {
+                        "text": "The type of bail granted is {{bailType}}.",
+                        "style": "contentText"
+                      },
+                      {
+                        "text": "{{bailType}} The conditions of bail include {{conditionOfBail}}.",
+                        "style": "contentText"
+                      }
+                    ],
+                    "style": "list"
                   },
                   {
                     "text": "IT IS SO ORDERED.",
@@ -155,6 +165,13 @@
         "bold": true,
         "fontSize": 10,
         "color": "black"
+      },
+      "list": {
+        "margin": [20, 0, 0, 10]
+      },
+      "listItem": {
+        "fontSize": 11,
+        "margin": [0, 5, 0, 5]
       }
     }
   }

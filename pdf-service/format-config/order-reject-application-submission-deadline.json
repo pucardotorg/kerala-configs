@@ -1,5 +1,5 @@
 {
-  "key": "order-bail-acceptance-qr",
+  "key": "order-reject-application-submission-deadline",
   "config": {
     "content": [
       {
@@ -10,11 +10,11 @@
               {
                 "stack": [
                   {
-                    "text": "In the Court of {{courtName}}, {{courtPlace}}, {{state}}",
+                    "text": "In the Court of {{courtName}}, {{place}}, {{state}}",
                     "style": "header"
                   },
                   {
-                    "text": "Case No: {{caseNumber}} of {{caseYear}}",
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
                     "style": "header"
                   },
                   {
@@ -30,34 +30,19 @@
                     "style": "date"
                   },
                   {
-                    "text": "This matter comes before the Court on the Application for Bail filed by {{applicantName}}, Advocate for {{partyName}}, on {{dateOfApplication}}.",
+                    "text": "This matter comes before the Court on the Applicant's Motion (or Application) for Extension of Deadline for Submission of {{originalSubmissionName}}, filed by {{applicantName}}, Advocate for {{partyName}}, on {{applicationFiledDate}}.",
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has considered the Application for Bail, which asserts that {{briefSummaryOfBail}}; and",
+                    "text": "WHEREAS, the Court, by Order dated {{orderDate}}, set the deadline for submission of the {{originalSubmissionName}} as {{originalDeadlineDate}}; and",
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, including",
+                    "text": "WHEREAS, the Applicant has filed a Motion (or Application) seeking an extension of the deadline for submission of the {{originalSubmissionName}} to {{requestedDeadlineDate}}; and",
                     "style": "contentText"
                   },
                   {
-                    "ul": [
-                      "{{#documentList}}",
-                      {
-                        "text": "{{documentType}}",
-                        "style": "bodyText"
-                      },
-                      "{{/documentList}}"
-                    ],
-                    "style": "list"
-                  },
-                  {
-                    "text": "WHEREAS, the Court has taken into account the seriousness of the allegations and the likelihood of the Applicant appearing for further proceedings; and",
-                    "style": "contentText"
-                  },
-                  {
-                    "text": "WHEREAS, the Court has considered the relevant legal provisions regarding bail;",
+                    "text": "WHEREAS, the Court has reviewed the Motion (or Application) and any supporting documentation (if any) submitted by the Applicant; and",
                     "style": "contentText"
                   },
                   {
@@ -65,21 +50,16 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "The Application for Bail by {{partyName}} is GRANTED subject to the conditions set out below:",
+                    "text": "The Applicant's Motion (or Application) for Extension of Deadline for Submission of the {{originalSubmissionName}} is DENIED.",
                     "style": "contentText"
                   },
                   {
-                    "ul": [
-                      {
-                        "text": "The type of bail granted is {{bailType}}.",
-                        "style": "contentText"
-                      },
-                      {
-                        "text": "{{bailType}} The conditions of bail include {{conditionOfBail}}.",
-                        "style": "contentText"
-                      }
-                    ],
-                    "style": "list"
+                    "text": "{{reasonForRejection}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
                   },
                   {
                     "text": "IT IS SO ORDERED.",
@@ -94,7 +74,7 @@
                     "style": "signature"
                   },
                   {
-                    "text": "Judge, District {{courtName}}",
+                    "text": "Judge, {{courtName}}",
                     "style": "signature"
                   },
                   {
@@ -104,23 +84,6 @@
                 ],
                 "alignment": "left",
                 "margin": [0, 20, 0, 20]
-              }
-            ]
-          ]
-        },
-        "layout": "noBorders"
-      },
-      {
-        "style": "ws-head",
-        "table": {
-          "widths": ["*"],
-          "body": [
-            [
-              {
-                "image": "{{qrCodeImage}}",
-                "width": 180,
-                "height": 180,
-                "style": "qr-code"
               }
             ]
           ]
@@ -167,6 +130,11 @@
         "alignment": "left",
         "margin": [0, 10, 0, 10]
       },
+      "ponitwiseText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [15, 0, 0, 5]
+      },
       "orderText": {
         "fontSize": 12,
         "bold": true,
@@ -182,18 +150,6 @@
         "bold": true,
         "fontSize": 10,
         "color": "black"
-      },
-      "list": {
-        "margin": [20, 0, 0, 10]
-      },
-      "listItem": {
-        "fontSize": 11,
-        "margin": [0, 5, 0, 5]
-      },
-      "qr-code": {
-        "color": "#000000",
-        "alignment": "left",
-        "margin": [0, 0, 0, 0]
       }
     }
   }

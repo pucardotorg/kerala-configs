@@ -123,7 +123,7 @@
       "orderTitle": {
         "fontSize": 16,
         "bold": true,
-        "alignment": "center",
+        "alignment": "left",
         "margin": [0, 5, 0, 5]
       },
       "orderName": {

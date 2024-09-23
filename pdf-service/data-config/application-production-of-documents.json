@@ -82,7 +82,9 @@
                 "variable": "documentList",
                 "value": {
                   "path": "$.documentList.*"
-                }
+                },
+                "type": "index",
+                "format": "var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
               },
               {
                 "variable": "reasonForApplication",

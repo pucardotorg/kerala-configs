@@ -1,5 +1,5 @@
 {
-  "key": "mandatory-async-submissions-responses-qr",
+  "key": "order-reject-application-submission-deadline",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -37,9 +37,9 @@
                 }
               },
               {
-                "variable": "year",
+                "variable": "caseYear",
                 "value": {
-                  "path": "$.year"
+                  "path": "$.caseYear"
                 }
               },
               {
@@ -49,63 +49,63 @@
                 }
               },
               {
-                "variable": "parties",
+                "variable": "date",
                 "value": {
-                  "path": "$.parties"
+                  "path": "$.date"
                 }
               },
               {
-                "variable": "documentList",
+                "variable": "originalSubmissionName",
                 "value": {
-                  "path": "$.documentList"
+                  "path": "$.originalSubmissionName"
                 }
               },
               {
-                "variable": "evidenceSubmissionDeadline",
+                "variable": "partyName",
                 "value": {
-                  "path": "$.evidenceSubmissionDeadline"
+                  "path": "$.partyName"
                 }
               },
               {
-                "variable": "ifResponse",
+                "variable": "applicantName",
                 "value": {
-                  "path": "$.ifResponse"
+                  "path": "$.applicantName"
                 }
               },
               {
-                "variable": "responseSubmissionDeadline",
+                "variable": "applicationFiledDate",
                 "value": {
-                  "path": "$.responseSubmissionDeadline"
+                  "path": "$.applicationFiledDate"
+                }
+              },
+              {
+                "variable": "orderDate",
+                "value": {
+                  "path": "$.orderDate"
+                }
+              },
+              {
+                "variable": "originalDeadlineDate",
+                "value": {
+                  "path": "$.originalDeadlineDate"
+                }
+              },
+              {
+                "variable": "requestedDeadlineDate",
+                "value": {
+                  "path": "$.requestedDeadlineDate"
+                }
+              },
+              {
+                "variable": "reasonForRejection",
+                "value": {
+                  "path": "$.reasonForRejection"
                 }
               },
               {
                 "variable": "additionalComments",
                 "value": {
                   "path": "$.additionalComments"
-                }
-              },
-              {
-                "variable": "Date",
-                "value": {
-                  "path": "$.Date"
-                }
-              },
-              {
-                "variable": "Month",
-                "value": {
-                  "path": "$.Month"
-                }
-              },
-              {
-                "variable": "Year",
-                "value": {
-                  "path": "$.Year"
-                }
-              },
-              {
-                "variable": "day",
-                "value": {
-                  "path": "$.day"
                 }
               },
               {
@@ -121,30 +121,10 @@
                 }
               },
               {
-                "variable": "designation",
-                "value": {
-                  "path": "$.designation"
-                }
-              },
-              {
                 "variable": "courtSeal",
                 "value": {
                   "path": "$.courtSeal"
                 }
-              },
-              {
-                "variable": "qrCodeUrl",
-                "value": {
-                  "path": "$.qrCodeUrl"
-                }
-              }
-            ]
-          },
-          {
-            "qrcodeConfig": [
-              {
-                "variable": "qrCodeImage",
-                "value": "{{qrCodeUrl}}"
               }
             ]
           }

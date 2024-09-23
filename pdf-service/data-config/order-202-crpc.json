@@ -1,5 +1,5 @@
 {
-  "key": "mandatory-async-submissions-responses-qr",
+  "key": "order-202-crpc",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -19,9 +19,9 @@
                 }
               },
               {
-                "variable": "place",
+                "variable": "courtPlace",
                 "value": {
-                  "path": "$.place"
+                  "path": "$.courtPlace"
                 }
               },
               {
@@ -37,9 +37,9 @@
                 }
               },
               {
-                "variable": "year",
+                "variable": "caseYear",
                 "value": {
-                  "path": "$.year"
+                  "path": "$.caseYear"
                 }
               },
               {
@@ -49,63 +49,57 @@
                 }
               },
               {
-                "variable": "parties",
+                "variable": "date",
                 "value": {
-                  "path": "$.parties"
+                  "path": "$.date"
                 }
               },
               {
-                "variable": "documentList",
+                "variable": "complainantName",
                 "value": {
-                  "path": "$.documentList"
+                  "path": "$.complainantName"
                 }
               },
               {
-                "variable": "evidenceSubmissionDeadline",
+                "variable": "respondentName",
                 "value": {
-                  "path": "$.evidenceSubmissionDeadline"
+                  "path": "$.respondentName"
                 }
               },
               {
-                "variable": "ifResponse",
+                "variable": "section",
                 "value": {
-                  "path": "$.ifResponse"
+                  "path": "$.section"
                 }
               },
               {
-                "variable": "responseSubmissionDeadline",
+                "variable": "numberOfDays",
                 "value": {
-                  "path": "$.responseSubmissionDeadline"
+                  "path": "$.numberOfDays"
                 }
               },
               {
-                "variable": "additionalComments",
+                "variable": "month",
                 "value": {
-                  "path": "$.additionalComments"
-                }
-              },
-              {
-                "variable": "Date",
-                "value": {
-                  "path": "$.Date"
-                }
-              },
-              {
-                "variable": "Month",
-                "value": {
-                  "path": "$.Month"
-                }
-              },
-              {
-                "variable": "Year",
-                "value": {
-                  "path": "$.Year"
+                  "path": "$.month"
                 }
               },
               {
                 "variable": "day",
                 "value": {
                   "path": "$.day"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
                 }
               },
               {
@@ -121,30 +115,10 @@
                 }
               },
               {
-                "variable": "designation",
-                "value": {
-                  "path": "$.designation"
-                }
-              },
-              {
                 "variable": "courtSeal",
                 "value": {
                   "path": "$.courtSeal"
                 }
-              },
-              {
-                "variable": "qrCodeUrl",
-                "value": {
-                  "path": "$.qrCodeUrl"
-                }
-              }
-            ]
-          },
-          {
-            "qrcodeConfig": [
-              {
-                "variable": "qrCodeImage",
-                "value": "{{qrCodeUrl}}"
               }
             ]
           }

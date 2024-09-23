@@ -1,5 +1,5 @@
 {
-  "key": "mandatory-async-submissions-responses-qr",
+  "key": "order-for-extension-deadline-qr",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -37,9 +37,9 @@
                 }
               },
               {
-                "variable": "year",
+                "variable": "caseYear",
                 "value": {
-                  "path": "$.year"
+                  "path": "$.caseYear"
                 }
               },
               {
@@ -49,63 +49,69 @@
                 }
               },
               {
-                "variable": "parties",
+                "variable": "date",
                 "value": {
-                  "path": "$.parties"
+                  "path": "$.date"
                 }
               },
               {
-                "variable": "documentList",
+                "variable": "originalSubmissionName",
                 "value": {
-                  "path": "$.documentList"
+                  "path": "$.originalSubmissionName"
                 }
               },
               {
-                "variable": "evidenceSubmissionDeadline",
+                "variable": "partyName",
                 "value": {
-                  "path": "$.evidenceSubmissionDeadline"
+                  "path": "$.partyName"
                 }
               },
               {
-                "variable": "ifResponse",
+                "variable": "applicantName",
                 "value": {
-                  "path": "$.ifResponse"
+                  "path": "$.applicantName"
                 }
               },
               {
-                "variable": "responseSubmissionDeadline",
+                "variable": "applicationFiledDate",
                 "value": {
-                  "path": "$.responseSubmissionDeadline"
+                  "path": "$.applicationFiledDate"
+                }
+              },
+              {
+                "variable": "orderId",
+                "value": {
+                  "path": "$.orderId"
+                }
+              },
+              {
+                "variable": "orderDate",
+                "value": {
+                  "path": "$.orderDate"
+                }
+              },
+              {
+                "variable": "originalDeadlineDate",
+                "value": {
+                  "path": "$.originalDeadlineDate"
+                }
+              },
+              {
+                "variable": "newDeadlineDate",
+                "value": {
+                  "path": "$.newDeadlineDate"
+                }
+              },
+              {
+                "variable": "requestedDeadlineDate",
+                "value": {
+                  "path": "$.requestedDeadlineDate"
                 }
               },
               {
                 "variable": "additionalComments",
                 "value": {
                   "path": "$.additionalComments"
-                }
-              },
-              {
-                "variable": "Date",
-                "value": {
-                  "path": "$.Date"
-                }
-              },
-              {
-                "variable": "Month",
-                "value": {
-                  "path": "$.Month"
-                }
-              },
-              {
-                "variable": "Year",
-                "value": {
-                  "path": "$.Year"
-                }
-              },
-              {
-                "variable": "day",
-                "value": {
-                  "path": "$.day"
                 }
               },
               {
@@ -118,12 +124,6 @@
                 "variable": "judgeName",
                 "value": {
                   "path": "$.judgeName"
-                }
-              },
-              {
-                "variable": "designation",
-                "value": {
-                  "path": "$.designation"
                 }
               },
               {

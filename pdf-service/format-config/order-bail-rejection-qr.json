@@ -41,12 +41,17 @@
                     "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, including",
                     "style": "contentText"
                   },
-                  "{{#documentList}}",
                   {
-                    "text": "{{documentType}}",
-                    "style": "bodyText"
+                    "ul": [
+                      "{{#documentList}}",
+                      {
+                        "text": "{{documentType}}",
+                        "style": "bodyText"
+                      },
+                      "{{/documentList}}"
+                    ],
+                    "style": "list"
                   },
-                  "{{/documentList}}",
                   {
                     "text": "WHEREAS, the Court has taken into account the seriousness of the allegations, the potential risk to public safety, and the likelihood of the Applicant appearing for further proceedings; and",
                     "style": "contentText"
@@ -164,6 +169,13 @@
         "bold": true,
         "fontSize": 10,
         "color": "black"
+      },
+      "list": {
+        "margin": [20, 0, 0, 10]
+      },
+      "listItem": {
+        "fontSize": 11,
+        "margin": [0, 5, 0, 5]
       }
     }
   }

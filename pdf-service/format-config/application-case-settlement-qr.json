@@ -70,7 +70,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Affirmed at {{location}} on this {{date}} of {{month}}, {{year}}.",
+                    "text": "Affirmed at {{location}} on this {{day}} of {{month}}, {{year}}.",
                     "style": "bodyText"
                   },
                   {
