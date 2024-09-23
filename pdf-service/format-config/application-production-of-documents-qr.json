@@ -65,7 +65,8 @@
                         "style": "bodyText"
                       },
                       "{{/documentList}}"
-                    ]
+                    ],
+                    "style": "list"
                   },
                   {
                     "text": "The petitioner believes that the production of the aforementioned documents/evidence is crucial for a fair and just adjudication of the present case. These documents/evidence are essential to {{reasonForApplication}}.",
@@ -184,6 +185,13 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, -10, 0, 10]
+      },
+      "list": {
+        "margin": [20, 0, 0, 10]
+      },
+      "listItem": {
+        "fontSize": 11,
+        "margin": [0, 5, 0, 5]
       },
       "qr-code": {
         "color": "#000000",
