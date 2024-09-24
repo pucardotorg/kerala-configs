@@ -1,0 +1,18 @@
+serviceMaps:
+  serviceName: CauseList-Service
+  mappings:
+   - version: 1.0
+     description: cause list pdf
+     fromTopic: causelist-pdf-save
+     isTransaction: true
+     queryMaps:
+      - query: INSERT INTO cause_list_document(fileStoreId, courtId, judgeId, date) VALUES (?, ?, ?, ?)
+        basePath: $
+        jsonMaps:
+         - jsonPath: $.fileStoreId
+         
+         - jsonPath: $.courtId
+         
+         - jsonPath: $.judgeId
+
+         - jsonPath: $.date

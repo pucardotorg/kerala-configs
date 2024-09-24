@@ -7,23 +7,44 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
-        - query: INSERT INTO cause_list (court_id, judge_id, tenant_id, case_id, case_title, litigant_names, hearing_type, tentative_slot, case_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO cause_list (id, tenantId, hearingId, filingNumber, applicationNumber, hearingType, startTime, endTime, caseType, caseTitle, caseRegistrationDate, caseNumber, courtId, judgeId, advocateNames, slot, hearingDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: CauseList.*
           jsonMaps:
+            - jsonPath: $.CauseList.*.id
+
+            - jsonPath: $.CauseList.*.tenantId
+
+            - jsonPath: $.CauseList.*.hearingId
+
+            - jsonPath: $.CauseList.*.filingNumber
+
+            - jsonPath: $.CauseList.*.applicationNumber
+              Type: JSON
+              dbType: JSONB
+
+            - jsonPath: $.CauseList.*.hearingType
+
+            - jsonPath: $.CauseList.*.startTime
+
+            - jsonPath: $.CauseList.*.endTime
+
+            - jsonPath: $.CauseList.*.caseType
+
+            - jsonPath: $.CauseList.*.caseTitle
+
+            - jsonPath: $.CauseList.*.caseRegistrationDate
+
+            - jsonPath: $.CauseList.*.caseNumber
+
             - jsonPath: $.CauseList.*.courtId
 
             - jsonPath: $.CauseList.*.judgeId
 
-            - jsonPath: $.CauseList.*.tenantId
+            - jsonPath: $.CauseList.*.advocateNames
+              Type: JSON
+              dbType: JSONB
 
-            - jsonPath: $.CauseList.*.caseId
+            - jsonPath: $.CauseList.*.slot
 
-            - jsonPath: $.CauseList.*.caseTitle
+            - jsonPath: $.CauseList.*.hearingDate
 
-            - jsonPath: $.CauseList.*.litigantNames
-
-            - jsonPath: $.CauseList.*.typeOfHearing
-
-            - jsonPath: $.CauseList.*.tentativeSlot
-
-            - jsonPath: $.CauseList.*.caseDate
