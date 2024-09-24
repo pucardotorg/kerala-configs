@@ -15,21 +15,21 @@
               {
                 "variable": "judgeName",
                 "value": {
-                  "path": "$[0].CauseList[0].judgeId"
+                  "path": "$[0].judgeName"
                 },
                 "type": "string"
               },
               {
                 "variable": "designation",
                 "value": {
-                  "path": "$[0].CauseList[0].designation"
+                  "path": "$[0].judgeDesignation"
                 },
                 "type": "string"
               },
               {
                 "variable": "date",
                 "value": {
-                  "path": "$[0].CauseList[0].caseRegistrationDate"
+                  "path": "$[0].CauseList[0].hearingDate"
                 },
                 "type": "string"
               },
