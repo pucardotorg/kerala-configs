@@ -1,0 +1,152 @@
+{
+    "key": "order-referral-case-adr",
+    "config": {
+      "content": [
+        {
+          "table": {
+            "widths": ["*"],
+            "body": [
+              [
+                {
+                  "stack": [
+                    {
+                      "text": "In the Court of {{courtName}}, {{place}}, {{state}}",
+                      "style": "header"
+                    },
+                    {
+                      "text": "Case No. {{caseNumber}} of {{caseYear}}",
+                      "style": "header"
+                    },
+                    {
+                      "text": "In the matter of: {{caseNumber}}",
+                      "style": "header"
+                    },
+                    {
+                      "text": "ORDER",
+                      "style": "orderTitle"
+                    },
+                    {
+                      "text": "Referral to Alternative Dispute Resolution (ADR)",
+                      "style": "date"
+                    },
+                    {
+                      "text": "{{date}}",
+                      "style": "date"
+                    },
+                    {
+                      "text": "This matter comes before the Court regarding the referral of the parties to Alternative Dispute Resolution (ADR) in an effort to facilitate the resolution of the underlying dispute.",
+                      "style": "contentText"
+                    },
+                    {
+                        "text": "After careful consideration of the nature of the case, the issues in contention, and the potential benefits of ADR, the Court finds it appropriate to encourage the parties to explore avenues for resolving their dispute outside of traditional litigation.",
+                        "style": "contentText"
+                    },
+                    {
+                        "text": "The Court recognizes the advantages of ADR in promoting efficiency, cost-effectiveness, and the preservation of relationships between the parties. Moreover, ADR can often lead to outcomes that are mutually satisfactory and tailored to the specific needs of the parties involved.",
+                        "style": "contentText"
+                    },
+                    {
+                        "text": "Accordingly, it is hereby ORDERED that:",
+                        "style": "contentText"
+                    },
+                    {
+                        "text": "The parties are REFERRED to Alternative Dispute Resolution (ADR) proceedings, including but not limited to {{modeOfAdr}}, to attempt to resolve their dispute amicably.",
+                        "style": "contentText"
+                    },
+                    {
+                        "text": "The parties shall engage in good faith negotiations and cooperate fully with the appointed mediator, arbitrator, or other ADR facilitator.",
+                        "style": "contentText"
+                    },
+                    {
+                      "text": "The Court shall retain jurisdiction over the matter pending the outcome of the ADR process.",
+                      "style": "contentText"
+                    },
+                    {
+                        "text": "{{additionalComments}}",
+                        "style": "contentText"
+                    },
+                    {
+                        "text": "IT IS SO ORDERED.",
+                        "style": "orderText"
+                    },
+                    {
+                      "text": "{{judgeSignature}}",
+                      "style": "signature"
+                    },
+                    {
+                      "text": "{{judgeName}}",
+                      "style": "signature"
+                    },
+                    {
+                      "text": "Judge, District Court of {{courtName}}",
+                      "style": "signature"
+                    }
+                  ],
+                  "alignment": "left",
+                  "margin": [0, 20, 0, 20]
+                }
+              ]
+            ]
+          },
+          "layout": "noBorders"
+        }
+      ],
+      "styles": {
+        "header": {
+          "fontSize": 14,
+          "bold": true,
+          "alignment": "center",
+          "margin": [0, 0, 0, 5]
+        },
+        "caseName": {
+          "fontSize": 14,
+          "alignment": "center",
+          "margin": [0, 5, 0, 5]
+        },
+        "caseNumber": {
+          "fontSize": 14,
+          "alignment": "center",
+          "margin": [0, 5, 0, 5]
+        },
+        "orderTitle": {
+          "fontSize": 16,
+          "bold": true,
+          "alignment": "center",
+          "margin": [0, 5, 0, 5]
+        },
+        "orderName": {
+          "fontSize": 14,
+          "bold": true,
+          "alignment": "center",
+          "margin": [0, 5, 0, 20]
+        },
+        "date": {
+          "fontSize": 12,
+          "alignment": "left",
+          "margin": [0, 10, 0, 10]
+        },
+        "contentText": {
+          "fontSize": 11,
+          "alignment": "left",
+          "margin": [0, 10, 0, 10]
+        },
+        "orderText": {
+          "fontSize": 12,
+          "bold": true,
+          "alignment": "left",
+          "margin": [0, 10, 0, 20]
+        },
+        "signature": {
+          "fontSize": 12,
+          "alignment": "left",
+          "margin": [0, 10, 0, 0]
+        },
+        "tableData": {
+          "bold": true,
+          "fontSize": 10,
+          "color": "black"
+        }
+      }
+    }
+  }
+  

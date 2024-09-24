@@ -4,7 +4,7 @@
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$.Data.*",
-    "entityIdPath":"$.id",
+    "entityIdPath": "$.id",
     "isCommonTableBorderRequired": true,
     "mappings": [
       {
@@ -100,6 +100,12 @@
                 "variable": "Year",
                 "value": {
                   "path": "$.Year"
+                }
+              },
+              {
+                "variable": "day",
+                "value": {
+                  "path": "$.day"
                 }
               },
               {

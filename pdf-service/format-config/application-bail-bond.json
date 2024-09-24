@@ -22,7 +22,7 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "APPLICATION FOR BAIL - Bail bond",
+                    "text": "{{applicationTitle}}",
                     "style": "applicationTitle"
                   },
                   {
@@ -42,7 +42,7 @@
                     "style": "date"
                   },
                   {
-                    "text": "Subject: Application for Bail - Bail bond",
+                    "text": "Subject: {{subjectText}}",
                     "style": "subjectText"
                   },
                   {
@@ -50,42 +50,44 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Brief Summary of the Circumstances Leading to the Bail Application: The applicant has been accused under {{statuteAndAct}}.",
-                    "style": "bodyText"
+                    "text": "1. Brief Summary of the Circumstances Leading to the Bail Application:",
+                    "style": "boldText"
                   },
                   {
-                    "text": "List of Attached Documents:",
-                    "style": "bodyText"
-                  },
-                  "{{#documentNameList}}",
-                  {
-                    "table": {
-                      "widths": [150, "*"],
-                      "body": [
-                        {
-                          "text": "{{documentName}}",
-                          "style": "tableData"
-                        }
-                      ],
-                      "border": [true, true, true, true]
-                    }
+                    "text": "The applicant has been accused under {{statuteAndAct}}.",
+                    "style": "listBodyText"
                   },
                   {
-                    "text": "",
-                    "margin": [0, 0, 0, 20]
+                    "text": "2. List of Attached Documents:",
+                    "style": "boldText"
                   },
-                  "{{/documentNameList}}",
                   {
                     "text": "The following documents are attached in support of this bail application:",
-                    "style": "bodyText"
+                    "style": "listBodyText"
+                  },
+                  {
+                    "ul": [
+                      "{{#documentList}}",
+                      {
+                        "text": "{{documentType}}",
+                        "style": "bodyText"
+                      },
+                      "{{/documentList}}"
+                    ],
+                    "style": "list"
                   },
                   {
                     "text": "The applicant believes that the grant of bail is justified in this case for the following reasons:",
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{reasonForApplication}}",
-                    "style": "bodyText"
+                    "ul": [
+                      {
+                        "text": "{{reasonForApplication}}",
+                        "style": "reasonForApplication"
+                      }
+                    ],
+                    "style": "list"
                   },
                   {
                     "text": "The applicant assures and undertakes to the Hon'ble Court that this request is made in good faith and that the applicant will abide by all conditions imposed by the Court. The applicant also undertakes to appear before the Court as and when required.",
@@ -146,7 +148,7 @@
       "applicationTitle": {
         "fontSize": 15,
         "bold": true,
-        "alignment": "center",
+        "alignment": "left",
         "margin": [0, 20, 0, 10]
       },
       "subTitle": {
@@ -169,6 +171,14 @@
         "fontSize": 11,
         "margin": [0, 10, 0, 10]
       },
+      "listBodyText": {
+        "fontSize": 11,
+        "margin": [25, 10, 0, 10]
+      },
+      "reasonForApplication": {
+        "fontSize": 11,
+        "margin": [0, 15, 0, 10]
+      },
       "additionalComments": {
         "fontSize": 11,
         "margin": [0, 10, 0, 10]
@@ -187,6 +197,18 @@
         "bold": true,
         "fontSize": 10,
         "color": "black"
+      },
+      "boldText": {
+        "fontSize": 11,
+        "bold": true,
+        "margin": [15, 10, 0, 5]
+      },
+      "list": {
+        "margin": [35, 0, 0, 5]
+      },
+      "listItem": {
+        "fontSize": 11,
+        "margin": [0, 5, 0, 5]
       }
     }
   }

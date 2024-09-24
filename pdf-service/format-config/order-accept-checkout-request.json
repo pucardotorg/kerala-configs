@@ -10,7 +10,7 @@
               {
                 "stack": [
                   {
-                    "text": "In the Court of {{courtName}}",
+                    "text": "IN THE {{courtName}}",
                     "style": "header"
                   },
                   {
@@ -49,10 +49,12 @@
                     "text": "The hearing date in the above-captioned case scheduled for {{originalHearingDate}} is hereby due to be RESCHEDULED.",
                     "style": "contentText"
                   },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "contentText"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "IT IS SO ORDERED.",
                     "style": "orderText"
@@ -103,7 +105,7 @@
       "orderTitle": {
         "fontSize": 16,
         "bold": true,
-        "alignment": "center",
+        "alignment": "left",
         "margin": [0, 5, 0, 5]
       },
       "orderName": {

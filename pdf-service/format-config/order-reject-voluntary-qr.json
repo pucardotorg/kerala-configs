@@ -1,5 +1,5 @@
 {
-  "key": "order-reject-voluntary",
+  "key": "order-reject-voluntary-qr",
   "config": {
     "content": [
       {
@@ -18,12 +18,16 @@
                     "style": "header"
                   },
                   {
-                    "text": "In the matter of: {{caseNumber}}",
+                    "text": "In the matter of: {{caseName}}",
                     "style": "header"
                   },
                   {
-                    "text": "Rejection of Submission",
+                    "text": "ORDER",
                     "style": "orderTitle"
+                  },
+                  {
+                    "text": "Rejection of Submission",
+                    "style": "date"
                   },
                   {
                     "text": "{{date}}",
@@ -53,10 +57,12 @@
                     "text": "IT IS SO ORDERED.",
                     "style": "orderText"
                   },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "contentText"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "{{judgeSignature}}",
                     "style": "signature"

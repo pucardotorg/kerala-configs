@@ -1,0 +1,193 @@
+{
+  "key": "order-202-crpc",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "In the Court of {{courtName}}, {{courtPlace}}, {{state}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "ORDER",
+                    "style": "orderTitle"
+                  },
+                  {
+                    "text": "This matter comes before the Court upon the application of the complainant, {{complainantName}}, under Section 202 of the Code of Criminal Procedure, seeking an inquiry by the police into the alleged commission of an offense by the respondent, {{respondentName}}.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The Court, having considered the application and the material placed before it, is of the opinion that a prima facie case exists against the respondent. Therefore, in exercise of the powers conferred upon it under Section 202 of the Code of Criminal Procedure, the Court directs the police to conduct an inquiry into the matter.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The police are hereby directed to:",
+                    "style": "contentText"
+                  },
+                  {
+                    "ol": [
+                      {
+                        "text": "Register an FIR under Section {{section}} of the Indian Penal Code (IPC) or any other relevant provision of law",
+                        "style": "contentText"
+                      },
+                      {
+                        "text": "Conduct a thorough investigation into the allegations made by the complainant.",
+                        "style": "contentText"
+                      },
+                      {
+                        "text": "Submit a report to the Court within {{numberOfDays}} days from the date of receipt of this order, detailing the findings of the inquiry and the steps taken by the police.",
+                        "style": "contentText"
+                      }
+                    ],
+                    "style": "list"
+                  },
+                  {
+                    "text": "The police are further directed to:",
+                    "style": "contentText"
+                  },
+                  {
+                    "ol": [
+                      {
+                        "text": "Serve a copy of this order upon the respondent.",
+                        "style": "contentText"
+                      },
+                      {
+                        "text": "Inform the respondent of the allegations made against them and their right to be heard.",
+                        "style": "contentText"
+                      },
+                      {
+                        "text": "Record the statement of the respondent, if they so desire, and include it in the inquiry report.",
+                        "style": "contentText"
+                      }
+                    ],
+                    "style": "list"
+                  },
+                  {
+                    "text": "The police shall conduct the inquiry in a fair and impartial manner and shall not be influenced by any extraneous considerations.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "This order shall be communicated to the police by the Court, and the police shall act upon it expeditiously.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "Given under my hand and the seal of this Court on this {{day}} day of {{month}}, {{year}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "IT IS SO ORDERED.",
+                    "style": "orderText"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Judge, District Court of {{courtName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{courtSeal}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "caseName": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "caseNumber": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderTitle": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderName": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 20]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "contentText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "ponitwiseText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [15, 0, 0, 5]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [0, 10, 0, 20]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 0]
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
+      },
+      "list": {
+        "margin": [20, 10, 0, 10]
+      },
+      "listItem": {
+        "fontSize": 11,
+        "margin": [0, 5, 0, 5]
+      }
+    }
+  }
+}

@@ -85,6 +85,12 @@
                 }
               },
               {
+                "variable": "day",
+                "value": {
+                  "path": "$.day"
+                }
+              },
+              {
                 "variable": "judgeSignature",
                 "value": {
                   "path": "$.judgeSignature"

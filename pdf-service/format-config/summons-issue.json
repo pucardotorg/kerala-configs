@@ -4,9 +4,7 @@
     "content": [
       {
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -20,7 +18,7 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "In the matter of: {{caseName}}",
+                    "text": "In the matter of: {{caseNumber}}",
                     "style": "subHeader"
                   },
                   {
@@ -59,10 +57,12 @@
                     ],
                     "style": "listText"
                   },
+                  "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
                     "style": "additionalComments"
                   },
+                  "{{/additionalComments}}",
                   {
                     "text": "IT IS SO ORDERED.",
                     "style": "orderText"
@@ -85,12 +85,7 @@
                   }
                 ],
                 "alignment": "left",
-                "margin": [
-                  0,
-                  20,
-                  0,
-                  20
-                ]
+                "margin": [0, 20, 0, 20]
               }
             ]
           ]
@@ -103,101 +98,51 @@
         "fontSize": 14,
         "bold": true,
         "alignment": "center",
-        "margin": [
-          0,
-          0,
-          0,
-          0
-        ]
+        "margin": [0, 0, 0, 0]
       },
       "subHeader": {
         "fontSize": 14,
         "bold": true,
         "alignment": "center",
-        "margin": [
-          0,
-          0,
-          0,
-          0
-        ]
+        "margin": [0, 0, 0, 0]
       },
       "orderTitle": {
         "fontSize": 15,
         "bold": true,
         "alignment": "center",
-        "margin": [
-          0,
-          20,
-          0,
-          10
-        ]
+        "margin": [0, 20, 0, 10]
       },
       "subTitle": {
         "fontSize": 12,
         "bold": true,
-        "margin": [
-          0,
-          10,
-          0,
-          0
-        ]
+        "margin": [0, 10, 0, 0]
       },
       "date": {
         "fontSize": 12,
         "alignment": "left",
         "bold": true,
-        "margin": [
-          0,
-          0,
-          0,
-          10
-        ]
+        "margin": [0, 0, 0, 10]
       },
       "bodyText": {
         "fontSize": 11,
-        "margin": [
-          0,
-          10,
-          0,
-          10
-        ]
+        "margin": [0, 10, 0, 10]
       },
       "orderText": {
         "fontSize": 12,
-        "margin": [
-          0,
-          10,
-          0,
-          10
-        ]
+        "margin": [0, 10, 0, 10]
       },
       "listText": {
         "fontSize": 11,
-        "margin": [
-          0,
-          5,
-          0,
-          5
-        ]
+        "margin": [0, 5, 0, 5]
       },
       "additionalComments": {
         "fontSize": 11,
-        "margin": [
-          0,
-          10,
-          0,
-          10
-        ]
+        "margin": [0, 10, 0, 10]
       },
       "signature": {
         "fontSize": 12,
         "alignment": "left",
-        "margin": [
-          0,
-          0,
-          0,
-          0
-        ]
+        "margin": [0, 0, 0, 0]
       }
     }
   }

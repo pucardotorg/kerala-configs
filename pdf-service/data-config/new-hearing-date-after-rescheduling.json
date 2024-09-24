@@ -37,6 +37,12 @@
                 }
               },
               {
+                "variable": "originalHearingDate",
+                "value": {
+                  "path": "$.originalHearingDate"
+                }
+              },
+              {
                 "variable": "newHearingDate",
                 "value": {
                   "path": "$.newHearingDate"

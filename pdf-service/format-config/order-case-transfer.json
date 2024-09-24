@@ -1,0 +1,147 @@
+{
+  "key": "order-case-transfer",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "In the Court of {{courtName}}, {{place}}, {{state}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In the matter of: {{caseNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "ORDER",
+                    "style": "orderTitle"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "This matter comes before the Court on the Motion (or Application) {{applicationId}} for Transfer filed by {{partyName}}, seeking to transfer the above-captioned case to {{specifyCourtOrJurisdiction}}.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Applicant has filed a Motion (or Application) for Transfer, citing {{groundsForTransfer}};",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has considered the Motion (or Application) and any accompanying arguments or evidence;",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The Motion (or Application) for Transfer filed by {{partyName}} is {{grantStatus}}. The above-captioned case is hereby TRANSFERRED to {{specifyCourtOrJurisdiction}}.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{reasonForRejection}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "IT IS SO ORDERED.",
+                    "style": "orderText"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Judge, District Court of {{courtName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{courtSeal}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "caseName": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "caseNumber": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderTitle": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderName": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 20]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "contentText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [0, 10, 0, 20]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 0]
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
+      }
+    }
+  }
+}

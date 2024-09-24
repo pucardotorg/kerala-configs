@@ -130,7 +130,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: APPLICATION
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.applicationNumber
       auditAttributeBasePath: $
@@ -149,7 +149,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: APPLICATION
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.applicationNumber
       auditAttributeBasePath: $
