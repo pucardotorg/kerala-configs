@@ -26,6 +26,8 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.caseDescription
               - inJsonPath: $.filingNumber
                 outJsonPath: $.Data.caseDetails.filingNumber
+              - inJsonPath: $.caseType
+                outJsonPath: $.Data.caseDetails.caseType
               - inJsonPath: $.courtCaseNumber
                 outJsonPath: $.Data.caseDetails.courtCaseNumber
               - inJsonPath: $.cnrNumber
@@ -143,6 +145,8 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.caseDescription
               - inJsonPath: $.filingNumber
                 outJsonPath: $.Data.caseDetails.filingNumber
+              - inJsonPath: $.caseType
+                outJsonPath: $.Data.caseDetails.caseType
               - inJsonPath: $.courtCaseNumber
                 outJsonPath: $.Data.caseDetails.courtCaseNumber
               - inJsonPath: $.cnrNumber
