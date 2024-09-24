@@ -1,0 +1,469 @@
+{
+  "key": "order-judgment",
+  "config": {
+    "pageSize": "A4",
+    "defaultStyle": {
+      "font": "Cambay"
+    },
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "IN THE COURT OF {{courtName}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "subheader"
+                  },
+                  {
+                    "text": "{{judgeDesignation}}",
+                    "style": "subheader"
+                  },
+                  {
+                    "text": "{{judgementDate}}",
+                    "style": "subheader"
+                  },
+                  {
+                    "text": "{{caseNumber}}",
+                    "style": "subheader"
+                  },
+                  {
+                    "table": {
+                      "widths": [150, "*"],
+                      "body": [
+                        [
+                          {
+                            "text": "Complainant",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{complaintName}}, aged {{complaintAge}}, {{complaintAddress}}, {{complaintAdvocate}}",
+                            "style": "tableData"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Accused",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{respondantName}}, aged {{respondantAge}}, s/o {{fatherName}}, {{respondantAddress}}, {{respondantAdvocate}}",
+                            "style": "tableData"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Offence",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{sectionAct}}",
+                            "style": "tableData"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Plea",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{plea}}",
+                            "style": "tableData"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Finding",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{finding}}",
+                            "style": "tableData"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Sentence/Order",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{sentence}}",
+                            "style": "tableData"
+                          }
+                        ]
+                      ],
+                      "border": [true, true, true, true]
+                    }
+                  },
+                  {
+                    "text": "DESCRIPTION OF ACCUSED",
+                    "style": "tableHeader"
+                  },
+                  {
+                    "table": {
+                      "widths": ["*", "*", 50, "*", "*"],
+                      "body": [
+                        [
+                          {
+                            "text": "Name of accused",
+                            "style": "tableHeader"
+                          },
+                          {
+                            "text": "Father's Name",
+                            "style": "tableHeader"
+                          },
+                          {
+                            "text": "Age",
+                            "style": "tableHeader"
+                          },
+                          {
+                            "text": "Village",
+                            "style": "tableHeader"
+                          },
+                          {
+                            "text": "Taluk",
+                            "style": "tableHeader"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "{{accusedName}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{fathersName}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{age}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{village}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{taluk}}",
+                            "style": "tableData"
+                          }
+                        ]
+                      ],
+                      "border": [true, true, true, true]
+                    }
+                  },
+                  {
+                    "text": "DATES OF CC :3046/15, CC 3047/15 and CC 3048/15",
+                    "style": "tableHeader"
+                  },
+                  {
+                    "table": {
+                      "widths": [
+                        "auto",
+                        "12%",
+                        "12%",
+                        "12%",
+                        "12%",
+                        "14%",
+                        "14%",
+                        "14%"
+                      ],
+                      "body": [
+                        [
+                          {
+                            "text": "Case No",
+                            "style": "tableHeader"
+                          },
+                          {
+                            "text": "Occurrence",
+                            "style": "tableHeader"
+                          },
+                          {
+                            "text": "Complaint",
+                            "style": "tableHeader"
+                          },
+                          {
+                            "text": "Apprehension",
+                            "style": "tableHeader"
+                          },
+                          {
+                            "text": "Release on Bail",
+                            "style": "tableHeader"
+                          },
+                          {
+                            "text": "Commencement of Trial",
+                            "style": "tableHeader"
+                          },
+                          {
+                            "text": "Close of Trial",
+                            "style": "tableHeader"
+                          },
+                          {
+                            "text": "Sentence or Order",
+                            "style": "tableHeader"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "{{caseNo}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{occurrenceDate}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{complaintDate}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{apprehensionDate}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{releaseDate}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{trialCommencementDate}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{closeOfTrialDate}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{sentenceOrder}}",
+                            "style": "tableData"
+                          }
+                        ]
+                      ],
+                      "border": [true, true, true, true]
+                    }
+                  },
+                  {
+                    "text": "Judgement",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{contents}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeDesignation}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "APPENDIX",
+                    "style": "date",
+                    "pageBreak": "before"
+                  },
+                  {
+                    "text": "Witnesses for Complainant: ",
+                    "style": "date"
+                  },
+                  {
+                    "table": {
+                      "widths": [150, "*"],
+                      "body": [
+                        [
+                          {
+                            "text": "PW{{complainantWitnessIndex}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{complainantWitnessContent}}",
+                            "style": "tableData"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "PW{{complainantWitnessIndex}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{complainantWitnessContent}}",
+                            "style": "tableData"
+                          }
+                        ]
+                      ],
+                      "border": [true, true, true, true]
+                    }
+                  },
+                  {
+                    "text": "Exhibits for Complainant: ",
+                    "style": "date"
+                  },
+                  {
+                    "table": {
+                      "widths": [150, "*"],
+                      "body": [
+                        [
+                          {
+                            "text": "PW{{exhibitsComplainantIndex}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{exhibitsComplainantContent}}",
+                            "style": "tableData"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "PW{{exhibitsComplainantIndex}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{exhibitsComplainantContent}}",
+                            "style": "tableData"
+                          }
+                        ]
+                      ],
+                      "border": [true, true, true, true]
+                    }
+                  },
+                  {
+                    "text": "Witness for Defence : ",
+                    "style": "date"
+                  },
+                  {
+                    "table": {
+                      "widths": [150, "*"],
+                      "body": [
+                        [
+                          {
+                            "text": "PW{{defenceWitnessIndex}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{defenceWitnessContent}}",
+                            "style": "tableData"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "PW{{defenceWitnessIndex}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{defenceWitnessContent}}",
+                            "style": "tableData"
+                          }
+                        ]
+                      ],
+                      "border": [true, true, true, true]
+                    }
+                  },
+                  {
+                    "text": "Exhibits for Defence : ",
+                    "style": "date"
+                  },
+                  {
+                    "table": {
+                      "widths": [150, "*"],
+                      "body": [
+                        [
+                          {
+                            "text": "PW{{exhibitsDefenceIndex}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{exhibitsDefenceContent}}",
+                            "style": "tableData"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "PW{{exhibitsDefenceIndex}}",
+                            "style": "tableData"
+                          },
+                          {
+                            "text": "{{exhibitsDefenceContent}}",
+                            "style": "tableData"
+                          }
+                        ]
+                      ],
+                      "border": [true, true, true, true]
+                    }
+                  },
+                  {
+                    "text": "{{judgeDesignation}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 20, 0, 5]
+      },
+      "date": {
+        "bold": true,
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "subheader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 10, 0, 5]
+      },
+      "sectionHeader": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 10, 0, 5]
+      },
+      "subsectionHeader": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 5]
+      },
+      "tableHeader": {
+        "bold": true,
+        "fontSize": 11,
+        "color": "black",
+        "alignment": "center",
+        "margin": [0, 20, 0, 15]
+      },
+      "tableData": {
+        "bold": false,
+        "fontSize": 10,
+        "color": "black"
+      },
+      "default": {
+        "fontSize": 10,
+        "margin": [0, 5, 0, 5]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 10, 0, 0]
+      }
+    }
+  }
+}
