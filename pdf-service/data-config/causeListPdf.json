@@ -36,7 +36,7 @@
               {
                 "variable": "courtId",
                 "value": {
-                  "path": "$[0].CauseList[0].courtId"
+                  "path": "$[0].courtId"
                 },
                 "type": "string"
               },
