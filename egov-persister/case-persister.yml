@@ -12,7 +12,7 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: cases
       queryMaps:
-        - query: INSERT INTO dristi_cases(id, tenantid, resolutionmechanism, casetitle, casedescription, filingnumber, casetype, casenumber,cnrnumber,courtcasenumber, accesscode, isactive, courtid, benchid, judgeid, filingdate,judgementdate, registrationdate, casecategory, natureofpleading, status, remarks, casedetails, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_cases(id, tenantid, resolutionmechanism, casetitle, casedescription, filingnumber, cmpNumber,casetype, casenumber,cnrnumber,courtcasenumber, accesscode, isactive, courtid, benchid, judgeid, filingdate,judgementdate, registrationdate, casecategory, natureofpleading, status, remarks, casedetails, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: cases
           jsonMaps:
             - jsonPath: $.cases.id
@@ -21,6 +21,7 @@ serviceMaps:
             - jsonPath: $.cases.caseTitle
             - jsonPath: $.cases.caseDescription
             - jsonPath: $.cases.filingNumber
+            - jsonPath: $.cases.cmpNumber
             - jsonPath: $.cases.caseType
             - jsonPath: $.cases.caseNumber
             - jsonPath: $.cases.cnrNumber
