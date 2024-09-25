@@ -194,7 +194,7 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: cases
       queryMaps:
-        - query: UPDATE dristi_cases SET tenantid=?,resolutionmechanism=?,casetitle=?,casedescription=?,filingnumber=?,casetype=?,casenumber=?,cnrnumber=?,courtcasenumber=?,accesscode=?,isactive=?,courtid=?,benchid=?,judgeid=?,filingdate=?,judgementdate=?,registrationdate=?,casecategory=?,natureofpleading=?,status=?,remarks=?,casedetails=?,additionaldetails=?,lastmodifiedby=?,lastModifiedtime=? WHERE id=?;
+        - query: UPDATE dristi_cases SET tenantid=?,resolutionmechanism=?,casetitle=?,casedescription=?,filingnumber=?,casetype=?,casenumber=?,cnrnumber=?, cmpNumber=?,courtcasenumber=?,accesscode=?,isactive=?,courtid=?,benchid=?,judgeid=?,filingdate=?,judgementdate=?,registrationdate=?,casecategory=?,natureofpleading=?,status=?,remarks=?,casedetails=?,additionaldetails=?,lastmodifiedby=?,lastModifiedtime=? WHERE id=?;
           basePath: cases
           jsonMaps:
             - jsonPath: $.cases.tenantId
@@ -205,6 +205,7 @@ serviceMaps:
             - jsonPath: $.cases.caseType
             - jsonPath: $.cases.caseNumber
             - jsonPath: $.cases.cnrNumber
+            - jsonPath: $.cases.cmpNumber
             - jsonPath: $.cases.courtCaseNumber
             - jsonPath: $.cases.accessCode
             - jsonPath: $.cases.isActive
