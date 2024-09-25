@@ -92,6 +92,8 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.reasonForApplication
               - inJsonPath: $.caseId
                 outJsonPath: $.Data.applicationDetails.caseId
+              - inJsonPath: $.cmpNumber
+                outJsonPath: $.Data.applicationDetails.cmpNumber
               - inJsonPath: $.filingNumber
                 outJsonPath: $.Data.applicationDetails.filingNumber
               - inJsonPath: $.cnrNumber
