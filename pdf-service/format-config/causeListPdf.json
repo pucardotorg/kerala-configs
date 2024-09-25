@@ -209,14 +209,29 @@
                 "stack": [
                   {
                     "text": "",
-                    "{{#advocateNames}}": true
+                    "{{#complainantAdvocates}}": true
                   },
                   {
                     "text": "{{.}}"
                   },
                   {
                     "text": "",
-                    "{{/advocateNames}}": true
+                    "{{/complainantAdvocates}}": true
+                  },
+                  {
+                    "text": " ",
+                    "margin": [0,0, 0, 5]
+                  },
+                  {
+                    "text": "",
+                    "{{#respondentAdvocates}}": true
+                  },
+                  {
+                    "text": "{{.}}"
+                  },
+                  {
+                    "text": "",
+                    "{{/respondentAdvocates}}": true
                   }
                 ],
                 "style": "table-data",
