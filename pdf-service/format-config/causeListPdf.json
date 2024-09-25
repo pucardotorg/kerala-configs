@@ -196,7 +196,7 @@
                 "alignment": "center"
               },
               {
-                "text": "{{caseType}}/{{caseNumber}}/2024",
+                "text": "{{#caseNumber}}{{caseNumber}}{{/caseNumber}}{{^caseNumber}}{{cmpNumber}}{{/caseNumber}}",
                 "style": "table-data",
                 "alignment": "center"
               },
