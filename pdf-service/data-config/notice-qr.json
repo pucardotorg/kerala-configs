@@ -1,0 +1,98 @@
+{
+  "key": "notice-qr",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.summonsPdf",
+    "entityIdPath": "$.cnrNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "cnrNumber",
+                "value": {
+                  "path": "$.cnrNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "respondentName",
+                "value": {
+                  "path": "$.respondentName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.complainantName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "complainantAddress",
+                "value": {
+                  "path": "$.complainantAddress",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "hearingDate",
+                "value": {
+                  "path": "$.hearingDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "issueDate",
+                "value": {
+                  "path": "$.issueDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "qrCodeUrl",
+                "value": {
+                  "path": "$.embeddedUrl"
+                }
+              }
+            ]
+          },
+          {
+            "qrcodeConfig": [
+              {
+                "variable": "qrCodeImage",
+                "value": "{{qrCodeUrl}}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
