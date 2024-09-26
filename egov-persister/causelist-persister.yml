@@ -7,23 +7,45 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       queryMaps:
-        - query: INSERT INTO cause_list (court_id, judge_id, tenant_id, case_id, case_title, litigant_names, hearing_type, tentative_slot, case_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO cause_list (tenant_id, hearing_id, filing_number, application_number, hearing_type, start_time, end_time, case_id, case_type, case_title, case_registration_date, case_number, cmp_number, court_id, judge_id, advocate_names, slot, hearing_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: CauseList.*
           jsonMaps:
+            - jsonPath: $.CauseList.*.tenantId
+
+            - jsonPath: $.CauseList.*.hearingId
+
+            - jsonPath: $.CauseList.*.filingNumber
+
+            - jsonPath: $.CauseList.*.applicationNumber
+              type: json
+              dbType: jsonb
+
+            - jsonPath: $.CauseList.*.hearingType
+
+            - jsonPath: $.CauseList.*.startTime
+
+            - jsonPath: $.CauseList.*.endTime
+
+            - jsonPath: $.CauseList.*.caseId
+
+            - jsonPath: $.CauseList.*.caseType
+
+            - jsonPath: $.CauseList.*.caseTitle
+
+            - jsonPath: $.CauseList.*.caseRegistrationDate
+
+            - jsonPath: $.CauseList.*.caseNumber
+
+            - jsonPath: $.CauseList.*.cmpNumber
+
             - jsonPath: $.CauseList.*.courtId
 
             - jsonPath: $.CauseList.*.judgeId
 
-            - jsonPath: $.CauseList.*.tenantId
+            - jsonPath: $.CauseList.*.advocateNames
+              type: json
+              dbType: jsonb
 
-            - jsonPath: $.CauseList.*.caseId
+            - jsonPath: $.CauseList.*.slot
 
-            - jsonPath: $.CauseList.*.caseTitle
-
-            - jsonPath: $.CauseList.*.litigantNames
-
-            - jsonPath: $.CauseList.*.typeOfHearing
-
-            - jsonPath: $.CauseList.*.tentativeSlot
-
-            - jsonPath: $.CauseList.*.caseDate
+            - jsonPath: $.CauseList.*.hearingDate
