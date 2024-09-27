@@ -94,6 +94,7 @@
             "qrcodeConfig": [
               {
                 "variable": "qrCodeImage",
+                "url": true,
                 "value": "{{qrCodeUrl}}"
               }
             ]
