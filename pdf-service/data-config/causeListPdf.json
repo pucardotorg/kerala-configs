@@ -1,0 +1,72 @@
+{
+  "key": "causelist-format",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.SlotList",
+    "entityIdPath": "$.*.slotName",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$[0].judgeName"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "designation",
+                "value": {
+                  "path": "$[0].judgeDesignation"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$[0].CauseList[0].hearingDate"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "courtId",
+                "value": {
+                  "path": "$[0].courtId"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "SlotList",
+                "value": {
+                  "path": "$"
+                },
+                "type": "index",
+                "format": "var i = 0; var j = 0; for (i = 0; i < type.length; i++) { for (j = 0; j < type[i]['CauseList'].length; j++) { type[i]['CauseList'][j]['index'] = j + 1; } } return type;"
+              },
+              {
+                "variable": "nationalEmblem",
+                "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
+                "type": "image"
+              },
+              {
+                "variable": "DistrictCourtImage",
+                "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
+                "type": "image"
+              },
+              {
+                "variable": "onCourtsLogo",
+                "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
+                "type": "image"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
