@@ -109,7 +109,7 @@
       },
       {
         "text": "",
-        "{{#SlotList}}": true
+        "{{#HearingList}}": true
       },
       {
         "table": {
@@ -152,7 +152,20 @@
                 },
                 "layout": "noBorders"
               }
-            ],
+            ]
+          ]
+        }
+      },
+      {
+        "text": "",
+        "{{#SlotList}}": true
+      },
+      {
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
             [
               {
                 "table": {
@@ -220,7 +233,12 @@
                   },
                   {
                     "text": " ",
-                    "margin": [0,0, 0, 5]
+                    "margin": [
+                      0,
+                      0,
+                      0,
+                      5
+                    ]
                   },
                   {
                     "text": "",
@@ -265,6 +283,10 @@
       {
         "text": "",
         "{{/SlotList}}": true
+      },
+      {
+        "text": "",
+        "{{/HearingList}}": true
       },
       {
         "text": "Disclaimer: This is a system-generated Causelist.",
