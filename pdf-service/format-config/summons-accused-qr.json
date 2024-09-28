@@ -295,7 +295,7 @@
             ],
             [
               {
-                "text": " Confirm your representation: You may hire a lawyer to represent yourself or appear as a party in person which means you represent yourself in court proceedings. Please visit Kerala Bar Council website (Link here) for a contact directory of lawyers.",
+                "text": " Confirm your representation: You may hire a lawyer to represent yourself or appear as a party in person which means you represent yourself in court proceedings. . Please visit Kerala Bar Council website https://www.barcouncilkerala.org/lawyer-registry-list for a contact directory of lawyers.",
                 "style": "annexure-content"
               }
             ],
@@ -395,7 +395,7 @@
         "color": "#484848",
         "margin": [
           -10,
-          10,
+          5,
           -5,
           -5
         ]
@@ -405,7 +405,7 @@
         "color": "#484848",
         "margin": [
           -10,
-          10,
+          5,
           -5,
           -5
         ]
@@ -414,16 +414,16 @@
         "color": "#484848",
         "fontSize": 11,
         "margin": [
-          10,
-          10,
-          10,
-          10
+          5,
+          5,
+          5,
+          5
         ]
       },
       "closing-text": {
         "margin": [
           0,
-          10,
+          5,
           0,
           0
         ],
@@ -434,7 +434,7 @@
       "closing-seal": {
         "margin": [
           0,
-          10,
+          5,
           0,
           0
         ],
@@ -445,7 +445,7 @@
       "closing-signature": {
         "margin": [
           0,
-          10,
+          5,
           0,
           0
         ],
@@ -457,16 +457,16 @@
         "color": "#484848",
         "fontSize": 11,
         "margin": [
-          10,
-          10,
-          10,
-          10
+          5,
+          5,
+          5,
+          5
         ]
       },
       "footer-text": {
         "margin": [
           0,
-          10,
+          5,
           0,
           0
         ]
@@ -474,7 +474,7 @@
       "footer-page": {
         "margin": [
           0,
-          10,
+          5,
           0,
           0
         ]
@@ -482,7 +482,7 @@
       "annexure-header": {
         "color": "#484848",
         "fontFamily": "Roboto",
-        "fontSize": 16,
+        "fontSize": 15,
         "bold": true,
         "letterSpacing": 0.5
       },
@@ -490,6 +490,7 @@
         "color": "#484848",
         "fontFamily": "Roboto",
         "fontSize": 13,
+        "bold": true,
         "letterSpacing": 0.6,
         "margin": [
           0,
@@ -499,7 +500,7 @@
         ]
       },
       "annexure-content": {
-        "fontSize": 12,
+        "fontSize": 11,
         "color": "#484848",
         "margin": [
           -15,

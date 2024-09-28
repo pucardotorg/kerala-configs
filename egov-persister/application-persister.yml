@@ -13,7 +13,7 @@ serviceMaps:
       auditAttributeBasePath: application
       queryMaps:
 
-        - query: INSERT INTO dristi_application(id, tenantId, application_details, reason_for_application, caseId, filingNumber, cnrNumber, referenceId, createdDate, applicationCreatedBy, onBehalfOf, applicationType, applicationNumber, statuteSection,issuedBy, status, comment, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_application(id, tenantId, application_details, reason_for_application, caseId, filingNumber, cmpNumber,cnrNumber, referenceId, createdDate, applicationCreatedBy, onBehalfOf, applicationType, applicationNumber, statuteSection,issuedBy, status, comment, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: application
           jsonMaps:
             - jsonPath: $.application.id
@@ -24,6 +24,7 @@ serviceMaps:
             - jsonPath: $.application.reasonForApplication
             - jsonPath: $.application.caseId
             - jsonPath: $.application.filingNumber
+            - jsonPath: $.application.cmpNumber
             - jsonPath: $.application.cnrNumber
             - jsonPath: $.application.referenceId
             - jsonPath: $.application.createdDate

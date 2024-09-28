@@ -11,7 +11,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: hearing
       queryMaps:
-        - query: INSERT INTO dristi_hearing(id,tenantId,hearingId,filingNumber,cnrNumbers,applicationNumbers,hearingType,status,startTime,endTime,presidedBy,attendees,transcript,vcLink,isActive,additionalDetails,notes,createdBy,lastModifiedBy,createdTime,lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_hearing(id,tenantId,hearingId,filingNumber,cnrNumbers,applicationNumbers,hearingType,caseReferenceNumber,courtCaseNumber,cmpNumber,status,startTime,endTime,presidedBy,attendees,transcript,vcLink,isActive,additionalDetails,notes,createdBy,lastModifiedBy,createdTime,lastModifiedTime) VALUES (?, ?, ?, ?,?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: hearing
           jsonMaps:
             - jsonPath: $.hearing.id
@@ -27,6 +27,9 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.hearing.hearingType
+            - jsonPath: $.hearing.caseReferenceNumber
+            - jsonPath: $.hearing.courtCaseNumber
+            - jsonPath: $.hearing.cmpNumber
             - jsonPath: $.hearing.status
             - jsonPath: $.hearing.startTime
             - jsonPath: $.hearing.endTime
