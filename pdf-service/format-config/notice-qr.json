@@ -1,5 +1,5 @@
 {
-  "key": "summons-accused",
+  "key": "notice-qr",
   "config": {
     "defaultStyle": {
       "font": "Cambay"
@@ -17,36 +17,26 @@
               {
                 "stack": [
                   {
-                    "text": "FORM NO.1",
+                    "text": "FORM NO. XX",
                     "style": "form-header"
+                  },
+                  {
+                    "text": "NOTICE TO ACCUSED",
+                    "style": "form-sub-header",
+                    "alignment": "center"
+                  },
+                  {
+                    "text": "(Under Sections 223, Bharatiya Nagarik Suraksha Sanhita, 2023)",
+                    "style": "form-sub-header",
+                    "alignment": "left"
                   },
                   {
                     "text": "IN {{courtName}}",
                     "style": "form-header"
                   },
                   {
-                    "text": "Summary Trial No. {{caseNumber}} of {{caseYear}}",
+                    "text": "Criminal Miscellaneous Petition No. {{caseNumber}} in {{caseYear}}",
                     "style": "form-header"
-                  },
-                  {
-                    "text": "SUMMONS TO AN ACCUSED PERSON",
-                    "style": "form-sub-header",
-                    "alignment": "left"
-                  },
-                  {
-                    "text": "{{caseName}}",
-                    "style": "form-sub-header",
-                    "alignment": "right"
-                  },
-                  {
-                    "text": "(See section 63)",
-                    "style": "form-sub-header",
-                    "alignment": "left"
-                  },
-                  {
-                    "text": "{{hearingDate}}",
-                    "style": "form-sub-header",
-                    "alignment": "right"
                   }
                 ],
                 "alignment": "center",
@@ -71,19 +61,25 @@
           "body": [
             [
               {
-                "text": "To {{respondentName}} ",
+                "text": "Between: ",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": "{{respondentAddress}}",
+                "text": "Petitioner: {{complainantName}} and Accused: {{respondentName}}",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": "WHEREAS your attendance is necessary to answer to a charge U/s. 138 of N.I ACT, you are hereby required to appear in person (or by pleader, as the case may be) before the (Magistrate) of {{judgeName}} on the {{hearingDate}}. Herein fail not.",
+                "text": "Please take notice that a complaint has been presented against you before this court by {{complainantName}} {{complainantAddress}},(name and address of the complainant alleging offence punishable under Section (s) 138 of the Negotiable Instruments Act, 1881",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "And that this court shall hear on the question of taking cognisance of the said offence on the {{hearingDate}} You are at liberty to show cause why this court should not take cognizance of the said complaint. ",
                 "style": "form-sub-body"
               }
             ]
@@ -143,6 +139,24 @@
           0,
           0
         ]
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code",
+                "alignment": "center"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
       },
       {
         "style": "footer-content",

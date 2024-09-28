@@ -14,7 +14,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}} of {{year}}",
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
                     "style": "header"
                   },
                   {
@@ -35,36 +35,36 @@
                   },
                   {
                     "text": "WHEREAS, the Court has determined that it is necessary to issue a notice of {{typeOfNotice}} to {{partyName}}; and",
-                    "style": "orderText"
+                    "style": "contentText"
                   },
                   {
                     "text": "WHEREAS, the Court has reviewed the relevant facts and circumstances necessitating the issuance of this notice; and",
-                    "style": "orderText"
+                    "style": "contentText"
                   },
                   {
                     "text": "WHEREAS, the Court has considered the relevant legal provisions regarding the issuance of notices;",
-                    "style": "orderText"
+                    "style": "contentText"
                   },
 
                   {
                     "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
-                    "style": "orderText"
+                    "style": "contentText"
                   },
                   {
                     "text": "A notice of {{typeOfNotice}} be issued to {{partyName}}, requiring their presence before this Court on {{hearingDate}}.",
-                    "style": "orderText"
+                    "style": "contentText"
                   },
                   {
                     "text": "The notice shall specify the purpose and details of the required action.",
-                    "style": "orderText"
+                    "style": "contentText"
                   },
                   {
                     "text": "The notice shall be served upon {{partyName}} in accordance with the legal requirements for service of process.",
-                    "style": "orderText"
+                    "style": "contentText"
                   },
                   {
                     "text": "{{additionalComments}}",
-                    "style": "orderText"
+                    "style": "contentText"
                   },
                   {
                     "text": "IT IS SO ORDERED.",
@@ -137,7 +137,6 @@
       },
       "orderText": {
         "fontSize": 12,
-        "bold": true,
         "alignment": "left",
         "margin": [0, 10, 0, 20]
       },

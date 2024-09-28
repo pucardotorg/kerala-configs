@@ -1,5 +1,5 @@
 {
-  "key": "summons-accused-qr",
+  "key": "notice-qr",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -27,23 +27,16 @@
                 }
               },
               {
-                "variable": "respondentAddress",
+                "variable": "complainantName",
                 "value": {
-                  "path": "$.respondentAddress",
+                  "path": "$.complainantName",
                   "defaultValue": "NA"
                 }
               },
               {
-                "variable": "caseName",
+                "variable": "complainantAddress",
                 "value": {
-                  "path": "$.caseName",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "judgeName",
-                "value": {
-                  "path": "$.judgeName",
+                  "path": "$.complainantAddress",
                   "defaultValue": "NA"
                 }
               },
@@ -104,4 +97,3 @@
     ]
   }
 }
-
