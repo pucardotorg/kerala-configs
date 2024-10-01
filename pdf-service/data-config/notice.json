@@ -20,6 +20,13 @@
                 }
               },
               {
+                "variable": "filingNumber",
+                "value": {
+                  "path": "$.filingNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
                 "variable": "respondentName",
                 "value": {
                   "path": "$.respondentName",

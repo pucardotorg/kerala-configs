@@ -17,10 +17,6 @@
               {
                 "stack": [
                   {
-                    "text": "FORM NO. XX",
-                    "style": "form-header"
-                  },
-                  {
                     "text": "NOTICE TO ACCUSED",
                     "style": "form-sub-header",
                     "alignment": "center"
@@ -28,15 +24,20 @@
                   {
                     "text": "(Under Sections 223, Bharatiya Nagarik Suraksha Sanhita, 2023)",
                     "style": "form-sub-header",
-                    "alignment": "left"
+                    "alignment": "center"
                   },
                   {
-                    "text": "IN {{courtName}}",
+                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE",
                     "style": "form-header"
                   },
                   {
                     "text": "Criminal Miscellaneous Petition No. {{caseNumber}} in {{caseYear}}",
                     "style": "form-header"
+                  },
+                  {
+                    "text": "E-Filing Number  {{filingNumber}}",
+                    "style": "form-sub-header",
+                    "alignment": "right"
                   }
                 ],
                 "alignment": "center",
@@ -102,7 +103,7 @@
           "body": [
             [
               {
-                "text": "Dated, this {{issueDate}}.",
+                "text": "Given under my hand and the seal of the Court, this {{issueDate}}.",
                 "style": "closing-text"
               }
             ],
@@ -234,6 +235,12 @@
               {
                 "text": "2. Understanding More About Cheque Bounce Cases",
                 "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "text": "This notice is merely to give you an opportunity of being heard even before a case is admitted, to enable to you share your version of the events with the presiding officer.",
+                "style": "annexure-content"
               }
             ],
             [
