@@ -116,6 +116,7 @@
           "widths": [
             "*"
           ],
+          "headerRows": 1,
           "body": [
             [
               {
@@ -165,6 +166,7 @@
           "widths": [
             "*"
           ],
+          "headerRows": 1,
           "body": [
             [
               {
@@ -201,6 +203,7 @@
             "20%",
             "30%"
           ],
+          "headerRows": 1,
           "body": [
             [
               {
