@@ -21,7 +21,7 @@
                     "style": "form-header"
                   },
                   {
-                    "text": "IN {{courtName}}",
+                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE {{judgeName}}",
                     "style": "form-header"
                   },
                   {
@@ -271,7 +271,7 @@
             ],
             [
               {
-                "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: XXXXXX. Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the <> tab on the Portal.",
+                "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: {{accessCode}}. Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the Complaint tab on the Portal.",
                 "style": "annexure-content"
               }
             ],
@@ -301,7 +301,7 @@
             ],
             [
               {
-                "text": " Join the Case: Log in to the Portal & enter the 6-digit code (XXXXXX) to access your case details.",
+                "text": " Join the Case: Log in to the Portal & enter the 6-digit code {{accessCode}} to access your case details.",
                 "style": "annexure-content"
               }
             ],

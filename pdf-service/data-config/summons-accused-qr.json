@@ -20,6 +20,13 @@
                 }
               },
               {
+                "variable": "accessCode",
+                "value": {
+                  "path": "$.cnrNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
                 "variable": "respondentName",
                 "value": {
                   "path": "$.respondentName",
