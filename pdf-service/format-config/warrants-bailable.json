@@ -21,8 +21,20 @@
                     "style": "document-title"
                   },
                   {
-                    "text": "(See section 70)",
+                    "text": "BAILABLE WARRANT",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "(See section 72)",
                     "style": "reference"
+                  },
+                  {
+                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE {{judgeName}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "Summary Trial No. {{caseNumber}} of {{caseYear}}",
+                    "style": "form-sub-header"
                   }
                 ],
                 "alignment": "center",
@@ -54,6 +66,98 @@
             [
               {
                 "text": "WHEREAS {{respondentName}} of {{respondentAddress}} stands charged with the offence of {{caseCharge}}, you are hereby directed to arrest the said , and to produce him before me. Herein fail not.",
+                "style": "form-sub-body"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [
+          0,
+          20,
+          0,
+          20
+        ]
+      },
+      {
+        "style": "footer-content",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Dated, this day of {{issueDate}}.",
+                "style": "footer-text"
+              }
+            ],
+            [
+              {
+                "text": "Seal of the Court",
+                "style": "footer-seal"
+              }
+            ],
+            [
+              {
+                "text": "Signature",
+                "style": "footer-signature"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [
+          0,
+          20,
+          0,
+          0
+        ]
+      },
+      {
+        "style": "tl-head",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "(See section 73)",
+                    "style": "reference"
+                  }
+                ],
+                "alignment": "center",
+                "margin": [
+                  0,
+                  20,
+                  0,
+                  20
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "form-body",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "This warrant may be endorsed as follows :-",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "If the said {{respondentName}} shall give bail himself in the sum of rupees {{bailableAmount}} with {{#oneSuretyAmount}}one surety in the sum of rupees {{oneSuretyAmount}} {{/oneSuretyAmount}} {{#twoSuretyAmount}}two sureties each in the sum of rupees {{twoSuretyAmount}}) {{/twoSuretyAmount}} to attend before me on {{hearingDate}} and to continue so to attend until otherwise directed by me, he may be released",
                 "style": "form-sub-body"
               }
             ]
