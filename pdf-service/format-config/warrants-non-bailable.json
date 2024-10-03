@@ -21,8 +21,20 @@
                     "style": "document-title"
                   },
                   {
-                    "text": "(See section 70)",
+                    "text": "NON-BAILABLE WARRANT",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "(See section 72)",
                     "style": "reference"
+                  },
+                  {
+                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE {{judgeName}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "Summary Trial No. {{caseNumber}} of {{caseYear}}",
+                    "style": "form-sub-header"
                   }
                 ],
                 "alignment": "center",
