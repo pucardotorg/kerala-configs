@@ -21,12 +21,12 @@
                     "style": "form-header"
                   },
                   {
-                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE {{judgeName}}",
-                    "style": "form-header"
+                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE OF {{judgeName}}",
+                    "style": "form-sub-header"
                   },
                   {
                     "text": "Summary Trial No. {{caseNumber}} of {{caseYear}}",
-                    "style": "form-header"
+                    "style": "form-sub-header"
                   },
                   {
                     "text": "SUMMONS TO AN ACCUSED PERSON",

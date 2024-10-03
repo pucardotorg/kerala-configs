@@ -31,7 +31,7 @@
                     "alignment": "left"
                   },
                   {
-                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE {{judgeName}}",
+                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE OF {{judgeName}}",
                     "style": "form-sub-header"
                   },
                   {
