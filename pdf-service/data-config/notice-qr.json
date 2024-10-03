@@ -20,6 +20,20 @@
                 }
               },
               {
+                "variable": "accessCode",
+                "value": {
+                  "path": "$.cnrNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
                 "variable": "filingNumber",
                 "value": {
                   "path": "$.filingNumber",
