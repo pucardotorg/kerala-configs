@@ -27,8 +27,8 @@
                     "alignment": "center"
                   },
                   {
-                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE {{judgeName}}",
-                    "style": "form-header"
+                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE OF {{judgeName}}",
+                    "style": "form-sub-header"
                   },
                   {
                     "text": "E-Filing Number  {{filingNumber}}",
