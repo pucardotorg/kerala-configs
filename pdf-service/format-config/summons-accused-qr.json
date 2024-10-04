@@ -34,7 +34,7 @@
                       "body": [
                         [
                           {
-                            "text": "SUMMONS TO AN ACCUSED PERSON",
+                            "text": "SUMMONS TO AN",
                             "style": "form-sub-header",
                             "alignment": "left"
                           },
@@ -47,6 +47,11 @@
                       ]
                     },
                     "layout": "noBorders"
+                  },
+                  {
+                    "text": "ACCUSED PERSON",
+                    "style": "form-sub-header",
+                    "alignment": "left"
                   },
                   {
                     "table": {
@@ -72,9 +77,9 @@
                 "alignment": "center",
                 "margin": [
                   0,
-                  20,
+                  10,
                   0,
-                  20
+                  10
                 ]
               }
             ]
@@ -91,7 +96,13 @@
           "body": [
             [
               {
-                "text": "To {{respondentName}} ",
+                "text": "To,",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "{{respondentName}}",
                 "style": "form-sub-body"
               }
             ],
@@ -103,8 +114,18 @@
             ],
             [
               {
-                "text": "WHEREAS your attendance is necessary to answer to a charge U/s. 138 of N.I ACT, you are hereby required to appear in person (or by pleader, as the case may be) before the (Magistrate) of {{judgeName}} on the {{hearingDate}}. Herein fail not.",
-                "style": "form-sub-body"
+                "text": [
+                  {
+                    "text": "WHEREAS ",
+                    "style": "form-sub-body"
+                  },
+                  {
+                    "text": "your attendance is necessary to answer to a charge U/s. 138 of N.I ACT, you are hereby required to appear in person (or by pleader, as the case may be) before the (Magistrate) of {{judgeName}} on the {{hearingDate}}. Herein fail not.",
+                    "color": "black",
+                    "bold": true
+                  }
+                ],
+                "leadingIndent": 20
               }
             ]
           ]
@@ -112,9 +133,9 @@
         "layout": "noBorders",
         "margin": [
           0,
-          20,
+          10,
           0,
-          20
+          10
         ]
       },
       {
@@ -132,14 +153,27 @@
             ],
             [
               {
-                "text": "Seal of the Court",
-                "style": "closing-seal"
-              }
-            ],
-            [
-              {
-                "text": "Signature",
-                "style": "closing-signature"
+                "table": {
+                  "widths": [
+                    "*",
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text": "Seal of the Court",
+                        "style": "closing-seal",
+                        "alignment": "left"
+                      },
+                      {
+                        "text": "Signature",
+                        "style": "closing-signature",
+                        "alignment": "right"
+                      }
+                    ]
+                  ]
+                },
+                "layout": "noBorders"
               }
             ],
             [
@@ -167,7 +201,9 @@
       {
         "style": "ws-head",
         "table": {
-          "widths": ["*"],
+          "widths": [
+            "*"
+          ],
           "body": [
             [
               {
@@ -192,7 +228,8 @@
             [
               {
                 "text": "Visit dristi.gov.in for more information",
-                "style": "footer-body"
+                "style": "footer-body",
+                "decoration": "underline"
               }
             ],
             [
@@ -203,7 +240,7 @@
             ],
             [
               {
-                "text": "Next Page",
+                "text": "Next page",
                 "style": "footer-page",
                 "alignment": "right"
               }
@@ -220,7 +257,7 @@
       },
       {
         "text": "",
-        "pageBreak":  "before"
+        "pageBreak": "before"
       },
       {
         "style": "annexure-header",
@@ -251,7 +288,6 @@
         "layout": "noBorders"
       },
       {
-        "style": "annexure-content",
         "table": {
           "widths": [
             "*"
@@ -295,26 +331,56 @@
             ],
             [
               {
-                "text": " Confirm your representation: You may hire a lawyer to represent yourself or appear as a party in person which means you represent yourself in court proceedings. . Please visit Kerala Bar Council website https://www.barcouncilkerala.org/lawyer-registry-list for a contact directory of lawyers.",
-                "style": "annexure-content"
-              }
-            ],
-            [
-              {
-                "text": " Join the Case: Log in to the Portal & enter the 6-digit code {{accessCode}} to access your case details.",
-                "style": "annexure-content"
-              }
-            ],
-            [
-              {
-                "text": " Apply for Bail: Information on how to apply for bail and required documents is available on this link <bit.ly>. To apply for bail, please use <> tab on the Portal.",
-                "style": "annexure-content"
-              }
-            ],
-            [
-              {
-                "text": " Request a different hearing date: If you cannot attend your hearing on {{hearingDate}}, you can request a new date through the Portal.",
-                "style": "annexure-content"
+                "ul": [
+                  {
+                    "text": [
+                      {
+                        "text": "Confirm your representation: ",
+                        "color": "#000000"
+                      },
+                      {
+                        "text": "You may hire a lawyer to represent yourself or appear as a party in person, which means you represent yourself in court proceedings. Please visit Kerala Bar Council website https://www.barcouncilkerala.org/lawyer-registry-list for a contact directory of lawyers.",
+                        "style": "annexure-content"
+                      }
+                    ]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Join the Case: ",
+                        "color": "#000000"
+                      },
+                      {
+                        "text": "Log in to the Portal & enter the 6-digit code (XXXXXX) to access your case details.",
+                        "style": "annexure-content"
+                      }
+                    ]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Apply for Bail: ",
+                        "color": "#000000"
+                      },
+                      {
+                        "text": "Information on how to apply for bail and required documents is available on this link <bit.ly>. To apply for bail, please use <> tab on the Portal.",
+                        "style": "annexure-content"
+                      }
+                    ]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Request a different hearing date: ",
+                        "color": "#000000"
+                      },
+                      {
+                        "text": "If you cannot attend your hearing on {{hearingDate}}, you can request a new date through the Portal.",
+                        "style": "annexure-content"
+                      }
+                    ]
+                  }
+                ]
               }
             ],
             [
@@ -325,14 +391,16 @@
             ],
             [
               {
-                "text": " You may choose to settle the case with the complainant. This can be a quicker and simpler way to resolve the dispute. To settle the case, you may approach the complainant directly, or you may sign up for a Lok Adalat/Mediation Session that is overseen by the court. You may find more information about Lok Adalat here <bit.ly.>.",
-                "style": "annexure-content"
-              }
-            ],
-            [
-              {
-                "text": " If you choose to settle the case, you may inform the court after joining the case on the Portal.",
-                "style": "annexure-content"
+                "ul": [
+                  {
+                    "text": "You may choose to settle the case with the complainant. This can be a quicker and simpler way to resolve the dispute. To settle the case, you may approach the complainant directly, or you may sign up for a Lok Adalat/Mediation Session that is overseen by the court. You may find more information about Lok Adalat here <bit.ly.>.",
+                    "style": "annexure-text"
+                  },
+                  {
+                    "text": "If you choose to settle the case, you may inform the court after joining the case on the Portal.",
+                    "style": "annexure-text"
+                  }
+                ]
               }
             ],
             [
@@ -355,8 +423,22 @@
             ],
             [
               {
-                "text": " The court gets a notification when you open this summons or click on any of the above links. This information is only accessible to the Judiciary, and will be used only for the purpose of determining whether you received and viewed this communication, in accordance with this Privacy Policy.",
-                "style": "annexure-content"
+                "text": [
+                  {
+                    "text": "The court gets a notification when you open this summons or click on any of the above links. This information is only accessible to the Judiciary, and will be used only for the purpose of determining whether you received and viewed this communication, in accordance with this ",
+                    "style": "annexure-content"
+                  },
+                  {
+                    "text": "Privacy Policy",
+                    "color": "#0000FF",
+                    "decoration": "underline",
+                    "style": "annexure-content"
+                  },
+                  {
+                    "text": ".",
+                    "style": "annexure-content"
+                  }
+                ]
               }
             ]
           ]
@@ -451,7 +533,7 @@
         ],
         "bold": true,
         "color": "#000000",
-        "alignment": "right"
+        "alignment": "left"
       },
       "footer-content": {
         "color": "#484848",
@@ -480,14 +562,14 @@
         ]
       },
       "annexure-header": {
-        "color": "#484848",
+        "color": "black",
         "fontFamily": "Roboto",
         "fontSize": 15,
         "bold": true,
         "letterSpacing": 0.5
       },
       "annexure-sub-header": {
-        "color": "#484848",
+        "color": "#black",
         "fontFamily": "Roboto",
         "fontSize": 13,
         "bold": true,
@@ -501,13 +583,7 @@
       },
       "annexure-content": {
         "fontSize": 11,
-        "color": "#484848",
-        "margin": [
-          -15,
-          10,
-          -5,
-          -5
-        ]
+        "color": "#484848"
       }
     }
   }
