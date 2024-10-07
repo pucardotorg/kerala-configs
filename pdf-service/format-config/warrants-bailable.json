@@ -3,7 +3,6 @@
   "config": {
     "content": [
       {
-        "style": "tl-head",
         "table": {
           "widths": [
             "*"
@@ -21,7 +20,7 @@
                     "style": "document-title"
                   },
                   {
-                    "text": "BAILABLE WARRANT",
+                    "text": "Bailable Warrant",
                     "style": "form-sub-header"
                   },
                   {
@@ -59,15 +58,23 @@
           "body": [
             [
               {
-                "text": "To {{executorName}}",
+                "text": "To {{executorName}},",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": "WHEREAS {{respondentName}} of {{respondentAddress}} stands charged with the offence of {{caseCharge}}, you are hereby directed to arrest the said , and to produce him before me. Herein fail not.",
+                "text": [
+                  {
+                    "text": "Whereas ",
+                    "bold": true
+                  },
+                  {
+                    "text": "{{respondentName}} of {{respondentAddress}} stands charged with the offence of {{caseCharge}}, you are hereby directed to arrest the said , and to produce him before me. Herein fail not."
+                  }
+                ],
                 "style": "form-sub-body"
-              }
+              }              
             ]
           ]
         },
@@ -94,14 +101,14 @@
             ],
             [
               {
-                "text": "Seal of the Court",
-                "style": "footer-seal"
+                "text": "Signature",
+                "style": "footer-signature"
               }
             ],
             [
               {
-                "text": "Signature",
-                "style": "footer-signature"
+                "text": "Seal of the Court",
+                "style": "footer-seal"
               }
             ]
           ]
@@ -132,7 +139,7 @@
                 "alignment": "center",
                 "margin": [
                   0,
-                  20,
+                  50,
                   0,
                   20
                 ]
@@ -166,7 +173,7 @@
         "layout": "noBorders",
         "margin": [
           0,
-          20,
+          10,
           0,
           20
         ]
@@ -186,14 +193,14 @@
             ],
             [
               {
-                "text": "Seal of the Court",
-                "style": "footer-seal"
+                "text": "Signature",
+                "style": "footer-signature"
               }
             ],
             [
               {
-                "text": "Signature",
-                "style": "footer-signature"
+                "text": "Seal of the Court",
+                "style": "footer-seal"
               }
             ]
           ]
@@ -215,6 +222,12 @@
           -41,
           -41,
           0
+        ]
+      },
+      "document-title": {
+        "bold":true,
+        "margin": [
+          0,10,0,10
         ]
       },
       "form-header": {
@@ -248,13 +261,7 @@
       },
       "form-sub-body": {
         "fontSize": 12,
-        "color": "#484848",
-        "margin": [
-          -25,
-          30,
-          -8,
-          -8
-        ]
+        "color": "#484848"
       },
       "footer-content": {
         "color": "#484848",
@@ -267,20 +274,13 @@
         ]
       },
       "footer-text": {
-        "margin": [
-          0,
-          15,
-          0,
-          15
-        ],
-        "bold": true,
         "color": "#000000",
         "alignment": "left"
       },
       "footer-seal": {
         "margin": [
           0,
-          15,
+          30,
           0,
           20
         ],
