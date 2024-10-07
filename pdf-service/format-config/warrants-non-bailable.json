@@ -3,7 +3,6 @@
   "config": {
     "content": [
       {
-        "style": "tl-head",
         "table": {
           "widths": [
             "*"
@@ -21,8 +20,9 @@
                     "style": "document-title"
                   },
                   {
-                    "text": "NON-BAILABLE WARRANT",
-                    "style": "form-sub-header"
+                    "text": "Non-Bailable Warrant",
+                    "style": "form-sub-header",
+                    "margin": [0, 5, 0, 5]
                   },
                   {
                     "text": "(See section 72)",
@@ -59,15 +59,23 @@
           "body": [
             [
               {
-                "text": "To {{executorName}}",
+                "text": "To {{executorName}},",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": "WHEREAS {{respondentName}} of {{respondentAddress}} stands charged with the offence of {{caseCharge}}, you are hereby directed to arrest the said , and to produce him before me. Herein fail not.",
+                "text": [
+                  {
+                    "text": "Whereas ",
+                    "bold": true
+                  },
+                  {
+                    "text": "{{respondentName}} of {{respondentAddress}} stands charged with the offence U/s. 138 of N.I ACT, you are hereby directed to arrest the said , and to produce him before me. Herein fail not."
+                  }
+                ],
                 "style": "form-sub-body"
-              }
+              }              
             ]
           ]
         },
@@ -94,14 +102,14 @@
             ],
             [
               {
-                "text": "Seal of the Court",
-                "style": "footer-seal"
+                "text": "Signature",
+                "style": "footer-signature"
               }
             ],
             [
               {
-                "text": "Signature",
-                "style": "footer-signature"
+                "text": "Seal of the Court",
+                "style": "footer-seal"
               }
             ]
           ]
@@ -125,6 +133,12 @@
           0
         ]
       },
+      "document-title": {
+        "bold":true,
+        "margin": [
+          0,10,0,10
+        ]
+      },
       "form-header": {
         "color": "#484848",
         "fontFamily": "Roboto",
@@ -139,7 +153,7 @@
         "letterSpacing": 1.6,
         "margin": [
           0,
-          6,
+          10,
           0,
           0
         ]
@@ -156,13 +170,7 @@
       },
       "form-sub-body": {
         "fontSize": 12,
-        "color": "#484848",
-        "margin": [
-          -25,
-          30,
-          -8,
-          -8
-        ]
+        "color": "#484848"
       },
       "footer-content": {
         "color": "#484848",
