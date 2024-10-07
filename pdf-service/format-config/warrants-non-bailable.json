@@ -21,7 +21,8 @@
                   },
                   {
                     "text": "Non-Bailable Warrant",
-                    "style": "form-sub-header"
+                    "style": "form-sub-header",
+                    "margin": [0, 5, 0, 5]
                   },
                   {
                     "text": "(See section 72)",
@@ -70,7 +71,7 @@
                     "bold": true
                   },
                   {
-                    "text": "{{respondentName}} of {{respondentAddress}} stands charged with the offence of {{caseCharge}}, you are hereby directed to arrest the said , and to produce him before me. Herein fail not."
+                    "text": "{{respondentName}} of {{respondentAddress}} stands charged with the offence U/s. 138 of N.I ACT, you are hereby directed to arrest the said , and to produce him before me. Herein fail not."
                   }
                 ],
                 "style": "form-sub-body"
@@ -152,7 +153,7 @@
         "letterSpacing": 1.6,
         "margin": [
           0,
-          6,
+          10,
           0,
           0
         ]

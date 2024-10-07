@@ -93,6 +93,12 @@
                 "value": {
                   "path": "$.twoSuretyAmount"
                 }
+              },
+              {
+                "variable": "bailableAmount",
+                "value": {
+                  "path": "$.bailableAmount"
+                }
               }
             ]
           }
