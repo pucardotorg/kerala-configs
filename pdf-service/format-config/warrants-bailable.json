@@ -165,7 +165,7 @@
             ],
             [
               {
-                "text": "If the said {{respondentName}} shall give bail himself in the sum of rupees {{bailableAmount}} with {{#oneSuretyAmount}}one surety in the sum of rupees {{oneSuretyAmount}} {{/oneSuretyAmount}} {{#twoSuretyAmount}}(or two sureties each in the sum of rupees {{twoSuretyAmount}}) {{/twoSuretyAmount}} to attend before me on {{hearingDate}} and to continue so to attend until otherwise directed by me, he may be released",
+                "text": "If the said {{respondentName}} shall give bail himself in the sum of rupees {{bailableAmount}} with {{#oneSuretyAmount}}one surety in the sum of rupees {{oneSuretyAmount}} {{/oneSuretyAmount}} {{#twoSuretyAmount}}two sureties each in the sum of rupees {{twoSuretyAmount}} {{/twoSuretyAmount}} to attend before me on {{hearingDate}} and to continue so to attend until otherwise directed by me, he may be released",
                 "style": "form-sub-body"
               }
             ]
