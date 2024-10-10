@@ -1,8 +1,13 @@
 {
-  "key": "warrants-non-bailable",
+  "key": "summons-witness",
   "config": {
+    "defaultStyle": {
+      "font": "Cambay"
+    },
+    "pageMargins": [60, 30, 60, 30],
     "content": [
       {
+        "style": "form-header",
         "table": {
           "widths": [
             "*"
@@ -12,21 +17,18 @@
               {
                 "stack": [
                   {
-                    "text": "FORM NO. 2",
-                    "style": "form-no"
+                    "text": "FORM NO. 33",
+                    "style": "form-header"
                   },
                   {
-                    "text": "WARRANT OF ARREST",
-                    "style": "document-title"
+                    "text": "SUMMONS TO WITNESS",
+                    "style": "form-header",
+                    "alignment": "left"
                   },
                   {
-                    "text": "Non-Bailable Warrant",
+                    "text": "(See section 63 and 267)",
                     "style": "form-sub-header",
-                    "margin": [0, 5, 0, 5]
-                  },
-                  {
-                    "text": "(See section 72)",
-                    "style": "reference"
+                    "alignment": "left"
                   },
                   {
                     "text": "IN THE COURT OF {{courtName}} MAGISTRATE OF {{judgeName}}",
@@ -59,23 +61,27 @@
           "body": [
             [
               {
-                "text": "To {{executorName}},",
+                "text": "To {{witnessName}} ",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": [
-                  {
-                    "text": "Whereas ",
-                    "bold": true
-                  },
-                  {
-                    "text": "{{respondentName}} of {{respondentAddress}} stands charged with the offence U/s. 138 of N.I ACT, you are hereby directed to arrest the said , and to produce him before me. Herein fail not."
-                  }
-                ],
+                "text": "{{witnessAddress}}",
                 "style": "form-sub-body"
-              }              
+              }
+            ],
+            [
+              {
+                "text": "Whereas complaint has been made before me that {{respondentName}} of {{respondentAddress}} (or is suspected to have) committed the offence of (dishonour of a cheque), and it appears to me that you are likely to give material evidence or to produce any document or other thing for the prosecution",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "You are hereby summoned to appear before this Court on the {{hearingDate}} next at ten o’clock in the forenoon, to produce such document or thing or to testify what you know concerning the matter of the said complaint, and not to depart thence without leave of the Court ; and you are hereby warned that, if you shall without just excuse neglect or refuse to appear on the said date, a warrant will be issued to compel your attendance",
+                "style": "form-sub-body"
+              }
             ]
           ]
         },
@@ -88,7 +94,7 @@
         ]
       },
       {
-        "style": "footer-content",
+        "style": "closing-content",
         "table": {
           "widths": [
             "*"
@@ -96,20 +102,20 @@
           "body": [
             [
               {
-                "text": "Dated, this day of {{issueDate}}.",
-                "style": "footer-text"
-              }
-            ],
-            [
-              {
-                "text": "Signature",
-                "style": "footer-signature"
+                "text": "Dated, this {{issueDate}}.",
+                "style": "closing-text"
               }
             ],
             [
               {
                 "text": "Seal of the Court",
-                "style": "footer-seal"
+                "style": "closing-seal"
+              }
+            ],
+            [
+              {
+                "text": "Signature",
+                "style": "closing-signature"
               }
             ]
           ]
@@ -121,39 +127,42 @@
           0,
           0
         ]
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code",
+                "alignment": "center"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
       }
     ],
     "styles": {
-      "tl-head": {
-        "fillColor": "white",
-        "margin": [
-          -41,
-          -41,
-          -41,
-          0
-        ]
-      },
-      "document-title": {
-        "bold":true,
-        "margin": [
-          0,10,0,10
-        ]
-      },
       "form-header": {
         "color": "#484848",
         "fontFamily": "Roboto",
         "fontSize": 16,
         "bold": true,
-        "letterSpacing": 0.74
+        "letterSpacing": 0.5
       },
       "form-sub-header": {
         "color": "#484848",
         "fontFamily": "Roboto",
         "fontSize": 13,
-        "letterSpacing": 1.6,
+        "letterSpacing": 0.6,
         "margin": [
           0,
-          10,
+          5,
           0,
           0
         ]
@@ -162,52 +171,58 @@
         "fontSize": 12,
         "color": "#484848",
         "margin": [
-          -25,
-          18,
-          -8,
-          -8
+          -10,
+          5,
+          -5,
+          -5
         ]
       },
       "form-sub-body": {
         "fontSize": 12,
-        "color": "#484848"
+        "color": "#484848",
+        "margin": [
+          -10,
+          5,
+          -5,
+          -5
+        ]
       },
-      "footer-content": {
+      "closing-content": {
         "color": "#484848",
         "fontSize": 11,
         "margin": [
-          30,
-          -20,
-          0,
-          0
+          5,
+          5,
+          5,
+          5
         ]
       },
-      "footer-text": {
+      "closing-text": {
         "margin": [
           0,
-          15,
+          5,
           0,
-          15
+          0
         ],
         "bold": true,
         "color": "#000000",
         "alignment": "left"
       },
-      "footer-seal": {
+      "closing-seal": {
         "margin": [
           0,
-          15,
+          5,
           0,
-          20
+          0
         ],
         "bold": true,
         "color": "#000000",
         "alignment": "left"
       },
-      "footer-signature": {
+      "closing-signature": {
         "margin": [
           0,
-          50,
+          5,
           0,
           0
         ],

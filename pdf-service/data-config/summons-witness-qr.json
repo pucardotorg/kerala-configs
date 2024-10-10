@@ -1,5 +1,5 @@
 {
-  "key": "warrants-non-bailable",
+  "key": "summons-witness-qr",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -16,6 +16,20 @@
                 "variable": "cnrNumber",
                 "value": {
                   "path": "$.cnrNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "witnessName",
+                "value": {
+                  "path": "$.witnessName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "witnessAddress",
+                "value": {
+                  "path": "$.witnessAddress",
                   "defaultValue": "NA"
                 }
               },
@@ -55,18 +69,33 @@
                 }
               },
               {
-                "variable": "issueDate",
+                "variable": "caseNumber",
                 "value": {
-                  "path": "$.issueDate",
+                  "path": "$.caseNumber",
                   "defaultValue": "NA"
                 }
               },
               {
-                "variable": "executorName",
+                "variable": "caseYear",
                 "value": {
-                  "path": "$.executorName",
+                  "path": "$.caseYear",
                   "defaultValue": "NA"
                 }
+              },
+              {
+                "variable": "qrCodeUrl",
+                "value": {
+                  "path": "$.embeddedUrl"
+                }
+              }
+            ]
+          },
+          {
+            "qrcodeConfig": [
+              {
+                "variable": "qrCodeImage",
+                "url": true,
+                "value": "{{qrCodeUrl}}"
               }
             ]
           }
@@ -75,4 +104,3 @@
     ]
   }
 }
-
