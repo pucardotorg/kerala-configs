@@ -55,6 +55,20 @@
                 }
               },
               {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear",
+                  "defaultValue": "NA"
+                }
+              },
+              {
                 "variable": "issueDate",
                 "value": {
                   "path": "$.issueDate",
