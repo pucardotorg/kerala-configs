@@ -3,8 +3,8 @@
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
-    "baseKeyPath": "$.task",
-    "entityIdPath": "$.task.taskNumber",
+    "baseKeyPath": "$.summonsPdf",
+    "entityIdPath": "$.cnrNumber",
     "isCommonTableBorderRequired": true,
     "mappings": [
       {
@@ -13,59 +13,91 @@
           {
             "direct": [
               {
+                "variable": "cnrNumber",
+                "value": {
+                  "path": "$.cnrNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
                 "variable": "respondentName",
                 "value": {
-                  "path": "$.taskDetails.respondentDetails.name",
+                  "path": "$.respondentName",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "respondentAddress",
                 "value": {
-                  "path": "$.taskDetails.respondentDetails.address",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "caseCharge",
-                "value": {
-                  "path": "$.taskDetails.caseDetails.caseCharge",
+                  "path": "$.respondentAddress",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "judgeName",
                 "value": {
-                  "path": "$.taskDetails.caseDetails.judgeName",
+                  "path": "$.judgeName",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "courtName",
                 "value": {
-                  "path": "$.taskDetails.caseDetails.courtName",
+                  "path": "$.courtName",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "hearingDate",
                 "value": {
-                  "path": "$.taskDetails.caseDetails.hearingDate",
+                  "path": "$.hearingDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "issueDate",
                 "value": {
-                  "path": "$.taskDetails.summonDetails.issueDate",
+                  "path": "$.issueDate",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "executorName",
                 "value": {
-                  "path": "$.taskDetails.summonDetails.executorName",
+                  "path": "$.executorName",
                   "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "oneSuretyAmount",
+                "value": {
+                  "path": "$.oneSuretyAmount"
+                }
+              },
+              {
+                "variable": "twoSuretyAmount",
+                "value": {
+                  "path": "$.twoSuretyAmount"
+                }
+              },
+              {
+                "variable": "bailableAmount",
+                "value": {
+                  "path": "$.bailableAmount"
                 }
               }
             ]

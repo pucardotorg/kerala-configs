@@ -4,17 +4,8 @@
     "pageSize": "A4",
     "content": [
       {
-        "image": "{{nationalEmblem}}",
-        "width": 50,
-        "height": 50,
-        "absolutePosition": {
-          "x": 30,
-          "y": 10
-        }
-      },
-      {
         "image": "{{onCourtsLogo}}",
-        "width": 50,
+        "width": 66.5,
         "height": 50,
         "absolutePosition": {
           "x": 0,
@@ -23,11 +14,11 @@
         "alignment": "right"
       },
       {
-        "image": "{{DistrictCourtImage}}",
+        "image": "{{nationalEmblem}}",
         "width": 50,
         "height": 50,
         "absolutePosition": {
-          "x": 80,
+          "x": 30,
           "y": 10
         }
       },

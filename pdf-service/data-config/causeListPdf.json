@@ -53,13 +53,8 @@
                 "type": "image"
               },
               {
-                "variable": "DistrictCourtImage",
-                "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
-                "type": "image"
-              },
-              {
                 "variable": "onCourtsLogo",
-                "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
+                "url": "https://pucarfilestore.blob.core.windows.net/pucar-filestore/kl/Crafting_ON_24x7_final (1).png",
                 "type": "image"
               }
             ]

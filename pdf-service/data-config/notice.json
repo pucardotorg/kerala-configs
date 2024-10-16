@@ -22,7 +22,7 @@
               {
                 "variable": "accessCode",
                 "value": {
-                  "path": "$.cnrNumber",
+                  "path": "$.accessCode",
                   "defaultValue": "NA"
                 }
               },
