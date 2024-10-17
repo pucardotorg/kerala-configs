@@ -5,6 +5,11 @@ serviceMaps:
       description: Persists Postal details in tables
       fromTopic: postal-hub-create
       isTransaction: true
+      isAuditEnabled: true
+      module: PAYMENT-CALCULATOR
+      objecIdJsonPath: $.*.hubId
+      tenantIdJsonPath: $.*.tenantId
+      auditAttributeBasePath: $.*
       queryMaps:
       - query: INSERT INTO postal_hub(hub_id, name, pincode, classification, created_by, last_modified_by, created_time, last_modified_time, row_version, tenant_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
         basePath: $.*
@@ -33,6 +38,11 @@ serviceMaps:
       description: Update postal details in table
       fromTopic: postal-hub-update
       isTransaction: true
+      isAuditEnabled: true
+      module: PAYMENT-CALCULATOR
+      objecIdJsonPath: $.*.hubId
+      tenantIdJsonPath: $.*.tenantId
+      auditAttributeBasePath: $.*
       queryMaps:
         - query: UPDATE postal_hub SET name =?, pincode =?,created_by =?, last_modified_by =?, created_time =?, last_modified_time =?, row_version =?, tenant_id =? WHERE hub_id=?;
           basePath: $.*
