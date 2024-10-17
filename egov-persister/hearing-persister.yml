@@ -124,10 +124,10 @@ serviceMaps:
       auditAttributeBasePath: hearing
       queryMaps:
         - query: UPDATE dristi_hearing SET startTime = ?, endTime = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE hearingId = ?;
-          basePath: $
+          basePath: hearing
           jsonMaps:
-            - jsonPath: $.startTime
-            - jsonPath: $.endTime
-            - jsonPath: $.auditDetails.lastModifiedBy
-            - jsonPath: $.auditDetails.lastModifiedTime
-            - jsonPath: $.hearingId
+            - jsonPath: $.hearing.startTime
+            - jsonPath: $.hearing.endTime
+            - jsonPath: $.hearing.auditDetails.lastModifiedBy
+            - jsonPath: $.hearing.auditDetails.lastModifiedTime
+            - jsonPath: $.hearing.hearingId

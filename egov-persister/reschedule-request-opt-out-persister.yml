@@ -5,67 +5,77 @@ serviceMaps:
       description: Persists reschedule request opt-out details
       fromTopic: reschedule-opt-out
       isTransaction: true
+      isAuditEnabled: true
+      module: SCHEDULER
+      objecIdJsonPath: $.rescheduleRequestId
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: optOut
       queryMaps:
         - query: INSERT INTO reschedule_request_opt_out_detail (id,individual_id, judge_id, case_id, reschedule_request_id, opt_out_dates, created_by, created_time, last_modified_by, last_modified_time, tenant_id ,row_version)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?,?);
-          basePath: $
+          basePath: optOut
           jsonMaps:
-            - jsonPath: $.id
+            - jsonPath: $.optOut.id
 
-            - jsonPath: $.individualId
+            - jsonPath: $.optOut.individualId
 
-            - jsonPath: $.judgeId
+            - jsonPath: $.optOut.judgeId
 
-            - jsonPath: $.caseId
+            - jsonPath: $.optOut.caseId
 
-            - jsonPath: $.rescheduleRequestId
+            - jsonPath: $.optOut.rescheduleRequestId
 
-            - jsonPath: $.optOutDates
+            - jsonPath: $.optOut.optOutDates
               type: JSON
               dbType: JSONB
 
-            - jsonPath: $.auditDetails.createdBy
+            - jsonPath: $.optOut.auditDetails.createdBy
 
-            - jsonPath: $.auditDetails.createdTime
+            - jsonPath: $.optOut.auditDetails.createdTime
 
-            - jsonPath: $.auditDetails.lastModifiedBy
+            - jsonPath: $.optOut.auditDetails.lastModifiedBy
 
-            - jsonPath: $.auditDetails.lastModifiedTime
+            - jsonPath: $.optOut.auditDetails.lastModifiedTime
 
-            - jsonPath: $.tenantId
+            - jsonPath: $.optOut.tenantId
 
-            - jsonPath: $.rowVersion
+            - jsonPath: $.optOut.rowVersion
 
     - version: 1.0
       description: Updates reschedule request opt-out details
       fromTopic: update-reschedule-opt-out
       isTransaction: true
+      isAuditEnabled: true
+      module: SCHEDULER
+      objecIdJsonPath: $.rescheduleRequestId
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: optOut
       queryMaps:
         - query: UPDATE reschedule_request_opt_out_detail
             SET judge_id = ?, case_id = ?, reschedule_request_id = ?, opt_out_dates = ?, created_by = ?, created_time = ?, last_modified_by = ?, last_modified_time = ?, tenant_id = ?
             WHERE individual_id = ? AND reschedule_request_id = ?;
-          basePath: $
+          basePath: optOut
           jsonMaps:
-            - jsonPath: $.judgeId
+            - jsonPath: $.optOut.judgeId
 
-            - jsonPath: $.caseId
+            - jsonPath: $.optOut.caseId
 
-            - jsonPath: $.optOutDates
+            - jsonPath: $.optOut.optOutDates
               type: JSON
               dbType: JSONB
 
-            - jsonPath: $.auditDetails.createdBy
+            - jsonPath: $.optOut.auditDetails.createdBy
 
-            - jsonPath: $.auditDetails.createdTime
+            - jsonPath: $.optOut.auditDetails.createdTime
 
-            - jsonPath: $.auditDetails.lastModifiedBy
+            - jsonPath: $.optOut.auditDetails.lastModifiedBy
 
-            - jsonPath: $.auditDetails.lastModifiedTime
+            - jsonPath: $.optOut.auditDetails.lastModifiedTime
 
-            - jsonPath: $.tenantId
+            - jsonPath: $.optOut.tenantId
 
-            - jsonPath: $.individualId
+            - jsonPath: $.optOut.individualId
 
-            - jsonPath: $.rescheduleRequestId
+            - jsonPath: $.optOut.rescheduleRequestId
 
-            - jsonPath: $.rowVersion
+            - jsonPath: $.optOut.rowVersion
