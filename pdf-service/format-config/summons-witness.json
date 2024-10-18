@@ -23,12 +23,12 @@
                   {
                     "text": "SUMMONS TO WITNESS",
                     "style": "form-header",
-                    "alignment": "left"
+                    "alignment": "center"
                   },
                   {
                     "text": "(See section 63 and 267)",
                     "style": "form-sub-header",
-                    "alignment": "left"
+                    "alignment": "center"
                   },
                   {
                     "text": "IN THE COURT OF {{courtName}} MAGISTRATE OF {{judgeName}}",
@@ -127,24 +127,6 @@
           0,
           0
         ]
-      },
-      {
-        "style": "ws-head",
-        "table": {
-          "widths": ["*"],
-          "body": [
-            [
-              {
-                "image": "{{qrCodeImage}}",
-                "width": 180,
-                "height": 180,
-                "style": "qr-code",
-                "alignment": "center"
-              }
-            ]
-          ]
-        },
-        "layout": "noBorders"
       }
     ],
     "styles": {
