@@ -64,4 +64,3 @@ serviceMaps:
                 - jsonPath: $.PostalHubs.*.tenantId
 
                 - jsonPath: $.PostalHubs.*.hubId
-

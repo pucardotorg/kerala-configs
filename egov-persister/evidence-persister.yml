@@ -113,7 +113,7 @@ serviceMaps:
       fromTopic: update-evidence-comments
       isTransaction: true
       isAuditEnabled: true
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.artifactNumber
       auditAttributeBasePath: artifact
