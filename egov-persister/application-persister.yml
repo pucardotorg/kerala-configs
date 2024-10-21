@@ -134,15 +134,15 @@ serviceMaps:
       objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.applicationNumber
-      auditAttributeBasePath: $
+      auditAttributeBasePath: application
       queryMaps:
         - query: UPDATE dristi_application SET status = ?, lastmodifiedby = ?,  lastmodifiedtime = ? WHERE applicationNumber=?;
-          basePath: $
+          basePath: application
           jsonMaps:
-            - jsonPath: $.status
-            - jsonPath: $.auditDetails.lastModifiedBy
-            - jsonPath: $.auditDetails.lastModifiedTime
-            - jsonPath: $.applicationNumber
+            - jsonPath: $.application.status
+            - jsonPath: $.application.auditDetails.lastModifiedBy
+            - jsonPath: $.application.auditDetails.lastModifiedTime
+            - jsonPath: $.application.applicationNumber
 
     - version: 1.0
       description: Update application comments in tables
@@ -153,14 +153,14 @@ serviceMaps:
       objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.applicationNumber
-      auditAttributeBasePath: $
+      auditAttributeBasePath: application
       queryMaps:
         - query: UPDATE dristi_application SET comment = ?, lastmodifiedby = ?,  lastmodifiedtime = ? WHERE applicationNumber=?;
-          basePath: $
+          basePath: application
           jsonMaps:
-            - jsonPath: $.comment
+            - jsonPath: $.application.comment
               type: JSON
               dbType: JSONB
-            - jsonPath: $.auditDetails.lastModifiedBy
-            - jsonPath: $.auditDetails.lastModifiedTime
-            - jsonPath: $.applicationNumber
+            - jsonPath: $.application.auditDetails.lastModifiedBy
+            - jsonPath: $.application.auditDetails.lastModifiedTime
+            - jsonPath: $.application.applicationNumber
