@@ -467,22 +467,22 @@ serviceMaps:
       module: CASE
       objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
-      auditAttributeBasePath: representatives.*
+      auditAttributeBasePath: representatives
       queryMaps:
         - query: UPDATE dristi_case_representatives SET isactive = ?, lastmodifiedby = ?, lastmodifiedtime = ? WHERE id = ?;
-          basePath: representatives.*
+          basePath: representatives
           jsonMaps:
-            - jsonPath: $.representatives.*.isActive
-            - jsonPath: $.representatives.*.auditDetails.lastModifiedBy
-            - jsonPath: $.representatives.*.auditDetails.lastModifiedTime
-            - jsonPath: $.representatives.*.id
+            - jsonPath: $.representatives.isActive
+            - jsonPath: $.representatives.auditDetails.lastModifiedBy
+            - jsonPath: $.representatives.auditDetails.lastModifiedTime
+            - jsonPath: $.representatives.id
         - query: UPDATE dristi_case_representing SET isactive = ?, lastmodifiedby = ?, lastmodifiedtime = ? WHERE id = ?;
           basePath: .representing.*
           jsonMaps:
-            - jsonPath: $.representatives.*.representing.*.isActive
-            - jsonPath: $.representatives.*.representing.*.auditDetails.lastModifiedBy
-            - jsonPath: $.representatives.*.representing.*.auditDetails.lastModifiedTime
-            - jsonPath: $.representatives.*.representing.*.id
+            - jsonPath: $.representatives.representing.*.isActive
+            - jsonPath: $.representatives.representing.*.auditDetails.lastModifiedBy
+            - jsonPath: $.representatives.representing.*.auditDetails.lastModifiedTime
+            - jsonPath: $.representatives.representing.*.id
 
     - version: 1.0
       description: Update case overall workflow in tables
