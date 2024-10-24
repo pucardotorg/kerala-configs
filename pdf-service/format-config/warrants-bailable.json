@@ -33,7 +33,7 @@
                     "style": "form-sub-header"
                   },
                   {
-                    "text": "Summary Trial No. {{caseNumber}} of {{caseYear}}",
+                    "text": "Summary Trial No. {{courtCaseNumber}} of {{caseYear}}",
                     "style": "form-sub-header"
                   }
                 ],

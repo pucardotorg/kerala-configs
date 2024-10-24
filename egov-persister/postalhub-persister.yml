@@ -5,52 +5,62 @@ serviceMaps:
       description: Persists Postal details in tables
       fromTopic: postal-hub-create
       isTransaction: true
+      isAuditEnabled: true
+      module: PAYMENT-CALCULATOR
+      objecIdJsonPath: $.*.hubId
+      tenantIdJsonPath: $.*.tenantId
+      auditAttributeBasePath: PostalHubs.*
       queryMaps:
       - query: INSERT INTO postal_hub(hub_id, name, pincode, classification, created_by, last_modified_by, created_time, last_modified_time, row_version, tenant_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-        basePath: $.*
+        basePath: PostalHubs.*
         jsonMaps:
-          - jsonPath: $.*.hubId
+          - jsonPath: $.PostalHubs.*.hubId
 
-          - jsonPath: $.*.name
+          - jsonPath: $.PostalHubs.*.name
 
-          - jsonPath: $.*.pincode
+          - jsonPath: $.PostalHubs.*.pincode
 
-          - jsonPath: $.*.classification
+          - jsonPath: $.PostalHubs.*.classification
 
-          - jsonPath: $.*.auditDetails.createdBy
+          - jsonPath: $.PostalHubs.*.auditDetails.createdBy
 
-          - jsonPath: $.*.auditDetails.lastModifiedBy
+          - jsonPath: $.PostalHubs.*.auditDetails.lastModifiedBy
 
-          - jsonPath: $.*.auditDetails.createdTime
+          - jsonPath: $.PostalHubs.*.auditDetails.createdTime
 
-          - jsonPath: $.*.auditDetails.lastModifiedTime
+          - jsonPath: $.PostalHubs.*.auditDetails.lastModifiedTime
 
-          - jsonPath: $.*.rowVersion
+          - jsonPath: $.PostalHubs.*.rowVersion
 
-          - jsonPath: $.*.tenantId
+          - jsonPath: $.PostalHubs.*.tenantId
 
     - version: 1.0
       description: Update postal details in table
       fromTopic: postal-hub-update
       isTransaction: true
+      isAuditEnabled: true
+      module: PAYMENT-CALCULATOR
+      objecIdJsonPath: $.*.hubId
+      tenantIdJsonPath: $.*.tenantId
+      auditAttributeBasePath: PostalHubs.*
       queryMaps:
         - query: UPDATE postal_hub SET name =?, pincode =?,created_by =?, last_modified_by =?, created_time =?, last_modified_time =?, row_version =?, tenant_id =? WHERE hub_id=?;
-          basePath: $.*
+          basePath: PostalHubs.*
           jsonMaps:
-                - jsonPath: $.*.name
+                - jsonPath: $.PostalHubs.*.name
 
-                - jsonPath: $.*.pincode
+                - jsonPath: $.PostalHubs.*.pincode
 
-                - jsonPath: $.*.auditDetails.createdBy
+                - jsonPath: $.PostalHubs.*.auditDetails.createdBy
 
-                - jsonPath: $.*.auditDetails.lastModifiedBy
+                - jsonPath: $.PostalHubs.*.auditDetails.lastModifiedBy
 
-                - jsonPath: $.*.auditDetails.createdTime
+                - jsonPath: $.PostalHubs.*.auditDetails.createdTime
 
-                - jsonPath: $.*.auditDetails.lastModifiedTime
+                - jsonPath: $.PostalHubs.*.auditDetails.lastModifiedTime
 
-                - jsonPath: $.*.rowVersion
+                - jsonPath: $.PostalHubs.*.rowVersion
 
-                - jsonPath: $.*.tenantId
+                - jsonPath: $.PostalHubs.*.tenantId
 
-                - jsonPath: $.*.hubId
+                - jsonPath: $.PostalHubs.*.hubId
