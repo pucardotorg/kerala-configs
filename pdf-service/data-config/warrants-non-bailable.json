@@ -62,6 +62,13 @@
                 }
               },
               {
+                "variable": "courtCaseNumber",
+                "value": {
+                  "path": "$.courtCaseNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
                 "variable": "caseYear",
                 "value": {
                   "path": "$.caseYear",
