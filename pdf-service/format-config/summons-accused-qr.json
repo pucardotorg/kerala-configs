@@ -235,7 +235,7 @@
             [
               {
                 "text": "The process is system generated and transmitted in a secured manner by authorised user, as such a physical copy is not required.",
-                "style": "footer-body"
+                "absolutePosition": {    "x": 50,    "y": 740}
               }
             ],
             [
@@ -351,7 +351,7 @@
                         "color": "#000000"
                       },
                       {
-                        "text": "Log in to the Portal & enter the 6-digit code (XXXXXX) to access your case details.",
+                        "text": "Log in to the Portal & enter the 6-digit code {{accessCode}} to access your case details.",
                         "style": "annexure-content"
                       }
                     ]
