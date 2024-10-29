@@ -10,6 +10,7 @@ serviceMaps:
       objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: ocr
       queryMaps:
         - query: INSERT INTO dristi_ocr(id, tenantid, filingnumber, filestoreid, documenttype, message, code, extracteddata) VALUES (?, ?, ?, ?, ?, ?, ?, ?);
           basePath: ocr
