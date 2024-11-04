@@ -440,7 +440,7 @@ serviceMaps:
             - jsonPath: $.representative.auditDetails.createdTime
             - jsonPath: $.representative.auditDetails.lastModifiedTime
         - query: INSERT INTO public.dristi_case_representing(id, tenantid, partycategory, individualid, organisationid, case_id, partytype, isactive, representative_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-          basePath: .representing.*
+          basePath: representative.representing.*
           jsonMaps:
             - jsonPath: $.representative.representing.*.id
             - jsonPath: $.representative.representing.*.tenantId
