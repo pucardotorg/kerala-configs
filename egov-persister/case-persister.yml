@@ -454,10 +454,10 @@ serviceMaps:
             - jsonPath: $.representative.representing.*.additionalDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.representing.*.auditDetails.createdBy
-            - jsonPath: $.representing.*.auditDetails.lastModifiedBy
-            - jsonPath: $.representing.*.auditDetails.createdTime
-            - jsonPath: $.representing.*.auditDetails.lastModifiedTime
+            - jsonPath: $.representative.representing.*.auditDetails.createdBy
+            - jsonPath: $.representative.representing.*.auditDetails.lastModifiedBy
+            - jsonPath: $.representative.representing.*.auditDetails.createdTime
+            - jsonPath: $.representative.representing.*.auditDetails.lastModifiedTime
 
     - version: 1.0
       description: Update representative for a case in dristi_case_representatives table
@@ -512,7 +512,7 @@ serviceMaps:
       isAuditEnabled: true
       module: CASE
       objecIdJsonPath: $.caseFilingNumber
-      tenantIdJsonPath: $.RequestInfo.userInfo.uuid.tenantId
+      tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
       transactionCodeJsonPath: $.caseFilingNumber
       auditAttributeBasePath: $
       queryMaps:

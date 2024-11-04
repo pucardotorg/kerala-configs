@@ -6,9 +6,12 @@ serviceMaps:
       fromTopic: save-auth-sek
       isTransaction: true
       isAuditEnabled: true
+      objecIdJsonPath: $.AuthSek.billId
+      tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
+      auditAttributeBasePath: $
       queryMaps:
         - query: INSERT INTO auth_sek_session_data (auth_token, decrypted_sek, bill_id, business_service, service_number, total_due, mobile_number, paid_by, session_time, department_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-          basePath: AuthSek
+          basePath: $
           jsonMaps:
             - jsonPath: $.AuthSek.authToken
             - jsonPath: $.AuthSek.decryptedSek
@@ -26,9 +29,12 @@ serviceMaps:
       fromTopic: save-treasury-payment-data
       isTransaction: true
       isAuditEnabled: true
+      objecIdJsonPath: $.TreasuryPaymentData.fileStoreId
+      tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
+      auditAttributeBasePath: $
       queryMaps:
           - query: INSERT INTO treasury_payment_data (department_id, grn, challan_timestamp, bank_ref_no, bank_timestamp, bank_code, status, cin, amount, party_name, remark_status, remarks, file_store_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-            basePath: TreasuryPaymentData
+            basePath: $
             jsonMaps:
               - jsonPath: $.TreasuryPaymentData.departmentId
               - jsonPath: $.TreasuryPaymentData.grn

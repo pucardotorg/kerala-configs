@@ -7,8 +7,8 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: SCHEDULER
-      objecIdJsonPath: $.*.rescheduledRequestId
-      tenantIdJsonPath: $.*.tenantId
+      objecIdJsonPath: $.rescheduledRequestId
+      tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: Hearing.*
       queryMaps:
         - query: INSERT INTO hearing_booking (court_id,judge_id,case_id,hearing_booking_id,hearing_date,hearing_type,title,description,status,start_time,end_time,created_by,last_modified_by,created_time, last_modified_time,row_version,tenant_id ,reschedule_request_id) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?);
@@ -58,8 +58,8 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: SCHEDULER
-      objecIdJsonPath: $.*.rescheduleRequestId
-      tenantIdJsonPath: $.*.tenantId
+      objecIdJsonPath: $.rescheduleRequestId
+      tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: Hearing.*
       queryMaps:
         - query: UPDATE hearing_booking SET court_id =?,judge_id=?,case_id =?,hearing_date =?,hearing_type=?,title =?,description =?,status =?,start_time =?,end_time =?,created_by =?,last_modified_by =?,created_time =?, last_modified_time =? ,row_version =?, tenant_id =? ,reschedule_request_id =? WHERE hearing_booking_id=?;

@@ -7,8 +7,8 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: SCHEDULER
-      objecIdJsonPath: $.*.rescheduledRequestId
-      tenantIdJsonPath: $.*.tenantId
+      objecIdJsonPath: $.rescheduledRequestId
+      tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: RescheduledRequest.*
       queryMaps:
         - query: INSERT INTO hearing_booking_reschedule_request (hearing_booking_id,reschedule_request_id,requester_id,reason,status,created_by,last_modified_by,created_time, last_modified_time ,row_version ,tenant_id ,judge_id ,case_id ,representatives, litigants ,suggested_days, available_days) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,? ,?, ?, ?, ?);
@@ -62,8 +62,8 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: SCHEDULER
-      objecIdJsonPath: $.*.rescheduledRequestId
-      tenantIdJsonPath: $.*.tenantId
+      objecIdJsonPath: $.rescheduledRequestId
+      tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: RescheduledRequest.*
       queryMaps:
 
