@@ -95,6 +95,12 @@
                 "value": {
                   "path": "$.courtSeal"
                 }
+              },
+              {
+                "variable": "purposeOfHearing",
+                "value": {
+                  "path": "$.purposeOfHearing"
+                }
               }
             ]
           },
