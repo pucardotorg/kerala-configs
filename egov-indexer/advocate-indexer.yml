@@ -47,7 +47,7 @@ ServiceMaps:
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.advocateDetails.additionalDetails
             externalUriMapping:
-              - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
                 apiRequest:
                   {
@@ -86,7 +86,7 @@ ServiceMaps:
                     outJsonPath: $.Data.currentProcessInstance
                   - inJsonPath: $.ProcessInstances[0].state.uuid
                     outJsonPath: $.Data.status
-              - path: http://individual.egov:8080/individual/v1/_search
+              - path: http://individual:8080/individual/v1/_search
                 queryParam: limit=1000,offset=0,tenantId=$.tenantId,includeDeleted=true
                 apiRequest:
                   {
@@ -188,7 +188,7 @@ ServiceMaps:
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.advocateDetails.additionalDetails
             externalUriMapping:
-              - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
                 apiRequest:
                   {
@@ -227,7 +227,7 @@ ServiceMaps:
                     outJsonPath: $.Data.currentProcessInstance
                   - inJsonPath: $.ProcessInstances[0].state.uuid
                     outJsonPath: $.Data.status
-              - path: http://individual.egov:8080/individual/v1/_search
+              - path: http://individual:8080/individual/v1/_search
                 queryParam: limit=1000,offset=0,tenantId=$.tenantId,includeDeleted=true
                 apiRequest:
                   {

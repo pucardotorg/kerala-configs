@@ -41,7 +41,7 @@ ServiceMaps:
         - inJsonPath: $.@timestamp
           outJsonPath: $.Data.@timestamp
         mdmsMapping:
-        - path: http://egov-mdms-service.egov:8080/egov-mdms-service/v1/_search
+        - path: http://egov-mdms-service:8080/egov-mdms-service/v1/_search
           moduleName: tenant
           masterName: tenants
           tenantId: pb
