@@ -52,6 +52,10 @@
                         "style": "listItem"
                       },
                       {
+                        "text": "The primary objective of the hearing is {{purposeOfHearing}}, along with addressing any additional issues that may emerge during the proceedings.",
+                        "style": "listItem"
+                      },
+                      {
                         "text": "{{partyNames}} shall make necessary arrangements to appear at the scheduled hearing date and time.",
                         "style": "listItem"
                       }
