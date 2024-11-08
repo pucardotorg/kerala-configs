@@ -6,6 +6,10 @@ serviceMaps:
       fromTopic: save-epost-tracker
       isTransaction: true
       isAuditEnabled: true
+      module: EPOSTTRACKER
+      objecIdJsonPath: $.processNumber
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: EPostTracker
       queryMaps:
         - query: INSERT INTO dristi_epost_tracker (process_number, tenant_id, file_store_id, task_number, tracking_number, pincode, address, delivery_status, remarks, additional_details, row_version, booking_date, received_date, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: EPostTracker
@@ -35,6 +39,10 @@ serviceMaps:
       fromTopic: update-epost-tracker
       isTransaction: true
       isAuditEnabled: true
+      module: EPOSTTRACKER
+      objecIdJsonPath: $.processNumber
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: EPostTracker
       queryMaps:
         - query: UPDATE dristi_epost_tracker SET delivery_status = ?, tracking_number = ?, remarks = ? , received_date = ?, additional_details = ?, row_version = ?,  lastModifiedBy = ?, lastModifiedTime = ?  WHERE process_number = ?;
           basePath: EPostTracker
