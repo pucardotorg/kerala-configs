@@ -1,0 +1,69 @@
+{
+  "key": "table-of-contents",
+  "config": `{
+    "content": [
+      {
+        "text": "IN THE CASE OF {{caseName}}",
+        "style": "heading"
+      },
+      {
+        "table": {
+          "widths": ["10%", "70%", "*"],
+          "body": [
+            [
+              {
+                "text": "S. No.",
+                "style": "bodyText",
+                "fillColor": "#d9d9d9",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "Document Name",
+                "style": "bodyText",
+                "fillColor": "#d9d9d9",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "Page number",
+                "style": "bodyText",
+                "fillColor": "#d9d9d9",
+                "border": [true, true, true, true]
+              }
+            ],
+            {{#documentList}}
+            [
+              {
+                "text": "{{index}}",
+                "style": "bodyText",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "{{documentName}}",
+                "style": "bodyText",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "{{pageNumber}}",
+                "style": "bodyText",
+                "border": [true, true, true, true]
+              }
+            ],
+            {{/documentList}}
+          ]
+        }
+      }
+    ],
+    "styles": {
+      "heading": {
+        "fontSize": 18,
+        "alignment": "center",
+        "margin": [0, 60, 0, 20]
+      },
+      "bodyText": {
+        "fontSize": 15,
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      }
+    }
+  }`
+}
