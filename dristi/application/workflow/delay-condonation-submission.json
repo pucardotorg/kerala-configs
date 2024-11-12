@@ -19,7 +19,7 @@
               "action": "CREATE",
               "nextState": "PENDINGAPPROVAL",
               "roles": [
-                "SYSTEM"
+                "SUBMISSION_CREATOR"
               ]
             }
           ]
@@ -51,8 +51,7 @@
               "action": "ABANDON",
               "nextState": "ABATED",
               "roles": [
-                "SYSTEM",
-                "SYSTEM_ADMIN"
+                "WORKFLOW_ABANDON"
               ]
             }
           ]
