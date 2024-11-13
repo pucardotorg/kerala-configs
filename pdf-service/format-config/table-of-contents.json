@@ -2,8 +2,56 @@
   "key": "table-of-contents",
   "config": {
     "content": [
-      "{\"text\": \"IN THE CASE OF {{caseName}}\",\"style\": \"heading\"}",
-      "{\"table\":{\"widths\":[\"10%\",\"70%\",\"*\"],\"body\":[[{\"text\":\"S.No.\",\"style\":\"bodyText\",\"fillColor\":\"#d9d9d9\",\"border\":[true,true,true,true]},{\"text\":\"DocumentName\",\"style\":\"bodyText\",\"fillColor\":\"#d9d9d9\",\"border\":[true,true,true,true]},{\"text\":\"Pagenumber\",\"style\":\"bodyText\",\"fillColor\":\"#d9d9d9\",\"border\":[true,true,true,true]}],{{#documentList}}[{\"text\":\"{{index}}\",\"style\":\"bodyText\",\"border\":[true,true,true,true]},{\"text\":\"{{documentName}}\",\"style\":\"bodyText\",\"border\":[true,true,true,true]},{\"text\":\"{{pageNumber}}\",\"style\":\"bodyText\",\"border\":[true,true,true,true]}],{{/documentList}}]}}"
+      {
+        "text": "IN THE CASE OF {{caseName}}",
+        "style": "heading"
+      },
+      {
+        "table": {
+          "widths": ["10%", "70%", "*"],
+          "body": [
+            [
+              {
+                "text": "S. No.",
+                "style": "bodyText",
+                "fillColor": "#d9d9d9",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "Document Name",
+                "style": "bodyText",
+                "fillColor": "#d9d9d9",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "Page number",
+                "style": "bodyText",
+                "fillColor": "#d9d9d9",
+                "border": [true, true, true, true]
+              }
+            ],
+            "{{#documentList}}",
+            [
+              {
+                "text": "{{index}}",
+                "style": "bodyText",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "{{documentName}}",
+                "style": "bodyText",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "{{pageNumber}}",
+                "style": "bodyText",
+                "border": [true, true, true, true]
+              }
+            ],
+            "{{/documentList}}"
+          ]
+        }
+      }
     ],
     "styles": {
       "heading": {
