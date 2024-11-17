@@ -138,10 +138,11 @@ serviceMaps:
       transactionCodeJsonPath: $.applicationNumber
       auditAttributeBasePath: application
       queryMaps:
-        - query: UPDATE dristi_application SET status = ?, lastmodifiedby = ?,  lastmodifiedtime = ? WHERE applicationNumber=?;
+        - query: UPDATE dristi_application SET status = ?, applicationCMPNumber=?,lastmodifiedby = ?,  lastmodifiedtime = ? WHERE applicationNumber=?;
           basePath: application
           jsonMaps:
             - jsonPath: $.application.status
+            - jsonPath: $.application.applicationCMPNumber
             - jsonPath: $.application.auditDetails.lastModifiedBy
             - jsonPath: $.application.auditDetails.lastModifiedTime
             - jsonPath: $.application.applicationNumber
