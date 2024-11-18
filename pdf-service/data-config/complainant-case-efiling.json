@@ -1,5 +1,5 @@
 {
-  "key": "mandatory-async-submissions-responses",
+  "key": "complainant-case-efiling",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -173,6 +173,20 @@
                 "value": {
                   "path": "$.dateOfFiling"
                 }
+              },
+              {
+                "variable": "documentList",
+                "value": {
+                  "path": "$.documentList"
+                }
+              },
+              {
+                "variable": "witnessScheduleList",
+                "value": {
+                  "path": "$.witnessScheduleList"
+                },
+                "type": "function",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
               }
             ]
           }

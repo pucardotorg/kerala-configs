@@ -1,5 +1,5 @@
 {
-  "key": "mandatory-async-submissions-responses",
+  "key": "complainant-case-efiling",
   "config": {
     "content": [
       {
@@ -158,6 +158,118 @@
                       ]
                     },
                     "layout": "noBorders"
+                  },
+                  {
+                    "text": "List of Documents:",
+                    "style": "title",
+                    "decoration": "underline"
+                  },
+                  {
+                    "ol": [
+                      "{{#documentList}}",
+                      {
+                        "text": "{{.}}",
+                        "style": "bodyText"
+                      },
+                      "{{/documentList}}"
+                    ],
+                    "style": "list"
+                  },
+                  {
+                    "text": "Witness schedule",
+                    "style": "title",
+                    "decoration": "underline"
+                  },
+                  {
+                    "style": "table",
+                    "table": {
+                      "widths": ["10%", "15%", "15%", "15%", "15%", "15%", "15%"],
+                      "body": [
+                        [
+                          {
+                            "text": "S. No.",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Name",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Occupation",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Phone Number",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "E-Mail",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Address",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Additional Details",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{#witnessScheduleList}}",
+                        [
+                          {
+                            "text": "{{index}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{witnessName}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{witnessOccupation}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{witnessPhoneNumber}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{witnessEmail}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{witnessAddress}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{witnessAdditionalDetails}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/witnessScheduleList}}"
+                      ]
+                    }
                   }
                 ],
                 "alignment": "left",
@@ -207,6 +319,9 @@
       "signature": {
         "fontSize": 13,
         "margin": [0, 55, 0, 3]
+      },
+      "table": {
+        "margin": [0, 15, 0, 0]
       }
     }
   }
