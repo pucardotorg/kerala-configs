@@ -25,9 +25,9 @@
                 }
               },
               {
-                "variable": "cmpNumber",
+                "variable": "filingNumber",
                 "value": {
-                  "path": "$.cmpNumber"
+                  "path": "$.filingNumber"
                 }
               },
               {
