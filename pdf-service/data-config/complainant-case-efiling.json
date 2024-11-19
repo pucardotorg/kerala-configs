@@ -1,0 +1,197 @@
+{
+  "key": "complainant-case-efiling",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "place",
+                "value": {
+                  "path": "$.place"
+                }
+              },
+              {
+                "variable": "filingNumber",
+                "value": {
+                  "path": "$.filingNumber"
+                }
+              },
+              {
+                "variable": "ifIndividual",
+                "value": {
+                  "path": "$.ifIndividual"
+                }
+              },
+              {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.complainantName"
+                }
+              },
+              {
+                "variable": "complainantAge",
+                "value": {
+                  "path": "$.complainantAge"
+                }
+              },
+              {
+                "variable": "complainantAddress",
+                "value": {
+                  "path": "$.complainantAddress"
+                }
+              },
+              {
+                "variable": "phoneNumber",
+                "value": {
+                  "path": "$.phoneNumber"
+                }
+              },
+              {
+                "variable": "emailId",
+                "value": {
+                  "path": "$.emailId"
+                }
+              },
+              {
+                "variable": "isPartyInPerson",
+                "value": {
+                  "path": "$.isPartyInPerson"
+                }
+              },
+              {
+                "variable": "advocateName",
+                "value": {
+                  "path": "$.advocateName"
+                }
+              },
+              {
+                "variable": "barId",
+                "value": {
+                  "path": "$.barId"
+                }
+              },
+              {
+                "variable": "advocatePhoneNumber",
+                "value": {
+                  "path": "$.advocatePhoneNumber"
+                }
+              },
+              {
+                "variable": "institutionName",
+                "value": {
+                  "path": "$.institutionName"
+                }
+              },
+              {
+                "variable": "nameOfAuthorizedSignatory",
+                "value": {
+                  "path": "$.nameOfAuthorizedSignatory"
+                }
+              },
+              {
+                "variable": "designationOfAuthorizedSignatory",
+                "value": {
+                  "path": "$.designationOfAuthorizedSignatory"
+                }
+              },
+              {
+                "variable": "ifAccusedIndividual",
+                "value": {
+                  "path": "$.ifAccusedIndividual"
+                }
+              },
+              {
+                "variable": "accusedName",
+                "value": {
+                  "path": "$.accusedName"
+                }
+              },
+              {
+                "variable": "accusedAge",
+                "value": {
+                  "path": "$.accusedAge"
+                }
+              },
+              {
+                "variable": "accusedAddress",
+                "value": {
+                  "path": "$.accusedAddress"
+                }
+              },
+              {
+                "variable": "accusedPhoneNumber",
+                "value": {
+                  "path": "$.accusedPhoneNumber"
+                }
+              },
+              {
+                "variable": "accusedEmailId",
+                "value": {
+                  "path": "$.accusedEmailId"
+                }
+              },
+              {
+                "variable": "accusedInstitutionName",
+                "value": {
+                  "path": "$.accusedInstitutionName"
+                }
+              },
+              {
+                "variable": "nameOfAccusedAuthorizedSignatory",
+                "value": {
+                  "path": "$.nameOfAccusedAuthorizedSignatory"
+                }
+              },
+              {
+                "variable": "designationOfAccusedAuthorizedSignatory",
+                "value": {
+                  "path": "$.designationOfAccusedAuthorizedSignatory"
+                }
+              },
+              {
+                "variable": "complaint",
+                "value": {
+                  "path": "$.complaint"
+                }
+              },
+              {
+                "variable": "dateOfFiling",
+                "value": {
+                  "path": "$.dateOfFiling"
+                }
+              },
+              {
+                "variable": "documentList",
+                "value": {
+                  "path": "$.documentList"
+                }
+              },
+              {
+                "variable": "witnessScheduleList",
+                "value": {
+                  "path": "$.witnessScheduleList"
+                },
+                "type": "function",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

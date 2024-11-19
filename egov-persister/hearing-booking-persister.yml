@@ -1,0 +1,102 @@
+serviceMaps:
+  serviceName: scheduler-services
+  mappings:
+    - version: 1.0
+      description: Persists Hearing details in tables
+      fromTopic: schedule-hearing
+      isTransaction: true
+      isAuditEnabled: true
+      module: SCHEDULER
+      objecIdJsonPath: $.rescheduledRequestId
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: Hearing.*
+      queryMaps:
+        - query: INSERT INTO hearing_booking (court_id,judge_id,case_id,hearing_booking_id,hearing_date,hearing_type,title,description,status,start_time,end_time,created_by,last_modified_by,created_time, last_modified_time,row_version,tenant_id ,reschedule_request_id) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?);
+          basePath: Hearing.*
+          jsonMaps:
+            - jsonPath: $.Hearing.*.courtId
+
+            - jsonPath: $.Hearing.*.judgeId
+
+            - jsonPath: $.Hearing.*.caseId
+
+            - jsonPath: $.Hearing.*.hearingBookingId
+
+            - jsonPath: $.Hearing.*.hearingDate
+
+            - jsonPath: $.Hearing.*.hearingType
+
+            - jsonPath: $.Hearing.*.title
+
+            - jsonPath: $.Hearing.*.description
+
+            - jsonPath: $.Hearing.*.status
+
+            - jsonPath: $.Hearing.*.startTime
+
+            - jsonPath: $.Hearing.*.endTime
+
+            - jsonPath: $.Hearing.*.auditDetails.createdBy
+
+            - jsonPath: $.Hearing.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.Hearing.*.auditDetails.createdTime
+
+            - jsonPath: $.Hearing.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.Hearing.*.rowVersion
+
+            - jsonPath: $.Hearing.*.tenantId
+
+            - jsonPath: $.Hearing.*.rescheduleRequestId
+
+
+
+    - version: 1.0
+      description: Update hearing applications in table
+      fromTopic: update-schedule-hearing
+      isTransaction: true
+      isAuditEnabled: true
+      module: SCHEDULER
+      objecIdJsonPath: $.rescheduleRequestId
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: Hearing.*
+      queryMaps:
+        - query: UPDATE hearing_booking SET court_id =?,judge_id=?,case_id =?,hearing_date =?,hearing_type=?,title =?,description =?,status =?,start_time =?,end_time =?,created_by =?,last_modified_by =?,created_time =?, last_modified_time =? ,row_version =?, tenant_id =? ,reschedule_request_id =? WHERE hearing_booking_id=?;
+          basePath: Hearing.*
+          jsonMaps:
+            - jsonPath: $.Hearing.*.courtId
+
+            - jsonPath: $.Hearing.*.judgeId
+
+            - jsonPath: $.Hearing.*.caseId
+
+            - jsonPath: $.Hearing.*.hearingDate
+
+            - jsonPath: $.Hearing.*.hearingType
+
+            - jsonPath: $.Hearing.*.title
+
+            - jsonPath: $.Hearing.*.description
+
+            - jsonPath: $.Hearing.*.status
+
+            - jsonPath: $.Hearing.*.startTime
+
+            - jsonPath: $.Hearing.*.endTime
+
+            - jsonPath: $.Hearing.*.auditDetails.createdBy
+
+            - jsonPath: $.Hearing.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.Hearing.*.auditDetails.createdTime
+
+            - jsonPath: $.Hearing.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.Hearing.*.rowVersion
+
+            - jsonPath: $.Hearing.*.tenantId
+
+            - jsonPath: $.Hearing.*.rescheduleRequestId
+
+            - jsonPath: $.Hearing.*.hearingBookingId

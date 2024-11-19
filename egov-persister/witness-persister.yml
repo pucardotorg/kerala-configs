@@ -1,0 +1,61 @@
+serviceMaps:
+  serviceName: witness-services
+  mappings:
+    - version: 1.0
+      description: Persists witness details in tables
+      fromTopic: save-witness-application
+      isTransaction: true
+      isAuditEnabled: true
+      module: WITNESS
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: witness
+      queryMaps:
+
+        - query: INSERT INTO dristi_witness(id, caseid, filingnumber, cnrnumber, witnessidentifier, individualid, remarks, isactive, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: witness
+          jsonMaps:
+            - jsonPath: $.witness.id
+            - jsonPath: $.witness.caseId
+            - jsonPath: $.witness.filingNumber
+            - jsonPath: $.witness.cnrNumber
+            - jsonPath: $.witness.witnessIdentifier
+            - jsonPath: $.witness.individualId
+            - jsonPath: $.witness.remarks
+            - jsonPath: $.witness.isActive
+            - jsonPath: $.witness.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.witness.auditDetails.createdBy
+            - jsonPath: $.witness.auditDetails.lastModifiedBy
+            - jsonPath: $.witness.auditDetails.createdTime
+            - jsonPath: $.witness.auditDetails.lastModifiedTime
+    - version: 1.0
+      description: Update witness details in tables
+      fromTopic: update-witness-application
+      isTransaction: true
+      isAuditEnabled: true
+      module: WITNESS
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: witness
+      queryMaps:
+
+        - query: UPDATE dristi_witness SET caseid=?, filingnumber=?, cnrnumber=?, witnessidentifier=?, individualid=?, remarks=?, isactive=?, additionaldetails=?, lastmodifiedby=?, lastModifiedTime=? WHERE id=?;
+          basePath: witness
+          jsonMaps:
+            - jsonPath: $.witness.caseId
+            - jsonPath: $.witness.filingNumber
+            - jsonPath: $.witness.cnrNumber
+            - jsonPath: $.witness.witnessIdentifier
+            - jsonPath: $.witness.individualId
+            - jsonPath: $.witness.remarks
+            - jsonPath: $.witness.isActive
+            - jsonPath: $.witness.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.witness.auditDetails.lastModifiedBy
+            - jsonPath: $.witness.auditDetails.lastModifiedTime
+            - jsonPath: $.witness.id

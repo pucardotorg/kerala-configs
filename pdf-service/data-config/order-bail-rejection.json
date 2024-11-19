@@ -1,0 +1,119 @@
+{
+  "key": "order-bail-rejection",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "courtPlace",
+                "value": {
+                  "path": "$.courtPlace"
+                }
+              },
+              {
+                "variable": "state",
+                "value": {
+                  "path": "$.state"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear"
+                }
+              },
+              {
+                "variable": "applicantName",
+                "value": {
+                  "path": "$.applicantName"
+                }
+              },
+              {
+                "variable": "dateOfApplication",
+                "value": {
+                  "path": "$.dateOfApplication"
+                }
+              },
+              {
+                "variable": "briefSummaryOfBail",
+                "value": {
+                  "path": "$.briefSummaryOfBail"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "documentList",
+                "value": {
+                  "path": "$.documentList.*"
+                },
+                "type": "index",
+                "format": "var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              },
+              {
+                "variable": "bailType",
+                "value": {
+                  "path": "$.bailType"
+                }
+              },
+              {
+                "variable": "conditionOfBail",
+                "value": {
+                  "path": "$.conditionOfBail"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "courtSeal",
+                "value": {
+                  "path": "$.courtSeal"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

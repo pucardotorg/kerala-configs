@@ -1,0 +1,328 @@
+{
+  "key": "complainant-case-efiling",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "{{courtName}}, {{place}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Filing No. {{filingNumber}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "Complainant:",
+                    "style": "title"
+                  },
+                  "{{#ifIndividual}}",
+                  {
+                    "text": [
+                      {
+                        "text": "{{complainantName}}",
+                        "bold": true
+                      },
+                      {
+                        "text": " aged {{complainantAge}}"
+                      }
+                    ],
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{complainantAddress}} (Mobile No. {{phoneNumber}}; Email. {{emailId}})",
+                    "style": "bodyText"
+                  },
+                  "{{/ifIndividual}}",
+                  "{{^ifIndividual}}",
+                  {
+                    "text": "{{institutionName}}, {{complainantAddress}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Authorized Signatory – {{nameOfAuthorizedSignatory}}, {{designationOfAuthorizedSignatory}}",
+                    "style": "bodyText"
+                  },
+                  "{{/ifIndividual}}",
+                  "{{#isPartyInPerson}}",
+                  {
+                    "text": "by Self",
+                    "style": "bodyText"
+                  },
+                  "{{/isPartyInPerson}}",
+                  "{{^isPartyInPerson}}",
+                  {
+                    "text": "by {{advocateName}}, Bar ID - {{barId}}, Phone Number - {{advocatePhoneNumber}}",
+                    "style": "bodyText"
+                  },
+                  "{{/isPartyInPerson}}",
+                  {
+                    "text": "Accused:",
+                    "style": "title"
+                  },
+                  "{{#ifAccusedIndividual}}",
+
+                  {
+                    "text": "{{accusedName}}:",
+                    "style": "bodyText",
+                    "bold": true
+                  },
+                  {
+                    "text": "Approximate Age: {{accusedAge}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{accusedAddress}} (Mobile No. {{accusedPhoneNumber}}; Email. {{accusedEmailId}})",
+                    "style": "bodyText"
+                  },
+                  "{{/ifAccusedIndividual}}",
+                  "{{^ifAccusedIndividual}}",
+                  {
+                    "text": "{{accusedInstitutionName}}, {{accusedAddress}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Authorized Signatory – {{nameOfAccusedAuthorizedSignatory}}, {{designationOfAccusedAuthorizedSignatory}}",
+                    "style": "bodyText"
+                  },
+                  "{{/ifAccusedIndividual}}",
+                  {
+                    "text": "COMPLAINT FILED UNDER SECTION 138 and 142 OF THE NEGOTIABLE INSTRUMENTS ACT",
+                    "style": "complaintHeader",
+                    "decoration": "underline"
+                  },
+                  {
+                    "text": "The Complainant most respectfully submit as follows :",
+                    "style": "complaintSubHeader"
+                  },
+
+                  {
+                    "ol": [
+                      {
+                        "text": "{{complaint}}",
+                        "style": "bodyText"
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Prayer",
+                    "style": "title",
+                    "decoration": "underline"
+                  },
+                  {
+                    "text": "The accused may be prosecuted and punished for the offense punishable under the Section 138 of the Negotiable Instruments Act, 1881.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Verification",
+                    "style": "title",
+                    "decoration": "underline"
+                  },
+                  {
+                    "text": "All the facts stated above are true and correct to the best of my knowledge, information and belief. The physical/electronic record of the digital documents etc. produced by me as appended below are in my lawful and proper custody and possession.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Dated the {{dateOfFiling}}",
+                    "style": "date"
+                  },
+                  {
+                    "table": {
+                      "widths": ["50%", "50%"],
+                      "body": [
+                        [
+                          {
+                            "stack": [
+                              {
+                                "text": "Complainant Signature",
+                                "style": "signature",
+                                "alignment": "left"
+                              }
+                            ]
+                          },
+                          {
+                            "stack": [
+                              {
+                                "text": "Advocate Signature",
+                                "style": "signature",
+                                "alignment": "right"
+                              }
+                            ]
+                          }
+                        ]
+                      ]
+                    },
+                    "layout": "noBorders"
+                  },
+                  {
+                    "text": "List of Documents:",
+                    "style": "title",
+                    "decoration": "underline"
+                  },
+                  {
+                    "ol": [
+                      "{{#documentList}}",
+                      {
+                        "text": "{{.}}",
+                        "style": "bodyText"
+                      },
+                      "{{/documentList}}"
+                    ],
+                    "style": "list"
+                  },
+                  {
+                    "text": "Witness schedule",
+                    "style": "title",
+                    "decoration": "underline"
+                  },
+                  {
+                    "style": "table",
+                    "table": {
+                      "widths": ["10%", "15%", "15%", "15%", "15%", "15%", "15%"],
+                      "body": [
+                        [
+                          {
+                            "text": "S. No.",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Name",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Occupation",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Phone Number",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "E-Mail",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Address",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Additional Details",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{#witnessScheduleList}}",
+                        [
+                          {
+                            "text": "{{index}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{witnessName}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{witnessOccupation}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{witnessPhoneNumber}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{witnessEmail}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{witnessAddress}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{witnessAdditionalDetails}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/witnessScheduleList}}"
+                      ]
+                    }
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 0, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 18,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 10, 0, 0]
+      },
+      "subHeader": {
+        "fontSize": 16,
+        "alignment": "center",
+        "margin": [0, 10, 0, 0]
+      },
+      "title": {
+        "fontSize": 14,
+        "bold": true,
+        "margin": [0, 30, 0, 5]
+      },
+      "complaintHeader": {
+        "fontSize": 18,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 30, 0, 20]
+      },
+      "complaintSubHeader": {
+        "fontSize": 13,
+        "margin": [0, 5, 0, 20]
+      },
+      "bodyText": {
+        "fontSize": 13,
+        "margin": [0, 3, 0, 3]
+      },
+      "date": {
+        "fontSize": 13,
+        "margin": [0, 20, 0, 3]
+      },
+      "signature": {
+        "fontSize": 13,
+        "margin": [0, 55, 0, 3]
+      },
+      "table": {
+        "margin": [0, 15, 0, 0]
+      }
+    }
+  }
+}

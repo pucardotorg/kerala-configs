@@ -1,0 +1,66 @@
+serviceMaps:
+  serviceName: payment-calculator
+  mappings:
+    - version: 1.0
+      description: Persists Postal details in tables
+      fromTopic: postal-hub-create
+      isTransaction: true
+      isAuditEnabled: true
+      module: PAYMENT-CALCULATOR
+      objecIdJsonPath: $.hubId
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: PostalHubs.*
+      queryMaps:
+      - query: INSERT INTO postal_hub(hub_id, name, pincode, classification, created_by, last_modified_by, created_time, last_modified_time, row_version, tenant_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        basePath: PostalHubs.*
+        jsonMaps:
+          - jsonPath: $.PostalHubs.*.hubId
+
+          - jsonPath: $.PostalHubs.*.name
+
+          - jsonPath: $.PostalHubs.*.pincode
+
+          - jsonPath: $.PostalHubs.*.classification
+
+          - jsonPath: $.PostalHubs.*.auditDetails.createdBy
+
+          - jsonPath: $.PostalHubs.*.auditDetails.lastModifiedBy
+
+          - jsonPath: $.PostalHubs.*.auditDetails.createdTime
+
+          - jsonPath: $.PostalHubs.*.auditDetails.lastModifiedTime
+
+          - jsonPath: $.PostalHubs.*.rowVersion
+
+          - jsonPath: $.PostalHubs.*.tenantId
+
+    - version: 1.0
+      description: Update postal details in table
+      fromTopic: postal-hub-update
+      isTransaction: true
+      isAuditEnabled: true
+      module: PAYMENT-CALCULATOR
+      objecIdJsonPath: $.hubId
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: PostalHubs.*
+      queryMaps:
+        - query: UPDATE postal_hub SET name =?, pincode =?,created_by =?, last_modified_by =?, created_time =?, last_modified_time =?, row_version =?, tenant_id =? WHERE hub_id=?;
+          basePath: PostalHubs.*
+          jsonMaps:
+                - jsonPath: $.PostalHubs.*.name
+
+                - jsonPath: $.PostalHubs.*.pincode
+
+                - jsonPath: $.PostalHubs.*.auditDetails.createdBy
+
+                - jsonPath: $.PostalHubs.*.auditDetails.lastModifiedBy
+
+                - jsonPath: $.PostalHubs.*.auditDetails.createdTime
+
+                - jsonPath: $.PostalHubs.*.auditDetails.lastModifiedTime
+
+                - jsonPath: $.PostalHubs.*.rowVersion
+
+                - jsonPath: $.PostalHubs.*.tenantId
+
+                - jsonPath: $.PostalHubs.*.hubId

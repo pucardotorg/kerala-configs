@@ -1,0 +1,78 @@
+serviceMaps:
+  serviceName: TransactionService
+  mappings:
+    - version: 1.0
+      description: Persists transaction details
+      fromTopic: save-sbi-transaction-details
+      isTransaction: true
+      isAuditEnabled: true
+      module: SBIPAYMENT
+      objecIdJsonPath: $.MerchantOrderNumber
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: TransactionDetails
+      queryMaps:
+        - query: INSERT INTO transaction_details (merchant_id, operating_mode, merchant_country, merchant_currency, posting_amount, other_details, aggregator_id, merchant_order_number, merchant_customer_id, pay_mode, access_medium, transaction_source, created_by, last_modified_by, created_time, last_modified_time, tenant_id, bill_id, total_due, business_service, service_number, payer_name, paid_by, mobile_number, amount_details) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? , ?);
+          basePath: TransactionDetails
+          jsonMaps:
+            - jsonPath: $.TransactionDetails.MerchantId
+            - jsonPath: $.TransactionDetails.OperatingMode
+            - jsonPath: $.TransactionDetails.MerchantCountry
+            - jsonPath: $.TransactionDetails.MerchantCurrency
+            - jsonPath: $.TransactionDetails.PostingAmount
+            - jsonPath: $.TransactionDetails.OtherDetails
+            - jsonPath: $.TransactionDetails.AggregatorId
+            - jsonPath: $.TransactionDetails.MerchantOrderNumber
+            - jsonPath: $.TransactionDetails.MerchantCustomerId
+            - jsonPath: $.TransactionDetails.PayMode
+            - jsonPath: $.TransactionDetails.AccessMedium
+            - jsonPath: $.TransactionDetails.TransactionSource
+            - jsonPath: $.TransactionDetails.AuditDetails.createdBy
+            - jsonPath: $.TransactionDetails.AuditDetails.lastModifiedBy
+            - jsonPath: $.TransactionDetails.AuditDetails.createdTime
+            - jsonPath: $.TransactionDetails.AuditDetails.lastModifiedTime
+            - jsonPath: $.TransactionDetails.tenantId
+            - jsonPath: $.TransactionDetails.billId
+            - jsonPath: $.TransactionDetails.totalDue
+            - jsonPath: $.TransactionDetails.businessService
+            - jsonPath: $.TransactionDetails.serviceNumber
+            - jsonPath: $.TransactionDetails.payerName
+            - jsonPath: $.TransactionDetails.paidBy
+            - jsonPath: $.TransactionDetails.mobileNumber
+            - jsonPath: $.TransactionDetails.amountDetails
+              type: JSON
+              dbType: JSONB
+
+    - version: 1.0
+      description: Updates transaction details
+      fromTopic: update-sbi-transaction-details
+      isTransaction: true
+      isAuditEnabled: true
+      module: SBIPAYMENT
+      objecIdJsonPath: $.MerchantOrderNumber
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: TransactionDetails
+      queryMaps:
+        - query: UPDATE transaction_details SET last_modified_by = ?, last_modified_time = ?, transaction_status = ?, sbi_epay_ref_id = ?, reason = ?, bank_code = ?, bank_reference_number = ?, transaction_date = ?, cin = ?, total_fee_gst = ?, row_number = ?, ref1 = ?, ref2 = ?, ref3 = ?, ref4 = ?, ref5 = ?, ref6 = ?, ref7 = ?, ref8 = ?, ref9 = ? WHERE merchant_order_number = ?;
+          basePath: TransactionDetails
+          jsonMaps:
+            - jsonPath: $.TransactionDetails.AuditDetails.lastModifiedBy
+            - jsonPath: $.TransactionDetails.AuditDetails.lastModifiedTime
+            - jsonPath: $.TransactionDetails.TransactionStatus
+            - jsonPath: $.TransactionDetails.SBIePayRefId
+            - jsonPath: $.TransactionDetails.Reason
+            - jsonPath: $.TransactionDetails.BankCode
+            - jsonPath: $.TransactionDetails.BankReferenceNumber
+            - jsonPath: $.TransactionDetails.TransactionDate
+            - jsonPath: $.TransactionDetails.CIN
+            - jsonPath: $.TransactionDetails.TotalFeeGST
+            - jsonPath: $.TransactionDetails.rowNumber
+            - jsonPath: $.TransactionDetails.Ref1
+            - jsonPath: $.TransactionDetails.Ref2
+            - jsonPath: $.TransactionDetails.Ref3
+            - jsonPath: $.TransactionDetails.Ref4
+            - jsonPath: $.TransactionDetails.Ref5
+            - jsonPath: $.TransactionDetails.Ref6
+            - jsonPath: $.TransactionDetails.Ref7
+            - jsonPath: $.TransactionDetails.Ref8
+            - jsonPath: $.TransactionDetails.Ref9
+            - jsonPath: $.TransactionDetails.MerchantOrderNumber

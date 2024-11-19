@@ -1,0 +1,90 @@
+{
+  "key": "etreasury-receipt",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.TreasuryPaymentData",
+    "entityIdPath": "$.grn",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "logoImage",
+                "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
+                "type": "image"
+              },
+              {
+                "variable": "grn",
+                "value": {
+                  "path": "$.grn"
+                },
+                "default": ""
+              },
+              {
+                "variable": "bankRefNo",
+                "value": {
+                  "path": "$.bankRefNo"
+                },
+                "default": ""
+              },
+              {
+                "variable": "status",
+                "value": {
+                  "path": "$.status"
+                },
+                "default": ""
+              },
+              {
+                "variable": "amount",
+                "value": {
+                  "path": "$.amount"
+                },
+                "default": ""
+              },
+              {
+                "variable": "remarks",
+                "value": {
+                  "path": "$.remarks"
+                },
+                "default": ""
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                },
+                "default": ""
+              },
+              {
+                "variable": "paidBy",
+                "value": {
+                  "path": "$.paidBy"
+                },
+                "default": ""
+              },
+              {
+                "variable": "mobileNumber",
+                "value": {
+                  "path": "$.mobileNumber"
+                },
+                "default": ""
+              },
+              {
+                "variable": "challanTimestamp",
+                "value": {
+                  "path": "$.challanTimestamp"
+                },
+                "default": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+

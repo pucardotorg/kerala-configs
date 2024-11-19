@@ -1,0 +1,47 @@
+serviceMaps:
+  serviceName: scheduler-services
+  mappings:
+    - version: 1.0
+      description: Persists Judge calendar details in table
+      fromTopic: judge-calendar-update
+      isTransaction: true
+      isAuditEnabled: true
+      module: SCHEDULER
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: JudgeCalendarRule.*
+      queryMaps:
+        - query: INSERT INTO judge_calendar_rules (judge_id, id, rule_type, date, notes, created_by, last_modified_by, created_time, last_modified_time, row_version, tenant_id) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?) ON CONFLICT (judge_id, date) DO UPDATE SET rule_type = ?, notes = ? ,last_modified_by =?, last_modified_time =? ,row_version =judge_calendar_rules.row_version +1 ,tenant_id =?;
+          basePath: JudgeCalendarRule.*
+          jsonMaps:
+            - jsonPath: $.JudgeCalendarRule.*.judgeId
+
+            - jsonPath: $.JudgeCalendarRule.*.id
+
+            - jsonPath: $.JudgeCalendarRule.*.ruleType
+
+            - jsonPath: $.JudgeCalendarRule.*.date
+
+            - jsonPath: $.JudgeCalendarRule.*.notes
+
+            - jsonPath: $.JudgeCalendarRule.*.auditDetails.createdBy
+
+            - jsonPath: $.JudgeCalendarRule.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.JudgeCalendarRule.*.auditDetails.createdTime
+
+            - jsonPath: $.JudgeCalendarRule.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.JudgeCalendarRule.*.rowVersion
+
+            - jsonPath: $.JudgeCalendarRule.*.tenantId
+
+            - jsonPath: $.JudgeCalendarRule.*.ruleType
+
+            - jsonPath: $.JudgeCalendarRule.*.notes
+
+            - jsonPath: $.JudgeCalendarRule.*.auditDetails.lastModifiedBy
+
+            - jsonPath: $.JudgeCalendarRule.*.auditDetails.lastModifiedTime
+
+            - jsonPath: $.JudgeCalendarRule.*.tenantId

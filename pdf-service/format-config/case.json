@@ -1,0 +1,983 @@
+{
+  "key": "case",
+  "config": {
+    "pageSize": "A4",
+    "defaultStyle": {
+      "font": "Cambay"
+    },
+    "content": [
+
+      {
+        "text": "IN THE COURT OF {{courtName}}",
+        "style": "header"
+      },
+      {
+        "text": "CASE NUMBER {{caseNumber}} of {{caseYear}}",
+        "style": "subheader"
+      },
+      {
+        "text": "FILING NUMBER {{filingNumber}}",
+        "style": "subheader"
+      },
+      {
+        "text": "CASE FILED UNDER {{sectionNumber}}",
+        "style": "subheader"
+      },
+
+      {
+        "text": "Litigant Details",
+        "style": "sectionHeader"
+      },
+
+      {
+        "text": "Complainant Details",
+        "style": "subsectionHeader"
+      },
+      "{{#complainants}}",
+      {
+        "text": "Complainant {{index}}",
+        "style": "tableHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      {
+        "table": {
+          "widths": [
+            150,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Complainant Type",
+                "style": "tableData"
+              },
+              {
+                "text": "{{complainantType}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Name",
+                "style": "tableData"
+              },
+              {
+                "text": "{{name}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Representative’s Name",
+                "style": "tableData"
+              },
+              {
+                "text": "{{representativeName}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Phone Number",
+                "style": "tableData"
+              },
+              {
+                "text": "{{phoneNumber}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Address",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#address}} {{address.locality}}, {{address.city}}, {{address.district}}, {{address.pincode}}, {{address.state}} {{/address}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Company Name",
+                "style": "tableData"
+              },
+              {
+                "text": "{{companyName}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Company Address",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#companyAddress}} {{companyAddress.locality}}, {{companyAddress.city}}, {{companyAddress.district}}, {{companyAddress.pincode}}, {{companyAddress.state}} {{/companyAddress}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Authorisation for Representative",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#companyDetailsFileStore}} See at back {{/companyDetailsFileStore}}",
+                "style": "tableData"
+              }
+            ]
+          ],
+          "border": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "text": "",
+        "margin": [0, 0, 0, 20]
+      },
+      "{{/complainants}}",
+
+      {
+        "text": "Respondent Details",
+        "style": "subsectionHeader"
+      },
+      "{{#respondents}}",
+      {
+        "text": "Respondent {{index}}",
+        "style": "tableHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      {
+        "table": {
+          "widths": [
+            150,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Respondent Type",
+                "style": "tableData"
+              },
+              {
+                "text": "{{respondentType}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Name",
+                "style": "tableData"
+              },
+              {
+                "text": "{{name}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Phone Number",
+                "style": "tableData"
+              },
+              {
+                "text": "{{phoneNumber}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Address",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#address}} {{locality}}, {{city}}, {{district}}, {{pincode}}, {{state}} {{/address}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Email",
+                "style": "tableData"
+              },
+              {
+                "text": "{{email}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "202 Inquiry Affidavit",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#inquiryAffidavitFileStore}} See at back {{/inquiryAffidavitFileStore}}",
+                "style": "tableData"
+              }
+            ]
+          ],
+          "border": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "text": "",
+        "margin": [0, 0, 0, 20]
+      },
+      "{{/respondents}}",
+
+      {
+        "text": "Case Specific Details",
+        "style": "sectionHeader"
+      },
+
+      {
+        "text": "Cheque Details",
+        "style": "subsectionHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      "{{#chequeDetails}}",
+      {
+        "text": "Cheque {{index}}",
+        "style": "tableHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      {
+        "table": {
+          "widths": [
+            150,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Signatory Name",
+                "style": "tableData"
+              },
+              {
+                "text": "{{signatoryName}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Name on Cheque",
+                "style": "tableData"
+              },
+              {
+                "text": "{{nameOnCheque}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Cheque Number",
+                "style": "tableData"
+              },
+              {
+                "text": "{{chequeNumber}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Date of Issuance",
+                "style": "tableData"
+              },
+              {
+                "text": "{{dateOfIssuance}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Bank Name",
+                "style": "tableData"
+              },
+              {
+                "text": "{{bankName}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "IFSC Code",
+                "style": "tableData"
+              },
+              {
+                "text": "{{ifscCode}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Cheque Amount",
+                "style": "tableData"
+              },
+              {
+                "text": "{{chequeAmount}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Date of Deposit",
+                "style": "tableData"
+              },
+              {
+                "text": "{{dateOfDeposit}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Deposit Cheque File",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#depositChequeFileStore}} See at back {{/depositChequeFileStore}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Return Memo File",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#returnMemoFileStore}} See at back {{/returnMemoFileStore}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Additional Details",
+                "style": "tableData"
+              },
+              {
+                "text": "{{chequeAdditionalDetails}}",
+                "style": "tableData"
+              }
+            ]
+          ],
+          "border": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "text": "",
+        "margin": [0, 0, 0, 20]
+      },
+      "{{/chequeDetails}}",
+
+      {
+        "text": "Debt Liability Details",
+        "style": "subsectionHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      "{{#debtLiabilityDetails}}",
+      {
+        "table": {
+          "widths": [
+            150,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Nature of Debt",
+                "style": "tableData"
+              },
+              {
+                "text": "{{natureOfDebt}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Total Amount Covered By Cheque",
+                "style": "tableData"
+              },
+              {
+                "text": "{{totalAmountCoveredByCheque}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Proof of Liability",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#proofOfLiabilityFileStore}} See at back {{/proofOfLiabilityFileStore}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Additional Details",
+                "style": "tableData"
+              },
+              {
+                "text": "{{additionalDetails}}",
+                "style": "tableData"
+              }
+            ]
+          ],
+          "border": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "text": "",
+        "margin": [0, 0, 0, 20]
+      },
+      "{{/debtLiabilityDetails}}",
+
+      {
+        "text": "Demand Notice Details",
+        "style": "subsectionHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      "{{#demandNoticeDetails}}",
+      {
+        "text": "Demand Notice {{index}}",
+        "style": "tableHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      {
+        "table": {
+          "widths": [
+            150,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Mode of Dispatch",
+                "style": "tableData"
+              },
+              {
+                "text": "{{modeOfDispatch}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Date of Issuance",
+                "style": "tableData"
+              },
+              {
+                "text": "{{dateOfIssuance}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Date of Dispatch",
+                "style": "tableData"
+              },
+              {
+                "text": "{{dateOfDispatch}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Legal Demand Notice",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#legalDemandNoticeFileStore}} See at back {{/legalDemandNoticeFileStore}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Proof of Dispatch",
+                "style": "tableData"
+              },
+              {
+                "text": "{{proofOfDispatchFileStore}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Proof of Service",
+                "style": "tableData"
+              },
+              {
+                "text": "{{proofOfService}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Date of Deemed Service",
+                "style": "tableData"
+              },
+              {
+                "text": "{{dateOfDeemedService}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Date of Accrual",
+                "style": "tableData"
+              },
+              {
+                "text": "{{dateOfAccrual}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Proof of Acknowledgment",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#proofOfAcknowledgmentFileStore}} See at back {{/proofOfAcknowledgmentFileStore}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Reply Received",
+                "style": "tableData"
+              },
+              {
+                "text": "{{replyReceived}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Date of Reply",
+                "style": "tableData"
+              },
+              {
+                "text": "{{dateOfReply}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Proof of Reply",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#proofOfReplyFileStore}} See at back {{/proofOfReplyFileStore}}",
+                "style": "tableData"
+              }
+            ]
+          ],
+          "border": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "text": "",
+        "margin": [0, 0, 0, 20]
+      },
+      "{{/demandNoticeDetails}}",
+
+      {
+        "text": "Delay Condonation Details",
+        "style": "subsectionHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      "{{#delayCondonationDetails}}",
+      {
+        "table": {
+          "widths": [
+            150,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Reason for Delay",
+                "style": "tableData"
+              },
+              {
+                "text": "{{reasonForDelay}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Delay Condonation File",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#delayCondonationFileStore}} See at back {{/delayCondonationFileStore}}",
+                "style": "tableData"
+              }
+            ]
+          ],
+          "border": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "text": "",
+        "margin": [0, 0, 0, 20]
+      },
+      "{{/delayCondonationDetails}}",
+
+      {
+        "text": "Additional Details",
+        "style": "sectionHeader"
+      },
+
+
+      {
+        "text": "Prayer and Sworn Statement Details",
+        "style": "subsectionHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      "{{#prayerSwornStatementDetails}}",
+      {
+        "table": {
+          "widths": [
+            150,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Prayer and Sworn Statement Type",
+                "style": "tableData"
+              },
+              {
+                "text": "{{prayerAndSwornStatementType}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Whether Complainant Willing to Settle",
+                "style": "tableData"
+              },
+              {
+                "text": "{{whetherComplainantWillingToSettle}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Circumstances Under Which Complainant Willing to Settle",
+                "style": "tableData"
+              },
+              {
+                "text": "{{circumstancesUnderWhichComplainantWillingToSettle}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Memorandum of Complaint Text",
+                "style": "tableData"
+              },
+              {
+                "text": "{{memorandumOfComplaintText}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Memorandum of Complaint File",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#memorandumOfComplaintFileStore}} See at back {{/memorandumOfComplaintFileStore}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Prayer for Relief Text",
+                "style": "tableData"
+              },
+              {
+                "text": "{{prayerForReliefText}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Prayer for Relief File",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#prayerForReliefFileStore}} See at back {{/prayerForReliefFileStore}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Sworn Statement",
+                "style": "tableData"
+              },
+              {
+                "text": "{{swornStatement}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Additional Details",
+                "style": "tableData"
+              },
+              {
+                "text": "{{additionalDetails}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Additional Acts/Sections to Charge With",
+                "style": "tableData"
+              },
+              {
+                "text": "{{additionalActsSectionsToChargeWith}}",
+                "style": "tableData"
+              }
+            ]
+          ],
+          "border": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "text": "",
+        "margin": [0, 0, 0, 20]
+      },
+      "{{/prayerSwornStatementDetails}}",
+
+      {
+        "text": "Witness Details",
+        "style": "subsectionHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      "{{#witnesses}}",
+      {
+        "text": "Witness {{index}}",
+        "style": "subsectionHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      {
+        "table": {
+          "widths": [
+            150,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Witness Name",
+                "style": "tableData"
+              },
+              {
+                "text": "{{name}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Witness’s Phone Number",
+                "style": "tableData"
+              },
+              {
+                "text": "{{phoneNumber}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Witness’s Email",
+                "style": "tableData"
+              },
+              {
+                "text": "{{email}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Witness’s Address",
+                "style": "tableData"
+              },
+              {
+                "text": "{{#address}} {{locality}}, {{city}}, {{district}}, {{pincode}}, {{state}} {{/address}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Additional Details",
+                "style": "tableData"
+              },
+              {
+                "text": "{{additionalDetails}}",
+                "style": "tableData"
+              }
+            ]
+          ],
+          "border": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "text": "",
+        "margin": [0, 0, 0, 20]
+      },
+      "{{/witnesses}}",
+
+      {
+        "text": "Advocate Details",
+        "style": "subsectionHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      "{{#advocates}}",
+      {
+        "text": "Advocate {{}}",
+        "style": "tableHeader",
+        "margin": [0, 0, 0, 5]
+      },
+      {
+        "table": {
+          "widths": [
+            150,
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Advocate Name",
+                "style": "tableData"
+              },
+              {
+                "text": "{{name}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Advocate’s Bar Registration Number",
+                "style": "tableData"
+              },
+              {
+                "text": "{{barRegistrationNumber}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Vakalatnama",
+                "style": "tableData"
+              },
+              {
+                "text": "{{vakalatnama}}",
+                "style": "tableData"
+              }
+            ],
+            [
+              {
+                "text": "Whether an Advocate is Representing the Complainant",
+                "style": "tableData"
+              },
+              {
+                "text": "{{isRepresenting}}",
+                "style": "tableData"
+              }
+            ]
+          ],
+          "border": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      },
+      {
+        "text": "",
+        "margin": [0, 0, 0, 20]
+      },
+      "{{/advocates}}"
+
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 18,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 10, 0, 5]
+      },
+      "subheader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 10, 0, 5]
+      },
+      "sectionHeader": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 10, 0, 5]      },
+      "subsectionHeader": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 5]
+      },
+      "tableHeader": {
+        "bold": true,
+        "fontSize": 11,
+        "color": "black"
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
+      },
+      "default": {
+        "fontSize": 10,
+        "margin": [0, 5, 0, 5]
+      }
+    }
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "key": "causelist-format",
+  "config": {
+    "pageSize": "A4",
+    "content": [
+      {
+        "image": "{{onCourtsLogo}}",
+        "width": 66.5,
+        "height": 50,
+        "absolutePosition": {
+          "x": 0,
+          "y": 10
+        },
+        "alignment": "right"
+      },
+      {
+        "image": "{{nationalEmblem}}",
+        "width": 50,
+        "height": 50,
+        "absolutePosition": {
+          "x": 30,
+          "y": 10
+        }
+      },
+      {
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "{{courtId}}",
+                "alignment": "center",
+                "color": "black",
+                "style": "court-complex",
+                "border": [
+                  false,
+                  false,
+                  false,
+                  true
+                ]
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "In The Court of: {{judgeName}}, {{designation}}",
+        "alignment": "center",
+        "color": "black",
+        "style": "judge-header"
+      },
+      {
+        "text": "Criminal Cases Listed on {{date}}",
+        "alignment": "center",
+        "color": "black",
+        "style": "criminal-case-header"
+      },
+      {
+        "table": {
+          "widths": [
+            "10%",
+            "20%",
+            "20%",
+            "20%",
+            "30%"
+          ],
+          "headerRows": 1,
+          "body": [
+            [
+              {
+                "text": "SI No.",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Case Type/Case Number/Year",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Parties",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Advocates",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Pending Applications",
+                "style": "table-header",
+                "alignment": "center"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "",
+        "{{#HearingList}}": true
+      },
+      {
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "headerRows": 1,
+          "body": [
+            [
+              {
+                "table": {
+                  "widths": [
+                    "50%",
+                    "50%"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text": "{{slotName}}",
+                        "border": [
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "slot-id"
+                      },
+                      {
+                        "text": "{{slotStartTime}} - {{slotEndTime}}",
+                        "alignment": "right",
+                        "border": [
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "style": "slot-time"
+                      }
+                    ]
+                  ]
+                },
+                "layout": "noBorders"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "",
+        "{{#SlotList}}": true
+      },
+      {
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "headerRows": 1,
+          "body": [
+            [
+              {
+                "table": {
+                  "widths": [
+                    "*"
+                  ],
+                  "body": [
+                    [
+                      {
+                        "text": "{{hearingType}}",
+                        "alignment": "center",
+                        "style": "hearing-type"
+                      }
+                    ]
+                  ]
+                },
+                "layout": "noBorders"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "",
+        "{{#CauseList}}": true
+      },
+      {
+        "table": {
+          "widths": [
+            "10%",
+            "20%",
+            "20%",
+            "20%",
+            "30%"
+          ],
+          "headerRows": 1,
+          "body": [
+            [
+              {
+                "text": "{{index}}",
+                "style": "table-data",
+                "alignment": "center"
+              },
+              {
+                "text": "{{#caseNumber}}{{caseNumber}}{{/caseNumber}}{{^caseNumber}}{{cmpNumber}}{{/caseNumber}}",
+                "style": "table-data",
+                "alignment": "center"
+              },
+              {
+                "text": "{{caseTitle}}",
+                "style": "table-data",
+                "alignment": "center"
+              },
+              {
+                "stack": [
+                  {
+                    "text": "",
+                    "{{#complainantAdvocates}}": true
+                  },
+                  {
+                    "text": "{{.}}"
+                  },
+                  {
+                    "text": "",
+                    "{{/complainantAdvocates}}": true
+                  },
+                  {
+                    "text": " ",
+                    "margin": [
+                      0,
+                      0,
+                      0,
+                      5
+                    ]
+                  },
+                  {
+                    "text": "",
+                    "{{#respondentAdvocates}}": true
+                  },
+                  {
+                    "text": "{{.}}"
+                  },
+                  {
+                    "text": "",
+                    "{{/respondentAdvocates}}": true
+                  }
+                ],
+                "style": "table-data",
+                "alignment": "left"
+              },
+              {
+                "stack": [
+                  {
+                    "text": "",
+                    "{{#applicationNumbers}}": true
+                  },
+                  {
+                    "text": "{{.}}"
+                  },
+                  {
+                    "text": "",
+                    "{{/applicationNumbers}}": true
+                  }
+                ],
+                "style": "table-data",
+                "alignment": "left"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "",
+        "{{/CauseList}}": true
+      },
+      {
+        "text": "",
+        "{{/SlotList}}": true
+      },
+      {
+        "text": "",
+        "{{/HearingList}}": true
+      },
+      {
+        "text": "Disclaimer: This is a system-generated Causelist.",
+        "alignment": "left",
+        "color": "#d029d9",
+        "absolutePosition": {
+          "x": 40,
+          "y": 785
+        }
+      }
+    ],
+    "styles": {
+      "judge-header": {
+        "fontSize": 14,
+        "bold": true,
+        "color": "black",
+        "margin": [
+          10,
+          10,
+          10,
+          20
+        ]
+      },
+      "criminal-case-header": {
+        "fontSize": 12,
+        "bold": true,
+        "color": "black",
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ]
+      },
+      "court-complex": {
+        "fontSize": 16,
+        "bold": true,
+        "color": "black",
+        "margin": [
+          0,
+          50,
+          0,
+          30
+        ]
+      },
+      "table-header": {
+        "fontSize": 10,
+        "bold": true,
+        "color": "white",
+        "fillColor": "#088F8F",
+        "alignment": "center",
+        "margin": [
+          5,
+          5,
+          5,
+          5
+        ]
+      },
+      "table-data": {
+        "fontSize": 10,
+        "color": "black",
+        "alignment": "center",
+        "margin": [
+          5,
+          5,
+          5,
+          5
+        ]
+      },
+      "slot-id": {
+        "fontSize": 12,
+        "bold": true,
+        "color": "black"
+      },
+      "slot-time": {
+        "fontSize": 12,
+        "color": "black"
+      },
+      "hearing-type": {
+        "fontSize": 12,
+        "bold": true,
+        "color": "#555"
+      }
+    }
+  }
+}
