@@ -10,11 +10,11 @@
               {
                 "stack": [
                   {
-                    "text": "BEFORE THE COURT OF {{courtName}}, {{place}}",
+                    "text": "{{courtName}}, {{place}}",
                     "style": "header"
                   },
                   {
-                    "text": "{{cmpNumber}}",
+                    "text": "Filing No. {{filingNumber}}",
                     "style": "subHeader"
                   },
                   {
