@@ -67,9 +67,15 @@
                 }
               },
               {
-                "variable": "courtSeal",
+                "variable": "orderHeading",
                 "value": {
-                  "path": "$.courtSeal"
+                  "path": "$.orderHeading"
+                }
+              },
+              {
+                "variable": "judgeDesignation",
+                "value": {
+                  "path": "$.judgeDesignation"
                 }
               }
             ]
