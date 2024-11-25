@@ -71,6 +71,18 @@
                 "value": {
                   "path": "$.judgeName"
                 }
+              },
+              {
+                "variable": "orderHeading",
+                "value": {
+                  "path": "$.orderHeading"
+                }
+              },
+              {
+                "variable": "judgeDesignation",
+                "value": {
+                  "path": "$.judgeDesignation"
+                }
               }
             ]
           }
