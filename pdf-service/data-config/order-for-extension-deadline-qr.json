@@ -137,6 +137,18 @@
                 "value": {
                   "path": "$.qrCodeUrl"
                 }
+              },
+              {
+                "variable": "orderHeading",
+                "value": {
+                  "path": "$.orderHeading"
+                }
+              },
+              {
+                "variable": "judgeDesignation",
+                "value": {
+                  "path": "$.judgeDesignation"
+                }
               }
             ]
           },
