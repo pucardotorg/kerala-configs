@@ -13,7 +13,7 @@ serviceMaps:
       auditAttributeBasePath: application
       queryMaps:
 
-        - query: INSERT INTO dristi_application(id, tenantId, application_details, reason_for_application, caseId, filingNumber, cmpNumber,cnrNumber, referenceId, createdDate, applicationCreatedBy, onBehalfOf, applicationType, applicationNumber, statuteSection,issuedBy, status, comment, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_application(id, tenantId, application_details, reason_for_application, caseId, filingNumber, cmpNumber,cnrNumber, referenceId, applicationCMPNumber, createdDate, applicationCreatedBy, onBehalfOf, applicationType, applicationNumber, statuteSection,issuedBy, status, comment, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: application
           jsonMaps:
             - jsonPath: $.application.id
@@ -27,6 +27,7 @@ serviceMaps:
             - jsonPath: $.application.cmpNumber
             - jsonPath: $.application.cnrNumber
             - jsonPath: $.application.referenceId
+            - jsonPath: $.application.applicationCMPNumber
             - jsonPath: $.application.createdDate
             - jsonPath: $.application.createdBy
             - jsonPath: $.application.onBehalfOf
@@ -76,7 +77,7 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: application
       queryMaps:
-        - query: UPDATE dristi_application SET tenantId=?, application_details=?, reason_for_application=?, caseId=?,filingNumber=?,cnrNumber=?,referenceId=?,createdDate=?,applicationCreatedBy=?,onBehalfOf=?,applicationType=?,applicationNumber=?,statuteSection=?,issuedBy=?,status=?,comment=?,isActive=?,additionalDetails=?,lastModifiedBy=?,lastModifiedTime=? WHERE id=? ;
+        - query: UPDATE dristi_application SET tenantId=?, application_details=?, reason_for_application=?, caseId=?,filingNumber=?,cnrNumber=?,applicationCMPNumber=?,referenceId=?,createdDate=?,applicationCreatedBy=?,onBehalfOf=?,applicationType=?,applicationNumber=?,statuteSection=?,issuedBy=?,status=?,comment=?,isActive=?,additionalDetails=?,lastModifiedBy=?,lastModifiedTime=? WHERE id=? ;
           basePath: application
           jsonMaps:
             - jsonPath: $.application.tenantId
@@ -87,6 +88,7 @@ serviceMaps:
             - jsonPath: $.application.caseId
             - jsonPath: $.application.filingNumber
             - jsonPath: $.application.cnrNumber
+            - jsonPath: $.application.applicationCMPNumber
             - jsonPath: $.application.referenceId
             - jsonPath: $.application.createdDate
             - jsonPath: $.application.createdBy
@@ -136,10 +138,11 @@ serviceMaps:
       transactionCodeJsonPath: $.applicationNumber
       auditAttributeBasePath: application
       queryMaps:
-        - query: UPDATE dristi_application SET status = ?, lastmodifiedby = ?,  lastmodifiedtime = ? WHERE applicationNumber=?;
+        - query: UPDATE dristi_application SET status = ?, applicationCMPNumber=?,lastmodifiedby = ?,  lastmodifiedtime = ? WHERE applicationNumber=?;
           basePath: application
           jsonMaps:
             - jsonPath: $.application.status
+            - jsonPath: $.application.applicationCMPNumber
             - jsonPath: $.application.auditDetails.lastModifiedBy
             - jsonPath: $.application.auditDetails.lastModifiedTime
             - jsonPath: $.application.applicationNumber
