@@ -46,6 +46,10 @@ ServiceMaps:
                 outJsonPath: $.Data.auditDetails.lastModifiedTime
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.advocateDetails.additionalDetails
+              - inJsonPath: $.currentProcessInstance
+                outJsonPath: $.Data.currentProcessInstance
+              - inJsonPath: $.currentProcessInstance.state.uuid
+                outJsonPath: $.Data.status
             externalUriMapping:
               - path: http://egov-workflow-v2.pucar-prod:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
@@ -187,6 +191,10 @@ ServiceMaps:
                 outJsonPath: $.Data.auditDetails.lastModifiedTime
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.advocateDetails.additionalDetails
+              - inJsonPath: $.currentProcessInstance
+                outJsonPath: $.Data.currentProcessInstance
+              - inJsonPath: $.currentProcessInstance.state.uuid
+                outJsonPath: $.Data.status
             externalUriMapping:
               - path: http://egov-workflow-v2.pucar-prod:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
