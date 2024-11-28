@@ -19,7 +19,8 @@
               "action": "CREATE",
               "nextState": "IN_PROGRESS",
               "roles": [
-                "TASK_CREATOR"
+                "TASK_CREATOR",
+                "PENDING_TASK_CREATOR"
               ]   
             }
           ]

@@ -88,15 +88,6 @@
           "actions": [
             {
               "action": "E-SIGN",
-              "nextState": "PENDING_PAYMENT",
-              "roles": [
-                "CASE_CREATOR",
-                "SYSTEM",
-                "SYSTEM_ADMIN"
-              ]    
-            },
-            {
-              "action": "E-SIGN-2",
               "nextState": "PENDING_E-SIGN-2",
               "roles": [
                 "CASE_CREATOR",
@@ -281,20 +272,11 @@
           "actions": [
             {
               "action": "E-SIGN",
-              "nextState": "UNDER_SCRUTINY",
+              "nextState": "PENDING_RE_E-SIGN-2",
               "roles": [
                 "SYSTEM",
                 "SYSTEM_ADMIN",
                 "CASE_CREATOR"
-              ]    
-            },
-            {
-              "action": "E-SIGN-2 ",
-              "nextState": "PENDING_RE_E-SIGN-2",
-              "roles": [
-                "CASE_CREATOR",
-                "SYSTEM",
-                "SYSTEM_ADMIN"
               ]    
             },
             {
@@ -402,6 +384,7 @@
               "action": "RESPOND",
               "nextState": "PENDING_ADMISSION",
               "roles": [
+                "CASE_RESPONDER",
                 "SYSTEM",
                 "SYSTEM_ADMIN"
               ]    
