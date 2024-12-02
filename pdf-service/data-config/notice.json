@@ -4,7 +4,7 @@
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$.summonsPdf",
-    "entityIdPath": "$.cnrNumber",
+    "entityIdPath": "$.cmpNumber",
     "isCommonTableBorderRequired": true,
     "mappings": [
       {
@@ -13,9 +13,9 @@
           {
             "direct": [
               {
-                "variable": "cnrNumber",
+                "variable": "cmpNumber",
                 "value": {
-                  "path": "$.cnrNumber",
+                  "path": "$.cmpNumber",
                   "defaultValue": "NA"
                 }
               },
@@ -37,6 +37,13 @@
                 "variable": "filingNumber",
                 "value": {
                   "path": "$.filingNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "respondentAddress",
+                "value": {
+                  "path": "$.respondentAddress",
                   "defaultValue": "NA"
                 }
               },
