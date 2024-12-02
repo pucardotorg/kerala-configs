@@ -164,7 +164,7 @@
           "body": [
             [
               {
-                "text": "Visit https://oncourts.kerala.gov.in/ for more information",
+                "text": "Visit {{courtUrl}} for more information",
                 "style": "footer-body",
                 "decoration": "underline"
               }
@@ -240,7 +240,7 @@
           "body": [
             [
               {
-                "text": "Please see below for further information about the private complaint against you ({{cmpNumber}}). You can also find this information and related documents on https://oncourts.kerala.gov.in/ (hereinafter referred to as “Portal”).",
+                "text": "Please see below for further information about the private complaint against you ({{cmpNumber}}). You can also find this information and related documents on {{courtUrl}} (hereinafter referred to as “Portal”).",
                 "style": "annexure-content"
               }
             ],
@@ -279,7 +279,7 @@
                         "bold": true
                       },
                       {
-                        "text": "You may hire a lawyer to represent yourself or appear as a party in person, which means you represent yourself in court proceedings. Please visit Kerala Bar Council website https://www.barcouncilkerala.org/lawyer-registry-list for a contact directory of lawyers.",
+                        "text": "You may hire a lawyer to represent yourself or appear as a party in person, which means you represent yourself in court proceedings. Please visit Kerala Bar Council website {{barCouncilUrl}} for a contact directory of lawyers.",
                         "style": "annexure-content"
                       }
                     ]
@@ -341,7 +341,7 @@
             ],
             [
               {
-                "text": " If you have any questions or need help, please visit your nearest e-Sewa Kendra or contact 0474-2919099",
+                "text": " If you have any questions or need help, please visit your nearest e-Sewa Kendra or contact {{courtContact}}",
                 "style": "annexure-content"
               }
             ],
@@ -355,7 +355,7 @@
               {
                 "text": [
                   {
-                    "text": "The court gets a notification when you open this summons or click on any of the above links. This information is only accessible to the Judiciary, and will be used only for the purpose of determining whether you received and viewed this communication, in accordance with this ",
+                    "text": "The court gets a notification when you open and login through the above links. This information is only accessible to the Judiciary in accordance with this ",
                     "style": "annexure-content"
                   },
                   {
