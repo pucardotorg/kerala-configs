@@ -94,13 +94,13 @@
             ],
             [
               {
-                "text": "And that this court shall hear on the question of taking cognisance of the said offence on the day of {{hearingDate}}. You are at liberty to show cause why this court should not take cognizance of the said complaint. ",
+                "text": "And that this court shall hear on the question of taking cognisance of the said offence on the {{hearingDate}}. You are at liberty to show cause why this court should not take cognizance of the said complaint. ",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": "Given under my hand and the seal of the Court, on this day of {{issueDate}}.",
+                "text": "Given under my hand and the seal of the Court, on this {{issueDate}}.",
                 "style": "form-sub-body"
               }
             ]
@@ -123,7 +123,7 @@
           "body": [
             [
               {
-                "text": "Seal of the Court",
+                "text": "(Seal of Court)",
                 "style": "closing-seal"
               }
             ],
@@ -264,7 +264,7 @@
             ],
             [
               {
-                "text": "2. What to do next if you wish to contest the case filed against you?",
+                "text": "2. What to do next if you wish to show cause to the court not to take cognisance of this case?",
                 "style": "annexure-sub-header"
               }
             ],
@@ -310,7 +310,8 @@
                       }
                     ]
                   }
-                ]
+                ],
+                "style": "annexure-sub-content"
               }
             ],
             [
@@ -330,7 +331,8 @@
                     "text": "If you choose to settle the dispute, you may inform the court after joining the case on the Portal on the intended day of hearing.",
                     "style": "annexure-text"
                   }
-                ]
+                ],
+                "style": "annexure-sub-content"
               }
             ],
             [
@@ -522,6 +524,14 @@
       "annexure-content": {
         "fontSize": 11,
         "color": "#252525"
+      },
+      "annexure-sub-content": {
+        "margin": [
+          20,
+          0,
+          0,
+          5
+        ]
       }
     }
   }
