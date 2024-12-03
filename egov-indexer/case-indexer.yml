@@ -64,6 +64,8 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.caseCategory
               - inJsonPath: $.natureOfPleading
                 outJsonPath: $.Data.caseDetails.natureOfPleading
+              - inJsonPath: $.advocateCount
+                outJsonPath: $.Data.caseDetails.advocateCount
               - inJsonPath: $.status
                 outJsonPath: $.Data.caseDetails.status
               - inJsonPath: $.isActive
@@ -173,6 +175,8 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.stage
               - inJsonPath: $.substage
                 outJsonPath: $.Data.caseDetails.substage
+              - inJsonPath: $.advocateCount
+                outJsonPath: $.Data.caseDetails.advocateCount
               - inJsonPath: $.filingDate
                 outJsonPath: $.Data.caseDetails.filingDate
               - inJsonPath: $.registrationDate
