@@ -17,7 +17,7 @@
               {
                 "stack": [
                   {
-                    "text": "NOTICE TO ACCUSED",
+                    "text": "Notice to Accused",
                     "style": "form-sub-header",
                     "alignment": "center"
                   },
@@ -31,7 +31,7 @@
                     "style": "form-sub-header"
                   },
                   {
-                    "text": "E-Filing Number  {{filingNumber}}",
+                    "text": "CMP No. {{cmpNumber}}",
                     "style": "form-sub-header",
                     "alignment": "center"
                   }
@@ -70,13 +70,37 @@
             ],
             [
               {
-                "text": "Please take notice that a complaint has been presented against you before this court by {{complainantName}} {{complainantAddress}},(name and address of the complainant alleging offence punishable under Section (s) 138 of the Negotiable Instruments Act, 1881",
+                "text": "To,",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": "And that this court shall hear on the question of taking cognisance of the said offence on the {{hearingDate}} You are at liberty to show cause why this court should not take cognizance of the said complaint. ",
+                "text": "{{respondentName}}",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "R/o {{respondentAddress}}",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "Please take notice that a complaint has been presented against you before this court by {{complainantName}} {{complainantAddress}}, alleging offence punishable under Section (s) 138 of the Negotiable Instruments Act, 1881.",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "And that this court shall hear on the question of taking cognisance of the said offence on the {{hearingDate}}. You are at liberty to show cause why this court should not take cognizance of the said complaint. ",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "Given under my hand and the seal of the Court, on this {{issueDate}}.",
                 "style": "form-sub-body"
               }
             ]
@@ -99,13 +123,7 @@
           "body": [
             [
               {
-                "text": "Given under my hand and the seal of the Court, this {{issueDate}}.",
-                "style": "closing-text"
-              }
-            ],
-            [
-              {
-                "text": "Seal of the Court",
+                "text": "(Seal of Court)",
                 "style": "closing-seal"
               }
             ],
@@ -146,7 +164,7 @@
           "body": [
             [
               {
-                "text": "Visit dristi.gov.in for more information",
+                "text": "Visit {{courtUrl}} for more information",
                 "style": "footer-body",
                 "decoration": "underline"
               }
@@ -154,6 +172,7 @@
             [
               {
                 "text": "The process is system generated and transmitted in a secured manner by authorised user, as such a physical copy is not required.",
+                "style": "footer-body",
                 "absolutePosition": {    "x": 50,    "y": 740}
               }
             ],
@@ -221,7 +240,7 @@
           "body": [
             [
               {
-                "text": "Please see below for further information about your case {{cnrNumber}}. You can also find this information and related documents by scanning the QR code on page 1 or on dristi.gov.in (herein after referred to as “Portal”).",
+                "text": "Please see below for further information about the private complaint against you ({{cmpNumber}}). You can also find this information and related documents on {{courtUrl}} (hereinafter referred to as “Portal”).",
                 "style": "annexure-content"
               }
             ],
@@ -233,31 +252,19 @@
             ],
             [
               {
-                "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: {{accessCode}}. Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the Complaint tab on the Portal.",
+                "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: {{accessCode}}. Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the complaint tab of the Portal.",
                 "style": "annexure-content"
               }
             ],
             [
               {
-                "text": "2. Understanding More About Cheque Bounce Cases",
-                "style": "annexure-sub-header"
-              }
-            ],
-            [
-              {
-                "text": "This notice is merely to give you an opportunity of being heard even before a case is admitted, to enable to you share your version of the events with the presiding officer.",
+                "text": "This notice is merely to give you an opportunity of being heard even before a case is admitted, to enable you to share your version of the events with the presiding judicial officer.",
                 "style": "annexure-content"
               }
             ],
             [
               {
-                "text": " You can find more information about cheque bounce cases, your legal rights, and obligations, on bit.ly.",
-                "style": "annexure-content"
-              }
-            ],
-            [
-              {
-                "text": "3. What to do next if you wish to contest the case filed against you?",
+                "text": "2. What to do next if you wish to show cause to the court not to take cognisance of this case?",
                 "style": "annexure-sub-header"
               }
             ],
@@ -268,10 +275,11 @@
                     "text": [
                       {
                         "text": "Confirm your representation: ",
-                        "color": "#000000"
+                        "color": "#000000",
+                        "bold": true
                       },
                       {
-                        "text": "You may hire a lawyer to represent yourself or appear as a party in person, which means you represent yourself in court proceedings. Please visit Kerala Bar Council website https://www.barcouncilkerala.org/lawyer-registry-list for a contact directory of lawyers.",
+                        "text": "You may hire a lawyer to represent yourself or appear as a party in person, which means you represent yourself in court proceedings. Please visit Kerala Bar Council website {{barCouncilUrl}} for a contact directory of lawyers.",
                         "style": "annexure-content"
                       }
                     ]
@@ -280,22 +288,11 @@
                     "text": [
                       {
                         "text": "Join the Case: ",
-                        "color": "#000000"
+                        "color": "#000000",
+                        "bold": true
                       },
                       {
-                        "text": "Log in to the Portal & enter the 6-digit code {{accessCode}} to access your case details.",
-                        "style": "annexure-content"
-                      }
-                    ]
-                  },
-                  {
-                    "text": [
-                      {
-                        "text": "Apply for Bail: ",
-                        "color": "#000000"
-                      },
-                      {
-                        "text": "Information on how to apply for bail and required documents is available on this link <bit.ly>. To apply for bail, please use <> tab on the Portal.",
+                        "text": "Log in to the Portal & enter the 6-digit code {{accessCode}} to access your case details. You can use your mobile number to register/login on the portal",
                         "style": "annexure-content"
                       }
                     ]
@@ -304,7 +301,8 @@
                     "text": [
                       {
                         "text": "Request a different hearing date: ",
-                        "color": "#000000"
+                        "color": "#000000",
+                        "bold": true
                       },
                       {
                         "text": "If you cannot attend your hearing on {{hearingDate}}, you can request a new date through the Portal.",
@@ -312,12 +310,13 @@
                       }
                     ]
                   }
-                ]
+                ],
+                "style": "annexure-sub-content"
               }
             ],
             [
               {
-                "text": "4. Options for Quicker Resolution of Your Case",
+                "text": "3. Options for Quicker Resolution of Your Case",
                 "style": "annexure-sub-header"
               }
             ],
@@ -325,14 +324,15 @@
               {
                 "ul": [
                   {
-                    "text": "You may choose to settle the case with the complainant. This can be a quicker and simpler way to resolve the dispute. To settle the case, you may approach the complainant directly, or you may sign up for a Lok Adalat/Mediation Session that is overseen by the court. You may find more information about Lok Adalat here <bit.ly.>.",
+                    "text": "You may choose to settle the dispute with the complainant. This can be a quicker and simpler way of resolution. For this, you may approach the complainant directly, or you may sign up for a Lok Adalat/Mediation Session that is overseen by the court. ",
                     "style": "annexure-text"
                   },
                   {
-                    "text": "If you choose to settle the case, you may inform the court after joining the case on the Portal.",
+                    "text": "If you choose to settle the dispute, you may inform the court after joining the case on the Portal on the intended day of hearing.",
                     "style": "annexure-text"
                   }
-                ]
+                ],
+                "style": "annexure-sub-content"
               }
             ],
             [
@@ -343,7 +343,7 @@
             ],
             [
               {
-                "text": " If you have any questions or need help, please visit your nearest e-Sewa Kendra or contact <add the number here>",
+                "text": " If you have any questions or need help, please visit your nearest e-Sewa Kendra or contact {{courtContact}}",
                 "style": "annexure-content"
               }
             ],
@@ -357,7 +357,7 @@
               {
                 "text": [
                   {
-                    "text": "The court gets a notification when you open this summons or click on any of the above links. This information is only accessible to the Judiciary, and will be used only for the purpose of determining whether you received and viewed this communication, in accordance with this ",
+                    "text": "The court gets a notification when you open and login through the above links. This information is only accessible to the Judiciary in accordance with this ",
                     "style": "annexure-content"
                   },
                   {
@@ -386,14 +386,14 @@
     ],
     "styles": {
       "form-header": {
-        "color": "#484848",
+        "color": "#252525",
         "fontFamily": "Roboto",
         "fontSize": 16,
         "bold": true,
         "letterSpacing": 0.5
       },
       "form-sub-header": {
-        "color": "#484848",
+        "color": "#252525",
         "fontFamily": "Roboto",
         "fontSize": 13,
         "letterSpacing": 0.6,
@@ -406,7 +406,7 @@
       },
       "form-body": {
         "fontSize": 12,
-        "color": "#484848",
+        "color": "#252525",
         "margin": [
           -10,
           5,
@@ -416,7 +416,7 @@
       },
       "form-sub-body": {
         "fontSize": 12,
-        "color": "#484848",
+        "color": "#252525",
         "margin": [
           -10,
           5,
@@ -425,7 +425,7 @@
         ]
       },
       "closing-content": {
-        "color": "#484848",
+        "color": "#252525",
         "fontSize": 11,
         "margin": [
           5,
@@ -447,34 +447,42 @@
       },
       "closing-seal": {
         "margin": [
-          0,
+          -10,
           5,
-          0,
-          0
+          -5,
+          -5
         ],
-        "bold": true,
         "color": "#000000",
         "alignment": "left"
       },
       "closing-signature": {
         "margin": [
-          0,
+          -10,
           5,
-          0,
-          0
+          -5,
+          -5
         ],
-        "bold": true,
         "color": "#000000",
         "alignment": "left"
       },
       "footer-content": {
-        "color": "#484848",
+        "color": "#252525",
         "fontSize": 11,
         "margin": [
           5,
           5,
           5,
           5
+        ],
+        "alignment": "left"
+      },
+      "footer-body": {
+        "color": "#A62121",
+        "margin": [
+          -10,
+          5,
+          -5,
+          -5
         ]
       },
       "footer-text": {
@@ -515,7 +523,15 @@
       },
       "annexure-content": {
         "fontSize": 11,
-        "color": "#484848"
+        "color": "#252525"
+      },
+      "annexure-sub-content": {
+        "margin": [
+          20,
+          0,
+          0,
+          5
+        ]
       }
     }
   }
