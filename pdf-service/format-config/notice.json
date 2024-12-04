@@ -2,9 +2,10 @@
   "key": "notice",
   "config": {
     "defaultStyle": {
-      "font": "Cambay"
+      "font": "Cambay",
+      "lineHeight": 1.5
     },
-    "pageMargins": [60, 30, 60, 30],
+    "pageMargins": [70,40],
     "content": [
       {
         "style": "form-header",
@@ -18,12 +19,15 @@
                 "stack": [
                   {
                     "text": "Notice to Accused",
-                    "style": "form-sub-header",
-                    "alignment": "center"
+                    "style": "form-header",
+                    "fontSize": 14,
+                    "alignment": "center",
+                    "bold":true
                   },
                   {
                     "text": "(Under Sections 223, Bharatiya Nagarik Suraksha Sanhita, 2023)",
-                    "style": "form-sub-header",
+                    "style": "form-header",
+                    "fontSize": 14,
                     "alignment": "center"
                   },
                   {
@@ -50,42 +54,64 @@
         "layout": "noBorders"
       },
       {
-        "style": "form-body",
-        "table": {
-          "widths": [
+        "columns":[
+          {
+            "text":"Between:",
+            "margin":[0, 10]
+          }
+        ]
+      },
+      {
+        "style":"form-sub-body",
+        "columns":[
+          {
+            "text":"Petitioner: {{complainantName}}",
+            "alignment":"left"
+          } ,
+          {
+            "text":"and",
+            "alignment":"center"
+          },
+          {
+            "text":"Accused: {{respondentName}}",
+            "alignment":"right"
+          }
+        ],
+        "margin":[0, 10]
+      },
+      {
+        "table":{
+          "widths":[
             "*"
           ],
-          "body": [
+          "body":[
             [
               {
-                "text": "Between: ",
-                "style": "form-sub-body"
+                "text":"To,"
               }
             ],
             [
               {
-                "text": "Petitioner: {{complainantName}} and Accused: {{respondentName}}",
-                "style": "form-sub-body"
+                "text": "{{respondentName}}"
               }
             ],
             [
               {
-                "text": "To,",
-                "style": "form-sub-body"
+                "text": "R/o {{respondentAddress}}."
               }
-            ],
-            [
-              {
-                "text": "{{respondentName}}",
-                "style": "form-sub-body"
-              }
-            ],
-            [
-              {
-                "text": "R/o {{respondentAddress}}",
-                "style": "form-sub-body"
-              }
-            ],
+            ]
+          ]
+
+        } ,
+        "layout": "noBorders",
+        "margin":[0, 15]
+      },
+      {
+        "table":{
+          "widths":[
+            "*"
+          ],
+          "body":[
             [
               {
                 "text": "Please take notice that a complaint has been presented against you before this court by {{complainantName}} {{complainantAddress}}, alleging offence punishable under Section (s) 138 of the Negotiable Instruments Act, 1881.",
@@ -101,109 +127,57 @@
             [
               {
                 "text": "Given under my hand and the seal of the Court, on this {{issueDate}}.",
-                "style": "form-sub-body"
+                "style": "form-sub-body",
+                "margin":[0, 10]
               }
             ]
           ]
-        },
+        } ,
         "layout": "noBorders",
-        "margin": [
-          0,
-          20,
-          0,
-          20
-        ]
+        "margin":[0, 20]
       },
       {
-        "style": "closing-content",
-        "table": {
-          "widths": [
-            "*"
-          ],
-          "body": [
-            [
-              {
-                "text": "(Seal of Court)",
-                "style": "closing-seal"
-              }
-            ],
-            [
-              {
-                "text": "Signature",
-                "style": "closing-signature"
-              }
-            ],
-            [
-              {
-                "text": "Address: JFCM 1, District and Sessions Court, Civil Station, Kollam, Kerala, 691013",
-                "style": "closing-signature"
-              }
-            ],
-            [
-              {
-                "text": "",
-                "style": "closing-signature"
-              }
-            ]
+        "style":"closing-content",
+        "table":{
+          "widths":["*"],
+          "body":[
+            [{
+              "text":"(Seal of Court)"
+            }],
+            [{"text":"Signature"}],
+            [{"text":"Address: {{courtAddress}}"}]
+
           ]
         },
-        "layout": "noBorders",
-        "margin": [
-          0,
-          20,
-          0,
-          0
-        ]
+        "layout":"noBorders",
+        "margin":[0, 20, 0, 0]
       },
       {
-        "style": "footer-content",
-        "table": {
-          "widths": [
-            "*"
-          ],
-          "body": [
-            [
-              {
-                "text": "Visit {{courtUrl}} for more information",
-                "style": "footer-body",
-                "decoration": "underline"
-              }
-            ],
-            [
-              {
-                "text": "The process is system generated and transmitted in a secured manner by authorised user, as such a physical copy is not required.",
-                "style": "footer-body",
-                "absolutePosition": {    "x": 50,    "y": 740}
-              }
-            ],
-            [
-              {
-                "text": "Next Page",
-                "style": "footer-page",
-                "alignment": "right",
-                "absolutePosition": {
-                  "x": 100,
-                  "y": 770
-                }
-              }
-            ],
-            [
-              {
-                "text": "",
-                "pageBreak":  "before"
-              }
-            ]
-          ]
-        },
-        "layout": "noBorders",
-        "margin": [
-          0,
-          20,
-          0,
-          0
-        ]
+        "style":"footer-content",
+        "text":"Visit {{courtUrl}} for more information",
+        "decoration":"underline",
+        "color":"#A62121",
+        "margin":[0, 15],
+        "link":"{{courtUrl}}"
       },
       {
+        "style":"footer-content",
+        "text":"The process is system generated and transmitted in a secured manner by authorised user, as such a physical copy is not required.",
+        "color":"#A62121",
+        "margin":[0, 15]
+      },
+      {
+        "text": "Next Page",
+        "style": "footer-page",
+        "alignment": "right",
+        "fontSize":11,
+        "absolutePosition": {
+          "x": 100,
+          "y": 680
+        }
+      },
+      {
+        "pageBreak":"before",
         "style": "annexure-header",
         "table": {
           "widths": [
@@ -388,14 +362,12 @@
       "form-header": {
         "color": "#252525",
         "fontFamily": "Roboto",
-        "fontSize": 16,
-        "bold": true,
         "letterSpacing": 0.5
       },
       "form-sub-header": {
         "color": "#252525",
         "fontFamily": "Roboto",
-        "fontSize": 13,
+        "fontSize": 12,
         "letterSpacing": 0.6,
         "margin": [
           0,
@@ -405,7 +377,7 @@
         ]
       },
       "form-body": {
-        "fontSize": 12,
+        "fontSize": 13,
         "color": "#252525",
         "margin": [
           -10,
@@ -415,18 +387,12 @@
         ]
       },
       "form-sub-body": {
-        "fontSize": 12,
-        "color": "#252525",
-        "margin": [
-          -10,
-          5,
-          -5,
-          -5
-        ]
+        "fontSize": 13,
+        "color": "#252525"
       },
       "closing-content": {
         "color": "#252525",
-        "fontSize": 11,
+        "fontSize": 14,
         "margin": [
           5,
           5,
@@ -467,7 +433,7 @@
       },
       "footer-content": {
         "color": "#252525",
-        "fontSize": 11,
+        "fontSize": 12,
         "margin": [
           5,
           5,
