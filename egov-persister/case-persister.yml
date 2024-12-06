@@ -547,3 +547,25 @@ serviceMaps:
             - jsonPath: $.outcome.auditDetails.lastModifiedTime
             - jsonPath: $.outcome.filingNumber
             - jsonPath: $.outcome.tenantId
+
+    - version: 1.0
+      description: Edit case by admin
+      fromTopic: edit-case
+      isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: cases
+      queryMaps:
+        - query: UPDATE dristi_cases SET casetitle = ?, additionaldetails = ?, lastmodifiedby = ?, lastmodifiedtime = ? WHERE id = ?;
+          basePath: cases
+          jsonMaps:
+            - jsonPath: $.cases.caseTitle
+            - jsonPath: $.cases.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.cases.auditDetails.lastModifiedBy
+            - jsonPath: $.cases.auditDetails.lastModifiedTime
+            - jsonPath: $.cases.id
