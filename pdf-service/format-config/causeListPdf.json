@@ -46,7 +46,7 @@
         }
       },
       {
-        "text": "In The Court of: {{judgeName}}, {{designation}}",
+        "text": "Special Court of Judicial Magistrate of the First Class, for the trial of cases under section 138 of Negotiable Instruments Act, 1881 at Kollam ('24 x7 ON Court')",
         "alignment": "center",
         "color": "black",
         "style": "judge-header"
