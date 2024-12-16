@@ -38,6 +38,11 @@
                     "text": "CMP No. {{cmpNumber}}",
                     "style": "form-sub-header",
                     "alignment": "center"
+                  },
+                  {
+                    "text": "Filing No. {{filingNumber}}",
+                    "style": "form-sub-header",
+                    "alignment": "center"
                   }
                 ],
                 "alignment": "center",
