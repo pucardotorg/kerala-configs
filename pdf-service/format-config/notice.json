@@ -40,7 +40,7 @@
                     "alignment": "center"
                   },
                   {
-                    "text": "FILING No. {{filingNumber}}",
+                    "text": "Filing No. {{filingNumber}}",
                     "style": "form-sub-header",
                     "alignment": "center"
                   }
