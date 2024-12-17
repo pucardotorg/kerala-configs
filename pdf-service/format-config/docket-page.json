@@ -14,7 +14,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "BEFORE THE {{docketCourtName}}",
+                    "text": "{{docketCourtName}}",
                     "style": "bodyText"
                   },
                   {
@@ -38,7 +38,7 @@
                     "style": "whiteSpace2"
                   },
                   {
-                    "text": "{{docketApplicationType}}:",
+                    "text": "{{docketApplicationType}}",
                     "style": "bodyText"
                   },
                   {
