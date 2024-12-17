@@ -123,6 +123,13 @@
                   "path": "$.courtContact",
                   "defaultValue": "NA"
                 }
+              },
+              {
+                "variable": "courtAddress",
+                "value": {
+                  "path": "$.courtAddress",
+                  "defaultValue": "NA"
+                }
               }
             ]
           }
