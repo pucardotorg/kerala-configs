@@ -43,6 +43,12 @@
                 }
               },
               {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
                 "variable": "applicantName",
                 "value": {
                   "path": "$.applicantName"

@@ -1,5 +1,5 @@
 {
-  "key": "order-bail-rejection-qr",
+  "key": "order-set-terms-of-bail-qr",
   "config": {
     "content": [
       {
@@ -14,7 +14,11 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
+                    "text": "CMP No. {{cmpNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In Case No. {{caseNumber}} of {{caseYear}}",
                     "style": "header"
                   },
                   {
@@ -38,7 +42,7 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, including",
+                    "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, and is satisfied with the documents set out below:",
                     "style": "contentText"
                   },
                   {
@@ -53,7 +57,7 @@
                     "style": "list"
                   },
                   {
-                    "text": "WHEREAS, the Court has taken into account the seriousness of the allegations, the potential risk to public safety, and the likelihood of the Applicant appearing for further proceedings; and",
+                    "text": "WHEREAS, the Court has taken into account the seriousness of the allegations and the likelihood of the Applicant appearing for further proceedings; and",
                     "style": "contentText"
                   },
                   {
@@ -61,12 +65,23 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
+                    "text": "NOW, THEREFORE, IT IS HEREBY ORDERED THAT:",
                     "style": "contentText"
                   },
                   {
-                    "text": "The Application for Bail by {{partyName}} is DENIED. The Applicant shall remain in custody pending further proceedings.",
+                    "text": "The Bail will be GRANTED in the aforesaid matter subject to the further conditions set out below:",
                     "style": "contentText"
+                  },
+                  {
+                    "ul": [
+                      "{{#additionalSpecificationList}}",
+                      {
+                        "text": "{{documentType}} - {{documentTitle}}",
+                        "style": "bodyText"
+                      },
+                      "{{/additionalSpecificationList}}"
+                    ],
+                    "style": "list"
                   },
                   {
                     "text": "IT IS SO ORDERED.",
@@ -74,7 +89,7 @@
                   },
                   {
                     "text": "{{judgeSignature}}",
-                    "style": "signature"
+                    "style": "advocateSignature"
                   },
                   {
                     "text": "{{judgeName}}",
@@ -118,27 +133,11 @@
         "alignment": "center",
         "margin": [0, 0, 0, 5]
       },
-      "caseName": {
-        "fontSize": 14,
-        "alignment": "center",
-        "margin": [0, 5, 0, 5]
-      },
-      "caseNumber": {
-        "fontSize": 14,
-        "alignment": "center",
-        "margin": [0, 5, 0, 5]
-      },
       "orderTitle": {
         "fontSize": 16,
         "bold": true,
         "alignment": "center",
         "margin": [0, 5, 0, 5]
-      },
-      "orderName": {
-        "fontSize": 14,
-        "bold": true,
-        "alignment": "center",
-        "margin": [0, 5, 0, 20]
       },
       "date": {
         "fontSize": 12,
@@ -161,17 +160,18 @@
         "alignment": "left",
         "margin": [0, 10, 0, 0]
       },
-      "tableData": {
-        "bold": true,
-        "fontSize": 10,
-        "color": "black"
+      "advocateSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 50, 0, 5]
       },
       "list": {
         "margin": [20, 0, 0, 10]
       },
-      "listItem": {
-        "fontSize": 11,
-        "margin": [0, 5, 0, 5]
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
       }
     }
   }
