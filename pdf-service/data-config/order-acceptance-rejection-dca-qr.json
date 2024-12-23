@@ -1,5 +1,5 @@
 {
-  "key": "order-bail-acceptance",
+  "key": "order-acceptance-rejection-dca-qr",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -13,21 +13,15 @@
           {
             "direct": [
               {
-                "variable": "courtName",
+                "variable": "orderHeading",
                 "value": {
-                  "path": "$.courtName"
+                  "path": "$.orderHeading"
                 }
               },
               {
-                "variable": "courtPlace",
+                "variable": "cmpNumber",
                 "value": {
-                  "path": "$.courtPlace"
-                }
-              },
-              {
-                "variable": "state",
-                "value": {
-                  "path": "$.state"
+                  "path": "$.cmpNumber"
                 }
               },
               {
@@ -49,24 +43,6 @@
                 }
               },
               {
-                "variable": "applicantName",
-                "value": {
-                  "path": "$.applicantName"
-                }
-              },
-              {
-                "variable": "dateOfApplication",
-                "value": {
-                  "path": "$.dateOfApplication"
-                }
-              },
-              {
-                "variable": "briefSummaryOfBail",
-                "value": {
-                  "path": "$.briefSummaryOfBail"
-                }
-              },
-              {
                 "variable": "date",
                 "value": {
                   "path": "$.date"
@@ -79,23 +55,27 @@
                 }
               },
               {
-                "variable": "documentList",
+                "variable": "reasonForDelayCondonation",
                 "value": {
-                  "path": "$.documentList.*"
-                },
-                "type": "index",
-                "format": "var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
-              },
-              {
-                "variable": "bailType",
-                "value": {
-                  "path": "$.bailType"
+                  "path": "$.reasonForDelayCondonation"
                 }
               },
               {
-                "variable": "conditionOfBail",
+                "variable": "response",
                 "value": {
-                  "path": "$.conditionOfBail"
+                  "path": "$.response"
+                }
+              },
+              {
+                "variable": "responseReason",
+                "value": {
+                  "path": "$.responseReason"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
                 }
               },
               {
@@ -111,22 +91,24 @@
                 }
               },
               {
-                "variable": "courtSeal",
-                "value": {
-                  "path": "$.courtSeal"
-                }
-              },
-              {
-                "variable": "orderHeading",
-                "value": {
-                  "path": "$.orderHeading"
-                }
-              },
-              {
                 "variable": "judgeDesignation",
                 "value": {
                   "path": "$.judgeDesignation"
                 }
+              },
+              {
+                "variable": "qrCodeUrl",
+                "value": {
+                  "path": "$.qrCodeUrl"
+                }
+              }
+            ]
+          },
+          {
+            "qrcodeConfig": [
+              {
+                "variable": "qrCodeImage",
+                "value": "{{qrCodeUrl}}"
               }
             ]
           }

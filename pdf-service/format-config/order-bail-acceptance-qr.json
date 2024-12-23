@@ -14,11 +14,11 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No: {{caseNumber}} of {{caseYear}}",
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
                     "style": "header"
                   },
                   {
-                    "text": "In the matter of: {{caseNumber}}",
+                    "text": "In the matter of: {{caseName}}",
                     "style": "header"
                   },
                   {
@@ -65,7 +65,7 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "The Application for Bail by {{partyName}} is GRANTED subject to the conditions set out below:",
+                    "text": "The Bail is GRANTED to the aforesaid subject to the conditions set out below:",
                     "style": "contentText"
                   },
                   {
@@ -75,7 +75,7 @@
                         "style": "contentText"
                       },
                       {
-                        "text": "{{bailType}} The conditions of bail include {{conditionOfBail}}.",
+                        "text": "In addition to the above, the applicant should also satisfy the conditions set out below: {{conditionOfBail}}.",
                         "style": "contentText"
                       }
                     ],

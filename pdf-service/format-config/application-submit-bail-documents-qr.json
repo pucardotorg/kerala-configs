@@ -1,0 +1,155 @@
+{
+  "key": "application-submit-bail-documents-qr",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "IN THE COURT OF {{courtComplex}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{caseType}}/Case No. {{caseNumber}} of {{caseYear}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "Filing Number {{filingNumber}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "{{caseName}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "{{applicationTitle}}",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "{{complainantName}}, represented by Advocate {{advocateName}}, respectfully submits this application containing documents in compliance with the order dated [Date of order] of this Hon'ble court to set terms of the bail in the above mentioned case. The documents shared are set out below:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "ol": [
+                      "{{#documentList}}",
+                      {
+                        "text": "{{.}}",
+                        "style": "bodyText"
+                      },
+                      "{{/documentList}}"
+                    ],
+                    "style": "list"
+                  },
+                  {
+                    "text": "Therefore, the applicant humbly requests the Hon'ble Court to consider this application and grant bail.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Dated this {{day}} day of {{month}}, {{year}}.",
+                    "style": "date"
+                  },
+                  {
+                    "text": "{{advocateSignature}}",
+                    "style": "advocateSignature"
+                  },
+                  {
+                    "text": "{{advocateName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{barRegistrationNumber}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Advocate for {{partyName}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "applicationTitle": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "left",
+        "margin": [0, 20, 0, 10]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      },
+      "advocateSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 50, 0, 5]
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      }
+    }
+  }
+}

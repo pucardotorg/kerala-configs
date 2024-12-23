@@ -1,5 +1,5 @@
 {
-  "key": "order-bail-rejection-qr",
+  "key": "order-acceptance-rejection-case-qr",
   "config": {
     "content": [
       {
@@ -14,7 +14,11 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
+                    "text": "CMP No {{cmpNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In Case No. {{caseNumber}} of {{caseYear}}",
                     "style": "header"
                   },
                   {
@@ -30,42 +34,44 @@
                     "style": "date"
                   },
                   {
-                    "text": "This matter comes before the Court on the Application for Bail filed by {{applicantName}}, Advocate for {{partyName}}, on {{dateOfApplication}}.",
+                    "text": "This matter comes before the Court on the Application to take cognizance and initiate proceedings for the offence under section 138 of the Negotiable Instruments Act, 1881 for dishonour of {{chequeNumber}} vide  {{applicationId}} filed by {{partyName}}.",
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has considered the Application for Bail, which asserts that {{briefSummaryOfBail}}; and",
+                    "text": "WHEREAS, the Court has reviewed the Application, along with all supporting documents or arguments presented;",
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, including",
+                    "text": "WHEREAS, the Court has issued notice to the accused further to the proviso to section 223 (1) of the , Bharatiya Nagarik Suraksha Sanhita, 2023 providing adequate opportunity to be heard and have {{isExamined}} the accused. Details of the notices issued are set out below:",
                     "style": "contentText"
                   },
                   {
-                    "ul": [
-                      "{{#documentList}}",
+                    "ol": [
+                      "{{#noticeList}}",
                       {
-                        "text": "{{documentType}}",
+                        "text": "{{dateOfNotice}}",
                         "style": "bodyText"
                       },
-                      "{{/documentList}}"
+                      "{{/noticeList}}"
                     ],
                     "style": "list"
-                  },
-                  {
-                    "text": "WHEREAS, the Court has taken into account the seriousness of the allegations, the potential risk to public safety, and the likelihood of the Applicant appearing for further proceedings; and",
-                    "style": "contentText"
-                  },
-                  {
-                    "text": "WHEREAS, the Court has considered the relevant legal provisions regarding bail;",
-                    "style": "contentText"
                   },
                   {
                     "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
                     "style": "contentText"
                   },
                   {
-                    "text": "The Application for Bail by {{partyName}} is DENIED. The Applicant shall remain in custody pending further proceedings.",
+                    "text": "The above mentioned Application vide {{applicationId}} filed by {{partyName}} to take cognizance is hereby {{response}} and it is directed that proceedings be initiated against {{partyName}} for the offence under section 138 of the Negotiable Instruments Act, 1881.",
+                    "style": "contentText"
+                  },
+                  "{{#isRejected}}",
+                  {
+                    "text": "{{rejectionReason}}",
+                    "style": "bodyText"
+                  },
+                  "{{/isRejected}}",
+                  {
+                    "text": "{{additionalComments}}",
                     "style": "contentText"
                   },
                   {
@@ -74,7 +80,7 @@
                   },
                   {
                     "text": "{{judgeSignature}}",
-                    "style": "signature"
+                    "style": "advocateSignature"
                   },
                   {
                     "text": "{{judgeName}}",
@@ -118,27 +124,17 @@
         "alignment": "center",
         "margin": [0, 0, 0, 5]
       },
-      "caseName": {
-        "fontSize": 14,
-        "alignment": "center",
-        "margin": [0, 5, 0, 5]
-      },
-      "caseNumber": {
-        "fontSize": 14,
-        "alignment": "center",
-        "margin": [0, 5, 0, 5]
+      "subheader": {
+        "fontSize": 11,
+        "alignment": "left",
+        "bold": true,
+        "margin": [10, 10, 0, 10]
       },
       "orderTitle": {
         "fontSize": 16,
         "bold": true,
         "alignment": "center",
         "margin": [0, 5, 0, 5]
-      },
-      "orderName": {
-        "fontSize": 14,
-        "bold": true,
-        "alignment": "center",
-        "margin": [0, 5, 0, 20]
       },
       "date": {
         "fontSize": 12,
@@ -152,7 +148,6 @@
       },
       "orderText": {
         "fontSize": 12,
-        "bold": true,
         "alignment": "left",
         "margin": [0, 10, 0, 20]
       },
@@ -161,17 +156,15 @@
         "alignment": "left",
         "margin": [0, 10, 0, 0]
       },
-      "tableData": {
-        "bold": true,
-        "fontSize": 10,
-        "color": "black"
+      "advocateSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 50, 0, 5]
       },
-      "list": {
-        "margin": [20, 0, 0, 10]
-      },
-      "listItem": {
-        "fontSize": 11,
-        "margin": [0, 5, 0, 5]
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
       }
     }
   }

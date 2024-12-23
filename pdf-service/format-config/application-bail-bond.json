@@ -54,15 +54,15 @@
                     "style": "boldText"
                   },
                   {
-                    "text": "The applicant has been accused under {{statuteAndAct}}.",
+                    "text": "The applicant has been accused under {{statuteAndAct}} for the offence(s) of {{offenceAgainstAccused}}.",
                     "style": "listBodyText"
                   },
                   {
-                    "text": "2. List of Attached Documents:",
+                    "text": "2. List of Documents:",
                     "style": "boldText"
                   },
                   {
-                    "text": "The following documents are attached in support of this bail application:",
+                    "text": "The following documents are hereby submitted along with this bail application:",
                     "style": "listBodyText"
                   },
                   {
@@ -77,7 +77,7 @@
                     "style": "list"
                   },
                   {
-                    "text": "The applicant believes that the grant of bail is justified in this case for the following reasons:",
+                    "text": "Most respectfully, it is hereby requested that the Hon'ble court may consider the following reasons and grounds while considering this application:",
                     "style": "bodyText"
                   },
                   {
@@ -88,6 +88,10 @@
                       }
                     ],
                     "style": "list"
+                  },
+                  {
+                    "text": "Prayer:",
+                    "style": "bodyText"
                   },
                   {
                     "text": "The applicant assures and undertakes to the Hon'ble Court that this request is made in good faith and that the applicant will abide by all conditions imposed by the Court. The applicant also undertakes to appear before the Court as and when required.",
