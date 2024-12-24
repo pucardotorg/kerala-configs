@@ -73,15 +73,8 @@
                     "style": "contentText"
                   },
                   {
-                    "ul": [
-                      "{{#additionalSpecificationList}}",
-                      {
-                        "text": "{{documentType}} - {{documentTitle}}",
-                        "style": "bodyText"
-                      },
-                      "{{/additionalSpecificationList}}"
-                    ],
-                    "style": "list"
+                    "text": "{{additionalConditionsOfBail}}",
+                    "style": "contentText"
                   },
                   {
                     "text": "IT IS SO ORDERED.",
