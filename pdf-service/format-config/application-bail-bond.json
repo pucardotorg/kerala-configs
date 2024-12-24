@@ -90,7 +90,7 @@
                     "style": "list"
                   },
                   {
-                    "text": "Prayer:",
+                    "text": "Prayer: {{prayer}}",
                     "style": "bodyText"
                   },
                   {

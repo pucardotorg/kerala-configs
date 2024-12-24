@@ -55,9 +55,9 @@
                 }
               },
               {
-                "variable": "applicationId",
+                "variable": "filingNumber",
                 "value": {
-                  "path": "$.applicationId"
+                  "path": "$.filingNumber"
                 }
               },
               {

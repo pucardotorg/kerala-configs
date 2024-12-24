@@ -34,7 +34,7 @@
                     "style": "date"
                   },
                   {
-                    "text": "This matter comes before the Court on the Application to take cognizance and initiate proceedings for the offence under section 138 of the Negotiable Instruments Act, 1881 for dishonour of {{chequeNumber}} vide  {{applicationId}} filed by {{partyName}}.",
+                    "text": "This matter comes before the Court on the Application to take cognizance and initiate proceedings for the offence under section 138 of the Negotiable Instruments Act, 1881 for dishonour of {{chequeNumber}} vide  {{filingNumber}} filed by {{partyName}}.",
                     "style": "contentText"
                   },
                   {
@@ -61,7 +61,7 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "The above mentioned Application vide {{applicationId}} filed by {{partyName}} to take cognizance is hereby {{response}} and it is directed that proceedings be initiated against {{partyName}} for the offence under section 138 of the Negotiable Instruments Act, 1881.",
+                    "text": "The above mentioned Application vide {{filingNumber}} filed by {{partyName}} to take cognizance is hereby {{response}} and it is directed that proceedings be initiated against {{partyName}} for the offence under section 138 of the Negotiable Instruments Act, 1881.",
                     "style": "contentText"
                   },
                   "{{#isRejected}}",

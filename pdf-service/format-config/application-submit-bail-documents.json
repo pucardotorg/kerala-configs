@@ -34,14 +34,14 @@
                     "style": "date"
                   },
                   {
-                    "text": "{{complainantName}}, represented by Advocate {{advocateName}}, respectfully submits this application containing documents in compliance with the order dated [Date of order] of this Hon'ble court to set terms of the bail in the above mentioned case. The documents shared are set out below:",
+                    "text": "{{complainantName}}, represented by Advocate {{advocateName}}, respectfully submits this application containing documents in compliance with the order dated {{date}} of this Hon'ble court to set terms of the bail in the above mentioned case. The documents shared are set out below:",
                     "style": "bodyText"
                   },
                   {
                     "ol": [
                       "{{#documentList}}",
                       {
-                        "text": "{{.}}",
+                        "text": "{{documentType}}",
                         "style": "bodyText"
                       },
                       "{{/documentList}}"

@@ -115,12 +115,6 @@
                 }
               },
               {
-                "variable": "advocateName",
-                "value": {
-                  "path": "$.advocateName"
-                }
-              },
-              {
                 "variable": "barRegistrationNumber",
                 "value": {
                   "path": "$.barRegistrationNumber"
