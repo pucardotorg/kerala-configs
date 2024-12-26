@@ -19,7 +19,7 @@
               "action": "CREATE",
               "nextState": "SCHEDULED",
               "roles": [
-                "HEARING_SCHEDULER"
+                "HEARING_CREATOR"
               ]  
             }
           ]
@@ -37,7 +37,7 @@
               "action": "RESCHEDULE",
               "nextState": "OPT_OUT",
               "roles": [
-                "HEARING_DATE_REQUESTOR"
+                "HEARING_EDITOR"
               ]  
             },
             {
@@ -51,7 +51,7 @@
               "action": "START",
               "nextState": "IN_PROGRESS",
               "roles": [
-                "HEARING_START"
+                "HEARING_EDITOR"
               ]  
             },
             {
@@ -102,7 +102,7 @@
               "action": "CLOSE",
               "nextState": "COMPLETED",
               "roles": [
-                "HEARING_CLOSER"
+                "HEARING_EDITOR"
               ]  
             },
             {
