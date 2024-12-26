@@ -38,7 +38,7 @@
               "action": "CLOSE",
               "nextState": "COMPLETED",
               "roles": [
-                "TASK_CLOSER"
+                "TASK_EDITOR"
               ]   
             },
             {
