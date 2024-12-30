@@ -81,7 +81,7 @@
               {
                 "variable": "documentList",
                 "value": {
-                  "path": "$.documentList.*"
+                  "path": "$.documentList"
                 }
               },
               {
