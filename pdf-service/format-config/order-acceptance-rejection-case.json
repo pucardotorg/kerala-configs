@@ -49,7 +49,7 @@
                     "ol": [
                       "{{#noticeList}}",
                       {
-                        "text": "{{dateOfNotice}}",
+                        "text": "Notice dated {{dateOfNotice}}",
                         "style": "bodyText"
                       },
                       "{{/noticeList}}"
