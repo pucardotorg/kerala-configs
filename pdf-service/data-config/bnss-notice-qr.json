@@ -13,9 +13,16 @@
           {
             "direct": [
               {
-                "variable": "courtName",
+                "variable": "cmpNumber",
                 "value": {
-                  "path": "$.courtName",
+                  "path": "$.cmpNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "accessCode",
+                "value": {
+                  "path": "$.accessCode",
                   "defaultValue": "NA"
                 }
               },
@@ -27,20 +34,6 @@
                 }
               },
               {
-                "variable": "caseNumber",
-                "value": {
-                  "path": "$.caseNumber",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "caseYear",
-                "value": {
-                  "path": "$.caseYear",
-                  "defaultValue": "NA"
-                }
-              },
-              {
                 "variable": "filingNumber",
                 "value": {
                   "path": "$.filingNumber",
@@ -48,9 +41,16 @@
                 }
               },
               {
-                "variable": "caseName",
+                "variable": "respondentAddress",
                 "value": {
-                  "path": "$.caseName",
+                  "path": "$.respondentAddress",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "respondentName",
+                "value": {
+                  "path": "$.respondentName",
                   "defaultValue": "NA"
                 }
               },
@@ -69,9 +69,30 @@
                 }
               },
               {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
                 "variable": "hearingDate",
                 "value": {
                   "path": "$.hearingDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear",
                   "defaultValue": "NA"
                 }
               },
@@ -83,23 +104,9 @@
                 }
               },
               {
-                "variable": "cmpNumber",
-                "value": {
-                  "path": "$.cmpNumber",
-                  "defaultValue": "NA"
-                }
-              },
-              {
                 "variable": "courtUrl",
                 "value": {
                   "path": "$.courtUrl",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "accessCode",
-                "value": {
-                  "path": "$.accessCode",
                   "defaultValue": "NA"
                 }
               },
@@ -114,6 +121,13 @@
                 "variable": "courtContact",
                 "value": {
                   "path": "$.courtContact",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtAddress",
+                "value": {
+                  "path": "$.courtAddress",
                   "defaultValue": "NA"
                 }
               }
