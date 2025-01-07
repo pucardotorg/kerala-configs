@@ -4,7 +4,7 @@
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$.summonsPdf",
-    "entityIdPath": "$.cmpNu    mber",
+    "entityIdPath": "$.cmpNumber",
     "isCommonTableBorderRequired": true,
     "mappings": [
       {
