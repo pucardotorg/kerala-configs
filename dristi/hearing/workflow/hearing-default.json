@@ -20,7 +20,7 @@
               "nextState": "SCHEDULED",
               "roles": [
                 "HEARING_CREATOR"
-              ]  
+              ]
             }
           ]
         },
@@ -38,7 +38,7 @@
               "nextState": "OPT_OUT",
               "roles": [
                 "HEARING_EDITOR"
-              ]  
+              ]
             },
             {
               "action": "BULK_RESCHEDULE",
@@ -52,7 +52,7 @@
               "nextState": "IN_PROGRESS",
               "roles": [
                 "HEARING_EDITOR"
-              ]  
+              ]
             },
             {
               "action": "ABANDON",
@@ -103,7 +103,7 @@
               "nextState": "COMPLETED",
               "roles": [
                 "HEARING_EDITOR"
-              ]  
+              ]
             },
             {
               "action": "ABANDON",

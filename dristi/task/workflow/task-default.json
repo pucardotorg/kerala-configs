@@ -39,7 +39,7 @@
               "nextState": "COMPLETED",
               "roles": [
                 "TASK_EDITOR"
-              ]   
+              ]
             },
             {
               "action": "ABANDON",
