@@ -67,6 +67,12 @@
                 }
               },
               {
+                "variable": "partyType",
+                "value": {
+                  "path": "$.partyType"
+                }
+              },
+              {
                 "variable": "advocateName",
                 "value": {
                   "path": "$.advocateName"
