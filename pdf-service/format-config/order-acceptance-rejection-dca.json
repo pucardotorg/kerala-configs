@@ -1,5 +1,5 @@
 {
-  "key": "order-bail-rejection",
+  "key": "order-acceptance-rejection-dca",
   "config": {
     "content": [
       {
@@ -14,7 +14,11 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
+                    "text": "CMP No {{cmpNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In Case No. {{caseNumber}} of {{caseYear}}",
                     "style": "header"
                   },
                   {
@@ -30,34 +34,11 @@
                     "style": "date"
                   },
                   {
-                    "text": "This matter comes before the Court on the Application for Bail filed by {{applicantName}}, Advocate for {{partyName}}, on {{dateOfApplication}}.",
+                    "text": "This matter comes before the Court on the motion filed by {{partyName}}, seeking condonation of delay citing {{reasonForDelayCondonation}}.",
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has considered the Application for Bail, which asserts that {{briefSummaryOfBail}}; and",
-                    "style": "contentText"
-                  },
-                  {
-                    "text": "WHEREAS, the Court has reviewed the supporting documentation submitted by the Applicant, including",
-                    "style": "contentText"
-                  },
-                  {
-                    "ul": [
-                      "{{#documentList}}",
-                      {
-                        "text": "{{documentType}}",
-                        "style": "bodyText"
-                      },
-                      "{{/documentList}}"
-                    ],
-                    "style": "list"
-                  },
-                  {
-                    "text": "WHEREAS, the Court has taken into account the seriousness of the allegations, the potential risk to public safety, and the likelihood of the Applicant appearing for further proceedings; and",
-                    "style": "contentText"
-                  },
-                  {
-                    "text": "WHEREAS, the Court has considered the relevant legal provisions regarding bail;",
+                    "text": "WHEREAS, the Court has considered the Motion (or Application) and any accompanying arguments or evidence;",
                     "style": "contentText"
                   },
                   {
@@ -65,7 +46,11 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "The Application for Bail by {{partyName}} is DENIED. The Applicant shall remain in custody pending further proceedings.",
+                    "text": "The Motion (or Application) for delay condonation filed by {{partyName}} is {{response}} due to the following reasons:",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{responseReason}}",
                     "style": "contentText"
                   },
                   {
@@ -73,8 +58,12 @@
                     "style": "orderText"
                   },
                   {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
+                  },
+                  {
                     "text": "{{judgeSignature}}",
-                    "style": "signature"
+                    "style": "advocateSignature"
                   },
                   {
                     "text": "{{judgeName}}",
@@ -101,27 +90,17 @@
         "alignment": "center",
         "margin": [0, 0, 0, 5]
       },
-      "caseName": {
-        "fontSize": 14,
-        "alignment": "center",
-        "margin": [0, 5, 0, 5]
-      },
-      "caseNumber": {
-        "fontSize": 14,
-        "alignment": "center",
-        "margin": [0, 5, 0, 5]
+      "subheader": {
+        "fontSize": 11,
+        "alignment": "left",
+        "bold": true,
+        "margin": [10, 10, 0, 10]
       },
       "orderTitle": {
         "fontSize": 16,
         "bold": true,
         "alignment": "center",
         "margin": [0, 5, 0, 5]
-      },
-      "orderName": {
-        "fontSize": 14,
-        "bold": true,
-        "alignment": "center",
-        "margin": [0, 5, 0, 20]
       },
       "date": {
         "fontSize": 12,
@@ -135,7 +114,6 @@
       },
       "orderText": {
         "fontSize": 12,
-        "bold": true,
         "alignment": "left",
         "margin": [0, 10, 0, 20]
       },
@@ -144,17 +122,10 @@
         "alignment": "left",
         "margin": [0, 10, 0, 0]
       },
-      "tableData": {
-        "bold": true,
-        "fontSize": 10,
-        "color": "black"
-      },
-      "list": {
-        "margin": [20, 0, 0, 10]
-      },
-      "listItem": {
-        "fontSize": 11,
-        "margin": [0, 5, 0, 5]
+      "advocateSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 50, 0, 5]
       }
     }
   }

@@ -1,5 +1,5 @@
 {
-  "key": "order-bail-rejection",
+  "key": "application-submit-bail-documents-qr",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -13,21 +13,15 @@
           {
             "direct": [
               {
-                "variable": "courtName",
+                "variable": "courtComplex",
                 "value": {
-                  "path": "$.courtName"
+                  "path": "$.courtComplex"
                 }
               },
               {
-                "variable": "courtPlace",
+                "variable": "caseType",
                 "value": {
-                  "path": "$.courtPlace"
-                }
-              },
-              {
-                "variable": "state",
-                "value": {
-                  "path": "$.state"
+                  "path": "$.caseType"
                 }
               },
               {
@@ -37,33 +31,27 @@
                 }
               },
               {
-                "variable": "caseName",
-                "value": {
-                  "path": "$.caseName"
-                }
-              },
-              {
                 "variable": "caseYear",
                 "value": {
                   "path": "$.caseYear"
                 }
               },
               {
-                "variable": "applicantName",
+                "variable": "filingNumber",
                 "value": {
-                  "path": "$.applicantName"
+                  "path": "$.filingNumber"
                 }
               },
               {
-                "variable": "dateOfApplication",
+                "variable": "caseName",
                 "value": {
-                  "path": "$.dateOfApplication"
+                  "path": "$.caseName"
                 }
               },
               {
-                "variable": "briefSummaryOfBail",
+                "variable": "applicationTitle",
                 "value": {
-                  "path": "$.briefSummaryOfBail"
+                  "path": "$.applicationTitle"
                 }
               },
               {
@@ -73,60 +61,78 @@
                 }
               },
               {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.complainantName"
+                }
+              },
+              {
                 "variable": "partyName",
                 "value": {
                   "path": "$.partyName"
                 }
               },
               {
+                "variable": "advocateName",
+                "value": {
+                  "path": "$.advocateName"
+                }
+              },
+              {
                 "variable": "documentList",
                 "value": {
                   "path": "$.documentList"
-                },
-                "type": "index",
-                "format": "var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
-              },
-              {
-                "variable": "bailType",
-                "value": {
-                  "path": "$.bailType"
                 }
               },
               {
-                "variable": "conditionOfBail",
+                "variable": "additionalComments",
                 "value": {
-                  "path": "$.conditionOfBail"
+                  "path": "$.additionalComments"
                 }
               },
               {
-                "variable": "judgeSignature",
+                "variable": "day",
                 "value": {
-                  "path": "$.judgeSignature"
+                  "path": "$.day"
                 }
               },
               {
-                "variable": "judgeName",
+                "variable": "month",
                 "value": {
-                  "path": "$.judgeName"
+                  "path": "$.month"
                 }
               },
               {
-                "variable": "courtSeal",
+                "variable": "year",
                 "value": {
-                  "path": "$.courtSeal"
+                  "path": "$.year"
                 }
               },
               {
-                "variable": "orderHeading",
+                "variable": "advocateSignature",
                 "value": {
-                  "path": "$.orderHeading"
+                  "path": "$.advocateSignature"
                 }
               },
               {
-                "variable": "judgeDesignation",
+                "variable": "barRegistrationNumber",
                 "value": {
-                  "path": "$.judgeDesignation"
+                  "path": "$.barRegistrationNumber"
                 }
+              },
+              {
+                "variable": "qrCodeUrl",
+                "value": {
+                  "path": "$.qrCodeUrl"
+                }
+              }
+            ]
+          },
+          {
+            "qrcodeConfig": [
+              {
+                "variable": "qrCodeImage",
+                "value": "{{qrCodeUrl}}"
               }
             ]
           }

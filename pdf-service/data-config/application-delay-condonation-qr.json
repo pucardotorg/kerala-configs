@@ -1,5 +1,5 @@
 {
-  "key": "application-bail-bond-qr",
+  "key": "application-delay-condonation-qr",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -37,33 +37,27 @@
                 }
               },
               {
+                "variable": "filingNumber",
+                "value": {
+                  "path": "$.filingNumber"
+                }
+              },
+              {
                 "variable": "caseName",
                 "value": {
                   "path": "$.caseName"
                 }
               },
               {
-                "variable": "judgeName",
-                "value": {
-                  "path": "$.judgeName"
-                }
-              },
-              {
-                "variable": "courtDesignation",
-                "value": {
-                  "path": "$.courtDesignation"
-                }
-              },
-              {
-                "variable": "addressOfTheCourt",
-                "value": {
-                  "path": "$.addressOfTheCourt"
-                }
-              },
-              {
                 "variable": "date",
                 "value": {
                   "path": "$.date"
+                }
+              },
+              {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.complainantName"
                 }
               },
               {
@@ -79,48 +73,16 @@
                 }
               },
               {
-                "variable": "statuteAndAct",
-                "value": {
-                  "path": "$.statuteAndAct"
-                }
-              },
-              {
-                "variable": "offenceAgainstAccused",
-                "value": {
-                  "path": "$.offenceAgainstAccused"
-                }
-              },
-              {
-                "variable": "prayer",
-                "value": {
-                  "path": "$.prayer"
-                }
-              },
-              {
                 "variable": "applicationTitle",
                 "value": {
                   "path": "$.applicationTitle"
                 }
               },
               {
-                "variable": "subjectText",
+                "variable": "reasonForDelay",
                 "value": {
-                  "path": "$.subjectText"
+                  "path": "$.reasonForDelay"
                 }
-              },
-              {
-                "variable": "reasonForApplication",
-                "value": {
-                  "path": "$.reasonForApplication"
-                }
-              },
-              {
-                "variable": "documentList",
-                "value": {
-                  "path": "$.documentList"
-                },
-                "type": "index",
-                "format": "var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
               },
               {
                 "variable": "additionalComments",
@@ -150,12 +112,6 @@
                 "variable": "advocateSignature",
                 "value": {
                   "path": "$.advocateSignature"
-                }
-              },
-              {
-                "variable": "advocateName",
-                "value": {
-                  "path": "$.advocateName"
                 }
               },
               {

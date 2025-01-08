@@ -2,73 +2,89 @@
   "BusinessServices": [
     {
       "tenantId": "kl",
-      "businessService": "task-default",
-      "business": "task",
-      "businessServiceSla": 30,
+      "business": "submission",
+      "businessService": "voluntary-document-submission",
+      "businessServiceSla": 432000000,
       "states": [
         {
           "sla": null,
           "state": null,
           "applicationStatus": null,
-          "docUploadRequired": true,
+          "docUploadRequired": false,
           "isStartState": true,
           "isTerminateState": false,
           "isStateUpdatable": true,
           "actions": [
             {
               "action": "CREATE",
-              "nextState": "IN_PROGRESS",
+              "nextState": "PENDING_E-SIGN",
               "roles": [
-                "TASK_CREATOR",
-                "PENDING_TASK_CREATOR"
-              ]   
+                "SUBMISSION_CREATOR"
+              ]
             }
           ]
         },
         {
-          "sla": null,
-          "state": "IN_PROGRESS",
+          "sla": 86400000,
+          "state": "PENDING_E-SIGN",
           "applicationStatus": "INWORKFLOW",
           "docUploadRequired": false,
-          "isStartState": false,
+          "isStartState": true,
           "isTerminateState": false,
           "isStateUpdatable": true,
           "actions": [
             {
-              "action": "CLOSE",
-              "nextState": "COMPLETED",
+              "action": "E-SIGN",
+              "nextState": "SUBMITTED",
               "roles": [
-                "TASK_EDITOR"
+                "SUBMISSION_CREATOR",
+                "SYSTEM",
+                "SYSTEM_ADMIN"
+              ]
+            },
+            {
+              "action": "DELETE",
+              "nextState": "DELETED",
+              "roles": [
+                "SUBMISSION_CREATOR"
               ]
             },
             {
               "action": "ABANDON",
               "nextState": "ABATED",
               "roles": [
-                "WORKFLOW_ABANDON"
-              ]   
+                "SYSTEM",
+                "SYSTEM_ADMIN"
+              ]
             }
           ]
         },
         {
           "sla": null,
-          "state": "COMPLETED",
+          "state": "SUBMITTED",
           "applicationStatus": "ACTIVE",
+          "isStateUpdatable": false,
           "docUploadRequired": false,
           "isStartState": false,
-          "isTerminateState": true,
+          "isTerminateState": true
+        },
+        {
+          "sla": null,
+          "state": "DELETED",
+          "applicationStatus": "INACTIVE",
           "isStateUpdatable": false,
-          "actions": null
+          "docUploadRequired": false,
+          "isStartState": false,
+          "isTerminateState": true
         },
         {
           "sla": null,
           "state": "ABATED",
           "applicationStatus": "INACTIVE",
+          "isStateUpdatable": false,
           "docUploadRequired": false,
           "isStartState": false,
-          "isTerminateState": true,
-          "isStateUpdatable": false,
-          "actions": null
+          "isTerminateState": true
         }
       ]
     }
