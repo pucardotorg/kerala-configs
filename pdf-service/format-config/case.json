@@ -12,7 +12,7 @@
         "style": "header"
       },
       {
-        "text": "CASE NUMBER {{caseNumber}} of {{caseYear}}",
+        "text": "CASE NUMBER {{caseNumber}}",
         "style": "subheader"
       },
       {
