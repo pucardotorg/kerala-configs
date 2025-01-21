@@ -351,6 +351,18 @@
                     "table": {
                       "widths": ["50%", "50%"],
                       "body": [
+                        [
+                          {
+                            "text": "Complainant Signature(s)",
+                            "alignment": "left",
+                            "style": "signatureHeading"
+                          },
+                          {
+                            "text": "Advocate Signature(s)",
+                            "alignment": "right",
+                            "style": "signatureHeading"
+                          }
+                        ],
                         "{{#complainantList}}",
                         [
                           {
@@ -359,21 +371,10 @@
                             "alignment": "left"
                           },
                           {
-                            "table": {
-                              "widths": ["*"],
-                              "body": [
-                                "{{#advocateList}}",
-                                [
-                                  {
-                                    "text": "Advocate {{adjustedIndex}} Signature",
-                                    "style": "signature",
-                                    "alignment": "right"
-                                  }
-                                ],
-                                "{{/advocateList}}"
-                              ]
-                            },
-                            "layout": "noBorders"
+                            "text": "Advocate {{index}} Signature",
+                            "style": "signature",
+                            "alignment": "right",
+                            "color": "white"
                           }
                         ],
                         "{{/complainantList}}"
@@ -557,6 +558,11 @@
       },
       "date": {
         "fontSize": 13,
+        "margin": [0, 20, 0, 3]
+      },
+      "signatureHeading": {
+        "decoration": "underline",
+        "fontSize": 13.5,
         "margin": [0, 20, 0, 3]
       },
       "signature": {
