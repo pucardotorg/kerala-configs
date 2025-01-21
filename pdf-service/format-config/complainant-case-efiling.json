@@ -383,6 +383,11 @@
                     "layout": "noBorders"
                   },
                   {
+                    "text": "(Signature of one advocate representing each complainant is needed. In case an advocate represents multiple complainants, they only need to sign once)",
+                    "style": "bodyText",
+                    "margin": [0, 10, 0, 3]
+                  },
+                  {
                     "text": "List of Documents:",
                     "style": "title",
                     "decoration": "underline"
