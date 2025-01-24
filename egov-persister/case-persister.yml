@@ -408,25 +408,25 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: litigant
       queryMaps:
-        - query: INSERT INTO public.dristi_case_litigants(id, tenantid, partycategory, individualid, organisationid, partytype, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-          basePath: litigant
+        - query: INSERT INTO public.dristi_case_litigants(id, tenantid, partycategory, individualid, organisationid, partytype, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, isactive = EXCLUDED.isactive, case_id = EXCLUDED.case_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
+          basePath: litigant.*
           jsonMaps:
-            - jsonPath: $.litigant.id
-            - jsonPath: $.litigant.tenantId
-            - jsonPath: $.litigant.partyCategory
-            - jsonPath: $.litigant.individualId
-            - jsonPath: $.litigant.organisationID
-            - jsonPath: $.litigant.partyType
-            - jsonPath: $.litigant.isActive
-            - jsonPath: $.litigant.caseId
-            - jsonPath: $.litigant.additionalDetails
+            - jsonPath: $.litigant.*.id
+            - jsonPath: $.litigant.*.tenantId
+            - jsonPath: $.litigant.*.partyCategory
+            - jsonPath: $.litigant.*.individualId
+            - jsonPath: $.litigant.*.organisationID
+            - jsonPath: $.litigant.*.partyType
+            - jsonPath: $.litigant.*.isActive
+            - jsonPath: $.litigant.*.caseId
+            - jsonPath: $.litigant.*.additionalDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.litigant.auditDetails.createdBy
-            - jsonPath: $.litigant.auditDetails.lastModifiedBy
-            - jsonPath: $.litigant.auditDetails.createdTime
-            - jsonPath: $.litigant.auditDetails.lastModifiedTime
-            - jsonPath: $.litigant.hasSigned
+            - jsonPath: $.litigant.*.auditDetails.createdBy
+            - jsonPath: $.litigant.*.auditDetails.lastModifiedBy
+            - jsonPath: $.litigant.*.auditDetails.createdTime
+            - jsonPath: $.litigant.*.auditDetails.lastModifiedTime
+            - jsonPath: $.litigant.*.hasSigned
 
 
     - version: 1.0
