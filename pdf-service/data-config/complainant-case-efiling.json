@@ -175,6 +175,12 @@
                 }
               },
               {
+                "variable": "prayer",
+                "value": {
+                  "path": "$.prayer"
+                }
+              },
+              {
                 "variable": "documentList",
                 "value": {
                   "path": "$.documentList"
