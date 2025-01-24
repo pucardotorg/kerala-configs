@@ -29,7 +29,7 @@
                     "alignment": "center"
                   },
                   {
-                    "text": "IN THE {{courtName}}",
+                    "text": "In The {{courtName}}",
                     "style": "form-sub-header"
                   },
                   {

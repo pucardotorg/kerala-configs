@@ -21,7 +21,7 @@
                     "style": "form-header"
                   },
                   {
-                    "text": "IN THE {{courtName}}",
+                    "text": "In The {{courtName}}",
                     "style": "form-sub-header"
                   },
                   {
