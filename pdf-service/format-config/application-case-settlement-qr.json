@@ -10,7 +10,7 @@
               {
                 "stack": [
                   {
-                    "text": "IN THE COURT OF {{courtName}}",
+                    "text": "{{courtName}}",
                     "style": "header"
                   },
                   {

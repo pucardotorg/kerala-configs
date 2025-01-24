@@ -1,0 +1,216 @@
+{
+  "key": "order-notice-bnss-dca-qr",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "{{orderHeading}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "CMP No {{cmpNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In Case No. {{caseNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "ORDER",
+                    "style": "orderTitle"
+                  },
+                  {
+                    "text": "Issue of Notice to {{partyName}} for delay condonation and pre-cognizance hearing under Section 223(1) of BNSS",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "1. Order for issue of Notice to {{partyName}} for pre-cognizance hearing under Section 223(1) of BNSS",
+                    "style": "subheader"
+                  },
+                  {
+                    "text": "Issue of Notice to {{partyName}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has determined that it is necessary to issue a notice of {{typeOfNotice}} to {{partyName}}; and",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has reviewed the relevant facts and circumstances necessitating the issuance of this notice; and",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has considered the relevant legal provisions regarding the issuance of notices;",
+                    "style": "contentText"
+                  },
+
+                  {
+                    "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "A notice of {{typeOfNotice}} be issued to {{partyName}}, requiring their presence before this Court on {{hearingDate}}.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The notice shall specify the purpose and details of the required action.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The notice shall be served upon {{partyName}} in accordance with the legal requirements for service of process.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "IT IS SO ORDERED.",
+                    "style": "orderText"
+                  },
+                  {
+                    "text": "2. Order for issue of Notice to {{partyName}} for delay condonation hearing",
+                    "style": "subheader"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has determined that it is necessary to issue a notice of {{typeOfNotice}} to {{partyName}}; and",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has reviewed the relevant facts and circumstances necessitating the issuance of this notice; and",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has considered the relevant legal provisions regarding the issuance of notices;",
+                    "style": "contentText"
+                  },
+
+                  {
+                    "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "A notice of {{typeOfNotice}} be issued to {{partyName}}, requiring their presence before this Court on {{hearingDate}}.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The notice shall specify the purpose and details of the required action.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The notice shall be served upon {{partyName}} in accordance with the legal requirements for service of process.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "IT IS SO ORDERED.",
+                    "style": "orderText"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "advocateSignature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeDesignation}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "subheader": {
+        "fontSize": 11,
+        "alignment": "left",
+        "bold": true,
+        "margin": [10, 10, 0, 10]
+      },
+      "orderTitle": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "contentText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 20]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 0]
+      },
+      "advocateSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 50, 0, 5]
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      }
+    }
+  }
+}

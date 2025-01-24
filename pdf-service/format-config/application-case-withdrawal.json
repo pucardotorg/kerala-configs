@@ -10,11 +10,11 @@
               {
                 "stack": [
                   {
-                    "text": "IN THE COURT OF {{courtComplex}}",
+                    "text": "{{courtComplex}}",
                     "style": "header"
                   },
                   {
-                    "text": "{{caseType}}/Case No. {{caseNumber}} of {{caseYear}}",
+                    "text": "{{caseType}}/Case No. {{caseNumber}}",
                     "style": "subHeader"
                   },
                   {

@@ -1,0 +1,91 @@
+{
+  "key": "dca-notice",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.summonsPdf",
+    "entityIdPath": "$.cmpNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "filingNumber",
+                "value": {
+                  "path": "$.filingNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName",
+                  "defaultValue": "NA"
+                }
+              },
+{
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.complainantName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "complainantAddress",
+                "value": {
+                  "path": "$.complainantAddress",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "hearingDate",
+                "value": {
+                  "path": "$.hearingDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "issueDate",
+                "value": {
+                  "path": "$.issueDate",
+                  "defaultValue": "NA"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
