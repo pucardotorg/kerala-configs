@@ -29,11 +29,11 @@
                     "alignment": "center"
                   },
                   {
-                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE OF {{judgeName}}",
+                    "text": "IN THE {{courtName}}",
                     "style": "form-sub-header"
                   },
                   {
-                    "text": "CMP No. {{cmpNumber}}",
+                    "text": "{{cmpNumber}}",
                     "style": "form-sub-header"
                   },
                   {
