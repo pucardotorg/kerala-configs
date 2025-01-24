@@ -10,7 +10,7 @@
               {
                 "stack": [
                   {
-                    "text": "{{courtName}}, {{place}}",
+                    "text": "{{courtName}}",
                     "style": "header"
                   },
                   {
