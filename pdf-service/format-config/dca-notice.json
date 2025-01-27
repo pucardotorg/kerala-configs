@@ -65,9 +65,22 @@
             ],
             [
               {
-                "text": "And that this court shall hear on the question of “condoning the delay” in taking cognisance of the said offence on the {{hearingDate}}. You are at liberty to show cause why this court should not “condone the delay”.",
-                "style": "form-sub-body"
+                "text": [
+                  {
+                    "text": "And that this court shall hear on the question of “condoning the delay” in taking cognisance of the said offence on the ",
+                    "style": "form-sub-body"
+                  },
+                  {
+                    "text": "{{hearingDate}}.",
+                    "style":"form-sub-body-bold"
+                  },
+                  {
+                    "text":" You are at liberty to show cause why this court should not “condone the delay”.",
+                    "style":"form-sub-body"
+                  }
+                ]
               }
+              
             ],
             [
               {
@@ -125,6 +138,11 @@
         "color": "#252525",
         "fontSize": 14,
         "margin": [5, 5, 5, 5]
+      },
+      "form-sub-body-bold": {
+        "fontSize": 13,
+        "color": "#252525",
+        "bold": true
       }
     }
   }
