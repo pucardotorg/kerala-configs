@@ -176,13 +176,13 @@
             "style": "footer-content-link"
           }
         ],
-        "margin": [0, 15]
+        "margin": [0, 8]
       },
       {
         "style": "footer-content",
         "text": "The process is system generated and transmitted in a secured manner by authorised user, as such a physical copy is not required.",
         "color": "#A62121",
-        "margin": [0, 15]
+        "margin": [0, 8]
       },
       {
         "text": "Next Page",
