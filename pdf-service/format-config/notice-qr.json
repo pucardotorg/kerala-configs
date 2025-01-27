@@ -159,11 +159,11 @@
                     "style": "footer-content-link"
                   },
                   {
-                    "text": "https://courtwebsite.com",
+                    "text": "{{courtUrl}}",
                     "decoration": "underline",
                     "color": "#A62121",
                     "style": "footer-content-link",
-                    "link": "https://courtwebsite.com"
+                    "link": "{{courtUrl}}"
                   },
                   {
                     "text": " for more information",
