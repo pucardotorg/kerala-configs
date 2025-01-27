@@ -111,8 +111,20 @@
             ],
             [
               {
-                "text": "And that this court shall hear on the question of taking cognisance of the said offence on the {{hearingDate}}. You are at liberty to show cause why this court should not take cognizance of the said complaint. ",
-                "style": "form-sub-body"
+                "text": [
+                  {
+                    "text": "And that this court shall hear on the question of taking cognisance of the said offence on the ",
+                    "style": "form-sub-body"
+                  },
+                  {
+                    "text": "{{hearingDate}}.",
+                    "style": "form-sub-body-bold"
+                  },
+                  {
+                    "text": " You are at liberty to show cause why this court should not take cognizance of the said complaint. ",
+                    "style": "form-sub-body"
+                  }
+                ]
               }
             ],
             [
@@ -140,12 +152,24 @@
         "margin": [0, 20, 0, 0]
       },
       {
-        "style": "footer-content",
-        "text": "Visit {{courtUrl}} for more information",
-        "decoration": "underline",
-        "color": "#A62121",
-        "margin": [0, 15],
-        "link": "{{courtUrl}}"
+        "text": [
+          {
+            "text": "Visit ",
+            "style": "footer-content-link"
+          },
+          {
+            "text": "{{courtUrl}}",
+            "decoration": "underline",
+            "color": "#A62121",
+            "style": "footer-content-link",
+            "link": "{{courtUrl}}"
+          },
+          {
+            "text": " for more information",
+            "style": "footer-content-link"
+          }
+        ],
+        "margin": [0, 15]
       },
       {
         "style": "footer-content",
@@ -204,8 +228,20 @@
             ],
             [
               {
-                "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: {{accessCode}}. Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the complaint tab of the Portal.",
-                "style": "annexure-content"
+                "text": [
+                  {
+                    "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: ",
+                    "style": "annexure-content"
+                  },
+                  {
+                    "text": "{{accessCode}}.",
+                    "style": "annexure-content-bold"
+                  },
+                  {
+                    "text": " Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the complaint tab of the Portal.",
+                    "style": "annexure-content"
+                  }
+                ]
               }
             ],
             [
@@ -244,7 +280,15 @@
                         "bold": true
                       },
                       {
-                        "text": "Log in to the Portal & enter the 6-digit code {{accessCode}} to access your case details. You can use your mobile number to register/login on the portal",
+                        "text": "Log in to the Portal & enter the 6-digit code ",
+                        "style": "annexure-content"
+                      },
+                      {
+                        "text": "{{accessCode}},",
+                        "style": "annexure-content-bold"
+                      },
+                      {
+                        "text": " to access your case details. You can use your mobile number to register/login on the portal",
                         "style": "annexure-content"
                       }
                     ]
@@ -257,7 +301,15 @@
                         "bold": true
                       },
                       {
-                        "text": "If you cannot attend your hearing on {{hearingDate}}, you can request a new date through the Portal.",
+                        "text": "If you cannot attend your hearing on ",
+                        "style": "annexure-content"
+                      },
+                      {
+                        "text": "{{hearingDate}},",
+                        "style": "annexure-content-bold"
+                      },
+                      {
+                        "text": " you can request a new date through the Portal.",
                         "style": "annexure-content"
                       }
                     ]
@@ -415,6 +467,22 @@
       },
       "annexure-sub-content": {
         "margin": [20, 0, 0, 5]
+      },
+      "annexure-content-bold": {
+        "fontSize": 11,
+        "color": "#252525",
+        "bold": true
+      },
+      "form-sub-body-bold": {
+        "fontSize": 13,
+        "color": "#252525",
+        "bold": true
+      },
+      "footer-content-link": {
+        "color": "#252525",
+        "fontSize": 14,
+        "margin": [5, 5, 5, 5],
+        "alignment": "left"
       }
     }
   }
