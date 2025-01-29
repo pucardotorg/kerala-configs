@@ -1,0 +1,156 @@
+{
+  "key": "application-delay-condonation-qr",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "{{courtComplex}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{caseType}}/Case No. {{caseNumber}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "Filing Number {{filingNumber}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "{{caseName}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "{{applicationTitle}}",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "{{complainantName}}, herein referred to as the petitioner, represented by Advocate {{advocateName}}, respectfully submits as follows:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "My client, {{partyName}}, {{partyType}}, hereby submits this application before this Honorable Court to request condonation of delay in filing my {{caseName}} numbered {{caseNumber}}. The delay was unintentional and occurred without any negligence on my part.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "I sincerely apologize for the delay and assure this Honorable Court of my earnest efforts to rectify the oversight and proceed with the matter diligently. I assure this Honorable Court of my full cooperation and compliance with all procedural requirements going forward.",
+                    "style": "boldText"
+                  },
+                  {
+                    "text": "Reasons for Delay: {{reasonForDelay}}",
+                    "style": "boldText"
+                  },
+                  {
+                    "text": "The petitioner assures and undertakes to the Hon'ble Court that this request is made in good faith and will not prejudice the other party.",
+                    "style": "boldText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Dated this {{day}} day of {{month}}, {{year}}.",
+                    "style": "date"
+                  },
+                  {
+                    "text": "{{advocateSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{advocateName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{barRegistrationNumber}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Advocate for {{partyName}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "applicationTitle": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "left",
+        "margin": [0, 20, 0, 10]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      },
+      "advocateSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 50, 0, 5]
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      }
+    }
+  }
+}

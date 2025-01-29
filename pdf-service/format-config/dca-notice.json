@@ -1,0 +1,149 @@
+{
+  "key": "dca-notice",
+  "config": {
+    "defaultStyle": {
+      "font": "Cambay",
+      "lineHeight": 1.5
+    },
+    "pageMargins": [70, 40],
+    "content": [
+      {
+        "style": "form-header",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "Notice to Accused",
+                    "style": "form-header",
+                    "fontSize": 14,
+                    "alignment": "center",
+                    "bold": true
+                  },
+                  {
+                    "text": "(Delay condonation hearing)",
+                    "style": "form-header",
+                    "fontSize": 14,
+                    "alignment": "center"
+                  },
+                  {
+                    "text": "In The {{courtName}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "Case No. {{caseNumber}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "Filing Number {{filingNumber}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "{{caseName}}",
+                    "style": "form-sub-header"
+                  }
+                ],
+                "alignment": "center",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "Please take notice that a delay condonation application has been presented before this court by {{complainantName}} {{complainantAddress}}, praying that the delay in presenting a complaint against you for the offence punishable under Section (s) 138 of the Negotiable Instruments Act, 1881, be condoned.",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": [
+                  {
+                    "text": "And that this court shall hear on the question of “condoning the delay” in taking cognisance of the said offence on the ",
+                    "style": "form-sub-body"
+                  },
+                  {
+                    "text": "{{hearingDate}}.",
+                    "style":"form-sub-body-bold"
+                  },
+                  {
+                    "text":" You are at liberty to show cause why this court should not “condone the delay”.",
+                    "style":"form-sub-body"
+                  }
+                ]
+              }
+              
+            ],
+            [
+              {
+                "text": "Given under my hand and the seal of the Court on this {{issueDate}}.",
+                "style": "form-sub-body",
+                "margin": [0, 10]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [0, 20]
+      },
+      {
+        "style": "closing-content",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "{{judgeName}}"
+              }
+            ],
+            [
+              {
+                "text": "{{courtName}}"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [0, 20, 0, 0]
+      }
+    ],
+    "styles": {
+      "form-header": {
+        "color": "#252525",
+        "fontFamily": "Roboto",
+        "letterSpacing": 0.5
+      },
+      "form-sub-header": {
+        "color": "#252525",
+        "fontFamily": "Roboto",
+        "alignment": "center",
+        "fontSize": 12,
+        "letterSpacing": 0.6,
+        "margin": [0, 5, 0, 0]
+      },
+      "form-sub-body": {
+        "fontSize": 13,
+        "color": "#252525",
+        "alignment": "justify"
+      },
+      "closing-content": {
+        "color": "#252525",
+        "fontSize": 14,
+        "margin": [5, 5, 5, 5]
+      },
+      "form-sub-body-bold": {
+        "fontSize": 13,
+        "color": "#252525",
+        "bold": true
+      }
+    }
+  }
+}
