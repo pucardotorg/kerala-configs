@@ -1,0 +1,231 @@
+{
+  "key": "bDiary-format",
+  "config": {
+    "pageSize": "A4",
+    "content": [
+      {
+        "image": "{{onCourtsLogo}}",
+        "width": 66.5,
+        "height": 50,
+        "absolutePosition": {
+          "x": 0,
+          "y": 10
+        },
+        "alignment": "right"
+      },
+      {
+        "image": "{{nationalEmblem}}",
+        "width": 50,
+        "height": 50,
+        "absolutePosition": {
+          "x": 30,
+          "y": 10
+        }
+      },
+      {
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "{{courtName}}",
+                "alignment": "center",
+                "color": "black",
+                "style": "court-complex",
+                "border": [
+                  false,
+                  false,
+                  false,
+                  true
+                ]
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": [
+          {
+            "text": "In The Court of: ",
+            "style": "judge-header"
+          },
+          {
+            "text": "{{judgeId}}, Special Court of Judicial Magistrate of the First Class",
+            "style": "judge-details"
+          }
+        ],
+        "alignment": "center",
+        "style": "judge-margin"
+      },{
+        "text": [
+          {
+            "text": "for the trial of cases under ",
+            "style": "court-header"
+          },
+          {
+            "text": "section 138 of NI Act, 1881 at Kollam ('24 x7 ON Court')",
+            "style": "court-details"
+          }
+        ],
+        "alignment": "center",
+        "style": "court-margin"
+      },{
+        "text": "Case No: {{caseNumber}}",
+        "alignment": "center",
+        "color": "black",
+        "style": "criminal-case-header"
+      },{
+        "text": "B DIARY",
+        "alignment": "center",
+        "color": "black",
+        "style": "criminal-case-header"
+      },
+      {
+        "table": {
+          "widths": [
+            "15%",
+            "30%",
+            "55%"
+          ],
+          "headerRows": 1,
+          "body": [
+            [
+              {
+                "text": "SI No.",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Date",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Proceedings/Business of the day",
+                "style": "table-header",
+                "alignment": "center"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "",
+        "{{#diaryEntries}}": true
+      },
+      {
+        "table": {
+          "widths": [
+            "15%",
+            "30%",
+            "55%"
+          ],
+          "headerRows": 1,
+          "body": [
+            [
+              {
+                "text": "{{index}}",
+                "style": "table-data",
+                "alignment": "center"
+              },
+              {
+                "text": "{{date}}",
+                "style": "table-data",
+                "alignment": "center"
+              },
+              {
+                "text": "{{businessOfDay}}",
+                "style": "table-data",
+                "alignment": "center"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "",
+        "{{/diaryEntries}}": true
+      },
+      {
+        "text": "Disclaimer: This is a system-generated B Diary.",
+        "alignment": "left",
+        "color": "#d029d9",
+        "absolutePosition": {
+          "x": 40,
+          "y": 785
+        }
+      }
+    ],
+    "styles": {
+      "judge-margin": {
+        "margin": [10, 10, 10, 20]
+      },
+      "judge-header": {
+        "fontSize": 14,
+        "bold": true,
+        "color": "black"
+      },
+      "judge-details": {
+        "fontSize": 14,
+        "bold": true,
+        "color": "orange"
+      },
+      "court-margin": {
+        "margin": [0, 0, 0, 15]
+      },
+      "court-header": {
+        "fontSize": 13,
+        "bold": true,
+        "color": "black"
+      },
+      "court-details": {
+        "fontSize": 13,
+        "bold": true,
+        "color": "orange"
+      },
+      "criminal-case-header": {
+        "fontSize": 13,
+        "bold": true,
+        "color": "black",
+        "margin": [0, 0, 0, 15]
+      },
+      "court-complex": {
+        "fontSize": 16,
+        "bold": true,
+        "color": "black",
+        "margin": [
+          0,
+          50,
+          0,
+          30
+        ]
+      },
+      "table-header": {
+        "fontSize": 10,
+        "bold": true,
+        "color": "white",
+        "fillColor": "#088F8F",
+        "alignment": "center",
+        "margin": [
+          5,
+          5,
+          5,
+          5
+        ]
+      },
+      "table-data": {
+        "fontSize": 10,
+        "color": "black",
+        "alignment": "center",
+        "margin": [
+          5,
+          5,
+          5,
+          5
+        ]
+      }
+    }
+  }
+}
