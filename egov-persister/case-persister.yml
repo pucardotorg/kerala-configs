@@ -408,25 +408,25 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: litigant
       queryMaps:
-        - query: INSERT INTO public.dristi_case_litigants(id, tenantid, partycategory, individualid, organisationid, partytype, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-          basePath: litigant
+        - query: INSERT INTO public.dristi_case_litigants(id, tenantid, partycategory, individualid, organisationid, partytype, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, isactive = EXCLUDED.isactive, case_id = EXCLUDED.case_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
+          basePath: litigant.*
           jsonMaps:
-            - jsonPath: $.litigant.id
-            - jsonPath: $.litigant.tenantId
-            - jsonPath: $.litigant.partyCategory
-            - jsonPath: $.litigant.individualId
-            - jsonPath: $.litigant.organisationID
-            - jsonPath: $.litigant.partyType
-            - jsonPath: $.litigant.isActive
-            - jsonPath: $.litigant.caseId
-            - jsonPath: $.litigant.additionalDetails
+            - jsonPath: $.litigant.*.id
+            - jsonPath: $.litigant.*.tenantId
+            - jsonPath: $.litigant.*.partyCategory
+            - jsonPath: $.litigant.*.individualId
+            - jsonPath: $.litigant.*.organisationID
+            - jsonPath: $.litigant.*.partyType
+            - jsonPath: $.litigant.*.isActive
+            - jsonPath: $.litigant.*.caseId
+            - jsonPath: $.litigant.*.additionalDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.litigant.auditDetails.createdBy
-            - jsonPath: $.litigant.auditDetails.lastModifiedBy
-            - jsonPath: $.litigant.auditDetails.createdTime
-            - jsonPath: $.litigant.auditDetails.lastModifiedTime
-            - jsonPath: $.litigant.hasSigned
+            - jsonPath: $.litigant.*.auditDetails.createdBy
+            - jsonPath: $.litigant.*.auditDetails.lastModifiedBy
+            - jsonPath: $.litigant.*.auditDetails.createdTime
+            - jsonPath: $.litigant.*.auditDetails.lastModifiedTime
+            - jsonPath: $.litigant.*.hasSigned
 
 
     - version: 1.0
@@ -455,7 +455,7 @@ serviceMaps:
             - jsonPath: $.representative.auditDetails.createdTime
             - jsonPath: $.representative.auditDetails.lastModifiedTime
             - jsonPath: $.representative.hasSigned
-        - query: INSERT INTO public.dristi_case_representing(id, tenantid, partycategory, individualid, organisationid, case_id, partytype, isactive, representative_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO public.dristi_case_representing(id, tenantid, partycategory, individualid, organisationid, case_id, partytype, isactive, representative_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET isactive = EXCLUDED.isactive, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
           basePath: representative.representing.*
           jsonMaps:
             - jsonPath: $.representative.representing.*.id
@@ -474,31 +474,6 @@ serviceMaps:
             - jsonPath: $.representative.representing.*.auditDetails.lastModifiedBy
             - jsonPath: $.representative.representing.*.auditDetails.createdTime
             - jsonPath: $.representative.representing.*.auditDetails.lastModifiedTime
-
-    - version: 1.0
-      description: Update representative for a case in dristi_case_representatives table
-      fromTopic: update-representative-join-case
-      isTransaction: true
-      isAuditEnabled: true
-      module: CASE
-      objecIdJsonPath: $.id
-      tenantIdJsonPath: $.tenantId
-      auditAttributeBasePath: representative
-      queryMaps:
-        - query: UPDATE dristi_case_representatives SET isactive = ?, lastmodifiedby = ?, lastmodifiedtime = ? WHERE id = ?;
-          basePath: representative
-          jsonMaps:
-            - jsonPath: $.representative.isActive
-            - jsonPath: $.representative.auditDetails.lastModifiedBy
-            - jsonPath: $.representative.auditDetails.lastModifiedTime
-            - jsonPath: $.representative.id
-        - query: UPDATE dristi_case_representing SET isactive = ?, lastmodifiedby = ?, lastmodifiedtime = ? WHERE id = ?;
-          basePath: .representing.*
-          jsonMaps:
-            - jsonPath: $.representative.representing.*.isActive
-            - jsonPath: $.representative.representing.*.auditDetails.lastModifiedBy
-            - jsonPath: $.representative.representing.*.auditDetails.lastModifiedTime
-            - jsonPath: $.representative.representing.*.id
 
     - version: 1.0
       description: Update case overall workflow in tables
