@@ -59,3 +59,88 @@ serviceMaps:
             - jsonPath: $.diaryEntry.auditDetails.lastModifiedBy
             - jsonPath: $.diaryEntry.auditDetails.lastModifiedTime
             - jsonPath: $.diaryEntry.id
+
+    - version: 1.0
+      description: Persists diary details in table
+      fromTopic: save-diary
+      isTransaction: true
+      isAuditEnabled: true
+      module: case-diary
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.caseNumber
+      auditAttributeBasePath: diary
+      queryMaps:
+        - query: INSERT INTO dristi_casediary (tenant_id,case_number,diary_date,diary_type,judge_id,additional_details,created_by,last_modified_by,created_time,last_modified_time,id) VALUES (?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET additional_details = EXCLUDED.additional_details,last_modified_time = EXCLUDED.last_modified_time,last_modified_by = EXCLUDED.last_modified_by;
+          basePath: diary
+          jsonMaps:
+            - jsonPath: $.diary.tenantId
+            - jsonPath: $.diary.caseNumber
+            - jsonPath: $.diary.diaryDate
+            - jsonPath: $.diary.diaryType
+            - jsonPath: $.diary.judgeId
+            - jsonPath: $.diary.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.diary.auditDetails.createdBy
+            - jsonPath: $.diary.auditDetails.lastModifiedBy
+            - jsonPath: $.diary.auditDetails.createdTime
+            - jsonPath: $.diary.auditDetails.lastModifiedTime
+            - jsonPath: $.diary.id
+        - query: INSERT INTO dristi_casediary_documents (id, tenant_id, filestore_id, document_uid,document_name,document_type,casediary_id,is_active, additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET filestore_id = EXCLUDED.filestore_id,additional_details = EXCLUDED.additional_details,last_modified_by = EXCLUDED.last_modified_by,last_modified_time = EXCLUDED.last_modified_time;
+          basePath: .documents.*
+          jsonMaps:
+            - jsonPath: $.diary.documents.*.id
+            - jsonPath: $.diary.documents.*.tenantId
+            - jsonPath: $.diary.documents.*.fileStoreId
+            - jsonPath: $.diary.documents.*.documentUid
+            - jsonPath: $.diary.documents.*.documentName
+            - jsonPath: $.diary.documents.*.documentType
+            - jsonPath: $.diary.documents.*.caseDiaryId
+            - jsonPath: $.diary.documents.*.isActive
+            - jsonPath: $.diary.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.diary.documents.*.auditDetails.createdBy
+            - jsonPath: $.diary.documents.*.auditDetails.lastModifiedBy
+            - jsonPath: $.diary.documents.*.auditDetails.createdTime
+            - jsonPath: $.diary.documents.*.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      description: Persists diary details in table
+      fromTopic: update-diary
+      isTransaction: true
+      isAuditEnabled: true
+      module: case-diary
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.caseNumber
+      auditAttributeBasePath: diary
+      queryMaps:
+        - query: UPDATE dristi_casediary SET additional_details=?,last_modified_by=?,last_modified_time=? where id=?;
+          basePath: diary
+          jsonMaps:
+            - jsonPath: $.diary.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.diary.auditDetails.lastModifiedBy
+            - jsonPath: $.diary.auditDetails.lastModifiedTime
+            - jsonPath: $.diary.id
+        - query: INSERT INTO dristi_casediary_documents (id, tenant_id, filestore_id, document_uid,document_name,document_type,casediary_id,is_active, additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?);
+          basePath: .documents.*
+          jsonMaps:
+            - jsonPath: $.diary.documents.*.id
+            - jsonPath: $.diary.documents.*.tenantId
+            - jsonPath: $.diary.documents.*.fileStoreId
+            - jsonPath: $.diary.documents.*.documentUid
+            - jsonPath: $.diary.documents.*.documentName
+            - jsonPath: $.diary.documents.*.documentType
+            - jsonPath: $.diary.documents.*.caseDiaryId
+            - jsonPath: $.diary.documents.*.isActive
+            - jsonPath: $.diary.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.diary.documents.*.auditDetails.createdBy
+            - jsonPath: $.diary.documents.*.auditDetails.lastModifiedBy
+            - jsonPath: $.diary.documents.*.auditDetails.createdTime
+            - jsonPath: $.diary.documents.*.auditDetails.lastModifiedTime
