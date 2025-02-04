@@ -46,7 +46,7 @@ serviceMaps:
 
 
 
-    - query: INSERT INTO eg_hrms_assignment(tenantid, uuid, position, courtEstablishment, designation, courtroom, fromdate, todate, govtordernumber, reportingto, isHOD, iscurrentassignment, employeeid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_hrms_assignment(tenantid, uuid, position, district, courtEstablishment, designation, courtroom, fromdate, todate, govtordernumber, reportingto, isHOD, iscurrentassignment, employeeid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
       basePath: Employees.*.assignments.*
       jsonMaps:
@@ -57,6 +57,8 @@ serviceMaps:
       - jsonPath: $.Employees.*.assignments.*.id
 
       - jsonPath: $.Employees.*.assignments.*.position
+
+      - jsonPath: $.Employees.*.assignments.*.district
 
       - jsonPath: $.Employees.*.assignments.*.courtEstablishment
 
@@ -295,7 +297,7 @@ serviceMaps:
 
 
 
-    - query: INSERT INTO eg_hrms_assignment(tenantid, uuid, position, courtEstablishment, designation, courtroom, fromdate, todate, govtordernumber, reportingto, isHOD, iscurrentassignment, employeeid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    - query: INSERT INTO eg_hrms_assignment(tenantid, uuid, position, district, courtEstablishment, designation, courtroom, fromdate, todate, govtordernumber, reportingto, isHOD, iscurrentassignment, employeeid, createdby, createddate, lastmodifiedby, lastModifiedDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
 
       basePath: Employees.*.assignments.*
       jsonMaps:
@@ -306,6 +308,8 @@ serviceMaps:
       - jsonPath: $.Employees.*.assignments.*.id
 
       - jsonPath: $.Employees.*.assignments.*.position
+
+      - jsonPath: $.Employees.*.assignments.*.district
 
       - jsonPath: $.Employees.*.assignments.*.courtEstablishment
 
