@@ -86,10 +86,6 @@ ServiceMaps:
                 uriResponseMapping:
                   - inJsonPath: $.ProcessInstances
                     outJsonPath: $.Data.history
-                  - inJsonPath: $.ProcessInstances[0]
-                    outJsonPath: $.Data.currentProcessInstance
-                  - inJsonPath: $.ProcessInstances[0].state.uuid
-                    outJsonPath: $.Data.status
               - path: http://individual.pucar-prod:8080/individual/v1/_search
                 queryParam: limit=1000,offset=0,tenantId=$.tenantId,includeDeleted=true
                 apiRequest:
@@ -231,10 +227,6 @@ ServiceMaps:
                 uriResponseMapping:
                   - inJsonPath: $.ProcessInstances
                     outJsonPath: $.Data.history
-                  - inJsonPath: $.ProcessInstances[0]
-                    outJsonPath: $.Data.currentProcessInstance
-                  - inJsonPath: $.ProcessInstances[0].state.uuid
-                    outJsonPath: $.Data.status
               - path: http://individual.pucar-prod:8080/individual/v1/_search
                 queryParam: limit=1000,offset=0,tenantId=$.tenantId,includeDeleted=true
                 apiRequest:
