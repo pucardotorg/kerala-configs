@@ -455,7 +455,7 @@ serviceMaps:
             - jsonPath: $.representative.auditDetails.createdTime
             - jsonPath: $.representative.auditDetails.lastModifiedTime
             - jsonPath: $.representative.hasSigned
-        - query: INSERT INTO public.dristi_case_representing(id, tenantid, partycategory, individualid, organisationid, case_id, partytype, isactive, representative_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET isactive = EXCLUDED.isactive, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
+        - query: INSERT INTO public.dristi_case_representing(id, tenantid, partycategory, individualid, organisationid, case_id, partytype, isactive, representative_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: representative.representing.*
           jsonMaps:
             - jsonPath: $.representative.representing.*.id
@@ -474,6 +474,31 @@ serviceMaps:
             - jsonPath: $.representative.representing.*.auditDetails.lastModifiedBy
             - jsonPath: $.representative.representing.*.auditDetails.createdTime
             - jsonPath: $.representative.representing.*.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      description: Update representative for a case in dristi_case_representatives table
+      fromTopic: update-representative-join-case
+      isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: representative
+      queryMaps:
+        - query: UPDATE dristi_case_representatives SET isactive = ?, lastmodifiedby = ?, lastmodifiedtime = ? WHERE id = ?;
+          basePath: representative
+          jsonMaps:
+            - jsonPath: $.representative.isActive
+            - jsonPath: $.representative.auditDetails.lastModifiedBy
+            - jsonPath: $.representative.auditDetails.lastModifiedTime
+            - jsonPath: $.representative.id
+        - query: UPDATE dristi_case_representing SET isactive = ?, lastmodifiedby = ?, lastmodifiedtime = ? WHERE id = ?;
+          basePath: .representing.*
+          jsonMaps:
+            - jsonPath: $.representative.representing.*.isActive
+            - jsonPath: $.representative.representing.*.auditDetails.lastModifiedBy
+            - jsonPath: $.representative.representing.*.auditDetails.lastModifiedTime
+            - jsonPath: $.representative.representing.*.id
 
     - version: 1.0
       description: Update case overall workflow in tables
