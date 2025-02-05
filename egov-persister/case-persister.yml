@@ -474,6 +474,18 @@ serviceMaps:
             - jsonPath: $.representative.representing.*.auditDetails.lastModifiedBy
             - jsonPath: $.representative.representing.*.auditDetails.createdTime
             - jsonPath: $.representative.representing.*.auditDetails.lastModifiedTime
+        - query: INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType, isActive,representing_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?);
+          basePath: representative.representing.*.documents.*
+          jsonMaps:
+            - jsonPath: $.representative.representing.*.documents.*.id
+            - jsonPath: $.representative.representing.*.documents.*.fileStore
+            - jsonPath: $.representative.representing.*.documents.*.documentUid
+            - jsonPath: $.representative.representing.*.documents.*.documentType
+            - jsonPath: $.representative.representing.*.documents.*.isActive
+            - jsonPath: $.representative.representing[*][?({id} in @.documents[*].id)].id
+            - jsonPath: $.representative.representing.*.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
 
     - version: 1.0
       description: Update representative for a case in dristi_case_representatives table
