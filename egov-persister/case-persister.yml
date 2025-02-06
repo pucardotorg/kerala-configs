@@ -428,7 +428,18 @@ serviceMaps:
             - jsonPath: $.litigant.*.auditDetails.createdTime
             - jsonPath: $.litigant.*.auditDetails.lastModifiedTime
             - jsonPath: $.litigant.*.hasSigned
-
+        - query: INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType, isActive, litigant_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?);
+          basePath: litigant.*.documents.*
+          jsonMaps:
+            - jsonPath: $.litigant.*.documents.*.id
+            - jsonPath: $.litigant.*.documents.*.fileStore
+            - jsonPath: $.litigant.*.documents.*.documentUid
+            - jsonPath: $.litigant.*.documents.*.documentType
+            - jsonPath: $.litigant.*.documents.*.isActive
+            - jsonPath: $.litigant[*][?({id} in @.documents[*].id)].id
+            - jsonPath: $.litigant.*.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
 
     - version: 1.0
       description: Persists new or update representative for a case in dristi_case_representatives table
