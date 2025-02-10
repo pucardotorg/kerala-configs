@@ -2,6 +2,7 @@
   "key": "aDiary-format",
   "config": {
     "pageSize": "A4",
+    "footer": "(function(currentPage, pageCount) { return currentPage === pageCount ? { text: 'Signature of Presiding Officer', alignment: 'left', margin: [40, 20, 40, 10] } : ''; })",
     "content": [
       {
         "image": "{{onCourtsLogo}}",
@@ -154,15 +155,6 @@
       {
         "text": "",
         "{{/diaryEntries}}": true
-      },
-      {
-        "text": "Disclaimer: This is a system-generated A Diary.",
-        "alignment": "left",
-        "color": "#d029d9",
-        "absolutePosition": {
-          "x": 40,
-          "y": 785
-        }
       }
     ],
     "styles": {
