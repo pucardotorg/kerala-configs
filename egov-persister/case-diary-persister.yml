@@ -12,7 +12,7 @@ serviceMaps:
       transactionCodeJsonPath: $.caseNumber
       auditAttributeBasePath: diaryEntry
       queryMaps:
-        - query: INSERT INTO dristi_diaryentries(id,tenant_id,case_number,entry_date,businessOfDay,judge_id,reference_id,reference_type,hearingDate,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+        - query: INSERT INTO dristi_diaryentries(id,tenant_id,case_number,entry_date,businessOfDay,judge_id,reference_id,reference_type,hearingDate,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);
           basePath: diaryEntry
           jsonMaps:
             - jsonPath: $.diaryEntry.id
@@ -31,6 +31,18 @@ serviceMaps:
             - jsonPath: $.diaryEntry.auditDetails.lastModifiedBy
             - jsonPath: $.diaryEntry.auditDetails.createdTime
             - jsonPath: $.diaryEntry.auditDetails.lastModifiedTime
+
+        - query: INSERT INTO dristi_adiary_activities(id,tenant_id,entry_date,created_by,last_modified_by,created_time,last_modified_time,judge_id) VALUES (?,?,?,?,?,?,?,?) ON CONFLICT (tenant_id,entry_date,judge_id) DO NOTHING;
+          basePath: diaryEntry
+          jsonMaps:
+            - jsonPath: $.diaryEntry.id
+            - jsonPath: $.diaryEntry.tenantId
+            - jsonPath: $.diaryEntry.entryDate
+            - jsonPath: $.diaryEntry.auditDetails.createdBy
+            - jsonPath: $.diaryEntry.auditDetails.lastModifiedBy
+            - jsonPath: $.diaryEntry.auditDetails.createdTime
+            - jsonPath: $.diaryEntry.auditDetails.lastModifiedTime
+            - jsonPath: $.diaryEntry.judgeId
 
     - version: 1.0
       description: Persists diary entry details in table
