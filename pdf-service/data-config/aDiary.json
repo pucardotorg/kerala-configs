@@ -13,9 +13,9 @@
           {
             "direct": [
               {
-                "variable": "judgeId",
+                "variable": "judgeName",
                 "value": {
-                  "path": "$.diary.judgeId"
+                  "path": "$.judgeName"
                 },
                 "type": "string"
               },
@@ -43,7 +43,7 @@
               },
               {
                 "variable": "nationalEmblem",
-                "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
+                "url": "https://pucarfilestore.blob.core.windows.net/pucar-filestore/kl/17bba4d1a5b09a0840e516227bbe9364.png",
                 "type": "image"
               },
               {
