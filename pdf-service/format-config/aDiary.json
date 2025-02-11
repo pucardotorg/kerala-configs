@@ -2,6 +2,7 @@
   "key": "aDiary-format",
   "config": {
     "pageSize": "A4",
+    "footer": "(function(currentPage, pageCount) { return currentPage === pageCount ? { text: 'Signature of Presiding Officer', alignment: 'left', margin: [40, 20, 40, 10] } : ''; })",
     "content": [
       {
         "image": "{{onCourtsLogo}}",
@@ -12,6 +13,25 @@
           "y": 10
         },
         "alignment": "right"
+      },
+      {
+        "stack": [
+          {
+            "text" : "ജില്ലാ കോടതി കൊല്ലം",
+            "absolutePosition": {
+              "x": 90,
+              "y": 10
+            }
+          },
+          {
+            "text" : "District Court Kollam",
+            "absolutePosition": {
+              "x": 90,
+              "y": 30
+            }
+          }
+        ],
+        "style" : "judge-header"
       },
       {
         "image": "{{nationalEmblem}}",
@@ -30,7 +50,7 @@
           "body": [
             [
               {
-                "text": "{{courtName}}",
+                "text": "In the {{courtName}}",
                 "alignment": "center",
                 "color": "black",
                 "style": "court-complex",
@@ -48,29 +68,12 @@
       {
         "text": [
           {
-            "text": "In The Court of: ",
+            "text": "In The Court of: {{judgeName}},{{courtName}}",
             "style": "judge-header"
-          },
-          {
-            "text": "{{judgeId}}, Special Court of Judicial Magistrate of the First Class",
-            "style": "judge-details"
           }
         ],
         "alignment": "center",
         "style": "judge-margin"
-      },{
-        "text": [
-          {
-            "text": "for the trial of cases under ",
-            "style": "court-header"
-          },
-          {
-            "text": "section 138 of NI Act, 1881 at Kollam ('24 x7 ON Court')",
-            "style": "court-details"
-          }
-        ],
-        "alignment": "center",
-        "style": "court-margin"
       },{
         "text": "A DIARY DATED : {{date}}",
         "alignment": "center",
@@ -154,15 +157,6 @@
       {
         "text": "",
         "{{/diaryEntries}}": true
-      },
-      {
-        "text": "Disclaimer: This is a system-generated A Diary.",
-        "alignment": "left",
-        "color": "#d029d9",
-        "absolutePosition": {
-          "x": 40,
-          "y": 785
-        }
       }
     ],
     "styles": {
@@ -190,7 +184,7 @@
       "court-details": {
         "fontSize": 13,
         "bold": true,
-        "color": "orange"
+        "color": "black"
       },
       "criminal-case-header": {
         "fontSize": 13,
@@ -199,7 +193,7 @@
         "margin": [0, 0, 0, 15]
       },
       "court-complex": {
-        "fontSize": 16,
+        "fontSize": 13,
         "bold": true,
         "color": "black",
         "margin": [
