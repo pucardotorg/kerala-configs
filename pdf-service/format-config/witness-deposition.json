@@ -64,7 +64,7 @@
               { "text": "Miscellaneous", "style": "label" }
             ],
             [
-              { "text": "{{caseNumber}} of {{caseYear}}", "style": "label", "alignment": "right" }
+              { "text": "{{caseNumber}}", "style": "label", "alignment": "right" }
             ],
             [
               { "text": "Committal Proceeding Sessions", "style": "label", "colSpan": 1 }
@@ -231,7 +231,7 @@
               { "text": "Miscellaneous Case No ", "style": "label" }
             ],
             [
-              { "text": "{{caseNumber}} of {{caseYear}}", "style": "label", "alignment": "right" }
+              { "text": "{{caseNumber}}", "style": "label", "alignment": "right" }
             ],
             [
               { "text": "Committal Proceedings", "style": "label" }

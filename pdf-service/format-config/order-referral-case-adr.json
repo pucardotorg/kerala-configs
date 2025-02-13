@@ -14,11 +14,11 @@
                       "style": "header"
                     },
                     {
-                      "text": "Case No. {{caseNumber}} of {{caseYear}}",
+                      "text": "Case No. {{caseNumber}}",
                       "style": "header"
                     },
                     {
-                      "text": "In the matter of: {{caseNumber}}",
+                      "text": "In the matter of: {{caseName}}",
                       "style": "header"
                     },
                     {

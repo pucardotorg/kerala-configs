@@ -390,13 +390,14 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: cases
       queryMaps:
-        - query: UPDATE dristi_cases SET status = ?, accessCode = ?, lastmodifiedby = ?,  lastmodifiedtime = ? WHERE filingNumber=?;
+        - query: UPDATE dristi_cases SET status = ?, accessCode = ?, lastmodifiedby = ?,  lastmodifiedtime = ?, filingdate = ? WHERE filingNumber=?;
           basePath: cases
           jsonMaps:
             - jsonPath: $.cases.status
             - jsonPath: $.cases.accessCode
             - jsonPath: $.cases.auditDetails.lastModifiedBy
             - jsonPath: $.cases.auditDetails.lastModifiedTime
+            - jsonPath: $.cases.filingDate
             - jsonPath: $.cases.filingNumber
 
     - version: 1.0
