@@ -9,9 +9,7 @@
       {
         "style": "form-header",
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -27,7 +25,7 @@
                     "alignment": "center"
                   },
                   {
-                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE OF {{judgeName}}",
+                    "text": "In The {{courtName}}",
                     "style": "form-sub-header"
                   },
                   {
@@ -37,12 +35,7 @@
                   }
                 ],
                 "alignment": "center",
-                "margin": [
-                  0,
-                  20,
-                  0,
-                  20
-                ]
+                "margin": [0, 20, 0, 20]
               }
             ]
           ]
@@ -52,9 +45,7 @@
       {
         "style": "form-body",
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -76,26 +67,31 @@
             ],
             [
               {
-                "text": "And that this court shall hear on the question of taking cognisance of the said offence on the {{hearingDate}} You are at liberty to show cause why this court should not take cognizance of the said complaint. ",
-                "style": "form-sub-body"
+                "text": [
+                  {
+                    "text": "And that this court shall hear on the question of taking cognisance of the said offence on the ",
+                    "style": "form-sub-body"
+                  },
+                  {
+                    "text": "{{hearingDate}}.",
+                    "style": "form-sub-body-bold"
+                  },
+                  {
+                    "text": " You are at liberty to show cause why this court should not take cognizance of the said complaint. ",
+                    "style": "form-sub-body"
+                  }
+                ]
               }
             ]
           ]
         },
         "layout": "noBorders",
-        "margin": [
-          0,
-          10,
-          0,
-          10
-        ]
+        "margin": [0, 10, 0, 10]
       },
       {
         "style": "closing-content",
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -130,12 +126,7 @@
           ]
         },
         "layout": "noBorders",
-        "margin": [
-          0,
-          20,
-          0,
-          0
-        ]
+        "margin": [0, 20, 0, 0]
       },
       {
         "style": "ws-head",
@@ -158,20 +149,34 @@
       {
         "style": "footer-content",
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
-                "text": "Visit dristi.gov.in for more information",
-                "style": "footer-body"
+                "text": [
+                  {
+                    "text": "Visit ",
+                    "style": "footer-content-link"
+                  },
+                  {
+                    "text": "{{courtUrl}}",
+                    "decoration": "underline",
+                    "color": "#A62121",
+                    "style": "footer-content-link",
+                    "link": "{{courtUrl}}"
+                  },
+                  {
+                    "text": " for more information",
+                    "style": "footer-content-link"
+                  }
+                ],
+                "margin": [0, 8]
               }
             ],
             [
               {
                 "text": "The process is system generated and transmitted in a secured manner by authorised user, as such a physical copy is not required.",
-                "absolutePosition": {    "x": 50,    "y": 740}
+                "absolutePosition": { "x": 50, "y": 740 }
               }
             ],
             [
@@ -184,26 +189,18 @@
             [
               {
                 "text": "",
-                "pageBreak":  "before"
-
+                "pageBreak": "before"
               }
             ]
           ]
         },
         "layout": "noBorders",
-        "margin": [
-          0,
-          20,
-          0,
-          0
-        ]
+        "margin": [0, 20, 0, 0]
       },
       {
         "style": "annexure-header",
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -214,12 +211,7 @@
                   }
                 ],
                 "alignment": "center",
-                "margin": [
-                  0,
-                  20,
-                  0,
-                  20
-                ]
+                "margin": [0, 20, 0, 20]
               }
             ]
           ]
@@ -228,9 +220,7 @@
       },
       {
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -246,8 +236,20 @@
             ],
             [
               {
-                "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: {{accessCode}}. Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the Complaint tab on the Portal.",
-                "style": "annexure-content"
+                "text": [
+                  {
+                    "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: ",
+                    "style": "annexure-content"
+                  },
+                  {
+                    "text": "{{accessCode}}.",
+                    "style": "annexure-content-bold"
+                  },
+                  {
+                    "text": " Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the complaint tab of the Portal.",
+                    "style": "annexure-content"
+                  }
+                ]
               }
             ],
             [
@@ -293,10 +295,19 @@
                     "text": [
                       {
                         "text": "Join the Case: ",
-                        "color": "#000000"
+                        "color": "#000000",
+                        "bold": true
                       },
                       {
-                        "text": "Log in to the Portal & enter the 6-digit code {{accessCode}} to access your case details.",
+                        "text": "Log in to the Portal & enter the 6-digit code ",
+                        "style": "annexure-content"
+                      },
+                      {
+                        "text": "{{accessCode}},",
+                        "style": "annexure-content-bold"
+                      },
+                      {
+                        "text": " to access your case details. You can use your mobile number to register/login on the portal",
                         "style": "annexure-content"
                       }
                     ]
@@ -317,10 +328,19 @@
                     "text": [
                       {
                         "text": "Request a different hearing date: ",
-                        "color": "#000000"
+                        "color": "#000000",
+                        "bold": true
                       },
                       {
-                        "text": "If you cannot attend your hearing on {{hearingDate}}, you can request a new date through the Portal.",
+                        "text": "If you cannot attend your hearing on ",
+                        "style": "annexure-content"
+                      },
+                      {
+                        "text": "{{hearingDate}},",
+                        "style": "annexure-content-bold"
+                      },
+                      {
+                        "text": " you can request a new date through the Portal.",
                         "style": "annexure-content"
                       }
                     ]
@@ -366,35 +386,30 @@
                 "style": "annexure-sub-header"
               }
             ],
-              [
-                {
-                  "text": [
-                    {
-                      "text": "The court gets a notification when you open this summons or click on any of the above links. This information is only accessible to the Judiciary, and will be used only for the purpose of determining whether you received and viewed this communication, in accordance with this ",
-                      "style": "annexure-content"
-                    },
-                    {
-                      "text": "Privacy Policy",
-                      "color": "#0000FF",
-                      "decoration": "underline",
-                      "style": "annexure-content"
-                    },
-                    {
-                      "text": ".",
-                      "style": "annexure-content"
-                    }
-                  ]
-                }
-              ]
+            [
+              {
+                "text": [
+                  {
+                    "text": "The court gets a notification when you open this summons or click on any of the above links. This information is only accessible to the Judiciary, and will be used only for the purpose of determining whether you received and viewed this communication, in accordance with this ",
+                    "style": "annexure-content"
+                  },
+                  {
+                    "text": "Privacy Policy",
+                    "color": "#0000FF",
+                    "decoration": "underline",
+                    "style": "annexure-content"
+                  },
+                  {
+                    "text": ".",
+                    "style": "annexure-content"
+                  }
+                ]
+              }
+            ]
           ]
         },
         "layout": "noBorders",
-        "margin": [
-          0,
-          20,
-          0,
-          20
-        ]
+        "margin": [0, 20, 0, 20]
       }
     ],
     "styles": {
@@ -410,72 +425,37 @@
         "fontFamily": "Roboto",
         "fontSize": 13,
         "letterSpacing": 0.6,
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ]
+        "margin": [0, 5, 0, 0]
       },
       "form-body": {
         "fontSize": 12,
         "color": "#484848",
-        "margin": [
-          -10,
-          5,
-          -5,
-          -5
-        ]
+        "margin": [-10, 5, -5, -5]
       },
       "form-sub-body": {
         "fontSize": 12,
         "color": "#484848",
-        "margin": [
-          -10,
-          5,
-          -5,
-          -5
-        ]
+        "margin": [-10, 5, -5, -5]
       },
       "closing-content": {
         "color": "#484848",
         "fontSize": 11,
-        "margin": [
-          5,
-          5,
-          5,
-          5
-        ]
+        "margin": [5, 5, 5, 5]
       },
       "closing-text": {
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ],
+        "margin": [0, 5, 0, 0],
         "bold": true,
         "color": "#000000",
         "alignment": "left"
       },
       "closing-seal": {
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ],
+        "margin": [0, 5, 0, 0],
         "bold": true,
         "color": "#000000",
         "alignment": "left"
       },
       "closing-signature": {
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ],
+        "margin": [0, 5, 0, 0],
         "bold": true,
         "color": "#000000",
         "alignment": "left"
@@ -483,28 +463,13 @@
       "footer-content": {
         "color": "#484848",
         "fontSize": 11,
-        "margin": [
-          5,
-          5,
-          5,
-          5
-        ]
+        "margin": [5, 5, 5, 5]
       },
       "footer-text": {
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ]
+        "margin": [0, 5, 0, 0]
       },
       "footer-page": {
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ]
+        "margin": [0, 5, 0, 0]
       },
       "annexure-header": {
         "color": "black",
@@ -519,17 +484,28 @@
         "fontSize": 13,
         "bold": true,
         "letterSpacing": 0.6,
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ]
+        "margin": [0, 5, 0, 0]
       },
       "annexure-content": {
         "fontSize": 11,
         "color": "#484848"
       }
+    },
+    "annexure-content-bold": {
+      "fontSize": 11,
+      "color": "#252525",
+      "bold": true
+    },
+    "form-sub-body-bold": {
+      "fontSize": 13,
+      "color": "#252525",
+      "bold": true
+    },
+    "footer-content-link": {
+      "color": "#252525",
+      "fontSize": 14,
+      "margin": [5, 5, 5, 5],
+      "alignment": "left"
     }
   }
 }

@@ -29,11 +29,11 @@
                     "alignment": "center"
                   },
                   {
-                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE OF {{judgeName}}",
+                    "text": "In The {{courtName}}",
                     "style": "form-sub-header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
+                    "text": "Case No. {{caseNumber}}",
                     "style": "form-sub-header"
                   },
                   {
