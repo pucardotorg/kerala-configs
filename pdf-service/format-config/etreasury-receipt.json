@@ -199,6 +199,152 @@
             ]
           ]
         }
+      },
+      {
+        "text": "Case Details",
+        "style": "sectionHeader",
+        "margin": [
+          0,
+          20,
+          0,
+          10
+        ]
+      },
+      {
+        "table": {
+          "widths": ["*", "*"],
+          "body": [
+            [
+              {
+                "text": "Case Type:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{caseType}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Case Name:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{caseName}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Case Number:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{caseNumber}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Purpose of Payment:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{purposeOfPayment}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Payment Details",
+        "style": "sectionHeader",
+        "margin": [
+          0,
+          20,
+          0,
+          10
+        ]
+      },
+      {
+        "table": {
+          "widths": ["*", "*"],
+          "body": [
+            [
+              {
+                "text": "Court Fees:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "Rs. {{courtFee}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Fee for advocate welfare fund:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "Rs. {{advocateWelfareFund}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Fee for clerk welfare fund:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "Rs. {{clerkWelfareFund}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Total",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "Rs. {{totalAmount}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ]
+          ]
+        }
       }
     ],
     "styles": {

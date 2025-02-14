@@ -79,6 +79,62 @@
                   "path": "$.challanTimestamp"
                 },
                 "default": ""
+              },
+              {
+                "variable":"caseType",
+                "value":{
+                  "path":"$.caseType"
+                },
+                "default":"NIA S138"
+              },
+              {
+                "variable":"caseName",
+                "value":{
+                  "path":"$.caseName"
+                },
+                "default":""
+              },
+              {
+                "variable":"caseNumber",
+                "value":{
+                  "path":"$.caseNumber"
+                },
+                "default":""
+              },
+              {
+                "variable":"purposeOfPayment",
+                "value":{
+                  "path":"$.purposeOfPayment"
+                },
+                "default":""
+              },
+              {
+                "variable":"courtFee",
+                "value":{
+                  "path":"$.courtFee"
+                },
+                "default":""
+              },
+              {
+                "variable":"advocateWelfareFund",
+                "value":{
+                  "path":"$.advocateWelfareFund"
+                },
+                "default":""
+              },
+              {
+                "variable":"clerkWelfareFund",
+                "value":{
+                  "path":"$.clerkWelfareFund"
+                },
+                "default":""
+              },
+              {
+                "variable":"totalAmount",
+                "value":{
+                  "path":"$.totalAmount"
+                },
+                "default":""
               }
             ]
           }
