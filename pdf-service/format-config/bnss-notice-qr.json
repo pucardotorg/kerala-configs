@@ -409,7 +409,7 @@
       },
       "closing-content": {
         "color": "#252525",
-        "fontSize": 14,
+        "fontSize": 13,
         "margin": [5, 5, 5, 5]
       },
       "closing-text": {
