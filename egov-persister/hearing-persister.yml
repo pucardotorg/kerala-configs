@@ -131,3 +131,22 @@ serviceMaps:
             - jsonPath: $.hearing.auditDetails.lastModifiedBy
             - jsonPath: $.hearing.auditDetails.lastModifiedTime
             - jsonPath: $.hearing.hearingId
+
+    - version: 1.0
+      description: Update hearing start and end time bulk reschedule
+      fromTopic: bulk-reschedule
+      isTransaction: true
+      isAuditEnabled: true
+      module: HEARING
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: hearings.*
+      queryMaps:
+        - query: UPDATE dristi_hearing SET startTime = ?, endTime = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE hearingId = ?;
+          basePath: hearings.*
+          jsonMaps:
+            - jsonPath: $.hearings.*.startTime
+            - jsonPath: $.hearings.*.endTime
+            - jsonPath: $.hearings.*.auditDetails.lastModifiedBy
+            - jsonPath: $.hearings.*.auditDetails.lastModifiedTime
+            - jsonPath: $.hearings.*.hearingId
