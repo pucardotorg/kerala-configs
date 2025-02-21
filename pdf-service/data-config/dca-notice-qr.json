@@ -20,23 +20,9 @@
                 }
               },
               {
-                "variable": "judgeName",
+                "variable": "cmpNumber",
                 "value": {
-                  "path": "$.judgeName",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "caseNumber",
-                "value": {
-                  "path": "$.caseNumber",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "caseYear",
-                "value": {
-                  "path": "$.caseYear",
+                  "path": "$.cmpNumber",
                   "defaultValue": "NA"
                 }
               },
@@ -48,13 +34,6 @@
                 }
               },
               {
-                "variable": "caseName",
-                "value": {
-                  "path": "$.caseName",
-                  "defaultValue": "NA"
-                }
-              },
-              {
                 "variable": "complainantName",
                 "value": {
                   "path": "$.complainantName",
@@ -62,9 +41,23 @@
                 }
               },
               {
+                "variable": "respondentName",
+                "value": {
+                  "path": "$.respondentName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
                 "variable": "complainantAddress",
                 "value": {
                   "path": "$.complainantAddress",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "respondentAddress",
+                "value": {
+                  "path": "$.respondentAddress",
                   "defaultValue": "NA"
                 }
               },
@@ -79,6 +72,41 @@
                 "variable": "issueDate",
                 "value": {
                   "path": "$.issueDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtAddress",
+                "value": {
+                  "path": "$.courtAddress",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtUrl",
+                "value": {
+                  "path": "$.courtUrl",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "accessCode",
+                "value": {
+                  "path": "$.accessCode",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtContact",
+                "value": {
+                  "path": "$.courtContact",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "barCouncilUrl",
+                "value": {
+                  "path": "$.barCouncilUrl",
                   "defaultValue": "NA"
                 }
               }

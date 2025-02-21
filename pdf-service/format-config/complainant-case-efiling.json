@@ -18,97 +18,313 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "Complainant:",
+                    "text": "Complainant(s):",
                     "style": "title"
                   },
-                  "{{#ifIndividual}}",
-                  {
-                    "text": [
-                      {
-                        "text": "{{complainantName}}",
-                        "bold": true
+                  "{{#complainantList}}",
+                  [
+                    {
+                      "table": {
+                        "widths": ["*"],
+                        "body": [
+                          [
+                            {
+                              "stack": [
+                                {
+                                  "text": "Complainant {{index}}:",
+                                  "style": "subTitle"
+                                },
+                                "{{#ifIndividual}}",
+                                {
+                                  "text": [
+                                    {
+                                      "text": "{{complainantName}}",
+                                      "bold": true
+                                    },
+                                    {
+                                      "text": " aged {{complainantAge}}"
+                                    }
+                                  ],
+                                  "style": "bodyText"
+                                },
+                                {
+                                  "text": "{{complainantAddress}} (Mobile No. {{phoneNumber}}; Email. {{emailId}})",
+                                  "style": "bodyText"
+                                },
+                                "{{/ifIndividual}}",
+                                "{{^ifIndividual}}",
+                                {
+                                  "text": "{{institutionName}}, {{complainantAddress}}",
+                                  "style": "bodyText"
+                                },
+                                {
+                                  "text": "Authorized Signatory - {{nameOfAuthorizedSignatory}}, {{designationOfAuthorizedSignatory}}",
+                                  "style": "bodyText"
+                                },
+                                "{{/ifIndividual}}",
+                                "{{#isPartyInPerson}}",
+                                {
+                                  "text": "by Self",
+                                  "style": "bodyText"
+                                },
+                                "{{/isPartyInPerson}}",
+                                "{{^isPartyInPerson}}",
+                                {
+                                  "table": {
+                                    "widths": ["3%", "97%"],
+                                    "body": [
+                                      "{{#advocateList}}",
+                                      [
+                                        {
+                                          "text": "{{^index}}by {{/index}}",
+                                          "style": "advocateText",
+                                          "border": [false, false, false, false]
+                                        },
+                                        {
+                                          "text": "{{advocateName}}, Bar ID - {{barId}}, Phone Number - {{advocatePhoneNumber}}",
+                                          "style": "advocateText",
+                                          "border": [false, false, false, false]
+                                        }
+                                      ],
+                                      "{{/advocateList}}"
+                                    ]
+                                  }
+                                },
+                                "{{/isPartyInPerson}}"
+                              ],
+                              "margin": [0, 0, 0, 10]
+                            }
+                          ]
+                        ]
                       },
-                      {
-                        "text": " aged {{complainantAge}}"
-                      }
-                    ],
-                    "style": "bodyText"
-                  },
+                      "layout": "noBorders"
+                    }
+                  ],
+                  "{{/complainantList}}",
                   {
-                    "text": "{{complainantAddress}} (Mobile No. {{phoneNumber}}; Email. {{emailId}})",
-                    "style": "bodyText"
-                  },
-                  "{{/ifIndividual}}",
-                  "{{^ifIndividual}}",
-                  {
-                    "text": "{{institutionName}}, {{complainantAddress}}",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "Authorized Signatory – {{nameOfAuthorizedSignatory}}, {{designationOfAuthorizedSignatory}}",
-                    "style": "bodyText"
-                  },
-                  "{{/ifIndividual}}",
-                  "{{#isPartyInPerson}}",
-                  {
-                    "text": "by Self",
-                    "style": "bodyText"
-                  },
-                  "{{/isPartyInPerson}}",
-                  "{{^isPartyInPerson}}",
-                  {
-                    "text": "by {{advocateName}}, Bar ID - {{barId}}, Phone Number - {{advocatePhoneNumber}}",
-                    "style": "bodyText"
-                  },
-                  "{{/isPartyInPerson}}",
-                  {
-                    "text": "Accused:",
+                    "text": "Accused(s):",
                     "style": "title"
                   },
-                  "{{#ifAccusedIndividual}}",
+                  "{{#accusedList}}",
+                  [
+                    {
+                      "table": {
+                        "widths": ["*"],
+                        "body": [
+                          [
+                            {
+                              "stack": [
+                                {
+                                  "text": "Accused {{index}}:",
+                                  "style": "subTitle"
+                                },
+                                "{{#ifAccusedIndividual}}",
+                                {
+                                  "text": "{{accusedName}}:",
+                                  "style": "bodyText",
+                                  "bold": true
+                                },
+                                {
+                                  "text": "Approximate Age: {{accusedAge}}",
+                                  "style": "bodyText"
+                                },
+                                {
+                                  "text": "{{accusedAddress}} (Mobile No. {{accusedPhoneNumber}}; Email. {{accusedEmailId}})",
+                                  "style": "bodyText"
+                                },
+                                "{{/ifAccusedIndividual}}",
+                                "{{^ifAccusedIndividual}}",
+                                {
+                                  "text": "{{accusedInstitutionName}}, {{accusedAddress}}",
+                                  "style": "bodyText"
+                                },
+                                {
+                                  "text": "Authorized Signatory - {{nameOfAccusedAuthorizedSignatory}}, {{designationOfAccusedAuthorizedSignatory}}",
+                                  "style": "bodyText"
+                                },
+                                "{{/ifAccusedIndividual}}"
+                              ],
+                              "margin": [0, 0, 0, 10]
+                            }
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ],
 
-                  {
-                    "text": "{{accusedName}}:",
-                    "style": "bodyText",
-                    "bold": true
-                  },
-                  {
-                    "text": "Approximate Age: {{accusedAge}}",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "{{accusedAddress}} (Mobile No. {{accusedPhoneNumber}}; Email. {{accusedEmailId}})",
-                    "style": "bodyText"
-                  },
-                  "{{/ifAccusedIndividual}}",
-                  "{{^ifAccusedIndividual}}",
-                  {
-                    "text": "{{accusedInstitutionName}}, {{accusedAddress}}",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "Authorized Signatory – {{nameOfAccusedAuthorizedSignatory}}, {{designationOfAccusedAuthorizedSignatory}}",
-                    "style": "bodyText"
-                  },
-                  "{{/ifAccusedIndividual}}",
+                  "{{/accusedList}}",
                   {
                     "text": "COMPLAINT FILED UNDER SECTION 138 and 142 OF THE NEGOTIABLE INSTRUMENTS ACT",
                     "style": "complaintHeader",
                     "decoration": "underline"
                   },
                   {
-                    "text": "The Complainant most respectfully submit as follows :",
+                    "text": "The Complainant most respectfully submit as follows:",
                     "style": "complaintSubHeader"
                   },
-
                   {
-                    "ol": [
-                      {
-                        "text": "{{complaint}}",
-                        "style": "bodyText"
-                      }
-                    ]
+                    "text": "1. COMPLAINANT:",
+                    "style": "complaintSubTitle"
                   },
+                  "{{#complainantList}}",
+                  [
+                    {
+                      "table": {
+                        "widths": ["30%"],
+                        "body": [
+                          [
+                            {
+                              "stack": [
+                                {
+                                  "text": "Complainant {{index}}:",
+                                  "style": "bodyText"
+                                },
+                                "{{#ifIndividual}}",
+                                {
+                                  "text": "{{complainantName}}",
+                                  "style": "bodyText"
+                                },
+                                "{{/ifIndividual}}",
+                                "{{^ifIndividual}}",
+                                {
+                                  "text": "{{institutionName}}",
+                                  "style": "bodyText"
+                                },
+                                "{{/ifIndividual}}",
+                                {
+                                  "text": "{{complainantAddress}}",
+                                  "style": "bodyText"
+                                }
+                              ],
+                              "margin": [0, 0, 0, 10]
+                            }
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ],
+                  "{{/complainantList}}",
+                  {
+                    "stack": [
+                      {
+                        "text": "Vs:",
+                        "style": "complaintSubTitle"
+                      }
+                    ],
+                    "margin": [0, 10, 0, 10]
+                  },
+                  {
+                    "text": "ACCUSED:",
+                    "style": "complaintSubTitle"
+                  },
+                  "{{#accusedList}}",
+                  [
+                    {
+                      "table": {
+                        "widths": ["30%"],
+                        "body": [
+                          [
+                            {
+                              "stack": [
+                                {
+                                  "text": "Accused {{index}}:",
+                                  "style": "bodyText"
+                                },
+                                "{{#ifAccusedIndividual}}",
+                                {
+                                  "text": "{{accusedName}}",
+                                  "style": "bodyText"
+                                },
+                                "{{/ifAccusedIndividual}}",
+                                "{{^ifAccusedIndividual}}",
+                                {
+                                  "text": "{{accusedInstitutionName}}",
+                                  "style": "bodyText"
+                                },
+                                "{{/ifAccusedIndividual}}",
+                                {
+                                  "text": "{{accusedAddress}}",
+                                  "style": "bodyText"
+                                }
+                              ],
+                              "margin": [0, 0, 0, 10]
+                            }
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ],
+                  "{{/accusedList}}",
+                  {
+                    "text": "COMPLAINT FILED UNDER SECTION 200 OF Cr.P.C READ WITH SECTION 138 AND 142 OF NEGOTIABLE INSTRUMENTS ACT.",
+                    "style": "complaintSubTitle"
+                  },
+                  {
+                    "text": "The complainant most humbly submits as follows:",
+                    "style": "complaintSubHeader"
+                  },
+                  {
+                    "text": "{{complaint}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Complainant -",
+                    "style": "bodyText"
+                  },
+                  "{{#complainantList}}",
+                  [
+                    {
+                      "table": {
+                        "widths": ["*"],
+                        "body": [
+                          [
+                            {
+                              "stack": [
+                                {
+                                  "text": "Complainant {{index}}:",
+                                  "style": "bodyText"
+                                },
+                                "{{#ifIndividual}}",
+                                {
+                                  "text": "Individual",
+                                  "style": "bodyText"
+                                },
+                                {
+                                  "text": "{{complainantName}}",
+                                  "style": "bodyText"
+                                },
+                                "{{/ifIndividual}}",
+                                "{{^ifIndividual}}",
+                                {
+                                  "text": "{{institutionName}}",
+                                  "style": "bodyText"
+                                },
+                                {
+                                  "text": "Authorized Representative",
+                                  "style": "bodyText"
+                                },
+                                {
+                                  "text": "{{designationOfAuthorizedSignatory}}",
+                                  "style": "bodyText"
+                                },
+                                {
+                                  "text": "{{nameOfAuthorizedSignatory}}",
+                                  "style": "bodyText"
+                                },
+                                "{{/ifIndividual}}"
+                              ],
+                              "margin": [0, 0, 0, 10]
+                            }
+                          ]
+                        ]
+                      },
+                      "layout": "noBorders"
+                    }
+                  ],
+                  "{{/complainantList}}",
                   {
                     "text": "Prayer",
                     "style": "title",
@@ -137,27 +353,39 @@
                       "body": [
                         [
                           {
-                            "stack": [
-                              {
-                                "text": "Complainant Signature",
-                                "style": "signature",
-                                "alignment": "left"
-                              }
-                            ]
+                            "text": "Complainant Signature(s)",
+                            "alignment": "left",
+                            "style": "signatureHeading"
                           },
                           {
-                            "stack": [
-                              {
-                                "text": "Advocate Signature",
-                                "style": "signature",
-                                "alignment": "right"
-                              }
-                            ]
+                            "text": "Advocate Signature(s)",
+                            "alignment": "right",
+                            "style": "signatureHeading"
                           }
-                        ]
+                        ],
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "text": "Complainant {{index}} Signature",
+                            "style": "signature",
+                            "alignment": "left"
+                          },
+                          {
+                            "text": "Advocate {{index}} Signature",
+                            "style": "signature",
+                            "alignment": "right",
+                            "color": "white"
+                          }
+                        ],
+                        "{{/complainantList}}"
                       ]
                     },
                     "layout": "noBorders"
+                  },
+                  {
+                    "text": "(Signature of one advocate representing each complainant is needed. In case an advocate represents multiple complainants, they only need to sign once)",
+                    "style": "bodyText",
+                    "margin": [0, 10, 0, 3]
                   },
                   {
                     "text": "List of Documents:",
@@ -183,7 +411,15 @@
                   {
                     "style": "table",
                     "table": {
-                      "widths": ["10%", "15%", "15%", "15%", "15%", "15%", "15%"],
+                      "widths": [
+                        "10%",
+                        "15%",
+                        "15%",
+                        "15%",
+                        "15%",
+                        "15%",
+                        "15%"
+                      ],
                       "body": [
                         [
                           {
@@ -294,9 +530,14 @@
         "margin": [0, 10, 0, 0]
       },
       "title": {
-        "fontSize": 14,
+        "fontSize": 16,
         "bold": true,
         "margin": [0, 30, 0, 5]
+      },
+      "subTitle": {
+        "fontSize": 14,
+        "bold": true,
+        "margin": [0, 5, 0, 5]
       },
       "complaintHeader": {
         "fontSize": 18,
@@ -306,14 +547,27 @@
       },
       "complaintSubHeader": {
         "fontSize": 13,
-        "margin": [0, 5, 0, 20]
+        "margin": [0, 5, 0, 10]
+      },
+      "complaintSubTitle": {
+        "fontSize": 15,
+        "margin": [0, 5, 0, 5]
       },
       "bodyText": {
         "fontSize": 13,
         "margin": [0, 3, 0, 3]
       },
+      "advocateText": {
+        "fontSize": 13,
+        "margin": [0, 0, 0, 0]
+      },
       "date": {
         "fontSize": 13,
+        "margin": [0, 20, 0, 3]
+      },
+      "signatureHeading": {
+        "decoration": "underline",
+        "fontSize": 13.5,
         "margin": [0, 20, 0, 3]
       },
       "signature": {
