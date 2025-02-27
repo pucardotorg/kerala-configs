@@ -14,7 +14,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "CMP/ST No. {{caseNumber}}",
+                    "text": "{{caseNumber}}",
                     "style": "subHeader"
                   },
                   {
