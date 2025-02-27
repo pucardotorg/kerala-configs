@@ -14,7 +14,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "{{caseName}} and {{caseNumber}}",
+                    "text": "{{caseNumber}} and {{caseName}}",
                     "style": "subHeader"
                   },
                   {
