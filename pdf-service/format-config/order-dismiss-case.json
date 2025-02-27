@@ -1,0 +1,147 @@
+{
+  "key": "order-acceptance-rejection-case",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "{{orderHeading}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "CMP No {{cmpNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In Case No. {{caseNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "ORDER",
+                    "style": "orderTitle"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "This matter comes before the Court on the Application to take cognizance and initiate proceedings for the offence under section 138 of the Negotiable Instruments Act, 1881 for dishonour of {{chequeNumber}} vide  {{filingNumber}} filed by {{partyName}}.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has reviewed the Application, along with all supporting documents or arguments presented;",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has issued notice to the accused further to the proviso to section 223 (1) of the , Bharatiya Nagarik Suraksha Sanhita, 2023 providing adequate opportunity to be heard and have {{isExamined}} the accused. Details of the notices issued are set out below:",
+                    "style": "contentText"
+                  },
+                  {
+                    "ol": [
+                      "{{#noticeList}}",
+                      {
+                        "text": "Notice dated {{dateOfNotice}}",
+                        "style": "bodyText"
+                      },
+                      "{{/noticeList}}"
+                    ],
+                    "style": "list"
+                  },
+                  {
+                    "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The above mentioned Application vide {{filingNumber}} filed by {{partyName}} to take cognizance is hereby {{response}} and it is directed that proceedings be initiated against {{partyName}} for the offence under section 138 of the Negotiable Instruments Act, 1881.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{rejectionReason}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "IT IS SO ORDERED.",
+                    "style": "orderText"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "advocateSignature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeDesignation}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "subheader": {
+        "fontSize": 11,
+        "alignment": "left",
+        "bold": true,
+        "margin": [10, 10, 0, 10]
+      },
+      "orderTitle": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "contentText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 20]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 0]
+      },
+      "advocateSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 50, 0, 5]
+      }
+    }
+  }
+}
