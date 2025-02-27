@@ -14,7 +14,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "{{caseType}}/Case No. {{caseNumber}}",
+                    "text": "{{caseNumber}}",
                     "style": "subHeader"
                   },
                   {
@@ -26,20 +26,8 @@
                     "style": "applicationTitle"
                   },
                   {
-                    "text": "NO. {{caseNo}} FROM {{originalCourt}} TO {{newCourt}}",
+                    "text": "{{caseNo}} FROM {{originalCourt}} TO {{newCourt}}",
                     "style": "applicationTitle"
-                  },
-                  {
-                    "text": "To,",
-                    "style": "subTitle"
-                  },
-                  {
-                    "text": "The Honorable {{judgeName}}/{{courtDesignation}},",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "{{addressOfTheCourt}}",
-                    "style": "address"
                   },
                   {
                     "text": "{{date}}",
