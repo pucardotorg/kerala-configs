@@ -22,7 +22,7 @@ serviceMaps:
             - jsonPath: $.notification.createdDate
             - jsonPath: $.notification.issuedBy
             - jsonPath: $.notification.status
-            - jsonPath: $.notification.comment
+            - jsonPath: $.notification.comments
             - jsonPath: $.notification.isActive
             - jsonPath: $.notification.auditDetails.createdBy
             - jsonPath: $.notification.auditDetails.lastModifiedBy
@@ -60,10 +60,22 @@ serviceMaps:
       auditAttributeBasePath: notification
       queryMaps:
         - query: UPDATE  dristi_notification SET status =?, isActive =?,lastModifiedBy =?,lastModifiedTime = ? where id =?;
-          basePath: clerk
+          basePath: notification
           jsonMaps:
-            - jsonPath: $.clerk.status
-            - jsonPath: $.clerk.isActive
-            - jsonPath: $.clerk.auditDetails.lastModifiedBy
-            - jsonPath: $.clerk.auditDetails.lastModifiedTime
-            - jsonPath: $.clerk.id
+            - jsonPath: $.notification.status
+            - jsonPath: $.notification.isActive
+            - jsonPath: $.notification.auditDetails.lastModifiedBy
+            - jsonPath: $.notification.auditDetails.lastModifiedTime
+            - jsonPath: $.notification.id
+
+        - query: INSERT INTO dristi_notification_document(id,fileStore,documentUid,documentType ,notification_id,additionalDetails) VALUES (?,?, ?,?,?,?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore,documentUid = EXCLUDED.documentUid,documentType = EXCLUDED.documentType,additionalDetails = EXCLUDED.additionalDetails;;
+          basePath: $.notification.documents.*
+          jsonMaps:
+            - jsonPath: $.notification.documents.*.id
+            - jsonPath: $.notification.documents.*.fileStore
+            - jsonPath: $.notification.documents.*.documentUid
+            - jsonPath: $.notification.documents.*.documentType
+            - jsonPath: $.notification[?({id} in @.documents[*].id)].id
+            - jsonPath: $.notification.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
