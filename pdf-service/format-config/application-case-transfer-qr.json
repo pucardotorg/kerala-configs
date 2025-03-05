@@ -26,7 +26,7 @@
                     "style": "applicationTitle"
                   },
                   {
-                    "text": "NO. {{caseNo}} FROM {{originalCourt}} TO {{newCourt}}",
+                    "text": "{{caseNo}} FROM {{originalCourt}} TO {{newCourt}}",
                     "style": "applicationTitle"
                   },
                   {
