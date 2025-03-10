@@ -12,7 +12,7 @@ serviceMaps:
       transactionCodeJsonPath: $.caseNumber
       auditAttributeBasePath: diaryEntry
       queryMaps:
-        - query: INSERT INTO dristi_diaryentries(id,tenant_id,case_number,entry_date,businessOfDay,judge_id,reference_id,reference_type,hearingDate,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+        - query: INSERT INTO dristi_diaryentries(id,tenant_id,case_number,entry_date,businessOfDay,judge_id,reference_id,reference_type,hearingDate,additional_details,case_id,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
           basePath: diaryEntry
           jsonMaps:
             - jsonPath: $.diaryEntry.id
@@ -27,6 +27,7 @@ serviceMaps:
             - jsonPath: $.diaryEntry.additionalDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.diaryEntry.caseId
             - jsonPath: $.diaryEntry.auditDetails.createdBy
             - jsonPath: $.diaryEntry.auditDetails.lastModifiedBy
             - jsonPath: $.diaryEntry.auditDetails.createdTime
@@ -54,6 +55,7 @@ serviceMaps:
             - jsonPath: $.diaryEntry.referenceType
             - jsonPath: $.diaryEntry.hearingDate
             - jsonPath: $.diaryEntry.additionalDetails
+            - jsonPath: $.diaryEntry.caseId
               type: JSON
               dbType: JSONB
             - jsonPath: $.diaryEntry.auditDetails.lastModifiedBy
