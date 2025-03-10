@@ -35,3 +35,5 @@ ServiceMaps:
                 outJsonPath: $.Data.hearingDetails.fromDate
               - inJsonPath: $.toDate
                 outJsonPath: $.Data.hearingDetails.toDate
+              - inJsonPath: $.Data.hearingDetails.subStage
+                outJsonPath: $.subStage
