@@ -55,7 +55,6 @@ serviceMaps:
             - jsonPath: $.diaryEntry.referenceType
             - jsonPath: $.diaryEntry.hearingDate
             - jsonPath: $.diaryEntry.additionalDetails
-            - jsonPath: $.diaryEntry.caseId
               type: JSON
               dbType: JSONB
             - jsonPath: $.diaryEntry.auditDetails.lastModifiedBy
