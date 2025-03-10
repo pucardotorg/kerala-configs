@@ -75,7 +75,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: hearing
       queryMaps:
-        - query: UPDATE dristi_hearing SET hearingType = ?, status = ?, cmpNumber=?, courtCaseNumber=?, caseReferenceNumber=?, startTime = ?, endTime = ?,presidedBy=?, attendees = ?, transcript = ?, vcLink = ?, isActive = ?, additionalDetails = ?, notes = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE id = ?;
+        - query: UPDATE dristi_hearing SET hearingType = ?, status = ?,cmpNumber=?, courtCaseNumber=?, caseReferenceNumber=?,  startTime = ?, endTime = ?,presidedBy=?, attendees = ?, transcript = ?, vcLink = ?, isActive = ?, additionalDetails = ?, notes = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE id = ?;
           basePath: hearing
           jsonMaps:
             - jsonPath: $.hearing.hearingType
