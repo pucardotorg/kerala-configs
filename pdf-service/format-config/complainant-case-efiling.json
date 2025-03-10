@@ -42,7 +42,7 @@
                                       "bold": true
                                     },
                                     {
-                                      "text": " aged {{complainantAge}}"
+                                      "text": "aged {{complainantAge}}"
                                     }
                                   ],
                                   "style": "bodyText"
