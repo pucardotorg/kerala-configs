@@ -1,0 +1,33 @@
+ServiceMaps:
+  serviceName: Hearing Service
+  version: 1.0.0
+  mappings: 
+    - topic: open-hearing-topic
+      configKey: INDEX
+      indexes: 
+        - name: open-hearing-index
+          type: general
+          id: $.hearingUuid
+          isBulk: false
+          jsonPath: $
+          customJsonMapping: 
+            indexMapping: {"Data":{"hearingDetails":{}}}
+            fieldMapping: 
+              - inJsonPath: $.hearingUuid
+                outJsonPath: $.Data.hearingDetails.hearingUuid
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.hearingDetails.tenantId
+              - inJsonPath: $.filingNumber
+                outJsonPath: $.Data.hearingDetails.filingNumber
+              - inJsonPath: $.caseTitle
+                outJsonPath: $.Data.hearingDetails.caseTitle
+              - inJsonPath: $.caseUuid
+                outJsonPath: $.Data.hearingDetails.caseUuid
+              - inJsonPath: $.hearingNumber
+                outJsonPath: $.Data.hearingDetails.hearingNumber
+              - inJsonPath: $.caseNumber
+                outJsonPath: $.Data.hearingDetails.caseNumber
+              - inJsonPath: $.stage
+                outJsonPath: $.Data.hearingDetails.stage
+              - inJsonPath: $.status
+                outJsonPath: $.Data.hearingDetails.status
