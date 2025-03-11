@@ -10,6 +10,7 @@ ServiceMaps:
           id: $.id
           isBulk: false
           jsonPath: $.orderAndNotification
+          timeStampField: $.date
           customJsonMapping:
             indexMapping:
               {
