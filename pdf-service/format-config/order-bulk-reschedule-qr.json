@@ -1,0 +1,224 @@
+{
+  "key": "order-bulk-reschedule-qr",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "{{courtName}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "Due to {{reasonForRescheduling}}, the Court has determined that it is necessary to reschedule the hearings for the cases listed, along with with the new (rescheduled) hearing date and slot, below:",
+                    "style": "contentText"
+                  },
+                  {
+                    "style": "table",
+                    "table": {
+                      "widths": ["18%", "15%", "17%", "15%", "15%", "20%"],
+                      "body": [
+                        [
+                          {
+                            "text": "Case Name",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Case Number",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Hearing Type",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Original Hearing Date",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "New (Rescheduled) Hearing Date",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "New (Rescheduled) Hearing Slot",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{#bulkHearingResheduleList}}",
+                        [
+                          {
+                            "text": "{{caseName}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{caseNumber}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{hearingType}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{originalHearingDate}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{newHearingDate}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{newHearingSlot}}",
+                            "style": "bodyText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/bulkHearingResheduleList}}"
+                      ]
+                    }
+                  },
+                  {
+                    "text": "All parties and their counsels shall make necessary arrangements to appear at the scheduled hearings. The Court appreciates the cooperation of all parties in adjusting to these dates.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "IT IS SO NOTIFIED.",
+                    "style": "orderText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "additionalComments"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeDesignation}}, {{courtName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{courtSeal}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "caseName": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "caseNumber": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "bodyText": {
+        "fontSize": 13,
+        "margin": [0, 3, 0, 3]
+      },
+      "orderTitle": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderName": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 20]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "contentText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [0, 10, 0, 20]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 0]
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 0]
+      }
+    }
+  }
+}

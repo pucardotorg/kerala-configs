@@ -75,11 +75,14 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: hearing
       queryMaps:
-        - query: UPDATE dristi_hearing SET hearingType = ?, status = ?, startTime = ?, endTime = ?,presidedBy=?, attendees = ?, transcript = ?, vcLink = ?, isActive = ?, additionalDetails = ?, notes = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE id = ?;
+        - query: UPDATE dristi_hearing SET hearingType = ?, status = ?,cmpNumber=?, courtCaseNumber=?, caseReferenceNumber=?,  startTime = ?, endTime = ?,presidedBy=?, attendees = ?, transcript = ?, vcLink = ?, isActive = ?, additionalDetails = ?, notes = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE id = ?;
           basePath: hearing
           jsonMaps:
             - jsonPath: $.hearing.hearingType
             - jsonPath: $.hearing.status
+            - jsonPath: $.hearing.cmpNumber
+            - jsonPath: $.hearing.courtCaseNumber
+            - jsonPath: $.hearing.caseReferenceNumber
             - jsonPath: $.hearing.startTime
             - jsonPath: $.hearing.endTime
             - jsonPath: $.hearing.presidedBy
@@ -131,3 +134,22 @@ serviceMaps:
             - jsonPath: $.hearing.auditDetails.lastModifiedBy
             - jsonPath: $.hearing.auditDetails.lastModifiedTime
             - jsonPath: $.hearing.hearingId
+
+    - version: 1.0
+      description: Update hearing start and end time bulk reschedule
+      fromTopic: bulk-reschedule
+      isTransaction: true
+      isAuditEnabled: true
+      module: HEARING
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: hearings.*
+      queryMaps:
+        - query: UPDATE dristi_hearing SET startTime = ?, endTime = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE hearingId = ?;
+          basePath: hearings.*
+          jsonMaps:
+            - jsonPath: $.hearings.*.startTime
+            - jsonPath: $.hearings.*.endTime
+            - jsonPath: $.hearings.*.auditDetails.lastModifiedBy
+            - jsonPath: $.hearings.*.auditDetails.lastModifiedTime
+            - jsonPath: $.hearings.*.hearingId
