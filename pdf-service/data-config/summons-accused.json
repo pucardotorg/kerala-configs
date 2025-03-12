@@ -95,6 +95,51 @@
                   "path": "$.issueDate",
                   "defaultValue": "NA"
                 }
+              },
+              {
+                "variable": "courtUrl",
+                "value": {
+                  "path": "$.courtUrl",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "infoPdfUrl",
+                "value": {
+                  "path": "$.infoPdfUrl",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "barCouncilUrl",
+                "value": {
+                  "path": "$.barCouncilUrl",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "lokAdalatUrl",
+                "value": {
+                  "path": "$.lokAdalatUrl",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "helplineNumber",
+                "value": {
+                  "path": "$.helplineNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "qrCodeUrlFirst",
+                "url": "https://pucarfilestore.blob.core.windows.net/pucar-filestore/kl/Bail%20Document%20QR.png",
+                "type": "image"
+              },
+              {
+                "variable": "qrCodeUrlSecond",
+                "url": "https://pucarfilestore.blob.core.windows.net/pucar-filestore/kl/QR%20Bail%20video.png",
+                "type": "image"
               }
             ]
           }
