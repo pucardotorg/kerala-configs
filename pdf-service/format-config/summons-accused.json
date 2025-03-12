@@ -140,7 +140,7 @@
             ],
             [
               {
-                "text": "Address: JFCM 1, District and Sessions Court, Civil Station, Kollam, Kerala, 691013",
+                "text": "Address: {{courtAddress}}",
                 "style": "closing-signature"
               }
             ],
