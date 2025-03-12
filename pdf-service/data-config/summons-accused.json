@@ -34,6 +34,13 @@
                 }
               },
               {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.complainantName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
                 "variable": "respondentAddress",
                 "value": {
                   "path": "$.respondentAddress",
