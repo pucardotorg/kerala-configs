@@ -14,10 +14,6 @@
                     "style": "header"
                   },
                   {
-                    "text": "CMP No {{cmpNumber}}",
-                    "style": "header"
-                  },
-                  {
                     "text": "In Case No. {{caseNumber}}",
                     "style": "header"
                   },
