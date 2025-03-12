@@ -139,34 +139,21 @@
                 }
               },
               {
-                "variable": "qrCodeUrlFirst",
+                "variable": "courtAddress",
                 "value": {
-                  "path": "$.qrCodeUrlFirst"
+                  "path": "$.courtAddress",
+                  "defaultValue": "NA"
                 }
               },
               {
+                "variable": "qrCodeUrlFirst",
+                "url": "https://pucarfilestore.blob.core.windows.net/pucar-filestore/kl/Bail%20Document%20QR.png",
+                "type": "image"
+              },
+              {
                 "variable": "qrCodeUrlSecond",
-                "value": {
-                  "path": "$.qrCodeUrlFirst"
-                }
-              }
-            ]
-          },
-          {
-            "qrcodeConfig": [
-              {
-                "variable": "qrCodeFirst",
-                "url": true,
-                "value": "{{qrCodeUrlFirst}}"
-              }
-            ]
-          },
-          {
-            "qrcodeConfig": [
-              {
-                "variable": "qrCodeSecond",
-                "url": true,
-                "value": "{{qrCodeUrlSecond}}"
+                "url": "https://pucarfilestore.blob.core.windows.net/pucar-filestore/kl/QR%20Bail%20video.png",
+                "type": "image"
               }
             ]
           }
