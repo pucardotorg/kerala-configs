@@ -31,23 +31,27 @@
                   {
                     "text": "SUMMONS TO AN ACCUSED PERSON",
                     "style": "form-sub-header",
-                    "alignment": "left"
+                    "alignment": "center"
                   },
                   {
                     "text": "{{caseName}}",
-                    "style": "form-sub-header",
-                    "alignment": "right"
+                    "style": "form-case-name",
+                    "alignment": "center"
                   },
                   {
-                    "text": "(See section 63)",
-                    "style": "form-sub-header",
-                    "alignment": "left"
-                  },
-                  {
-                    "text": "{{hearingDate}}",
-                    "style": "form-sub-header",
-                    "alignment": "right"
-                  }
+                    "columns": [
+                      {
+                        "text": "(See section 63)",
+                        "style": "form-sub-header",
+                        "alignment": "left"
+                      },
+                      {
+                        "text": "{{hearingDate}}",
+                        "style": "form-sub-header",
+                        "alignment": "right"
+                      }
+                    ]
+                  }                  
                 ],
                 "alignment": "center",
                 "margin": [
@@ -63,6 +67,32 @@
         "layout": "noBorders"
       },
       {
+        "columns": [
+          {
+            "text": "Between:",
+            "color": "#484848"
+          }
+        ]
+      },
+      {
+        "style": "form-sub-body",
+        "columns": [
+          {
+            "text": "Petitioner: {{complainantName}}",
+            "alignment": "left"
+          },
+          {
+            "text": "and",
+            "alignment": "center"
+          },
+          {
+            "text": "Accused: {{respondentName}}",
+            "alignment": "right"
+          }
+        ],
+        "margin": [0, 10]
+      },
+      {
         "style": "form-body",
         "table": {
           "widths": [
@@ -71,20 +101,18 @@
           "body": [
             [
               {
-                "text": "To,",
-                "style": "form-sub-body"
+                "text": "To,"
               }
             ],
             [
               {
-                "text": "{{respondentName}}",
-                "style": "form-sub-body"
+                "text": "{{respondentName}}"
               }
             ],
             [
               {
                 "text": "{{respondentAddress}}",
-                "style": "form-sub-body"
+                "margin": [0, 0, 0, 5]
               }
             ],
             [
@@ -95,9 +123,7 @@
                     "style": "form-sub-body"
                   },
                   {
-                    "text": "your attendance is necessary to answer to a charge U/s. 138 of N.I ACT, you are hereby required to appear in person (or by pleader, as the case may be) before the (Magistrate) of {{judgeName}} on the {{hearingDate}}. Herein fail not.",
-                    "color": "black",
-                    "bold": true
+                    "text": "your attendance is necessary to answer to a charge U/s. 138 of N.I ACT, you are hereby required to appear in person (or by pleader, as the case may be) {{courtName}} on the {{hearingDate}}. Herein fail not."
                   }
                 ],
                 "leadingIndent": 20
@@ -114,6 +140,10 @@
         ]
       },
       {
+        "text": "Dated, this {{issueDate}}.",
+        "style": "closing-text"
+      },
+      {
         "style": "closing-content",
         "table": {
           "widths": [
@@ -122,25 +152,23 @@
           "body": [
             [
               {
-                "text": "Dated, this {{issueDate}}.",
-                "style": "closing-text"
+                "columns": [
+                  {
+                    "text": "Seal of the Court",
+                    "style": "closing-seal",
+                    "alignment": "left"
+                  },
+                  {
+                    "text": "Signature",
+                    "style": "closing-signature",
+                    "alignment": "right"
+                  }
+                ]
               }
             ],
             [
               {
-                "text": "Seal of the Court",
-                "style": "closing-seal"
-              }
-            ],
-            [
-              {
-                "text": "Signature",
-                "style": "closing-signature"
-              }
-            ],
-            [
-              {
-                "text": "Address: JFCM 1, District and Sessions Court, Civil Station, Kollam, Kerala, 691013",
+                "text": "Address: {{courtAddress}}",
                 "style": "closing-signature"
               }
             ],
@@ -169,9 +197,24 @@
           "body": [
             [
               {
-                "text": "Visit dristi.gov.in for more information",
-                "style": "footer-body",
-                "decoration": "underline"
+                "text": [
+                  {
+                    "text": "Visit ",
+                    "style": "footer-content-link"
+                  },
+                  {
+                    "text": "{{courtUrl}}",
+                    "decoration": "underline",
+                    "color": "#A62121",
+                    "style": "footer-content-link",
+                    "link": "{{courtUrl}}"
+                  },
+                  {
+                    "text": " for more information",
+                    "style": "footer-content-link"
+                  }
+                ],
+                "margin": [0, 8]
               }
             ],
             [
@@ -244,7 +287,7 @@
           "body": [
             [
               {
-                "text": "Please see below for further information about your case {{cnrNumber}}. You can also find this information and related documents by scanning the QR code on page 1 or on dristi.gov.in (herein after referred to as “Portal”).",
+                "text": "Please see below for further information about your case {{cnrNumber}}. You can also find this information and related documents on {{courtUrl}} (herein after referred to as “Portal”).",
                 "style": "annexure-content"
               }
             ],
@@ -256,20 +299,43 @@
             ],
             [
               {
-                "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: {{accessCode}}. Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the Complaint tab on the Portal.",
-                "style": "annexure-content"
+                "text": [
+                  {
+                    "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: ",
+                    "style": "annexure-content"
+                  },
+                  {
+                    "text": "{{accessCode}}.",
+                    "style": "annexure-content-bold"
+                  },
+                  {
+                    "text": " Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the “Documents”, “Submissions”, and “Complaint” tab once you log on to the Portal.",
+                    "style": "annexure-content"
+                  }
+                ]
               }
             ],
             [
               {
-                "text": "2. Understanding More About Cheque Bounce Cases",
+                "text": "2. Understanding More About Cheque Dishonour Cases",
                 "style": "annexure-sub-header"
               }
             ],
             [
               {
-                "text": " You can find more information about cheque bounce cases, your legal rights, and obligations, on bit.ly.",
-                "style": "annexure-content"
+                "text": [
+                  {
+                    "text": "You can find more information about cheque bounce S138 cases, your legal rights, and obligations, in the Negotiable Instruments Act- ",
+                    "style" : "annexure-content"
+                  },
+                  {
+                    "text": "{{infoPdfUrl}}",
+                    "decoration": "underline",
+                    "color": "#A62121",
+                    "style": "footer-content-link",
+                    "link": "{{infoPdfUrl}}"
+                  }
+                ]
               }
             ],
             [
@@ -288,7 +354,7 @@
                         "color": "#000000"
                       },
                       {
-                        "text": "You may hire a lawyer to represent yourself or appear as a party in person, which means you represent yourself in court proceedings. Please visit Kerala Bar Council website https://www.barcouncilkerala.org/lawyer-registry-list for a contact directory of lawyers.",
+                        "text": "You may hire a lawyer to represent yourself or appear as a party in person, which means you represent yourself in court proceedings. Please visit Kerala Bar Council website {{barCouncilUrl}} for a contact directory of lawyers.",
                         "style": "annexure-content"
                       }
                     ]
@@ -306,14 +372,42 @@
                     ]
                   },
                   {
-                    "text": [
+                    "stack":[
                       {
-                        "text": "Apply for Bail: ",
-                        "color": "#000000"
+                        "text":[
+                          {
+                          "text": "Apply for Bail: ",
+                          "color": "#000000"
+                          },
+                          {
+                            "text": " Information on how to apply for bail and required documents is available when you scan these two QR code",
+                            "style": "annexure-content"
+                          }
+                        ]
                       },
                       {
-                        "text": "Information on how to apply for bail and required documents is available on this link <bit.ly>. To apply for bail, please use <> tab on the Portal.",
-                        "style": "annexure-content"
+                        "columns": [
+                          {
+                            "image": "{{qrCodeFirst}}",
+                            "width": 80,
+                            "height": 80,
+                            "margin":[10, 10, 10]
+                          },
+                          {
+                            "width": 20, 
+                            "text": "" 
+                          },
+                          {
+                            "image": "{{qrCodeSecond}}",
+                            "width": 80,
+                            "height": 80,
+                            "margin":[10, 10]
+                          }
+                        ]
+                      },
+                      {
+                        "text":"To apply for bail, please click on the Raise Application button from the Make Filing button dropdown inside the case view.",
+                        "style":"annexure-content"
                       }
                     ]
                   },
@@ -324,7 +418,7 @@
                         "color": "#000000"
                       },
                       {
-                        "text": "If you cannot attend your hearing on {{hearingDate}}, you can request a new date through the Portal.",
+                        "text": "If you cannot attend your hearing on the affixed {{hearingDate}}, you can request a new date through the Portal.",
                         "style": "annexure-content"
                       }
                     ]
@@ -342,12 +436,12 @@
               {
                 "ul": [
                   {
-                    "text": "You may choose to settle the case with the complainant. This can be a quicker and simpler way to resolve the dispute. To settle the case, you may approach the complainant directly, or you may sign up for a Lok Adalat/Mediation Session that is overseen by the court. You may find more information about Lok Adalat here <bit.ly.>.",
-                    "style": "annexure-text"
+                    "text": "You may choose to settle the case with the complainant. This can be a quicker and simpler way to resolve the dispute. To settle the case, you may approach the complainant directly, or you may sign up for a Lok Adalat/Mediation Session that is overseen by the court. You may find more information about Lok Adalat here {{lokAdalatUrl}}",
+                    "style": "annexure-content"
                   },
                   {
                     "text": "If you choose to settle the case, you may inform the court after joining the case on the Portal.",
-                    "style": "annexure-text"
+                    "style": "annexure-content"
                   }
                 ]
               }
@@ -360,7 +454,7 @@
             ],
             [
               {
-                "text": " If you have any questions or need help, please visit your nearest e-Sewa Kendra or contact <add the number here>",
+                "text": " If you have any questions or need help, please visit your nearest e-Sewa Kendra or contact {{helplineNumber}}",
                 "style": "annexure-content"
               }
             ],
@@ -458,8 +552,7 @@
           0,
           0
         ],
-        "bold": true,
-        "color": "#000000",
+        "color": "#484848",
         "alignment": "left"
       },
       "closing-seal": {
@@ -469,8 +562,7 @@
           0,
           0
         ],
-        "bold": true,
-        "color": "#000000",
+        "color": "#484848",
         "alignment": "left"
       },
       "closing-signature": {
@@ -480,8 +572,7 @@
           0,
           0
         ],
-        "bold": true,
-        "color": "#000000",
+        "color": "#484848",
         "alignment": "left"
       },
       "footer-content": {
@@ -533,6 +624,23 @@
       "annexure-content": {
         "fontSize": 11,
         "color": "#484848"
+      },
+      "annexure-content-bold": {
+        "fontSize": 11,
+        "color": "#252525",
+        "bold": true
+      },
+      "form-case-name": {
+        "color": "#484848",
+        "fontFamily": "Roboto",
+        "fontSize": 13,
+        "letterSpacing": 0.6,
+        "margin": [
+          0,
+          5,
+          0,
+          10
+        ]
       }
     }
   }
