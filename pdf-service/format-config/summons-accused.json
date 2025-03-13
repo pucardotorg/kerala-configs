@@ -391,7 +391,11 @@
                             "image": "{{qrCodeFirst}}",
                             "width": 80,
                             "height": 80,
-                            "margin":[10, 10]
+                            "margin":[10, 10, 10]
+                          },
+                          {
+                            "width": 20, 
+                            "text": "" 
                           },
                           {
                             "image": "{{qrCodeSecond}}",
