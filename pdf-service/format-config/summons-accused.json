@@ -9,9 +9,7 @@
       {
         "style": "form-header",
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -46,20 +44,15 @@
                         "alignment": "left"
                       },
                       {
-                        "text": "{{hearingDate}}",
+                        "text": "Next Date : {{hearingDate}}",
                         "style": "form-sub-header",
                         "alignment": "right"
                       }
                     ]
-                  }                  
+                  }
                 ],
                 "alignment": "center",
-                "margin": [
-                  0,
-                  10,
-                  0,
-                  10
-                ]
+                "margin": [0, 10, 0, 10]
               }
             ]
           ]
@@ -95,9 +88,7 @@
       {
         "style": "form-body",
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -123,7 +114,7 @@
                     "style": "form-sub-body"
                   },
                   {
-                    "text": "your attendance is necessary to answer to a charge U/s. 138 of N.I ACT, you are hereby required to appear in person (or by pleader, as the case may be) {{courtName}} on the {{hearingDate}}. Herein fail not."
+                    "text": "your attendance is necessary to answer to a charge U/s. 138 of Negotiable Instruments Act, you are hereby required to appear in person (or by pleader, as the case may be) {{courtName}} on the {{hearingDate}}. Herein fail not."
                   }
                 ],
                 "leadingIndent": 20
@@ -132,23 +123,17 @@
           ]
         },
         "layout": "noBorders",
-        "margin": [
-          0,
-          10,
-          0,
-          10
-        ]
+        "margin": [0, 10, 0, 10]
       },
       {
         "text": "Dated, this {{issueDate}}.",
-        "style": "closing-text"
+        "style": "closing-text",
+        "bold": true
       },
       {
         "style": "closing-content",
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -181,19 +166,12 @@
           ]
         },
         "layout": "noBorders",
-        "margin": [
-          0,
-          20,
-          0,
-          0
-        ]
+        "margin": [0, 20, 0, 0]
       },
       {
         "style": "footer-content",
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -220,7 +198,7 @@
             [
               {
                 "text": "The process is system generated and transmitted in a secured manner by authorised user, as such a physical copy is not required.",
-                "absolutePosition": {    "x": 50,    "y": 740}
+                "absolutePosition": { "x": 50, "y": 740 }
               }
             ],
             [
@@ -237,26 +215,18 @@
             [
               {
                 "text": "",
-                "pageBreak":  "before"
-
+                "pageBreak": "before"
               }
             ]
           ]
         },
         "layout": "noBorders",
-        "margin": [
-          0,
-          20,
-          0,
-          0
-        ]
+        "margin": [0, 20, 0, 0]
       },
       {
         "style": "annexure-header",
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -267,12 +237,7 @@
                   }
                 ],
                 "alignment": "center",
-                "margin": [
-                  0,
-                  20,
-                  0,
-                  20
-                ]
+                "margin": [0, 20, 0, 20]
               }
             ]
           ]
@@ -281,9 +246,7 @@
       },
       {
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -326,7 +289,7 @@
                 "text": [
                   {
                     "text": "You can find more information about cheque bounce S138 cases, your legal rights, and obligations, in the Negotiable Instruments Act- ",
-                    "style" : "annexure-content"
+                    "style": "annexure-content"
                   },
                   {
                     "text": "{{infoPdfUrl}}",
@@ -354,7 +317,18 @@
                         "color": "#000000"
                       },
                       {
-                        "text": "You may hire a lawyer to represent yourself or appear as a party in person, which means you represent yourself in court proceedings. Please visit Kerala Bar Council website {{barCouncilUrl}} for a contact directory of lawyers.",
+                        "text": "You may hire a lawyer to represent yourself or appear as a party in person, which means you represent yourself in court proceedings. Please visit Kerala Bar Council website ",
+                        "style": "annexure-content"
+                      },
+                      {
+                        "text": "{{barCouncilUrl}}",
+                        "decoration": "underline",
+                        "color": "#A62121",
+                        "style": "footer-content-link",
+                        "link": "{{barCouncilUrl}}"
+                      },
+                      {
+                        "text": " for a contact directory of lawyers.",
                         "style": "annexure-content"
                       }
                     ]
@@ -366,18 +340,26 @@
                         "color": "#000000"
                       },
                       {
-                        "text": "Log in to the Portal & enter the 6-digit code {{accessCode}} to access your case details.",
+                        "text": "Log in to the Portal & enter the 6-digit code ",
+                        "style": "annexure-content"
+                      },
+                      {
+                        "text": "{{accessCode}} ",
+                        "style": "annexure-content-bold"
+                      },
+                      {
+                        "text": "to access your case details.",
                         "style": "annexure-content"
                       }
                     ]
                   },
                   {
-                    "stack":[
+                    "stack": [
                       {
-                        "text":[
+                        "text": [
                           {
-                          "text": "Apply for Bail: ",
-                          "color": "#000000"
+                            "text": "Apply for Bail: ",
+                            "color": "#000000"
                           },
                           {
                             "text": " Information on how to apply for bail and required documents is available when you scan these two QR code",
@@ -391,23 +373,23 @@
                             "image": "{{qrCodeFirst}}",
                             "width": 80,
                             "height": 80,
-                            "margin":[10, 10, 10]
+                            "margin": [10, 10, 10]
                           },
                           {
-                            "width": 20, 
-                            "text": "" 
+                            "width": 20,
+                            "text": ""
                           },
                           {
                             "image": "{{qrCodeSecond}}",
                             "width": 80,
                             "height": 80,
-                            "margin":[10, 10]
+                            "margin": [10, 10]
                           }
                         ]
                       },
                       {
-                        "text":"To apply for bail, please click on the Raise Application button from the Make Filing button dropdown inside the case view.",
-                        "style":"annexure-content"
+                        "text": "To apply for bail, please click on the Raise Application button from the Make Filing button dropdown inside the case view.",
+                        "style": "annexure-content"
                       }
                     ]
                   },
@@ -418,7 +400,15 @@
                         "color": "#000000"
                       },
                       {
-                        "text": "If you cannot attend your hearing on the affixed {{hearingDate}}, you can request a new date through the Portal.",
+                        "text": "If you cannot attend your hearing on the affixed ",
+                        "style": "annexure-content"
+                      },
+                      {
+                        "text": "{{hearingDate}}, ",
+                        "style": "annexure-content-bold"
+                      },
+                      {
+                        "text": "you can request a new date through the Portal.",
                         "style": "annexure-content"
                       }
                     ]
@@ -487,12 +477,7 @@
           ]
         },
         "layout": "noBorders",
-        "margin": [
-          0,
-          20,
-          0,
-          20
-        ]
+        "margin": [0, 20, 0, 20]
       }
     ],
     "styles": {
@@ -508,98 +493,48 @@
         "fontFamily": "Roboto",
         "fontSize": 13,
         "letterSpacing": 0.6,
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ]
+        "margin": [0, 5, 0, 0]
       },
       "form-body": {
         "fontSize": 12,
         "color": "#484848",
-        "margin": [
-          -10,
-          5,
-          -5,
-          -5
-        ]
+        "margin": [-10, 5, -5, -5]
       },
       "form-sub-body": {
         "fontSize": 12,
         "color": "#484848",
-        "margin": [
-          -10,
-          5,
-          -5,
-          -5
-        ]
+        "margin": [-10, 5, -5, -5]
       },
       "closing-content": {
         "color": "#484848",
         "fontSize": 11,
-        "margin": [
-          5,
-          5,
-          5,
-          5
-        ]
+        "margin": [5, 5, 5, 5]
       },
       "closing-text": {
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ],
+        "margin": [0, 5, 0, 0],
         "color": "#484848",
         "alignment": "left"
       },
       "closing-seal": {
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ],
+        "margin": [0, 5, 0, 0],
         "color": "#484848",
         "alignment": "left"
       },
       "closing-signature": {
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ],
+        "margin": [0, 5, 0, 0],
         "color": "#484848",
         "alignment": "left"
       },
       "footer-content": {
         "color": "#484848",
         "fontSize": 11,
-        "margin": [
-          5,
-          5,
-          5,
-          5
-        ]
+        "margin": [5, 5, 5, 5]
       },
       "footer-text": {
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ]
+        "margin": [0, 5, 0, 0]
       },
       "footer-page": {
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ]
+        "margin": [0, 5, 0, 0]
       },
       "annexure-header": {
         "color": "#black",
@@ -614,12 +549,7 @@
         "fontSize": 13,
         "bold": true,
         "letterSpacing": 0.6,
-        "margin": [
-          0,
-          5,
-          0,
-          0
-        ]
+        "margin": [0, 5, 0, 0]
       },
       "annexure-content": {
         "fontSize": 11,
@@ -635,12 +565,7 @@
         "fontFamily": "Roboto",
         "fontSize": 13,
         "letterSpacing": 0.6,
-        "margin": [
-          0,
-          5,
-          0,
-          10
-        ]
+        "margin": [0, 5, 0, 10]
       }
     }
   }
