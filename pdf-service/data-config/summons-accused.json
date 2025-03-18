@@ -154,6 +154,13 @@
                 "variable": "qrCodeSecond",
                 "url": "https://pucarfilestore.blob.core.windows.net/pucar-filestore/kl/QR%20Bail%20video.png",
                 "type": "image"
+              },
+              {
+                "variable": "filingNumber",
+                "value": {
+                  "path": "$.filingNumber",
+                  "defaultValue": "NA"
+                }
               }
             ]
           }
