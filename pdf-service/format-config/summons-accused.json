@@ -32,6 +32,11 @@
                     "alignment": "center"
                   },
                   {
+                    "text": "Filing No. {{filingNumber}}",
+                    "style": "form-sub-header",
+                    "alignment": "center"
+                  },
+                  {
                     "text": "{{caseName}}",
                     "style": "form-case-name",
                     "alignment": "center"
