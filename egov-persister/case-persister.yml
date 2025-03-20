@@ -81,7 +81,7 @@ serviceMaps:
             - jsonPath: $.cases.statutesAndSections.*.auditDetails.createdTime
             - jsonPath: $.cases.statutesAndSections.*.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO public.dristi_case_litigants(id, tenantid, partycategory, individualid, organisationid, partytype, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO public.dristi_case_litigants(id, tenantid, partycategory, individualid, organisationid, partytype, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned, isresponserequired) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: cases.litigants.*
           jsonMaps:
             - jsonPath: $.cases.litigants.*.id
@@ -100,6 +100,7 @@ serviceMaps:
             - jsonPath: $.cases.litigants.*.auditDetails.createdTime
             - jsonPath: $.cases.litigants.*.auditDetails.lastModifiedTime
             - jsonPath: $.cases.litigants.*.hasSigned
+            - jsonPath: $.cases.litigants.*.isResponseRequired
 
         - query: INSERT INTO public.dristi_case_representatives(id, tenantid, advocateid, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: cases.representatives.*
@@ -270,7 +271,7 @@ serviceMaps:
             - jsonPath: $.cases.statutesAndSections.*.auditDetails.createdTime
             - jsonPath: $.cases.statutesAndSections.*.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO public.dristi_case_litigants (id, tenantid, partycategory, individualid, organisationid, partytype, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET partycategory = EXCLUDED.partycategory, individualid = EXCLUDED.individualid, organisationid = EXCLUDED.organisationid, case_id = EXCLUDED.case_id, partytype = EXCLUDED.partytype, isactive = EXCLUDED.isactive, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime, hassigned = EXCLUDED.hassigned;
+        - query: INSERT INTO public.dristi_case_litigants (id, tenantid, partycategory, individualid, organisationid, partytype, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned, isresponserequired) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET partycategory = EXCLUDED.partycategory, individualid = EXCLUDED.individualid, organisationid = EXCLUDED.organisationid, case_id = EXCLUDED.case_id, partytype = EXCLUDED.partytype, isactive = EXCLUDED.isactive, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime, hassigned = EXCLUDED.hassigned, isresponserequired=EXCLUDED.isresponserequired;
           basePath: cases.litigants.*
           jsonMaps:
             - jsonPath: $.cases.litigants.*.id
@@ -289,6 +290,7 @@ serviceMaps:
             - jsonPath: $.cases.litigants.*.auditDetails.createdTime
             - jsonPath: $.cases.litigants.*.auditDetails.lastModifiedTime
             - jsonPath: $.cases.litigants.*.hasSigned
+            - jsonPath: $.cases.litigants.*.isResponseRequired
 
         - query: INSERT INTO dristi_case_representatives (id, tenantid, advocateid, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, advocateid = EXCLUDED.advocateid, isactive = EXCLUDED.isactive, case_id = EXCLUDED.case_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime, hassigned = EXCLUDED.hassigned;
           basePath: cases.representatives.*

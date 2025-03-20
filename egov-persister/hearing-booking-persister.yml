@@ -11,7 +11,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: Hearing.*
       queryMaps:
-        - query: INSERT INTO hearing_booking (court_id,judge_id,case_id,hearing_booking_id,hearing_date,hearing_type,title,description,status,start_time,end_time,created_by,last_modified_by,created_time, last_modified_time,row_version,tenant_id ,reschedule_request_id) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?);
+        - query: INSERT INTO hearing_booking (court_id,judge_id,case_id,hearing_booking_id,hearing_date,hearing_type,title,description,status,start_time,end_time,created_by,last_modified_by,created_time, last_modified_time,row_version,tenant_id ,reschedule_request_id, expiry_time) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?);
           basePath: Hearing.*
           jsonMaps:
             - jsonPath: $.Hearing.*.courtId
@@ -50,6 +50,8 @@ serviceMaps:
 
             - jsonPath: $.Hearing.*.rescheduleRequestId
 
+            - jsonPath: $.Hearing.*.expiryTime
+
 
 
     - version: 1.0
@@ -62,7 +64,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: Hearing.*
       queryMaps:
-        - query: UPDATE hearing_booking SET court_id =?,judge_id=?,case_id =?,hearing_date =?,hearing_type=?,title =?,description =?,status =?,start_time =?,end_time =?,created_by =?,last_modified_by =?,created_time =?, last_modified_time =? ,row_version =?, tenant_id =? ,reschedule_request_id =? WHERE hearing_booking_id=?;
+        - query: UPDATE hearing_booking SET court_id =?,judge_id=?,case_id =?,hearing_date =?,hearing_type=?,title =?,description =?,status =?,start_time =?,end_time =?,created_by =?,last_modified_by =?,created_time =?, last_modified_time =? ,row_version =?, tenant_id =? ,reschedule_request_id =? ,expiry_time  =? WHERE hearing_booking_id=?;
           basePath: Hearing.*
           jsonMaps:
             - jsonPath: $.Hearing.*.courtId
@@ -99,4 +101,6 @@ serviceMaps:
 
             - jsonPath: $.Hearing.*.rescheduleRequestId
 
+            - jsonPath: $.Hearing.*.expiryTime
+              
             - jsonPath: $.Hearing.*.hearingBookingId

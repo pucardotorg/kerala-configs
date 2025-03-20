@@ -1,0 +1,44 @@
+ServiceMaps:
+  serviceName: Transformer service
+  version: 1.0.0
+  mappings:
+    - topic: order-notification
+      configKey: INDEX
+      indexes:
+        - name: order-notification-view
+          type: general
+          id: $.id
+          isBulk: false
+          jsonPath: $.orderAndNotification
+          timeStampField: $.date
+          customJsonMapping:
+            indexMapping:
+              {
+                "Data":
+                  { "orderNotification": { } },
+              }
+            fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.orderNotification.id
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.orderNotification.tenantId
+              - inJsonPath: $.type
+                outJsonPath: $.Data.orderNotification.type
+              - inJsonPath: $.courtId
+                outJsonPath: $.Data.orderNotification.courtId
+              - inJsonPath: $.parties
+                outJsonPath: $.Data.orderNotification.parties
+              - inJsonPath: $.status
+                outJsonPath: $.Data.orderNotification.status
+              - inJsonPath: $.date
+                outJsonPath: $.Data.orderNotification.date
+              - inJsonPath: $.entityType
+                outJsonPath: $.Data.orderNotification.entityType
+              - inJsonPath: $.title
+                outJsonPath: $.Data.orderNotification.title
+              - inJsonPath: $.filingNumbers
+                outJsonPath: $.Data.orderNotification.filingNumbers
+              - inJsonPath: $.caseNumbers
+                outJsonPath: $.Data.orderNotification.caseNumbers
+              - inJsonPath: $.judgeIds
+                outJsonPath: $.Data.orderNotification.judgeIds

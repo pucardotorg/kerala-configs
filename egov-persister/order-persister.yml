@@ -13,7 +13,7 @@ serviceMaps:
       auditAttributeBasePath: order
       queryMaps:
 
-        - query: INSERT INTO dristi_orders(id, tenantid, filingnumber, hearingnumber, applicationnumber, ordertype, ordernumber,linkedordernumber, cnrnumber, comments, status, ordercategory, createddate,isactive, orderdetails, issuedBy, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_orders(id, tenantid, filingnumber, hearingnumber, applicationnumber, ordertype, ordernumber,linkedordernumber, cnrnumber, comments, status, ordercategory, createddate,isactive, orderdetails, compositeitems, ordertitle, issuedBy, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: order
           jsonMaps:
             - jsonPath: $.order.id
@@ -35,6 +35,10 @@ serviceMaps:
             - jsonPath: $.order.orderDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.order.compositeItems
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.order.orderTitle
             - jsonPath: $.order.issuedBy
               type: JSON
               dbType: JSONB
@@ -92,7 +96,7 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: order
       queryMaps:
-        - query: UPDATE dristi_orders SET tenantid=?, filingnumber=?, hearingnumber=?, linkedordernumber=?, ordercategory=?, createddate=?, applicationnumber=?, ordertype=?, ordernumber=?, cnrnumber=?, comments=?, status=?, isactive=?, orderdetails=?, issuedBy=?, additionaldetails=?, lastmodifiedby=?, lastModifiedTime=? WHERE id=?;
+        - query: UPDATE dristi_orders SET tenantid=?, filingnumber=?, hearingnumber=?, linkedordernumber=?, ordercategory=?, createddate=?, applicationnumber=?, ordertype=?, ordernumber=?, cnrnumber=?, comments=?, status=?, isactive=?, orderdetails=?, compositeitems=?, ordertitle=?, issuedBy=?, additionaldetails=?, lastmodifiedby=?, lastModifiedTime=? WHERE id=?;
           basePath: order
           jsonMaps:
             - jsonPath: $.order.tenantId
@@ -113,6 +117,10 @@ serviceMaps:
             - jsonPath: $.order.orderDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.order.compositeItems
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.order.orderTitle
             - jsonPath: $.order.issuedBy
               type: JSON
               dbType: JSONB
