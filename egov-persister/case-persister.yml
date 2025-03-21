@@ -526,6 +526,25 @@ serviceMaps:
             - jsonPath: $.representatives.*.representing.*.id
 
     - version: 1.0
+      description: updates pending advocate requests of a case in dristi_cases table when advocate joins the case
+      fromTopic: join-case-update-pending-advocate-requests
+      isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objecIdJsonPath: $.filingNumber
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: $
+      queryMaps:
+        - query: UPDATE dristi_cases SET pendingAdvocateRequests = ?, lastmodifiedby = ?, lastmodifiedtime = ? WHERE filingNumber = ?;
+          basePath: $
+          jsonMaps:
+            - jsonPath: $.pendingAdvocateRequests
+            - jsonPath: $.auditDetails.lastModifiedBy
+            - jsonPath: $.auditDetails.lastModifiedTime
+            - jsonPath: $.filingNumber
+
+    - version: 1.0
       description: Update case overall workflow in tables
       fromTopic: case-overall-status-topic
       isTransaction: true
