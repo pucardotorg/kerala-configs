@@ -412,7 +412,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: litigants
       queryMaps:
-        - query: INSERT INTO public.dristi_case_litigants(id, tenantid, partycategory, individualid, organisationid, partytype, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, isactive = EXCLUDED.isactive, case_id = EXCLUDED.case_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
+        - query: INSERT INTO public.dristi_case_litigants(id, tenantid, partycategory, individualid, organisationid, partytype, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned, isresponserequired) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, isactive = EXCLUDED.isactive, case_id = EXCLUDED.case_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime, isresponserequired=EXCLUDED.isresponserequired;
           basePath: litigants.*
           jsonMaps:
             - jsonPath: $.litigants.*.id
@@ -431,6 +431,7 @@ serviceMaps:
             - jsonPath: $.litigants.*.auditDetails.createdTime
             - jsonPath: $.litigants.*.auditDetails.lastModifiedTime
             - jsonPath: $.litigants.*.hasSigned
+            - jsonPath: $.litigants.*.isResponseRequired
         - query: INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType, isActive, litigant_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?);
           basePath: litigants.*.documents.*
           jsonMaps:
