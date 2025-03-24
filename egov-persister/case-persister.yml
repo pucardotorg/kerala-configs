@@ -543,6 +543,8 @@ serviceMaps:
           basePath: $
           jsonMaps:
             - jsonPath: $.pendingAdvocateRequests
+              type: JSON
+              dbType: JSONB
             - jsonPath: $.auditDetails.lastModifiedBy
             - jsonPath: $.auditDetails.lastModifiedTime
             - jsonPath: $.filingNumber
