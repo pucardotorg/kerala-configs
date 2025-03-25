@@ -114,7 +114,7 @@ serviceMaps:
             - jsonPath: $.artifact.reason
             - jsonPath: $.artifact.filingType
             - jsonPath: $.artifact.id
-            - jsonPaht: $.artifact.publishedDate
+            - jsonPath: $.artifact.publishedDate
 
     - version: 1.0
       description: Update evidence comments in tables
