@@ -111,5 +111,5 @@ serviceMaps:
             - jsonPath: $.artifact.isVoid
             - jsonPath: $.artifact.reason
             - jsonPath: $.artifact.filingType
-            - jsonPath: $.artifact.id
             - jsonPath: $.artifact.publishedDate
+            - jsonPath: $.artifact.id

@@ -113,8 +113,8 @@ serviceMaps:
             - jsonPath: $.artifact.isVoid
             - jsonPath: $.artifact.reason
             - jsonPath: $.artifact.filingType
-            - jsonPath: $.artifact.id
             - jsonPath: $.artifact.publishedDate
+            - jsonPath: $.artifact.id
 
     - version: 1.0
       description: Update evidence comments in tables
