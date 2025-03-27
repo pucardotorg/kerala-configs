@@ -34,7 +34,11 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "WHEREAS, the Court has reviewed the Motion to Change the Advocate and the reasons provided therein, which include  {{briefReasonOfWithdrawal}}; and",
+                    "text": "WHEREAS, the Court has reviewed the Motion to Change the Advocate and the reasons provided therein, which include  {{briefReasonOfWithdrawal}};",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court finds that the Motion to Change the Advocate is made voluntarily and with sufficient cause;",
                     "style": "contentText"
                   },
                   {
