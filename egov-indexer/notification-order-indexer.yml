@@ -10,6 +10,7 @@ ServiceMaps:
           id: $.id
           isBulk: false
           jsonPath: $.orderAndNotification
+          timeStampField: $.date
           customJsonMapping:
             indexMapping:
               {
@@ -41,3 +42,9 @@ ServiceMaps:
                 outJsonPath: $.Data.orderNotification.caseNumbers
               - inJsonPath: $.judgeIds
                 outJsonPath: $.Data.orderNotification.judgeIds
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.orderNotification.documents
+              - inJsonPath: $.createdTime
+                outJsonPath: $.Data.orderNotification.createdTime
+              - inJsonPath: $.caseTitle
+                outJsonPath: $.Data.orderNotification.caseTitle
