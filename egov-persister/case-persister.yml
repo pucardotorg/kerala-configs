@@ -466,7 +466,7 @@ serviceMaps:
             - jsonPath: $.cases.poaHolders.*.documents.*.documentUid
             - jsonPath: $.cases.poaHolders.*.documents.*.documentType
             - jsonPath: $.cases.poaHolders.*.documents.*.isActive
-            - jsonPath: $.cases.poaHolders.*.documents[*][?({id} in @.documents[*].id)].id
+            - jsonPath: $.cases.poaHolders[*][?({id} in @.documents[*].id)].id
             - jsonPath: $.cases.poaHolders.*.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
