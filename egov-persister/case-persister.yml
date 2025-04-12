@@ -580,7 +580,13 @@ serviceMaps:
             - jsonPath: $.representatives.*.representing.*.auditDetails.lastModifiedBy
             - jsonPath: $.representatives.*.representing.*.auditDetails.createdTime
             - jsonPath: $.representatives.*.representing.*.auditDetails.lastModifiedTime
-        - query: INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType, isActive,representing_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType, isActive,representing_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) do update set
+            fileStore = EXCLUDED.fileStore,
+            documentUid = EXCLUDED.documentUid,
+            documentType = EXCLUDED.documentType,
+            isActive=EXCLUDED.isActive,
+            representing_id = EXCLUDED.representing_id,
+            additionalDetails = EXCLUDED.additionalDetails;
           basePath: representatives.*.representing.*.documents.*
           jsonMaps:
             - jsonPath: $.representatives.*.representing.*.documents.*.id
