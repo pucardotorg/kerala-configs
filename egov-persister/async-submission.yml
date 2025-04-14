@@ -49,3 +49,23 @@ serviceMaps:
               - jsonPath: $.TreasuryPaymentData.remarkStatus
               - jsonPath: $.TreasuryPaymentData.remarks
               - jsonPath: $.TreasuryPaymentData.fileStoreId
+
+              
+    - version: 1.0
+      description: Treasury head breakup mapping
+      fromTopic: create-treasury-mapping
+      objecIdJsonPath: $.consumerCode
+      tenantIdJsonPath: $.tenantId
+      queryMaps:
+          - query: INSERT INTO treasury_head_breakup_data (consumer_code, head_mapping,calculation, tenant_id, createdtime) values(?, ?, ?, ?, ?)
+            basePath: $
+            jsonMaps:
+              - jsonPath: $.consumerCode
+              - jsonPath: $.headAmountMapping
+                type: JSON
+                dbType: JSONB
+              - jsonPath: $.calculation
+                type: JSON
+                dbType: JSONB
+              - jsonPath: $.tenantId
+              - jsonPath: $.createdTime
