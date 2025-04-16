@@ -223,7 +223,7 @@
                           },
                           {
                             "text": "Advocate {{index}} Signature",
-                            "style": "signature",
+                            "style": "advSignature",
                             "alignment": "right",
                             "color": "white"
                           }
@@ -429,6 +429,10 @@
       "signature": {
         "fontSize": 13,
         "margin": [0, 0, 0, 3]
+      },
+      "advSignature": {
+        "fontSize": 13,
+        "margin": [0, 61, 10, 3]
       },
       "table": {
         "margin": [0, 15, 0, 0]
