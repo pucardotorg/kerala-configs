@@ -205,10 +205,10 @@
                             "style": "signatureHeading"
                           }
                         ],
-                        "{{#placeholderList}}",
+                        "{{#complainantList}}",
                         [
                           {
-                            "text": "{{placeholder}}",
+                            "text": "Complainant {{index}} Signature",
                             "style": "signature",
                             "alignment": "left"
                           },
@@ -219,7 +219,7 @@
                             "color": "white"
                           }
                         ],
-                        "{{/placeholderList}}"
+                        "{{/complainantList}}"
                       ]
                     },
                     "layout": "noBorders"
