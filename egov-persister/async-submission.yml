@@ -50,7 +50,7 @@ serviceMaps:
               - jsonPath: $.TreasuryPaymentData.remarks
               - jsonPath: $.TreasuryPaymentData.fileStoreId
 
-              
+
     - version: 1.0
       description: Treasury head breakup mapping
       fromTopic: create-treasury-mapping
