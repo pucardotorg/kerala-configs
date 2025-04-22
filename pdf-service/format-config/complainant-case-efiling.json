@@ -205,21 +205,30 @@
                             "style": "signatureHeading"
                           }
                         ],
-                        "{{#complainantList}}",
+                        "{{#placeholderList}}",
                         [
                           {
-                            "text": "Complainant {{index}} Signature",
-                            "style": "signature",
-                            "alignment": "left"
+                            "stack": [
+                              {
+                                "text": "{{acronym}}",
+                                "style": "acronym",
+                                "alignment": "left"
+                              },
+                              {
+                                "text": "{{placeholder}}",
+                                "style": "signature",
+                                "alignment": "left"
+                              }
+                            ]
                           },
                           {
                             "text": "Advocate {{index}} Signature",
-                            "style": "signature",
+                            "style": "advSignature",
                             "alignment": "right",
                             "color": "white"
                           }
                         ],
-                        "{{/complainantList}}"
+                        "{{/placeholderList}}"
                       ]
                     },
                     "layout": "noBorders"
@@ -412,9 +421,18 @@
         "fontSize": 13.5,
         "margin": [0, 20, 0, 3]
       },
+      "acronym": {
+        "fontSize": 5,
+        "margin": [0, 55, 0, 0],
+        "color": "white"
+      },
       "signature": {
         "fontSize": 13,
-        "margin": [0, 55, 0, 3]
+        "margin": [0, 0, 0, 3]
+      },
+      "advSignature": {
+        "fontSize": 13,
+        "margin": [0, 61, 10, 3]
       },
       "table": {
         "margin": [0, 15, 0, 0]
