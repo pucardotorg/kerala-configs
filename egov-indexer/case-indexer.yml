@@ -396,9 +396,9 @@ ServiceMaps:
                 "courtCaseNumber": "",
                 "cnrNumber": "",
                 "cmpNumber": "",
-                "name": {},
-                "dateOfBirth": "",
-                "address": {},
+                "petitionerName": {},
+                "petitionerDateOfBirth": "",
+                "petitionerAddress": {},
                 "@timestamp":""
               }
 
