@@ -441,7 +441,7 @@ ServiceMaps:
                 outJsonPath: $.@timestamp
 
             externalUriMapping:
-              - path: http://localhost:8040/individual/v1/_search?limit=1&offset=0&tenantId=kl
+              - path: http://individual.egov:8080/individual/v1/_search?limit=1&offset=0&tenantId=kl
                 apiRequest: {
                   "Individual": {
                     "individualId": "$.litigants[0].individualId"
