@@ -13,11 +13,12 @@ serviceMaps:
       auditAttributeBasePath: order
       queryMaps:
 
-        - query: INSERT INTO dristi_orders(id, tenantid, filingnumber, hearingnumber, applicationnumber, ordertype, ordernumber,linkedordernumber, cnrnumber, comments, status, ordercategory, createddate,isactive, orderdetails, compositeitems, ordertitle, issuedBy, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_orders(id, tenantid, courtId, filingnumber, hearingnumber, applicationnumber, ordertype, ordernumber,linkedordernumber, cnrnumber, comments, status, ordercategory, createddate,isactive, orderdetails, compositeitems, ordertitle, issuedBy, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: order
           jsonMaps:
             - jsonPath: $.order.id
             - jsonPath: $.order.tenantId
+            - jsonPath: $.order.courtId
             - jsonPath: $.order.filingNumber
             - jsonPath: $.order.hearingNumber
             - jsonPath: $.order.applicationNumber
