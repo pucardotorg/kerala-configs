@@ -53,7 +53,7 @@ serviceMaps:
             - jsonPath: $.hearing.auditDetails.createdTime
             - jsonPath: $.hearing.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO dristi_hearing_document(id,fileStore,documentUid,documentType,hearingId,additionalDetails) VALUES (?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_hearing_document(id,fileStore,documentUid,documentType,hearingId,additionalDetails, isActive) VALUES (?, ?, ?, ?, ?, ?, ?);
           basePath: hearing.documents.*
           jsonMaps:
             - jsonPath: $.hearing.documents.*.id
@@ -64,6 +64,7 @@ serviceMaps:
             - jsonPath: $.hearing.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.hearing.documents.*.isActive
 
     - version: 1.0
       description: Update hearing request details in tables
@@ -104,7 +105,7 @@ serviceMaps:
             - jsonPath: $.hearing.auditDetails.lastModifiedTime
             - jsonPath: $.hearing.id 
 
-        - query: INSERT INTO dristi_hearing_document(id,fileStore,documentUid,documentType,hearingId,additionalDetails) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, hearingId = EXCLUDED.hearingId, additionalDetails = EXCLUDED.additionalDetails;
+        - query: INSERT INTO dristi_hearing_document(id,fileStore,documentUid,documentType,hearingId,additionalDetails, isActive) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, hearingId = EXCLUDED.hearingId, additionalDetails = EXCLUDED.additionalDetails;
           basePath: hearing.documents.*
           jsonMaps:
             - jsonPath: $.hearing.documents.*.id
@@ -115,6 +116,7 @@ serviceMaps:
             - jsonPath: $.hearing.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.hearing.documents.*.isActive
 
     - version: 1.0
       description: Update hearing start and end time in tables
