@@ -59,7 +59,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
 
-        - query: INSERT INTO dristi_task_document(id, fileStore, documentUid, documentType, task_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_task_document(id, fileStore, documentUid, documentType, task_id, additionalDetails, isActive) VALUES (?, ?, ?, ?, ?, ?, ?);
           basePath: task.documents.*
           jsonMaps:
             - jsonPath: $.task.documents.*.id
@@ -70,6 +70,7 @@ serviceMaps:
             - jsonPath: $.task.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.task.documents.*.isActive
 
     - version: 1.0
       description: Update task details in tables
@@ -126,7 +127,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
 
-        - query: INSERT INTO dristi_task_document(id, fileStore, documentUid, documentType, task_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, task_id = EXCLUDED.task_id, additionalDetails = EXCLUDED.additionalDetails;
+        - query: INSERT INTO dristi_task_document(id, fileStore, documentUid, documentType, task_id, additionalDetails, isActive) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, task_id = EXCLUDED.task_id, additionalDetails = EXCLUDED.additionalDetails;
           basePath: task.documents.*
           jsonMaps:
             - jsonPath: $.task.documents.*.id
@@ -137,3 +138,4 @@ serviceMaps:
             - jsonPath: $.task.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.task.documents.*.isActive
