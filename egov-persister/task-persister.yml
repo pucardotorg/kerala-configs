@@ -127,7 +127,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
 
-        - query: INSERT INTO dristi_task_document(id, fileStore, documentUid, documentType, task_id, additionalDetails, isActive) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, task_id = EXCLUDED.task_id, additionalDetails = EXCLUDED.additionalDetails;
+        - query: INSERT INTO dristi_task_document(id, fileStore, documentUid, documentType, task_id, additionalDetails, isActive) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, task_id = EXCLUDED.task_id, additionalDetails = EXCLUDED.additionalDetails, isActive = EXCLUDED.isActive;
           basePath: task.documents.*
           jsonMaps:
             - jsonPath: $.task.documents.*.id
