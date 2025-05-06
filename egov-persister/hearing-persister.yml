@@ -105,7 +105,7 @@ serviceMaps:
             - jsonPath: $.hearing.auditDetails.lastModifiedTime
             - jsonPath: $.hearing.id 
 
-        - query: INSERT INTO dristi_hearing_document(id,fileStore,documentUid,documentType,hearingId,additionalDetails, isActive) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, hearingId = EXCLUDED.hearingId, additionalDetails = EXCLUDED.additionalDetails;
+        - query: INSERT INTO dristi_hearing_document(id,fileStore,documentUid,documentType,hearingId,additionalDetails, isActive) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, hearingId = EXCLUDED.hearingId, additionalDetails = EXCLUDED.additionalDetails, isActive = EXCLUDED.isActive;
           basePath: hearing.documents.*
           jsonMaps:
             - jsonPath: $.hearing.documents.*.id
