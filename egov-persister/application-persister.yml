@@ -55,7 +55,7 @@ serviceMaps:
             - jsonPath: $.application.auditDetails.createdTime
             - jsonPath: $.application.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO dristi_application_document(id, fileStore, documentUid, documentType, application_id, additionalDetails,documentOrder) VALUES (?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_application_document(id, fileStore, documentUid, documentType, application_id, additionalDetails,documentOrder, isActive) VALUES (?, ?, ?, ?, ?, ?, ?, ?);
           basePath: application.documents.*
           jsonMaps:
             - jsonPath: $.application.documents.*.id
@@ -67,6 +67,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.application.documents.*.documentOrder
+            - jsonPath: $.application.documents.*.isActive
 
     - version: 1.0
       description: Update application details in tables
@@ -117,7 +118,7 @@ serviceMaps:
             - jsonPath: $.application.auditDetails.lastModifiedTime
             - jsonPath: $.application.id
 
-        - query: INSERT INTO dristi_application_document(id, fileStore, documentUid, documentType, application_id, additionalDetails,documentOrder) VALUES (?, ?, ?, ?, ?, ?,?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, application_id = EXCLUDED.application_id, additionalDetails = EXCLUDED.additionalDetails ,documentOrder = EXCLUDED.documentOrder;
+        - query: INSERT INTO dristi_application_document(id, fileStore, documentUid, documentType, application_id, additionalDetails,documentOrder, isActive) VALUES (?, ?, ?, ?, ?, ?,?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, application_id = EXCLUDED.application_id, additionalDetails = EXCLUDED.additionalDetails ,documentOrder = EXCLUDED.documentOrder, isActive = EXCLUDED.isActive;
           basePath: application.documents.*
           jsonMaps:
             - jsonPath: $.application.documents.*.id
@@ -129,6 +130,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.application.documents.*.documentOrder
+            - jsonPath: $.application.documents.*.isActive
 
     - version: 1.0
       description: Update application status in tables
