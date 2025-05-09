@@ -1075,4 +1075,3 @@ ServiceMaps:
             uriResponseMapping:
             - inJsonPath: $.MdmsRes.PropertyTax.UsageCategory[0].name
               outJsonPath: $.Data.usageCategory  
-    
