@@ -18,6 +18,8 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.id
               - inJsonPath: $.tenantId
                 outJsonPath: $.Data.applicationDetails.tenantId
+              - inJsonPath: $.courtId
+                outJsonPath: $.Data.applicationDetails.courtId
               - inJsonPath: $.applicationDetails
                 outJsonPath: $.Data.applicationDetails.applicationDetails
               - inJsonPath: $.reasonForApplication
@@ -88,6 +90,8 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.id
               - inJsonPath: $.tenantId
                 outJsonPath: $.Data.applicationDetails.tenantId
+              - inJsonPath: $.courtId
+                outJsonPath: $.Data.applicationDetails.courtId
               - inJsonPath: $.applicationDetails
                 outJsonPath: $.Data.applicationDetails.applicationDetails
               - inJsonPath: $.reasonForApplication
@@ -160,6 +164,8 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.id
               - inJsonPath: $.tenantId
                 outJsonPath: $.Data.applicationDetails.tenantId
+              - inJsonPath: $.courtId
+                outJsonPath: $.Data.applicationDetails.courtId
               - inJsonPath: $.caseId
                 outJsonPath: $.Data.applicationDetails.caseId
               - inJsonPath: $.filingNumber
