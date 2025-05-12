@@ -18,6 +18,8 @@ ServiceMaps:
                 outJsonPath: $.Data.taskDetails.id
               - inJsonPath: $.tenantId
                 outJsonPath: $.Data.taskDetails.tenantId
+              - inJsonPath: $.courtId
+                outJsonPath: $.Data.taskDetails.courtId
               - inJsonPath: $.orderId
                 outJsonPath: $.Data.taskDetails.orderId
               - inJsonPath: $.createdDate
@@ -117,6 +119,8 @@ ServiceMaps:
                 outJsonPath: $.Data.taskDetails.id
               - inJsonPath: $.tenantId
                 outJsonPath: $.Data.taskDetails.tenantId
+              - inJsonPath: $.courtId
+                outJsonPath: $.Data.taskDetails.courtId
               - inJsonPath: $.orderId
                 outJsonPath: $.Data.taskDetails.orderId
               - inJsonPath: $.createdDate
