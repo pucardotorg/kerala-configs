@@ -54,6 +54,10 @@
                     "style": "boldText"
                   },
                   {
+                    "text": "Prayer: {{prayer}}",
+                    "style": "bodyText"
+                  },
+                  {
                     "text": "{{additionalComments}}",
                     "style": "bodyText"
                   },
