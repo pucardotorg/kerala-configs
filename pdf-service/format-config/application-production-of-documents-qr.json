@@ -68,6 +68,10 @@
                     "text": "Therefore, the petitioner humbly requests the Hon'ble Court to consider this application and grant permission to produce the aforementioned documents/evidence.",
                     "style": "bodyText"
                   },
+                  {
+                    "text": "Prayer: {{prayer}}",
+                    "style": "bodyText"
+                  },
                   "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
@@ -80,7 +84,8 @@
                   },
                   {
                     "text": "{{advocateSignature}}",
-                    "style": "signature"
+                    "style": "signature",
+                    "margin": [0, 60, 0, 5]
                   },
                   {
                     "text": "{{advocateName}}",

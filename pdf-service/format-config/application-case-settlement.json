@@ -46,8 +46,8 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Prayer:",
-                    "style": "subjectText"
+                    "text": "Prayer: {{prayer}}",
+                    "style": "bodyText"
                   },
                   {
                     "text": "1. Approve the settlement agreement attached herewith.",
@@ -75,7 +75,8 @@
                   },
                   {
                     "text": "{{advocateSignature}}",
-                    "style": "signature"
+                    "style": "signature",
+                    "margin": [0, 60, 0, 5]
                   },
                   {
                     "text": "{{advocateName}}",
