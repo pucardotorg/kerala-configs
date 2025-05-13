@@ -50,6 +50,10 @@
                     "style": "bodyText"
                   },
                   {
+                    "text": "Prayer: {{prayer}}",
+                    "style": "bodyText"
+                  },
+                  {
                     "text": "{{additionalComments}}",
                     "style": "bodyText"
                   },
@@ -59,7 +63,8 @@
                   },
                   {
                     "text": "{{advocateSignature}}",
-                    "style": "signature"
+                    "style": "signature",
+                    "margin": [0, 60, 0, 5]
                   },
                   {
                     "text": "{{advocateName}}",
