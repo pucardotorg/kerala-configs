@@ -43,12 +43,12 @@
               },
               {
                 "variable": "nationalEmblem",
-                "url": "https://pucarfilestore.blob.core.windows.net/pucar-filestore/kl/17bba4d1a5b09a0840e516227bbe9364.png",
+                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/17bba4d1a5b09a0840e516227bbe9364.png",
                 "type": "image"
               },
               {
                 "variable": "onCourtsLogo",
-                "url": "https://pucarfilestore.blob.core.windows.net/pucar-filestore/kl/Crafting_ON_24x7_final (1).png",
+                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/Crafting_ON_24x7_final.png",
                 "type": "image"
               }
             ]
