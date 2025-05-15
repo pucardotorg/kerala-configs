@@ -147,12 +147,12 @@
               },
               {
                 "variable": "qrCodeFirst",
-                "url": "https://pucarfilestore.blob.core.windows.net/pucar-filestore/kl/Bail%20Document%20QR.png",
+                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/Bail_Document_QR.png",
                 "type": "image"
               },
               {
                 "variable": "qrCodeSecond",
-                "url": "https://pucarfilestore.blob.core.windows.net/pucar-filestore/kl/QR%20Bail%20video.png",
+                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/QR_Bail_video.png",
                 "type": "image"
               },
               {

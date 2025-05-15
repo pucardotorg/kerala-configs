@@ -49,12 +49,12 @@
               },
               {
                 "variable": "nationalEmblem",
-                "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
+                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/kerala_hc.png",
                 "type": "image"
               },
               {
                 "variable": "onCourtsLogo",
-                "url": "https://pucarfilestore.blob.core.windows.net/pucar-filestore/kl/Crafting_ON_24x7_final (1).png",
+                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/Crafting_ON_24x7_final.png",
                 "type": "image"
               }
             ]
