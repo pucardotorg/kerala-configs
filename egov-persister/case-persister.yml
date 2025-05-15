@@ -491,6 +491,18 @@ serviceMaps:
             - jsonPath: $.cases.auditDetails.lastModifiedTime
             - jsonPath: $.cases.filingDate
             - jsonPath: $.cases.filingNumber
+        - query: INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType,isActive,case_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, isActive=EXCLUDED.isActive, case_id = EXCLUDED.case_id, additionalDetails = EXCLUDED.additionalDetails;
+          basePath: cases.documents.*
+          jsonMaps:
+            - jsonPath: $.cases.documents.*.id
+            - jsonPath: $.cases.documents.*.fileStore
+            - jsonPath: $.cases.documents.*.documentUid
+            - jsonPath: $.cases.documents.*.documentType
+            - jsonPath: $.cases.documents.*.isActive
+            - jsonPath: $.cases.id
+            - jsonPath: $.cases.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
 
     - version: 1.0
       description: Persists new litigant for a case in dristi_case_litigants table
