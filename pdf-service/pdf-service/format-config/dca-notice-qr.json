@@ -1,0 +1,508 @@
+{
+  "key": "dca-notice-qr",
+  "config": {
+    "defaultStyle": {
+      "font": "Cambay",
+      "lineHeight": 1.5
+    },
+    "pageMargins": [70, 40],
+    "content": [
+      {
+        "style": "form-header",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "Notice to Accused",
+                    "style": "form-header",
+                    "fontSize": 14,
+                    "alignment": "center",
+                    "bold": true
+                  },
+                  {
+                    "text": "(Delay condonation hearing)",
+                    "style": "form-header",
+                    "fontSize": 14,
+                    "alignment": "center"
+                  },
+                  {
+                    "text": "In The {{courtName}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "{{cmpNumber}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "Filing No. {{filingNumber}}",
+                    "style": "form-sub-header"
+                  }
+                ],
+                "alignment": "center",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "columns": [
+          {
+            "text": "Between:",
+            "margin": [0, 10]
+          }
+        ]
+      },
+      {
+        "style": "form-sub-body",
+        "columns": [
+          {
+            "text": "Petitioner: {{complainantName}}",
+            "alignment": "left"
+          },
+          {
+            "text": "and",
+            "alignment": "center"
+          },
+          {
+            "text": "Accused: {{respondentName}}",
+            "alignment": "right"
+          }
+        ],
+        "margin": [0, 10]
+      },
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "To,"
+              }
+            ],
+            [
+              {
+                "text": "{{respondentName}}"
+              }
+            ],
+            [
+              {
+                "text": "R/o {{respondentAddress}}."
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [0, 15]
+      },
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "Please take notice that a delay condonation application has been presented before this court by {{complainantName}} {{complainantAddress}}, praying that the delay in presenting a complaint against you for the offence punishable under Section (s) 138 of the Negotiable Instruments Act, 1881, be condoned.",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+                {
+                  "text": [
+                    {
+                      "text": "And that this court shall hear on the question of “condoning the delay” in taking cognisance of the said offence on the ",
+                      "style": "form-sub-body"
+                    },
+                    {
+                      "text": "{{hearingDate}}.",
+                      "style":"form-sub-body-bold"
+                    },
+                    {
+                      "text":" You are at liberty to show cause why this court should not “condone the delay”.",
+                      "style":"form-sub-body"
+                    }
+                  ]
+                }
+                
+              ],
+            [
+              {
+                "text": "Given under my hand and the seal of the Court, on this {{issueDate}}.",
+                "style": "form-sub-body",
+                "margin": [0, 10]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [0, 20]
+      },
+      {
+        "style": "closing-content",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [{ "text": "Signature" }],
+            [{ "text": "Address: {{courtAddress}}" }]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [0, 20, 0, 0]
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 150,
+                "height": 150,
+                "style": "qr-code",
+                "alignment": "center"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "text": [
+          {
+            "text": "Visit ",
+            "style": "footer-content-link"
+          },
+          {
+            "text": "{{courtUrl}}",
+            "decoration": "underline",
+            "color": "#A62121",
+            "style": "footer-content-link",
+            "link": "{{courtUrl}}"
+          },
+          {
+            "text": " for more information",
+            "style": "footer-content-link"
+          }
+        ],
+        "margin": [0, 8]
+      },
+      {
+        "style": "footer-content",
+        "text": "The process is system generated and transmitted in a secured manner by authorised user, as such a physical copy is not required.",
+        "color": "#A62121",
+        "margin": [0, 8]
+      },
+      {
+        "text": "Next Page",
+        "style": "footer-page",
+        "alignment": "right",
+        "fontSize": 11,
+        "absolutePosition": {
+          "x": 100,
+          "y": 680
+        }
+      },
+      {
+        "pageBreak": "before",
+        "style": "annexure-header",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "Annexure",
+                    "style": "annexure-header"
+                  }
+                ],
+                "alignment": "center",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "annexure-content",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "Please see below for further information about the private complaint against you ({{cmpNumber}}). You can also find this information and related documents on {{courtUrl}} (hereinafter referred to as “Portal”).",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": "1. How to Access Your Case Information and Documents",
+                "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "text": [
+                  {
+                    "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: ",
+                    "style": "annexure-content"
+                  },
+                  {
+                    "text": "{{accessCode}}.",
+                    "style": "annexure-content-bold"
+                  },
+                  {
+                    "text": " Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the complaint tab of the Portal.",
+                    "style": "annexure-content"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "text": "This notice is merely to give you an opportunity of being heard even before a case is admitted, to enable you to share your version of the events with the presiding judicial officer.",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": "2. What to do next if you wish to show cause to the court not to take cognisance of this case?",
+                "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "ul": [
+                  {
+                    "text": [
+                      {
+                        "text": "Confirm your representation: ",
+                        "color": "#000000",
+                        "bold": true
+                      },
+                      {
+                        "text": "You may hire a lawyer to represent yourself or appear as a party in person, which means you represent yourself in court proceedings. Please visit Kerala Bar Council website {{barCouncilUrl}} for a contact directory of lawyers.",
+                        "style": "annexure-content"
+                      }
+                    ]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Join the Case: ",
+                        "color": "#000000",
+                        "bold": true
+                      },
+                      {
+                        "text": "Log in to the Portal & enter the 6-digit code ",
+                        "style": "annexure-content"
+                      },
+                      {
+                        "text": "{{accessCode}},",
+                        "style": "annexure-content-bold"
+                      },
+                      {
+                        "text": " to access your case details. You can use your mobile number to register/login on the portal",
+                        "style": "annexure-content"
+                      }
+                    ]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Request a different hearing date: ",
+                        "color": "#000000",
+                        "bold": true
+                      },
+                      {
+                        "text": "If you cannot attend your hearing on ",
+                        "style": "annexure-content"
+                      },
+                      {
+                        "text": "{{hearingDate}},",
+                        "style": "annexure-content-bold"
+                      },
+                      {
+                        "text": " you can request a new date through the Portal.",
+                        "style": "annexure-content"
+                      }
+                    ]
+                  }
+                ],
+                "style": "annexure-sub-content"
+              }
+            ],
+            [
+              {
+                "text": "3. Options for Quicker Resolution of Your Case",
+                "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "ul": [
+                  {
+                    "text": "You may choose to settle the dispute with the complainant. This can be a quicker and simpler way of resolution. For this, you may approach the complainant directly, or you may sign up for a Lok Adalat/Mediation Session that is overseen by the court. ",
+                    "style": "annexure-text"
+                  },
+                  {
+                    "text": "If you choose to settle the dispute, you may inform the court after joining the case on the Portal on the intended day of hearing.",
+                    "style": "annexure-text"
+                  }
+                ],
+                "style": "annexure-sub-content"
+              }
+            ],
+            [
+              {
+                "text": "Need Help?",
+                "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "text": " If you have any questions or need help, please visit your nearest e-Sewa Kendra or contact {{courtContact}}",
+                "style": "annexure-content"
+              }
+            ],
+            [
+              {
+                "text": "Privacy notice:",
+                "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "text": [
+                  {
+                    "text": "The court gets a notification when you open and login through the above links. This information is only accessible to the Judiciary in accordance with this ",
+                    "style": "annexure-content"
+                  },
+                  {
+                    "text": "Privacy Policy",
+                    "color": "#0000FF",
+                    "decoration": "underline",
+                    "style": "annexure-content"
+                  },
+                  {
+                    "text": ".",
+                    "style": "annexure-content"
+                  }
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [0, 20, 0, 20]
+      }
+    ],
+    "styles": {
+      "form-header": {
+        "color": "#252525",
+        "fontFamily": "Roboto",
+        "letterSpacing": 0.5
+      },
+      "form-sub-header": {
+        "color": "#252525",
+        "fontFamily": "Roboto",
+        "alignment": "center",
+        "fontSize": 12,
+        "letterSpacing": 0.6,
+        "margin": [0, 5, 0, 0]
+      },
+      "form-body": {
+        "fontSize": 13,
+        "color": "#252525",
+        "margin": [-10, 5, -5, -5]
+      },
+      "form-sub-body": {
+        "fontSize": 13,
+        "alignment": "justify",
+        "color": "#252525"
+      },
+      "closing-content": {
+        "color": "#252525",
+        "fontSize": 13,
+        "margin": [5, 5, 5, 5]
+      },
+      "closing-text": {
+        "margin": [0, 5, 0, 0],
+        "bold": true,
+        "color": "#000000",
+        "alignment": "left"
+      },
+      "closing-seal": {
+        "margin": [-10, 5, -5, -5],
+        "color": "#000000",
+        "alignment": "left"
+      },
+      "closing-signature": {
+        "margin": [-10, 5, -5, -5],
+        "color": "#000000",
+        "alignment": "left"
+      },
+      "footer-content": {
+        "color": "#252525",
+        "fontSize": 12,
+        "margin": [5, 5, 5, 5],
+        "alignment": "justify"
+      },
+      "footer-body": {
+        "color": "#A62121",
+        "margin": [-10, 5, -5, -5]
+      },
+      "footer-text": {
+        "margin": [0, 5, 0, 0]
+      },
+      "footer-page": {
+        "margin": [0, 5, 0, 0]
+      },
+      "annexure-header": {
+        "color": "black",
+        "fontFamily": "Roboto",
+        "fontSize": 15,
+        "bold": true,
+        "letterSpacing": 0.5
+      },
+      "annexure-sub-header": {
+        "color": "black",
+        "fontFamily": "Roboto",
+        "alignment": "justify",
+        "fontSize": 13,
+        "bold": true,
+        "letterSpacing": 0.6,
+        "margin": [0, 5, 0, 0]
+      },
+      "annexure-content": {
+        "fontSize": 11,
+        "alignment": "justify",
+        "color": "#252525"
+      },
+      "annexure-sub-content": {
+        "margin": [20, 0, 0, 5]
+      },
+      "annexure-content-bold": {
+        "fontSize": 11,
+        "color": "#252525",
+        "bold": true
+      },
+      "form-sub-body-bold": {
+        "fontSize": 13,
+        "color": "#252525",
+        "bold": true
+      },
+      "footer-content-link": {
+        "color": "#252525",
+        "fontSize": 14,
+        "margin": [5, 5, 5, 5],
+        "alignment": "left"
+      }
+    }
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "key": "etreasury-receipt",
+  "config": {
+    "defaultStyle": {
+      "font": "Cambay"
+    },
+    "pageMargins": [
+      80,
+      40,
+      80,
+      40
+    ],
+    "content": [
+      {
+        "image": "{{logoImage}}",
+        "width": 61.25,
+        "height": 61.25,
+        "alignment": "center"
+      },
+      {
+        "stack": [
+          {
+            "text": "ECourts - Pay In Slip",
+            "style": "header",
+            "alignment": "center"
+          }
+        ],
+        "alignment": "center",
+        "margin": [
+          0,
+          10,
+          0,
+          0
+        ]
+      },
+      {
+        "table": {
+          "widths": ["*", "*"],
+          "body": [
+            [
+              {
+                "text": "GRN : {{grn}} ",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "Bank Reference No: {{bankRefNo}} ",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Transaction Details",
+        "style": "sectionHeader",
+        "margin": [
+          0,
+          20,
+          0,
+          10
+        ]
+      },
+      {
+        "table": {
+          "widths": ["*", "*"],
+          "body": [
+            [
+              {
+                "text": "Transaction Status:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{status}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Date:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{challanTimestamp}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Amount:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{amount}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Remittance Type:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "E Treasury payments",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Remarks:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{remarks}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Payer Details",
+        "style": "sectionHeader",
+        "margin": [
+          0,
+          20,
+          0,
+          10
+        ]
+      },
+      {
+        "table": {
+          "widths": ["*", "*"],
+          "body": [
+            [
+              {
+                "text": "Name:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{partyName}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Paid by:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{paidBy}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Phone No:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{mobileNumber}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Case Details",
+        "style": "sectionHeader",
+        "margin": [
+          0,
+          20,
+          0,
+          10
+        ]
+      },
+      {
+        "table": {
+          "widths": ["*", "*"],
+          "body": [
+            [
+              {
+                "text": "Case Type:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{caseType}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Case Name:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{caseName}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Case Number:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{caseNumber}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Purpose of Payment:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "{{purposeOfPayment}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "Payment Details",
+        "style": "sectionHeader",
+        "margin": [
+          0,
+          20,
+          0,
+          10
+        ]
+      },
+      {
+        "table": {
+          "widths": ["*", "*"],
+          "body": [
+            [
+              {
+                "text": "Court Fees:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "Rs. {{courtFee}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Fee for advocate welfare fund:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "Rs. {{advocateWelfareFund}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Fee for clerk welfare fund:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "Rs. {{clerkWelfareFund}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
+                "text": "Total",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "Rs. {{totalAmount}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 18,
+        "bold": true,
+        "margin": [
+          0,
+          0,
+          0,
+          20
+        ]
+      },
+      "subheader": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [
+          0,
+          10,
+          0,
+          5
+        ]
+      },
+      "sectionHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "margin": [
+          0,
+          20,
+          0,
+          10
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "key": "causelist",
+  "config": {
+    "content": [
+      {
+        "style": "tl-head",
+        "table": {
+          "widths": [
+            50,
+            "*",
+            100
+          ],
+          "body": [
+            [
+              {
+                "image": "{{logoImage}}",
+                "width": 75,
+                "height": 75,
+                "margin": [
+                  45,
+                  12,
+                  10,
+                  10
+                ]
+              },
+              {
+                "stack": [
+                  {
+                    "text": "Kollam District Court ",
+                    "style": "receipt-logo-header"
+                  },
+                  {
+                    "text": "Under High Court of Kerala",
+                    "style": "receipt-logo-sub-header"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [
+                  76,
+                  28,
+                  0,
+                  0
+                ]
+              },
+              {
+                "stack": [
+                  {
+                    "text": "",
+                    "style": "receipt-no",
+                    "bold": true
+                  },
+                  {
+                    "text": "",
+                    "style": "receipt-no",
+                    "bold": true
+                  }
+                ],
+                "alignment": "center",
+                "margin": [
+                  -50,
+                  30,
+                  0,
+                  2
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "text": "Cause List / Daily Board",
+        "style": "pt-reciept-citizen-subheader",
+        "alignment": "center"
+      },
+      {
+        "style": "pt-reciept-citizen-table",
+        "table": {
+          "headerRows": 1,
+          "widths": [
+            30,
+            "*",
+            "*",
+            "*",
+            "*"
+          ],
+          "body": [
+            "[{\"text\":\"S No.\",\"border\":[true,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"Case Number\",\"border\":[false,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"Type of Hearing\",\"border\":[false,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"Tentative Slot\",\"border\":[false,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"Party Names\",\"border\":[false,true,true,true],\"style\":\"receipt-table-key\"}]",
+            "{{#causeLists}}[{\"text\":\"{{index}}\",\"border\":[true,true,true,true],\"style\":\"receipt-table-key\"},{\"text\":\"{{caseId}}\",\"border\":[false,true,true,true]},{\"text\":\"{{typeOfHearing}}\",\"border\":[false,true,true,true]},{\"text\":\"{{tentativeSlot}}\",\"border\":[false,true,true,true]},{\"text\":\"{{caseTitle}}\",\"border\":[false,true,true,true]}]{{/causeLists}}"
+          ]
+        },
+        "layout": {}
+      }
+    ],
+    "styles": {
+      "tl-head": {
+        "fillColor": "white",
+        "margin": [
+          -41,
+          -41,
+          -41,
+          0
+        ]
+      },
+      "pt-reciept-citizen-header": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [
+          0,
+          8,
+          0,
+          0
+        ],
+        "color": "#484848"
+      },
+      "pt-reciept-citizen-subheader": {
+        "fontSize": 10,
+        "bold": true,
+        "margin": [
+          0,
+          16,
+          0,
+          8
+        ],
+        "color": "#484848"
+      },
+      "pt-reciept-citizen-table": {
+        "fontSize": 10,
+        "color": "#484848"
+      },
+      "receipt-table-key": {
+        "color": "#484848",
+        "bold": true
+      },
+      "receipt-logo-header": {
+        "color": "#484848",
+        "fontFamily": "Roboto",
+        "fontSize": 16,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+      "receipt-logo-sub-header": {
+        "color": "#484848",
+        "fontFamily": "Roboto",
+        "fontSize": 13,
+        "letterSpacing": 1.6,
+        "margin": [
+          0,
+          6,
+          0,
+          0
+        ]
+      },
+      "receipt-footer": {
+        "color": "#484848",
+        "fontSize": 8,
+        "margin": [
+          30,
+          -20,
+          0,
+          0
+        ]
+      },
+      "receipt-no": {
+        "color": "#484848",
+        "fontSize": 10
+      }
+    },
+    "footer": "(function(currentPage, pageCount) { return currentPage.toString() + ' of ' + pageCount; })"
+  }
+}

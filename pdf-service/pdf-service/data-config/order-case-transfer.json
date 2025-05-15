@@ -1,0 +1,135 @@
+{
+  "key": "order-case-transfer",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "place",
+                "value": {
+                  "path": "$.place"
+                }
+              },
+              {
+                "variable": "state",
+                "value": {
+                  "path": "$.state"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "applicationId",
+                "value": {
+                  "path": "$.applicationId"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "specifyCourtOrJurisdiction",
+                "value": {
+                  "path": "$.specifyCourtOrJurisdiction"
+                }
+              },
+              {
+                "variable": "groundsForTransfer",
+                "value": {
+                  "path": "$.groundsForTransfer"
+                }
+              },
+              {
+                "variable": "grantStatus",
+                "value": {
+                  "path": "$.grantStatus"
+                }
+              },
+              {
+                "variable": "reasonForRejection",
+                "value": {
+                  "path": "$.reasonForRejection"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "courtSeal",
+                "value": {
+                  "path": "$.courtSeal"
+                }
+              },
+              {
+                "variable": "orderHeading",
+                "value": {
+                  "path": "$.orderHeading"
+                }
+              },
+              {
+                "variable": "judgeDesignation",
+                "value": {
+                  "path": "$.judgeDesignation"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

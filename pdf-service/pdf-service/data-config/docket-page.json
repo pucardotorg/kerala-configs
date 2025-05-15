@@ -1,0 +1,70 @@
+{
+    "key": "docket-page",
+    "DataConfigs": {
+      "serviceName": "rainmaker-common",
+      "version": "1.0.0",
+      "baseKeyPath": "$.Data.*",
+      "entityIdPath": "$.id",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "topic": "common-pdf-generation-3",
+          "mappings": [
+            {
+              "direct": [
+                {
+                  "variable": "docketDateOfSubmission",
+                  "value": {
+                    "path": "$.docketDateOfSubmission"
+                  }
+                },
+                {
+                  "variable": "docketCourtName",
+                  "value": {
+                    "path": "$.docketCourtName"
+                  }
+                },
+                {
+                  "variable": "docketComplainantName",
+                  "value": {
+                    "path": "$.docketComplainantName"
+                  }
+                },
+                {
+                  "variable": "docketAccusedName",
+                  "value": {
+                    "path": "$.docketAccusedName"
+                  }
+                },
+                {
+                  "variable": "docketApplicationType",
+                  "value": {
+                    "path": "$.docketApplicationType"
+                  }
+                },
+                {
+                  "variable": "docketNameOfAdvocate",
+                  "value": {
+                    "path": "$.docketNameOfAdvocate"
+                  }
+                },
+                {
+                  "variable": "docketCounselFor",
+                  "value": {
+                    "path": "$.docketCounselFor"
+                  }
+                },
+                {
+                  "variable": "docketNameOfFiling",
+                  "value": {
+                    "path": "$.docketNameOfFiling"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
