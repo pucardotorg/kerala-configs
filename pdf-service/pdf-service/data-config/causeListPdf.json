@@ -1,0 +1,66 @@
+{
+  "key": "causelist-format",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.HearingList",
+    "entityIdPath": "$.*.slotName",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$[0].SlotList[0].judgeName"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "designation",
+                "value": {
+                  "path": "$[0].SlotList[0].judgeDesignation"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$[0].SlotList[0].CauseList[0].hearingDate"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "courtId",
+                "value": {
+                  "path": "$[0].SlotList[0].courtId"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "HearingList",
+                "value": {
+                  "path": "$"
+                },
+                "type": "index"
+              },
+              {
+                "variable": "nationalEmblem",
+                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/kerala_hc.png",
+                "type": "image"
+              },
+              {
+                "variable": "onCourtsLogo",
+                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/Crafting_ON_24x7_final.png",
+                "type": "image"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -97,6 +97,12 @@
                 }
               },
               {
+                "variable": "prayer",
+                "value": {
+                  "path": "$.prayer"
+                }
+              },
+              {
                 "variable": "additionalComments",
                 "value": {
                   "path": "$.additionalComments"
@@ -106,12 +112,6 @@
                 "variable": "grounds",
                 "value": {
                   "path": "$.grounds"
-                }
-              },
-              {
-                "variable": "reliefSought",
-                "value": {
-                  "path": "$.reliefSought"
                 }
               },
               {

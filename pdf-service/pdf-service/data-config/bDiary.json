@@ -1,0 +1,67 @@
+{
+  "key": "bDiary-format",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$",
+    "entityIdPath": "$.*.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "judgeId",
+                "value": {
+                  "path": "$.diary.judgeId"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.diary.date"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.diary.caseDiaryEntries[0].caseNumber"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                },
+                "type": "string"
+              },
+              {
+                "variable": "diaryEntries",
+                "value": {
+                  "path": "$.diary.caseDiaryEntries"
+                },
+                "type": "function",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              },
+              {
+                "variable": "nationalEmblem",
+                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/kerala_hc.png",
+                "type": "image"
+              },
+              {
+                "variable": "onCourtsLogo",
+                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/Crafting_ON_24x7_final.png",
+                "type": "image"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

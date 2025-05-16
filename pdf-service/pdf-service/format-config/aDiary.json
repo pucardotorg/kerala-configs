@@ -1,0 +1,232 @@
+{
+  "key": "aDiary-format",
+  "config": {
+    "pageSize": "A4",
+    "footer": "(function(currentPage, pageCount) { return currentPage === pageCount ? { text: 'Signature of Presiding Officer', alignment: 'left', margin: [40, 20, 40, 10] } : ''; })",
+    "content": [
+      {
+        "image": "{{onCourtsLogo}}",
+        "width": 66.5,
+        "height": 50,
+        "absolutePosition": {
+          "x": 0,
+          "y": 10
+        },
+        "alignment": "right"
+      },
+      {
+        "stack": [
+          {
+            "text" : "ജില്ലാ കോടതി കൊല്ലം",
+            "absolutePosition": {
+              "x": 90,
+              "y": 10
+            }
+          },
+          {
+            "text" : "District Court Kollam",
+            "absolutePosition": {
+              "x": 90,
+              "y": 30
+            }
+          }
+        ],
+        "style" : "judge-header"
+      },
+      {
+        "image": "{{nationalEmblem}}",
+        "width": 50,
+        "height": 50,
+        "absolutePosition": {
+          "x": 30,
+          "y": 10
+        }
+      },
+      {
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "In the {{courtName}}",
+                "alignment": "center",
+                "color": "black",
+                "style": "court-complex",
+                "border": [
+                  false,
+                  false,
+                  false,
+                  true
+                ]
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": [
+          {
+            "text": "In The Court of: {{judgeName}},{{courtName}}",
+            "style": "judge-header"
+          }
+        ],
+        "alignment": "center",
+        "style": "judge-margin"
+      },{
+        "text": "A DIARY DATED : {{date}}",
+        "alignment": "center",
+        "color": "black",
+        "style": "criminal-case-header"
+      },
+      {
+        "table": {
+          "widths": [
+            "10%",
+            "25%",
+            "45%",
+            "20%"
+          ],
+          "headerRows": 1,
+          "body": [
+            [
+              {
+                "text": "SI No.",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Case Type/Case Number/Case Year",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Proceedings/Business of the day",
+                "style": "table-header",
+                "alignment": "center"
+              },
+              {
+                "text": "Next Hearing Date",
+                "style": "table-header",
+                "alignment": "center"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "",
+        "{{#diaryEntries}}": true
+      },
+      {
+        "table": {
+          "widths": [
+            "10%",
+            "25%",
+            "45%",
+            "20%"
+          ],
+          "headerRows": 1,
+          "body": [
+            [
+              {
+                "text": "{{index}}",
+                "style": "table-data",
+                "alignment": "center"
+              },
+              {
+                "text": "{{#caseNumber}}{{caseNumber}}{{/caseNumber}}{{^caseNumber}}{{cmpNumber}}{{/caseNumber}}",
+                "style": "table-data",
+                "alignment": "center"
+              },
+              {
+                "text": "{{businessOfDay}}",
+                "style": "table-data",
+                "alignment": "center"
+              },
+              {
+                "text": "{{date}}",
+                "style": "table-data",
+                "alignment": "center"
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "text": "",
+        "{{/diaryEntries}}": true
+      }
+    ],
+    "styles": {
+      "judge-margin": {
+        "margin": [10, 10, 10, 20]
+      },
+      "judge-header": {
+        "fontSize": 14,
+        "bold": true,
+        "color": "black"
+      },
+      "judge-details": {
+        "fontSize": 14,
+        "bold": true,
+        "color": "orange"
+      },
+      "court-margin": {
+        "margin": [0, 0, 0, 15]
+      },
+      "court-header": {
+        "fontSize": 13,
+        "bold": true,
+        "color": "black"
+      },
+      "court-details": {
+        "fontSize": 13,
+        "bold": true,
+        "color": "black"
+      },
+      "criminal-case-header": {
+        "fontSize": 13,
+        "bold": true,
+        "color": "black",
+        "margin": [0, 0, 0, 15]
+      },
+      "court-complex": {
+        "fontSize": 13,
+        "bold": true,
+        "color": "black",
+        "margin": [
+          0,
+          50,
+          0,
+          30
+        ]
+      },
+      "table-header": {
+        "fontSize": 10,
+        "bold": true,
+        "color": "white",
+        "fillColor": "#088F8F",
+        "alignment": "center",
+        "margin": [
+          5,
+          5,
+          5,
+          5
+        ]
+      },
+      "table-data": {
+        "fontSize": 10,
+        "color": "black",
+        "alignment": "center",
+        "margin": [
+          5,
+          5,
+          5,
+          5
+        ]
+      }
+    }
+  }
+}

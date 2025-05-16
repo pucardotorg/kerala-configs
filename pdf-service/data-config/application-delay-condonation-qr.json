@@ -91,6 +91,12 @@
                 }
               },
               {
+                "variable": "prayer",
+                "value": {
+                  "path": "$.prayer"
+                }
+              },
+              {
                 "variable": "additionalComments",
                 "value": {
                   "path": "$.additionalComments"
