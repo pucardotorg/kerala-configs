@@ -123,9 +123,9 @@
                 "default":""
               },
               {
-                "variable":"clerkWelfareFund",
+                "variable":"advocateClerkWelfareFund",
                 "value":{
-                  "path":"$.clerkWelfareFund"
+                  "path":"$.advocateClerkWelfareFund"
                 },
                 "default":""
               },
