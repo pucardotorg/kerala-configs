@@ -38,7 +38,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
 
-        - query: INSERT INTO dristi_notification_document(id,fileStore,documentUid,documentType ,notification_id,additionalDetails) VALUES (?,?, ?,?,?,?);
+        - query: INSERT INTO dristi_notification_document(id,fileStore,documentUid,documentType ,notification_id,additionalDetails, isActive) VALUES (?,?, ?,?,?,?, ?);
           basePath: $.notification.documents.*
           jsonMaps:
             - jsonPath: $.notification.documents.*.id
@@ -49,6 +49,7 @@ serviceMaps:
             - jsonPath: $.notification.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.notification.documents.*.isActive
     - version: 1.0
       description: Update notification details in table
       fromTopic: update-notification
@@ -68,7 +69,7 @@ serviceMaps:
             - jsonPath: $.notification.auditDetails.lastModifiedTime
             - jsonPath: $.notification.id
 
-        - query: INSERT INTO dristi_notification_document(id,fileStore,documentUid,documentType ,notification_id,additionalDetails) VALUES (?,?, ?,?,?,?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore,documentUid = EXCLUDED.documentUid,documentType = EXCLUDED.documentType,additionalDetails = EXCLUDED.additionalDetails;;
+        - query: INSERT INTO dristi_notification_document(id,fileStore,documentUid,documentType ,notification_id,additionalDetails, isActive) VALUES (?,?, ?,?,?,?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore,documentUid = EXCLUDED.documentUid,documentType = EXCLUDED.documentType,additionalDetails = EXCLUDED.additionalDetails, isActive = EXCLUDED.isActive;
           basePath: $.notification.documents.*
           jsonMaps:
             - jsonPath: $.notification.documents.*.id
@@ -79,3 +80,4 @@ serviceMaps:
             - jsonPath: $.notification.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.notification.documents.*.isActive

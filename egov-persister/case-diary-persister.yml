@@ -12,7 +12,7 @@ serviceMaps:
       transactionCodeJsonPath: $.caseNumber
       auditAttributeBasePath: diaryEntry
       queryMaps:
-        - query: INSERT INTO dristi_diaryentries(id,tenant_id,case_number,entry_date,businessOfDay,judge_id,reference_id,reference_type,hearingDate,additional_details,case_id,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+        - query: INSERT INTO dristi_diaryentries(id,tenant_id,case_number,entry_date,businessOfDay,court_id,reference_id,reference_type,hearingDate,additional_details,case_id,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
           basePath: diaryEntry
           jsonMaps:
             - jsonPath: $.diaryEntry.id
@@ -20,7 +20,7 @@ serviceMaps:
             - jsonPath: $.diaryEntry.caseNumber
             - jsonPath: $.diaryEntry.entryDate
             - jsonPath: $.diaryEntry.businessOfDay
-            - jsonPath: $.diaryEntry.judgeId
+            - jsonPath: $.diaryEntry.courtId
             - jsonPath: $.diaryEntry.referenceId
             - jsonPath: $.diaryEntry.referenceType
             - jsonPath: $.diaryEntry.hearingDate
@@ -43,14 +43,14 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: diaryEntry
       queryMaps:
-        - query: UPDATE dristi_diaryentries SET tenant_id=?,case_number=?,entry_date=?,businessOfDay=?,judge_id=?,reference_id=?,reference_type=?,hearingDate=?,additional_details=?,last_modified_by=?,last_modified_time=? where id=?;
+        - query: UPDATE dristi_diaryentries SET tenant_id=?,case_number=?,entry_date=?,businessOfDay=?,court_id=?,reference_id=?,reference_type=?,hearingDate=?,additional_details=?,last_modified_by=?,last_modified_time=? where id=?;
           basePath: diaryEntry
           jsonMaps:
             - jsonPath: $.diaryEntry.tenantId
             - jsonPath: $.diaryEntry.caseNumber
             - jsonPath: $.diaryEntry.entryDate
             - jsonPath: $.diaryEntry.businessOfDay
-            - jsonPath: $.diaryEntry.judgeId
+            - jsonPath: $.diaryEntry.courtId
             - jsonPath: $.diaryEntry.referenceId
             - jsonPath: $.diaryEntry.referenceType
             - jsonPath: $.diaryEntry.hearingDate
@@ -72,14 +72,14 @@ serviceMaps:
       transactionCodeJsonPath: $.caseNumber
       auditAttributeBasePath: diary
       queryMaps:
-        - query: INSERT INTO dristi_casediary (tenant_id,case_number,diary_date,diary_type,judge_id,additional_details,created_by,last_modified_by,created_time,last_modified_time,id) VALUES (?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET additional_details = EXCLUDED.additional_details,last_modified_time = EXCLUDED.last_modified_time,last_modified_by = EXCLUDED.last_modified_by;
+        - query: INSERT INTO dristi_casediary (tenant_id,case_number,diary_date,diary_type,court_id,additional_details,created_by,last_modified_by,created_time,last_modified_time,id) VALUES (?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET additional_details = EXCLUDED.additional_details,last_modified_time = EXCLUDED.last_modified_time,last_modified_by = EXCLUDED.last_modified_by;
           basePath: diary
           jsonMaps:
             - jsonPath: $.diary.tenantId
             - jsonPath: $.diary.caseNumber
             - jsonPath: $.diary.diaryDate
             - jsonPath: $.diary.diaryType
-            - jsonPath: $.diary.judgeId
+            - jsonPath: $.diary.courtId
             - jsonPath: $.diary.additionalDetails
               type: JSON
               dbType: JSONB
