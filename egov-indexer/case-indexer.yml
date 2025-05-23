@@ -376,33 +376,7 @@ ServiceMaps:
           isBulk: true
           jsonPath: $.criteria[0].responseList
           timeStampField: $.auditDetails.createdTime
-          customJsonMapping:
-            indexMapping:
-              {
-                "caseNumber": "",
-                "caseTitle": "",
-                "stage": "",
-                "substage": "",
-                "judgementDateTime": null,
-                "outcome": "",
-                "remarks": "",
-                "filingDateTime": null,
-                "status": "",
-                "courtId": "",
-                "registrationDateTime": null,
-                "filingNumber": "",
-                "sections": {},
-                "subsections": {},
-                "courtCaseNumber": "",
-                "cnrNumber": "",
-                "cmpNumber": "",
-                "petitionerName": {},
-                "petitionerDateOfBirth": "",
-                "petitionerAddress": {},
-                "@timestamp":""
-              }
-
-            fieldMapping:
+          fieldMapping:
               - inJsonPath: $.caseNumber
                 outJsonPath: $.caseNumber
               - inJsonPath: $.caseTitle
@@ -440,7 +414,7 @@ ServiceMaps:
               - inJsonPath: $.@timestamp
                 outJsonPath: $.@timestamp
 
-            externalUriMapping:
+          externalUriMapping:
               - path: http://individual.egov:8080/individual/v1/_search?limit=1&offset=0&tenantId=kl
                 apiRequest: {
                   "Individual": {
