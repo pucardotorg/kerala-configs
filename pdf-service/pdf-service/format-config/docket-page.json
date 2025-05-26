@@ -1,0 +1,93 @@
+{
+  "key": "docket-page",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "PRESENTED ON {{docketDateOfSubmission}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{docketCourtName}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "",
+                    "style": "whiteSpace1"
+                  },
+                  {
+                    "text": "COMPLAINANT: {{docketComplainantName}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "VS.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "ACCUSED: {{docketAccusedName}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "",
+                    "style": "whiteSpace2"
+                  },
+                  {
+                    "text": "{{docketApplicationType}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "",
+                    "style": "whiteSpace3"
+                  },
+                  {
+                    "text": "{{docketNameOfAdvocate}}:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "COUNSEL FOR THE {{docketCounselFor}} - {{docketNameOfFiling}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "",
+                    "style": "whiteSpace3"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 20, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "bodyText": {
+        "fontSize": 15,
+        "alignment": "right",
+        "margin": [0, 15, 0, 0]
+      },
+      "whiteSpace1": {
+        "fontSize": 16,
+        "alignment": "right",
+        "margin": [0, 40, 0, 40]
+      },
+      "whiteSpace2": {
+        "fontSize": 16,
+        "alignment": "right",
+        "margin": [0, 15, 0, 15]
+      },
+      "whiteSpace3": {
+        "fontSize": 16,
+        "alignment": "right",
+        "margin": [0, 70, 0, 70]
+      }
+    }
+  }
+}

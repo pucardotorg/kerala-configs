@@ -100,7 +100,8 @@
                   },
                   {
                     "text": "{{advocateSignature}}",
-                    "style": "signature"
+                    "style": "signature",
+                    "margin": [0, 60, 0, 5]
                   },
                   {
                     "text": "{{advocateName}}",

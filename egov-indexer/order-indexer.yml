@@ -18,6 +18,8 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.id
               - inJsonPath: $.tenantId
                 outJsonPath: $.Data.orderDetails.tenantId
+              - inJsonPath: $.courtId
+                outJsonPath: $.Data.orderDetails.courtId
               - inJsonPath: $.applicationNumber
                 outJsonPath: $.Data.orderDetails.applicationNumber
               - inJsonPath: $.orderType
@@ -93,6 +95,8 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.id
               - inJsonPath: $.tenantId
                 outJsonPath: $.Data.orderDetails.tenantId
+              - inJsonPath: $.courtId
+                outJsonPath: $.Data.orderDetails.courtId
               - inJsonPath: $.applicationNumber
                 outJsonPath: $.Data.orderDetails.applicationNumber
               - inJsonPath: $.filingNumber

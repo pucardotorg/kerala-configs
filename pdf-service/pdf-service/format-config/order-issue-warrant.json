@@ -1,0 +1,155 @@
+{
+  "key": "order-issue-warrant",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "{{orderHeading}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{caseName}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{caseNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "ORDER",
+                    "style": "orderTitle"
+                  },
+                  {
+                    "text": "Issue of Warrant",
+                    "style": "orderName"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has reviewed the evidence and arguments presented by the complainants in the case {{caseName}}, Case Number {{caseNumber}}; and",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "WHEREAS, the Court has determined that sufficient grounds exist for the issuance of a warrant for {{reasonForWarrant}}; and",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "NOW, THEREFORE, IT IS HEREBY ORDERED that:",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "A warrant for the {{reasonForWarrant}} of  {{personName}}  is hereby ISSUED.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The law enforcement authorities are directed to execute the warrant in accordance with the law and report back to the Court",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The warrant shall be executed with due respect to the rights of the individuals involved and any property that may be affected.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "All necessary precautions and measures shall be taken to ensure that the execution of the warrant does not result in unnecessary harm or damage.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "The  Court retains jurisdiction to review the execution of the warrant and to issue further orders as necessary.",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{additionalComments}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "IT IS SO ORDERED.",
+                    "style": "orderText"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeDesignation}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "caseName": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "caseNumber": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderTitle": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "orderName": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 20]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "contentText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [0, 10, 0, 20]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 0]
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
+      }
+    }
+  }
+}

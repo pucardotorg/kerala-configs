@@ -1,0 +1,119 @@
+{
+  "key": "dca-notice",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.summonsPdf",
+    "entityIdPath": "$.cmpNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "cmpNumber",
+                "value": {
+                  "path": "$.cmpNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "filingNumber",
+                "value": {
+                  "path": "$.filingNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.complainantName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "respondentName",
+                "value": {
+                  "path": "$.respondentName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "complainantAddress",
+                "value": {
+                  "path": "$.complainantAddress",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "respondentAddress",
+                "value": {
+                  "path": "$.respondentAddress",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "hearingDate",
+                "value": {
+                  "path": "$.hearingDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "issueDate",
+                "value": {
+                  "path": "$.issueDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtAddress",
+                "value": {
+                  "path": "$.courtAddress",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtUrl",
+                "value": {
+                  "path": "$.courtUrl",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "accessCode",
+                "value": {
+                  "path": "$.accessCode",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtContact",
+                "value": {
+                  "path": "$.courtContact",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "barCouncilUrl",
+                "value": {
+                  "path": "$.barCouncilUrl",
+                  "defaultValue": "NA"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

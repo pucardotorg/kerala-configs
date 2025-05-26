@@ -14,7 +14,7 @@
             "direct": [
               {
                 "variable": "logoImage",
-                "url": "https://pucarsolutionsfsdev.blob.core.windows.net/pucar-solutions-filestore/kl/solutions-assets/kerala_hc.png",
+                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/kerala_hc.png",
                 "type": "image"
               },
               {
@@ -123,9 +123,9 @@
                 "default":""
               },
               {
-                "variable":"clerkWelfareFund",
+                "variable":"advocateClerkWelfareFund",
                 "value":{
-                  "path":"$.clerkWelfareFund"
+                  "path":"$.advocateClerkWelfareFund"
                 },
                 "default":""
               },

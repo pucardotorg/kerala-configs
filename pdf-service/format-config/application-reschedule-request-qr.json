@@ -45,6 +45,10 @@
                     "text": "I respectfully request the Court's consideration to reschedule the hearing date. Thank you for considering this request. I remain available to provide any further information or clarification that the Court may require.",
                     "style": "bodyText"
                   },
+                  {
+                    "text": "Prayer: {{prayer}}",
+                    "style": "bodyText"
+                  },
                   "{{#additionalComments}}",
                   {
                     "text": "{{additionalComments}}",
@@ -53,7 +57,8 @@
                   "{{/additionalComments}}",
                   {
                     "text": "{{advocateSignature}}",
-                    "style": "signature"
+                    "style": "signature",
+                    "margin": [0, 60, 0, 5]
                   },
                   {
                     "text": "{{advocateName}}",

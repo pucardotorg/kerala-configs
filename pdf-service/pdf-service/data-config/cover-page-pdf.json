@@ -1,0 +1,46 @@
+{
+    "key": "cover-page-pdf",
+    "DataConfigs": {
+      "serviceName": "rainmaker-common",
+      "version": "1.0.0",
+      "baseKeyPath": "$.Data.*",
+      "entityIdPath": "$.id",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "topic": "common-pdf-generation-3",
+          "mappings": [
+            {
+              "direct": [
+                {
+                  "variable": "coverCaseType",
+                  "value": {
+                    "path": "$.coverCaseType"
+                  }
+                },
+                {
+                  "variable": "coverCaseNumber",
+                  "value": {
+                    "path": "$.coverCaseNumber"
+                  }
+                },
+                {
+                  "variable": "coverYear",
+                  "value": {
+                    "path": "$.coverYear"
+                  }
+                },
+                {
+                  "variable": "coverCaseName",
+                  "value": {
+                    "path": "$.coverCaseName"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
