@@ -16,7 +16,7 @@ serviceMaps:
 
             - jsonPath: $.CauseList.*.filingNumber
 
-            - jsonPath: $.CauseList.*.applicationNumber
+            - jsonPath: $.CauseList.*.applicationNumbers
               type: json
               dbType: jsonb
 
