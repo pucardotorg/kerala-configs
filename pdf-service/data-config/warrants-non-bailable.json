@@ -20,13 +20,6 @@
                 }
               },
               {
-                "variable": "hearingDate",
-                "value": {
-                  "path": "$.hearingDate",
-                  "defaultValue": "NA"
-                }
-              },
-              {
                 "variable": "respondentName",
                 "value": {
                   "path": "$.respondentName",
