@@ -39,3 +39,11 @@ ServiceMaps:
                 outJsonPath: $.Data.hearingDetails.subStage
               - inJsonPath: $.courtId
                 outJsonPath: $.Data.hearingDetails.courtId
+              - inJsonPath: $.advocate
+                outJsonPath: $.Data.hearingDetails.advocate
+              - inJsonPath: $.searchableFields
+                outJsonPath: $.Data.hearingDetails.searchableFields
+              - inJsonPath: $.hearingType
+                outJsonPath: $.Data.hearingDetails.hearingType
+              - inJsonPath: $.caseFilingDate
+                outJsonPath: $.Data.hearingDetails.caseFilingDate
