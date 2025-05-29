@@ -9,6 +9,7 @@ ServiceMaps:
           type: general
           id: $.hearingUuid
           isBulk: false
+          timeStampField: $.fromDate
           jsonPath: $
           customJsonMapping: 
             indexMapping: {"Data":{"hearingDetails":{}}}
