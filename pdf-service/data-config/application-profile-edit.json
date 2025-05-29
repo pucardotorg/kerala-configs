@@ -221,6 +221,24 @@
                 "value": {
                   "path": "$.reasonForEditing"
                 }
+              },
+              {
+                "variable": "isEntity",
+                "value": {
+                  "path": "$.isEntity"
+                }
+              },
+              {
+                "variable": "currentCompanyName",
+                "value": {
+                  "path": "$.currentCompanyName"
+                }
+              },
+              {
+                "variable": "currentEntityType",
+                "value": {
+                  "path": "$.currentEntityType"
+                }
               }
             ]
           }
