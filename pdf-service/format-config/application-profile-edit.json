@@ -85,6 +85,16 @@
                     "text": "{{currentResedentialAddress}}",
                     "style": "bodyText"
                   },
+                  "{{#isEntity}}",
+                  {
+                    "text": " Company Name: {{currentCompanyName}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": " Entity Type: {{currentEntityType}}",
+                    "style": "bodyText"
+                  },
+                  "{{/isEntity}}",
                   {
                     "text": "New Details: ",
                     "style": "subTitle"
@@ -130,15 +140,15 @@
                     ]
                   },
                   {
-                    "text": "{{prayer}}",
-                    "style": "bodyText"
-                  },
-                  {
                     "text": "The Applicant assures and undertakes to the Hon'ble Court that this request is made in good faith and will not prejudice the other party.",
                     "style": "bodyText"
                   },
                   {
                     "text": "Therefore, the Applicant humbly requests the Hon'ble Court to consider this application and grant permission to edit the aforementioned case details.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{prayer}}",
                     "style": "bodyText"
                   },
                   {
