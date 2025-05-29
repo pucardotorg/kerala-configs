@@ -29,7 +29,7 @@
                     "style": "reference"
                   },
                   {
-                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE OF {{judgeName}}",
+                    "text": "IN THE {{courtName}}",
                     "style": "form-sub-header"
                   },
                   {
