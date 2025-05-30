@@ -11,7 +11,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: hearing
       queryMaps:
-        - query: INSERT INTO dristi_hearing(id,tenantId,hearingId,filingNumber,cnrNumbers,applicationNumbers,hearingType,caseReferenceNumber,courtCaseNumber,cmpNumber,status,startTime,endTime,presidedBy,attendees,transcript,vcLink,isActive,additionalDetails,notes,createdBy,lastModifiedBy,createdTime,lastModifiedTime) VALUES (?, ?, ?, ?,?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_hearing(id,tenantId,hearingId,filingNumber,cnrNumbers,applicationNumbers,hearingType,caseReferenceNumber,courtCaseNumber,cmpNumber,status,startTime,endTime,hearingSummary,presidedBy,attendees,transcript,vcLink,isActive,additionalDetails,notes,createdBy,lastModifiedBy,createdTime,lastModifiedTime) VALUES (?, ?, ?, ?,?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: hearing
           jsonMaps:
             - jsonPath: $.hearing.id
@@ -33,6 +33,7 @@ serviceMaps:
             - jsonPath: $.hearing.status
             - jsonPath: $.hearing.startTime
             - jsonPath: $.hearing.endTime
+            - jsonPath: $.hearing.hearingSummary
             - jsonPath: $.hearing.presidedBy
               type: JSON
               dbType: JSONB
@@ -76,7 +77,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: hearing
       queryMaps:
-        - query: UPDATE dristi_hearing SET hearingType = ?, status = ?,cmpNumber=?, courtCaseNumber=?, caseReferenceNumber=?,  startTime = ?, endTime = ?,presidedBy=?, attendees = ?, transcript = ?, vcLink = ?, isActive = ?, additionalDetails = ?, notes = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE id = ?;
+        - query: UPDATE dristi_hearing SET hearingType = ?, status = ?,cmpNumber=?, courtCaseNumber=?, caseReferenceNumber=?,  startTime = ?, endTime = ? , hearingSummary = ? ,presidedBy=?, attendees = ?, transcript = ?, vcLink = ?, isActive = ?, additionalDetails = ?, notes = ?, lastModifiedBy = ?, lastModifiedTime = ? WHERE id = ?;
           basePath: hearing
           jsonMaps:
             - jsonPath: $.hearing.hearingType
@@ -86,6 +87,7 @@ serviceMaps:
             - jsonPath: $.hearing.caseReferenceNumber
             - jsonPath: $.hearing.startTime
             - jsonPath: $.hearing.endTime
+            - jsonPath: $.hearing.hearingSummary
             - jsonPath: $.hearing.presidedBy
               type: JSON
               dbType: JSONB
