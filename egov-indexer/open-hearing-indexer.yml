@@ -48,3 +48,7 @@ ServiceMaps:
                 outJsonPath: $.Data.hearingDetails.hearingType
               - inJsonPath: $.caseFilingDate
                 outJsonPath: $.Data.hearingDetails.caseFilingDate
+              - inJsonPath: $.statusOrder
+                outJsonPath: $.Data.hearingDetails.statusOrder
+              - inJsonPath: $.hearingTypeOrder
+                outJsonPath: $.Data.hearingDetails.hearingTypeOrder
