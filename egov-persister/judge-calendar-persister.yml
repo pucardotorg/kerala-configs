@@ -11,37 +11,28 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: JudgeCalendarRule.*
       queryMaps:
-        - query: INSERT INTO judge_calendar_rules (judge_id, id, rule_type, date, notes, created_by, last_modified_by, created_time, last_modified_time, row_version, tenant_id) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?) ON CONFLICT (judge_id, date) DO UPDATE SET rule_type = ?, notes = ? ,last_modified_by =?, last_modified_time =? ,row_version =judge_calendar_rules.row_version +1 ,tenant_id =?;
+        - query: INSERT INTO judge_calendar_rules (judge_id, id, rule_type, date, notes, created_by, last_modified_by, created_time, last_modified_time, row_version, tenant_id,court_ids) VALUES (? ,? ,? ,? ,? ,? ,? ,? ,? ,? ,?,?) ON CONFLICT (judge_id, date) DO UPDATE SET rule_type = ?, notes = ? ,last_modified_by =?, last_modified_time =? ,row_version =judge_calendar_rules.row_version +1 ,tenant_id =?, court_ids =?;
           basePath: JudgeCalendarRule.*
           jsonMaps:
             - jsonPath: $.JudgeCalendarRule.*.judgeId
-
             - jsonPath: $.JudgeCalendarRule.*.id
-
             - jsonPath: $.JudgeCalendarRule.*.ruleType
-
             - jsonPath: $.JudgeCalendarRule.*.date
-
             - jsonPath: $.JudgeCalendarRule.*.notes
-
             - jsonPath: $.JudgeCalendarRule.*.auditDetails.createdBy
-
             - jsonPath: $.JudgeCalendarRule.*.auditDetails.lastModifiedBy
-
             - jsonPath: $.JudgeCalendarRule.*.auditDetails.createdTime
-
             - jsonPath: $.JudgeCalendarRule.*.auditDetails.lastModifiedTime
-
             - jsonPath: $.JudgeCalendarRule.*.rowVersion
-
             - jsonPath: $.JudgeCalendarRule.*.tenantId
-
+            - jsonPath: $.JudgeCalendarRule.*.courtIds
+              type: JSON
+              dbType: JSONB
             - jsonPath: $.JudgeCalendarRule.*.ruleType
-
             - jsonPath: $.JudgeCalendarRule.*.notes
-
             - jsonPath: $.JudgeCalendarRule.*.auditDetails.lastModifiedBy
-
             - jsonPath: $.JudgeCalendarRule.*.auditDetails.lastModifiedTime
-
             - jsonPath: $.JudgeCalendarRule.*.tenantId
+            - jsonPath: $.JudgeCalendarRule.*.courtIds
+              type: JSON
+              dbType: JSONB
