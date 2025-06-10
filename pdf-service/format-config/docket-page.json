@@ -56,6 +56,11 @@
                   {
                     "text": "",
                     "style": "whiteSpace3"
+                  },
+                  {
+                    "text": "{{documentPath}}",
+                    "alignment": "right",
+                    "margin": [0, 30, 0, 0]
                   }
                 ],
                 "alignment": "left",

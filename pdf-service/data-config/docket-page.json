@@ -59,6 +59,12 @@
                   "value": {
                     "path": "$.docketNameOfFiling"
                   }
+                },
+                 {
+                  "variable": "documentPath",
+                  "value": {
+                    "path": "$.documentPath"
+                  }
                 }
               ]
             }
