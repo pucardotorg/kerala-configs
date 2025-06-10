@@ -141,3 +141,5 @@ ServiceMaps:
                     outJsonPath: $.filingDateTime
                   - inJsonPath: $.criteria[0].responseList[0].registrationDateTime
                     outJsonPath: $.registrationDateTime
+
+

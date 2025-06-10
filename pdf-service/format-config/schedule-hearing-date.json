@@ -69,6 +69,14 @@
                   },
                   "{{/additionalComments}}",
                   {
+                    "text": "Transcript of Previous Hearing, if available:",
+                    "style": "additionalComments"
+                  },
+                  {
+                    "text": "{{hearingSummary}}",
+                    "style": "additionalComments"
+                  },
+                  {
                     "text": "IT IS SO ORDERED.",
                     "style": "orderText"
                   },

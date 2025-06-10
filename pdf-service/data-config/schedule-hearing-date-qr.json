@@ -79,6 +79,12 @@
                 }
               },
               {
+                "variable": "hearingSummary",
+                "value": {
+                  "path": "$.hearingSummary"
+                }
+              },
+              {
                 "variable": "judgeSignature",
                 "value": {
                   "path": "$.judgeSignature"
