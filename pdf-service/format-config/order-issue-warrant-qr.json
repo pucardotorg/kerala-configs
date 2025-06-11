@@ -49,6 +49,12 @@
                     "text": "A warrant for the {{reasonForWarrant}} of  {{personName}}  is hereby ISSUED.",
                     "style": "contentText"
                   },
+                  "{{#isTemplateType}}",
+                  {
+                    "text": "A bailable warrant with the bail amount of {{bailAmount}} and {{noOfSurety}} sureties",
+                    "style": "bodyText"
+                  },
+                  "{{/isTemplateType}}",
                   {
                     "text": "The law enforcement authorities are directed to execute the warrant in accordance with the law and report back to the Court",
                     "style": "contentText"

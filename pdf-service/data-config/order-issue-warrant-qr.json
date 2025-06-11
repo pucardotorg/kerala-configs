@@ -83,6 +83,30 @@
                 "value": {
                   "path": "$.qrCodeUrl"
                 }
+              },
+              {
+                "variable": "isTemplateType",
+                "value": {
+                  "path": "$.isTemplateType"
+                }
+              },
+              {
+                "variable": "isTemplateType",
+                "value": {
+                  "path": "$.isTemplateType"
+                }
+              },
+              {
+                "variable": "bailAmount",
+                "value": {
+                  "path": "$.bailAmount"
+                }
+              },
+              {
+                "variable": "noOfSurety",
+                "value": {
+                  "path": "$.noOfSurety"
+                }
               }
             ]
           },
