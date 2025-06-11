@@ -52,3 +52,5 @@ ServiceMaps:
                 outJsonPath: $.Data.hearingDetails.statusOrder
               - inJsonPath: $.hearingTypeOrder
                 outJsonPath: $.Data.hearingDetails.hearingTypeOrder
+              - inJsonPath: $.hearingDurationInMillis
+                outJsonPath: $.Data.hearingDetails.hearingDurationInMillis
