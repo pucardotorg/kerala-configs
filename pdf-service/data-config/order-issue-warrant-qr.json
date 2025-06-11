@@ -91,12 +91,6 @@
                 }
               },
               {
-                "variable": "isTemplateType",
-                "value": {
-                  "path": "$.isTemplateType"
-                }
-              },
-              {
                 "variable": "bailAmount",
                 "value": {
                   "path": "$.bailAmount"
