@@ -77,6 +77,24 @@
                 "value": {
                   "path": "$.judgeDesignation"
                 }
+              },
+              {
+                "variable": "isTemplateType",
+                "value": {
+                  "path": "$.isTemplateType"
+                }
+              },
+              {
+                "variable": "bailAmount",
+                "value": {
+                  "path": "$.bailAmount"
+                }
+              },
+              {
+                "variable": "noOfSurety",
+                "value": {
+                  "path": "$.noOfSurety"
+                }
               }
             ]
           }
