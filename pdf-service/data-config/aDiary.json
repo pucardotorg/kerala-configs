@@ -43,12 +43,12 @@
               },
               {
                 "variable": "nationalEmblem",
-                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/17bba4d1a5b09a0840e516227bbe9364.png",
+                "url": "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=626816f6-0050-447a-ae8d-e1ed351263be",
                 "type": "image"
               },
               {
                 "variable": "onCourtsLogo",
-                "url": "https://pucarfilestoreuat.blob.core.windows.net/pucar-filestore/pucar-assets/Crafting_ON_24x7_final.png",
+                "url": "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=cfab6a6e-8e7c-40cd-970b-733da79807e5",
                 "type": "image"
               }
             ]
