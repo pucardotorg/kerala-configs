@@ -46,7 +46,7 @@
                     "style": "whiteSpace3"
                   },
                   {
-                    "text": "{{docketNameOfAdvocate}}:",
+                    "text": "{{docketNameOfAdvocate}}",
                     "style": "bodyText"
                   },
                   {
