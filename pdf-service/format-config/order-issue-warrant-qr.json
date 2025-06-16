@@ -46,7 +46,7 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "A warrant for the {{reasonForWarrant}} of  {{personName}}  is hereby ISSUED.",
+                    "text": "A {{isBailable}} {{reasonForWarrant}} of  {{personName}}  is hereby ISSUED.",
                     "style": "contentText"
                   },
                   "{{#isTemplateType}}",
