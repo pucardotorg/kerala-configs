@@ -46,11 +46,11 @@
                     "style": "whiteSpace3"
                   },
                   {
-                    "text": "{{docketNameOfAdvocate}}",
+                    "text": "{{docketNameOfFiling}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "COUNSEL FOR THE {{docketCounselFor}} - {{docketNameOfFiling}}",
+                    "text": "{{docketCounselFor}}",
                     "style": "bodyText"
                   },
                   {
