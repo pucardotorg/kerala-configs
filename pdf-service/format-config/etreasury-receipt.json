@@ -331,6 +331,20 @@
             ],
             [
               {
+                "text": "Legal Benefit Fund:",
+                "bold": true,
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5]
+              },
+              {
+                "text": "Rs. {{legalBenefitFee}}",
+                "border": [true, true, true, true],
+                "margin": [0, 5, 0, 5],
+                "alignment": "left"
+              }
+            ],
+            [
+              {
                 "text": "Total",
                 "bold": true,
                 "border": [true, true, true, true],
