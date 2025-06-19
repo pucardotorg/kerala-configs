@@ -50,3 +50,5 @@ ServiceMaps:
                 outJsonPath: $.Data.orderNotification.caseTitle
               - inJsonPath: $.caseSTNumber
                 outJsonPath: $.Data.orderNotification.caseSTNumber
+              - inJsonPath: $.businessOfTheDay
+                outJsonPath: $.Data.orderNotification.businessOfTheDay
