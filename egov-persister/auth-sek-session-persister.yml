@@ -56,22 +56,10 @@ serviceMaps:
       objecIdJsonPath: $.consumerCode
       tenantIdJsonPath: $.tenantId
       queryMaps:
-        - query: >
-            INSERT INTO treasury_head_breakup_data 
-            (consumer_code, head_mapping, calculation, tenant_id, createdtime)
-            VALUES (?, ?, ?, ?, ?)
-            ON CONFLICT (consumer_code)
-            DO UPDATE SET 
-              head_mapping = EXCLUDED.head_mapping,
-              calculation = EXCLUDED.calculation,
-              tenant_id = EXCLUDED.tenant_id,
-              createdtime = EXCLUDED.createdtime,
-              lastmodifiedtime= EXCLUDED.lastmodifiedtime,
-              reSubmissionBreakDown = EXCLUDED.reSubmissionBreakDown,
-              lastSubmissionConsumerCode = EXCLUDED.lastSubmissionConsumerCode
+        - query: INSERT INTO treasury_head_breakup_data (consumer_code, head_mapping, calculation, tenant_id, createdtime) VALUES (?, ?, ?, ?, ?);
           basePath: $
           jsonMaps:
-            - jsonPath: $.consumerCodes
+            - jsonPath: $.consumerCode
             - jsonPath: $.headAmountMapping
               type: JSON
               dbType: JSONB
@@ -80,8 +68,25 @@ serviceMaps:
               dbType: JSONB
             - jsonPath: $.tenantId
             - jsonPath: $.createdTime
-            - jsonPath: $.lastmodifiedtime
+
+    - version: 1.0
+      description: Update Treasury head breakup mapping
+      fromTopic: update-treasury-mapping
+      objecIdJsonPath: $.consumerCode
+      tenantIdJsonPath: $.tenantId
+      queryMaps:
+        - query: UPDATE treasury_head_breakup_data SET head_mapping=?, calculation=?, lastmodifiedtime=?, resubmissionbreakdown=?, lastsubmissionconsumercode=? WHERE consumer_code = ?;
+          basePath: $
+          jsonMaps:
+            - jsonPath: $.headAmountMapping
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.calculation
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.lastModifiedTime
             - jsonPath: $.reSubmissionBreakDown
               type: JSON
               dbType: JSONB
             - jsonPath: $.lastSubmissionConsumerCode
+            - jsonPath: $.consumerCode
