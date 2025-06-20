@@ -46,16 +46,21 @@
                     "style": "whiteSpace3"
                   },
                   {
-                    "text": "{{docketNameOfAdvocate}}:",
+                    "text": "{{docketNameOfFiling}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "COUNSEL FOR THE {{docketCounselFor}} - {{docketNameOfFiling}}",
+                    "text": "{{docketCounselFor}}",
                     "style": "bodyText"
                   },
                   {
                     "text": "",
                     "style": "whiteSpace3"
+                  },
+                  {
+                    "text": "{{documentPath}}",
+                    "alignment": "right",
+                    "margin": [0, 30, 0, 0]
                   }
                 ],
                 "alignment": "left",

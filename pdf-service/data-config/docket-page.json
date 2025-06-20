@@ -43,12 +43,6 @@
                   }
                 },
                 {
-                  "variable": "docketNameOfAdvocate",
-                  "value": {
-                    "path": "$.docketNameOfAdvocate"
-                  }
-                },
-                {
                   "variable": "docketCounselFor",
                   "value": {
                     "path": "$.docketCounselFor"
@@ -58,6 +52,12 @@
                   "variable": "docketNameOfFiling",
                   "value": {
                     "path": "$.docketNameOfFiling"
+                  }
+                },
+                 {
+                  "variable": "documentPath",
+                  "value": {
+                    "path": "$.documentPath"
                   }
                 }
               ]
