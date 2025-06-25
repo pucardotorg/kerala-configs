@@ -56,7 +56,7 @@ serviceMaps:
       objecIdJsonPath: $.consumerCode
       tenantIdJsonPath: $.tenantId
       queryMaps:
-        - query: INSERT INTO treasury_head_breakup_data (consumer_code, head_mapping, calculation, tenant_id, createdtime) VALUES (?, ?, ?, ?, ?);
+        - query: INSERT INTO treasury_head_breakup_data (consumer_code, head_mapping, calculation, tenant_id, createdtime, finalcalcpostresubmission, lastsubmissionconsumercode) VALUES (?, ?, ?, ?, ?, ?, ?);
           basePath: $
           jsonMaps:
             - jsonPath: $.consumerCode
@@ -68,6 +68,10 @@ serviceMaps:
               dbType: JSONB
             - jsonPath: $.tenantId
             - jsonPath: $.createdTime
+            - jsonPath: $.finalCalcPostResubmission
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.lastSubmissionConsumerCode
 
     - version: 1.0
       description: Update Treasury head breakup mapping
@@ -75,7 +79,7 @@ serviceMaps:
       objecIdJsonPath: $.consumerCode
       tenantIdJsonPath: $.tenantId
       queryMaps:
-        - query: UPDATE treasury_head_breakup_data SET head_mapping=?, calculation=?, lastmodifiedtime=?, resubmissionbreakdown=?, lastsubmissionconsumercode=? WHERE consumer_code = ?;
+        - query: UPDATE treasury_head_breakup_data SET head_mapping=?, calculation=?, lastmodifiedtime=?, finalcalcpostresubmission=?, lastsubmissionconsumercode=? WHERE consumer_code = ?;
           basePath: $
           jsonMaps:
             - jsonPath: $.headAmountMapping
@@ -85,7 +89,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.lastModifiedTime
-            - jsonPath: $.reSubmissionBreakDown
+            - jsonPath: $.finalCalcPostResubmission
               type: JSON
               dbType: JSONB
             - jsonPath: $.lastSubmissionConsumerCode
