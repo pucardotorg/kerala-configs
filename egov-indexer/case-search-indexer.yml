@@ -46,5 +46,11 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.yearOfFiling
               - inJsonPath: $.hearingType
                 outJsonPath: $.Data.caseDetails.hearingType
+              - inJsonPath: $.lastHearingDate
+                outJsonPath: $.Data.caseDetails.lastHearingDate
+              - inJsonPath: $.filingDate
+                outJsonPath: $.Data.caseDetails.filingDate
+              - inJsonPath: $.registrationDate
+                outJsonPath: $.Data.caseDetails.registrationDate
 
 
