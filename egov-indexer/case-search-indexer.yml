@@ -5,7 +5,7 @@ ServiceMaps:
     - topic: case-search-topic
       configKey: INDEX
       indexes:
-        - name: case-index
+        - name: case-search-index
           type: general
           id: $.id
           isBulk: false
