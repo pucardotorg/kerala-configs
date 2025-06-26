@@ -7,10 +7,10 @@ ServiceMaps:
       indexes:
         - name: case-search-index
           type: general
-          id: $.id
+          id: $.filingNumber
           isBulk: false
-          timeStampField: $.auditDetails.createdTime
-          jsonPath: $.cases
+          timeStampField: $.filingDate
+          jsonPath: $
           customJsonMapping:
             indexMapping: { "Data": { "caseDetails": {}} }
             fieldMapping:
