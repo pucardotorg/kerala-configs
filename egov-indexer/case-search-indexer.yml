@@ -1,0 +1,56 @@
+ServiceMaps:
+  serviceName: Transformer
+  version: 1.0.0
+  mappings:
+    - topic: case-search-topic
+      configKey: INDEX
+      indexes:
+        - name: case-index
+          type: general
+          id: $.id
+          isBulk: false
+          timeStampField: $.auditDetails.createdTime
+          jsonPath: $.cases
+          customJsonMapping:
+            indexMapping: { "Data": { "caseDetails": {}} }
+            fieldMapping:
+              - inJsonPath: $.caseTitle
+                outJsonPath: $.Data.caseDetails.caseTitle
+              - inJsonPath: $.filingNumber
+                outJsonPath: $.Data.caseDetails.filingNumber
+              - inJsonPath: $.courtName
+                outJsonPath: $.Data.caseDetails.courtName
+              - inJsonPath: $.courtId
+                outJsonPath: $.Data.caseDetails.courtId
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.caseDetails.tenantId
+              - inJsonPath: $.stNumber
+                outJsonPath: $.Data.caseDetails.stNumber
+              - inJsonPath: $.cmpNumber
+                outJsonPath: $.Data.caseDetails.cmpNumber
+              - inJsonPath: $.caseType
+                outJsonPath: $.Data.caseDetails.caseType
+              - inJsonPath: $.cnrNumber
+                outJsonPath: $.Data.caseDetails.cnrNumber
+              - inJsonPath: $.advocates
+                outJsonPath: $.Data.caseDetails.advocates
+              - inJsonPath: $.litigants
+                outJsonPath: $.Data.caseDetails.litigants
+              - inJsonPath: $.nextHearingDate
+                outJsonPath: $.Data.caseDetails.nextHearingDate
+              - inJsonPath: $.caseStage
+                outJsonPath: $.Data.caseDetails.caseStage
+              - inJsonPath: $.caseStatus
+                outJsonPath: $.Data.caseDetails.caseStatus
+              - inJsonPath: $.yearOfFiling
+                outJsonPath: $.Data.caseDetails.yearOfFiling
+              - inJsonPath: $.hearingType
+                outJsonPath: $.Data.caseDetails.hearingType
+              - inJsonPath: $.lastHearingDate
+                outJsonPath: $.Data.caseDetails.lastHearingDate
+              - inJsonPath: $.filingDate
+                outJsonPath: $.Data.caseDetails.filingDate
+              - inJsonPath: $.registrationDate
+                outJsonPath: $.Data.caseDetails.registrationDate
+
+
