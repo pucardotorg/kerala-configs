@@ -33,22 +33,22 @@ serviceMaps:
       tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
       auditAttributeBasePath: $
       queryMaps:
-          - query: INSERT INTO treasury_payment_data (department_id, grn, challan_timestamp, bank_ref_no, bank_timestamp, bank_code, status, cin, amount, party_name, remark_status, remarks, file_store_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-            basePath: $
-            jsonMaps:
-              - jsonPath: $.TreasuryPaymentData.departmentId
-              - jsonPath: $.TreasuryPaymentData.grn
-              - jsonPath: $.TreasuryPaymentData.challanTimestamp
-              - jsonPath: $.TreasuryPaymentData.bankRefNo
-              - jsonPath: $.TreasuryPaymentData.bankTimestamp
-              - jsonPath: $.TreasuryPaymentData.bankCode
-              - jsonPath: $.TreasuryPaymentData.status
-              - jsonPath: $.TreasuryPaymentData.cin
-              - jsonPath: $.TreasuryPaymentData.amount
-              - jsonPath: $.TreasuryPaymentData.partyName
-              - jsonPath: $.TreasuryPaymentData.remarkStatus
-              - jsonPath: $.TreasuryPaymentData.remarks
-              - jsonPath: $.TreasuryPaymentData.fileStoreId
+        - query: INSERT INTO treasury_payment_data (department_id, grn, challan_timestamp, bank_ref_no, bank_timestamp, bank_code, status, cin, amount, party_name, remark_status, remarks, file_store_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: $
+          jsonMaps:
+            - jsonPath: $.TreasuryPaymentData.departmentId
+            - jsonPath: $.TreasuryPaymentData.grn
+            - jsonPath: $.TreasuryPaymentData.challanTimestamp
+            - jsonPath: $.TreasuryPaymentData.bankRefNo
+            - jsonPath: $.TreasuryPaymentData.bankTimestamp
+            - jsonPath: $.TreasuryPaymentData.bankCode
+            - jsonPath: $.TreasuryPaymentData.status
+            - jsonPath: $.TreasuryPaymentData.cin
+            - jsonPath: $.TreasuryPaymentData.amount
+            - jsonPath: $.TreasuryPaymentData.partyName
+            - jsonPath: $.TreasuryPaymentData.remarkStatus
+            - jsonPath: $.TreasuryPaymentData.remarks
+            - jsonPath: $.TreasuryPaymentData.fileStoreId
 
     - version: 1.0
       description: Treasury head breakup mapping
@@ -56,15 +56,41 @@ serviceMaps:
       objecIdJsonPath: $.consumerCode
       tenantIdJsonPath: $.tenantId
       queryMaps:
-          - query: INSERT INTO treasury_head_breakup_data (consumer_code, head_mapping,calculation, tenant_id, createdtime) values(?, ?, ?, ?, ?)
-            basePath: $
-            jsonMaps:
-              - jsonPath: $.consumerCode
-              - jsonPath: $.headAmountMapping
-                type: JSON
-                dbType: JSONB
-              - jsonPath: $.calculation
-                type: JSON
-                dbType: JSONB
-              - jsonPath: $.tenantId
-              - jsonPath: $.createdTime
+        - query: INSERT INTO treasury_head_breakup_data (consumer_code, head_mapping, calculation, tenant_id, createdtime, finalcalcpostresubmission, lastsubmissionconsumercode) VALUES (?, ?, ?, ?, ?, ?, ?);
+          basePath: $
+          jsonMaps:
+            - jsonPath: $.consumerCode
+            - jsonPath: $.headAmountMapping
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.calculation
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.tenantId
+            - jsonPath: $.createdTime
+            - jsonPath: $.finalCalcPostResubmission
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.lastSubmissionConsumerCode
+
+    - version: 1.0
+      description: Update Treasury head breakup mapping
+      fromTopic: update-treasury-mapping
+      objecIdJsonPath: $.consumerCode
+      tenantIdJsonPath: $.tenantId
+      queryMaps:
+        - query: UPDATE treasury_head_breakup_data SET head_mapping=?, calculation=?, lastmodifiedtime=?, finalcalcpostresubmission=?, lastsubmissionconsumercode=? WHERE consumer_code = ?;
+          basePath: $
+          jsonMaps:
+            - jsonPath: $.headAmountMapping
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.calculation
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.lastModifiedTime
+            - jsonPath: $.finalCalcPostResubmission
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.lastSubmissionConsumerCode
+            - jsonPath: $.consumerCode

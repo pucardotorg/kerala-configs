@@ -130,6 +130,13 @@
                 "default":""
               },
               {
+                "variable":"legalBenefitFee",
+                "value":{
+                  "path":"$.legalBenefitFee"
+                },
+                "default":""
+              },
+              {
                 "variable":"totalAmount",
                 "value":{
                   "path":"$.totalAmount"
