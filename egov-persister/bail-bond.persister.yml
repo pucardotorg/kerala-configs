@@ -43,16 +43,18 @@ serviceMaps:
             - jsonpath: $.bail.auditDetails.createdTime
             - jsonpath: $.bail.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO dristi_surety (id,tenant_id,bail_id,case_id,surety_name,surety_father_name,surety_signed,surety_mobile_number,surety_email,surety_approved,surety_address,additional_details,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
+        - query: INSERT INTO dristi_surety (id,tenant_id,bail_id,case_id,surety_name,surety_father_name,surety_signed,surety_mobile_number,surety_email,surety_approved,surety_address,additional_details,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
           basePath: bail.sureties.*
           jsonMaps:
             - jsonpath: $.bail.sureties.*.id
             - jsonpath: $.bail.sureties.*.tenantId
             - jsonpath: $.bail.bailId
+            - jsonpath: $.bail.caseId
             - jsonpath: $.bail.sureties.*.name
             - jsonpath: $.bail.sureties.*.fatherName
             - jsonpath: $.bail.sureties.*.hasSigned
             - jsonpath: $.bail.sureties.*.mobileNumber
+            - jsonpath: $.bail.sureties.*.email
             - jsonpath: $.bail.sureties.*.isApproved
             - jsonpath: $.bail.sureties.*.address
               type: JSON
@@ -109,10 +111,9 @@ serviceMaps:
       transactionCodeJsonPath: $.caseId
       auditAttributeBasePath: bail
       queryMaps:
-        - query: UPDATE dristi_bail SET id=?,tenant_id=?,case_id=?,bail_type=?,bail_amount=?,bail_status=?,court_id=?,case_title=?,case_number=?,cnr_number=?,filing_number=?,case_type=?,litigant_id=?,litigant_name=?,litigant_father_name=?,litigant_signed=?,litigant_mobile_number=?,shortened_url=?,bail_id=?,additional_details=?,is_active=?,created_by=?,last_modified_by=?,created_time=?,last_modified_time=?;
+        - query: UPDATE dristi_bail SET tenant_id=?,case_id=?,bail_type=?,bail_amount=?,bail_status=?,court_id=?,case_title=?,case_number=?,cnr_number=?,filing_number=?,case_type=?,litigant_id=?,litigant_name=?,litigant_father_name=?,litigant_signed=?,litigant_mobile_number=?,shortened_url=?,bail_id=?,additional_details=?,is_active=?,created_by=?,last_modified_by=?,created_time=?,last_modified_time=? WHERE id=?;
           basePath:
           jsonMaps:
-            - jsonpath: $.bail.id
             - jsonpath: $.bail.tenantId
             - jsonpath: $.bail.caseId
             - jsonpath: $.bail.bailType
@@ -139,17 +140,19 @@ serviceMaps:
             - jsonpath: $.bail.auditDetails.lastModifiedBy
             - jsonpath: $.bail.auditDetails.createdTime
             - jsonpath: $.bail.auditDetails.lastModifiedTime
+            - jsonpath: $.bail.id
 
-        - query: INSERT INTO dristi_surety (id,tenant_id,bail_id,case_id,surety_name,surety_father_name,surety_signed,surety_mobile_number,surety_email,surety_approved,surety_address,additional_details,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ;
+        - query: UPDATE dristi_surety SET tenant_id=?,bail_id=?,case_id=?,surety_name=?,surety_father_name=?,surety_signed=?,surety_mobile_number=?,surety_email=?,surety_approved=?,surety_address=?,additional_details=?,is_active=?,created_by=?,last_modified_by=?,created_time=?,last_modified_time=? WHERE id=? ;
           basePath: bail.sureties.*
           jsonMaps:
-            - jsonpath: $.bail.sureties.*.id
             - jsonpath: $.bail.sureties.*.tenantId
             - jsonpath: $.bail.bailId
+            - jsonpath: $.bail.caseId
             - jsonpath: $.bail.sureties.*.name
             - jsonpath: $.bail.sureties.*.fatherName
             - jsonpath: $.bail.sureties.*.hasSigned
             - jsonpath: $.bail.sureties.*.mobileNumber
+            - jsonpath: $.bail.sureties.*.email
             - jsonpath: $.bail.sureties.*.isApproved
             - jsonpath: $.bail.sureties.*.address
               type: JSON
@@ -162,13 +165,13 @@ serviceMaps:
             - jsonpath: $.bail.auditDetails.lastModifiedBy
             - jsonpath: $.bail.auditDetails.createdTime
             - jsonpath: $.bail.auditDetails.lastModifiedTime
+            - jsonpath: $.bail.sureties.*.id
 
 
 
-        - query: INSERT INTO dristi_bail_document(id,filestore_id,document_uid,document_type,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?);
+        - query: UPDATE dristi_bail_document SET filestore_id=?,document_uid=?,document_type=?,additional_details=?,created_by=?,last_modified_by=?,created_time=?,last_modified_time=? WHERE id=?;
           basePath: bail.documents.*
           jsonMaps:
-            - jsonpath: $.bail.documents.*.id
             - jsonpath: $.bail.documents.*.fileStore
             - jsonpath: $.bail.documents.*.documentUid
             - jsonpath: $.bail.documents.*.documentType
@@ -179,11 +182,11 @@ serviceMaps:
             - jsonpath: $.bail.auditDetails.lastModifiedBy
             - jsonpath: $.bail.auditDetails.createdTime
             - jsonpath: $.bail.auditDetails.lastModifiedTime
+            - jsonpath: $.bail.documents.*.id
 
-        - query: INSERT INTO dristi_surety_document(id,filestore_id,document_uid,document_type,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?);
+        - query: UPDATE dristi_surety_document SET filestore_id=?,document_uid=?,document_type=?,additional_details=?,created_by=?,last_modified_by=?,created_time=?,last_modified_time=? WHERE id=?;
           basePath: bail.sureties.*.documents.*
           jsonMaps:
-            - jsonpath: $.bail.documents.*.id
             - jsonpath: $.bail.documents.*.fileStore
             - jsonpath: $.bail.documents.*.documentUid
             - jsonpath: $.bail.documents.*.documentType
@@ -194,3 +197,4 @@ serviceMaps:
             - jsonpath: $.bail.auditDetails.lastModifiedBy
             - jsonpath: $.bail.auditDetails.createdTime
             - jsonpath: $.bail.auditDetails.lastModifiedTime
+            - jsonpath: $.bail.documents.*.id
