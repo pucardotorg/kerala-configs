@@ -48,7 +48,7 @@ serviceMaps:
           jsonMaps:
             - jsonPath: $.bail.sureties.*.id
             - jsonPath: $.bail.sureties.*.tenantId
-            - jsonPath: $.bail.bailId
+            - jsonPath: $.bail.id
             - jsonPath: $.bail.caseId
             - jsonPath: $.bail.sureties.*.name
             - jsonPath: $.bail.sureties.*.fatherName
@@ -75,7 +75,7 @@ serviceMaps:
           jsonMaps:
             - jsonPath: $.bail.documents.*.id
             - jsonPath: $.bail.tenantId
-            - jsonPath: $.bail.bailId
+            - jsonPath: $.bail.id
             - jsonPath: $.bail.documents.*.fileStore
             - jsonPath: $.bail.documents.*.documentUid
             - jsonPath: $.bail.documents.*.documentName
@@ -154,7 +154,7 @@ serviceMaps:
           jsonMaps:
             - jsonPath: $.bail.sureties.*.id
             - jsonPath: $.bail.sureties.*.tenantId
-            - jsonPath: $.bail.bailId
+            - jsonPath: $.bail.id
             - jsonPath: $.bail.caseId
             - jsonPath: $.bail.sureties.*.name
             - jsonPath: $.bail.sureties.*.fatherName
@@ -181,7 +181,7 @@ serviceMaps:
           jsonMaps:
             - jsonPath: $.bail.documents.*.id
             - jsonPath: $.bail.documents.*.tenantId
-            - jsonPath: $.bail.bailId
+            - jsonPath: $.bail.id
             - jsonPath: $.bail.documents.*.fileStore
             - jsonPath: $.bail.documents.*.documentUid
             - jsonPath: $.bail.documents.*.documentName
