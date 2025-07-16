@@ -208,7 +208,7 @@ serviceMaps:
             - jsonPath: $.bail.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.bail.auditDetails.isActive
+            - jsonPath: $.bail.isActive
             - jsonPath: $.bail.auditDetails.createdBy
             - jsonPath: $.bail.auditDetails.lastModifiedBy
             - jsonPath: $.bail.auditDetails.createdTime
