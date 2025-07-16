@@ -70,10 +70,12 @@ serviceMaps:
 
 
 
-        - query: INSERT INTO dristi_bail_document(id,filestore_id,document_uid,document_type,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?);
+        - query: INSERT INTO dristi_bail_document(id,tenant_id,bail_id,filestore_id,document_uid,document_type,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?);
           basePath: bail.documents.*
           jsonMaps:
             - jsonPath: $.bail.documents.*.id
+            - jsonPath: $.bail.tenantId
+            - jsonPath: $.bail.bailId
             - jsonPath: $.bail.documents.*.fileStore
             - jsonPath: $.bail.documents.*.documentUid
             - jsonPath: $.bail.documents.*.documentType
@@ -85,14 +87,16 @@ serviceMaps:
             - jsonPath: $.bail.auditDetails.createdTime
             - jsonPath: $.bail.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO dristi_surety_document(id,filestore_id,document_uid,document_type,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?);
+        - query: INSERT INTO dristi_surety_document(id,tenant_id,surety_id,filestore_id,document_uid,document_type,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?);
           basePath: bail.sureties.*.documents.*
           jsonMaps:
-            - jsonPath: $.bail.documents.*.id
-            - jsonPath: $.bail.documents.*.fileStore
-            - jsonPath: $.bail.documents.*.documentUid
-            - jsonPath: $.bail.documents.*.documentType
-            - jsonPath: $.bail.documents.*.additionalDetails
+            - jsonPath: $.bail.sureties.*.documents.*.id
+            - jsonPath: $.bail.tenantId
+            - jsonPath: $.bail.sureties.*.documents.*.id
+            - jsonPath: $.bail.sureties.*.documents.*.fileStore
+            - jsonPath: $.bail.sureties.*.documents.*.documentUid
+            - jsonPath: $.bail.sureties.*.documents.*.documentType
+            - jsonPath: $.bail.sureties.*.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
             - jsonPath: $.bail.auditDetails.createdBy
