@@ -89,7 +89,7 @@ serviceMaps:
             - jsonPath: $.bail.auditDetails.createdTime
             - jsonPath: $.bail.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO dristi_surety_document(id,tenant_id,surety_id,filestore_id,document_uid,document_name,document_type,additional_details,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?);
+        - query: INSERT INTO dristi_surety_document(id,tenant_id,surety_id,filestore_id,document_uid,document_name,document_type,additional_details,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?);
           basePath: bail.sureties.*.documents.*
           jsonMaps:
             - jsonPath: $.bail.sureties.*.documents.*.id
@@ -198,17 +198,17 @@ serviceMaps:
         - query: INSERT INTO dristi_surety_document (id,tenant_id,surety_id,filestore_id,document_uid,document_name,document_type,additional_details,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) DO UPDATE SET tenant_id=EXCLUDED.tenant_id,surety_id=EXCLUDED.surety_id,filestore_id = EXCLUDED.filestore_id,document_uid = EXCLUDED.document_uid,document_name=EXCLUDED.document_name,document_type = EXCLUDED.document_type,additional_details = EXCLUDED.additional_details,is_active=EXCLUDED.is_active,created_by = EXCLUDED.created_by,last_modified_by = EXCLUDED.last_modified_by,created_time = EXCLUDED.created_time,last_modified_time = EXCLUDED.last_modified_time;
           basePath: bail.sureties.*.documents.*
           jsonMaps:
-            - jsonPath: $.bail.documents.*.id
-            - jsonPath: $.bail.documents.*.tenantId
+            - jsonPath: $.bail.sureties.*.documents.*.id
+            - jsonPath: $.bail.sureties.*.documents.*.tenantId
             - jsonPath: $.bail.sureties.*.id
-            - jsonPath: $.bail.documents.*.fileStore
-            - jsonPath: $.bail.documents.*.documentUid
-            - jsonPath: $.bail.documents.*.documentName
-            - jsonPath: $.bail.documents.*.documentType
-            - jsonPath: $.bail.documents.*.additionalDetails
+            - jsonPath: $.bail.sureties.*.documents.*.fileStore
+            - jsonPath: $.bail.sureties.*.documents.*.documentUid
+            - jsonPath: $.bail.sureties.*.documents.*.documentName
+            - jsonPath: $.bail.sureties.*.documents.*.documentType
+            - jsonPath: $.bail.sureties.*.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.bail.isActive
+            - jsonPath: $.bail.sureties.*.documents.*.isActive
             - jsonPath: $.bail.auditDetails.createdBy
             - jsonPath: $.bail.auditDetails.lastModifiedBy
             - jsonPath: $.bail.auditDetails.createdTime
