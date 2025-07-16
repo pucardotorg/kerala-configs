@@ -94,7 +94,7 @@ serviceMaps:
           jsonMaps:
             - jsonPath: $.bail.sureties.*.documents.*.id
             - jsonPath: $.bail.tenantId
-            - jsonPath: $.bail.sureties.*.id
+            - jsonPath: $.bail.sureties[*][?({id} in @.documents[*].id)].id
             - jsonPath: $.bail.sureties.*.documents.*.fileStore
             - jsonPath: $.bail.sureties.*.documents.*.documentUid
             - jsonPath: $.bail.sureties.*.documents.*.documentName
@@ -200,7 +200,7 @@ serviceMaps:
           jsonMaps:
             - jsonPath: $.bail.sureties.*.documents.*.id
             - jsonPath: $.bail.sureties.*.documents.*.tenantId
-            - jsonPath: $.bail.sureties.*.id
+            - jsonPath: $.bail.sureties[*][?({id} in @.documents[*].id)].id
             - jsonPath: $.bail.sureties.*.documents.*.fileStore
             - jsonPath: $.bail.sureties.*.documents.*.documentUid
             - jsonPath: $.bail.sureties.*.documents.*.documentName
