@@ -30,16 +30,14 @@
                     "style": "signature"
                   },
                   "{{#sureties}}",
-                  [
-                    {
-                      "text": "I {{suretyName}} Son/ Daughter of Shri/ Shrimati  {{suretyParentName}} Residence {{suretyAddress}} hereby declare myself for the above said {{litigantName}} That he shall attend the Officer-in-charge of {{courtName}} every day on which any investigation in the charge is made or any trial on such charge is held that he shall be and re-appear before such officer or court for the purpose of such investigation to answer the charge against him  as the case may be) and in the case of his making default herein, I bind myself to forfeit to Govt. the sum of Rs. {{bailAmount}}.",
-                      "style": "bodyText"
-                    },
-                    {
-                      "text": "Surety {{index}} Signature",
-                      "style": "signature"
-                    }
-                  ],
+                  {
+                    "text": "I {{suretyName}} Son/ Daughter of Shri/ Shrimati  {{suretyParentName}} Residence {{suretyAddress}} hereby declare myself for the above said {{litigantName}} That he shall attend the Officer-in-charge of {{courtName}} every day on which any investigation in the charge is made or any trial on such charge is held that he shall be and re-appear before such officer or court for the purpose of such investigation to answer the charge against him  as the case may be) and in the case of his making default herein, I bind myself to forfeit to Govt. the sum of Rs. {{bailAmount}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Surety {{index}} Signature",
+                    "style": "signature"
+                  },
                   "{{/sureties}}",
                   {
                     "text": "{{date}}",
