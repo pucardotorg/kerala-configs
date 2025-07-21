@@ -1,0 +1,116 @@
+{
+  "key": "bail-bond",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "{{orderHeading}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "I {{litigantName}} Son of Shri {{litigantFatherName}} Residence {{litigantAddress}} having been brought before the Magistrate of {{courtName}} charged with the offence of {{caseType}} and required to give surety for my attendance before such Officer of Court on condition that I shall attend such Officer or Court on every day on which any investigation or trial is held with regard to such charge and in case of my making default herein, I bind myself to forfeit to Government the sum of Rs. {{bailAmount}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{accusedSignature}}",
+                    "style": "signature"
+                  },
+                  "{{#sureties}}",
+                  {
+                    "text": "I {{suretyName}} Son/ Daughter of Shri/ Shrimati  {{suretyParentName}} Residence {{suretyAddress}} hereby declare myself for the above said {{litigantName}} That he shall attend the Officer-in-charge of {{courtName}} every day on which any investigation in the charge is made or any trial on such charge is held that he shall be and re-appear before such officer or court for the purpose of such investigation to answer the charge against him  as the case may be) and in the case of his making default herein, I bind myself to forfeit to Govt. the sum of Rs. {{bailAmount}}.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Surety{{index}} Signature",
+                    "style": "signature"
+                  },
+                  "{{/sureties}}",
+                  {
+                    "text": "{{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "judgeSignature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 0, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 20, 0, 0]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "alignment": "center",
+        "bold": true,
+        "margin": [0, 0, 0, 0]
+      },
+      "orderTitle": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 12,
+        "lineHeight": 1.3,
+        "margin": [0, 10, 0, 10]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "margin": [0, 10, 0, 10]
+      },
+      "list": {
+        "margin": [20, 10, 0, 10]
+      },
+      "listItem": {
+        "fontSize": 11,
+        "margin": [0, 5, 0, 5]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 30, 0, 10]
+      },
+      "judgeSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 40, 0, 0]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      }
+    }
+  }
+}
