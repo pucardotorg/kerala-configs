@@ -1,12 +1,10 @@
 {
-  "key": "warrants-non-bailable",
+  "key": "warrant-generic",
   "config": {
     "content": [
       {
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -16,17 +14,8 @@
                     "style": "form-no"
                   },
                   {
-                    "text": "WARRANT OF ARREST",
+                    "text": "WARRANT",
                     "style": "document-title"
-                  },
-                  {
-                    "text": "Non-Bailable Warrant",
-                    "style": "form-sub-header",
-                    "margin": [0, 5, 0, 5]
-                  },
-                  {
-                    "text": "(See section 72)",
-                    "style": "reference"
                   },
                   {
                     "text": "IN THE {{courtName}}",
@@ -38,18 +27,7 @@
                   }
                 ],
                 "alignment": "center",
-                "margin": [
-                  0,
-                  20,
-                  0,
-                  20
-                ]
-              }
-            ],
-            [
-              {
-                "text": "Next Hearing Date: {{hearingDate}}",
-                "style": "form-sub-body-right"
+                "margin": [0, 20, 0, 20]
               }
             ]
           ]
@@ -59,9 +37,7 @@
       {
         "style": "form-body",
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -73,32 +49,22 @@
               {
                 "text": [
                   {
-                    "text": "Whereas ",
+                    "text": "{{warrantText}}",
                     "bold": true
-                  },
-                  {
-                    "text": "{{respondentName}} of {{respondentAddress}} stands charged with the offence U/s. 138 of N.I ACT, you are hereby directed to arrest the said Accused name and to produce him before me. Herein fail not."
                   }
                 ],
                 "style": "form-sub-body"
-              }              
+              }
             ]
           ]
         },
         "layout": "noBorders",
-        "margin": [
-          0,
-          20,
-          0,
-          20
-        ]
+        "margin": [0, 20, 0, 20]
       },
       {
         "style": "footer-content",
         "table": {
-          "widths": [
-            "*"
-          ],
+          "widths": ["*"],
           "body": [
             [
               {
@@ -121,29 +87,17 @@
           ]
         },
         "layout": "noBorders",
-        "margin": [
-          0,
-          20,
-          0,
-          0
-        ]
+        "margin": [0, 20, 0, 0]
       }
     ],
     "styles": {
       "tl-head": {
         "fillColor": "white",
-        "margin": [
-          -41,
-          -41,
-          -41,
-          0
-        ]
+        "margin": [-41, -41, -41, 0]
       },
       "document-title": {
-        "bold":true,
-        "margin": [
-          0,10,0,10
-        ]
+        "bold": true,
+        "margin": [0, 10, 0, 10]
       },
       "form-header": {
         "color": "#484848",
@@ -157,22 +111,12 @@
         "fontFamily": "Roboto",
         "fontSize": 13,
         "letterSpacing": 1.6,
-        "margin": [
-          0,
-          10,
-          0,
-          0
-        ]
+        "margin": [0, 10, 0, 0]
       },
       "form-body": {
         "fontSize": 12,
         "color": "#484848",
-        "margin": [
-          -25,
-          18,
-          -8,
-          -8
-        ]
+        "margin": [-25, 18, -8, -8]
       },
       "form-sub-body": {
         "fontSize": 12,
@@ -186,42 +130,22 @@
       "footer-content": {
         "color": "#484848",
         "fontSize": 11,
-        "margin": [
-          30,
-          -20,
-          0,
-          0
-        ]
+        "margin": [30, -20, 0, 0]
       },
       "footer-text": {
-        "margin": [
-          0,
-          15,
-          0,
-          15
-        ],
+        "margin": [0, 15, 0, 15],
         "bold": true,
         "color": "#000000",
         "alignment": "left"
       },
       "footer-seal": {
-        "margin": [
-          0,
-          15,
-          0,
-          20
-        ],
+        "margin": [0, 15, 0, 20],
         "bold": true,
         "color": "#000000",
         "alignment": "left"
       },
       "footer-signature": {
-        "margin": [
-          0,
-          50,
-          0,
-          0
-        ],
+        "margin": [0, 50, 0, 0],
         "bold": true,
         "color": "#000000",
         "alignment": "right"

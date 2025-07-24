@@ -1,5 +1,5 @@
 {
-  "key": "summons-accused",
+  "key": "warrant-generic",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -20,13 +20,6 @@
                 }
               },
               {
-                "variable": "accessCode",
-                "value": {
-                  "path": "$.accessCode",
-                  "defaultValue": "NA"
-                }
-              },
-              {
                 "variable": "respondentName",
                 "value": {
                   "path": "$.respondentName",
@@ -34,23 +27,9 @@
                 }
               },
               {
-                "variable": "complainantName",
-                "value": {
-                  "path": "$.complainantName",
-                  "defaultValue": "NA"
-                }
-              },
-              {
                 "variable": "respondentAddress",
                 "value": {
                   "path": "$.respondentAddress",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "caseName",
-                "value": {
-                  "path": "$.caseName",
                   "defaultValue": "NA"
                 }
               },
@@ -104,61 +83,16 @@
                 }
               },
               {
-                "variable": "courtUrl",
+                "variable": "executorName",
                 "value": {
-                  "path": "$.courtUrl",
+                  "path": "$.executorName",
                   "defaultValue": "NA"
                 }
               },
               {
-                "variable": "infoPdfUrl",
+                "variable": "warrantText",
                 "value": {
-                  "path": "$.infoPdfUrl",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "barCouncilUrl",
-                "value": {
-                  "path": "$.barCouncilUrl",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "lokAdalatUrl",
-                "value": {
-                  "path": "$.lokAdalatUrl",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "helplineNumber",
-                "value": {
-                  "path": "$.helplineNumber",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "courtAddress",
-                "value": {
-                  "path": "$.courtAddress",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "qrCodeFirst",
-                "url": "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=0ad94ee3-371f-46d7-b063-ede2495a1912",
-                "type": "image"
-              },
-              {
-                "variable": "qrCodeSecond",
-                "url": "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=084f00e9-fee8-432d-927d-183d78123f33",
-                "type": "image"
-              },
-              {
-                "variable": "filingNumber",
-                "value": {
-                  "path": "$.filingNumber",
+                  "path": "$.warrantText",
                   "defaultValue": "NA"
                 }
               }
@@ -169,4 +103,3 @@
     ]
   }
 }
-

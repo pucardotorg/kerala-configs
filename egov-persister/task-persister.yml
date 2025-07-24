@@ -13,12 +13,14 @@ serviceMaps:
       auditAttributeBasePath: task
       queryMaps:
 
-        - query: INSERT INTO dristi_task(id, tenantId, courtId, orderId, filingNumber, cnrNumber, taskNumber, createdDate, dateCloseBy, dateClosed, taskDescription, taskType, taskDetails, status, assignedTo, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime ,referenceId ,state ,duedate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_task(id, tenantId,courtId, caseTitle, caseId, orderId, filingNumber, cnrNumber, taskNumber, createdDate, dateCloseBy, dateClosed, taskDescription, taskType, taskDetails, status, assignedTo, isActive, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime ,referenceId ,state ,duedate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: task
           jsonMaps:
             - jsonPath: $.task.id
             - jsonPath: $.task.tenantId
             - jsonPath: $.task.courtId
+            - jsonPath: $.task.caseTitle
+            - jsonPath: $.task.caseId
             - jsonPath: $.task.orderId
             - jsonPath: $.task.filingNumber
             - jsonPath: $.task.cnrNumber
@@ -60,7 +62,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
 
-        - query: INSERT INTO dristi_task_document(id, fileStore, documentUid, documentType, task_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_task_document(id, fileStore, documentUid, documentType, task_id, additionalDetails, isActive) VALUES (?, ?, ?, ?, ?, ?, ?);
           basePath: task.documents.*
           jsonMaps:
             - jsonPath: $.task.documents.*.id
@@ -71,6 +73,7 @@ serviceMaps:
             - jsonPath: $.task.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.task.documents.*.isActive
 
     - version: 1.0
       description: Update task details in tables
@@ -83,11 +86,13 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: task
       queryMaps:
-        - query: UPDATE dristi_task SET tenantId=?, orderId=?, filingNumber=?, cnrNumber=?, taskNumber=?, createdDate=?, dateCloseBy=?, dateClosed=?, taskDescription=?, taskType=?, taskDetails=?, status=?, assignedTo=?, isActive=?, additionalDetails=?, lastModifiedBy=?, lastModifiedTime=?, referenceId= ? , state = ? ,duedate = ?  WHERE id=?;
+        - query: UPDATE dristi_task SET tenantId=?, orderId=?, caseTitle=?, caseId=?, filingNumber=?, cnrNumber=?, taskNumber=?, createdDate=?, dateCloseBy=?, dateClosed=?, taskDescription=?, taskType=?, taskDetails=?, status=?, assignedTo=?, isActive=?, additionalDetails=?, lastModifiedBy=?, lastModifiedTime=?, referenceId= ? , state = ? ,duedate = ?  WHERE id=?;
           basePath: task
           jsonMaps:
             - jsonPath: $.task.tenantId
             - jsonPath: $.task.orderId
+            - jsonPath: $.task.caseTitle
+            - jsonPath: $.task.caseId
             - jsonPath: $.task.filingNumber
             - jsonPath: $.task.cnrNumber
             - jsonPath: $.task.taskNumber
@@ -127,7 +132,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
 
-        - query: INSERT INTO dristi_task_document(id, fileStore, documentUid, documentType, task_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, task_id = EXCLUDED.task_id, additionalDetails = EXCLUDED.additionalDetails;
+        - query: INSERT INTO dristi_task_document(id, fileStore, documentUid, documentType, task_id, additionalDetails, isActive) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET fileStore = EXCLUDED.fileStore, documentUid = EXCLUDED.documentUid, documentType = EXCLUDED.documentType, task_id = EXCLUDED.task_id, additionalDetails = EXCLUDED.additionalDetails, isActive = EXCLUDED.isActive;
           basePath: task.documents.*
           jsonMaps:
             - jsonPath: $.task.documents.*.id
@@ -138,3 +143,4 @@ serviceMaps:
             - jsonPath: $.task.documents.*.additionalDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.task.documents.*.isActive
