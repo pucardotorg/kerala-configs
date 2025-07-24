@@ -46,6 +46,14 @@
                   {
                     "text": "{{judgeSignature}}",
                     "style": "judgeSignature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeDesignation}}",
+                    "style": "signature"
                   }
                 ],
                 "alignment": "left",
