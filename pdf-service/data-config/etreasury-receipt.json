@@ -14,7 +14,7 @@
             "direct": [
               {
                 "variable": "logoImage",
-                "url": "http://minio-filestore.backbone-prod:8080/minio-flestore/v1/files/id?tenantId=kl&fileStoreId=299094a2-7da4-4b1b-a1b4-3a26ea03ac88",
+                "url": "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=299094a2-7da4-4b1b-a1b4-3a26ea03ac88",
                 "type": "image"
               },
               {

@@ -43,12 +43,12 @@
               },
               {
                 "variable": "nationalEmblem",
-                "url": "http://minio-filestore.backbone-prod:8080/minio-flestore/v1/files/id?tenantId=kl&fileStoreId=626816f6-0050-447a-ae8d-e1ed351263be",
+                "url": "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=626816f6-0050-447a-ae8d-e1ed351263be",
                 "type": "image"
               },
               {
                 "variable": "onCourtsLogo",
-                "url": "http://minio-filestore.backbone-prod:8080/minio-flestore/v1/files/id?tenantId=kl&fileStoreId=cfab6a6e-8e7c-40cd-970b-733da79807e5",
+                "url": "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=cfab6a6e-8e7c-40cd-970b-733da79807e5",
                 "type": "image"
               }
             ]
