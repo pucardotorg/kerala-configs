@@ -52,7 +52,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Solemnly affirmed on the {{date}}th day of {{month}}, {{year}}",
+                    "text": "Solemnly affirmed on the {{date}} day of {{month}}, {{year}}",
                     "style": "content"
                   },
                   {
