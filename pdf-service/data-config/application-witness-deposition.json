@@ -1,0 +1,105 @@
+{
+  "key": "application-witness-deposition",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtComplex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "addressOfTheCourt",
+                "value": {
+                  "path": "$.addressOfTheCourt"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "advocateName",
+                "value": {
+                  "path": "$.advocateName"
+                }
+              },
+              {
+                "variable": "witnessList",
+                "value": {
+                  "path": "$.witnessList"
+                }
+              },
+              {
+                "variable": "day",
+                "value": {
+                  "path": "$.day"
+                }
+              },
+              {
+                "variable": "month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
+                "variable": "advocateSignature",
+                "value": {
+                  "path": "$.advocateSignature"
+                }
+              },
+              {
+                "variable": "barRegistrationNumber",
+                "value": {
+                  "path": "$.barRegistrationNumber"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
