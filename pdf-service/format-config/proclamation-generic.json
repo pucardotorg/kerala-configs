@@ -1,0 +1,155 @@
+{
+  "key": "proclamation-generic",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "FORM NO. 2",
+                    "style": "form-no"
+                  },
+                  {
+                    "text": "PROCLAMATION",
+                    "style": "document-title"
+                  },
+                  {
+                    "text": "IN THE {{courtName}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "Summary Trial No. {{courtCaseNumber}}",
+                    "style": "form-sub-header"
+                  }
+                ],
+                "alignment": "center",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "form-body",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "To SHO, {{executorName}},",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": [
+                  {
+                    "text": "{{proclamationText}}",
+                    "bold": true
+                  }
+                ],
+                "style": "form-sub-body"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [0, 20, 0, 20]
+      },
+      {
+        "style": "footer-content",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "text": "Dated, this {{issueDate}}.",
+                "style": "footer-text"
+              }
+            ],
+            [
+              {
+                "text": "Signature",
+                "style": "footer-signature"
+              }
+            ],
+            [
+              {
+                "text": "Seal of the Court",
+                "style": "footer-seal"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [0, 20, 0, 0]
+      }
+    ],
+    "styles": {
+      "tl-head": {
+        "fillColor": "white",
+        "margin": [-41, -41, -41, 0]
+      },
+      "document-title": {
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "form-header": {
+        "color": "#484848",
+        "fontFamily": "Roboto",
+        "fontSize": 16,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+      "form-sub-header": {
+        "color": "#484848",
+        "fontFamily": "Roboto",
+        "fontSize": 13,
+        "letterSpacing": 1.6,
+        "margin": [0, 10, 0, 0]
+      },
+      "form-body": {
+        "fontSize": 12,
+        "color": "#484848",
+        "margin": [-25, 18, -8, -8]
+      },
+      "form-sub-body": {
+        "fontSize": 12,
+        "color": "#484848"
+      },
+      "form-sub-body-right": {
+        "fontSize": 12,
+        "color": "#484848",
+        "alignment": "right"
+      },
+      "footer-content": {
+        "color": "#484848",
+        "fontSize": 11,
+        "margin": [30, -20, 0, 0]
+      },
+      "footer-text": {
+        "margin": [0, 15, 0, 15],
+        "bold": true,
+        "color": "#000000",
+        "alignment": "left"
+      },
+      "footer-seal": {
+        "margin": [0, 15, 0, 20],
+        "bold": true,
+        "color": "#000000",
+        "alignment": "left"
+      },
+      "footer-signature": {
+        "margin": [0, 50, 0, 0],
+        "bold": true,
+        "color": "#000000",
+        "alignment": "right"
+      }
+    }
+  }
+}
