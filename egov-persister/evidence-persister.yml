@@ -72,7 +72,7 @@ serviceMaps:
       transactionCodeJsonPath: $.artifactNumber
       auditAttributeBasePath: artifact
       queryMaps:
-        - query: UPDATE dristi_evidence_artifact SET tenantId=?, artifactNumber=?, evidenceNumber=?, externalRefNumber=?, caseId=?, application=?, filingNumber=?, hearing=?, orders=?, mediaType=?, artifactType=?, sourceType=?, sourceId=?, sourceName=?,applicableTo=?, comments=?, file=? ,createdDate=?, isActive=?, isEvidence=?, status=?, description=?, artifactDetails=?, additionalDetails=?, lastModifiedBy=?, lastModifiedTime=?, isVoid=?, reason=?, filingType=?, publishedDate=? WHERE id=?;
+        - query: UPDATE dristi_evidence_artifact SET tenantId=?, artifactNumber=?, evidenceNumber=?, externalRefNumber=?, caseId=?, application=?, filingNumber=?, hearing=?, orders=?, mediaType=?, artifactType=?, sourceType=?, sourceId=?, sourceName=?,applicableTo=?, comments=?, file=? ,createdDate=?, isActive=?, isEvidence=?, status=?, description=?, artifactDetails=?, additionalDetails=?, lastModifiedBy=?, lastModifiedTime=?, isVoid=?, reason=?, filingType=?, publishedDate=?, seal=?, evidenceMarkedStatus=?, isEvidenceMarkedFlow=? WHERE id=?;
           basePath: artifact
           jsonMaps:
             - jsonPath: $.artifact.tenantId
@@ -115,6 +115,9 @@ serviceMaps:
             - jsonPath: $.artifact.reason
             - jsonPath: $.artifact.filingType
             - jsonPath: $.artifact.publishedDate
+            - jsonPath: $.artifact.seal
+            - jsonPath: $.artifact.evidenceMarkedStatus
+            - jsonPath: $.artifact.isEvidenceMarkedFlow
             - jsonPath: $.artifact.id
 
     - version: 1.0
