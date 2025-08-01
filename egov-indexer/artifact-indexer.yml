@@ -5,7 +5,7 @@ ServiceMaps:
     - topic: save-artifact-topic
       configKey: INDEX
       indexes:
-        - name: artifact-index
+        - name: open-artifact-index
           type: general
           id: $.artifactNumber
           isBulk: false
