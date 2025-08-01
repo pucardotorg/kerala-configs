@@ -1,0 +1,92 @@
+ServiceMaps:
+  serviceName: Transformer
+  version: 1.0.0
+  mappings:
+    - topic: open-artifact-topic
+      configKey: INDEX
+      indexes:
+        - name: open-artifact-index
+          type: general
+          id: $.artifactNumber
+          isBulk: false
+          timeStampField: $.createdDate
+          jsonPath: $
+          customJsonMapping:
+            indexMapping: { "Data": { "artifactDetails": { } } }
+            fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.artifactDetails.id
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.artifactDetails.tenantId
+              - inJsonPath: $.artifactNumber
+                outJsonPath: $.Data.artifactDetails.artifactNumber
+              - inJsonPath: $.evidenceNumber
+                outJsonPath: $.Data.artifactDetails.evidenceNumber
+              - inJsonPath: $.filingNumber
+                outJsonPath: $.Data.artifactDetails.filingNumber
+              - inJsonPath: $.externalRefNumber
+                outJsonPath: $.Data.artifactDetails.externalRefNumber
+              - inJsonPath: $.courtId
+                outJsonPath: $.Data.artifactDetails.courtId
+              - inJsonPath: $.caseId
+                outJsonPath: $.Data.artifactDetails.caseId
+              - inJsonPath: $.caseNumber
+                outJsonPath: $.Data.artifactDetails.caseNumber
+              - inJsonPath: $.caseTitle
+                outJsonPath: $.Data.artifactDetails.caseTitle
+              - inJsonPath: $.advocate
+                outJsonPath: $.Data.artifactDetails.advocate
+              - inJsonPath: $.application
+                outJsonPath: $.Data.artifactDetails.application
+              - inJsonPath: $.hearing
+                outJsonPath: $.Data.artifactDetails.hearing
+              - inJsonPath: $.order
+                outJsonPath: $.Data.artifactDetails.order
+              - inJsonPath: $.cnrNumber
+                outJsonPath: $.Data.artifactDetails.cnrNumber
+              - inJsonPath: $.mediaType
+                outJsonPath: $.Data.artifactDetails.mediaType
+              - inJsonPath: $.artifactType
+                outJsonPath: $.Data.artifactDetails.artifactType
+              - inJsonPath: $.sourceType
+                outJsonPath: $.Data.artifactDetails.sourceType
+              - inJsonPath: $.sourceID
+                outJsonPath: $.Data.artifactDetails.sourceID
+              - inJsonPath: $.sourceName
+                outJsonPath: $.Data.artifactDetails.sourceName
+              - inJsonPath: $.applicableTo
+                outJsonPath: $.Data.artifactDetails.applicableTo
+              - inJsonPath: $.createdDate
+                outJsonPath: $.Data.artifactDetails.createdDate
+              - inJsonPath: $.publishedDate
+                outJsonPath: $.Data.artifactDetails.publishedDate
+              - inJsonPath: $.isActive
+                outJsonPath: $.Data.artifactDetails.isActive
+              - inJsonPath: $.isEvidence
+                outJsonPath: $.Data.artifactDetails.isEvidence
+              - inJsonPath: $.status
+                outJsonPath: $.Data.artifactDetails.status
+              - inJsonPath: $.filingType
+                outJsonPath: $.Data.artifactDetails.filingType
+              - inJsonPath: $.isVoid
+                outJsonPath: $.Data.artifactDetails.isVoid
+              - inJsonPath: $.reason
+                outJsonPath: $.Data.artifactDetails.reason
+              - inJsonPath: $.file
+                outJsonPath: $.Data.artifactDetails.file
+              - inJsonPath: $.seal
+                outJsonPath: $.Data.artifactDetails.seal
+              - inJsonPath: $.description
+                outJsonPath: $.Data.artifactDetails.description
+              - inJsonPath: $.artifactDetails
+                outJsonPath: $.Data.artifactDetails.artifactDetails
+              - inJsonPath: $.searchableFields
+                outJsonPath: $.Data.artifactDetails.searchableFields
+              - inJsonPath: $.comments
+                outJsonPath: $.Data.artifactDetails.comments
+              - inJsonPath: $.additionalDetails
+                outJsonPath: $.Data.artifactDetails.additionalDetails
+              - inJsonPath: $.auditdetails
+                outJsonPath: $.Data.artifactDetails.auditdetails
+              - inJsonPath: $.workflow
+                outJsonPath: $.Data.artifactDetails.workflow
