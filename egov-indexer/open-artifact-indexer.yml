@@ -2,7 +2,7 @@ ServiceMaps:
   serviceName: Transformer
   version: 1.0.0
   mappings:
-    - topic: save-artifact-topic
+    - topic: open-artifact-topic
       configKey: INDEX
       indexes:
         - name: open-artifact-index
