@@ -1,0 +1,134 @@
+{
+  "key": "new-witness-deposition",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "DEPOSITION OF WITNESSES",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "text": "(Chapter XXII, Criminal Procedure Code)",
+                    "style": "applicationDescription"
+                  },
+                  {
+                    "text": "{{courtComplex}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{caseNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Deposition of {{witnessType}} Witness of {{partyName}}",
+                    "style": "bodyText",
+                    "margin": [0, 20, 0, 0]
+                  },
+                  {
+                    "text": "Name: {{witnessName}}",
+                    "style": "bodyText",
+                    "margin": [0, 10, 0, 10]
+                  },
+                  {
+                    "text": "Father's Name: {{witnessFatherName}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Address: {{witnessAddress}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Calling: {{witnessDesignation}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Age: {{witnessAge}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Solemnly affirmed on the {{date}} day of {{month}}, {{year}}",
+                    "style": "content"
+                  },
+                  {
+                    "text": "{{depositionType}}",
+                    "style": "content"
+                  },
+                  {
+                    "text": "{{witnessDeposition}}",
+                    "style": "deposition"
+                  },
+                  {
+                    "text": "{{witnessPlaceholder}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Certified that the statement is typed down by me in my personal laptop read over to the witness and admitted by her to be correct.",
+                    "style": "bodyText",
+                    "leadingIndent": 40
+                  },
+                  {
+                    "text": "{{judgePlaceholder}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "applicationTitle": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 20, 0, 10]
+      },
+      "applicationDescription": {
+        "fontSize": 15,
+        "italics": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 10]
+      },
+      "header": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 2, 0, 2]
+      },
+      "subjectText": {
+        "fontSize": 13,
+        "margin": [0, 20, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 13,
+        "margin": [0, 10, 0, 10]
+      },
+      "content": {
+        "fontSize": 13,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "deposition": {
+        "fontSize": 13,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "signature": {
+        "fontSize": 13,
+        "alignment": "right",
+        "margin": [0, 80, 0, 10]
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "key": "new-hearing-date-after-rescheduling-qr",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+           "direct": [
+              {
+                "variable": "courtComplex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "witnessType",
+                "value": {
+                  "path": "$.witnessType"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "witnessName",
+                "value": {
+                  "path": "$.witnessName"
+                }
+              },
+              {
+                "variable": "witnessFatherName",
+                "value": {
+                  "path": "$.witnessFatherName"
+                }
+              },
+              {
+                "variable": "witnessAddress",
+                "value": {
+                  "path": "$.witnessAddress"
+                }
+              },
+              {
+                "variable": "witnessDesignation",
+                "value": {
+                  "path": "$.witnessDesignation"
+                }
+              },
+              {
+                "variable": "witnessAge",
+                "value": {
+                  "path": "$.witnessAge"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
+                "variable": "depositionType",
+                "value": {
+                  "path": "$.depositionType"
+                }
+              },
+              {
+                "variable": "witnessDeposition",
+                "value": {
+                  "path": "$.witnessDeposition"
+                }
+              },
+              {
+                "variable": "witnessPlaceholder",
+                "value": {
+                  "path": "$.witnessPlaceholder"
+                }
+              },
+              {
+                "variable": "judgePlaceholder",
+                "value": {
+                  "path": "$.judgePlaceholder"
+                }
+              }
+            ]
+          },
+          {
+            "qrcodeConfig": [
+              {
+                "variable": "qrCodeImage",
+                "value": "{{qrCodeUrl}}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
