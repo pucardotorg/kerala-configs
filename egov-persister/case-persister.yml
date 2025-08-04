@@ -760,3 +760,77 @@ serviceMaps:
             - jsonPath: $.cases.auditDetails.lastModifiedBy
             - jsonPath: $.cases.auditDetails.lastModifiedTime
             - jsonPath: $.cases.id
+
+    - version: 1.0
+      description: Persists new or update poa holder for a case
+      fromTopic: poa-join-case
+      isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objecIdJsonPath: $.filingNumber
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: poaHolders
+      queryMaps:
+        - query: INSERT INTO dristi_case_poaholders(id,tenant_id,case_id,individual_id,poa_type,name,is_active,additional_details,hasSigned,representing_litigants,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) do update set
+            tenant_id = EXCLUDED.tenant_id,
+            case_id = EXCLUDED.case_id,
+            individual_id = EXCLUDED.individual_id,
+            poa_type = EXCLUDED.poa_type,
+            name = EXCLUDED.name,
+            is_active = EXCLUDED.is_active,
+            additional_details = EXCLUDED.additional_details,
+            hasSigned = EXCLUDED.hasSigned,
+            representing_litigants = EXCLUDED.representing_litigants,
+            created_by = EXCLUDED.created_by,
+            last_modified_by = EXCLUDED.last_modified_by,
+            created_time = EXCLUDED.created_time,
+            last_modified_time = EXCLUDED.last_modified_time;
+          basePath: poaHolders.*
+          jsonMaps:
+            - jsonPath: $.poaHolders.*.id
+            - jsonPath: $.poaHolders.*.tenantId
+            - jsonPath: $.poaHolders.*.caseId
+            - jsonPath: $.poaHolders.*.individualId
+            - jsonPath: $.poaHolders.*.poaType
+            - jsonPath: $.poaHolders.*.name
+            - jsonPath: $.poaHolders.*.isActive
+            - jsonPath: $.poaHolders.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.poaHolders.*.hasSigned
+            - jsonPath: $.poaHolders.*.representingLitigants
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.poaHolders.*.auditDetails.createdBy
+            - jsonPath: $.poaHolders.*.auditDetails.lastModifiedBy
+            - jsonPath: $.poaHolders.*.auditDetails.createdTime
+            - jsonPath: $.poaHolders.*.auditDetails.lastModifiedTime
+
+        - query: INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType,isActive, poaholder_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) do update set
+            fileStore = EXCLUDED.fileStore,
+            documentUid = EXCLUDED.documentUid,
+            documentType = EXCLUDED.documentType,
+            isActive=EXCLUDED.isActive,
+            poaholder_id = EXCLUDED.poaholder_id,
+            additionalDetails = EXCLUDED.additionalDetails;
+          basePath: poaHolders.*.documents.*
+          jsonMaps:
+            - jsonPath: $.poaHolders.*.documents.*.id
+            - jsonPath: $.poaHolders.*.documents.*.fileStore
+            - jsonPath: $.poaHolders.*.documents.*.documentUid
+            - jsonPath: $.poaHolders.*.documents.*.documentType
+            - jsonPath: $.poaHolders.*.documents.*.isActive
+            - jsonPath: $.poaHolders[*][?({id} in @.documents[*].id)].id
+            - jsonPath: $.poaHolders.*.documents.*.additionalDetails
+              type: JSON
+              dbType: JSONB
+        - query: UPDATE dristi_cases SET additionaldetails = ?, lastmodifiedby = ?, lastmodifiedtime = ? WHERE filingNumber = ?;
+          basePath: $
+          jsonMaps:
+            - jsonPath: $.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.auditDetails.lastModifiedBy
+            - jsonPath: $.auditDetails.lastModifiedTime
+            - jsonPath: $.filingNumber
