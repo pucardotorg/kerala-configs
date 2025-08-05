@@ -95,7 +95,6 @@
       },
       "applicationDescription": {
         "fontSize": 15,
-        "italics": true,
         "alignment": "center",
         "margin": [0, 5, 0, 10]
       },
