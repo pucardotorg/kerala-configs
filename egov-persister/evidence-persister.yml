@@ -131,6 +131,8 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.artifact.seal
+              type: JSON
+              dbType: JSONB
             - jsonPath: $.artifact.evidenceMarkedStatus
             - jsonPath: $.artifact.tag
             - jsonPath: $.artifact.id
