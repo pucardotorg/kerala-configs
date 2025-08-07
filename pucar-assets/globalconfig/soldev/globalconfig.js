@@ -6,8 +6,8 @@
      var localeRegion = "IN";
      var localeDefault = "en";
      var mdmsContext = "mdms-v2";
-     var footerBWLogoURL = "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=17d41de1-7179-452a-b446-2b8ac4571ef2"; 72197a98-3c86-486f-9b45-603a567c066b
-     var footerLogoURL = "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=1b209491-e5f4-46f1-8fce-a84bfae6ec9a"; 1b209491-e5f4-46f1-8fce-a84bfae6ec9a
+     var footerBWLogoURL = "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=17d41de1-7179-452a-b446-2b8ac4571ef2"; 72197a98-3c86-486f-9b45-603a567c066b
+     var footerLogoURL = "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=1b209491-e5f4-46f1-8fce-a84bfae6ec9a"; 1b209491-e5f4-46f1-8fce-a84bfae6ec9a
      var digitHomeURL = "https://www.digit.org/";
      var assetS3Bucket = "pucarfilestore";
      var benchId = "BENCH_ID";
@@ -17,11 +17,11 @@
      var pucarFileStoreBlob = "https://pucarfilestoreuat.blob.core.windows.net"
      var esignUrl = "https://es-staging.cdac.in/esignlevel2/2.1/form/signdoc";
      var WEBSOCKET_ADDRESS = "wss://dristi-kerala-dev.pucar.org/transcription"
-     var requiredDocList = "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=5823408a-edae-4ab3-9c95-f98958fdb294"
-     var errorImage = "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=b7f239f8-3cbf-46a8-8376-2eb5838e2333"
-     var emblemBig = "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=5f153b57-cb05-4a16-ab4e-46bd5b5f38db"
-     var onCourtsLogo = "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=cfab6a6e-8e7c-40cd-970b-733da79807e5"
-     var scrutinyCheckList = "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=96a09f93-307d-411c-8799-b42ee38dd61d"
+     var requiredDocList = "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=5823408a-edae-4ab3-9c95-f98958fdb294"
+     var errorImage = "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=b7f239f8-3cbf-46a8-8376-2eb5838e2333"
+     var emblemBig = "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=5f153b57-cb05-4a16-ab4e-46bd5b5f38db"
+     var onCourtsLogo = "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=cfab6a6e-8e7c-40cd-970b-733da79807e5"
+     var scrutinyCheckList = "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=96a09f93-307d-411c-8799-b42ee38dd61d"
      var invalidEmployeeRoles = ["CBO_ADMIN", "ORG_ADMIN", "ORG_STAFF", "SYSTEM"];
 
      var getConfig = function (key) {
