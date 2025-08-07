@@ -62,12 +62,12 @@
                     "text": "The following litigants have requested the revocation of the previously issued Power(s) of Attorney, and the same has been duly executed and is annexed herewith. The Applicant is facilitating the submission of this revocation for the Court's record:",
                     "style": "bodyText"
                   },
-                  "{{#litigants}}",
+                  "{{#revokePOAlitigants}}",
                   {
                     "text": "Litigant {{index}}: {{name}} ({{designation}})",
                     "style": "bodyText"
                   },
-                  "{{/litigants}}",
+                  "{{/revokePOAlitigants}}",
                   "{{/revokeOfPOA}}",
                   {
                     "text": "The duly executed instruments evidencing the revocation of earlier Power(s) of Attorney and, where applicable, the execution of new ones in favour of the undersigned, are enclosed herewith.",
