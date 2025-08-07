@@ -83,6 +83,12 @@
                 "value": {
                   "path": "$.qrCodeUrl"
                 }
+              },
+              {
+                "variable": "revokePOAlitigants",
+                "value": {
+                  "path": "$.revokePOAlitigants"
+                }
               }
             ]
           },
