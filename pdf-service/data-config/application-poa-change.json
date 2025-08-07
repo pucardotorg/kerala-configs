@@ -77,12 +77,6 @@
                 "value": {
                   "path": "$.litigants"
                 }
-              },
-              {
-                "variable": "revokePOAlitigants",
-                "value": {
-                  "path": "$.revokePOAlitigants"
-                }
               }
             ]
           }
