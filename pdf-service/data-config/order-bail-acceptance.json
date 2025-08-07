@@ -49,24 +49,6 @@
                 }
               },
               {
-                "variable": "applicantName",
-                "value": {
-                  "path": "$.applicantName"
-                }
-              },
-              {
-                "variable": "dateOfApplication",
-                "value": {
-                  "path": "$.dateOfApplication"
-                }
-              },
-              {
-                "variable": "briefSummaryOfBail",
-                "value": {
-                  "path": "$.briefSummaryOfBail"
-                }
-              },
-              {
                 "variable": "date",
                 "value": {
                   "path": "$.date"
@@ -79,17 +61,15 @@
                 }
               },
               {
-                "variable": "documentList",
-                "value": {
-                  "path": "$.documentList"
-                },
-                "type": "index",
-                "format": "var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
-              },
-              {
                 "variable": "bailType",
                 "value": {
                   "path": "$.bailType"
+                }
+              },
+              {
+                "variable": "briefSummaryOfBail",
+                "value": {
+                  "path": "$.briefSummaryOfBail"
                 }
               },
               {
