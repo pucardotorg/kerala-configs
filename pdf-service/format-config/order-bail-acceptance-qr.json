@@ -30,7 +30,7 @@
                     "style": "date"
                   },
                   {
-                    "text": "This matter comes before the Court for Bail requested by {{partyName}}",
+                    "text": "This matter comes before the Court for Bail requested by {{partyName}} for {{briefSummaryOfBail}}",
                     "style": "contentText"
                   },
                   {

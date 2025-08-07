@@ -67,6 +67,12 @@
                 }
               },
               {
+                "variable": "briefSummaryOfBail",
+                "value": {
+                  "path": "$.briefSummaryOfBail"
+                }
+              },
+              {
                 "variable": "conditionOfBail",
                 "value": {
                   "path": "$.conditionOfBail"
