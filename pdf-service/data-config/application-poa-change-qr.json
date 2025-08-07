@@ -1,0 +1,101 @@
+{
+  "key": "application-poa-change-qr",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtComplex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "prayer",
+                "value": {
+                  "path": "$.prayer"
+                }
+              },
+              {
+                "variable": "appointementOfPOA",
+                "value": {
+                  "path": "$.appointementOfPOA"
+                }
+              },
+              {
+                "variable": "revokeOfPOA",
+                "value": {
+                  "path": "$.revokeOfPOA"
+                }
+              },
+              {
+                "variable": "signPlaceHolder",
+                "value": {
+                  "path": "$.signPlaceHolder"
+                }
+              },
+              {
+                "variable": "litigants",
+                "value": {
+                  "path": "$.litigants"
+                }
+              },
+              {
+                "variable": "qrCodeUrl",
+                "value": {
+                  "path": "$.qrCodeUrl"
+                }
+              }
+            ]
+          },
+          {
+            "qrcodeConfig": [
+              {
+                "variable": "qrCodeImage",
+                "value": "{{qrCodeUrl}}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
