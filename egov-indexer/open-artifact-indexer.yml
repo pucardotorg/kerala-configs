@@ -92,3 +92,7 @@ ServiceMaps:
                 outJsonPath: $.Data.artifactDetails.workflow
               - inJsonPath: $.evidenceMarkedStatus
                 outJsonPath: $.Data.artifactDetails.evidenceMarkedStatus
+              - inJsonPath: $.isEvidenceMarkedFlow
+                outJsonPath: $.Data.artifactDetails.isEvidenceMarkedFlow
+              - inJsonPath: $.tag
+                outJsonPath: $.Data.artifactDetails.tag
