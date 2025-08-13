@@ -95,6 +95,34 @@
                   "path": "$.attachmentText",
                   "defaultValue": "NA"
                 }
+              },
+              {
+                "variable": "partyType",
+                "value": {
+                  "path": "$.partyType",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "chargeDays",
+                "value": {
+                  "path": "$.chargeDays",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "village",
+                "value": {
+                  "path": "$.village",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "district",
+                "value": {
+                  "path": "$.district",
+                  "defaultValue": "NA"
+                }
               }
             ]
           }
