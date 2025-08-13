@@ -1,5 +1,5 @@
 {
-  "key": "order-bail-acceptance-qr",
+  "key": "bail-bond-qr",
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
@@ -13,21 +13,15 @@
           {
             "direct": [
               {
-                "variable": "courtName",
+                "variable": "orderHeading",
                 "value": {
-                  "path": "$.courtName"
+                  "path": "$.orderHeading"
                 }
               },
               {
-                "variable": "courtPlace",
+                "variable": "caseName",
                 "value": {
-                  "path": "$.courtPlace"
-                }
-              },
-              {
-                "variable": "state",
-                "value": {
-                  "path": "$.state"
+                  "path": "$.caseName"
                 }
               },
               {
@@ -43,39 +37,87 @@
                 }
               },
               {
-                "variable": "caseName",
+                "variable": "litigantName",
                 "value": {
-                  "path": "$.caseName"
+                  "path": "$.litigantName"
+                }
+              },
+              {
+                "variable": "litigantFatherName",
+                "value": {
+                  "path": "$.litigantFatherName"
+                }
+              },
+              {
+                "variable": "litigantAddress",
+                "value": {
+                  "path": "$.litigantAddress"
+                }
+              },
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "caseType",
+                "value": {
+                  "path": "$.caseType"
+                }
+              },
+              {
+                "variable": "bailAmount",
+                "value": {
+                  "path": "$.bailAmount"
+                }
+              },
+              {
+                "variable": "accusedSignature",
+                "value": {
+                  "path": "$.accusedSignature"
+                }
+              },
+              {
+                "variable": "sureties",
+                "value": {
+                  "path": "$.sureties"
+                }
+              },
+              {
+                "variable": "suretyName",
+                "value": {
+                  "path": "$.suretyName"
+                }
+              },
+              {
+                "variable": "suretyParentName",
+                "value": {
+                  "path": "$.suretyParentName"
+                }
+              },
+              {
+                "variable": "suretyAddress",
+                "value": {
+                  "path": "$.suretyAddress"
+                }
+              },
+              {
+                "variable": "litigantName",
+                "value": {
+                  "path": "$.litigantName"
+                }
+              },
+              {
+                "variable": "index",
+                "value": {
+                  "path": "$.index"
                 }
               },
               {
                 "variable": "date",
                 "value": {
                   "path": "$.date"
-                }
-              },
-              {
-                "variable": "partyName",
-                "value": {
-                  "path": "$.partyName"
-                }
-              },
-              {
-                "variable": "bailType",
-                "value": {
-                  "path": "$.bailType"
-                }
-              },
-              {
-                "variable": "briefSummaryOfBail",
-                "value": {
-                  "path": "$.briefSummaryOfBail"
-                }
-              },
-              {
-                "variable": "conditionOfBail",
-                "value": {
-                  "path": "$.conditionOfBail"
                 }
               },
               {
@@ -88,24 +130,6 @@
                 "variable": "judgeName",
                 "value": {
                   "path": "$.judgeName"
-                }
-              },
-              {
-                "variable": "courtSeal",
-                "value": {
-                  "path": "$.courtSeal"
-                }
-              },
-              {
-                "variable": "qrCodeUrl",
-                "value": {
-                  "path": "$.qrCodeUrl"
-                }
-              },
-              {
-                "variable": "orderHeading",
-                "value": {
-                  "path": "$.orderHeading"
                 }
               },
               {

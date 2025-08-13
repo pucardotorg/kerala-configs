@@ -1,0 +1,147 @@
+{
+  "key": "bail-bond",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "orderHeading",
+                "value": {
+                  "path": "$.orderHeading"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear"
+                }
+              },
+              {
+                "variable": "litigantName",
+                "value": {
+                  "path": "$.litigantName"
+                }
+              },
+              {
+                "variable": "litigantFatherName",
+                "value": {
+                  "path": "$.litigantFatherName"
+                }
+              },
+              {
+                "variable": "litigantAddress",
+                "value": {
+                  "path": "$.litigantAddress"
+                }
+              },
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "caseType",
+                "value": {
+                  "path": "$.caseType"
+                }
+              },
+              {
+                "variable": "bailAmount",
+                "value": {
+                  "path": "$.bailAmount"
+                }
+              },
+              {
+                "variable": "accusedSignature",
+                "value": {
+                  "path": "$.accusedSignature"
+                }
+              },
+              {
+                "variable": "sureties",
+                "value": {
+                  "path": "$.sureties"
+                }
+              },
+              {
+                "variable": "suretyName",
+                "value": {
+                  "path": "$.suretyName"
+                }
+              },
+              {
+                "variable": "suretyParentName",
+                "value": {
+                  "path": "$.suretyParentName"
+                }
+              },
+              {
+                "variable": "suretyAddress",
+                "value": {
+                  "path": "$.suretyAddress"
+                }
+              },
+              {
+                "variable": "litigantName",
+                "value": {
+                  "path": "$.litigantName"
+                }
+              },
+              {
+                "variable": "index",
+                "value": {
+                  "path": "$.index"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "judgeDesignation",
+                "value": {
+                  "path": "$.judgeDesignation"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
