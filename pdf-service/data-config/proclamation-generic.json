@@ -95,6 +95,13 @@
                   "path": "$.proclamationText",
                   "defaultValue": "NA"
                 }
+              },
+              {
+                "variable": "partyType",
+                "value": {
+                  "path": "$.partyType",
+                  "defaultValue": "NA"
+                }
               }
             ]
           }

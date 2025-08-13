@@ -10,15 +10,19 @@
               {
                 "stack": [
                   {
-                    "text": "FORM NO. 2",
+                    "text": "FORM NO. 8",
                     "style": "form-no"
                   },
                   {
-                    "text": "ATTACHMENT",
+                    "text": "ORDER AUTHORISING AN ATTACHMENT BY THE DISTRICT MAGISTRATE OR COLLECTOR",
                     "style": "document-title"
                   },
                   {
-                    "text": "IN THE {{courtName}}",
+                    "text": "(See Section 85)",
+                    "style": "section-note"
+                  },
+                  {
+                    "text": "In the {{courtName}}",
                     "style": "form-sub-header"
                   },
                   {
@@ -41,18 +45,13 @@
           "body": [
             [
               {
-                "text": "To SHO, {{executorName}},",
+                "text": "WHEREAS complaint has been made before me that {{partyType}} {{respondentName}} of {{respondentAddress}} has committed (or is suspected to have committed) an offence punishable under section 138 of Negotiable Instruments Act 1881, and it has been returned to a warrant of arrest thereupon issued that the said {{respondentName}} cannot be found; and whereas it has been shown to my satisfaction that the said {{respondentName}} has absconded (or is concealing himself to avoid the service of the said warrant) and thereupon a Proclamation has been or is being duly issued and published requiring the said {{respondentName}} to appear to answer the said charge within {{chargeDays}} days; and whereas the said {{respondentName}} is possessed of certain land paying revenue to Government in the village (or town) of {{village}}, in the District of {{district}}",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": [
-                  {
-                    "text": "{{attachmentText}}",
-                    "bold": true
-                  }
-                ],
+                "text": "You are hereby authorised and requested to cause the said land to be attached, in the manner specified in clause (a), or clause (c), or both, of sub-section (4) of section 85, and to be held under attachment pending the further order of this Court, and to certify without delay what you may have done in pursuance of this order.",
                 "style": "form-sub-body"
               }
             ]
@@ -64,15 +63,21 @@
       {
         "style": "footer-content",
         "table": {
-          "widths": ["*"],
+          "widths": ["50%", "50%"],
           "body": [
             [
               {
-                "text": "Dated, this {{issueDate}}.",
-                "style": "footer-text"
-              }
+                "text": "Dated this {{issueDate}}.",
+                "style": "footer-text",
+                "colSpan": 2
+              },
+              {}
             ],
             [
+              {
+                "text": "(Seal of the Court)",
+                "style": "footer-seal"
+              },
               {
                 "text": "Signature",
                 "style": "footer-signature"
@@ -91,32 +96,31 @@
       }
     ],
     "styles": {
-      "tl-head": {
-        "fillColor": "white",
-        "margin": [-41, -41, -41, 0]
+      "form-no": {
+        "fontSize": 11,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
       },
       "document-title": {
         "bold": true,
-        "margin": [0, 10, 0, 10]
+        "fontSize": 13,
+        "alignment": "center",
+        "margin": [0, 0, 0, 3]
       },
-      "form-header": {
-        "color": "#484848",
-        "fontFamily": "Roboto",
-        "fontSize": 16,
-        "bold": true,
-        "letterSpacing": 0.74
+      "section-note": {
+        "fontSize": 10,
+        "alignment": "center",
+        "margin": [0, 0, 0, 10]
       },
       "form-sub-header": {
-        "color": "#484848",
-        "fontFamily": "Roboto",
-        "fontSize": 13,
-        "letterSpacing": 1.6,
-        "margin": [0, 10, 0, 0]
+        "fontSize": 11,
+        "alignment": "center",
+        "margin": [0, 3, 0, 3]
       },
       "form-body": {
         "fontSize": 12,
         "color": "#484848",
-        "margin": [-25, 18, -8, -8]
+        "margin": [0, 10, 0, 10]
       },
       "form-sub-body": {
         "fontSize": 12,
@@ -125,29 +129,25 @@
       "form-sub-body-right": {
         "fontSize": 12,
         "color": "#484848",
-        "alignment": "right"
+        "margin": [0, 10, 0, 10],
+        "alignment": "justify"
       },
       "footer-content": {
         "color": "#484848",
         "fontSize": 11,
-        "margin": [30, -20, 0, 0]
+        "color": "#484848"
       },
       "footer-text": {
-        "margin": [0, 15, 0, 15],
-        "bold": true,
-        "color": "#000000",
+        "margin": [0, 10, 0, 10],
+        "bold": false,
         "alignment": "left"
       },
       "footer-seal": {
-        "margin": [0, 15, 0, 20],
-        "bold": true,
-        "color": "#000000",
+        "margin": [0, 20, 0, 0],
         "alignment": "left"
       },
       "footer-signature": {
-        "margin": [0, 50, 0, 0],
-        "bold": true,
-        "color": "#000000",
+        "margin": [0, 20, 0, 0],
         "alignment": "right"
       }
     }
