@@ -1,0 +1,58 @@
+{
+    "key": "evidence",
+    "DataConfigs": {
+      "serviceName": "rainmaker-common",
+      "version": "1.0.0",
+      "baseKeyPath": "$.Data.*",
+      "entityIdPath": "$.id",
+      "isCommonTableBorderRequired": true,
+      "mappings": [
+        {
+          "topic": "common-pdf-generation-3",
+          "mappings": [
+            {
+              "direct": [
+                {
+                  "variable": "courtName",
+                  "value": {
+                    "path": "$.courtName"
+                  }
+                },
+                {
+                  "variable": "caseNumber",
+                  "value": {
+                    "path": "$.caseNumber"
+                  }
+                },
+                {
+                  "variable": "markedAs",
+                  "value": {
+                    "path": "$.markedAs"
+                  }
+                },
+                {
+                  "variable": "markedThrough",
+                  "value": {
+                    "path": "$.markedThrough"
+                  }
+                },
+                {
+                  "variable": "date",
+                  "value": {
+                    "path": "$.date"
+                  }
+                },
+                {
+                  "variable": "judgeSignature",
+                  "value": {
+                    "path": "$.judgeSignature"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
