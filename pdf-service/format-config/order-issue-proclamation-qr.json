@@ -3,6 +3,9 @@
   "config": {
     "content": [
       {
+        "text": "Order for S84"
+      },
+      {
         "table": {
           "widths": [
             "*"
@@ -82,7 +85,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{additionalComments}}",
+                    "text": "{{reasonForProclamation}}",
                     "style": "bodyText"
                   },
                   {
