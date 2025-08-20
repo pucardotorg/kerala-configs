@@ -3,6 +3,9 @@
   "config": {
     "content": [
       {
+        "text": "Order for S85"
+      },
+      {
         "table": {
           "widths": [
             "*"
@@ -82,7 +85,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{additionalComments}}",
+                    "text": "{{reasonForAttachment}}",
                     "style": "bodyText"
                   },
                   {
