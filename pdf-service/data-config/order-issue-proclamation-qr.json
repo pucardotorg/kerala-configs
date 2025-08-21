@@ -1,0 +1,107 @@
+{
+  "key": "order-issue-proclamation-qr",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "reasonForProclamation",
+                "value": {
+                  "path": "$.reasonForProclamation"
+                }
+              },
+              {
+                "variable": "personName",
+                "value": {
+                  "path": "$.personName"
+                }
+              },
+              {
+                "variable": "additionalComments",
+                "value": {
+                  "path": "$.additionalComments"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "orderHeading",
+                "value": {
+                  "path": "$.orderHeading"
+                }
+              },
+              {
+                "variable": "judgeDesignation",
+                "value": {
+                  "path": "$.judgeDesignation"
+                }
+              },
+              {
+                "variable": "qrCodeUrl",
+                "value": {
+                  "path": "$.qrCodeUrl"
+                }
+              },
+              {
+                "variable": "isTemplateType",
+                "value": {
+                  "path": "$.isTemplateType"
+                }
+              }
+            ]
+          },
+          {
+            "qrcodeConfig": [
+              {
+                "variable": "qrCodeImage",
+                "value": "{{qrCodeUrl}}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

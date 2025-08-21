@@ -1,0 +1,121 @@
+{
+  "key": "application-witness-deposition-qr",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtComplex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "addressOfTheCourt",
+                "value": {
+                  "path": "$.addressOfTheCourt"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              },
+              {
+                "variable": "advocateName",
+                "value": {
+                  "path": "$.advocateName"
+                }
+              },
+              {
+                "variable": "witnessList",
+                "value": {
+                  "path": "$.witnessList"
+                },
+                "type": "function",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              },
+              {
+                "variable": "day",
+                "value": {
+                  "path": "$.day"
+                }
+              },
+              {
+                "variable": "month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
+                "variable": "advocateSignature",
+                "value": {
+                  "path": "$.advocateSignature"
+                }
+              },
+              {
+                "variable": "barRegistrationNumber",
+                "value": {
+                  "path": "$.barRegistrationNumber"
+                }
+              },
+              {
+                "variable": "qrCodeUrl",
+                "value": {
+                  "path": "$.qrCodeUrl"
+                }
+              }
+            ]
+          },
+          {
+            "qrcodeConfig": [
+              {
+                "variable": "qrCodeImage",
+                "value": "{{qrCodeUrl}}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

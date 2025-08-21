@@ -1,0 +1,95 @@
+{
+  "key": "evidence",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "FORM NO. 16A",
+                    "style": "form-header"
+                  },
+                  {
+                    "text": "Form of seal to be affixed in Exhibits",
+                    "style": "form-header"
+                  },
+                  {
+                    "text": "(Rule 62(5) Criminal Rules of Practice, Kerala)",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "{{courtName}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Marked As: {{markedAs}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Marked through: {{markedThrough}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "(whether subject to proof)",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Date: {{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "form-header": {
+        "fontFamily": "Roboto",
+        "fontSize": 16,
+        "bold": true,
+        "letterSpacing": 0.5,
+        "alignment": "center"
+      },
+      "form-sub-header": {
+        "fontFamily": "Roboto",
+        "fontSize": 13,
+        "letterSpacing": 0.6,
+        "alignment": "center",
+        "margin": [0, 5, 0, 30]
+      },
+      "bodyText": {
+        "fontSize": 13,
+        "letterSpacing": 0.6,
+        "alignment": "left",
+        "margin": [0, 5, 0, 0]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 50, 0, 0]
+      }
+    }
+  }
+}
