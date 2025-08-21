@@ -834,3 +834,27 @@ serviceMaps:
             - jsonPath: $.auditDetails.lastModifiedBy
             - jsonPath: $.auditDetails.lastModifiedTime
             - jsonPath: $.filingNumber
+
+    - version: 1.0
+      description: updating long pending register cases details
+      fromTopic: lpr-case-details-update
+      isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objecIdJsonPath: $.filingNumber
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: $
+      queryMaps:
+        - query: UPDATE dristi_cases SET lprNumber = ?, isLPRCase = ?, courtCaseNumber = ?, stage = ?, substage = ?, courtCaseNumberBackup = ?, stageBackup = ?, substageBackup = ? WHERE filingNumber = ?;
+          basePath: cases
+          jsonMaps:
+            - jsonPath: $.cases.lprNumber
+            - jsonPath: $.cases.isLPRCase
+            - jsonPath: $.cases.courtCaseNumber
+            - jsonPath: $.cases.stage
+            - jsonPath: $.cases.substage
+            - jsonPath: $.cases.courtCaseNumberBackup
+            - jsonPath: $.cases.stageBackup
+            - jsonPath: $.cases.substageBackup
+            - jsonPath: $.cases.filingNumber
