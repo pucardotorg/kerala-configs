@@ -69,7 +69,18 @@
                           }
                         ],
                         "{{/complainantList}}",
-                        [],
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
                         "{{#accusedList}}",
                         [
                           {
