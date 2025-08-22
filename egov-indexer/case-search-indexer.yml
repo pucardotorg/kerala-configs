@@ -54,5 +54,7 @@ ServiceMaps:
                 outJsonPath: $.Data.caseDetails.registrationDate
               - inJsonPath: $.caseSubStage
                 outJsonPath: $.Data.caseDetails.caseSubStage
+              - inJsonPath: $.outcome
+                outJsonPath: $.Data.caseDetails.outcome
 
 
