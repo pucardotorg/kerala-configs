@@ -121,6 +121,18 @@
                         "{{/accusedList}}",
                         [
                           {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        [
+                          {
                             "text": "Offence",
                             "style": "tableText",
                             "border": [true, true, true, true]
