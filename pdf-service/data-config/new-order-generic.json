@@ -94,24 +94,10 @@
                   "path": "$.nextHearingDate"
                 }
               },
-              
               {
                 "variable": "judgeSignature",
                 "value": {
                   "path": "$.judgeSignature"
-                }
-              },
-               {
-                "variable": "judgeName",
-                "value": {
-                  "path": "$.judgeName"
-                }
-              },
-              
-              {
-                "variable": "judgeDesignation",
-                "value": {
-                  "path": "$.judgeDesignation"
                 }
               }
             ]
