@@ -19,6 +19,8 @@ serviceMaps:
             - jsonPath: $.order.id
             - jsonPath: $.order.tenantId
             - jsonPath: $.order.attendance
+              type: JSON
+              dbType: JSONB
             - jsonPath: $.order.itemText
             - jsonPath: $.order.purposeOfNextHearing
             - jsonPath: $.order.nextHearingDate
@@ -107,6 +109,8 @@ serviceMaps:
           jsonMaps:
             - jsonPath: $.order.tenantId
             - jsonPath: $.order.attendance
+              type: JSON
+              dbType: JSONB
             - jsonPath: $.order.itemText
             - jsonPath: $.order.purposeOfNextHearing
             - jsonPath: $.order.nextHearingDate
