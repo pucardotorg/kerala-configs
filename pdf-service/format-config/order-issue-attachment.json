@@ -32,7 +32,7 @@
                     "style": "applicationTitle"
                   },
                   {
-                    "text": "Attachment for Person Absconding",
+                    "text": "Attachment of property of person absconding",
                     "decoration": "underline",
                     "style": "subTitle"
                   },
@@ -57,7 +57,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "WHEREAS, the Court has determined that sufficient grounds exist for the issuance of Attachment for Person Absconding.",
+                    "text": "WHEREAS, the Court has determined that sufficient grounds exist for the issuance of an attachment of property of person absconding.",
                     "style": "bodyText"
                   },
                   {
@@ -65,7 +65,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "A Attachment for Person Absconding is issued for the party {{personName}} is hereby ISSUED.",
+                    "text": "An attachment of property of person absconding is issued for the party {{personName}} is hereby ISSUED.",
                     "style": "bodyText"
                   },
                   {
@@ -197,7 +197,7 @@
           0,
           10,
           0,
-          10
+          5
         ]
       },
       "additionalComments": {
