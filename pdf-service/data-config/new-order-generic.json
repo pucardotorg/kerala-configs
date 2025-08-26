@@ -65,6 +65,12 @@
                 }
               },
               {
+                "variable": "isNextHearing",
+                "value": {
+                  "path": "$.isNextHearing"
+                }
+              },
+              {
                 "variable": "listOfPresentAttendees",
                 "value": {
                   "path": "$.listOfPresentAttendees"

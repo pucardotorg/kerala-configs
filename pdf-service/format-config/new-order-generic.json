@@ -164,7 +164,7 @@
                     "text": "{{itemText}}",
                     "style": "body"
                   },
-                  "{{#isHearingInProgress}}",
+                  "{{#isNextHearing}}",
                   {
                     "text": "Purpose of Next Hearing: {{purposeOfNextHearing}}",
                     "style": "content"
@@ -173,7 +173,7 @@
                     "text": "Date of Next Hearing: {{nextHearingDate}}",
                     "style": "body"
                   },
-                  "{{/isHearingInProgress}}",
+                  "{{/isNextHearing}}",
                   {
                     "text": "{{judgeSignature}}",
                     "style": "judgeSignature"
