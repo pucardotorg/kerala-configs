@@ -63,7 +63,7 @@
                 return judgeName;
             } else if (key === "MOCKENABLED") {
                 return mockEnabled;
-            } else if (key === "MOCKESIGNENABLED") {
+            } else if (key === "mockESignEnabled") {
                 return mockESignEnabled;
             } else if (key === "ESIGN_URL") {
                 return esignUrl;
