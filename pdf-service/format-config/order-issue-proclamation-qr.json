@@ -1,7 +1,10 @@
 {
-  "key": "order-issue-proclamation",
+  "key": "order-issue-proclamation-qr",
   "config": {
     "content": [
+      {
+        "text": "Order for S84"
+      },
       {
         "table": {
           "widths": [
@@ -62,7 +65,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "A Proclamation for Person Absconding is issued for the party {{personName}} is hereby ISSUED.",
+                    "text": "A Proclamation for Person Absconding against the party {{personName}} is hereby ISSUED.",
                     "style": "bodyText"
                   },
                   {
@@ -82,7 +85,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{additionalComments}}",
+                    "text": "{{reasonForProclamation}}",
                     "style": "bodyText"
                   },
                   {
@@ -213,7 +216,7 @@
           0,
           10,
           0,
-          10
+          5
         ]
       },
       "additionalComments": {

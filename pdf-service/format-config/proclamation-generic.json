@@ -45,7 +45,7 @@
           "body": [
             [
               {
-                "text": "WHEREAS complaint has been made before me that {{partyType}} {{respondentName}} of {{respondentAddress}} has committed (or is suspected to have committed) an offence punishable under section 138 of Negotiable Instruments Act 1881, and it has been returned to a warrant of arrest thereupon issued that the said {{respondentName}} cannot be found; and whereas it has been shown to my satisfaction that the said {{respondentName}} has absconded (or is concealing himself to avoid the service of the said warrant)",
+                "text": "WHEREAS complaint has been made before me that {{partyType}} {{respondentName}} of {{respondentAddress}} has committed (or is suspected to have committed) an offence punishable under section 138 of Negotiable Instruments Act 1881, and it has been returned to a warrant of arrest thereupon issued that the said {{respondentName}} cannot be found; and whereas it has been shown to my satisfaction that the said {{respondentName}} has absconded (or is concealing himself to avoid the service of the said warranty)",
                 "style": "form-sub-body"
               }
             ],

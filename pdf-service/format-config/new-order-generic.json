@@ -1,0 +1,246 @@
+{
+  "key": "new-order-generic",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "{{orderHeading}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "PRESENT {{judgeName}}, {{judgeDesignation}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{date}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 10, 0, 15]
+                  },
+                  {
+                    "style": "table",
+                    "table": {
+                      "widths": ["30%", "70%"],
+                      "body": [
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "text": "Complainant {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{address}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/complainantList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        "{{#accusedList}}",
+                        [
+                          {
+                            "text": "Accused {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{address}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/accusedList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Offence",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "S. 138 of the Negotiable Instruments Act, 1881",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "text": "ORDER",
+                    "style": "orderTitle"
+                  },
+                  "{{#isHearingInProgress}}",
+                  {
+                    "text": "Present: {{listOfPresentAttendees}}",
+                    "style": "content"
+                  },
+                  {
+                    "text": "Absent: {{listOfAbsentAttendees}}",
+                    "style": "body"
+                  },
+                  "{{/isHearingInProgress}}",
+                  {
+                    "text": "{{itemText}}",
+                    "style": "body"
+                  },
+                  "{{#isNextHearing}}",
+                  {
+                    "text": "Purpose of Next Hearing: {{purposeOfNextHearing}}",
+                    "style": "content"
+                  },
+                  {
+                    "text": "Date of Next Hearing: {{nextHearingDate}}",
+                    "style": "body"
+                  },
+                  "{{/isNextHearing}}",
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "judgeSignature"
+                  },
+                  {
+                    "text": "{{judgeName}}",
+                    "style": "content"
+                  },
+                  {
+                    "text": "{{judgeDesignation}}",
+                    "style": "content"
+                  },
+                  {
+                    "text": "{{orderHeading}}",
+                    "style": "courtDetails"
+                  },
+                  {
+                    "text": "Date: {{date}}",
+                    "style": "content"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "table": {
+        "fontSize": 13
+      },
+      "tableText": {
+        "fontSize": 13,
+        "margin": [5, 10, 5, 10]
+      },
+      "orderTitle": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 15, 0, 15]
+      },
+      "content": {
+        "fontSize": 13
+      },
+      "body": {
+        "fontSize": 13,
+        "margin": [0, 0, 0, 20]
+      },
+      "judgeSignature": {
+        "fontSize": 13,
+        "alignment": "left",
+        "margin": [0, 40, 0, 20]
+      },
+      "courtDetails": {
+        "fontSize": 13,
+        "alignment": "left",
+        "margin": [0, 20, 0, 0]
+      }
+    }
+  }
+}
