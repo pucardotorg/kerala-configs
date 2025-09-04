@@ -1,5 +1,5 @@
 {
-  "key": "proclamation-generic",
+  "key": "attachment-generic",
   "config": {
     "content": [
       {
@@ -10,15 +10,15 @@
               {
                 "stack": [
                   {
-                    "text": "FORM NO. 4",
+                    "text": "FORM NO. 8",
                     "style": "form-no"
                   },
                   {
-                    "text": "PROCLAMATION REQUIRING THE APPEARANCE OF A PERSON ACCUSED",
+                    "text": "ORDER AUTHORISING AN ATTACHMENT BY THE DISTRICT MAGISTRATE OR COLLECTOR",
                     "style": "document-title"
                   },
                   {
-                    "text": "(See Section 84)",
+                    "text": "(See Section 85)",
                     "style": "section-note"
                   },
                   {
@@ -45,13 +45,19 @@
           "body": [
             [
               {
-                "text": "WHEREAS complaint has been made before me that {{partyType}} {{respondentName}} of {{respondentAddress}} has committed (or is suspected to have committed) an offence punishable under section 138 of Negotiable Instruments Act 1881, and it has been returned to a warrant of arrest thereupon issued that the said {{respondentName}} cannot be found; and whereas it has been shown to my satisfaction that the said {{respondentName}} has absconded (or is concealing himself to avoid the service of the said warranty)",
+                "text": "To The District Magistrate/Collector of the District of {{district}}",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": "Proclamation is hereby made that the said {{partyType}} {{respondentName}} of {{respondentAddress}} is required to appear before this Court/me to answer the said complaint on the {{hearingDate}}.",
+                "text": "WHEREAS complaint has been made before me that {{partyType}} {{respondentName}} of {{respondentAddress}} has committed (or is suspected to have committed) an offence punishable under section 138 of Negotiable Instruments Act 1881, and it has been returned to a warrant of arrest thereupon issued that the said {{respondentName}} cannot be found; and whereas it has been shown to my satisfaction that the said {{respondentName}} has absconded (or is concealing himself to avoid the service of the said warrant) and thereupon a Proclamation has been or is being duly issued and published requiring the said {{respondentName}} to appear to answer the said charge within {{chargeDays}} days; and whereas the said {{respondentName}} is possessed of certain land paying revenue to Government in the village (or town) of {{village}}, in the District of {{district}}",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "You are hereby authorised and requested to cause the said land to be attached, in the manner specified in clause (a), or clause (c), or both, of sub-section (4) of section 85, and to be held under attachment pending the further order of this Court, and to certify without delay what you may have done in pursuance of this order.",
                 "style": "form-sub-body"
               }
             ]
