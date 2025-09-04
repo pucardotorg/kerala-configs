@@ -45,6 +45,12 @@
           "body": [
             [
               {
+                "text": "To The District Magistrate/Collector of the District of {{district}}",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
                 "text": "WHEREAS complaint has been made before me that {{partyType}} {{respondentName}} of {{respondentAddress}} has committed (or is suspected to have committed) an offence punishable under section 138 of Negotiable Instruments Act 1881, and it has been returned to a warrant of arrest thereupon issued that the said {{respondentName}} cannot be found; and whereas it has been shown to my satisfaction that the said {{respondentName}} has absconded (or is concealing himself to avoid the service of the said warrant) and thereupon a Proclamation has been or is being duly issued and published requiring the said {{respondentName}} to appear to answer the said charge within {{chargeDays}} days; and whereas the said {{respondentName}} is possessed of certain land paying revenue to Government in the village (or town) of {{village}}, in the District of {{district}}",
                 "style": "form-sub-body"
               }
