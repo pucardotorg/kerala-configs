@@ -54,7 +54,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "WHEREAS, the Court has determined that sufficient grounds exist for the issuance of Proclamation for Person Absconding.",
+                    "text": "WHEREAS, the Court has determined that sufficient grounds exist for the issuance of a proclamation for a person absconding.",
                     "style": "bodyText"
                   },
                   {
@@ -62,7 +62,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "A Proclamation for Person Absconding against the party {{personName}} is hereby ISSUED.",
+                    "text": "A Proclamation for a person absconding against the party {{personName}} is hereby ISSUED.",
                     "style": "bodyText"
                   },
                   {
