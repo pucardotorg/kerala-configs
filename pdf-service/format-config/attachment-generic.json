@@ -82,12 +82,6 @@
                 "text": "Signature",
                 "style": "footer-signature"
               }
-            ],
-            [
-              {
-                "text": "Seal of the Court",
-                "style": "footer-seal"
-              }
             ]
           ]
         },
@@ -124,16 +118,11 @@
       },
       "form-sub-body": {
         "fontSize": 12,
-        "color": "#484848"
-      },
-      "form-sub-body-right": {
-        "fontSize": 12,
         "color": "#484848",
         "margin": [0, 10, 0, 10],
         "alignment": "justify"
       },
       "footer-content": {
-        "color": "#484848",
         "fontSize": 11,
         "color": "#484848"
       },
