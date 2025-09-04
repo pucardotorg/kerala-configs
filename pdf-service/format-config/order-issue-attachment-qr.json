@@ -1,9 +1,9 @@
 {
-  "key": "order-issue-proclamation",
+  "key": "order-issue-attachment-qr",
   "config": {
     "content": [
       {
-        "text": "Order for S84"
+        "text": "Order for S85"
       },
       {
         "table": {
@@ -32,7 +32,7 @@
                     "style": "applicationTitle"
                   },
                   {
-                    "text": "Proclamation for Person Absconding",
+                    "text": "Attachment of property of person absconding",
                     "decoration": "underline",
                     "style": "subTitle"
                   },
@@ -57,7 +57,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "WHEREAS, the Court has determined that sufficient grounds exist for the issuance of Proclamation for Person Absconding.",
+                    "text": "WHEREAS, the Court has determined that sufficient grounds exist for the issuance of an attachment of property of person absconding.",
                     "style": "bodyText"
                   },
                   {
@@ -65,27 +65,27 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "A Proclamation for Person Absconding against the party {{personName}} is hereby ISSUED.",
+                    "text": "An attachment of property of person absconding is issued for the party {{personName}} is hereby ISSUED.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "The law enforcement authorities are directed to execute the proclamation in accordance with the law and report back to the Court.",
+                    "text": "The law enforcement authorities are directed to execute the attachment in accordance with the law and report back to the Court.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "The proclamation shall be executed with due respect to the rights of the individuals involved and any property that may be affected.",
+                    "text": "The attachment shall be executed with due respect to the rights of the individuals involved and any property that may be affected.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "All necessary precautions and measures shall be taken to ensure that the execution of the proclamation does not result in unnecessary harm or damage.",
+                    "text": "All necessary precautions and measures shall be taken to ensure that the execution of the attachment does not result in unnecessary harm or damage.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "The Court retains jurisdiction to cancel/review the execution of the proclamation and to issue further orders as necessary.",
+                    "text": "The Court retains jurisdiction to cancel/review the execution of the attachment and to issue further orders as necessary.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{reasonForProclamation}}",
+                    "text": "{{reasonForAttachment}}",
                     "style": "bodyText"
                   },
                   {
@@ -118,6 +118,25 @@
                   0,
                   20
                 ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "ws-head",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "image": "{{qrCodeImage}}",
+                "width": 180,
+                "height": 180,
+                "style": "qr-code"
               }
             ]
           ]
@@ -197,7 +216,7 @@
           0,
           10,
           0,
-          10
+          5
         ]
       },
       "additionalComments": {
