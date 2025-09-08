@@ -3,9 +3,6 @@
   "config": {
     "content": [
       {
-        "text": "Order for S85"
-      },
-      {
         "table": {
           "widths": [
             "*"
@@ -69,7 +66,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "The law enforcement authorities are directed to execute the attachment in accordance with the law and report back to the Court.",
+                    "text": "The law enforcement authorities are directed to execute the proclamation in accordance with the law and report back to the Court.",
                     "style": "bodyText"
                   },
                   {
