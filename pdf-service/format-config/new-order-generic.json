@@ -14,17 +14,19 @@
                     "style": "header"
                   },
                   {
-                    "text": "PRESENT {{judgeName}}, {{judgeDesignation}}",
-                    "style": "header"
-                  },
-                  {
-                    "text": "{{date}}",
-                    "style": "header"
-                  },
-                  {
                     "text": "Case No: {{caseNumber}}",
                     "style": "header",
-                    "margin": [0, 10, 0, 15]
+                    "margin": [0, 5, 0, 0]
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
+                  },
+                  {
+                    "text": "Date: {{date}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 15]
                   },
                   {
                     "style": "table",
@@ -46,19 +48,7 @@
                         ],
                         [
                           {
-                            "text": "",
-                            "style": "tableText",
-                            "border": [true, true, true, true]
-                          },
-                          {
-                            "text": "{{address}}",
-                            "style": "tableText",
-                            "border": [true, true, true, true]
-                          }
-                        ],
-                        [
-                          {
-                            "text": "",
+                            "text": "Advocate(s)",
                             "style": "tableText",
                             "border": [true, true, true, true]
                           },
@@ -96,19 +86,7 @@
                         ],
                         [
                           {
-                            "text": "",
-                            "style": "tableText",
-                            "border": [true, true, true, true]
-                          },
-                          {
-                            "text": "{{address}}",
-                            "style": "tableText",
-                            "border": [true, true, true, true]
-                          }
-                        ],
-                        [
-                          {
-                            "text": "",
+                            "text": "Advocate(s)",
                             "style": "tableText",
                             "border": [true, true, true, true]
                           },
@@ -179,16 +157,9 @@
                     "style": "judgeSignature"
                   },
                   {
-                    "text": "{{judgeName}}",
-                    "style": "content"
-                  },
-                  {
                     "text": "{{judgeDesignation}}",
-                    "style": "content"
-                  },
-                  {
-                    "text": "{{orderHeading}}",
-                    "style": "courtDetails"
+                    "style": "content",
+                    "margin": [0, 0, 0, 20]
                   },
                   {
                     "text": "Date: {{date}}",
@@ -216,7 +187,7 @@
       },
       "tableText": {
         "fontSize": 13,
-        "margin": [5, 10, 5, 10]
+        "margin": [2, 5, 2, 5]
       },
       "orderTitle": {
         "fontSize": 14,
