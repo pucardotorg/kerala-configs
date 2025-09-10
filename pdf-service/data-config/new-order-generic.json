@@ -43,6 +43,12 @@
                 }
               },
               {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
                 "variable": "complainantList",
                 "value": {
                   "path": "$.complainantList"
