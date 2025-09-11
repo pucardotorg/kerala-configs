@@ -157,6 +157,11 @@
                     "style": "judgeSignature"
                   },
                   {
+                    "text": "{{judgeName}}",
+                    "style": "content",
+                    "margin": [0, 0, 0, 20]
+                  },
+                  {
                     "text": "{{judgeDesignation}}",
                     "style": "content",
                     "margin": [0, 0, 0, 20]
