@@ -139,7 +139,7 @@
                   },
                   "{{/isHearingInProgress}}",
                   {
-                    "stack": "{{itemText}}",
+                    "text": "{{itemText}}",
                     "style": "body"
                   },
                   "{{#isNextHearing}}",
