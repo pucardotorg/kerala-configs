@@ -15,7 +15,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "E-Post Monthly Consolidated Report For: {{monthreportMonthYear}}",
+                    "text": "E-Post Monthly Consolidated Report For: {{reportMonthName}} {{monthlyReportYear}}",
                     "style": "header"
                   },
                   {
