@@ -109,6 +109,27 @@
                   "path": "$.barCouncilUrl",
                   "defaultValue": "NA"
                 }
+              },
+              {
+                "variable": "city",
+                "value": {
+                  "path": "$.address.city",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "state",
+                "value": {
+                  "path": "$.address.state",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "pincode",
+                "value": {
+                  "path": "$.address.pincode",
+                  "defaultValue": "NA"
+                }
               }
             ]
           }
