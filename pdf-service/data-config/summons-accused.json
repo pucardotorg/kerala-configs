@@ -161,6 +161,34 @@
                   "path": "$.filingNumber",
                   "defaultValue": "NA"
                 }
+              },
+              {
+                "variable": "recieptName",
+                "value": {
+                  "path": "$.recieptName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "address",
+                "value": {
+                  "path": "$.address",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "cityAndState",
+                "value": {
+                  "path": "$.cityAndState",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "pincode",
+                "value": {
+                  "path": "$.pincode",
+                  "defaultValue": "NA"
+                }
               }
             ]
           }
@@ -169,4 +197,3 @@
     ]
   }
 }
-
