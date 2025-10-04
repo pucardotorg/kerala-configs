@@ -3,8 +3,8 @@
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
-    "baseKeyPath": "$.Data.*",
-    "entityIdPath": "$.id",
+    "baseKeyPath": "$.ePostTrackerPdf",
+    "entityIdPath": "$.courtName",
     "isCommonTableBorderRequired": true,
     "mappings": [
       {
@@ -19,9 +19,9 @@
                 }
               },
               {
-                "variable": "monthreportMonthYear",
+                "variable": "monthlyReportYear",
                 "value": {
-                  "path": "$.monthreportMonthYear"
+                  "path": "$.monthlyReportYear"
                 }
               },
               {
