@@ -15,7 +15,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "E-Post Monthly Consolidated Report For: {{reportMonthName}} {{monthlyReportYear}}",
+                    "text": "E-Post Monthly Consolidated Report For : {{reportMonthName}} {{monthlyReportYear}}",
                     "style": "header"
                   },
                   {
@@ -75,19 +75,7 @@
         "layout": "noBorders"
       }
     ],
-    "footer": {
-      "stack": [
-        {
-          "text": "Disclaimer: This is a system-generated Report.",
-          "style": "disclaimer"
-        },
-        {
-          "text": "Generated On: {{generatedDateTime}}",
-          "style": "disclaimer"
-        }
-      ],
-      "margin": [40, 0, 40, 20]
-    },
+    "footer": "(function(currentPage, pageCount) { return { stack: [ { text: 'Disclaimer: This is a system-generated Report.', style: 'disclaimer' } ], margin: [40, 0, 40, 0] }; })",
     "styles": {
       "header": {
         "fontSize": 16,
