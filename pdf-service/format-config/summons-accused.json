@@ -498,9 +498,9 @@
                     "bold": true,
                     "margin": [0, 0, 0, 10]
                   },
-                  { "text": "{{recieptName}}", "margin": [0, 3] },
-                  { "text": "{{address}}", "margin": [0, 3] },
-                  { "text": "{{cityAndState}}", "margin": [0, 3] },
+                  { "text": "{{respondentName}}", "margin": [0, 3] },
+                  { "text": "{{respondentAddress}}", "margin": [0, 3] },
+                  { "text": "{{city}}, {{state}}", "margin": [0, 3] },
                   { "text": "{{pincode}}", "margin": [0, 3] }
                 ]
               }

@@ -97,30 +97,23 @@
                 }
               },
               {
-                "variable": "recieptName",
+                "variable": "city",
                 "value": {
-                  "path": "$.recieptName",
+                  "path": "$.address.city",
                   "defaultValue": "NA"
                 }
               },
               {
-                "variable": "address",
+                "variable": "state",
                 "value": {
-                  "path": "$.address",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "cityAndState",
-                "value": {
-                  "path": "$.cityAndState",
+                  "path": "$.address.state",
                   "defaultValue": "NA"
                 }
               },
               {
                 "variable": "pincode",
                 "value": {
-                  "path": "$.pincode",
+                  "path": "$.address.pincode",
                   "defaultValue": "NA"
                 }
               }
