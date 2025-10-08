@@ -1,0 +1,105 @@
+{
+  "key": "ePostMonthlyReport",
+  "config": {
+    "pageMargins": [40, 40, 40, 80],
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "{{courtName}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "E-Post Monthly Consolidated Report For : {{reportMonthName}} {{monthlyReportYear}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Following are the monthly consolidated data of notices and summons of 24x7 ON Court booked via e-Post across the 13 DoP hubs in Kerala for the month of {{reportMonthName}}",
+                    "style": "orderTitle"
+                  },
+                  {
+                    "table": {
+                      "widths": ["*", "*"],
+                      "body": [
+                        [
+                          {
+                            "text": "Metric",
+                            "bold": true,
+                            "alignment": "center"
+                          },
+                          {
+                            "text": "Value",
+                            "bold": true,
+                            "alignment": "center"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Quantity Booked",
+                            "bold": false,
+                            "alignment": "center"
+                          },
+                          {
+                            "text": "{{totalBookedPost}}",
+                            "bold": false,
+                            "alignment": "center"
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Total Amount",
+                            "bold": false,
+                            "alignment": "center"
+                          },
+                          {
+                            "text": "{{totalAmount}}",
+                            "bold": false,
+                            "alignment": "center"
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "footer": "(function(currentPage, pageCount) { return { stack: [ { text: 'Disclaimer: This is a system-generated Report.', style: 'disclaimer' } ], margin: [40, 0, 40, 0] }; })",
+    "styles": {
+      "header": {
+        "fontSize": 16,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 15]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 15]
+      },
+      "orderTitle": {
+        "fontSize": 14,
+        "bold": false,
+        "alignment": "left",
+        "margin": [0, 5, 0, 15]
+      },
+      "disclaimer": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 5, 0, 0]
+      }
+    }
+  }
+}
