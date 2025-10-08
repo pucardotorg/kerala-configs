@@ -11,7 +11,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: EPostTracker
       queryMaps:
-        - query: INSERT INTO dristi_epost_tracker (process_number, tenant_id, file_store_id, task_number, tracking_number, pincode, address, delivery_status, remarks, additional_details, row_version, booking_date, received_date, createdBy, lastModifiedBy, createdTime, lastModifiedTime, postal_hub, total_amount, speed_post_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_epost_tracker (process_number, tenant_id, file_store_id, task_number, tracking_number, pincode, address, delivery_status, remarks, additional_details, row_version, booking_date, received_date, createdBy, lastModifiedBy, createdTime, lastModifiedTime, postal_hub, total_amount, speed_post_id, status_update_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: EPostTracker
           jsonMaps:
             - jsonPath: $.EPostTracker.processNumber
@@ -36,6 +36,7 @@ serviceMaps:
             - jsonPath: $.EPostTracker.postalHub
             - jsonPath: $.EPostTracker.totalAmount
             - jsonPath: $.EPostTracker.speedPostId
+            - jsonPath: $.EPostTracker.statusUpdateDate
 
     - version: 1.0
       description: Persists EPost tracker data
@@ -47,7 +48,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: EPostTracker
       queryMaps:
-        - query: UPDATE dristi_epost_tracker SET delivery_status = ?, tracking_number = ?, remarks = ? , received_date = ?, additional_details = ?, row_version = ?, postal_hub = ?, speed_post_id = ?, booking_date = ? , lastModifiedBy = ?, lastModifiedTime = ?  WHERE process_number = ?;
+        - query: UPDATE dristi_epost_tracker SET delivery_status = ?, tracking_number = ?, remarks = ? , received_date = ?, additional_details = ?, row_version = ?, postal_hub = ?, speed_post_id = ?, booking_date = ? , status_update_date = ?, lastModifiedBy = ?, lastModifiedTime = ?  WHERE process_number = ?;
           basePath: EPostTracker
           jsonMaps:
             - jsonPath: $.EPostTracker.deliveryStatus
@@ -61,6 +62,7 @@ serviceMaps:
             - jsonPath: $.EPostTracker.postalHub
             - jsonPath: $.EPostTracker.speedPostId
             - jsonPath: $.EPostTracker.bookingDate
+            - jsonPath: $.EPostTracker.statusUpdateDate
             - jsonPath: $.EPostTracker.auditDetails.lastModifiedBy
             - jsonPath: $.EPostTracker.auditDetails.lastModifiedTime
             - jsonPath: $.EPostTracker.processNumber
