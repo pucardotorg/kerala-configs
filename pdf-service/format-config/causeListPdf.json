@@ -203,7 +203,7 @@
                 "alignment": "center"
               },
               {
-                "text": "{{#caseNumber}}{{caseNumber}}{{/caseNumber}}{{^caseNumber}}{{cmpNumber}}{{/caseNumber}}",
+                "text": "{{caseNumber}}",
                 "style": "table-data",
                 "alignment": "center"
               },
