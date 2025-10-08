@@ -12,7 +12,7 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: cases
       queryMaps:
-        - query: INSERT INTO dristi_cases(id, tenantid, resolutionmechanism, casetitle, casedescription, filingnumber, cmpNumber,casetype, casenumber,cnrnumber,courtcasenumber, accesscode, advocatecount, isactive, courtid, benchid, judgeid, filingdate,judgementdate, registrationdate, casecategory, natureofpleading, status, remarks, casedetails, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, witnessDetails) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_cases(id, tenantid, resolutionmechanism, casetitle, casedescription, filingnumber, cmpNumber,casetype, casenumber,cnrnumber,courtcasenumber, accesscode, advocatecount, isactive, courtid, benchid, judgeid, filingdate,judgementdate, registrationdate, casecategory, natureofpleading, status, remarks, casedetails, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: cases
           jsonMaps:
             - jsonPath: $.cases.id
@@ -49,9 +49,6 @@ serviceMaps:
             - jsonPath: $.cases.auditDetails.lastModifiedBy
             - jsonPath: $.cases.auditDetails.createdTime
             - jsonPath: $.cases.auditDetails.lastModifiedTime
-            - jsonPath: $.cases.witnessDetails
-              type: JSON
-              dbType: JSONB
 
         - query: INSERT INTO dristi_linked_case(id, relationshiptype, casenumbers, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: cases.linkedCases.*
@@ -241,7 +238,7 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: cases
       queryMaps:
-        - query: UPDATE dristi_cases SET tenantid=?,resolutionmechanism=?,casetitle=?,casedescription=?,filingnumber=?,casetype=?,casenumber=?,cnrnumber=?,cmpNumber=?,courtcasenumber=?,accesscode=?, advocatecount=?, isactive=?,courtid=?,benchid=?,judgeid=?,filingdate=?,judgementdate=?,registrationdate=?,casecategory=?,natureofpleading=?,status=?,remarks=?,casedetails=?,additionaldetails=?,lastmodifiedby=?,lastModifiedtime=?,witnessDetails=? WHERE id=?;
+        - query: UPDATE dristi_cases SET tenantid=?,resolutionmechanism=?,casetitle=?,casedescription=?,filingnumber=?,casetype=?,casenumber=?,cnrnumber=?,cmpNumber=?,courtcasenumber=?,accesscode=?, advocatecount=?, isactive=?,courtid=?,benchid=?,judgeid=?,filingdate=?,judgementdate=?,registrationdate=?,casecategory=?,natureofpleading=?,status=?,remarks=?,casedetails=?,additionaldetails=?,lastmodifiedby=?,lastModifiedtime=? WHERE id=?;
           basePath: cases
           jsonMaps:
             - jsonPath: $.cases.tenantId
@@ -275,9 +272,6 @@ serviceMaps:
               dbType: JSONB
             - jsonPath: $.cases.auditDetails.lastModifiedBy
             - jsonPath: $.cases.auditDetails.lastModifiedTime
-            - jsonPath: $.cases.witnessDetails
-              type: JSON
-              dbType: JSONB
             - jsonPath: $.cases.id
 
         - query: INSERT INTO dristi_linked_case (id, relationshiptype, casenumbers, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET relationshiptype = EXCLUDED.relationshiptype, casenumbers = EXCLUDED.casenumbers, isactive = EXCLUDED.isactive, case_id = EXCLUDED.case_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
