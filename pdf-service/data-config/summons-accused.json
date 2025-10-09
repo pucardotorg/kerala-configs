@@ -177,6 +177,20 @@
                 }
               },
               {
+                "variable": "locality",
+                "value": {
+                  "path": "$.address.locality",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "district",
+                "value": {
+                  "path": "$.address.district",
+                  "defaultValue": "NA"
+                }
+              },
+              {
                 "variable": "pincode",
                 "value": {
                   "path": "$.address.pincode",
