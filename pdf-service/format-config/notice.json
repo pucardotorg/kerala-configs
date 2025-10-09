@@ -404,7 +404,7 @@
                     "margin": [0, 0, 0, 10]
                   },
                   { "text": "{{respondentName}}", "margin": [0, 3] },
-                  { "text": "{{respondentAddress}}", "margin": [0, 3] },
+                  { "text": "{{locality}}, {{district}}", "margin": [0, 3] },
                   { "text": "{{city}}, {{state}}", "margin": [0, 3] },
                   { "text": "{{pincode}}", "margin": [0, 3] }
                 ]
