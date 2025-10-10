@@ -11,7 +11,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: EPostTracker
       queryMaps:
-        - query: INSERT INTO dristi_epost_tracker (process_number, tenant_id, file_store_id, task_number, tracking_number, pincode, address, delivery_status, remarks, additional_details, row_version, booking_date, received_date, createdBy, lastModifiedBy, createdTime, lastModifiedTime, postal_hub, total_amount, speed_post_id, status_update_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_epost_tracker (process_number, tenant_id, file_store_id, task_number, tracking_number, pincode, address, delivery_status, remarks, additional_details, row_version, booking_date, received_date, createdBy, lastModifiedBy, createdTime, lastModifiedTime, postal_hub, total_amount, speed_post_id, status_update_date, task_type, respondent_name) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: EPostTracker
           jsonMaps:
             - jsonPath: $.EPostTracker.processNumber
@@ -37,6 +37,8 @@ serviceMaps:
             - jsonPath: $.EPostTracker.totalAmount
             - jsonPath: $.EPostTracker.speedPostId
             - jsonPath: $.EPostTracker.statusUpdateDate
+            - jsonPath: $.EPostTracker.taskType
+            - jsonPath: $.EPostTracker.respondentName
 
     - version: 1.0
       description: Persists EPost tracker data
