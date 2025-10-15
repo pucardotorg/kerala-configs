@@ -1,0 +1,89 @@
+serviceMaps:
+  serviceName: portalSurveyService
+  mappings:
+    - version: 1.0
+      description: Persists portal survey data
+      fromTopic: create-survey-tracker-topic
+      isTransaction: true
+      isAuditEnabled: true
+      module: PORTAL_SURVEY
+      objecIdJsonPath: $.userUuid
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: surveyTracker
+      queryMaps:
+        - query: INSERT INTO inportal_survey_tracker (user_uuid, tenant_id, user_type, remind_me_later, expiry_date, attempts, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: surveyTracker
+          jsonMaps:
+            - jsonPath: $.surveyTracker.userUuid
+            - jsonPath: $.surveyTracker.tenantId
+            - jsonPath: $.surveyTracker.userType
+            - jsonPath: $.surveyTracker.remindMeLater
+            - jsonPath: $.surveyTracker.expiryDate
+            - jsonPath: $.surveyTracker.attempts
+            - jsonPath: $.surveyTracker.auditDetails.createdBy
+            - jsonPath: $.surveyTracker.auditDetails.lastModifiedBy
+            - jsonPath: $.surveyTracker.auditDetails.createdTime
+            - jsonPath: $.surveyTracker.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      description: Persists portal survey data
+      fromTopic: update-survey-tracker-topic
+      isTransaction: true
+      isAuditEnabled: true
+      module: PORTAL_SURVEY
+      objecIdJsonPath: $.userUuid
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: surveyTracker
+      queryMaps:
+        - query: UPDATE inportal_survey_tracker SET attempts = ?, last_modified_by = ?, last_modified_time = ? WHERE user_uuid = ?;
+          basePath: surveyTracker
+          jsonMaps:
+            - jsonPath: $.surveyTracker.attempts
+            - jsonPath: $.surveyTracker.auditDetails.lastModifiedBy
+            - jsonPath: $.surveyTracker.auditDetails.lastModifiedTime
+            - jsonPath: $.surveyTracker.userUuid
+
+    - version: 1.0
+      description: Persists portal survey data
+      fromTopic: update-reminder-later-topic
+      isTransaction: true
+      isAuditEnabled: true
+      module: PORTAL_SURVEY
+      objecIdJsonPath: $.userUuid
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath: surveyTracker
+      queryMaps:
+        - query: UPDATE inportal_survey_tracker SET remind_me_later = ?, expiry_date = ?, last_modified_by = ?, last_modified_time = ? WHERE user_uuid = ?;
+          basePath: surveyTracker
+          jsonMaps:
+            - jsonPath: $.surveyTracker.remindMeLater
+            - jsonPath: $.surveyTracker.expiryDate
+            - jsonPath: $.surveyTracker.auditDetails.lastModifiedBy
+            - jsonPath: $.surveyTracker.auditDetails.lastModifiedTime
+            - jsonPath: $.surveyTracker.userUuid
+
+    - version: 1.0
+      description: Persists portal survey data
+      fromTopic: insert-feed-back-topic
+      isTransaction: true
+      isAuditEnabled: true
+      module: PORTAL_SURVEY
+      objecIdJsonPath: $.uuid
+      tenantIdJsonPath: $.tenantId
+      auditAttributeBasePath:
+      queryMaps:
+        - query: INSERT INTO inportal_survey_feedback (uuid, rating, category, tenant_id, feedback, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: feedBack
+          jsonMaps:
+            - jsonPath: $.feedBack.uuid
+            - jsonPath: $.feedBack.rating
+            - jsonPath: $.feedBack.category
+            - jsonPath: $.feedBack.tenantId
+            - jsonPath: $.feedBack.feedback
+            - jsonPath: $.feedBack.auditDetails.createdBy
+            - jsonPath: $.feedBack.auditDetails.lastModifiedBy
+            - jsonPath: $.feedBack.auditDetails.createdTime
+            - jsonPath: $.feedBack.auditDetails.lastModifiedTime
+
+
+
