@@ -43,19 +43,16 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
       queryMaps:
-        - query: UPDATE dristi_task_management SET filing_number=?, status=?, court_id=?, order_number=?, party_details=?, additional_details=?, lastmodifiedby=?, lastmodifiedtime=? WHERE id=?;
+        - query: UPDATE dristi_task_management SET status=?, party_details=?, additional_details=?, lastmodifiedby=?, lastmodifiedtime=? WHERE id=?;
           basePath: taskManagement
           jsonMaps:
-            - jsonPath: $.filingNumber
-            - jsonPath: $.status
-            - jsonPath: $.courtId
-            - jsonPath: $.orderNumber
-            - jsonPath: $.partyDetails
+            - jsonPath: $.taskManagement.status
+            - jsonPath: $.taskManagement.partyDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.additionalDetails
+            - jsonPath: $.taskManagement.additionalDetails
               type: JSON
               dbType: JSONB
-            - jsonPath: $.auditDetails.lastModifiedBy
-            - jsonPath: $.auditDetails.lastModifiedTime
-            - jsonPath: $.id
+            - jsonPath: $.taskManagement.auditDetails.lastModifiedBy
+            - jsonPath: $.taskManagement.auditDetails.lastModifiedTime
+            - jsonPath: $.taskManagement.id
