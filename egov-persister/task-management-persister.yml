@@ -11,7 +11,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
       queryMaps:
-        - query: INSERT INTO dristi_task_management(id,tenant_id,task_management_number,filing_number,task_type,status,court_id,order_number,party_details,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_task_management(id,tenant_id,task_management_number,filing_number,task_type,status,court_id,order_number,order_item_id,party_details,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: taskManagement
           jsonMaps:
             - jsonPath: $.taskManagement.id
@@ -22,6 +22,7 @@ serviceMaps:
             - jsonPath: $.taskManagement.status
             - jsonPath: $.taskManagement.courtId
             - jsonPath: $.taskManagement.orderNumber
+            - jsonPath: $.taskManagement.orderItemId
             - jsonPath: $.taskManagement.partyDetails
               type: JSON
               dbType: JSONB
@@ -43,7 +44,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
       queryMaps:
-        - query: UPDATE dristi_task_management SET status=?, party_details=?, additional_details=?, lastmodifiedby=?, lastmodifiedtime=? WHERE id=?;
+        - query: UPDATE dristi_task_management SET status=?, party_details=?, additional_details=?, last_modified_by=?, last_modified_time=? WHERE id=?;
           basePath: taskManagement
           jsonMaps:
             - jsonPath: $.taskManagement.status
