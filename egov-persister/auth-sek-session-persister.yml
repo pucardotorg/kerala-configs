@@ -56,7 +56,7 @@ serviceMaps:
       objecIdJsonPath: $.consumerCode
       tenantIdJsonPath: $.tenantId
       queryMaps:
-        - query: INSERT INTO treasury_head_breakup_data (consumer_code, head_mapping, calculation, tenant_id, createdtime, lastmodifiedtime, finalcalcpostresubmission, lastsubmissionconsumercode) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (consumer_code) DO UPDATE SET headAmountMapping = EXCLUDED.headAmountMapping,calculation = EXCLUDED.calculation;
+        - query: INSERT INTO treasury_head_breakup_data (consumer_code, head_mapping, calculation, tenant_id, createdtime, lastmodifiedtime, finalcalcpostresubmission, lastsubmissionconsumercode) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (consumer_code) DO UPDATE SET headAmountMapping = EXCLUDED.headAmountMapping,calculation = EXCLUDED.calculation;
           basePath: $
           jsonMaps:
             - jsonPath: $.consumerCode
