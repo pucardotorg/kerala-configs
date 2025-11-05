@@ -257,79 +257,25 @@
         "table": {
           "widths": ["*", "*"],
           "body": [
+            "{{#feeBreakDown}}",
             [
               {
-                "text": "Court Fees:",
+                "text": "{{feeName}}",
                 "bold": true,
                 "border": [true, true, true, true],
                 "margin": [0, 5, 0, 5]
               },
               {
-                "text": "Rs. {{courtFee}}",
+                "text": "Rs. {{feeAmount}}",
                 "border": [true, true, true, true],
                 "margin": [0, 5, 0, 5],
                 "alignment": "left"
               }
             ],
+            "{{/feeBreakDown}}",
             [
               {
-                "text": "Fee for advocate welfare fund:",
-                "bold": true,
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5]
-              },
-              {
-                "text": "Rs. {{advocateWelfareFund}}",
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5],
-                "alignment": "left"
-              }
-            ],
-            [
-              {
-                "text": "Fee for clerk welfare fund:",
-                "bold": true,
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5]
-              },
-              {
-                "text": "Rs. {{advocateClerkWelfareFund}}",
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5],
-                "alignment": "left"
-              }
-            ],
-            [
-              {
-                "text": "Legal Benefit Fund:",
-                "bold": true,
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5]
-              },
-              {
-                "text": "Rs. {{legalBenefitFee}}",
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5],
-                "alignment": "left"
-              }
-            ],
-            [
-              {
-                "text": "E Post Fees:",
-                "bold": true,
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5]
-              },
-              {
-                "text": "Rs. {{epostFee}}",
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5],
-                "alignment": "left"
-              }
-            ],
-            [
-              {
-                "text": "Total",
+                "text": "Total:",
                 "bold": true,
                 "border": [true, true, true, true],
                 "margin": [0, 5, 0, 5]
