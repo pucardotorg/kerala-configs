@@ -11,7 +11,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
       queryMaps:
-        - query: INSERT INTO dristi_task_management(id,tenant_id,task_management_number,filing_number,task_type,status,court_id,order_number,order_item_id,party_details,additional_details,created_by,last_modified_by,created_time,last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_task_management(id,tenant_id,task_management_number,filing_number,task_type,status,court_id,order_number,order_item_id,party_details,additional_details,documents,created_by,last_modified_by,created_time,last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: taskManagement
           jsonMaps:
             - jsonPath: $.taskManagement.id
@@ -29,6 +29,9 @@ serviceMaps:
             - jsonPath: $.taskManagement.additionalDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.taskManagement.documents
+              type: JSON
+              dbType: JSONB
             - jsonPath: $.taskManagement.auditDetails.createdBy
             - jsonPath: $.taskManagement.auditDetails.lastModifiedBy
             - jsonPath: $.taskManagement.auditDetails.createdTime
@@ -44,7 +47,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
       queryMaps:
-        - query: UPDATE dristi_task_management SET status=?, party_details=?, additional_details=?, last_modified_by=?, last_modified_time=? WHERE id=?;
+        - query: UPDATE dristi_task_management SET status=?, party_details=?, additional_details=?, last_modified_by=?, last_modified_time=?, documents=? WHERE id=?;
           basePath: taskManagement
           jsonMaps:
             - jsonPath: $.taskManagement.status
@@ -56,4 +59,7 @@ serviceMaps:
               dbType: JSONB
             - jsonPath: $.taskManagement.auditDetails.lastModifiedBy
             - jsonPath: $.taskManagement.auditDetails.lastModifiedTime
+            - jsonPath: $.taskManagement.documents
+              type: JSON
+              dbType: JSONB
             - jsonPath: $.taskManagement.id
