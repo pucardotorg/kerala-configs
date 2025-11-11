@@ -119,8 +119,6 @@
       },
       "deposition": {
         "fontSize": 13,
-        "bold": true,
-        "alignment": "center",
         "margin": [0, 5, 0, 5]
       },
       "signature": {
