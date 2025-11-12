@@ -158,6 +158,14 @@
                     "style": "content"
                   },
                   "{{/noOfSureties}}",
+                  "{{^noOfSureties}}",
+                  "{{#bailAmount}}",
+                  {
+                    "text": "Bail Amount: {{bailAmount}}",
+                    "style": "content"
+                  },
+                  "{{/bailAmount}}",
+                  "{{/noOfSureties}}",
                   {
                     "text": "{{judgeSignature}}",
                     "style": "judgeSignature"
