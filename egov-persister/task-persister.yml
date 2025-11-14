@@ -144,3 +144,22 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.task.documents.*.isActive
+
+    - version: 1.0
+      description: Update taskDetails property in task table
+      fromTopic: enrich-task-party-uuid
+      isTransaction: true
+      isAuditEnabled: true
+      module: TASK
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: task
+      queryMaps:
+        - query: UPDATE dristi_task SET taskDetails=? WHERE id=?;
+          basePath: task
+          jsonMaps:
+            - jsonPath: $.task.taskDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.task.id
