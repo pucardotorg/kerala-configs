@@ -1,0 +1,57 @@
+{
+  "key": "ePostMonthlyReport",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.ePostTrackerPdf",
+    "entityIdPath": "$.courtName",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "monthlyReportYear",
+                "value": {
+                  "path": "$.monthlyReportYear"
+                }
+              },
+              {
+                "variable": "reportMonthName",
+                "value": {
+                  "path": "$.reportMonthName"
+                }
+              },
+              {
+                "variable": "totalBookedPost",
+                "value": {
+                  "path": "$.totalBookedPost"
+                }
+              },
+              {
+                "variable": "totalAmount",
+                "value": {
+                  "path": "$.totalAmount"
+                }
+              },
+              {
+                "variable": "generatedDateTime",
+                "value": {
+                  "path": "$.generatedDateTime"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
