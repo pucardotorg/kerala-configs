@@ -19,78 +19,129 @@
               },
               {
                 "variable": "grn",
-                "value": { "path": "$.grn" },
+                "value": {
+                  "path": "$.grn"
+                },
                 "default": ""
               },
               {
                 "variable": "bankRefNo",
-                "value": { "path": "$.bankRefNo" },
+                "value": {
+                  "path": "$.bankRefNo"
+                },
                 "default": ""
               },
               {
                 "variable": "status",
-                "value": { "path": "$.status" },
+                "value": {
+                  "path": "$.status"
+                },
                 "default": ""
               },
               {
                 "variable": "amount",
-                "value": { "path": "$.amount" },
+                "value": {
+                  "path": "$.amount"
+                },
                 "default": ""
               },
               {
                 "variable": "remarks",
-                "value": { "path": "$.remarks" },
+                "value": {
+                  "path": "$.remarks"
+                },
                 "default": ""
               },
               {
                 "variable": "partyName",
-                "value": { "path": "$.partyName" },
+                "value": {
+                  "path": "$.partyName"
+                },
                 "default": ""
               },
               {
                 "variable": "paidBy",
-                "value": { "path": "$.paidBy" },
+                "value": {
+                  "path": "$.paidBy"
+                },
                 "default": ""
               },
               {
                 "variable": "mobileNumber",
-                "value": { "path": "$.mobileNumber" },
+                "value": {
+                  "path": "$.mobileNumber"
+                },
                 "default": ""
               },
               {
                 "variable": "challanTimestamp",
-                "value": { "path": "$.challanTimestamp" },
+                "value": {
+                  "path": "$.challanTimestamp"
+                },
                 "default": ""
               },
               {
-                "variable": "caseType",
-                "value": { "path": "$.caseType" },
-                "default": "NIA S138"
+                "variable":"caseType",
+                "value":{
+                  "path":"$.caseType"
+                },
+                "default":"NIA S138"
               },
               {
-                "variable": "caseName",
-                "value": { "path": "$.caseName" },
-                "default": ""
+                "variable":"caseName",
+                "value":{
+                  "path":"$.caseName"
+                },
+                "default":""
               },
               {
-                "variable": "caseNumber",
-                "value": { "path": "$.caseNumber" },
-                "default": ""
+                "variable":"caseNumber",
+                "value":{
+                  "path":"$.caseNumber"
+                },
+                "default":""
               },
               {
-                "variable": "purposeOfPayment",
-                "value": { "path": "$.purposeOfPayment" },
-                "default": ""
+                "variable":"purposeOfPayment",
+                "value":{
+                  "path":"$.purposeOfPayment"
+                },
+                "default":""
               },
               {
-                "variable": "feeBreakDown",
-                "value": { "path": "$.feeBreakDown" },
-                "default": []
+                "variable":"courtFee",
+                "value":{
+                  "path":"$.courtFee"
+                },
+                "default":""
               },
               {
-                "variable": "totalAmount",
-                "value": { "path": "$.totalAmount" },
-                "default": ""
+                "variable":"advocateWelfareFund",
+                "value":{
+                  "path":"$.advocateWelfareFund"
+                },
+                "default":""
+              },
+              {
+                "variable":"advocateClerkWelfareFund",
+                "value":{
+                  "path":"$.advocateClerkWelfareFund"
+                },
+                "default":""
+              },
+              {
+                "variable":"legalBenefitFee",
+                "value":{
+                  "path":"$.legalBenefitFee"
+                },
+                "default":""
+              },
+              {
+                "variable":"totalAmount",
+                "value":{
+                  "path":"$.totalAmount"
+                },
+                "default":""
               }
             ]
           }
@@ -99,3 +150,4 @@
     ]
   }
 }
+

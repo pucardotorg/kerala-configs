@@ -152,20 +152,6 @@
                     "style": "body"
                   },
                   "{{/isNextHearing}}",
-                  "{{#noOfSureties}}",
-                  {
-                    "text": "Number of Sureties: {{noOfSureties}} and Bail Amount: {{bailAmount}}",
-                    "style": "content"
-                  },
-                  "{{/noOfSureties}}",
-                  "{{^noOfSureties}}",
-                  "{{#bailAmount}}",
-                  {
-                    "text": "Bail Amount: {{bailAmount}}",
-                    "style": "content"
-                  },
-                  "{{/bailAmount}}",
-                  "{{/noOfSureties}}",
                   {
                     "text": "{{judgeSignature}}",
                     "style": "judgeSignature"
