@@ -14,7 +14,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}}",
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
                     "style": "subHeader"
                   },
                   {
