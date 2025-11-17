@@ -49,11 +49,13 @@
                   },
                   {
                     "text": "{{judgeName}}",
-                    "style": "signature"
+                    "style": "content",
+                    "margin": [0, 0, 0, 20]
                   },
                   {
                     "text": "{{judgeDesignation}}",
-                    "style": "signature"
+                    "style": "content",
+                    "margin": [0, 0, 0, 20]
                   }
                 ],
                 "alignment": "left",
