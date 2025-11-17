@@ -11,7 +11,10 @@ logging.basicConfig(
 # File data to be processed (can easily add more files as needed)
 file_data = [
     {"filename": "missing_translations_in_en_IN.csv", "lang": "en_IN"},
+    # {"filename": "missing_translations_in_ml_IN.csv", "lang": "ml_IN"},
+
     # {'filename': 'ml_uat.csv', 'lang': 'ml_IN'}
+    # {'filename': 'common.csv', 'lang': 'en_IN'},
 ]
 
 # API headers and authorization
@@ -23,9 +26,12 @@ LOCALIZATION_HEADERS = {
 
 # Function to make the localization API call
 def upsert_localization_data(loc_data):
-    loc_url = "https://oncourts.kerala.gov.in/localization/messages/v1/_upsert"
+    # loc_url = "https://dristi-kerala-dev.pucar.org/localization/messages/v1/_upsert"
+    loc_url = "https://demo.pucar.org/localization/messages/v1/_upsert"
+    # loc_url = "https://oncourts-staging.kerala.gov.in/localization/messages/v1/_upsert"
+    # loc_url = "https://oncourts.kerala.gov.in/localization/messages/v1/_upsert"
     try:
-        response = requests.post(loc_url, headers=LOCALIZATION_HEADERS, json=loc_data)
+        response = requests.post(loc_url, headers=LOCALIZATION_HEADERS, json=loc_data, verify=False)
         response.raise_for_status()  # Will raise an HTTPError for bad responses (4xx, 5xx)
         return response
     except requests.exceptions.HTTPError as http_err:
@@ -96,5 +102,5 @@ def process_localizations(auth_token):
 
 
 if __name__ == "__main__":
-    auth_token = "07e79acf-8bfb-4d5f-a293-bb3ac0e6ee49"
+    auth_token = "3bc73663-5112-425c-b2c5-29b7004cdabf" # Update workbench authtoken according to environment
     process_localizations(auth_token)

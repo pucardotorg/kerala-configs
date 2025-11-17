@@ -3,16 +3,16 @@ import csv
 import logging
 
 # URLs for the API requests
-SOURCE_URL = "https://dristi-kerala-uat.pucar.org"
-TARGET_URL = "https://oncourts.kerala.gov.in"
+SOURCE_URL =  "https://dristi-kerala-qa.pucar.org" #"https://oncourts-staging.kerala.gov.in" #  "https://dristi-kerala-qa.pucar.org"
+TARGET_URL =  "https://demo.pucar.org" #"https://oncourts.kerala.gov.in" 
 LOCALIZATION_SEARCH_API = "/localization/messages/v1/_search?&tenantId=kl&locale="
 
 # Neglect lists if you want to neglect code or by module add in below arrays
-NEGLECT_CODES = []
+NEGLECT_CODES = ["MOBILE_VIEW_ERROR ", "MOVE_CASE_OUT_OF_LONG_PENDING_REGISTER ", "MOVE_CASE_TO_LONG_PENDING_REGISTER ","JUDGEMENT_NOT_ALLOWED_FOR_LPR_CASE","Close", "Review Process", "SEARCH_CASE_NAME_OR_NUMBER", "Code",]
 NEGLECT_MODULES = []
 
 # Supported locales
-LOCALES = ["en_IN"]
+LOCALES = ["en_IN"] #, "ml_IN"]
 
 # Headers for API requests
 HEADERS = {
