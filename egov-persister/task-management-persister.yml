@@ -11,7 +11,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
       queryMaps:
-        - query: INSERT INTO dristi_task_management(id,tenant_id,task_management_number,filing_number,task_type,status,court_id,order_number,order_item_id,party_details,additional_details,documents,created_by,last_modified_by,created_time,last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_task_management(id,tenant_id,task_management_number,filing_number,task_type,status,court_id,order_number,order_item_id,party_details,additional_details,documents,created_by,last_modified_by,created_time,last_modified_time, party_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: taskManagement
           jsonMaps:
             - jsonPath: $.taskManagement.id
@@ -36,6 +36,7 @@ serviceMaps:
             - jsonPath: $.taskManagement.auditDetails.lastModifiedBy
             - jsonPath: $.taskManagement.auditDetails.createdTime
             - jsonPath: $.taskManagement.auditDetails.lastModifiedTime
+            - jsonPath: $.taskManagement.partyType
 
     - version: 1.0
       description: Update task management details in tables
