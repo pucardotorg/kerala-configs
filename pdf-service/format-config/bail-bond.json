@@ -22,7 +22,7 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "I, {{litigantName}}, Son/Daughter of Shri/Shrimati {{litigantFatherName}}, residing at {{litigantAddress}}, having been brought before the Magistrate of {{courtName}} charged with the offence under the {{caseType}} and required to give surety for my attendance before such Officer or Court on condition that I shall attend such Officer or Court on every day on which any investigation or trial is held with regard to such charge. In case of my making default herein, I bind myself to forfeit to the Government the sum of Rs. {{bailAmount}}.",
+                    "text": "I {{litigantName}} Son of Shri {{litigantFatherName}} Residence {{litigantAddress}} having been brought before the Magistrate of {{courtName}} charged with the offence of {{caseType}} and required to give surety for my attendance before such Officer of Court on condition that I shall attend such Officer or Court on every day on which any investigation or trial is held with regard to such charge and in case of my making default herein, I bind myself to forfeit to Government the sum of Rs. {{bailAmount}}.",
                     "style": "bodyText"
                   },
                   {
@@ -31,7 +31,7 @@
                   },
                   "{{#sureties}}",
                   {
-                    "text": "I, {{suretyName}}, Son/ Daughter of Shri/Shrimati {{suretyParentName}}, residing at {{suretyAddress}} hereby declare myself a surety for the accused {{litigantName}}. I affirm and undertake that the said accused shall appear before the Officer-in-charge of {{courtName}} on every day on which any investigation into the charge is made or any trial on such charge is held. He/She shall be and re-appear before such officer or court for the purpose of such investigation to answer the charge against him/her (as the case may be). In the case of his/her making default herein, I bind myself to forfeit to the Government the sum of Rs. {{bailAmount}}.",
+                    "text": "I {{suretyName}} Son/ Daughter of Shri/ Shrimati  {{suretyParentName}} Residence {{suretyAddress}} hereby declare myself for the above said {{litigantName}} That he shall attend the Officer-in-charge of {{courtName}} every day on which any investigation in the charge is made or any trial on such charge is held that he shall be and re-appear before such officer or court for the purpose of such investigation to answer the charge against him  as the case may be) and in the case of his making default herein, I bind myself to forfeit to Govt. the sum of Rs. {{bailAmount}}.",
                     "style": "bodyText"
                   },
                   {
