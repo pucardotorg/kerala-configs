@@ -147,18 +147,53 @@
               },
               {
                 "variable": "qrCodeFirst",
-                "url": "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=0ad94ee3-371f-46d7-b063-ede2495a1912",
+                "url": "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=0ad94ee3-371f-46d7-b063-ede2495a1912",
                 "type": "image"
               },
               {
                 "variable": "qrCodeSecond",
-                "url": "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=084f00e9-fee8-432d-927d-183d78123f33",
+                "url": "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=084f00e9-fee8-432d-927d-183d78123f33",
                 "type": "image"
               },
               {
                 "variable": "filingNumber",
                 "value": {
                   "path": "$.filingNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "city",
+                "value": {
+                  "path": "$.address.city",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "state",
+                "value": {
+                  "path": "$.address.state",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "locality",
+                "value": {
+                  "path": "$.address.locality",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "district",
+                "value": {
+                  "path": "$.address.district",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "pincode",
+                "value": {
+                  "path": "$.address.pincode",
                   "defaultValue": "NA"
                 }
               }
@@ -169,4 +204,3 @@
     ]
   }
 }
-
