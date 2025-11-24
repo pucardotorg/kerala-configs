@@ -11,7 +11,7 @@
                 "stack": [
                   {
                     "text": "Form No. 17",
-                    "style": "header"
+                    "style": "subHeader"
                   },
                   {
                     "text": "Examination of the Accused",
@@ -19,19 +19,19 @@
                   },
                   {
                     "text": "(Section 281, Criminal Procedure Court)",
-                    "style": "header"
+                    "style": "subHeaderItalics"
                   },
                   {
                     "text": "In the Court of {{courtName}}, {{place}}, {{state}}",
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}} of {{year}}",
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
                     "style": "header"
                   },
                   {
                     "text": "Statement of {{accusedName}}",
-                    "style": "header"
+                    "style": "subHeader"
                   },
                   {
                     "text": "Name: {{accusedName}}",
@@ -79,23 +79,37 @@
                   },
                   {
                     "text": "Magistrate's Remarks: {{judgeRemarks}}",
-                    "style": "contentText"
+                    "style": "remarksText"
                   },
                   {
-                    "text": "{{accusedSignature}}",
-                    "style": "signature"
-                  },
-                  {
-                    "text": "Signature of Accused",
-                    "style": "signature"
-                  },
-                  {
-                    "text": "{{judgeSignature}}",
-                    "style": "signature"
-                  },
-                  {
-                    "text": "{Signature of Magistrate}",
-                    "style": "signature"
+                    "columns": [
+                      {
+                        "width": "50%",
+                        "stack": [
+                          {
+                            "text": "{{accusedSignature}}",
+                            "style": "accusedSignature"
+                          },
+                          {
+                            "text": "Signature of Accused",
+                            "style": "accusedSignature"
+                          }
+                        ]
+                      },
+                      {
+                        "width": "50%",
+                        "stack": [
+                          {
+                            "text": "{{judgeSignature}}",
+                            "style": "judgeSignature"
+                          },
+                          {
+                            "text": "Signature of Magistrate",
+                            "style": "judgeSignature"
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ],
                 "alignment": "left",
@@ -109,52 +123,57 @@
     ],
     "styles": {
       "header": {
-        "fontSize": 14,
+        "fontSize": 12,
         "bold": true,
         "alignment": "center",
         "margin": [0, 0, 0, 5]
       },
+      "subHeader": {
+        "fontSize": 12,
+        "alignment": "center",
+        "margin": [0, 10, 0, 10]
+      },
+      "subHeaderItalics": {
+        "fontSize": 12,
+        "italics": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 10]
+      },
       "caseName": {
-        "fontSize": 14,
+        "fontSize": 12,
         "alignment": "center",
         "margin": [0, 5, 0, 5]
       },
       "caseNumber": {
-        "fontSize": 14,
+        "fontSize": 12,
         "alignment": "center",
         "margin": [0, 5, 0, 5]
       },
-      "orderTitle": {
-        "fontSize": 16,
-        "bold": true,
-        "alignment": "center",
-        "margin": [0, 5, 0, 5]
-      },
-      "orderName": {
-        "fontSize": 14,
-        "bold": true,
-        "alignment": "center",
-        "margin": [0, 5, 0, 20]
+
+      "contentText": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
       },
       "date": {
         "fontSize": 12,
-        "alignment": "left",
+        "alignment": "right",
         "margin": [0, 10, 0, 10]
       },
-      "contentText": {
-        "fontSize": 11,
-        "alignment": "left",
-        "margin": [0, 10, 0, 10]
-      },
-      "orderText": {
+      "remarksText": {
         "fontSize": 12,
         "alignment": "left",
-        "margin": [0, 10, 0, 20]
+        "margin": [0, 20, 0, 30]
       },
-      "signature": {
+      "accusedSignature": {
         "fontSize": 12,
         "alignment": "left",
-        "margin": [0, 10, 0, 0]
+        "margin": [0, 0, 0, 10]
+      },
+      "judgeSignature": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 0, 0, 10]
       },
       "tableData": {
         "bold": true,

@@ -147,11 +147,20 @@
                     "style": "header"
                   },
                   {
-                    "text": "This court having been satisfied that there exists an element of settlement in this case, the case is referred to Mediation. The parties are directed to appear before the <> Mediation Centre, on <date>. If it is not possible to mediate this case on the date fixed, the Mediation centre will fix a convenient date for mediation.",
+                    "text": [
+                      "This court having been satisfied that there exists an element of settlement in this case, the case is referred to ",
+                      { "text": "Mediation", "style": "highlight" },
+                      ". The parties are directed to appear before the ",
+                      { "text": "Mediation Centre", "style": "highlight" },
+                      ", on ",
+                      { "text": "{{date}}", "style": "highlight" },
+                      ". If it is not possible to mediate this case on the date fixed, the Mediation centre will fix a convenient date for mediation."
+                    ],
                     "style": "contentText"
                   },
+
                   {
-                    "text": "If the dispute is settled, the mediator shall reduce the terms of agreement into writing, get the signature of parties or their Power of Attorney holder and the counsel and submit the same to this Court on or before <Mediation Deadline>",
+                    "text": "If the dispute is settled, the mediator shall reduce the terms of agreement into writing, get the signature of parties or their Power of Attorney holder and the counsel and submit the same to this Court on or before {{mediationDeadline}}",
                     "style": "contentText"
                   },
                   {
@@ -203,11 +212,8 @@
       "nestedList": {
         "margin": [15, 0, 0, 0]
       },
-      "orderName": {
-        "fontSize": 14,
-        "bold": true,
-        "alignment": "center",
-        "margin": [0, 5, 0, 20]
+      "highlight": {
+        "bold": true
       },
       "date": {
         "fontSize": 12,
@@ -218,11 +224,6 @@
         "fontSize": 11,
         "alignment": "left",
         "margin": [0, 10, 0, 10]
-      },
-      "orderText": {
-        "fontSize": 12,
-        "alignment": "left",
-        "margin": [0, 10, 0, 20]
       },
       "signature": {
         "fontSize": 12,
