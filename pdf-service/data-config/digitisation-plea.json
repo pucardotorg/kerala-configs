@@ -37,12 +37,11 @@
                 }
               },
               {
-                "variable": "year",
+                "variable": "caseYear",
                 "value": {
-                  "path": "$.year"
+                  "path": "$.caseYear"
                 }
               },
-
               {
                 "variable": "accusedName",
                 "value": {
@@ -50,9 +49,45 @@
                 }
               },
               {
-                "variable": "textBody",
+                "variable": "fatherName",
                 "value": {
-                  "path": "$.textBody"
+                  "path": "$.fatherName"
+                }
+              },
+              {
+                "variable": "villageName",
+                "value": {
+                  "path": "$.villageName"
+                }
+              },
+              {
+                "variable": "taluk",
+                "value": {
+                  "path": "$.taluk"
+                }
+              },
+              {
+                "variable": "calling",
+                "value": {
+                  "path": "$.calling"
+                }
+              },
+              {
+                "variable": "age",
+                "value": {
+                  "path": "$.age"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "judgeRemarks",
+                "value": {
+                  "path": "$.judgeRemarks"
                 }
               },
               {
