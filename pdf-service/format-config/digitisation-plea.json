@@ -10,12 +10,16 @@
               {
                 "stack": [
                   {
-                    "text": "Examination of Accused",
+                    "text": "Form No. 17",
                     "style": "header"
                   },
                   {
-                    "text": "(Section 351, BNSS)",
-                    "style": "subHeaderItalics"
+                    "text": "Examination of the Accused",
+                    "style": "header"
+                  },
+                  {
+                    "text": "(Section 281, Criminal Procedure Court)",
+                    "style": "header"
                   },
                   {
                     "text": "In the Court of {{courtName}}, {{place}}, {{state}}",
@@ -26,46 +30,72 @@
                     "style": "header"
                   },
                   {
-                    "text": "Examination of {{accusedName}}",
-                    "style": "subHeader"
+                    "text": "Statement of {{accusedName}}",
+                    "style": "header"
                   },
                   {
-                    "text": "{{textBody}}",
-                    "style": "bodyText"
+                    "text": "Name: {{accusedName}}",
+                    "style": "contentText"
                   },
                   {
-                    "columns": [
-                      {
-                        "width": "50%",
-                        "stack": [
-                          {
-                            "text": "{{accusedSignature}}",
-                            "style": "accusedSignature"
-                          },
-                          {
-                            "text": "Signature of the Accused",
-                            "style": "accusedSignature"
-                          }
-                        ]
-                      },
-                      {
-                        "width": "50%",
-                        "stack": [
-                          {
-                            "text": "{{judgeSignature}}",
-                            "style": "judgeSignature"
-                          },
-                          {
-                            "text": "Signature of the Magistrate",
-                            "style": "judgeSignature"
-                          }
-                        ]
-                      }
-                    ]
+                    "text": "Father's Name: {{fatherName}}",
+                    "style": "contentText"
                   },
                   {
-                    "text": "Certified that the statement is typed down by me in my personal laptop read over to the accused and admitted by her to be correct.",
-                    "style": "bottomText"
+                    "text": "Village: {{villageName}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "Taluk: {{taluk}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "Calling: {{calling}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "Age: {{age}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "Date: {{date}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": " ചോദ്യം: കുറ്റപത്രം വായിച്ച കള്ള മനസ്സിലാക്കിയോ?ണ്ടോ?}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "ഉത്തരം: <if yes=ഉണ്ട്> <if not yet=ഇല്ല>",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": " ചോദ്യംചോദ്യം: ടി കുറ്റം ചെയ്തിട്ടുണ്ടേ?ടോ?}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "ഉത്തരം: <if yes=ഉണ്ട്> <if not yet=ഇല്ല>",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "Magistrate's Remarks: {{judgeRemarks}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "{{accusedSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Signature of Accused",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "{Signature of Magistrate}",
+                    "style": "signature"
                   }
                 ],
                 "alignment": "left",
@@ -79,53 +109,52 @@
     ],
     "styles": {
       "header": {
-        "fontSize": 12,
+        "fontSize": 14,
         "bold": true,
         "alignment": "center",
         "margin": [0, 0, 0, 5]
       },
-      "subHeader": {
-        "fontSize": 11,
-        "alignment": "center",
-        "margin": [0, 0, 0, 5]
-      },
-      "subHeaderItalics": {
-        "fontSize": 11,
-
-        "italics": true,
-        "alignment": "center",
-        "margin": [0, 0, 0, 5]
-      },
       "caseName": {
-        "fontSize": 12,
+        "fontSize": 14,
         "alignment": "center",
         "margin": [0, 5, 0, 5]
       },
       "caseNumber": {
-        "fontSize": 12,
+        "fontSize": 14,
         "alignment": "center",
         "margin": [0, 5, 0, 5]
       },
-
-      "bodyText": {
-        "fontSize": 12,
+      "orderTitle": {
+        "fontSize": 16,
+        "bold": true,
         "alignment": "center",
-        "margin": [0, 10, 0, 10]
+        "margin": [0, 5, 0, 5]
       },
-      "accusedSignature": {
-        "fontSize": 12,
-        "alignment": "left",
-        "margin": [0, 0, 0, 10]
+      "orderName": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 20]
       },
-      "judgeSignature": {
-        "fontSize": 12,
-        "alignment": "right",
-        "margin": [0, 0, 0, 10]
-      },
-      "bottomText": {
+      "date": {
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, 10, 0, 10]
+      },
+      "contentText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "orderText": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 20]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 0]
       },
       "tableData": {
         "bold": true,
