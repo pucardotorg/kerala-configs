@@ -60,7 +60,7 @@
                     "style": "content"
                   },
                   {
-                    "text": "{{{witnessDeposition}}}",
+                    "stack": "{{{witnessDeposition}}}",
                     "style": "deposition"
                   },
                   {

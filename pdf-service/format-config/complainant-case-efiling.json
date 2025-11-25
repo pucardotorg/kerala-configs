@@ -164,7 +164,7 @@
                     "style": "complaintSubHeader"
                   },
                   {
-                    "text": "{{{complaint}}}",
+                    "stack": "{{{complaint}}}",
                     "style": "bodyText"
                   },
                   {
@@ -173,7 +173,7 @@
                     "decoration": "underline"
                   },
                   {
-                    "text": "{{{prayer}}}",
+                    "stack": "{{{prayer}}}",
                     "style": "bodyText"
                   },
                   {
@@ -349,7 +349,7 @@
                             "border": [true, true, true, true]
                           },
                           {
-                            "text": "{{{witnessAdditionalDetails}}}",
+                            "stack": "{{{witnessAdditionalDetails}}}",
                             "style": "bodyText",
                             "border": [true, true, true, true]
                           }
