@@ -46,8 +46,12 @@
                     "style": "boldText"
                   },
                   {
-                    "text": "Reasons for Delay: {{{reasonForDelay}}}",
+                    "text": "Reasons for Delay: ",
                     "style": "boldText"
+                  },
+                  {
+                    "stack" : "{{{reasonForDelay}}}",
+                    "style" : "bodyText"
                   },
                   {
                     "text": "The petitioner assures and undertakes to the Hon'ble Court that this request is made in good faith and will not prejudice the other party.",
@@ -58,7 +62,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{{additionalComments}}}",
+                    "stack": "{{{additionalComments}}}",
                     "style": "bodyText"
                   },
                   {
