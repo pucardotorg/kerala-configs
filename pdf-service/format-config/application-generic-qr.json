@@ -34,7 +34,7 @@
                     "style": "subjectText"
                   },
                   {
-                    "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court seeking {{reasonForApplication}}",
+                    "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court seeking {{{reasonForApplication}}}",
                     "style": "bodyText"
                   },
                   "{{#additionalComments}}",
