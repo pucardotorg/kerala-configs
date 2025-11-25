@@ -42,7 +42,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{additionalComments}}",
+                    "text": "{{{additionalComments}}}",
                     "style": "bodyText"
                   },
                   {
