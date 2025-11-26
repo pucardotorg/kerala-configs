@@ -22,7 +22,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}} of {{year}}",
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
                     "style": "header"
                   },
                   "{{#complainantList}}",
@@ -37,7 +37,7 @@
                                 {
                                   "text": [
                                     {
-                                      "text": "Complainant {{index}} Name: ",
+                                      "text": "Complainant {{complainantIndex}} Name: ",
                                       "style": "fieldTitle"
                                     },
                                     {
@@ -49,8 +49,8 @@
                                 },
                                 {
                                   "ul": [
-                                    "Mobile Number: {{mobileNumber}}",
-                                    "Name of the Counsel: {{counselName}}"
+                                    "Mobile Number: {{complainantMobileNumber}}",
+                                    "Name of the Counsel: {{complainantCounselName}}"
                                   ],
                                   "style": "nestedList"
                                 }
@@ -77,11 +77,11 @@
                                 {
                                   "text": [
                                     {
-                                      "text": "Accused {{index}} Name: ",
+                                      "text": "Accused {{accusedIndex}} Name: ",
                                       "style": "fieldTitle"
                                     },
                                     {
-                                      "text": "{{complainantName}}",
+                                      "text": "{{accusedName}}",
                                       "style": "fieldValue"
                                     }
                                   ],
@@ -89,8 +89,8 @@
                                 },
                                 {
                                   "ul": [
-                                    "Mobile Number: {{mobileNumber}}",
-                                    "Name of the Counsel: {{counselName}}"
+                                    "Mobile Number: {{accusedMobileNumber}}",
+                                    "Name of the Counsel: {{accusedCounselName}}"
                                   ],
                                   "style": "nestedList"
                                 }
@@ -111,7 +111,7 @@
                         "text": "Nature of Complaint: ",
                         "style": "fieldTitle"
                       },
-                      { "text": "138 NI Act", "style": "fieldValue" }
+                      { "text": "{{caseType}}", "style": "fieldValue" }
                     ],
                     "margin": [0, 10, 0, 0]
                   },
@@ -121,7 +121,7 @@
                         "text": "Date of Institution: ",
                         "style": "fieldTitle"
                       },
-                      { "text": "{{date}}", "style": "fieldValue" }
+                      { "text": "{{institutionDate}}", "style": "fieldValue" }
                     ],
                     "margin": [0, 0, 0, 0]
                   },
@@ -153,7 +153,7 @@
                       ". The parties are directed to appear before the ",
                       { "text": "Mediation Centre", "style": "highlight" },
                       ", on ",
-                      { "text": "{{date}}", "style": "highlight" },
+                      { "text": "{{mediationDate}}", "style": "highlight" },
                       ". If it is not possible to mediate this case on the date fixed, the Mediation centre will fix a convenient date for mediation."
                     ],
                     "style": "contentText"
