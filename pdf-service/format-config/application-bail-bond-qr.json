@@ -78,7 +78,11 @@
                     "style": "list"
                   },
                   {
-                    "stack": "Prayer: {{{prayer}}}",
+                    "stack": "Prayer: ",
+                    "style": "bodyText"
+                  },
+                  {
+                    "stack": "{{{prayer}}}",
                     "style": "bodyText"
                   },
                   {
