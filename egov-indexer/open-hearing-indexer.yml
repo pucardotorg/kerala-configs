@@ -56,3 +56,5 @@ ServiceMaps:
                 outJsonPath: $.Data.hearingDetails.hearingDurationInMillis
               - inJsonPath: $.serialNumber
                 outJsonPath: $.Data.hearingDetails.serialNumber
+              - inJsonPath: $.orderStatus
+                outJsonPath: $.Data.hearingDetails.orderStatus
