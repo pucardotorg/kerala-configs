@@ -349,7 +349,7 @@
                             "border": [true, true, true, true]
                           },
                           {
-                            "stack": "{{witnessAdditionalDetails}}",
+                            "text": "{{witnessAdditionalDetails}}",
                             "style": "bodyText",
                             "border": [true, true, true, true]
                           }
