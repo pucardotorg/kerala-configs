@@ -46,7 +46,11 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Reasons for Delay: {{reasonForDelay}}",
+                    "text": "Reasons for Delay: ",
+                    "style": "bodyText"
+                  },
+                  {
+                    "stack": "{{{reasonForDelay}}}",
                     "style": "bodyText"
                   },
                   {
@@ -58,7 +62,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{additionalComments}}",
+                    "stack": "{{{additionalComments}}}",
                     "style": "bodyText"
                   },
                   {
