@@ -740,7 +740,7 @@ serviceMaps:
           basePath: outcome
           jsonMaps:
             - jsonPath: $.outcome.outcome
-            - jsonPath: $.cases.natureOfDisposal
+            - jsonPath: $.outcome.natureOfDisposal
             - jsonPath: $.outcome.auditDetails.lastModifiedBy
             - jsonPath: $.outcome.auditDetails.lastModifiedTime
             - jsonPath: $.outcome.filingNumber
