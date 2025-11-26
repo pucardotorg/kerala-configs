@@ -45,7 +45,7 @@ serviceMaps:
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
-        - query: UPDATE digitalized_document SET plea_details=?, examination_of_accused_details=?, mediation_details=?, additional_details=?, status=?, documents=?, last_modified_by=?, last_modified_time=? WHERE id=?;
+        - query: UPDATE digitalized_document SET mediation_details=?, additional_details=?, status=?, documents=?, last_modified_by=?, last_modified_time=? WHERE id=?;
           basePath: digitalizedDocument
           jsonMaps:
             - jsonPath: $.digitalizedDocument.mediationDetails
