@@ -71,14 +71,18 @@
                   {
                     "ul": [
                       {
-                        "text": "{{reasonForApplication}}",
+                        "stack": "{{{reasonForApplication}}}",
                         "style": "reasonForApplication"
                       }
                     ],
                     "style": "list"
                   },
                   {
-                    "text": "Prayer: {{prayer}}",
+                    "text": "Prayer: ",
+                    "style": "bodyText"
+                  },
+                  {
+                    "stack": "{{{prayer}}}",
                     "style": "bodyText"
                   },
                   {
@@ -91,7 +95,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{additionalComments}}",
+                    "stack": "{{{additionalComments}}}",
                     "style": "bodyText"
                   },
                   {
