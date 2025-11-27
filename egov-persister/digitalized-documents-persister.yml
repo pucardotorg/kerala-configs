@@ -11,7 +11,7 @@ serviceMaps:
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
-        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, mediation_details, additional_details, status, documents, tenant_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, order_number,order_item_id, mediation_details, additional_details, status, documents, tenant_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: digitalizedDocument
           jsonMaps:
             - jsonPath: $.digitalizedDocument.id
@@ -19,6 +19,8 @@ serviceMaps:
             - jsonPath: $.digitalizedDocument.documentNumber
             - jsonPath: $.digitalizedDocument.caseId
             - jsonPath: $.digitalizedDocument.caseFilingNumber
+            - jsonPath: $.digitalizedDocument.orderNumber
+            - jsonPath: $.digitalizedDocument.orderItemId
             - jsonPath: $.digitalizedDocument.mediationDetails
               type: JSON
               dbType: JSONB
@@ -45,9 +47,10 @@ serviceMaps:
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
-        - query: UPDATE digitalized_document SET mediation_details=?, additional_details=?, status=?, documents=?, last_modified_by=?, last_modified_time=? WHERE id=?;
+        - query: UPDATE digitalized_document SET order_item_id=?, mediation_details=?, additional_details=?, status=?, documents=?, last_modified_by=?, last_modified_time=? WHERE id=?;
           basePath: digitalizedDocument
           jsonMaps:
+            - jsonPath: $.digitalizedDocument.orderItemId
             - jsonPath: $.digitalizedDocument.mediationDetails
               type: JSON
               dbType: JSONB
