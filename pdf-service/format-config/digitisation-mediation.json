@@ -22,7 +22,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
+                    "text": "Case No. {{caseFilingNumber}} of {{caseYear}}",
                     "style": "header"
                   },
                   "{{#complainantList}}",
@@ -111,7 +111,10 @@
                         "text": "Nature of Complaint: ",
                         "style": "fieldTitle"
                       },
-                      { "text": "{{caseType}}", "style": "fieldValue" }
+                      {
+                        "text": "{{natureOfComplainant}}",
+                        "style": "fieldValue"
+                      }
                     ],
                     "margin": [0, 10, 0, 0]
                   },
@@ -138,7 +141,7 @@
                         "text": "Next date of Hearing: ",
                         "style": "fieldTitle"
                       },
-                      { "text": "{{nextHearingDate}}", "style": "fieldValue" }
+                      { "text": "{{hearingDate}}", "style": "fieldValue" }
                     ],
                     "margin": [0, 0, 0, 20]
                   },
@@ -170,6 +173,10 @@
                 ],
                 "alignment": "left",
                 "margin": [0, 20, 0, 20]
+              },
+              {
+                "stack": "{{{itemText}}}",
+                "style": "body"
               }
             ]
           ]

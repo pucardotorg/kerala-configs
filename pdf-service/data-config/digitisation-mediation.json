@@ -3,8 +3,8 @@
   "DataConfigs": {
     "serviceName": "rainmaker-common",
     "version": "1.0.0",
-    "baseKeyPath": "$.Data.*",
-    "entityIdPath": "$.id",
+    "baseKeyPath": "$.digitalizedDocument",
+    "entityIdPath": "$.caseId",
     "isCommonTableBorderRequired": true,
     "mappings": [
       {
@@ -12,57 +12,113 @@
         "mappings": [
           {
             "direct": [
+              { "variable": "courtName", "value": { "path": "$.courtName" } },
+              { "variable": "place", "value": { "path": "$.place" } },
+              { "variable": "state", "value": { "path": "$.place" } },
               {
-                "variable": "courtName",
-                "value": {
-                  "path": "$.courtName"
-                }
+                "variable": "caseFilingNumber",
+                "value": { "path": "$.caseFilingNumber" }
               },
               {
-                "variable": "place",
-                "value": {
-                  "path": "$.place"
-                }
+                "variable": "caseYear",
+                "value": { "path": "$.caseFilingNumber" }
               },
-              {
-                "variable": "filingNumber",
-                "value": {
-                  "path": "$.filingNumber"
-                }
-              },
+
               {
                 "variable": "complainantList",
                 "value": {
-                  "path": "$.complainantList"
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')]"
                 },
                 "type": "function",
-                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+                "format": "for (var i=0;i<type.length;i++){ type[i]['index']=i+1; } return type;"
               },
+
+              {
+                "variable": "complainantIndex",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')].partyIndex"
+                }
+              },
+              {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')].partyName"
+                }
+              },
+              {
+                "variable": "complainantMobileNumber",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')].mobileNumber"
+                }
+              },
+              {
+                "variable": "complainantCounselName",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')].counselName"
+                }
+              },
+
               {
                 "variable": "accusedList",
                 "value": {
-                  "path": "$.accusedList"
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='ACCUSED')]"
                 },
                 "type": "function",
-                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+                "format": "for (var i=0;i<type.length;i++){ type[i]['index']=i+1; } return type;"
               },
+
               {
-                "variable": "complaint",
+                "variable": "accusedIndex",
                 "value": {
-                  "path": "$.complaint"
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='ACCUSED')].partyIndex"
                 }
               },
+              {
+                "variable": "accusedName",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='ACCUSED')].partyName"
+                }
+              },
+              {
+                "variable": "accusedMobileNumber",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='ACCUSED')].mobileNumber"
+                }
+              },
+              {
+                "variable": "accusedCounselName",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='ACCUSED')].counselName"
+                }
+              },
+              {
+                "variable": "natureOfComplainant",
+                "value": { "path": "$.mediationDetails.natureOfComplainant" }
+              },
+              {
+                "variable": "institutionDate",
+                "value": { "path": "$.mediationDetails.dateOfInstitution" }
+              },
+              {
+                "variable": "caseStage",
+                "value": { "path": "$.mediationDetails.caseStage" }
+              },
+
               {
                 "variable": "placeholderList",
-                "value": {
-                  "path": "$.placeholderList"
-                }
+                "value": { "path": "$.placeholderList" }
+              },
+              {
+                "variable": "hearingDate",
+                "value": { "path": "$.mediationDetails.hearingDate" }
+              },
+              {
+                "variable": "mediationDate",
+                "value": { "path": "$.mediationDetails.hearingDate" }
               },
               {
                 "variable": "mediationDeadline",
-                "value": {
-                  "path": "$.mediationDeadline"
-                }
+                "value": { "path": "$.mediationDetails.hearingDate" }
               }
             ]
           }
