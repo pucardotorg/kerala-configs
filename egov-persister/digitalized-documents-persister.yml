@@ -1,0 +1,127 @@
+serviceMaps:
+  serviceName: digitalized-documents-service
+  mappings:
+    - version: 1.0
+      description: Persists mediation digitalized document details in tables
+      fromTopic: create-mediation-digitalized-document
+      isTransaction: true
+      isAuditEnabled: true
+      module: DIGITALIZED-DOCUMENTS
+      objectIdJsonPath: $.digitalizedDocument.id
+      tenantIdJsonPath: $.digitalizedDocument.tenantId
+      transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
+      queryMaps:
+        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, order_number,order_item_id, mediation_details, additional_details, status, documents, tenant_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: digitalizedDocument
+          jsonMaps:
+            - jsonPath: $.digitalizedDocument.id
+            - jsonPath: $.digitalizedDocument.type
+            - jsonPath: $.digitalizedDocument.documentNumber
+            - jsonPath: $.digitalizedDocument.caseId
+            - jsonPath: $.digitalizedDocument.caseFilingNumber
+            - jsonPath: $.digitalizedDocument.orderNumber
+            - jsonPath: $.digitalizedDocument.orderItemId
+            - jsonPath: $.digitalizedDocument.mediationDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.digitalizedDocument.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.digitalizedDocument.status
+            - jsonPath: $.digitalizedDocument.documents
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.digitalizedDocument.tenantId
+            - jsonPath: $.digitalizedDocument.auditDetails.createdBy
+            - jsonPath: $.digitalizedDocument.auditDetails.createdTime
+            - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedBy
+            - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      description: Update mediation digitalized document details in tables
+      fromTopic: update-mediation-digitalized-document
+      isTransaction: true
+      isAuditEnabled: true
+      module: DIGITALIZED-DOCUMENTS
+      objectIdJsonPath: $.digitalizedDocument.id
+      tenantIdJsonPath: $.digitalizedDocument.tenantId
+      transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
+      queryMaps:
+        - query: UPDATE digitalized_document SET order_item_id=?, mediation_details=?, additional_details=?, status=?, documents=?, last_modified_by=?, last_modified_time=? WHERE id=?;
+          basePath: digitalizedDocument
+          jsonMaps:
+            - jsonPath: $.digitalizedDocument.orderItemId
+            - jsonPath: $.digitalizedDocument.mediationDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.digitalizedDocument.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.digitalizedDocument.status
+            - jsonPath: $.digitalizedDocument.documents
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedBy
+            - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedTime
+            - jsonPath: $.digitalizedDocument.id
+
+    - version: 1.0
+      description: Persists examination of accused digitalized document details in tables
+      fromTopic: create-examination-of-accused-document
+      isTransaction: true
+      isAuditEnabled: true
+      module: DIGITALIZED-DOCUMENTS
+      objectIdJsonPath: $.digitalizedDocument.id
+      tenantIdJsonPath: $.digitalizedDocument.tenantId
+      transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
+      queryMaps:
+        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, examination_of_accused_details, additional_details, status, documents, tenant_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: digitalizedDocument
+          jsonMaps:
+            - jsonPath: $.digitalizedDocument.id
+            - jsonPath: $.digitalizedDocument.type
+            - jsonPath: $.digitalizedDocument.documentNumber
+            - jsonPath: $.digitalizedDocument.caseId
+            - jsonPath: $.digitalizedDocument.caseFilingNumber
+            - jsonPath: $.digitalizedDocument.examinationOfAccusedDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.digitalizedDocument.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.digitalizedDocument.status
+            - jsonPath: $.digitalizedDocument.documents
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.digitalizedDocument.tenantId
+            - jsonPath: $.digitalizedDocument.auditDetails.createdBy
+            - jsonPath: $.digitalizedDocument.auditDetails.createdTime
+            - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedBy
+            - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      description: Update examination of accused digitalized document details in tables
+      fromTopic: update-examination-of-accused-document
+      isTransaction: true
+      isAuditEnabled: true
+      module: DIGITALIZED-DOCUMENTS
+      objectIdJsonPath: $.digitalizedDocument.id
+      tenantIdJsonPath: $.digitalizedDocument.tenantId
+      transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
+      queryMaps:
+        - query: UPDATE digitalized_document SET examination_of_accused_details=?, additional_details=?, status=?, documents=?, last_modified_by=?, last_modified_time=? WHERE id=?;
+          basePath: digitalizedDocument
+          jsonMaps:
+            - jsonPath: $.digitalizedDocument.examinationOfAccusedDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.digitalizedDocument.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.digitalizedDocument.status
+            - jsonPath: $.digitalizedDocument.documents
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedBy
+            - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedTime
+            - jsonPath: $.digitalizedDocument.id
