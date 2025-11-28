@@ -173,10 +173,6 @@
                 ],
                 "alignment": "left",
                 "margin": [0, 20, 0, 20]
-              },
-              {
-                "stack": "{{{itemText}}}",
-                "style": "body"
               }
             ]
           ]
