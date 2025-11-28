@@ -736,10 +736,11 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: outcome
       queryMaps:
-        - query: UPDATE  dristi_cases SET outcome =?, lastmodifiedby = ?, lastmodifiedtime = ? where filingnumber =? and tenantid =?;
+        - query: UPDATE  dristi_cases SET outcome =?, natureofdisposal =?, lastmodifiedby = ?, lastmodifiedtime = ? where filingnumber =? and tenantid =?;
           basePath: outcome
           jsonMaps:
             - jsonPath: $.outcome.outcome
+            - jsonPath: $.outcome.natureOfDisposal
             - jsonPath: $.outcome.auditDetails.lastModifiedBy
             - jsonPath: $.outcome.auditDetails.lastModifiedTime
             - jsonPath: $.outcome.filingNumber
