@@ -11,7 +11,7 @@ serviceMaps:
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
-        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, order_number,order_item_id, mediation_details, additional_details, status, documents, tenant_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, order_number,order_item_id, mediation_details, additional_details, status, documents, tenant_id, court_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: digitalizedDocument
           jsonMaps:
             - jsonPath: $.digitalizedDocument.id
@@ -32,6 +32,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.digitalizedDocument.tenantId
+            - jsonPath: $.digitalizedDocument.courtId
             - jsonPath: $.digitalizedDocument.auditDetails.createdBy
             - jsonPath: $.digitalizedDocument.auditDetails.createdTime
             - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedBy
@@ -75,7 +76,7 @@ serviceMaps:
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
-        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, examination_of_accused_details, additional_details, status, documents, tenant_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, examination_of_accused_details, additional_details, status, documents, tenant_id, court_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: digitalizedDocument
           jsonMaps:
             - jsonPath: $.digitalizedDocument.id
@@ -94,6 +95,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.digitalizedDocument.tenantId
+            - jsonPath: $.digitalizedDocument.courtId
             - jsonPath: $.digitalizedDocument.auditDetails.createdBy
             - jsonPath: $.digitalizedDocument.auditDetails.createdTime
             - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedBy
