@@ -144,3 +144,24 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.task.documents.*.isActive
+
+    - version: 1.0
+      description: Update task details based on uniqueId
+      fromTopic: update-task-uniqueid
+      isTransaction: true
+      isAuditEnabled: true
+      module: TASK
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: taskDetailsDTO
+      queryMaps:
+        - query: UPDATE dristi_task SET taskDetails=?, lastModifiedBy=?, lastModifiedTime=? WHERE taskNumber=?;
+          basePath: taskDetailsDTO
+          jsonMaps:
+            - jsonPath: $.taskDetailsDTO.taskDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.taskDetailsDTO.auditDetails.lastModifiedBy
+            - jsonPath: $.taskDetailsDTO.auditDetails.lastModifiedTime
+            - jsonPath: $.taskDetailsDTO.taskNumber
