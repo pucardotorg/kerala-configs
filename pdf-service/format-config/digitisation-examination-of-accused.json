@@ -30,7 +30,7 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "{{textBody}}",
+                    "stack": "{{{textBody}}}",
                     "style": "bodyText"
                   },
                   {
