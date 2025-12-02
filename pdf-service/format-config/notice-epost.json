@@ -1,5 +1,5 @@
 {
-  "key": "notice",
+  "key": "notice-e-post",
   "config": {
     "defaultStyle": {
       "font": "Cambay",
@@ -388,6 +388,32 @@
         },
         "layout": "noBorders",
         "margin": [0, 20, 0, 20]
+      },
+      {
+        "pageBreak": "before",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "TO",
+                    "fontSize": 12,
+                    "bold": true,
+                    "margin": [0, 0, 0, 10]
+                  },
+                  { "text": "{{respondentName}}", "margin": [0, 3] },
+                  { "text": "{{locality}}, {{district}}", "margin": [0, 3] },
+                  { "text": "{{city}}, {{state}}", "margin": [0, 3] },
+                  { "text": "{{pincode}}", "margin": [0, 3] }
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [70, 100, 0, 0]
       }
     ],
     "styles": {
