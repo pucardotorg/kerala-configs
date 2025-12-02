@@ -113,7 +113,7 @@
       "judgeSignature": {
         "fontSize": 12,
         "alignment": "left",
-        "margin": [0, 40, 0, 20]
+        "margin": [0, 80, 0, 20]
       },
       "date": {
         "fontSize": 12,
