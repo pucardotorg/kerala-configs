@@ -1,0 +1,155 @@
+{
+  "key": "notice-qr-e-post",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.summonsPdf",
+    "entityIdPath": "$.cnrNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "cnrNumber",
+                "value": {
+                  "path": "$.cnrNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "accessCode",
+                "value": {
+                  "path": "$.accessCode",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "filingNumber",
+                "value": {
+                  "path": "$.filingNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "respondentName",
+                "value": {
+                  "path": "$.respondentName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.complainantName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "complainantAddress",
+                "value": {
+                  "path": "$.complainantAddress",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "hearingDate",
+                "value": {
+                  "path": "$.hearingDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "issueDate",
+                "value": {
+                  "path": "$.issueDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "city",
+                "value": {
+                  "path": "$.address.city",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "state",
+                "value": {
+                  "path": "$.address.state",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "locality",
+                "value": {
+                  "path": "$.address.locality",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "district",
+                "value": {
+                  "path": "$.address.district",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "pincode",
+                "value": {
+                  "path": "$.address.pincode",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "qrCodeUrl",
+                "value": {
+                  "path": "$.embeddedUrl"
+                }
+              }
+            ]
+          },
+          {
+            "qrcodeConfig": [
+              {
+                "variable": "qrCodeImage",
+                "url": true,
+                "value": "{{qrCodeUrl}}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
