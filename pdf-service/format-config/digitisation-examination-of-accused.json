@@ -41,10 +41,6 @@
                           {
                             "text": "{{accusedSignature}}",
                             "style": "accusedSignature"
-                          },
-                          {
-                            "text": "Signature of the Accused",
-                            "style": "accusedSignature"
                           }
                         ]
                       },
@@ -53,10 +49,6 @@
                         "stack": [
                           {
                             "text": "{{judgeSignature}}",
-                            "style": "judgeSignature"
-                          },
-                          {
-                            "text": "Signature of the Magistrate",
                             "style": "judgeSignature"
                           }
                         ]
@@ -70,10 +62,6 @@
                 ],
                 "alignment": "left",
                 "margin": [0, 20, 0, 20]
-              },
-              {
-                "stack": "{{{itemText}}}",
-                "style": "body"
               }
             ]
           ]
