@@ -97,7 +97,8 @@
               },
               {
                 "variable": "institutionDate",
-                "value": { "path": "$.mediationDetails.dateOfInstitution" }
+                "value": { "path": "$.mediationDetails.dateOfInstitution" },
+                "type": "date"
               },
               {
                 "variable": "caseStage",
