@@ -14,7 +14,7 @@
             "direct": [
               { "variable": "courtName", "value": { "path": "$.courtName" } },
               { "variable": "place", "value": { "path": "$.place" } },
-              { "variable": "state", "value": { "path": "$.place" } },
+              { "variable": "state", "value": { "path": "$.state" } },
               {
                 "variable": "caseFilingNumber",
                 "value": { "path": "$.caseFilingNumber" }
@@ -30,7 +30,7 @@
                   "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')]"
                 },
                 "type": "function",
-                "format": "for (var i=0;i<type.length;i++){ type[i]['index']=i+1; } return type;"
+                "format": "type= type || []; for (var i=0;i<type.length;i++){ type[i]['index']=i+1; } return type;"
               },
 
               {
@@ -61,34 +61,34 @@
               {
                 "variable": "accusedList",
                 "value": {
-                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='ACCUSED')]"
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')]"
                 },
                 "type": "function",
-                "format": "for (var i=0;i<type.length;i++){ type[i]['index']=i+1; } return type;"
+                "format": "type= type || []; for (var i=0;i<type.length;i++){ type[i]['index']=i+1; } return type;"
               },
 
               {
                 "variable": "accusedIndex",
                 "value": {
-                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='ACCUSED')].partyIndex"
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')].partyIndex"
                 }
               },
               {
                 "variable": "accusedName",
                 "value": {
-                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='ACCUSED')].partyName"
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')].partyName"
                 }
               },
               {
                 "variable": "accusedMobileNumber",
                 "value": {
-                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='ACCUSED')].mobileNumber"
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')].mobileNumber"
                 }
               },
               {
                 "variable": "accusedCounselName",
                 "value": {
-                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='ACCUSED')].counselName"
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')].counselName"
                 }
               },
               {
@@ -97,7 +97,8 @@
               },
               {
                 "variable": "institutionDate",
-                "value": { "path": "$.mediationDetails.dateOfInstitution" }
+                "value": { "path": "$.mediationDetails.dateOfInstitution" },
+                "type": "date"
               },
               {
                 "variable": "caseStage",
@@ -110,15 +111,17 @@
               },
               {
                 "variable": "hearingDate",
-                "value": { "path": "$.mediationDetails.hearingDate" }
+                "value": { "path": "$.mediationDetails.hearingDate" },
+                "type": "date"
               },
               {
                 "variable": "mediationDate",
-                "value": { "path": "$.mediationDetails.hearingDate" }
+                "value": { "path": "$.mediationDetails.mediationDate" },
+                "type": "date"
               },
               {
                 "variable": "mediationDeadline",
-                "value": { "path": "$.mediationDetails.hearingDate" }
+                "value": { "path": "$.mediationDetails.dateOfEndADR" }
               }
             ]
           }
