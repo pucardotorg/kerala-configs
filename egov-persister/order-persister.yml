@@ -181,3 +181,27 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.order.documents.*.isActive
+
+    - version: 1.0
+      description: Update order details based on uniqueId
+      fromTopic: update-order-uniqueid
+      isTransaction: true
+      isAuditEnabled: true
+      module: ORDER
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: orderDetailsDTO
+      queryMaps:
+        - query: UPDATE dristi_orders SET additionaldetails=?, compositeitems=?, lastModifiedBy=?, lastModifiedTime=? WHERE orderNumber=?;
+          basePath: orderDetailsDTO
+          jsonMaps:
+            - jsonPath: $.orderDetailsDTO.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.orderDetailsDTO.compositeItems
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.orderDetailsDTO.auditDetails.lastModifiedBy
+            - jsonPath: $.orderDetailsDTO.auditDetails.lastModifiedTime
+            - jsonPath: $.orderDetailsDTO.orderNumber

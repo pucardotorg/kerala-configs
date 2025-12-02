@@ -1,5 +1,5 @@
 {
-  "key": "summons-accused-qr",
+  "key": "notice-qr-e-post",
   "config": {
     "defaultStyle": {
       "font": "Cambay"
@@ -15,65 +15,27 @@
               {
                 "stack": [
                   {
-                    "text": "FORM NO.1",
-                    "style": "form-header"
-                  },
-                  {
-                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE OF {{judgeName}}",
-                    "style": "form-sub-header"
-                  },
-                  {
-                    "text": "Summary Trial No. {{courtCaseNumber}}",
-                    "style": "form-sub-header"
-                  },
-                  {
-                    "table": {
-                      "widths": ["*", "*"],
-                      "body": [
-                        [
-                          {
-                            "text": "SUMMONS TO AN",
-                            "style": "form-sub-header",
-                            "alignment": "left"
-                          },
-                          {
-                            "text": "{{caseName}}",
-                            "style": "form-sub-header",
-                            "alignment": "right"
-                          }
-                        ]
-                      ]
-                    },
-                    "layout": "noBorders"
-                  },
-                  {
-                    "text": "ACCUSED PERSON",
+                    "text": "NOTICE TO ACCUSED",
                     "style": "form-sub-header",
-                    "alignment": "left"
+                    "alignment": "center"
                   },
                   {
-                    "table": {
-                      "widths": ["*", "*"],
-                      "body": [
-                        [
-                          {
-                            "text": "(See section 63)",
-                            "style": "form-sub-header",
-                            "alignment": "left"
-                          },
-                          {
-                            "text": "Next Date: {{hearingDate}}",
-                            "style": "form-sub-header",
-                            "alignment": "right"
-                          }
-                        ]
-                      ]
-                    },
-                    "layout": "noBorders"
+                    "text": "(Under Sections 223, Bharatiya Nagarik Suraksha Sanhita, 2023)",
+                    "style": "form-sub-header",
+                    "alignment": "center"
+                  },
+                  {
+                    "text": "In The {{courtName}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "E-Filing Number  {{filingNumber}}",
+                    "style": "form-sub-header",
+                    "alignment": "center"
                   }
                 ],
                 "alignment": "center",
-                "margin": [0, 10, 0, 10]
+                "margin": [0, 20, 0, 20]
               }
             ]
           ]
@@ -87,19 +49,19 @@
           "body": [
             [
               {
-                "text": "To,",
+                "text": "Between: ",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": "{{respondentName}}",
+                "text": "Petitioner: {{complainantName}} and Accused: {{respondentName}}",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": "{{respondentAddress}}",
+                "text": "Please take notice that a complaint has been presented against you before this court by {{complainantName}} {{complainantAddress}},(name and address of the complainant alleging offence punishable under Section (s) 138 of the Negotiable Instruments Act, 1881",
                 "style": "form-sub-body"
               }
             ],
@@ -107,16 +69,18 @@
               {
                 "text": [
                   {
-                    "text": "WHEREAS ",
+                    "text": "And that this court shall hear on the question of taking cognisance of the said offence on the ",
                     "style": "form-sub-body"
                   },
                   {
-                    "text": "your attendance is necessary to answer to a charge U/s. 138 of N.I ACT, you are hereby required to appear in person (or by pleader, as the case may be) before the (Magistrate) of {{judgeName}} on the {{hearingDate}}. Herein fail not.",
-                    "color": "black",
-                    "bold": true
+                    "text": "{{hearingDate}}.",
+                    "style": "form-sub-body-bold"
+                  },
+                  {
+                    "text": " You are at liberty to show cause why this court should not take cognizance of the said complaint. ",
+                    "style": "form-sub-body"
                   }
-                ],
-                "leadingIndent": 20
+                ]
               }
             ]
           ]
@@ -131,30 +95,20 @@
           "body": [
             [
               {
-                "text": "Dated, this {{issueDate}}.",
+                "text": "Given under my hand and the seal of the Court, this {{issueDate}}.",
                 "style": "closing-text"
               }
             ],
             [
               {
-                "table": {
-                  "widths": ["*", "*"],
-                  "body": [
-                    [
-                      {
-                        "text": "Seal of the Court",
-                        "style": "closing-seal",
-                        "alignment": "left"
-                      },
-                      {
-                        "text": "Signature",
-                        "style": "closing-signature",
-                        "alignment": "right"
-                      }
-                    ]
-                  ]
-                },
-                "layout": "noBorders"
+                "text": "Seal of the Court",
+                "style": "closing-seal"
+              }
+            ],
+            [
+              {
+                "text": "Signature",
+                "style": "closing-signature"
               }
             ],
             [
@@ -182,8 +136,8 @@
             [
               {
                 "image": "{{qrCodeImage}}",
-                "width": 180,
-                "height": 180,
+                "width": 150,
+                "height": 150,
                 "style": "qr-code",
                 "alignment": "center"
               }
@@ -199,9 +153,24 @@
           "body": [
             [
               {
-                "text": "Visit dristi.gov.in for more information",
-                "style": "footer-body",
-                "decoration": "underline"
+                "text": [
+                  {
+                    "text": "Visit ",
+                    "style": "footer-content-link"
+                  },
+                  {
+                    "text": "{{courtUrl}}",
+                    "decoration": "underline",
+                    "color": "#A62121",
+                    "style": "footer-content-link",
+                    "link": "{{courtUrl}}"
+                  },
+                  {
+                    "text": " for more information",
+                    "style": "footer-content-link"
+                  }
+                ],
+                "margin": [0, 8]
               }
             ],
             [
@@ -212,19 +181,21 @@
             ],
             [
               {
-                "text": "Next page",
+                "text": "Next Page",
                 "style": "footer-page",
                 "alignment": "right"
+              }
+            ],
+            [
+              {
+                "text": "",
+                "pageBreak": "before"
               }
             ]
           ]
         },
         "layout": "noBorders",
         "margin": [0, 20, 0, 0]
-      },
-      {
-        "text": "",
-        "pageBreak": "before"
       },
       {
         "style": "annexure-header",
@@ -265,14 +236,32 @@
             ],
             [
               {
-                "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: {{accessCode}}. Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the Complaint tab on the Portal.",
-                "style": "annexure-content"
+                "text": [
+                  {
+                    "text": "Once you register on the portal, you can log in and join your case using this 6 digit code: ",
+                    "style": "annexure-content"
+                  },
+                  {
+                    "text": "{{accessCode}}.",
+                    "style": "annexure-content-bold"
+                  },
+                  {
+                    "text": " Do not share this code with anyone other than your lawyer. The complaint and related documents filed by the complainant are available on the complaint tab of the Portal.",
+                    "style": "annexure-content"
+                  }
+                ]
               }
             ],
             [
               {
                 "text": "2. Understanding More About Cheque Bounce Cases",
                 "style": "annexure-sub-header"
+              }
+            ],
+            [
+              {
+                "text": "This notice is merely to give you an opportunity of being heard even before a case is admitted, to enable to you share your version of the events with the presiding officer.",
+                "style": "annexure-content"
               }
             ],
             [
@@ -306,10 +295,19 @@
                     "text": [
                       {
                         "text": "Join the Case: ",
-                        "color": "#000000"
+                        "color": "#000000",
+                        "bold": true
                       },
                       {
-                        "text": "Log in to the Portal & enter the 6-digit code {{accessCode}} to access your case details.",
+                        "text": "Log in to the Portal & enter the 6-digit code ",
+                        "style": "annexure-content"
+                      },
+                      {
+                        "text": "{{accessCode}},",
+                        "style": "annexure-content-bold"
+                      },
+                      {
+                        "text": " to access your case details. You can use your mobile number to register/login on the portal",
                         "style": "annexure-content"
                       }
                     ]
@@ -330,10 +328,19 @@
                     "text": [
                       {
                         "text": "Request a different hearing date: ",
-                        "color": "#000000"
+                        "color": "#000000",
+                        "bold": true
                       },
                       {
-                        "text": "If you cannot attend your hearing on {{hearingDate}}, you can request a new date through the Portal.",
+                        "text": "If you cannot attend your hearing on ",
+                        "style": "annexure-content"
+                      },
+                      {
+                        "text": "{{hearingDate}},",
+                        "style": "annexure-content-bold"
+                      },
+                      {
+                        "text": " you can request a new date through the Portal.",
                         "style": "annexure-content"
                       }
                     ]
@@ -403,6 +410,32 @@
         },
         "layout": "noBorders",
         "margin": [0, 20, 0, 20]
+      },
+      {
+        "pageBreak": "before",
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "TO",
+                    "fontSize": 12,
+                    "bold": true,
+                    "margin": [0, 0, 0, 10]
+                  },
+                  { "text": "{{respondentName}}", "margin": [0, 3] },
+                  { "text": "{{locality}}, {{district}}", "margin": [0, 3] },
+                  { "text": "{{city}}, {{state}}", "margin": [0, 3] },
+                  { "text": "{{pincode}}", "margin": [0, 3] }
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [70, 100, 0, 0]
       }
     ],
     "styles": {
@@ -483,6 +516,22 @@
         "fontSize": 11,
         "color": "#484848"
       }
+    },
+    "annexure-content-bold": {
+      "fontSize": 11,
+      "color": "#252525",
+      "bold": true
+    },
+    "form-sub-body-bold": {
+      "fontSize": 13,
+      "color": "#252525",
+      "bold": true
+    },
+    "footer-content-link": {
+      "color": "#252525",
+      "fontSize": 14,
+      "margin": [5, 5, 5, 5],
+      "alignment": "left"
     }
   }
 }
