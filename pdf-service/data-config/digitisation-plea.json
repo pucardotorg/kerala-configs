@@ -79,6 +79,30 @@
                 }
               },
               {
+                "variable": "ques1Yes",
+                "value": {
+                  "path": "$.ques1Yes"
+                }
+              },
+              {
+                "variable": "ques1No",
+                "value": {
+                  "path": "$.ques1No"
+                }
+              },
+              {
+                "variable": "ques2Yes",
+                "value": {
+                  "path": "$.ques2Yes"
+                }
+              },
+              {
+                "variable": "ques2No",
+                "value": {
+                  "path": "$.ques2No"
+                }
+              },
+              {
                 "variable": "date",
                 "value": {
                   "path": "$.date"
