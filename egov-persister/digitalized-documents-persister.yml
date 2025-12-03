@@ -76,7 +76,7 @@ serviceMaps:
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
-        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, examination_of_accused_details, additional_details, status, documents, tenant_id, court_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, examination_of_accused_details, additional_details, status, documents, tenant_id, court_id, shortenedUrl, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: digitalizedDocument
           jsonMaps:
             - jsonPath: $.digitalizedDocument.id
@@ -96,6 +96,7 @@ serviceMaps:
               dbType: JSONB
             - jsonPath: $.digitalizedDocument.tenantId
             - jsonPath: $.digitalizedDocument.courtId
+            - jsonPath: $.digitalizedDocument.shortenedUrl
             - jsonPath: $.digitalizedDocument.auditDetails.createdBy
             - jsonPath: $.digitalizedDocument.auditDetails.createdTime
             - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedBy
@@ -111,7 +112,7 @@ serviceMaps:
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
-        - query: UPDATE digitalized_document SET examination_of_accused_details=?, additional_details=?, status=?, documents=?, last_modified_by=?, last_modified_time=? WHERE id=?;
+        - query: UPDATE digitalized_document SET examination_of_accused_details=?, additional_details=?, status=?, shortened_url=?, documents=?, last_modified_by=?, last_modified_time=? WHERE id=?;
           basePath: digitalizedDocument
           jsonMaps:
             - jsonPath: $.digitalizedDocument.examinationOfAccusedDetails
@@ -121,6 +122,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.digitalizedDocument.status
+            - jsonPath: $.digitalizedDocument.shortenedUrl
             - jsonPath: $.digitalizedDocument.documents
               type: JSON
               dbType: JSONB
@@ -138,7 +140,7 @@ serviceMaps:
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
-        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, order_number,order_item_id, plea_details, additional_details, status, documents, tenant_id, court_id,created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, order_number,order_item_id, plea_details, additional_details, status, documents, tenant_id, court_id, shortened_url, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: digitalizedDocument
           jsonMaps:
             - jsonPath: $.digitalizedDocument.id
@@ -160,6 +162,7 @@ serviceMaps:
               dbType: JSONB
             - jsonPath: $.digitalizedDocument.tenantId
             - jsonPath: $.digitalizedDocument.courtId
+            - jsonPath: $.digitalizedDocument.shortenedUrl
             - jsonPath: $.digitalizedDocument.auditDetails.createdBy
             - jsonPath: $.digitalizedDocument.auditDetails.createdTime
             - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedBy
@@ -175,7 +178,7 @@ serviceMaps:
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
-        - query: UPDATE digitalized_document SET order_item_id=?, plea_details=?, additional_details=?, status=?, documents=?, last_modified_by=?, last_modified_time=? WHERE id=?;
+        - query: UPDATE digitalized_document SET order_item_id=?, plea_details=?, additional_details=?, status=?, shortened_url=?, documents=?, last_modified_by=?, last_modified_time=? WHERE id=?;
           basePath: digitalizedDocument
           jsonMaps:
             - jsonPath: $.digitalizedDocument.orderItemId
@@ -186,6 +189,7 @@ serviceMaps:
               type: JSON
               dbType: JSONB
             - jsonPath: $.digitalizedDocument.status
+            - jsonPath: $.digitalizedDocument.shortenedUrl
             - jsonPath: $.digitalizedDocument.documents
               type: JSON
               dbType: JSONB
