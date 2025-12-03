@@ -154,21 +154,53 @@
                       "This court having been satisfied that there exists an element of settlement in this case, the case is referred to ",
                       { "text": "Mediation", "style": "highlight" },
                       ". The parties are directed to appear before the ",
-                      { "text": "Mediation Centre", "style": "highlight" },
+                      { "text": "{{mediationCentre}}", "style": "highlight" },
                       ", on ",
-                      { "text": "{{mediationDate}}", "style": "highlight" },
+                      { "text": "{{pdfCreatedDate}}", "style": "highlight" },
                       ". If it is not possible to mediate this case on the date fixed, the Mediation centre will fix a convenient date for mediation."
                     ],
                     "style": "contentText"
                   },
 
                   {
-                    "text": "If the dispute is settled, the mediator shall reduce the terms of agreement into writing, get the signature of parties or their Power of Attorney holder and the counsel and submit the same to this Court on or before {{mediationDeadline}}",
+                    "text": "If the dispute is settled, the mediator shall reduce the terms of agreement into writing, get the signature of parties or their Power of Attorney holder and the counsel and submit the same to this Court on or before {{hearingDate}}",
                     "style": "contentText"
                   },
                   {
                     "text": "If the dispute is not settled, the mediator shall submit a report to the Court that the mediation has not been successful.",
                     "style": "contentText"
+                  },
+                  {
+                    "columns": [
+                      {
+                        "stack": [
+                          "{{#complainantList}}",
+                          {
+                            "text": "Complainant {{complainantIndex}} Signature",
+                            "style": "complainantSignature"
+                          },
+                          "{{/complainantList}}"
+                        ]
+                      },
+                      {
+                        "stack": [
+                          "{{#accusedList}}",
+                          {
+                            "text": "Accused {{accusedIndex}} Signature",
+                            "style": "accusedSignature"
+                          },
+                          "{{/accusedList}}"
+                        ],
+                        "alignment": "right"
+                      }
+                    ],
+                    "columnGap": 40,
+                    "margin": [0, 30, 0, 20]
+                  },
+
+                  {
+                    "text": "{{judgeSignature}}",
+                    "style": "judgeSignature"
                   }
                 ],
                 "alignment": "left",
@@ -228,10 +260,22 @@
         "alignment": "left",
         "margin": [0, 10, 0, 10]
       },
-      "signature": {
+      "complainantSignature": {
         "fontSize": 12,
         "alignment": "left",
-        "margin": [0, 10, 0, 0]
+        "bold": true,
+        "margin": [0, 40, 0, 10]
+      },
+      "accusedSignature": {
+        "fontSize": 12,
+        "alignment": "right",
+        "bold": true,
+        "margin": [0, 40, 0, 10]
+      },
+      "judgeSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 80, 0, 0]
       },
       "tableData": {
         "bold": true,
