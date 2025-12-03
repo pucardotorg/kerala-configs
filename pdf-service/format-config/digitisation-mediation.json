@@ -199,7 +199,7 @@
                   },
 
                   {
-                    "text": "{{judgeSignature}}",
+                    "text": "Signature Of Magistrate",
                     "style": "judgeSignature"
                   }
                 ],
@@ -274,6 +274,7 @@
       },
       "judgeSignature": {
         "fontSize": 12,
+        "bold": true,
         "alignment": "left",
         "margin": [0, 80, 0, 0]
       },
