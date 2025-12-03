@@ -66,7 +66,7 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "ഉത്തരം: <if yes=ഉണ്ട്> <if not yet=ഇല്ല>",
+                    "text": "ഉത്തരം: {{#ques1Yes}}ഉണ്ട്{{/ques1Yes}}{{#ques1No}}ഇല്ല{{/ques1No}}",
                     "style": "contentText"
                   },
                   {
@@ -74,7 +74,7 @@
                     "style": "contentText"
                   },
                   {
-                    "text": "ഉത്തരം: <if yes=ഉണ്ട്> <if not yet=ഇല്ല>",
+                    "text": "ഉത്തരം: {{#ques2Yes}}ഉണ്ട്{{/ques2Yes}}{{#ques2No}}ഇല്ല{{/ques2No}}",
                     "style": "contentText"
                   },
                   {
