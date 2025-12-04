@@ -34,48 +34,136 @@
                     "style": "subHeader"
                   },
                   {
-                    "text": "Name: {{accusedName}}",
-                    "style": "contentText"
+                    "text": [
+                      {
+                        "text": "Name: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{accusedName}}",
+                        "style": "fieldValue"
+                      }
+                    ]
                   },
                   {
-                    "text": "Father's Name: {{fatherName}}",
-                    "style": "contentText"
+                    "text": [
+                      {
+                        "text": "Father's Name: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{fatherName}}",
+                        "style": "fieldValue"
+                      }
+                    ]
                   },
                   {
-                    "text": "Village: {{villageName}}",
-                    "style": "contentText"
+                    "text": [
+                      {
+                        "text": "Village: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{villageName}}",
+                        "style": "fieldValue"
+                      }
+                    ]
                   },
                   {
-                    "text": "Taluk: {{taluk}}",
-                    "style": "contentText"
+                    "text": [
+                      {
+                        "text": "Taluk: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{taluk}}",
+                        "style": "fieldValue"
+                      }
+                    ]
                   },
                   {
-                    "text": "Calling: {{calling}}",
-                    "style": "contentText"
+                    "text": [
+                      {
+                        "text": "Calling: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{calling}}",
+                        "style": "fieldValue"
+                      }
+                    ]
                   },
                   {
-                    "text": "Age: {{age}}",
-                    "style": "contentText"
+                    "text": [
+                      {
+                        "text": "Age: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{age}}",
+                        "style": "fieldValue"
+                      }
+                    ]
                   },
                   {
-                    "text": "Date: {{date}}",
-                    "style": "date"
+                    "text": [
+                      {
+                        "text": "Date: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{date}}",
+                        "style": "fieldValue"
+                      }
+                    ]
                   },
                   {
-                    "text": " ചോദ്യം: കുറ്റപത്രം വായിച്ച കള്ള മനസ്സിലാക്കിയോ?ണ്ടോ?",
-                    "style": "contentText"
+                    "text": [
+                      {
+                        "text": "ചോദ്യം: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "കുറ്റപത്രം വായിച്ച കള്ള മനസ്സിലാക്കിയോ?",
+                        "style": "fieldValue"
+                      }
+                    ]
                   },
                   {
-                    "text": "ഉത്തരം: {{#ques1Yes}}ഉണ്ട്{{/ques1Yes}}{{#ques1No}}ഇല്ല{{/ques1No}}",
-                    "style": "contentText"
+                    "text": [
+                      {
+                        "text": "ഉത്തരം: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{#ques1Yes}}ഉണ്ട്{{/ques1Yes}}{{#ques1No}}ഇല്ല{{/ques1No}}",
+                        "style": "fieldValue"
+                      }
+                    ]
                   },
                   {
-                    "text": " ചോദ്യംചോദ്യം: ടി കുറ്റം ചെയ്തിട്ടുണ്ടേ?ടോ?",
-                    "style": "contentText"
+                    "text": [
+                      {
+                        "text": "ചോദ്യം: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "ടി കുറ്റം ചെയ്തിട്ടുണ്ടോ?",
+                        "style": "fieldValue"
+                      }
+                    ]
                   },
                   {
-                    "text": "ഉത്തരം: {{#ques2Yes}}ഉണ്ട്{{/ques2Yes}}{{#ques2No}}ഇല്ല{{/ques2No}}",
-                    "style": "contentText"
+                    "text": [
+                      {
+                        "text": "ഉത്തരം: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{#ques2Yes}}ഉണ്ട്{{/ques2Yes}}{{#ques2No}}ഇല്ല{{/ques2No}}",
+                        "style": "fieldValue"
+                      }
+                    ]
                   },
                   {
                     "text": "Magistrate's Remarks: {{judgeRemarks}}",
@@ -141,7 +229,15 @@
         "alignment": "center",
         "margin": [0, 5, 0, 5]
       },
-
+      "fieldTitle": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left"
+      },
+      "fieldValue": {
+        "fontSize": 12,
+        "alignment": "left"
+      },
       "contentText": {
         "fontSize": 12,
         "alignment": "left",
