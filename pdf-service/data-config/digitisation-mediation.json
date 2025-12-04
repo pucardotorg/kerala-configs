@@ -115,13 +115,13 @@
                 "type": "date"
               },
               {
-                "variable": "mediationDate",
-                "value": { "path": "$.mediationDetails.mediationDate" },
+                "variable": "mediationCentre",
+                "value": { "path": "$.mediationDetails.mediationCentre" },
                 "type": "date"
               },
               {
-                "variable": "mediationDeadline",
-                "value": { "path": "$.mediationDetails.dateOfEndADR" }
+                "variable": "pdfCreatedDate",
+                "value": { "path": "$.mediationDetails.pdfCreatedDate" }
               }
             ]
           }
