@@ -109,11 +109,11 @@
                     "text": [
                       {
                         "text": "Date: ",
-                        "style": "fieldTitle"
+                        "style": "dateFieldTitle"
                       },
                       {
                         "text": "{{date}}",
-                        "style": "fieldValue"
+                        "style": "dateFieldValue"
                       }
                     ]
                   },
@@ -245,7 +245,13 @@
         "alignment": "left",
         "margin": [0, 10, 0, 10]
       },
-      "date": {
+      "dateFieldTitle": {
+        "fontSize": 12,
+        "alignment": "right",
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "dateFieldValue": {
         "fontSize": 12,
         "alignment": "right",
         "margin": [0, 10, 0, 10]
