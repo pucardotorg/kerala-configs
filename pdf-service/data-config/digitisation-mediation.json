@@ -1,0 +1,132 @@
+{
+  "key": "digitisation-mediation",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.digitalizedDocument",
+    "entityIdPath": "$.caseId",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              { "variable": "courtName", "value": { "path": "$.courtName" } },
+              { "variable": "place", "value": { "path": "$.place" } },
+              { "variable": "state", "value": { "path": "$.state" } },
+              {
+                "variable": "caseFilingNumber",
+                "value": { "path": "$.caseFilingNumber" }
+              },
+              {
+                "variable": "caseYear",
+                "value": { "path": "$.caseFilingNumber" }
+              },
+
+              {
+                "variable": "complainantList",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')]"
+                },
+                "type": "function",
+                "format": "type= type || []; for (var i=0;i<type.length;i++){ type[i]['index']=i+1; } return type;"
+              },
+
+              {
+                "variable": "complainantIndex",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')].partyIndex"
+                }
+              },
+              {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')].partyName"
+                }
+              },
+              {
+                "variable": "complainantMobileNumber",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')].mobileNumber"
+                }
+              },
+              {
+                "variable": "complainantCounselName",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')].counselName"
+                }
+              },
+
+              {
+                "variable": "accusedList",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')]"
+                },
+                "type": "function",
+                "format": "type= type || []; for (var i=0;i<type.length;i++){ type[i]['index']=i+1; } return type;"
+              },
+
+              {
+                "variable": "accusedIndex",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')].partyIndex"
+                }
+              },
+              {
+                "variable": "accusedName",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')].partyName"
+                }
+              },
+              {
+                "variable": "accusedMobileNumber",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')].mobileNumber"
+                }
+              },
+              {
+                "variable": "accusedCounselName",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')].counselName"
+                }
+              },
+              {
+                "variable": "natureOfComplainant",
+                "value": { "path": "$.mediationDetails.natureOfComplainant" }
+              },
+              {
+                "variable": "institutionDate",
+                "value": { "path": "$.mediationDetails.dateOfInstitution" },
+                "type": "date"
+              },
+              {
+                "variable": "caseStage",
+                "value": { "path": "$.mediationDetails.caseStage" }
+              },
+
+              {
+                "variable": "placeholderList",
+                "value": { "path": "$.placeholderList" }
+              },
+              {
+                "variable": "hearingDate",
+                "value": { "path": "$.mediationDetails.hearingDate" },
+                "type": "date"
+              },
+              {
+                "variable": "mediationCentre",
+                "value": { "path": "$.mediationDetails.mediationCentre" },
+                "type": "date"
+              },
+              {
+                "variable": "pdfCreatedDate",
+                "value": { "path": "$.mediationDetails.pdfCreatedDate" }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
