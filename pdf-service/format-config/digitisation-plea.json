@@ -43,7 +43,8 @@
                         "text": "{{accusedName}}",
                         "style": "fieldValue"
                       }
-                    ]
+                    ],
+                    "margin": [0, 0, 0, 10]
                   },
                   {
                     "text": [
@@ -55,7 +56,8 @@
                         "text": "{{fatherName}}",
                         "style": "fieldValue"
                       }
-                    ]
+                    ],
+                    "margin": [0, 0, 0, 10]
                   },
                   {
                     "text": [
@@ -67,7 +69,8 @@
                         "text": "{{villageName}}",
                         "style": "fieldValue"
                       }
-                    ]
+                    ],
+                    "margin": [0, 0, 0, 10]
                   },
                   {
                     "text": [
@@ -79,7 +82,8 @@
                         "text": "{{taluk}}",
                         "style": "fieldValue"
                       }
-                    ]
+                    ],
+                    "margin": [0, 0, 0, 10]
                   },
                   {
                     "text": [
@@ -91,7 +95,8 @@
                         "text": "{{calling}}",
                         "style": "fieldValue"
                       }
-                    ]
+                    ],
+                    "margin": [0, 0, 0, 10]
                   },
                   {
                     "text": [
@@ -103,7 +108,8 @@
                         "text": "{{age}}",
                         "style": "fieldValue"
                       }
-                    ]
+                    ],
+                    "margin": [0, 0, 0, 10]
                   },
                   {
                     "text": [
@@ -115,7 +121,8 @@
                         "text": "{{date}}",
                         "style": "dateFieldValue"
                       }
-                    ]
+                    ],
+                    "margin": [0, 0, 0, 10]
                   },
                   {
                     "text": [
@@ -127,7 +134,8 @@
                         "text": "കുറ്റപത്രം വായിച്ച കള്ള മനസ്സിലാക്കിയോ?",
                         "style": "fieldValue"
                       }
-                    ]
+                    ],
+                    "margin": [0, 0, 0, 10]
                   },
                   {
                     "text": [
@@ -139,7 +147,8 @@
                         "text": "{{#ques1Yes}}ഉണ്ട്{{/ques1Yes}}{{#ques1No}}ഇല്ല{{/ques1No}}",
                         "style": "fieldValue"
                       }
-                    ]
+                    ],
+                    "margin": [0, 0, 0, 10]
                   },
                   {
                     "text": [
@@ -151,7 +160,8 @@
                         "text": "ടി കുറ്റം ചെയ്തിട്ടുണ്ടോ?",
                         "style": "fieldValue"
                       }
-                    ]
+                    ],
+                    "margin": [0, 0, 0, 10]
                   },
                   {
                     "text": [
@@ -163,7 +173,8 @@
                         "text": "{{#ques2Yes}}ഉണ്ട്{{/ques2Yes}}{{#ques2No}}ഇല്ല{{/ques2No}}",
                         "style": "fieldValue"
                       }
-                    ]
+                    ],
+                    "margin": [0, 0, 0, 10]
                   },
                   {
                     "text": "Magistrate's Remarks: {{judgeRemarks}}",
