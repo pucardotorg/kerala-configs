@@ -232,11 +232,13 @@
       "fieldTitle": {
         "fontSize": 12,
         "bold": true,
-        "alignment": "left"
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
       },
       "fieldValue": {
         "fontSize": 12,
-        "alignment": "left"
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
       },
       "contentText": {
         "fontSize": 12,
