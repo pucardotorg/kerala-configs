@@ -13,8 +13,6 @@
           {
             "direct": [
               { "variable": "courtName", "value": { "path": "$.courtName" } },
-              { "variable": "place", "value": { "path": "$.place" } },
-              { "variable": "state", "value": { "path": "$.state" } },
               {
                 "variable": "caseFilingNumber",
                 "value": { "path": "$.caseFilingNumber" }
