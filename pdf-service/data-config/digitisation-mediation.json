@@ -114,12 +114,12 @@
               },
               {
                 "variable": "mediationCentre",
-                "value": { "path": "$.mediationDetails.mediationCentre" },
-                "type": "date"
+                "value": { "path": "$.mediationDetails.mediationCentre" }
               },
               {
                 "variable": "pdfCreatedDate",
-                "value": { "path": "$.mediationDetails.pdfCreatedDate" }
+                "value": { "path": "$.mediationDetails.pdfCreatedDate" },
+                "type": "date"
               }
             ]
           }
