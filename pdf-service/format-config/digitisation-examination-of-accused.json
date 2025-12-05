@@ -18,7 +18,7 @@
                     "style": "subHeaderItalics"
                   },
                   {
-                    "text": "In the Court of {{courtName}}, {{place}}, {{state}}",
+                    "text": "In The {{courtName}}",
                     "style": "header"
                   },
                   {

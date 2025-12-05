@@ -19,18 +19,6 @@
                 }
               },
               {
-                "variable": "place",
-                "value": {
-                  "path": "$.place"
-                }
-              },
-              {
-                "variable": "state",
-                "value": {
-                  "path": "$.state"
-                }
-              },
-              {
                 "variable": "caseNumber",
                 "value": {
                   "path": "$.caseNumber"
