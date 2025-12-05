@@ -40,5 +40,9 @@ ServiceMaps:
                 outJsonPath: $.Data.digitalizedDocumentDetails.caseNumber
               - inJsonPath: $.caseName
                 outJsonPath: $.Data.digitalizedDocumentDetails.caseName
+              - inJsonPath: $.assignedRoles
+                outJsonPath: $.Data.digitalizedDocumentDetails.assignedRoles
+              - inJsonPath: $.assignedTo
+                outJsonPath: $.Data.digitalizedDocumentDetails.assignedTo
               - inJsonPath: $.searchableFields
                 outJsonPath: $.Data.digitalizedDocumentDetails.searchableFields
