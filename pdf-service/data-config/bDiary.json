@@ -50,12 +50,12 @@
               },
               {
                 "variable": "nationalEmblem",
-                "url": "http://minio-filestore.egov:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=299094a2-7da4-4b1b-a1b4-3a26ea03ac88",
+                "url": "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=299094a2-7da4-4b1b-a1b4-3a26ea03ac88",
                 "type": "image"
               },
               {
                 "variable": "onCourtsLogo",
-                "url": "http://minio-filestore.egov:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=cfab6a6e-8e7c-40cd-970b-733da79807e5",
+                "url": "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=cfab6a6e-8e7c-40cd-970b-733da79807e5",
                 "type": "image"
               }
             ]
