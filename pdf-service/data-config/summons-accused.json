@@ -147,12 +147,12 @@
               },
               {
                 "variable": "qrCodeFirst",
-                "url": "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=0ad94ee3-371f-46d7-b063-ede2495a1912",
+                "url": "http://minio-filestore.egov:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=0ad94ee3-371f-46d7-b063-ede2495a1912",
                 "type": "image"
               },
               {
                 "variable": "qrCodeSecond",
-                "url": "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=084f00e9-fee8-432d-927d-183d78123f33",
+                "url": "http://minio-filestore.egov:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=084f00e9-fee8-432d-927d-183d78123f33",
                 "type": "image"
               },
               {
