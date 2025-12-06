@@ -1,0 +1,50 @@
+ServiceMaps:
+  serviceName: Digitalized Documents Service
+  version: 1.0.0
+  mappings:
+    - topic: digitalized-document-topic
+      configKey: INDEX
+      indexes:
+        - name: digitalized-document-index
+          type: general
+          id: $.id
+          isBulk: false
+          timeStampField: $.auditDetails.createdTime
+          jsonPath: $
+          customJsonMapping:
+            indexMapping: {"Data":{ digitalizedDocumentDetails:{}}}
+            fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.digitalizedDocumentDetails.id
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.digitalizedDocumentDetails.tenantId
+              - inJsonPath: $.courtId
+                outJsonPath: $.Data.digitalizedDocumentDetails.courtId
+              - inJsonPath: $.type
+                outJsonPath: $.Data.digitalizedDocumentDetails.type
+              - inJsonPath: $.documentNumber
+                outJsonPath: $.Data.digitalizedDocumentDetails.documentNumber
+              - inJsonPath: $.auditDetails.createdTime
+                outJsonPath: $.Data.digitalizedDocumentDetails.createdTime
+              - inJsonPath: $.caseId
+                outJsonPath: $.Data.digitalizedDocumentDetails.caseId
+              - inJsonPath: $.caseTitle
+                outJsonPath: $.Data.digitalizedDocumentDetails.caseTitle
+              - inJsonPath: $.title
+                outJsonPath: $.Data.digitalizedDocumentDetails.title
+              - inJsonPath: $.caseFilingNumber
+                outJsonPath: $.Data.digitalizedDocumentDetails.caseFilingNumber
+              - inJsonPath: $.status
+                outJsonPath: $.Data.digitalizedDocumentDetails.status
+              - inJsonPath: $.caseNumber
+                outJsonPath: $.Data.digitalizedDocumentDetails.caseNumber
+              - inJsonPath: $.caseName
+                outJsonPath: $.Data.digitalizedDocumentDetails.caseName
+              - inJsonPath: $.assignedRoles
+                outJsonPath: $.Data.digitalizedDocumentDetails.assignedRoles
+              - inJsonPath: $.assignedTo
+                outJsonPath: $.Data.digitalizedDocumentDetails.assignedTo
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.digitalizedDocumentDetails.documents
+              - inJsonPath: $.searchableFields
+                outJsonPath: $.Data.digitalizedDocumentDetails.searchableFields
