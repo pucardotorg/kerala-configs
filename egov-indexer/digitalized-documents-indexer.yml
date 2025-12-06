@@ -44,5 +44,7 @@ ServiceMaps:
                 outJsonPath: $.Data.digitalizedDocumentDetails.assignedRoles
               - inJsonPath: $.assignedTo
                 outJsonPath: $.Data.digitalizedDocumentDetails.assignedTo
+              - inJsonPath: $.documents
+                outJsonPath: $.Data.digitalizedDocumentDetails.documents
               - inJsonPath: $.searchableFields
                 outJsonPath: $.Data.digitalizedDocumentDetails.searchableFields
