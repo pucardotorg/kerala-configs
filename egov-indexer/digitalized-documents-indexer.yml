@@ -24,6 +24,12 @@ ServiceMaps:
                 outJsonPath: $.Data.digitalizedDocumentDetails.type
               - inJsonPath: $.documentNumber
                 outJsonPath: $.Data.digitalizedDocumentDetails.documentNumber
+              - inJsonPath: $.pleaDetails
+                outJsonPath: $.Data.digitalizedDocumentDetails.pleaDetails
+              - inJsonPath: $.examinationOfAccusedDetails
+                outJsonPath: $.Data.digitalizedDocumentDetails.examinationOfAccusedDetails
+              - inJsonPath: $.mediationDetails
+                outJsonPath: $.Data.digitalizedDocumentDetails.mediationDetails
               - inJsonPath: $.auditDetails.createdTime
                 outJsonPath: $.Data.digitalizedDocumentDetails.createdTime
               - inJsonPath: $.caseId
