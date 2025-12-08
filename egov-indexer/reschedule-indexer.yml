@@ -53,7 +53,7 @@ ServiceMaps:
               - inJsonPath: $.availableDates
                 outJsonPath: $.Data.reScheduleHearing.availableDates
             externalUriMapping:
-              - path: http://egov-workflow-v2.pucar-stg:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
                 apiRequest:
                   {
@@ -145,7 +145,7 @@ ServiceMaps:
               - inJsonPath: $.availableDates
                 outJsonPath: $.Data.reScheduleHearing.availableDates
             externalUriMapping:
-              - path: http://egov-workflow-v2.pucar-stg:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2.egov:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
                 apiRequest:
                   {
