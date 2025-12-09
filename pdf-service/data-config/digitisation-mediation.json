@@ -27,7 +27,7 @@
                   "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')]"
                 },
                 "type": "function",
-                "format": "value = Array.isArray(value) ? value : (value ? [value] : []); for (var i=0;i<value.length;i++){ value[i].index = i+1; } return value;"
+                "format": "type = Array.isArray(type) ? type : (type ? [type] : []); for (var i=0;i<type.length;i++){ type[i]['index'] = i+1; } return type;"
               },
               {
                 "variable": "accusedList",
@@ -35,7 +35,7 @@
                   "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')]"
                 },
                 "type": "function",
-                "format": "value = Array.isArray(value) ? value : (value ? [value] : []); for (var i=0;i<value.length;i++){ value[i].index = i+1; } return value;"
+                "format": "type = Array.isArray(type) ? type : (type ? [type] : []); for (var i=0;i<type.length;i++){ type[i]['index'] = i+1; } return type;"
               },
               {
                 "variable": "natureOfComplainant",
