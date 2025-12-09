@@ -22,88 +22,84 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseFilingNumber}}",
+                    "text": "Case No. {{caseNumber}}",
                     "style": "header"
                   },
-                  "{{#complainantList}}",
-                  [
-                    {
-                      "table": {
-                        "widths": ["*"],
-                        "body": [
-                          [
-                            {
-                              "stack": [
-                                {
-                                  "text": [
-                                    {
-                                      "text": "Complainant {{complainantIndex}} Name: ",
-                                      "style": "fieldTitle"
-                                    },
-                                    {
-                                      "text": "{{complainantName}}",
-                                      "style": "fieldValue"
-                                    }
-                                  ],
-                                  "margin": [0, 10, 0, 10]
-                                },
-                                {
-                                  "ul": [
-                                    "Mobile Number: {{complainantMobileNumber}}",
-                                    "Name of the Counsel: {{complainantCounselName}}"
-                                  ],
-                                  "style": "nestedList"
-                                }
-                              ],
-                              "margin": [0, 0, 0, 10]
-                            }
-                          ]
-                        ]
-                      },
-                      "layout": "noBorders"
-                    }
-                  ],
-                  "{{/complainantList}}",
+                  {
+                    "table": {
+                      "widths": ["*"],
+                      "body": [
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "stack": [
+                              {
+                                "text": [
+                                  {
+                                    "text": "Complainant {{index}} Name: ",
+                                    "style": "fieldTitle"
+                                  },
+                                  {
+                                    "text": "{{partyName}}",
+                                    "style": "fieldValue"
+                                  }
+                                ],
+                                "margin": [0, 10, 0, 10]
+                              },
+                              {
+                                "ul": [
+                                  "Mobile Number: {{mobileNumber}}",
+                                  "Name of the Counsel: {{counselName}}"
+                                ],
+                                "style": "nestedList"
+                              }
+                            ],
+                            "margin": [0, 0, 0, 10]
+                          }
+                        ],
+                        "{{/complainantList}}"
+                      ]
+                    },
+                    "layout": "noBorders"
+                  },
 
-                  "{{#accusedList}}",
-                  [
-                    {
-                      "table": {
-                        "widths": ["*"],
-                        "body": [
-                          [
-                            {
-                              "stack": [
-                                {
-                                  "text": [
-                                    {
-                                      "text": "Accused {{accusedIndex}} Name: ",
-                                      "style": "fieldTitle"
-                                    },
-                                    {
-                                      "text": "{{accusedName}}",
-                                      "style": "fieldValue"
-                                    }
-                                  ],
-                                  "margin": [0, 10, 0, 10]
-                                },
-                                {
-                                  "ul": [
-                                    "Mobile Number: {{accusedMobileNumber}}",
-                                    "Name of the Counsel: {{accusedCounselName}}"
-                                  ],
-                                  "style": "nestedList"
-                                }
-                              ],
-                              "margin": [0, 0, 0, 10]
-                            }
-                          ]
-                        ]
-                      },
-                      "layout": "noBorders"
-                    }
-                  ],
-                  "{{/accusedList}}",
+                  {
+                    "table": {
+                      "widths": ["*"],
+                      "body": [
+                        "{{#accusedList}}",
+                        [
+                          {
+                            "stack": [
+                              {
+                                "text": [
+                                  {
+                                    "text": "Accused {{index}} Name: ",
+                                    "style": "fieldTitle"
+                                  },
+                                  {
+                                    "text": "{{partyName}}",
+                                    "style": "fieldValue"
+                                  }
+                                ],
+                                "margin": [0, 10, 0, 10]
+                              },
+                              {
+                                "ul": [
+                                  "Mobile Number: {{mobileNumber}}",
+                                  "Name of the Counsel: {{counselName}}"
+                                ],
+                                "style": "nestedList"
+                              }
+                            ],
+                            "margin": [0, 0, 0, 10]
+                          }
+                        ],
+                        "{{/accusedList}}"
+                      ]
+                    },
+                    "layout": "noBorders"
+                  },
 
                   {
                     "text": [
@@ -176,7 +172,7 @@
                         "stack": [
                           "{{#complainantList}}",
                           {
-                            "text": "Complainant {{complainantIndex}} Signature",
+                            "text": "Complainant {{index}} Signature",
                             "style": "complainantSignature"
                           },
                           "{{/complainantList}}"
@@ -186,7 +182,7 @@
                         "stack": [
                           "{{#accusedList}}",
                           {
-                            "text": "Accused {{accusedIndex}} Signature",
+                            "text": "Accused {{index}} Signature",
                             "style": "accusedSignature"
                           },
                           "{{/accusedList}}"
