@@ -24,18 +24,18 @@
               {
                 "variable": "complainantList",
                 "value": {
-                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')]"
+                  "path": "$.mediationDetails.partyDetails"
                 },
                 "type": "function",
-                "format": "type = Array.isArray(type) ? type : (type ? [type] : []); for (var i=0;i<type.length;i++){ type[i]['index'] = i+1; } return type;"
+                "format": "type = Array.isArray(type) ? type : (type ? [type] : []); var res = []; for (var i=0;i<type.length;i++){ var pt = (type[i] && type[i].partyType ? String(type[i].partyType).trim().toLowerCase() : ''); if (pt === 'complainant' || pt === 'complainants') { res.push(type[i]); } } res.sort(function(a,b){ return (a.partyIndex||0) - (b.partyIndex||0); }); for (var j=0;j<res.length;j++){ res[j]['index'] = j+1; } return res;"
               },
               {
                 "variable": "accusedList",
                 "value": {
-                  "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')]"
+                  "path": "$.mediationDetails.partyDetails"
                 },
                 "type": "function",
-                "format": "type = Array.isArray(type) ? type : (type ? [type] : []); for (var i=0;i<type.length;i++){ type[i]['index'] = i+1; } return type;"
+                "format": "type = Array.isArray(type) ? type : (type ? [type] : []); var res = []; for (var i=0;i<type.length;i++){ var pt = (type[i] && type[i].partyType ? String(type[i].partyType).trim().toLowerCase() : ''); if (pt === 'respondent' || pt === 'accused' || pt === 'defendant') { res.push(type[i]); } } res.sort(function(a,b){ return (a.partyIndex||0) - (b.partyIndex||0); }); for (var j=0;j<res.length;j++){ res[j]['index'] = j+1; } return res;"
               },
               {
                 "variable": "natureOfComplainant",
