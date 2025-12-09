@@ -21,23 +21,21 @@
                 "variable": "caseYear",
                 "value": { "path": "$.caseFilingNumber" }
               },
-
               {
                 "variable": "complainantList",
                 "value": {
                   "path": "$.mediationDetails.partyDetails[?(@.partyType=='COMPLAINANT')]"
                 },
                 "type": "function",
-                "format": "value = value || []; for (var i = 0; i < value.length; i++) { value[i].index = i + 1; } return value;"
+                "format": "value = Array.isArray(value) ? value : (value ? [value] : []); for (var i=0;i<value.length;i++){ value[i].index = i+1; } return value;"
               },
-
               {
                 "variable": "accusedList",
                 "value": {
                   "path": "$.mediationDetails.partyDetails[?(@.partyType=='RESPONDENT')]"
                 },
                 "type": "function",
-                "format": "value = value || []; for (var i=0; i<value.length; i++) { value[i]['index'] = i+1; } return value;"
+                "format": "value = Array.isArray(value) ? value : (value ? [value] : []); for (var i=0;i<value.length;i++){ value[i].index = i+1; } return value;"
               },
               {
                 "variable": "natureOfComplainant",
