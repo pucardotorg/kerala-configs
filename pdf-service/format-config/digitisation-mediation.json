@@ -22,7 +22,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseFilingNumber}}",
+                    "text": "Case No. {{caseNumber}}",
                     "style": "header"
                   },
                   "{{#complainantList}}",
@@ -37,11 +37,11 @@
                                 {
                                   "text": [
                                     {
-                                      "text": "Complainant {{complainantIndex}} Name: ",
+                                      "text": "Complainant {{index}} Name: ",
                                       "style": "fieldTitle"
                                     },
                                     {
-                                      "text": "{{complainantName}}",
+                                      "text": "{{partyName}}",
                                       "style": "fieldValue"
                                     }
                                   ],
@@ -49,8 +49,8 @@
                                 },
                                 {
                                   "ul": [
-                                    "Mobile Number: {{complainantMobileNumber}}",
-                                    "Name of the Counsel: {{complainantCounselName}}"
+                                    "Mobile Number: {{mobileNumber}}",
+                                    "Name of the Counsel: {{counselName}}"
                                   ],
                                   "style": "nestedList"
                                 }
@@ -77,11 +77,11 @@
                                 {
                                   "text": [
                                     {
-                                      "text": "Accused {{accusedIndex}} Name: ",
+                                      "text": "Accused {{index}} Name: ",
                                       "style": "fieldTitle"
                                     },
                                     {
-                                      "text": "{{accusedName}}",
+                                      "text": "{{partyName}}",
                                       "style": "fieldValue"
                                     }
                                   ],
@@ -89,8 +89,8 @@
                                 },
                                 {
                                   "ul": [
-                                    "Mobile Number: {{accusedMobileNumber}}",
-                                    "Name of the Counsel: {{accusedCounselName}}"
+                                    "Mobile Number: {{mobileNumber}}",
+                                    "Name of the Counsel: {{counselName}}"
                                   ],
                                   "style": "nestedList"
                                 }
@@ -176,7 +176,7 @@
                         "stack": [
                           "{{#complainantList}}",
                           {
-                            "text": "Complainant {{complainantIndex}} Signature",
+                            "text": "Complainant {{index}} Signature",
                             "style": "complainantSignature"
                           },
                           "{{/complainantList}}"
@@ -186,7 +186,7 @@
                         "stack": [
                           "{{#accusedList}}",
                           {
-                            "text": "Accused {{accusedIndex}} Signature",
+                            "text": "Accused {{index}} Signature",
                             "style": "accusedSignature"
                           },
                           "{{/accusedList}}"
