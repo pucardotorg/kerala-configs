@@ -77,14 +77,18 @@
                     "text": "Addresses:",
                     "style": "bodyText"
                   },
+                  "{{#currentPermanentAddress}}",
                   {
-                    "text": "{{currentPermanentAddress}}",
+                    "text": "{{address}}",
                     "style": "bodyText"
                   },
+                  "{{/currentPermanentAddress}}",
+                  "{{#currentResedentialAddress}}",
                   {
-                    "text": "{{currentResedentialAddress}}",
+                    "text": "{{address}}",
                     "style": "bodyText"
                   },
+                  "{{/currentResedentialAddress}}",
                   "{{#isEntity}}",
                   {
                     "text": " Company Name: {{currentCompanyName}}",
@@ -119,14 +123,18 @@
                     "text": "Addresses:",
                     "style": "bodyText"
                   },
+                  "{{#newPermanentAddress}}",
                   {
-                    "text": "{{newPermanentAddress}}",
+                    "text": "{{address}}",
                     "style": "bodyText"
                   },
+                  "{{/newPermanentAddress}}",
+                  "{{#newResedentialAddress}}",
                   {
-                    "text": "{{newResedentialAddress}}",
+                    "text": "{{address}}",
                     "style": "bodyText"
                   },
+                  "{{/newResedentialAddress}}",
                   {
                     "text": [
                       {
