@@ -15,7 +15,7 @@
               { "variable": "courtName", "value": { "path": "$.courtName" } },
               {
                 "variable": "caseNumber",
-                "value": { "path": "$.caseNumber" }
+                "value": { "path": "$.mediationDetails.caseNumber" }
               },
               {
                 "variable": "caseYear",
