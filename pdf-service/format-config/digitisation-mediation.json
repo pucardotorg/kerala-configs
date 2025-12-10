@@ -10,12 +10,8 @@
               {
                 "stack": [
                   {
-                    "text": "Order for Referral",
+                    "text": "Referral Order",
                     "style": "header"
-                  },
-                  {
-                    "text": "(Section 351, BNSS)",
-                    "style": "subHeader"
                   },
                   {
                     "text": "In The {{courtName}}",
