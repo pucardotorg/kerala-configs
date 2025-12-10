@@ -26,7 +26,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}}",
+                    "text": "Case No: {{caseNumber}}",
                     "style": "header"
                   },
                   {
