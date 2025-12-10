@@ -1,0 +1,78 @@
+{
+  "key": "digitisation-mediation",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.digitalizedDocument",
+    "entityIdPath": "$.caseId",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              { "variable": "courtName", "value": { "path": "$.courtName" } },
+              {
+                "variable": "caseNumber",
+                "value": { "path": "$.caseNumber" }
+              },
+              {
+                "variable": "caseYear",
+                "value": { "path": "$.caseFilingNumber" }
+              },
+              {
+                "variable": "complainantList",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails"
+                },
+                "type": "function",
+                "format": "type = Array.isArray(type) ? type : (type ? [type] : []); var res = []; for (var i=0;i<type.length;i++){ var pt = (type[i] && type[i].partyType ? String(type[i].partyType).trim().toLowerCase() : ''); if (pt === 'complainant' || pt === 'complainants') { res.push(type[i]); } } res.sort(function(a,b){ return (a.partyIndex||0) - (b.partyIndex||0); }); for (var j=0;j<res.length;j++){ res[j]['index'] = j+1; } return res;"
+              },
+              {
+                "variable": "accusedList",
+                "value": {
+                  "path": "$.mediationDetails.partyDetails"
+                },
+                "type": "function",
+                "format": "type = Array.isArray(type) ? type : (type ? [type] : []); var res = []; for (var i=0;i<type.length;i++){ var pt = (type[i] && type[i].partyType ? String(type[i].partyType).trim().toLowerCase() : ''); if (pt === 'respondent' || pt === 'accused' || pt === 'defendant') { res.push(type[i]); } } res.sort(function(a,b){ return (a.partyIndex||0) - (b.partyIndex||0); }); for (var j=0;j<res.length;j++){ res[j]['index'] = j+1; } return res;"
+              },
+              {
+                "variable": "natureOfComplainant",
+                "value": { "path": "$.mediationDetails.natureOfComplainant" }
+              },
+              {
+                "variable": "institutionDate",
+                "value": { "path": "$.mediationDetails.dateOfInstitution" },
+                "type": "date"
+              },
+              {
+                "variable": "caseStage",
+                "value": { "path": "$.mediationDetails.caseStage" }
+              },
+
+              {
+                "variable": "placeholderList",
+                "value": { "path": "$.placeholderList" }
+              },
+              {
+                "variable": "hearingDate",
+                "value": { "path": "$.mediationDetails.hearingDate" },
+                "type": "date"
+              },
+              {
+                "variable": "mediationCentre",
+                "value": { "path": "$.mediationDetails.mediationCentre" }
+              },
+              {
+                "variable": "pdfCreatedDate",
+                "value": { "path": "$.mediationDetails.pdfCreatedDate" },
+                "type": "date"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
