@@ -133,12 +133,8 @@
                   {
                     "text": [
                       {
-                        "text": "ചോദ്യം",
+                        "text": "ചോദ്യം   :    ",
                         "style": "fieldTitle"
-                      },
-                      {
-                        "text": ":",
-                        "style": "colonMargins"
                       },
                       {
                         "text": "കുറ്റപത്രം വായിച്ചത്  കേട്ടു മനസ്സിലായോ?",
