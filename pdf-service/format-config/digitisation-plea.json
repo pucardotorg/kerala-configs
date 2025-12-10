@@ -59,6 +59,7 @@
                     ],
                     "margin": [0, 0, 0, 10]
                   },
+                  "{{#villageName}}",
                   {
                     "text": [
                       {
@@ -72,6 +73,8 @@
                     ],
                     "margin": [0, 0, 0, 10]
                   },
+                  "{{/villageName}}",
+                  "{{#taluk}}",
                   {
                     "text": [
                       {
@@ -85,6 +88,8 @@
                     ],
                     "margin": [0, 0, 0, 10]
                   },
+                  "{{/taluk}}",
+                  "{{#calling}}",
                   {
                     "text": [
                       {
@@ -98,6 +103,7 @@
                     ],
                     "margin": [0, 0, 0, 10]
                   },
+                  "{{/calling}}",
                   {
                     "text": [
                       {
@@ -127,11 +133,49 @@
                   {
                     "text": [
                       {
-                        "text": "ചോദ്യം: ",
+                        "text": "ചോദ്യം",
                         "style": "fieldTitle"
                       },
                       {
-                        "text": "കുറ്റപത്രം വായിച്ച കള്ള മനസ്സിലാക്കിയോ?",
+                        "text": ":",
+                        "style": "colonMargins"
+                      },
+                      {
+                        "text": "കുറ്റപത്രം വായിച്ചത്  കേട്ടു മനസ്സിലായോ?",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "ഉത്തരം",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": ":",
+                        "style": "colonMargins"
+                      },
+                      {
+                        "text": "{{#ques1Yes}}ആയി{{/ques1Yes}}{{#ques1No}}ഇല്ല{{/ques1No}}",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "ചോദ്യം",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": ":",
+                        "style": "colonMargins"
+                      },
+                      {
+                        "text": "ടി കുറ്റം ചെയ്തിട്ടുണ്ടോ?",
                         "style": "fieldValue"
                       }
                     ],
@@ -141,37 +185,11 @@
                     "text": [
                       {
                         "text": "ഉത്തരം: ",
-                        "style": "fieldTitle"
-                      },
-                      {
-                        "text": "{{#ques1Yes}}ഉണ്ട്{{/ques1Yes}}{{#ques1No}}ഇല്ല{{/ques1No}}",
-                        "style": "fieldValue"
-                      }
-                    ],
-                    "margin": [0, 0, 0, 10]
-                  },
-                  {
-                    "text": [
-                      {
-                        "text": "ചോദ്യം: ",
-                        "style": "fieldTitle"
-                      },
-                      {
-                        "text": "ടി കുറ്റം ചെയ്തിട്ടുണ്ടോ?",
-                        "style": "fieldValue"
-                      }
-                    ],
-                    "margin": [0, 0, 0, 10]
-                  },
-                  {
-                    "text": [
-                      {
-                        "text": "ഉത്തരം: ",
-                        "style": "fieldTitle"
+                        "style": "malayalamFieldTitle"
                       },
                       {
                         "text": "{{#ques2Yes}}ഉണ്ട്{{/ques2Yes}}{{#ques2No}}ഇല്ല{{/ques2No}}",
-                        "style": "fieldValue"
+                        "style": "malayalamFieldValue"
                       }
                     ],
                     "margin": [0, 0, 0, 10]
@@ -250,6 +268,11 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, 10, 0, 10]
+      },
+      "colonMargins": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [5, 10, 5, 10]
       },
       "contentText": {
         "fontSize": 12,
