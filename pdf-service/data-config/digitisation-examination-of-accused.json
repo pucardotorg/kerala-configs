@@ -1,0 +1,64 @@
+{
+  "key": "digitisation-examination-of-accused",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear"
+                }
+              },
+
+              {
+                "variable": "accusedName",
+                "value": {
+                  "path": "$.accusedName"
+                }
+              },
+              {
+                "variable": "textBody",
+                "value": {
+                  "path": "$.textBody"
+                }
+              },
+              {
+                "variable": "accusedSignature",
+                "value": {
+                  "path": "$.accusedSignature"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "key": "digitisation-plea",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "Form No. 17",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": "Examination of the Accused",
+                    "style": "header"
+                  },
+                  {
+                    "text": "(Section 281, Criminal Procedure Court)",
+                    "style": "subHeaderItalics"
+                  },
+                  {
+                    "text": "In The {{courtName}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No. {{caseNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Statement of {{accusedName}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Name: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{accusedName}}",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Father's Name: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{fatherName}}",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  "{{#villageName}}",
+                  {
+                    "text": [
+                      {
+                        "text": "Village: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{villageName}}",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  "{{/villageName}}",
+                  "{{#taluk}}",
+                  {
+                    "text": [
+                      {
+                        "text": "Taluk: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{taluk}}",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  "{{/taluk}}",
+                  "{{#calling}}",
+                  {
+                    "text": [
+                      {
+                        "text": "Calling: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{calling}}",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  "{{/calling}}",
+                  {
+                    "text": [
+                      {
+                        "text": "Age: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{age}}",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Date: ",
+                        "style": "dateFieldTitle"
+                      },
+                      {
+                        "text": "{{date}}",
+                        "style": "dateFieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "ചോദ്യം   :    ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "കു\u200Dറ്റ\u200Dപത്രം വായിച്ചത് ",
+                        "style": "fieldValue"
+                      },
+                      {
+                        "text": "കേട്ടോ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": ", മനസ്സിലായോ?",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "ഉത്തരം   :    ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{#ques1Yes}}ആയി{{/ques1Yes}}{{#ques1No}}ഇല്ല{{/ques1No}}",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "ചോദ്യം   :    ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "ടി കുറ്റം ചെയ്തിട്ടുണ്ടോ?",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "ഉത്തരം   :    ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{#ques2Yes}}ഉണ്ട്{{/ques2Yes}}{{#ques2No}}ഇല്ല{{/ques2No}}",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 0, 0, 10]
+                  },
+                  {
+                    "text": "Magistrate's Remarks: {{judgeRemarks}}",
+                    "style": "remarksText"
+                  },
+                  {
+                    "columns": [
+                      {
+                        "width": "50%",
+                        "stack": [
+                          {
+                            "text": "{{accusedSignature}}",
+                            "style": "accusedSignature"
+                          }
+                        ]
+                      },
+                      {
+                        "width": "50%",
+                        "stack": [
+                          {
+                            "text": "{{judgeSignature}}",
+                            "style": "judgeSignature"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "subHeader": {
+        "fontSize": 12,
+        "alignment": "center",
+        "margin": [0, 15, 0, 10]
+      },
+      "subHeaderItalics": {
+        "fontSize": 12,
+        "italics": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 10]
+      },
+      "caseName": {
+        "fontSize": 12,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "caseNumber": {
+        "fontSize": 12,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "fieldTitle": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "fieldValue": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "contentText": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "dateFieldTitle": {
+        "fontSize": 12,
+        "alignment": "right",
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "dateFieldValue": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 10, 0, 10]
+      },
+      "remarksText": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 30, 0, 30]
+      },
+      "accusedSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 40, 0, 10]
+      },
+      "judgeSignature": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 40, 0, 10]
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "key": "digitisation-plea",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear"
+                }
+              },
+              {
+                "variable": "accusedName",
+                "value": {
+                  "path": "$.accusedName"
+                }
+              },
+              {
+                "variable": "fatherName",
+                "value": {
+                  "path": "$.fatherName"
+                }
+              },
+              {
+                "variable": "villageName",
+                "value": {
+                  "path": "$.villageName"
+                }
+              },
+              {
+                "variable": "taluk",
+                "value": {
+                  "path": "$.taluk"
+                }
+              },
+              {
+                "variable": "calling",
+                "value": {
+                  "path": "$.calling"
+                }
+              },
+              {
+                "variable": "age",
+                "value": {
+                  "path": "$.age"
+                }
+              },
+              {
+                "variable": "ques1Yes",
+                "value": {
+                  "path": "$.ques1Yes"
+                }
+              },
+              {
+                "variable": "ques1No",
+                "value": {
+                  "path": "$.ques1No"
+                }
+              },
+              {
+                "variable": "ques2Yes",
+                "value": {
+                  "path": "$.ques2Yes"
+                }
+              },
+              {
+                "variable": "ques2No",
+                "value": {
+                  "path": "$.ques2No"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "judgeRemarks",
+                "value": {
+                  "path": "$.judgeRemarks"
+                }
+              },
+              {
+                "variable": "accusedSignature",
+                "value": {
+                  "path": "$.accusedSignature"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

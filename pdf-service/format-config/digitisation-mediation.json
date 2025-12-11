@@ -1,0 +1,280 @@
+{
+  "key": "digitisation-mediation",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "Referral Order",
+                    "style": "header"
+                  },
+                  {
+                    "text": "In The {{courtName}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No. {{caseNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "table": {
+                      "widths": ["*"],
+                      "body": [
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "stack": [
+                              {
+                                "text": [
+                                  {
+                                    "text": "Complainant {{index}} Name: ",
+                                    "style": "fieldTitle"
+                                  },
+                                  {
+                                    "text": "{{partyName}}",
+                                    "style": "fieldValue"
+                                  }
+                                ],
+                                "margin": [0, 10, 0, 10]
+                              },
+                              {
+                                "ul": [
+                                  "Mobile Number: {{mobileNumber}}",
+                                  "Name of the Counsel: {{counselName}}"
+                                ],
+                                "style": "nestedList"
+                              }
+                            ],
+                            "margin": [0, 0, 0, 10]
+                          }
+                        ],
+                        "{{/complainantList}}"
+                      ]
+                    },
+                    "layout": "noBorders"
+                  },
+
+                  {
+                    "table": {
+                      "widths": ["*"],
+                      "body": [
+                        "{{#accusedList}}",
+                        [
+                          {
+                            "stack": [
+                              {
+                                "text": [
+                                  {
+                                    "text": "Accused {{index}} Name: ",
+                                    "style": "fieldTitle"
+                                  },
+                                  {
+                                    "text": "{{partyName}}",
+                                    "style": "fieldValue"
+                                  }
+                                ],
+                                "margin": [0, 10, 0, 10]
+                              },
+                              {
+                                "ul": [
+                                  "Mobile Number: {{mobileNumber}}",
+                                  "Name of the Counsel: {{counselName}}"
+                                ],
+                                "style": "nestedList"
+                              }
+                            ],
+                            "margin": [0, 0, 0, 10]
+                          }
+                        ],
+                        "{{/accusedList}}"
+                      ]
+                    },
+                    "layout": "noBorders"
+                  },
+
+                  {
+                    "text": [
+                      {
+                        "text": "Nature of Complaint: ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": "{{natureOfComplainant}}",
+                        "style": "fieldValue"
+                      }
+                    ],
+                    "margin": [0, 10, 0, 0]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Institution: ",
+                        "style": "fieldTitle"
+                      },
+                      { "text": "{{institutionDate}}", "style": "fieldValue" }
+                    ],
+                    "margin": [0, 0, 0, 0]
+                  },
+                  {
+                    "text": [
+                      { "text": "Stage of the Case: ", "style": "fieldTitle" },
+                      { "text": "{{caseStage}}", "style": "fieldValue" }
+                    ],
+                    "margin": [0, 0, 0, 0]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Next date of Hearing: ",
+                        "style": "fieldTitle"
+                      },
+                      { "text": "{{hearingDate}}", "style": "fieldValue" }
+                    ],
+                    "margin": [0, 0, 0, 20]
+                  },
+                  {
+                    "text": "ORDER OF REFERENCE U/S 89 CODE OF CIVIL PROCEDURE",
+                    "style": "header"
+                  },
+                  {
+                    "text": [
+                      "This court having been satisfied that there exists an element of settlement in this case, the case is referred to ",
+                      { "text": "Mediation", "style": "highlight" },
+                      ". The parties are directed to appear before the ",
+                      { "text": "{{mediationCentre}}", "style": "highlight" },
+                      ", on ",
+                      { "text": "{{pdfCreatedDate}}", "style": "highlight" },
+                      ". If it is not possible to mediate this case on the date fixed, the Mediation centre will fix a convenient date for mediation."
+                    ],
+                    "style": "contentText"
+                  },
+
+                  {
+                    "text": "If the dispute is settled, the mediator shall reduce the terms of agreement into writing, get the signature of parties or their Power of Attorney holder and the counsel and submit the same to this Court on or before {{hearingDate}}",
+                    "style": "contentText"
+                  },
+                  {
+                    "text": "If the dispute is not settled, the mediator shall submit a report to the Court that the mediation has not been successful.",
+                    "style": "contentText"
+                  },
+                  {
+                    "columns": [
+                      {
+                        "stack": [
+                          "{{#complainantList}}",
+                          {
+                            "text": "Complainant {{index}} Signature",
+                            "style": "complainantSignature"
+                          },
+                          "{{/complainantList}}"
+                        ]
+                      },
+                      {
+                        "stack": [
+                          "{{#accusedList}}",
+                          {
+                            "text": "Accused {{index}} Signature",
+                            "style": "accusedSignature"
+                          },
+                          "{{/accusedList}}"
+                        ],
+                        "alignment": "right"
+                      }
+                    ],
+                    "columnGap": 40,
+                    "margin": [0, 30, 0, 20]
+                  },
+
+                  {
+                    "text": "Signature of Magistrate",
+                    "style": "judgeSignature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "subHeader": {
+        "fontSize": 11,
+        "italics": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "caseName": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "caseNumber": {
+        "fontSize": 14,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "fieldTitle": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left"
+      },
+      "fieldValue": {
+        "fontSize": 12,
+        "alignment": "left"
+      },
+      "nestedList": {
+        "margin": [15, 0, 0, 0]
+      },
+      "highlight": {
+        "bold": true
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "contentText": {
+        "fontSize": 11,
+        "alignment": "left",
+        "margin": [0, 10, 0, 10]
+      },
+      "complainantSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "bold": true,
+        "margin": [0, 40, 0, 10]
+      },
+      "accusedSignature": {
+        "fontSize": 12,
+        "alignment": "right",
+        "bold": true,
+        "margin": [0, 40, 0, 10]
+      },
+      "judgeSignature": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "left",
+        "margin": [0, 80, 0, 0]
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
+      }
+    }
+  }
+}
