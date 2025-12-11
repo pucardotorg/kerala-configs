@@ -1,9 +1,6 @@
 {
   "key": "digitisation-plea",
   "config": {
-    "defaultStyle": {
-      "font": "NotoSansMalayalam"
-    },
     "content": [
       {
         "table": {
