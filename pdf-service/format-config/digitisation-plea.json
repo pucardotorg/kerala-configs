@@ -137,7 +137,15 @@
                         "style": "fieldTitle"
                       },
                       {
-                        "text": "കുറ്റപത്രം വായിച്ചത്  കേട്ടു മനസ്സിലായോ?",
+                        "text": "കു\u200Dറ്റ\u200Dപത്രം വായിച്ചത് ",
+                        "style": "fieldValue"
+                      },
+                      {
+                        "text": "കേട്ടോ",
+                        "style": "fieldTitle"
+                      },
+                      {
+                        "text": ", മനസ്സിലായോ?",
                         "style": "fieldValue"
                       }
                     ],
