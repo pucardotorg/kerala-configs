@@ -8,7 +8,7 @@ serviceMaps:
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
       objecIdJsonPath: $.digitalizedDocument.id
-      tenantIdJsonPath: $.digitalizedDocument.tenantId
+      tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
       queryMaps:
@@ -46,7 +46,7 @@ serviceMaps:
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
       objecIdJsonPath: $.digitalizedDocument.id
-      tenantIdJsonPath: $.digitalizedDocument.tenantId
+      tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
       queryMaps:
@@ -75,7 +75,7 @@ serviceMaps:
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
       objecIdJsonPath: $.digitalizedDocument.id
-      tenantIdJsonPath: $.digitalizedDocument.tenantId
+      tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
       queryMaps:
@@ -112,7 +112,7 @@ serviceMaps:
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
       objecIdJsonPath: $.digitalizedDocument.id
-      tenantIdJsonPath: $.digitalizedDocument.tenantId
+      tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
       queryMaps:
@@ -141,7 +141,7 @@ serviceMaps:
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
       objecIdJsonPath: $.digitalizedDocument.id
-      tenantIdJsonPath: $.digitalizedDocument.tenantId
+      tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
       queryMaps:
@@ -180,7 +180,7 @@ serviceMaps:
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
       objecIdJsonPath: $.digitalizedDocument.id
-      tenantIdJsonPath: $.digitalizedDocument.tenantId
+      tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
       queryMaps:
