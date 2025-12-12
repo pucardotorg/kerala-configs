@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
-      objectIdJsonPath: $.digitalizedDocument.id
+      objecIdJsonPath: $.digitalizedDocument.id
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
@@ -44,7 +44,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
-      objectIdJsonPath: $.digitalizedDocument.id
+      objecIdJsonPath: $.digitalizedDocument.id
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
@@ -72,7 +72,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
-      objectIdJsonPath: $.digitalizedDocument.id
+      objecIdJsonPath: $.digitalizedDocument.id
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
@@ -108,7 +108,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
-      objectIdJsonPath: $.digitalizedDocument.id
+      objecIdJsonPath: $.digitalizedDocument.id
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
@@ -136,7 +136,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
-      objectIdJsonPath: $.digitalizedDocument.id
+      objecIdJsonPath: $.digitalizedDocument.id
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:
@@ -174,7 +174,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
-      objectIdJsonPath: $.digitalizedDocument.id
+      objecIdJsonPath: $.digitalizedDocument.id
       tenantIdJsonPath: $.digitalizedDocument.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       queryMaps:

@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: BAIL BOND
-      objectIdjsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdjsonPath: $.tenantId
       transactionCodejsonPath: $.caseId
       auditAttributeBasePath: bail
@@ -115,7 +115,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: BAIL BOND
-      objectIdjsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdjsonPath: $.tenantId
       transactionCodejsonPath: $.caseId
       auditAttributeBasePath: bail
