@@ -44,7 +44,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: TASK-MANAGEMENT
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.filingNumber
       queryMaps:
