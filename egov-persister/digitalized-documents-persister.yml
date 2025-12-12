@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
-      objecIdJsonPath: $.digitalizedDocument.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
@@ -45,7 +45,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
-      objecIdJsonPath: $.digitalizedDocument.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
@@ -74,7 +74,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
-      objecIdJsonPath: $.digitalizedDocument.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
@@ -111,7 +111,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
-      objecIdJsonPath: $.digitalizedDocument.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
@@ -140,7 +140,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
-      objecIdJsonPath: $.digitalizedDocument.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
@@ -179,7 +179,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: DIGITALIZED-DOCUMENTS
-      objecIdJsonPath: $.digitalizedDocument.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.digitalizedDocument.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
