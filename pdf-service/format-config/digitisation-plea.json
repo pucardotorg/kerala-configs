@@ -138,17 +138,7 @@
                         "font": "ManjiriMalyalam"
                       },
                       {
-                        "text": "കു\u200Dറ്റ\u200Dപത്രം വായിച്ചത് ",
-                        "style": "fieldValue",
-                        "font": "ManjiriMalyalam"
-                      },
-                      {
-                        "text": "കേട്ടോ",
-                        "style": "fieldTitle",
-                        "font": "ManjiriMalyalam"
-                      },
-                      {
-                        "text": ", മനസ്സിലായോ?",
+                        "text": "കുറ്റപത്രം വായിച്ചത് കേട്ടോ, മനസ്സിലായോ?",
                         "style": "fieldValue",
                         "font": "ManjiriMalyalam"
                       }
