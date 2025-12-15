@@ -19,7 +19,7 @@
                   },
                   {
                     "text": "(Section 281, Criminal Procedure Court)",
-                    "style": "subHeader"
+                    "style": "subHeaderItalics"
                   },
                   {
                     "text": "In The {{courtName}}",
@@ -229,6 +229,12 @@
         "fontSize": 12,
         "alignment": "center",
         "margin": [0, 15, 0, 10]
+      },
+      "subHeaderItalics": {
+        "fontSize": 12,
+        "italics": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 10]
       },
       "caseName": {
         "fontSize": 12,
