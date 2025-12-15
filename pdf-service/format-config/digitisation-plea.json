@@ -134,11 +134,13 @@
                     "text": [
                       {
                         "text": "ചോദ്യം   :    ",
-                        "style": "fieldTitle"
+                        "style": "fieldTitle",
+                        "font": "ManjiriMalyalam"
                       },
                       {
                         "text": "കുറ്റപത്രം വായിച്ചത് കേട്ടോ, മനസ്സിലായോ?",
-                        "style": "fieldValue"
+                        "style": "fieldValue",
+                        "font": "ManjiriMalyalam"
                       }
                     ],
                     "margin": [0, 0, 0, 10]
@@ -147,11 +149,13 @@
                     "text": [
                       {
                         "text": "ഉത്തരം   :    ",
-                        "style": "fieldTitle"
+                        "style": "fieldTitle",
+                        "font": "ManjiriMalyalam"
                       },
                       {
                         "text": "{{#ques1Yes}}ആയി{{/ques1Yes}}{{#ques1No}}ഇല്ല{{/ques1No}}",
-                        "style": "fieldValue"
+                        "style": "fieldValue",
+                        "font": "ManjiriMalyalam"
                       }
                     ],
                     "margin": [0, 0, 0, 10]
@@ -160,11 +164,13 @@
                     "text": [
                       {
                         "text": "ചോദ്യം   :    ",
-                        "style": "fieldTitle"
+                        "style": "fieldTitle",
+                        "font": "ManjiriMalyalam"
                       },
                       {
                         "text": "ടി കുറ്റം ചെയ്തിട്ടുണ്ടോ?",
-                        "style": "fieldValue"
+                        "style": "fieldValue",
+                        "font": "ManjiriMalyalam"
                       }
                     ],
                     "margin": [0, 0, 0, 10]
@@ -173,11 +179,13 @@
                     "text": [
                       {
                         "text": "ഉത്തരം   :    ",
-                        "style": "fieldTitle"
+                        "style": "fieldTitle",
+                        "font": "ManjiriMalyalam"
                       },
                       {
                         "text": "{{#ques2Yes}}ഉണ്ട്{{/ques2Yes}}{{#ques2No}}ഇല്ല{{/ques2No}}",
-                        "style": "fieldValue"
+                        "style": "fieldValue",
+                        "font": "ManjiriMalyalam"
                       }
                     ],
                     "margin": [0, 0, 0, 10]

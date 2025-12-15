@@ -31,7 +31,8 @@
                   },
                   {
                     "stack": "{{{textBody}}}",
-                    "style": "bodyText"
+                    "style": "bodyText",
+                    "font": "ManjiriMalyalam"
                   },
                   {
                     "columns": [
