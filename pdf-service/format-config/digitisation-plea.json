@@ -19,14 +19,14 @@
                   },
                   {
                     "text": "(Section 281, Criminal Procedure Court)",
-                    "style": "subHeaderItalics"
+                    "style": "subHeader"
                   },
                   {
                     "text": "In The {{courtName}}",
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}}",
+                    "text": "Case No: {{caseNumber}}",
                     "style": "header"
                   },
                   {
@@ -137,15 +137,7 @@
                         "style": "fieldTitle"
                       },
                       {
-                        "text": "കു\u200Dറ്റ\u200Dപത്രം വായിച്ചത് ",
-                        "style": "fieldValue"
-                      },
-                      {
-                        "text": "കേട്ടോ",
-                        "style": "fieldTitle"
-                      },
-                      {
-                        "text": ", മനസ്സിലായോ?",
+                        "text": "കുറ്റപത്രം വായിച്ചത് കേട്ടോ, മനസ്സിലായോ?",
                         "style": "fieldValue"
                       }
                     ],
@@ -237,12 +229,6 @@
         "fontSize": 12,
         "alignment": "center",
         "margin": [0, 15, 0, 10]
-      },
-      "subHeaderItalics": {
-        "fontSize": 12,
-        "italics": true,
-        "alignment": "center",
-        "margin": [0, 0, 0, 10]
       },
       "caseName": {
         "fontSize": 12,
