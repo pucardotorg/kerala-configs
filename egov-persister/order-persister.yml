@@ -13,7 +13,7 @@ serviceMaps:
       auditAttributeBasePath: order
       queryMaps:
 
-        - query: INSERT INTO dristi_orders(id, tenantid, attendance, itemText, purposeOfNextHearing, nextHearingDate, courtId, filingnumber, hearingnumber, scheduledHearingNumber, applicationnumber, ordertype, ordernumber,linkedordernumber, cnrnumber, comments, status, ordercategory, createddate,isactive, orderdetails, compositeitems, ordertitle, issuedBy, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_orders(id, tenantid, attendance, itemText, purposeOfNextHearing, nextHearingDate, courtId, filingnumber, hearingnumber, hearingtype, scheduledHearingNumber, applicationnumber, ordertype, ordernumber,linkedordernumber, cnrnumber, comments, status, ordercategory, createddate,isactive, orderdetails, compositeitems, ordertitle, issuedBy, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: order
           jsonMaps:
             - jsonPath: $.order.id
@@ -27,6 +27,7 @@ serviceMaps:
             - jsonPath: $.order.courtId
             - jsonPath: $.order.filingNumber
             - jsonPath: $.order.hearingNumber
+            - jsonPath: $.order.hearingType
             - jsonPath: $.order.scheduledHearingNumber
             - jsonPath: $.order.applicationNumber
               type: JSON
@@ -105,7 +106,7 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: order
       queryMaps:
-        - query: UPDATE dristi_orders SET tenantid=?, attendance=?, itemtext=?, purposeOfNextHearing=?, nextHearingDate=?, filingnumber=?, hearingnumber=?, scheduledHearingNumber=?, linkedordernumber=?, ordercategory=?, createddate=?, applicationnumber=?, ordertype=?, ordernumber=?, cnrnumber=?, comments=?, status=?, isactive=?, orderdetails=?, compositeitems=?, ordertitle=?, issuedBy=?, additionaldetails=?, lastmodifiedby=?, lastModifiedTime=? WHERE id=?;
+        - query: UPDATE dristi_orders SET tenantid=?, attendance=?, itemtext=?, purposeOfNextHearing=?, nextHearingDate=?, filingnumber=?, hearingnumber=?, hearingtype=?, scheduledHearingNumber=?, linkedordernumber=?, ordercategory=?, createddate=?, applicationnumber=?, ordertype=?, ordernumber=?, cnrnumber=?, comments=?, status=?, isactive=?, orderdetails=?, compositeitems=?, ordertitle=?, issuedBy=?, additionaldetails=?, lastmodifiedby=?, lastModifiedTime=? WHERE id=?;
           basePath: order
           jsonMaps:
             - jsonPath: $.order.tenantId
@@ -117,6 +118,7 @@ serviceMaps:
             - jsonPath: $.order.nextHearingDate
             - jsonPath: $.order.filingNumber
             - jsonPath: $.order.hearingNumber
+            - jsonPath: $.order.hearingType
             - jsonPath: $.order.scheduledHearingNumber
             - jsonPath: $.order.linkedOrderNumber
             - jsonPath: $.order.orderCategory
