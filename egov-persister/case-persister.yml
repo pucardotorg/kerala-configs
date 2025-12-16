@@ -229,7 +229,6 @@ serviceMaps:
               type: JSON
               dbType: JSONB
 
-
     - version: 1.0
       description: Update case details in tables
       fromTopic: update-case-application
@@ -423,7 +422,8 @@ serviceMaps:
               type: JSON
               dbType: JSONB
 
-        - query: INSERT INTO dristi_case_poaholders(id,tenant_id,case_id,individual_id,poa_type,name,is_active,additional_details,hasSigned,representing_litigants,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) do update set 
+        - query:
+            INSERT INTO dristi_case_poaholders(id,tenant_id,case_id,individual_id,poa_type,name,is_active,additional_details,hasSigned,representing_litigants,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) do update set
             tenant_id = EXCLUDED.tenant_id,
             case_id = EXCLUDED.case_id,
             individual_id = EXCLUDED.individual_id,
@@ -458,7 +458,8 @@ serviceMaps:
             - jsonPath: $.cases.poaHolders.*.auditDetails.createdTime
             - jsonPath: $.cases.poaHolders.*.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType,isActive, poaholder_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) do update set
+        - query:
+            INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType,isActive, poaholder_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) do update set
             fileStore = EXCLUDED.fileStore,
             documentUid = EXCLUDED.documentUid,
             documentType = EXCLUDED.documentType,
@@ -598,7 +599,8 @@ serviceMaps:
             - jsonPath: $.representatives.*.representing.*.auditDetails.lastModifiedBy
             - jsonPath: $.representatives.*.representing.*.auditDetails.createdTime
             - jsonPath: $.representatives.*.representing.*.auditDetails.lastModifiedTime
-        - query: INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType, isActive,representing_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) do update set
+        - query:
+            INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType, isActive,representing_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) do update set
             fileStore = EXCLUDED.fileStore,
             documentUid = EXCLUDED.documentUid,
             documentType = EXCLUDED.documentType,
@@ -779,7 +781,8 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: poaHolders
       queryMaps:
-        - query: INSERT INTO dristi_case_poaholders(id,tenant_id,case_id,individual_id,poa_type,name,is_active,additional_details,hasSigned,representing_litigants,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) do update set
+        - query:
+            INSERT INTO dristi_case_poaholders(id,tenant_id,case_id,individual_id,poa_type,name,is_active,additional_details,hasSigned,representing_litigants,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT (id) do update set
             tenant_id = EXCLUDED.tenant_id,
             case_id = EXCLUDED.case_id,
             individual_id = EXCLUDED.individual_id,
@@ -814,7 +817,8 @@ serviceMaps:
             - jsonPath: $.poaHolders.*.auditDetails.createdTime
             - jsonPath: $.poaHolders.*.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType,isActive, poaholder_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) do update set
+        - query:
+            INSERT INTO dristi_case_document(id,fileStore,documentUid,documentType,isActive, poaholder_id, additionalDetails) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) do update set
             fileStore = EXCLUDED.fileStore,
             documentUid = EXCLUDED.documentUid,
             documentType = EXCLUDED.documentType,
@@ -889,3 +893,27 @@ serviceMaps:
             - jsonPath: $.cases.auditDetails.lastModifiedBy
             - jsonPath: $.cases.auditDetails.lastModifiedTime
             - jsonPath: $.cases.id
+
+    - version: 1.0
+      description: Insert Case Conversion details
+      fromTopic: update-case-conversion
+      isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objecIdJsonPath: $.caseId
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: $.caseConversionDetails
+      queryMaps:
+        - query: INSERT INTO dristi_case_conversion (tenantId, caseId, filingNumber, cnrNumber, dateOfConversion, convertedFrom, convertedTo, preCaseNumber, postCaseNumber) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: caseConversionDetails
+          jsonMaps:
+            - jsonPath: $.caseConversionDetails.tenantId
+            - jsonPath: $.caseConversionDetails.caseId
+            - jsonPath: $.caseConversionDetails.filingNumber
+            - jsonPath: $.caseConversionDetails.cnrNumber
+            - jsonPath: $.caseConversionDetails.dateOfConversion
+            - jsonPath: $.caseConversionDetails.convertedFrom
+            - jsonPath: $.caseConversionDetails.convertedTo
+            - jsonPath: $.caseConversionDetails.preCaseNumber
+            - jsonPath: $.caseConversionDetails.postCaseNumber
