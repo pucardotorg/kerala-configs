@@ -28,8 +28,6 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.filingNumber
               - inJsonPath: $.hearingNumber
                 outJsonPath: $.Data.orderDetails.hearingNumber
-              - inJsonPath: $.hearingType
-                outJsonPath: $.Data.orderDetails.hearingType
               - inJsonPath: $.scheduledHearingNumber
                 outJsonPath: $.Data.orderDetails.scheduledHearingNumber
               - inJsonPath: $.orderNumber
@@ -107,8 +105,6 @@ ServiceMaps:
                 outJsonPath: $.Data.orderDetails.filingNumber
               - inJsonPath: $.hearingNumber
                 outJsonPath: $.Data.orderDetails.hearingNumber
-              - inJsonPath: $.hearingType
-                outJsonPath: $.Data.orderDetails.hearingType
               - inJsonPath: $.scheduledHearingNumber
                 outJsonPath: $.Data.orderDetails.scheduledHearingNumber
               - inJsonPath: $.orderNumber
