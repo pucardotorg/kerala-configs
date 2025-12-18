@@ -71,7 +71,7 @@ serviceMaps:
       module: PORTAL_SURVEY
       objecIdJsonPath: $.uuid
       tenantIdJsonPath: $.tenantId
-      auditAttributeBasePath:
+      auditAttributeBasePath: feedBack
       queryMaps:
         - query: INSERT INTO inportal_survey_feedback (uuid, rating, category, tenant_id, feedback, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: feedBack
