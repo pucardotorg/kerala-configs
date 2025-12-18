@@ -165,3 +165,24 @@ serviceMaps:
             - jsonPath: $.taskDetailsDTO.auditDetails.lastModifiedBy
             - jsonPath: $.taskDetailsDTO.auditDetails.lastModifiedTime
             - jsonPath: $.taskDetailsDTO.taskNumber
+
+    - version: 1.0
+      description: Update task delivery channels data
+      fromTopic: update-delivery-channels
+      isTransaction: true
+      isAuditEnabled: true
+      module: TASK
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: task
+      queryMaps:
+        - query: UPDATE dristi_task SET taskDetails=?, lastModifiedBy=?, lastModifiedTime=? WHERE taskNumber=?;
+          basePath: task
+          jsonMaps:
+            - jsonPath: $.task.taskDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.task.auditDetails.lastModifiedBy
+            - jsonPath: $.task.auditDetails.lastModifiedTime
+            - jsonPath: $.task.taskNumber
