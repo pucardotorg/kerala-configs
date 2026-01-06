@@ -165,7 +165,8 @@
                   },
                   {
                     "stack": "{{{complaint}}}",
-                    "style": "bodyText"
+                    "style": "bodyText",
+                    "font": "ManjiriMalyalam"
                   },
                   {
                     "text": "Prayer",
