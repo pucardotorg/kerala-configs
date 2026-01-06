@@ -55,6 +55,20 @@
                 }
               },
               {
+                "variable": "witnessRespondentName",
+                "value": {
+                  "path": "$.witnessRespondentName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "witnessRespondentDesignation",
+                "value": {
+                  "path": "$.witnessRespondentDesignation",
+                  "defaultValue": "NA"
+                }
+              },
+              {
                 "variable": "complainantName",
                 "value": {
                   "path": "$.complainantName",

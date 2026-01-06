@@ -87,9 +87,16 @@
               }
             ],
             [
+              "{{#witnessRespondentName}}",
               {
-                "text": "{{respondentName}}"
-              }
+                "text": "Name: {{witnessRespondentName}}"
+              },
+              "{{/witnessRespondentName}}",
+              "{{#witnessRespondentDesignation}}",
+              {
+                "text": "Designation: {{witnessRespondentDesignation}}"
+              },
+              "{{/witnessRespondentDesignation}}"
             ],
             [
               {
