@@ -65,20 +65,19 @@
                     "style": "list"
                   },
                   {
-                    "text": "Most respectfully, it is hereby requested that the Hon'ble court may consider the following reasons and grounds while considering this application:",
+                    "text": "Most respectfully, it is hereby requested that the Hon'ble court may consider the following reasons and grounds while considering this application: ",
+                    "style": ["bodyText", "reasonForApplication"]
+                  },
+                  {
+                    "stack": "{{{reasonForApplication}}}",
                     "style": "bodyText"
                   },
                   {
-                    "ul": [
-                      {
-                        "text": "{{reasonForApplication}}",
-                        "style": "reasonForApplication"
-                      }
-                    ],
-                    "style": "list"
+                    "text": "Prayer: ",
+                    "style": "bodyText"
                   },
                   {
-                    "text": "Prayer: {{prayer}}",
+                    "stack": "{{{prayer}}}",
                     "style": "bodyText"
                   },
                   {
@@ -91,7 +90,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{additionalComments}}",
+                    "stack": "{{{additionalComments}}}",
                     "style": "bodyText"
                   },
                   {

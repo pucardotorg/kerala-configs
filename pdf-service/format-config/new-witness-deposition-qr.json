@@ -60,8 +60,9 @@
                     "style": "content"
                   },
                   {
-                    "text": "{{witnessDeposition}}",
-                    "style": "deposition"
+                    "stack": "{{{witnessDeposition}}}",
+                    "style": "deposition",
+                    "font": "ManjiriMalyalam"
                   },
                   {
                     "text": "{{witnessPlaceholder}}",
