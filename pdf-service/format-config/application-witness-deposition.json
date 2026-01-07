@@ -14,46 +14,29 @@
                     "style": "header"
                   },
                   {
-                    "text": "{{caseNumber}}",
+                    "text": "Case No: {{caseNumber}}",
                     "style": "subHeader"
                   },
                   {
-                    "text": "{{caseName}}",
-                    "style": "subHeader"
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "caseName"
                   },
                   {
-                    "text": "APPLICATION FOR PRODUCTION OF DOCUMENTS/EVIDENCE",
+                    "text": "Application for Addition of New Witness",
                     "style": "applicationTitle"
                   },
                   {
-                    "text": "To, The Honorable {{judgeName}}, {{addressOfTheCourt}}",
-                    "style": "subjectText"
-                  },
-                  {
-                    "text": "{{date}}",
-                    "style": "date"
-                  },
-                  {
-                    "text": "Subject: Application for Addition of New Witness",
-                    "style": "subjectText"
-                  },
-                  {
-                    "text": "{{partyName}}, represented by Advocate {{advocateName}}, respectfully submits as follows:",
+                    "text": "{{partyName}}, represented by Advocate {{advocateName}}, respectfully seek permission to add a witness pertinent to the above-mentioned case.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "This application seeks permission to add a witness pertinent to the above-mentioned case. The details of the witness are below:",
+                    "text": "The details of the witness are below:",
                     "style": "bodyText"
                   },
                   {
                     "style": "table",
                     "table": {
-                      "widths": [
-                        "10%",
-                        "30%",
-                        "30%",
-                        "30%"
-                      ],
+                      "widths": ["8%", "23%", "23%", "23%", "23%"],
                       "body": [
                         [
                           {
@@ -75,7 +58,13 @@
                             "border": [true, true, true, true]
                           },
                           {
-                            "text": "Additional Comments",
+                            "text": "Address",
+                            "style": "bodyText",
+                            "bold": true,
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "Purpose/Documents to be presented",
                             "style": "bodyText",
                             "bold": true,
                             "border": [true, true, true, true]
@@ -99,6 +88,19 @@
                             "border": [true, true, true, true]
                           },
                           {
+                            "stack": [
+                              "{{#witnessAddresses}}",
+                              {
+                                "text": "{{.}}",
+                                "margin": [0, 5, 0, 5]
+                              },
+                              "{{/witnessAddresses}}"
+                            ],
+                            "style": "bodyText",
+                            "margin": [0, 5, 0, 5],
+                            "border": [true, true, true, true]
+                          },
+                          {
                             "text": "{{witnessAdditionalComments}}",
                             "style": "bodyText",
                             "border": [true, true, true, true]
@@ -113,7 +115,7 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Therefore, the petitioner humbly requests the Hon'ble Court to consider this application and grant permission to produce the aforementioned documents/evidence.",
+                    "text": "Therefore, the petitioner humbly requests the Hon'ble Court to consider and allow this application.",
                     "style": "bodyText"
                   },
                   {
@@ -158,23 +160,23 @@
         "fontSize": 14,
         "bold": true,
         "alignment": "center",
-        "margin": [0, 0, 0, 0]
+        "margin": [0, 10, 0, 0]
       },
-      "applicationTitle": {
-        "fontSize": 15,
+      "caseName": {
+        "fontSize": 14,
         "bold": true,
         "alignment": "center",
-        "margin": [0, 20, 0, 10]
+        "margin": [0, 0, 0, 10]
       },
-      "subTitle": {
-        "fontSize": 12,
+      "applicationTitle": {
+        "fontSize": 14,
         "bold": true,
-        "margin": [0, 10, 0, 0]
+        "alignment": "center",
+        "margin": [0, 10, 0, 10]
       },
       "date": {
         "fontSize": 12,
         "alignment": "left",
-        "bold": true,
         "margin": [0, 0, 0, 10]
       },
       "subjectText": {
