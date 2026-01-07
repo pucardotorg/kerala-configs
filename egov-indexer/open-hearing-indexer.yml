@@ -26,6 +26,8 @@ ServiceMaps:
                 outJsonPath: $.Data.hearingDetails.caseUuid
               - inJsonPath: $.hearingNumber
                 outJsonPath: $.Data.hearingDetails.hearingNumber
+              - inJsonPath: $.hearingType
+                outJsonPath: $.Data.hearingDetails.hearingType
               - inJsonPath: $.caseNumber
                 outJsonPath: $.Data.hearingDetails.caseNumber
               - inJsonPath: $.stage

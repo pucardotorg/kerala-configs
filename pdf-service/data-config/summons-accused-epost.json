@@ -1,0 +1,206 @@
+{
+  "key": "summons-accused-e-post",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.summonsPdf",
+    "entityIdPath": "$.cnrNumber",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "cnrNumber",
+                "value": {
+                  "path": "$.cnrNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "accessCode",
+                "value": {
+                  "path": "$.accessCode",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "respondentName",
+                "value": {
+                  "path": "$.respondentName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "complainantName",
+                "value": {
+                  "path": "$.complainantName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "respondentAddress",
+                "value": {
+                  "path": "$.respondentAddress",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "hearingDate",
+                "value": {
+                  "path": "$.hearingDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtCaseNumber",
+                "value": {
+                  "path": "$.courtCaseNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "caseYear",
+                "value": {
+                  "path": "$.caseYear",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "issueDate",
+                "value": {
+                  "path": "$.issueDate",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtUrl",
+                "value": {
+                  "path": "$.courtUrl",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "infoPdfUrl",
+                "value": {
+                  "path": "$.infoPdfUrl",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "barCouncilUrl",
+                "value": {
+                  "path": "$.barCouncilUrl",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "lokAdalatUrl",
+                "value": {
+                  "path": "$.lokAdalatUrl",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "helplineNumber",
+                "value": {
+                  "path": "$.helplineNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "courtAddress",
+                "value": {
+                  "path": "$.courtAddress",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "qrCodeFirst",
+                "url": "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=0ad94ee3-371f-46d7-b063-ede2495a1912",
+                "type": "image"
+              },
+              {
+                "variable": "qrCodeSecond",
+                "url": "http://minio-filestore.backbone-prod:8080/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=084f00e9-fee8-432d-927d-183d78123f33",
+                "type": "image"
+              },
+              {
+                "variable": "filingNumber",
+                "value": {
+                  "path": "$.filingNumber",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "city",
+                "value": {
+                  "path": "$.address.city",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "state",
+                "value": {
+                  "path": "$.address.state",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "locality",
+                "value": {
+                  "path": "$.address.locality",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "district",
+                "value": {
+                  "path": "$.address.district",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "pincode",
+                "value": {
+                  "path": "$.address.pincode",
+                  "defaultValue": "NA"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

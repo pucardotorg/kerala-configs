@@ -1,0 +1,129 @@
+{
+  "key": "digitisation-examination-of-accused",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "Examination of Accused",
+                    "style": "header"
+                  },
+                  {
+                    "text": "(Section 351, BNSS)",
+                    "style": "subHeaderItalics"
+                  },
+                  {
+                    "text": "In The {{courtName}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Examination of {{accusedName}}",
+                    "style": "subHeader"
+                  },
+                  {
+                    "stack": "{{{textBody}}}",
+                    "style": "bodyText",
+                    "font": "ManjiriMalyalam"
+                  },
+                  {
+                    "columns": [
+                      {
+                        "width": "50%",
+                        "stack": [
+                          {
+                            "text": "{{accusedSignature}}",
+                            "style": "accusedSignature"
+                          }
+                        ]
+                      },
+                      {
+                        "width": "50%",
+                        "stack": [
+                          {
+                            "text": "{{judgeSignature}}",
+                            "style": "judgeSignature"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "text": "Certified that the statement is typed down by me in my personal laptop read over to the accused and admitted by him/her to be correct.",
+                    "style": "bottomText"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 12,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "subHeader": {
+        "fontSize": 11,
+        "alignment": "center",
+        "margin": [0, 10, 0, 5]
+      },
+      "subHeaderItalics": {
+        "fontSize": 11,
+        "italics": true,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "caseName": {
+        "fontSize": 12,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+      "caseNumber": {
+        "fontSize": 12,
+        "alignment": "center",
+        "margin": [0, 5, 0, 5]
+      },
+
+      "bodyText": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 20, 0, 20]
+      },
+      "accusedSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 40, 0, 10]
+      },
+      "judgeSignature": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 40, 0, 10]
+      },
+      "bottomText": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 20, 0, 10]
+      },
+      "tableData": {
+        "bold": true,
+        "fontSize": 10,
+        "color": "black"
+      }
+    }
+  }
+}

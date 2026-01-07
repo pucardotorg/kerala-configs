@@ -7,9 +7,9 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: BAIL BOND
-      objectIdjsonPath: $.id
-      tenantIdjsonPath: $.tenantId
-      transactionCodejsonPath: $.caseId
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.caseId
       auditAttributeBasePath: bail
       queryMaps:
         - query: INSERT INTO dristi_bail(id,tenant_id,case_id,bail_type,bail_amount,bail_status,court_id,case_title,case_number,cnr_number,filing_number,case_type,litigant_id,litigant_name,litigant_father_name,litigant_signed,litigant_mobile_number,shortened_url,bail_id,additional_details,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
@@ -115,9 +115,9 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: BAIL BOND
-      objectIdjsonPath: $.id
-      tenantIdjsonPath: $.tenantId
-      transactionCodejsonPath: $.caseId
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.caseId
       auditAttributeBasePath: bail
       queryMaps:
         - query: UPDATE dristi_bail SET tenant_id=?,case_id=?,bail_type=?,bail_amount=?,bail_status=?,court_id=?,case_title=?,case_number=?,cnr_number=?,filing_number=?,case_type=?,litigant_id=?,litigant_name=?,litigant_father_name=?,litigant_signed=?,litigant_mobile_number=?,shortened_url=?,additional_details=?,is_active=?,created_by=?,last_modified_by=?,created_time=?,last_modified_time=? WHERE bail_id=?;

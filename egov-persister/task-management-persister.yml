@@ -1,0 +1,68 @@
+serviceMaps:
+  serviceName: task-management-service
+  mappings:
+    - version: 1.0
+      description: Persists task management details in tables
+      fromTopic: save-task-management
+      isTransaction: true
+      isAuditEnabled: true
+      module: TASK-MANAGEMENT
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: taskManagement
+      queryMaps:
+        - query: INSERT INTO dristi_task_management(id,tenant_id,task_management_number,filing_number,task_type,status,court_id,order_number,order_item_id,party_details,additional_details,documents,created_by,last_modified_by,created_time,last_modified_time, party_type) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: taskManagement
+          jsonMaps:
+            - jsonPath: $.taskManagement.id
+            - jsonPath: $.taskManagement.tenantId
+            - jsonPath: $.taskManagement.taskManagementNumber
+            - jsonPath: $.taskManagement.filingNumber
+            - jsonPath: $.taskManagement.taskType
+            - jsonPath: $.taskManagement.status
+            - jsonPath: $.taskManagement.courtId
+            - jsonPath: $.taskManagement.orderNumber
+            - jsonPath: $.taskManagement.orderItemId
+            - jsonPath: $.taskManagement.partyDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.taskManagement.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.taskManagement.documents
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.taskManagement.auditDetails.createdBy
+            - jsonPath: $.taskManagement.auditDetails.lastModifiedBy
+            - jsonPath: $.taskManagement.auditDetails.createdTime
+            - jsonPath: $.taskManagement.auditDetails.lastModifiedTime
+            - jsonPath: $.taskManagement.partyType
+
+    - version: 1.0
+      description: Update task management details in tables
+      fromTopic: update-task-management
+      isTransaction: true
+      isAuditEnabled: true
+      module: TASK-MANAGEMENT
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: taskManagement
+      queryMaps:
+        - query: UPDATE dristi_task_management SET status=?, party_details=?, additional_details=?, last_modified_by=?, last_modified_time=?, documents=? WHERE id=?;
+          basePath: taskManagement
+          jsonMaps:
+            - jsonPath: $.taskManagement.status
+            - jsonPath: $.taskManagement.partyDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.taskManagement.additionalDetails
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.taskManagement.auditDetails.lastModifiedBy
+            - jsonPath: $.taskManagement.auditDetails.lastModifiedTime
+            - jsonPath: $.taskManagement.documents
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.taskManagement.id
