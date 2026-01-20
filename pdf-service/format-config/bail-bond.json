@@ -30,7 +30,11 @@
                     "bold": false
                   },
                   {
-                    "text": "In the Court of {{orderHeading}}",
+                    "text": " ",
+                    "style": "header"
+                  },
+                  {
+                    "text": "{{orderHeading}}",
                     "style": "header"
                   },
                   {
