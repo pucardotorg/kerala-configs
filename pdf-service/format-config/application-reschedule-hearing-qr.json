@@ -1,0 +1,246 @@
+{
+  "key": "application-reschedule-hearing-qr",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "{{courtComplex}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
+                  },
+                  {
+                    "text": "Date: {{applicationDate}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 15]
+                  },
+                  {
+                    "style": "table",
+                    "table": {
+                      "widths": ["30%", "70%"],
+                      "body": [
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "text": "Complainant {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/complainantList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        "{{#accusedList}}",
+                        [
+                          {
+                            "text": "Accused {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/accusedList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Offence",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "S. 138 of the Negotiable Instruments Act, 1881",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "text": "Application for Advancement/Rescheduling of Hearing Date",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "text": [
+                      "{partyName}, the Complainant, submits this application before this Hon’ble Court seeking to ",
+                      {
+                        "text": "advance/reschedule the hearing date,",
+                        "bold": true
+                      },
+                      " currently scheduled for the purpose of Cognizance on ",
+                      {
+                        "text": "{{initialHearingDate}}",
+                        "bold": true
+                      },
+                      "."
+                    ],
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "This request is being made due to the following reasons: "
+                  },
+                  {
+                    "text": "{{reasonForReschedule}}"
+                  },
+                  {
+                    "text": [
+                      "I/We propose the following dates for the hearing instead: ",
+                      {
+                        "text": "{{proposedHearingDate}}",
+                        "bold": true
+                      },
+                      ". Other parties in the case have also agreed to this petition and the aforementioned dates."
+                    ],
+                    "style": "bodyText"
+                  },
+
+                  {
+                    "text": "It is humbly prayed that the Hon’ble Court considers this request and reschedules the hearing to one of the aforementioned dates.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Dated this {{date}} day of {{month}} {{year}}",
+                    "style": "date"
+                  },
+                  {
+                    "text": "{{advocateSignature}}",
+                    "style": "signature",
+                    "margin": [0, 60, 0, 5]
+                  },
+                  {
+                    "text": "Advocate for {{partyName}}",
+                    "style": "signature"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 0]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 0]
+      },
+      "applicationTitle": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 20, 0, 10]
+      },
+      "subTitle": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 0]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 0, 0, 10]
+      },
+      "subjectText": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "additionalComments": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "signature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
+      },
+      "address": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, -10, 0, 10]
+      }
+    }
+  }
+}
