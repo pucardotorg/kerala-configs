@@ -71,7 +71,7 @@
                                 "{{^isPartyInPerson}}",
                                 {
                                   "table": {
-                                    "widths": [16, "*"],
+                                    "widths": ["6%", "94%"],
                                     "body": [
                                       "{{#advocateList}}",
                                       [
