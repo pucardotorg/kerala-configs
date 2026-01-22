@@ -41,10 +41,11 @@ serviceMaps:
       transactionCodeJsonPath: $.leaveOffice.officeAdvocateId
       auditAttributeBasePath: leaveOffice
       queryMaps:
-        - query: UPDATE dristi_advocate_office_member SET is_active=FALSE, last_modified_by=?, last_modified_time=? WHERE office_advocate_id=? AND member_id=?;
+        - query: UPDATE dristi_advocate_office_member SET is_active=?, last_modified_by=?, last_modified_time=? WHERE office_advocate_id=? AND member_id=?;
           basePath: leaveOffice
           jsonMaps:
-            - jsonPath: $.RequestInfo.userInfo.uuid
-            - jsonPath: $.RequestInfo.ts
+            - jsonPath: $.leaveOffice.isActive
+            - jsonPath: $.leaveOffice.auditDetails.lastModifiedBy
+            - jsonPath: $.leaveOffice.auditDetails.lastModifiedTime
             - jsonPath: $.leaveOffice.officeAdvocateId
             - jsonPath: $.leaveOffice.memberId
