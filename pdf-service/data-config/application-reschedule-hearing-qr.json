@@ -68,9 +68,7 @@
                 "variable": "proposedHearingDate",
                 "value": {
                   "path": "$.proposedHearingDate"
-                },
-                "type": "function",
-                "format": "return Array.isArray(type) ? type.join(', ') : type;"
+                }
               },
 
               {
