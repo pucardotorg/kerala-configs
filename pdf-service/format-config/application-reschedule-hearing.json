@@ -130,7 +130,7 @@
                   },
                   {
                     "text": [
-                      "{partyName}, the Complainant, submits this application before this Hon’ble Court seeking to ",
+                      "{{partyName}}, the Complainant, submits this application before this Hon’ble Court seeking to ",
                       {
                         "text": "advance/reschedule the hearing date,",
                         "bold": true
