@@ -78,13 +78,11 @@
                     "style": "content"
                   },
                   "{{/depositionType}}",
-                  "{{#witnessDeposition}}",
                   {
                     "stack": "{{{witnessDeposition}}}",
                     "style": "deposition",
                     "font": "ManjiriMalyalam"
                   },
-                  "{{/witnessDeposition}}",
                   {
                     "text": "{{witnessPlaceholder}}",
                     "style": "signature"
