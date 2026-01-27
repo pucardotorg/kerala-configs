@@ -30,20 +30,11 @@
                     "style": "bodyText",
                     "margin": [0, 20, 0, 0]
                   },
-                  "{{#witnessName}}",
                   {
                     "text": "Name: {{witnessName}}",
                     "style": "bodyText",
                     "margin": [0, 10, 0, 10]
                   },
-                  "{{/witnessName}}",
-                  "{{#designation}}",
-                  {
-                    "text": "Designation: {{designation}}",
-                    "style": "bodyText",
-                    "margin": [0, 10, 0, 10]
-                  },
-                  "{{/designation}}",
                   {
                     "text": "Father's Name: {{witnessFatherName}}",
                     "style": "bodyText"
