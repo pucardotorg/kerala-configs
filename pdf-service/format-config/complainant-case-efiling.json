@@ -71,7 +71,7 @@
                                 "{{^isPartyInPerson}}",
                                 {
                                   "table": {
-                                    "widths": ["3%", "97%"],
+                                    "widths": ["5%", "95%"],
                                     "body": [
                                       "{{#advocateList}}",
                                       [
@@ -165,7 +165,8 @@
                   },
                   {
                     "stack": "{{{complaint}}}",
-                    "style": "bodyText"
+                    "style": "bodyText",
+                    "font": "ManjiriMalyalam"
                   },
                   {
                     "text": "Prayer",
