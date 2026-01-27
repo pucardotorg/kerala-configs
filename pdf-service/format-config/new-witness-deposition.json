@@ -30,61 +30,40 @@
                     "style": "bodyText",
                     "margin": [0, 20, 0, 0]
                   },
-                  "{{#witnessName}}",
                   {
                     "text": "Name: {{witnessName}}",
                     "style": "bodyText",
                     "margin": [0, 10, 0, 10]
                   },
-                  "{{/witnessName}}",
-                  "{{#designation}}",
-                  {
-                    "text": "Designation: {{designation}}",
-                    "style": "bodyText",
-                    "margin": [0, 10, 0, 10]
-                  },
-                  "{{/designation}}",
-                  "{{#witnessFatherName}}",
                   {
                     "text": "Father's Name: {{witnessFatherName}}",
                     "style": "bodyText"
                   },
-                  "{{/witnessFatherName}}",
-                  "{{#witnessAddress}}",
                   {
                     "text": "Address: {{witnessAddress}}",
                     "style": "bodyText"
                   },
-                  "{{/witnessAddress}}",
-                  "{{#witnessDesignation}}",
                   {
                     "text": "Calling: {{witnessDesignation}}",
                     "style": "bodyText"
                   },
-                  "{{/witnessDesignation}}",
-                  "{{#witnessAge}}",
                   {
                     "text": "Age: {{witnessAge}}",
                     "style": "bodyText"
                   },
-                  "{{/witnessAge}}",
                   {
                     "text": "Solemnly affirmed on the {{date}} day of {{month}}, {{year}}",
                     "style": "content"
                   },
-                  "{{#depositionType}}",
                   {
                     "text": "{{depositionType}}",
                     "style": "content"
                   },
-                  "{{/depositionType}}",
-                  "{{#witnessDeposition}}",
                   {
                     "stack": "{{{witnessDeposition}}}",
                     "style": "deposition",
                     "font": "ManjiriMalyalam"
                   },
-                  "{{/witnessDeposition}}",
                   {
                     "text": "{{witnessPlaceholder}}",
                     "style": "signature"
