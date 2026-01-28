@@ -16,16 +16,26 @@ ServiceMaps:
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.advocateOfficeMemberDetails.id
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.advocateOfficeMemberDetails.tenantId
+              - inJsonPath: $.officeAdvocateUserUuid
+                outJsonPath: $.Data.advocateOfficeMemberDetails.officeAdvocateUserUuid
               - inJsonPath: $.officeAdvocateId
                 outJsonPath: $.Data.advocateOfficeMemberDetails.officeAdvocateId
+              - inJsonPath: $.officeAdvocateName
+                outJsonPath: $.Data.advocateOfficeMemberDetails.officeAdvocateName
               - inJsonPath: $.memberType
                 outJsonPath: $.Data.advocateOfficeMemberDetails.memberType
+              - inJsonPath: $.memberUserUuid
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberUserUuid
               - inJsonPath: $.memberId
                 outJsonPath: $.Data.advocateOfficeMemberDetails.memberId
               - inJsonPath: $.memberName
                 outJsonPath: $.Data.advocateOfficeMemberDetails.memberName
               - inJsonPath: $.memberMobileNumber
                 outJsonPath: $.Data.advocateOfficeMemberDetails.memberMobileNumber
+              - inJsonPath: $.memberEmail
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberEmail
               - inJsonPath: $.accessType
                 outJsonPath: $.Data.advocateOfficeMemberDetails.accessType
               - inJsonPath: $.allowCaseCreate
@@ -57,16 +67,26 @@ ServiceMaps:
             fieldMapping:
               - inJsonPath: $.id
                 outJsonPath: $.Data.advocateOfficeMemberDetails.id
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.advocateOfficeMemberDetails.tenantId
+              - inJsonPath: $.officeAdvocateUserUuid
+                outJsonPath: $.Data.advocateOfficeMemberDetails.officeAdvocateUserUuid
               - inJsonPath: $.officeAdvocateId
                 outJsonPath: $.Data.advocateOfficeMemberDetails.officeAdvocateId
+              - inJsonPath: $.officeAdvocateName
+                outJsonPath: $.Data.advocateOfficeMemberDetails.officeAdvocateName
               - inJsonPath: $.memberType
                 outJsonPath: $.Data.advocateOfficeMemberDetails.memberType
+              - inJsonPath: $.memberUserUuid
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberUserUuid
               - inJsonPath: $.memberId
                 outJsonPath: $.Data.advocateOfficeMemberDetails.memberId
               - inJsonPath: $.memberName
                 outJsonPath: $.Data.advocateOfficeMemberDetails.memberName
               - inJsonPath: $.memberMobileNumber
                 outJsonPath: $.Data.advocateOfficeMemberDetails.memberMobileNumber
+              - inJsonPath: $.memberEmail
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberEmail
               - inJsonPath: $.accessType
                 outJsonPath: $.Data.advocateOfficeMemberDetails.accessType
               - inJsonPath: $.allowCaseCreate
