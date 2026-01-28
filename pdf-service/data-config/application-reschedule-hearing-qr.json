@@ -1,0 +1,116 @@
+{
+  "key": "application-reschedule-hearing-qr",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtComplex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "applicationDate",
+                "value": {
+                  "path": "$.applicationDate"
+                }
+              },
+              {
+                "variable": "complainantList",
+                "value": {
+                  "path": "$.complainantList"
+                },
+                "type": "function",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              },
+              {
+                "variable": "accusedList",
+                "value": {
+                  "path": "$.accusedList"
+                },
+                "type": "function",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              },
+              {
+                "variable": "initialHearingDate",
+                "value": {
+                  "path": "$.initialHearingDate"
+                }
+              },
+              {
+                "variable": "reasonForReschedule",
+                "value": {
+                  "path": "$.reasonForReschedule"
+                }
+              },
+              {
+                "variable": "proposedHearingDate",
+                "value": {
+                  "path": "$.proposedHearingDate"
+                }
+              },
+
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
+                "variable": "advocateSignature",
+                "value": {
+                  "path": "$.advocateSignature"
+                }
+              },
+              {
+                "variable": "advocateName",
+                "value": {
+                  "path": "$.advocateName"
+                }
+              },
+              {
+                "variable": "partyName",
+                "value": {
+                  "path": "$.partyName"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
