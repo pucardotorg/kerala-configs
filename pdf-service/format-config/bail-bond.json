@@ -133,13 +133,13 @@
       "signature": {
         "fontSize": 12,
         "alignment": "left",
-        "margin": [0, 40, 0, 20],
+        "margin": [0, 80, 0, 20],
         "minHeight": 50
       },
       "judgeSignature": {
         "fontSize": 12,
         "alignment": "left",
-        "margin": [0, 40, 0, 20],
+        "margin": [0, 80, 0, 20],
         "minHeight": 60
       },
       "date": {
