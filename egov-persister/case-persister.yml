@@ -915,3 +915,42 @@ serviceMaps:
             - jsonPath: $.caseConversionDetails.convertedTo
             - jsonPath: $.caseConversionDetails.preCaseNumber
             - jsonPath: $.caseConversionDetails.postCaseNumber
+
+    - version: 1.0
+      description: Persists advocate office case members
+      fromTopic: save-advocate-office-case-member
+      isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objecIdJsonPath: $.members.*.id
+      queryMaps:
+        - query: INSERT INTO dristi_advocate_office_case_member (id, office_advocate_id, case_id, member_id, member_type, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+          basePath: members.*
+          jsonMaps:
+            - jsonPath: $.members.*.id
+            - jsonPath: $.members.*.officeAdvocateId
+            - jsonPath: $.members.*.caseId
+            - jsonPath: $.members.*.memberId
+            - jsonPath: $.members.*.memberType
+            - jsonPath: $.members.*.isActive
+            - jsonPath: $.members.*.auditDetails.createdBy
+            - jsonPath: $.members.*.auditDetails.lastModifiedBy
+            - jsonPath: $.members.*.auditDetails.createdTime
+            - jsonPath: $.members.*.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      description: Update advocate office case members to inactive
+      fromTopic: update-advocate-office-case-member
+      isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objecIdJsonPath: $.leaveOffice.id
+      queryMaps:
+        - query: UPDATE dristi_advocate_office_case_member SET is_active = ?, last_modified_by = ?, last_modified_time = ? WHERE office_advocate_id = ? AND member_id = ?;
+          basePath: leaveOffice
+          jsonMaps:
+            - jsonPath: $.leaveOffice.isActive
+            - jsonPath: $.leaveOffice.auditDetails.lastModifiedBy
+            - jsonPath: $.leaveOffice.auditDetails.lastModifiedTime
+            - jsonPath: $.leaveOffice.officeAdvocateId
+            - jsonPath: $.leaveOffice.memberId
