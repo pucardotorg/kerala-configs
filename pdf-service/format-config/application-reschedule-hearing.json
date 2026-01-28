@@ -215,7 +215,7 @@
       },
       "date": {
         "fontSize": 12,
-        "alignment": "right",
+        "alignment": "left",
         "margin": [0, 0, 0, 10]
       },
       "subjectText": {
@@ -240,6 +240,13 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, -10, 0, 10]
+      },
+      "table": {
+        "fontSize": 13
+      },
+      "tableText": {
+        "fontSize": 13,
+        "margin": [2, 5, 2, 5]
       }
     }
   }
