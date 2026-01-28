@@ -18,7 +18,7 @@ serviceMaps:
               process_title, process_text, addressee_name, is_cover_letter_required, addressee, 
               order_text, cover_letter_text, created_by, created_time, 
               last_modified_by, last_modified_time
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: templateConfiguration
           jsonMaps:
             - jsonPath: $.templateConfiguration.id
