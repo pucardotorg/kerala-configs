@@ -229,15 +229,17 @@ serviceMaps:
               type: JSON
               dbType: JSONB
 
-        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_name, case_id, member_id, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time;
+        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_user_uuid, office_advocate_name, case_id, member_id, member_user_uuid, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time, office_advocate_user_uuid = EXCLUDED.office_advocate_user_uuid, member_user_uuid = EXCLUDED.member_user_uuid;
           basePath: cases.advocateOffices.*.advocates.*
           jsonMaps:
             - jsonPath: $.cases.advocateOffices.*.advocates.*.id
             - jsonPath: $.cases.advocateOffices.*.advocates.*.tenantId
             - jsonPath: $.cases.advocateOffices[*][?({id} in @.advocates[*].id)].officeAdvocateId
+            - jsonPath: $.cases.advocateOffices[*][?({id} in @.advocates[*].id)].officeAdvocateUserUuid
             - jsonPath: $.cases.advocateOffices[*][?({id} in @.advocates[*].id)].officeAdvocateName
             - jsonPath: $.cases.advocateOffices.*.advocates.*.caseId
             - jsonPath: $.cases.advocateOffices.*.advocates.*.memberId
+            - jsonPath: $.cases.advocateOffices.*.advocates.*.memberUserUuid
             - jsonPath: $.cases.advocateOffices.*.advocates.*.memberType
             - jsonPath: $.cases.advocateOffices.*.advocates.*.memberName
             - jsonPath: $.cases.advocateOffices.*.advocates.*.isActive
@@ -246,15 +248,17 @@ serviceMaps:
             - jsonPath: $.cases.advocateOffices.*.advocates.*.auditDetails.createdTime
             - jsonPath: $.cases.advocateOffices.*.advocates.*.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_name, case_id, member_id, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time;
+        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_user_uuid, office_advocate_name, case_id, member_id, member_user_uuid, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time, office_advocate_user_uuid = EXCLUDED.office_advocate_user_uuid, member_user_uuid = EXCLUDED.member_user_uuid;
           basePath: cases.advocateOffices.*.clerks.*
           jsonMaps:
             - jsonPath: $.cases.advocateOffices.*.clerks.*.id
             - jsonPath: $.cases.advocateOffices.*.clerks.*.tenantId
             - jsonPath: $.cases.advocateOffices[*][?({id} in @.clerks[*].id)].officeAdvocateId
+            - jsonPath: $.cases.advocateOffices[*][?({id} in @.clerks[*].id)].officeAdvocateUserUuid
             - jsonPath: $.cases.advocateOffices[*][?({id} in @.clerks[*].id)].officeAdvocateName
             - jsonPath: $.cases.advocateOffices.*.clerks.*.caseId
             - jsonPath: $.cases.advocateOffices.*.clerks.*.memberId
+            - jsonPath: $.cases.advocateOffices.*.clerks.*.memberUserUuid
             - jsonPath: $.cases.advocateOffices.*.clerks.*.memberType
             - jsonPath: $.cases.advocateOffices.*.clerks.*.memberName
             - jsonPath: $.cases.advocateOffices.*.clerks.*.isActive
@@ -512,15 +516,17 @@ serviceMaps:
               type: JSON
               dbType: JSONB
 
-        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_name, case_id, member_id, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time;
+        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_user_uuid, office_advocate_name, case_id, member_id, member_user_uuid, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time, office_advocate_user_uuid = EXCLUDED.office_advocate_user_uuid, member_user_uuid = EXCLUDED.member_user_uuid;
           basePath: cases.advocateOffices.*.advocates.*
           jsonMaps:
             - jsonPath: $.cases.advocateOffices.*.advocates.*.id
             - jsonPath: $.cases.advocateOffices.*.advocates.*.tenantId
             - jsonPath: $.cases.advocateOffices[*][?({id} in @.advocates[*].id)].officeAdvocateId
+            - jsonPath: $.cases.advocateOffices[*][?({id} in @.advocates[*].id)].officeAdvocateUserUuid
             - jsonPath: $.cases.advocateOffices[*][?({id} in @.advocates[*].id)].officeAdvocateName
             - jsonPath: $.cases.advocateOffices.*.advocates.*.caseId
             - jsonPath: $.cases.advocateOffices.*.advocates.*.memberId
+            - jsonPath: $.cases.advocateOffices.*.advocates.*.memberUserUuid
             - jsonPath: $.cases.advocateOffices.*.advocates.*.memberType
             - jsonPath: $.cases.advocateOffices.*.advocates.*.memberName
             - jsonPath: $.cases.advocateOffices.*.advocates.*.isActive
@@ -529,15 +535,17 @@ serviceMaps:
             - jsonPath: $.cases.advocateOffices.*.advocates.*.auditDetails.createdTime
             - jsonPath: $.cases.advocateOffices.*.advocates.*.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_name, case_id, member_id, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time;
+        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_user_uuid, office_advocate_name, case_id, member_id, member_user_uuid, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time, office_advocate_user_uuid = EXCLUDED.office_advocate_user_uuid, member_user_uuid = EXCLUDED.member_user_uuid;
           basePath: cases.advocateOffices.*.clerks.*
           jsonMaps:
             - jsonPath: $.cases.advocateOffices.*.clerks.*.id
             - jsonPath: $.cases.advocateOffices.*.clerks.*.tenantId
             - jsonPath: $.cases.advocateOffices[*][?({id} in @.clerks[*].id)].officeAdvocateId
+            - jsonPath: $.cases.advocateOffices[*][?({id} in @.clerks[*].id)].officeAdvocateUserUuid
             - jsonPath: $.cases.advocateOffices[*][?({id} in @.clerks[*].id)].officeAdvocateName
             - jsonPath: $.cases.advocateOffices.*.clerks.*.caseId
             - jsonPath: $.cases.advocateOffices.*.clerks.*.memberId
+            - jsonPath: $.cases.advocateOffices.*.clerks.*.memberUserUuid
             - jsonPath: $.cases.advocateOffices.*.clerks.*.memberType
             - jsonPath: $.cases.advocateOffices.*.clerks.*.memberName
             - jsonPath: $.cases.advocateOffices.*.clerks.*.isActive
@@ -687,15 +695,17 @@ serviceMaps:
               type: JSON
               dbType: JSONB
 
-        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_name, case_id, member_id, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time;
+        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_user_uuid, office_advocate_name, case_id, member_id, member_user_uuid, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time, office_advocate_user_uuid = EXCLUDED.office_advocate_user_uuid, member_user_uuid = EXCLUDED.member_user_uuid;
           basePath: advocateOffices.*.advocates.*
           jsonMaps:
             - jsonPath: $.advocateOffices.*.advocates.*.id
             - jsonPath: $.advocateOffices.*.advocates.*.tenantId
             - jsonPath: $.advocateOffices[*][?({id} in @.advocates[*].id)].officeAdvocateId
+            - jsonPath: $.advocateOffices[*][?({id} in @.advocates[*].id)].officeAdvocateUserUuid
             - jsonPath: $.advocateOffices[*][?({id} in @.advocates[*].id)].officeAdvocateName
             - jsonPath: $.advocateOffices.*.advocates.*.caseId
             - jsonPath: $.advocateOffices.*.advocates.*.memberId
+            - jsonPath: $.advocateOffices.*.advocates.*.memberUserUuid
             - jsonPath: $.advocateOffices.*.advocates.*.memberType
             - jsonPath: $.advocateOffices.*.advocates.*.memberName
             - jsonPath: $.advocateOffices.*.advocates.*.isActive
@@ -704,15 +714,17 @@ serviceMaps:
             - jsonPath: $.advocateOffices.*.advocates.*.auditDetails.createdTime
             - jsonPath: $.advocateOffices.*.advocates.*.auditDetails.lastModifiedTime
 
-        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_name, case_id, member_id, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time;
+        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_user_uuid, office_advocate_name, case_id, member_id, member_user_uuid, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time, office_advocate_user_uuid = EXCLUDED.office_advocate_user_uuid, member_user_uuid = EXCLUDED.member_user_uuid;
           basePath: advocateOffices.*.clerks.*
           jsonMaps:
             - jsonPath: $.advocateOffices.*.clerks.*.id
             - jsonPath: $.advocateOffices.*.clerks.*.tenantId
             - jsonPath: $.advocateOffices[*][?({id} in @.clerks[*].id)].officeAdvocateId
+            - jsonPath: $.advocateOffices[*][?({id} in @.clerks[*].id)].officeAdvocateUserUuid
             - jsonPath: $.advocateOffices[*][?({id} in @.clerks[*].id)].officeAdvocateName
             - jsonPath: $.advocateOffices.*.clerks.*.caseId
             - jsonPath: $.advocateOffices.*.clerks.*.memberId
+            - jsonPath: $.advocateOffices.*.clerks.*.memberUserUuid
             - jsonPath: $.advocateOffices.*.clerks.*.memberType
             - jsonPath: $.advocateOffices.*.clerks.*.memberName
             - jsonPath: $.advocateOffices.*.clerks.*.isActive
@@ -1026,15 +1038,17 @@ serviceMaps:
       module: CASE
       objecIdJsonPath: $.members.*.id
       queryMaps:
-        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_name, case_id, member_id, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_user_uuid, office_advocate_name, case_id, member_id, member_user_uuid, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: members.*
           jsonMaps:
             - jsonPath: $.members.*.id
             - jsonPath: $.members.*.tenantId
             - jsonPath: $.members.*.officeAdvocateId
+            - jsonPath: $.members.*.officeAdvocateUserUuid
             - jsonPath: $.members.*.officeAdvocateName
             - jsonPath: $.members.*.caseId
             - jsonPath: $.members.*.memberId
+            - jsonPath: $.members.*.memberUserUuid
             - jsonPath: $.members.*.memberType
             - jsonPath: $.members.*.memberName
             - jsonPath: $.members.*.isActive
