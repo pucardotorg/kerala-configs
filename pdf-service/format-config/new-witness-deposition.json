@@ -144,7 +144,7 @@
       "signature": {
         "fontSize": 13,
         "alignment": "right",
-        "margin": [0, 80, 0, 10]
+        "margin": [0, 80, 25, 10]
       }
     }
   }
