@@ -12,7 +12,7 @@ serviceMaps:
       transactionCodeJsonPath: $.addMember.officeAdvocateId
       auditAttributeBasePath: addMember
       queryMaps:
-        - query: INSERT INTO dristi_advocate_office_member(id,tenant_id,office_advocate_user_uuid,office_advocate_id,office_advocate_name,member_type,member_user_uuid,member_id,member_name,member_mobile_number,member_email,access_type,allow_case_create,add_new_cases_automatically,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_advocate_office_member(id,tenant_id,office_advocate_user_uuid,office_advocate_id,office_advocate_name,member_type,member_user_uuid,member_id,member_name,member_mobile_number,member_email,access_type,allow_case_create,add_new_cases_automatically,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (office_advocate_id, member_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time;
           basePath: addMember
           jsonMaps:
             - jsonPath: $.addMember.id
