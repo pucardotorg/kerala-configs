@@ -1,0 +1,83 @@
+{
+  "key": "template-miscellaneous-process-qr",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "coverLetterSelected",
+                "value": {
+                  "path": "$.coverLetterSelected"
+                }
+              },
+              {
+                "variable": "courtComplex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "policeStation",
+                "value": {
+                  "path": "$.policeStation"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "coverLetterText",
+                "value": {
+                  "path": "$.coverLetterText"
+                }
+              },
+              {
+                "variable": "accusedNameAddress",
+                "value": {
+                  "path": "$.accusedNameAddress"
+                },
+                "type": "function",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              },
+              {
+                "variable": "processTitle",
+                "value": {
+                  "path": "$.processTitle"
+                }
+              },
+              {
+                "variable": "processText",
+                "value": {
+                  "path": "$.processText"
+                }
+              },
+              {
+                "variable": "nextHearingDate",
+                "value": {
+                  "path": "$.nextHearingDate"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "key": "template-miscellaneous-process-qr",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  "{{#coverLetterSelected}}",
+                  {
+                    "stack": [
+                      {
+                        "text": "{{courtComplex}}",
+                        "style": "header"
+                      },
+                      {
+                        "text": "Case No: {{caseNumber}}",
+                        "style": "header",
+                        "margin": [0, 5, 0, 0]
+                      },
+                      {
+                        "columns": [
+                          {
+                            "text": [
+                              { "text": "To\n\n", "bold": true },
+
+                              "{{#policeAddresseeSelected}}",
+
+                              { "text": "The SHO\n\n" },
+                              { "text": "{{policeStation}}" },
+
+                              "{{/policeAddresseeSelected}}",
+
+                              "{{#accusedAddresseeSelected}}",
+
+                              { "text": "{{accusedName}}" },
+
+                              "{{/accusedAddresseeSelected}}",
+
+                              "{{#complainantAddresseeSelected}}",
+
+                              { "text": "{{complainantName}}" },
+
+                              "{{/complainantAddresseeSelected}}",
+
+                              "{{#otherAddresseeSelected}}",
+
+                              { "text": "{{otherName}}" },
+
+                              "{{/otherAddresseeSelected}}"
+                            ],
+                            "style": "bodyText"
+                          },
+                          {
+                            "text": "Date: {{date}}",
+                            "style": "date"
+                          }
+                        ]
+                      },
+                      {
+                        "text": "{{coverLetterText}}",
+                        "style": "bodyText"
+                      },
+                      "{{#showAccusedNameAddress}}",
+                      {
+                        "text": "{{accusedNameAddress}}",
+                        "style": "bodyText"
+                      },
+                      "{{/showAccusedNameAddress}}",
+                      {
+                        "text": "Signature of Magistrate",
+                        "style": "judgeSignature",
+                        "margin": [0, 80, 0, 40]
+                      },
+
+                      {
+                        "text": "",
+                        "pageBreak": "after"
+                      }
+                    ]
+                  },
+                  "{{/coverLetterSelected}}",
+
+                  {
+                    "text": "{{courtComplex}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
+                  },
+
+                  {
+                    "text": "{{processTitle}}",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "text": "Date: {{date}}",
+                    "style": "date"
+                  },
+
+                  {
+                    "text": "{{processText}}",
+                    "style": "bodyText"
+                  },
+
+                  {
+                    "text": "Date of Next Hearing: {{nextHearingDate}}",
+                    "style": "bodyText"
+                  },
+                  "{{#showAccusedNameAddress}}",
+                  {
+                    "text": "{{accusedNameAddress}}",
+                    "style": "bodyText"
+                  },
+                  "{{/showAccusedNameAddress}}",
+                  {
+                    "text": "Signature of Magistrate",
+                    "style": "judgeSignature",
+                    "margin": [0, 80, 0, 0]
+                  }
+                ],
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center"
+      },
+      "applicationTitle": {
+        "fontSize": 14,
+        "bold": false,
+        "alignment": "center",
+        "margin": [0, 20, 0, 10]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "right",
+        "bold": true
+      },
+      "subjectText": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "judgeSignature": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 60, 0, 0]
+      }
+    }
+  }
+}
