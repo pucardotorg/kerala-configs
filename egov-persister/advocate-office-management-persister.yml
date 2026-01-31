@@ -1,0 +1,56 @@
+serviceMaps:
+  serviceName: advocate-office-management-service
+  mappings:
+    - version: 1.0
+      description: Persists advocate office member details in tables
+      fromTopic: add-advocate-office-member
+      isTransaction: true
+      isAuditEnabled: true
+      module: ADVOCATE-OFFICE
+      objecIdJsonPath: $.addMember.id
+      tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
+      transactionCodeJsonPath: $.addMember.officeAdvocateId
+      auditAttributeBasePath: addMember
+      queryMaps:
+        - query: INSERT INTO dristi_advocate_office_member(id,tenant_id,office_advocate_user_uuid,office_advocate_id,office_advocate_name,member_type,member_user_uuid,member_id,member_name,member_mobile_number,member_email,access_type,allow_case_create,add_new_cases_automatically,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (office_advocate_id, member_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time;
+          basePath: addMember
+          jsonMaps:
+            - jsonPath: $.addMember.id
+            - jsonPath: $.addMember.tenantId
+            - jsonPath: $.addMember.officeAdvocateUserUuid
+            - jsonPath: $.addMember.officeAdvocateId
+            - jsonPath: $.addMember.officeAdvocateName
+            - jsonPath: $.addMember.memberType
+            - jsonPath: $.addMember.memberUserUuid
+            - jsonPath: $.addMember.memberId
+            - jsonPath: $.addMember.memberName
+            - jsonPath: $.addMember.memberMobileNumber
+            - jsonPath: $.addMember.memberEmail
+            - jsonPath: $.addMember.accessType
+            - jsonPath: $.addMember.allowCaseCreate
+            - jsonPath: $.addMember.addNewCasesAutomatically
+            - jsonPath: $.addMember.isActive
+            - jsonPath: $.addMember.auditDetails.createdBy
+            - jsonPath: $.addMember.auditDetails.lastModifiedBy
+            - jsonPath: $.addMember.auditDetails.createdTime
+            - jsonPath: $.addMember.auditDetails.lastModifiedTime
+
+    - version: 1.0
+      description: Marks advocate office member inactive on leave office
+      fromTopic: leave-advocate-office
+      isTransaction: true
+      isAuditEnabled: true
+      module: ADVOCATE-OFFICE
+      objecIdJsonPath: $.leaveOffice.memberId
+      tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
+      transactionCodeJsonPath: $.leaveOffice.officeAdvocateId
+      auditAttributeBasePath: leaveOffice
+      queryMaps:
+        - query: UPDATE dristi_advocate_office_member SET is_active=?, last_modified_by=?, last_modified_time=? WHERE office_advocate_id=? AND member_id=?;
+          basePath: leaveOffice
+          jsonMaps:
+            - jsonPath: $.leaveOffice.isActive
+            - jsonPath: $.leaveOffice.auditDetails.lastModifiedBy
+            - jsonPath: $.leaveOffice.auditDetails.lastModifiedTime
+            - jsonPath: $.leaveOffice.officeAdvocateId
+            - jsonPath: $.leaveOffice.memberId
