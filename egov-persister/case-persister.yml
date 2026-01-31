@@ -105,7 +105,7 @@ serviceMaps:
             - jsonPath: $.cases.litigants.*.hasSigned
             - jsonPath: $.cases.litigants.*.isResponseRequired
 
-        - query: INSERT INTO public.dristi_case_representatives(id, tenantid, advocateid, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO public.dristi_case_representatives(id, tenantid, advocateid, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned, advocate_filing_status) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: cases.representatives.*
           jsonMaps:
             - jsonPath: $.cases.representatives.*.id
@@ -121,6 +121,7 @@ serviceMaps:
             - jsonPath: $.cases.representatives.*.auditDetails.createdTime
             - jsonPath: $.cases.representatives.*.auditDetails.lastModifiedTime
             - jsonPath: $.cases.representatives.*.hasSigned
+            - jsonPath: $.cases.representatives.*.advocateFilingStatus
 
         - query: INSERT INTO public.dristi_case_representing(id, tenantid, partycategory, individualid, organisationid, case_id, partytype, isactive, representative_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: cases.representatives.*.representing.*
@@ -371,7 +372,7 @@ serviceMaps:
             - jsonPath: $.cases.litigants.*.hasSigned
             - jsonPath: $.cases.litigants.*.isResponseRequired
 
-        - query: INSERT INTO dristi_case_representatives (id, tenantid, advocateid, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, advocateid = EXCLUDED.advocateid, isactive = EXCLUDED.isactive, case_id = EXCLUDED.case_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime, hassigned = EXCLUDED.hassigned;
+        - query: INSERT INTO public.dristi_case_representatives (id, tenantid, advocateid, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned, advocate_filing_status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, advocateid = EXCLUDED.advocateid, isactive = EXCLUDED.isactive, case_id = EXCLUDED.case_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime, hassigned = EXCLUDED.hassigned, advocate_filing_status = EXCLUDED.advocate_filing_status;
           basePath: cases.representatives.*
           jsonMaps:
             - jsonPath: $.cases.representatives.*.id
@@ -387,6 +388,7 @@ serviceMaps:
             - jsonPath: $.cases.representatives.*.auditDetails.createdTime
             - jsonPath: $.cases.representatives.*.auditDetails.lastModifiedTime
             - jsonPath: $.cases.representatives.*.hasSigned
+            - jsonPath: $.cases.representatives.*.advocateFilingStatus
 
         - query: INSERT INTO dristi_case_representing (id, tenantid, partycategory, individualid, organisationid, case_id, partytype, isactive, representative_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET partycategory = EXCLUDED.partycategory, individualid = EXCLUDED.individualid, organisationid = EXCLUDED.organisationid, case_id = EXCLUDED.case_id, partytype = EXCLUDED.partytype, isactive = EXCLUDED.isactive, representative_id = EXCLUDED.representative_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
           basePath: cases.representatives.*.representing.*
@@ -640,7 +642,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: representatives
       queryMaps:
-        - query: INSERT INTO public.dristi_case_representatives(id, tenantid, advocateid, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, advocateid = EXCLUDED.advocateid, isactive = EXCLUDED.isactive, case_id = EXCLUDED.case_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime, hassigned = EXCLUDED.hassigned;
+        - query: INSERT INTO public.dristi_case_representatives(id, tenantid, advocateid, isactive, case_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime, hassigned, advocate_filing_status) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET tenantid = EXCLUDED.tenantid, advocateid = EXCLUDED.advocateid, isactive = EXCLUDED.isactive, case_id = EXCLUDED.case_id, additionaldetails = EXCLUDED.additionaldetails, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime, hassigned = EXCLUDED.hassigned, advocate_filing_status = EXCLUDED.advocate_filing_status;
           basePath: representatives.*
           jsonMaps:
             - jsonPath: $.representatives.*.id
@@ -656,6 +658,7 @@ serviceMaps:
             - jsonPath: $.representatives.*.auditDetails.createdTime
             - jsonPath: $.representatives.*.auditDetails.lastModifiedTime
             - jsonPath: $.representatives.*.hasSigned
+            - jsonPath: $.representatives.*.advocateFilingStatus
         - query: INSERT INTO public.dristi_case_representing(id, tenantid, partycategory, individualid, organisationid, case_id, partytype, isactive, representative_id, additionaldetails, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (id) DO UPDATE SET lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
           basePath: representatives.*.representing.*
           jsonMaps:
