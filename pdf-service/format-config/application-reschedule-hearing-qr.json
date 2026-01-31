@@ -135,7 +135,7 @@
                         "text": "advance/reschedule the hearing date,",
                         "bold": true
                       },
-                      " currently scheduled for the purpose of Cognizance on ",
+                      " currently scheduled for the purpose of {{purposeOfHearing}} on ",
                       {
                         "text": "{{initialHearingDate}}",
                         "bold": true
