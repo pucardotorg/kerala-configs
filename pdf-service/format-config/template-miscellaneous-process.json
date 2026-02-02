@@ -24,35 +24,8 @@
                       {
                         "columns": [
                           {
-                            "text": [
-                              { "text": "To\n\n", "bold": true },
-
-                              "{{#policeAddresseeSelected}}",
-
-                              { "text": "The SHO\n\n" },
-                              { "text": "{{policeStation}}" },
-
-                              "{{/policeAddresseeSelected}}",
-
-                              "{{#accusedAddresseeSelected}}",
-
-                              { "text": "{{accusedName}}" },
-
-                              "{{/accusedAddresseeSelected}}",
-
-                              "{{#complainantAddresseeSelected}}",
-
-                              { "text": "{{complainantName}}" },
-
-                              "{{/complainantAddresseeSelected}}",
-
-                              "{{#otherAddresseeSelected}}",
-
-                              { "text": "{{otherName}}" },
-
-                              "{{/otherAddresseeSelected}}"
-                            ],
-                            "style": "bodyText"
+                            "text": "To",
+                            "style": "bodyTextBold"
                           },
                           {
                             "text": "Date: {{date}}",
@@ -60,10 +33,22 @@
                           }
                         ]
                       },
+                      "{{#policeAddresseeSelected}}",
+                      {
+                        "text": "The SHO",
+                        "style": "bodyText"
+                      },
+                      "{{/policeAddresseeSelected}}",
+
+                      {
+                        "text": "{{addresseeDetails}}",
+                        "style": "bodyText"
+                      },
                       {
                         "text": "{{coverLetterText}}",
                         "style": "bodyText"
                       },
+                      "{{#showAccusedNameAddress}}",
                       "{{#accusedNameAddress}}",
                       {
                         "stack": [
@@ -79,6 +64,7 @@
                         "margin": [0, 5, 0, 5]
                       },
                       "{{/accusedNameAddress}}",
+                      "{{/showAccusedNameAddress}}",
                       {
                         "text": "Signature of Magistrate",
                         "style": "judgeSignature",
@@ -121,6 +107,7 @@
                     "text": "Date of Next Hearing: {{nextHearingDate}}",
                     "style": "bodyText"
                   },
+                  "{{#showAccusedNameAddress}}",
                   "{{#accusedNameAddress}}",
                   {
                     "stack": [
@@ -136,6 +123,7 @@
                     "margin": [0, 5, 0, 5]
                   },
                   "{{/accusedNameAddress}}",
+                  "{{/showAccusedNameAddress}}",
                   {
                     "text": "Signature of Magistrate",
                     "style": "judgeSignature",
@@ -163,9 +151,10 @@
         "margin": [0, 20, 0, 10]
       },
       "date": {
-        "fontSize": 12,
+        "fontSize": 11,
         "alignment": "right",
-        "bold": true
+        "bold": true,
+        "margin": [0, 10, 0, 10]
       },
       "subjectText": {
         "fontSize": 12,
@@ -174,6 +163,11 @@
       },
       "bodyText": {
         "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyTextBold": {
+        "fontSize": 11,
+        "bold": true,
         "margin": [0, 10, 0, 10]
       },
       "judgeSignature": {

@@ -31,9 +31,15 @@
                 }
               },
               {
-                "variable": "policeStation",
+                "variable": "policeAddresseeSelected",
                 "value": {
-                  "path": "$.policeStation"
+                  "path": "$.policeAddresseeSelected"
+                }
+              },
+              {
+                "variable": "addresseeDetails",
+                "value": {
+                  "path": "$.addresseeDetails"
                 }
               },
               {
@@ -46,6 +52,12 @@
                 "variable": "coverLetterText",
                 "value": {
                   "path": "$.coverLetterText"
+                }
+              },
+              {
+                "variable": "showAccusedNameAddress",
+                "value": {
+                  "path": "$.showAccusedNameAddress"
                 }
               },
               {

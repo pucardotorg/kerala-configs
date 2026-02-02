@@ -37,45 +37,9 @@
                 }
               },
               {
-                "variable": "accusedAddresseeSelected",
+                "variable": "addresseeDetails",
                 "value": {
-                  "path": "$.accusedAddresseeSelected"
-                }
-              },
-              {
-                "variable": "complainantAddresseeSelected",
-                "value": {
-                  "path": "$.complainantAddresseeSelected"
-                }
-              },
-              {
-                "variable": "otherAddresseeSelected",
-                "value": {
-                  "path": "$.otherAddresseeSelected"
-                }
-              },
-              {
-                "variable": "policeStation",
-                "value": {
-                  "path": "$.policeStation"
-                }
-              },
-              {
-                "variable": "accusedName",
-                "value": {
-                  "path": "$.accusedName"
-                }
-              },
-              {
-                "variable": "complainantName",
-                "value": {
-                  "path": "$.complainantName"
-                }
-              },
-              {
-                "variable": "otherName",
-                "value": {
-                  "path": "$.otherName"
+                  "path": "$.addresseeDetails"
                 }
               },
               {
