@@ -16,11 +16,13 @@
                         "text": "{{courtComplex}}",
                         "style": "header"
                       },
+                      "{{#caseNumber}}",
                       {
                         "text": "Case No: {{caseNumber}}",
                         "style": "header",
                         "margin": [0, 5, 0, 0]
                       },
+                      "{{/caseNumber}}",
                       {
                         "columns": [
                           {
@@ -42,7 +44,7 @@
 
                       {
                         "text": "{{addresseeDetails}}",
-                        "style": "bodyText"
+                        "style": "addresseeDetail"
                       },
                       {
                         "stack": "{{{coverLetterText}}}",
@@ -169,6 +171,10 @@
         "fontSize": 11,
         "bold": true,
         "margin": [0, 10, 0, 10]
+      },
+      "addreseeDetail": {
+        "fontSize": 11,
+        "margin": [0, 5, 0, 5]
       },
       "judgeSignature": {
         "fontSize": 12,
