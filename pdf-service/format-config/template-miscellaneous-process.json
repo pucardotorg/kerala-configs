@@ -45,7 +45,7 @@
                         "style": "bodyText"
                       },
                       {
-                        "text": "{{coverLetterText}}",
+                        "stack": "{{{coverLetterText}}}",
                         "style": "bodyText"
                       },
                       "{{#showAccusedNameAddress}}",
@@ -99,7 +99,7 @@
                   },
 
                   {
-                    "text": "{{processText}}",
+                    "stack": "{{{processText}}}",
                     "style": "bodyText"
                   },
 
