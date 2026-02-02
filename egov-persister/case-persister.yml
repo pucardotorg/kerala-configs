@@ -1041,7 +1041,7 @@ serviceMaps:
       module: CASE
       objecIdJsonPath: $.members.*.id
       queryMaps:
-        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_user_uuid, office_advocate_name, case_id, member_id, member_user_uuid, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET tenant_id = EXCLUDED.tenant_id, office_advocate_id = EXCLUDED.office_advocate_id, office_advocate_user_uuid = EXCLUDED.office_advocate_user_uuid, office_advocate_name = EXCLUDED.office_advocate_name, member_id = EXCLUDED.member_id, member_user_uuid = EXCLUDED.member_user_uuid, member_type = EXCLUDED.member_type, member_name = EXCLUDED.member_name, is_active = EXCLUDED.is_active, created_by = EXCLUDED.created_by, last_modified_by = EXCLUDED.last_modified_by, created_time = EXCLUDED.created_time, last_modified_time = EXCLUDED.last_modified_time;
+        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_user_uuid, office_advocate_name, case_id, member_id, member_user_uuid, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time;
           basePath: members.*
           jsonMaps:
             - jsonPath: $.members.*.id
