@@ -1,0 +1,182 @@
+{
+  "key": "template-miscellaneous-process",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  "{{#coverLetterSelected}}",
+                  {
+                    "stack": [
+                      {
+                        "text": "{{courtComplex}}",
+                        "style": "header"
+                      },
+                      "{{#caseNumber}}",
+                      {
+                        "text": "Case No: {{caseNumber}}",
+                        "style": "header",
+                        "margin": [0, 5, 0, 0]
+                      },
+                      "{{/caseNumber}}",
+                      "{{^caseNumber}}",
+                      {
+                        "text": "",
+                        "margin": [0, 5, 0, 0]
+                      },
+                      "{{/caseNumber}}",
+                      {
+                        "columns": [
+                          {
+                            "text": "To",
+                            "style": "bodyTextBold"
+                          },
+                          {
+                            "text": "Date: {{date}}",
+                            "style": "date"
+                          }
+                        ]
+                      },
+                      "{{#policeAddresseeSelected}}",
+                      {
+                        "text": "The District Police Chief",
+                        "style": "bodyText"
+                      },
+                      "{{/policeAddresseeSelected}}",
+
+                      {
+                        "text": "{{addresseeDetails}}",
+                        "style": "addresseeDetail"
+                      },
+                      {
+                        "stack": "{{{coverLetterText}}}",
+                        "style": "bodyText"
+                      },
+                      {
+                        "text": "Judicial Magistrate of First Class",
+                        "style": "judgeSignature",
+                        "margin": [0, 80, 0, 40]
+                      },
+
+                      {
+                        "text": "",
+                        "pageBreak": "after"
+                      }
+                    ]
+                  },
+                  "{{/coverLetterSelected}}",
+
+                  {
+                    "text": "{{courtComplex}}",
+                    "style": "header"
+                  },
+                  "{{#caseNumber}}",
+                  {
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
+                  },
+                  "{{/caseNumber}}",
+                  "{{^caseNumber}}",
+                  {
+                    "text": "",
+                    "margin": [0, 5, 0, 0]
+                  },
+                  "{{/caseNumber}}",
+                  {
+                    "text": "{{processTitle}}",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "text": "Date: {{date}}",
+                    "style": "date"
+                  },
+
+                  {
+                    "stack": "{{{processText}}}",
+                    "style": "bodyText"
+                  },
+
+                  {
+                    "text": "Date of Next Hearing: {{nextHearingDate}}",
+                    "style": "bodyText"
+                  },
+                  "{{#showAccusedNameAddress}}",
+                  "{{#accusedNameAddress}}",
+                  {
+                    "stack": [
+                      {
+                        "text": "{{name}}",
+                        "bold": true
+                      },
+                      {
+                        "text": "{{formattedAddress}}"
+                      }
+                    ],
+                    "style": "bodyText",
+                    "margin": [0, 5, 0, 5]
+                  },
+                  "{{/accusedNameAddress}}",
+                  "{{/showAccusedNameAddress}}",
+                  {
+                    "text": "Judicial Magistrate of First Class",
+                    "style": "judgeSignature",
+                    "margin": [0, 80, 0, 0]
+                  }
+                ],
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center"
+      },
+      "applicationTitle": {
+        "fontSize": 14,
+        "bold": false,
+        "alignment": "center",
+        "margin": [0, 20, 0, 10]
+      },
+      "date": {
+        "fontSize": 11,
+        "alignment": "right",
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "subjectText": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyTextBold": {
+        "fontSize": 11,
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "addreseeDetail": {
+        "fontSize": 11,
+        "margin": [0, 5, 0, 5]
+      },
+      "judgeSignature": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 60, 0, 0]
+      }
+    }
+  }
+}
