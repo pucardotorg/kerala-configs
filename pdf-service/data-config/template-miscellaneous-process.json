@@ -49,6 +49,12 @@
                 }
               },
               {
+                "variable": "nbwDate",
+                "value": {
+                  "path": "$.nbwDate"
+                }
+              },
+              {
                 "variable": "coverLetterText",
                 "value": {
                   "path": "$.coverLetterText"
