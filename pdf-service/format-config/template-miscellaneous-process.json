@@ -184,15 +184,14 @@
                   {
                     "stack": [
                       {
-                        "text": "Name and Address",
+                        "text": "Name and Address: ",
                         "style": "bodyTextBold"
                       },
                       "{{#accusedNameAddress}}",
                       {
                         "stack": [
                           {
-                            "text": "{{name}}",
-                            "bold": true
+                            "text": "{{name}}"
                           },
                           {
                             "text": "{{formattedAddress}}"
