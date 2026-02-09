@@ -44,7 +44,7 @@
                       "{{#policeAddresseeSelected}}",
                       {
                         "text": "The District Police Chief",
-                        "style": "bodyText"
+                        "style": "addresseeDetail"
                       },
                       "{{/policeAddresseeSelected}}",
 
@@ -64,7 +64,11 @@
                           },
                           "{{#policeAddresseeSelected}}",
                           {
-                            "text": ", NBW Dated: ",
+                            "text": ", ",
+                            "style": "bodyText"
+                          },
+                          {
+                            "text": "NBW Dated: ",
                             "style": "bodyTextBold"
                           },
                           {
@@ -150,7 +154,11 @@
                       },
                       "{{#policeAddresseeSelected}}",
                       {
-                        "text": ", NBW Dated: ",
+                        "text": ", ",
+                        "style": "bodyText"
+                      },
+                      {
+                        "text": "NBW Dated: ",
                         "style": "bodyTextBold"
                       },
                       {
