@@ -134,7 +134,7 @@
                   "{{#policeAddresseeSelected}}",
                   {
                     "text": "The District Police Chief",
-                    "style": "bodyText"
+                    "style": "addresseeDetail"
                   },
                   "{{/policeAddresseeSelected}}",
 
