@@ -53,8 +53,31 @@
                         "style": "addresseeDetail"
                       },
                       {
-                        "stack": "{{{coverLetterText}}}",
+                        "text": [
+                          {
+                            "text": "Ref: ",
+                            "style": "bodyTextBold"
+                          },
+                          {
+                            "text": "{{caseNumber}}",
+                            "style": "bodyText"
+                          },
+                          "{{#policeAddresseeSelected}}",
+                          {
+                            "text": ", NBW Dated: ",
+                            "style": "bodyTextBold"
+                          },
+                          {
+                            "text": "{{nbwDate}}",
+                            "style": "bodyText"
+                          },
+                          "{{/policeAddresseeSelected}}"
+                        ],
                         "style": "bodyText"
+                      },
+                      {
+                        "stack": "{{{coverLetterText}}}",
+                        "style": "bodyTextLeft"
                       },
                       {
                         "text": "Judicial Magistrate of First Class",
@@ -92,13 +115,55 @@
                     "style": "applicationTitle"
                   },
                   {
-                    "text": "Date: {{date}}",
-                    "style": "date"
+                    "columns": [
+                      {
+                        "text": "To",
+                        "style": "bodyTextBold"
+                      },
+                      {
+                        "text": "Date: {{date}}",
+                        "style": "date"
+                      }
+                    ]
+                  },
+                  "{{#policeAddresseeSelected}}",
+                  {
+                    "text": "The District Police Chief",
+                    "style": "bodyText"
+                  },
+                  "{{/policeAddresseeSelected}}",
+
+                  {
+                    "text": "{{addresseeDetails}}",
+                    "style": "addresseeDetail"
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Ref: ",
+                        "style": "bodyTextBold"
+                      },
+                      {
+                        "text": "{{caseNumber}}",
+                        "style": "bodyText"
+                      },
+                      "{{#policeAddresseeSelected}}",
+                      {
+                        "text": ", NBW Dated: ",
+                        "style": "bodyTextBold"
+                      },
+                      {
+                        "text": "{{nbwDate}}",
+                        "style": "bodyText"
+                      },
+                      "{{/policeAddresseeSelected}}"
+                    ],
+                    "style": "bodyText"
                   },
 
                   {
                     "stack": "{{{processText}}}",
-                    "style": "bodyText"
+                    "style": "bodyTextLeft"
                   },
 
                   {
@@ -166,7 +231,13 @@
       "bodyTextBold": {
         "fontSize": 11,
         "bold": true,
-        "margin": [0, 10, 0, 10]
+        "margin": [0, 10, 0, 10],
+        "alignment": "left"
+      },
+      "bodyTextLeft": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10],
+        "alignment": "left"
       },
       "addreseeDetail": {
         "fontSize": 11,
