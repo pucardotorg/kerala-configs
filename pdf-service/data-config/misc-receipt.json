@@ -1,7 +1,8 @@
 {
     "key": "misc-receipt",
     "DataConfigs": {
-        "version": "1.0.0",
+      "serviceName": "rainmaker-common",
+      "version": "1.0.0",
       "baseKeyPath": "$.Payments.*",
       "entityIdPath":"$.paymentDetails[0].receiptNumber",
       "isCommonTableBorderRequired": true,
