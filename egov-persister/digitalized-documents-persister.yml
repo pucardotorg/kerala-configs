@@ -12,7 +12,7 @@ serviceMaps:
       transactionCodeJsonPath: $.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
       queryMaps:
-        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, order_number,order_item_id, mediation_details, additional_details, status, documents, tenant_id, court_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, order_number,order_item_id, mediation_details,shortened_url, additional_details, status, documents, tenant_id, court_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: digitalizedDocument
           jsonMaps:
             - jsonPath: $.digitalizedDocument.id
@@ -25,6 +25,7 @@ serviceMaps:
             - jsonPath: $.digitalizedDocument.mediationDetails
               type: JSON
               dbType: JSONB
+            - jsonPath: $.digitalizedDocument.shortenedUrl
             - jsonPath: $.digitalizedDocument.additionalDetails
               type: JSON
               dbType: JSONB
@@ -50,7 +51,7 @@ serviceMaps:
       transactionCodeJsonPath: $.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
       queryMaps:
-        - query: UPDATE digitalized_document SET order_item_id=?, mediation_details=?, additional_details=?, status=?, documents=?, last_modified_by=?, last_modified_time=? WHERE id=?;
+        - query: UPDATE digitalized_document SET order_item_id=?, mediation_details=?, additional_details=?, status=?, documents=?, shortened_url=?, last_modified_by=?, last_modified_time=? WHERE id=?;
           basePath: digitalizedDocument
           jsonMaps:
             - jsonPath: $.digitalizedDocument.orderItemId
@@ -64,6 +65,7 @@ serviceMaps:
             - jsonPath: $.digitalizedDocument.documents
               type: JSON
               dbType: JSONB
+            - jsonPath: $.digitalizedDocument.shortenedUrl
             - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedBy
             - jsonPath: $.digitalizedDocument.auditDetails.lastModifiedTime
             - jsonPath: $.digitalizedDocument.id
