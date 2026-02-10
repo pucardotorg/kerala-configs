@@ -1,7 +1,7 @@
 {
   "key": "witness-deposition",
   "DataConfigs": {
-    "serviceName": "rainmaker-bpa",
+    "serviceName": "pdf-service",
     "version": "1.0.0",
     "baseKeyPath": "$.WitnessDepositions.*",
     "entityIdPath": "$.hearingId",
