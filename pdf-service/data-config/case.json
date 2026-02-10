@@ -1,6 +1,7 @@
 {
   "key": "case",
   "DataConfigs": {
+    "serviceName": "rainmaker-bpa",
     "version": "1.0.0",
     "baseKeyPath": "$.caseDetails",
     "entityIdPath": "$.id",

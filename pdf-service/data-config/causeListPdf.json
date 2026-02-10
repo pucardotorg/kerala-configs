@@ -1,6 +1,7 @@
 {
   "key": "causelist-format",
   "DataConfigs": {
+    "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$.HearingList",
     "entityIdPath": "$.*.slotName",

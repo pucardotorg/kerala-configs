@@ -1,6 +1,7 @@
 {
   "key": "consolidatedreceipt",
   "DataConfigs": {
+    "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$.Payments.*",
     "entityIdPath":"$.paymentDetails[0].receiptNumber",
