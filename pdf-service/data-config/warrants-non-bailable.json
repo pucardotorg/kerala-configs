@@ -1,7 +1,7 @@
 {
   "key": "warrants-non-bailable",
   "DataConfigs": {
-    "serviceName": "rainmaker-common",
+    "serviceName": "pdf-service",
     "version": "1.0.0",
     "baseKeyPath": "$.summonsPdf",
     "entityIdPath": "$.cnrNumber",
