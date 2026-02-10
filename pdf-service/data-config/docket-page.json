@@ -1,7 +1,8 @@
 {
     "key": "docket-page",
     "DataConfigs": {
-        "version": "1.0.0",
+      "serviceName": "rainmaker-common",
+      "version": "1.0.0",
       "baseKeyPath": "$.Data.*",
       "entityIdPath": "$.id",
       "isCommonTableBorderRequired": true,

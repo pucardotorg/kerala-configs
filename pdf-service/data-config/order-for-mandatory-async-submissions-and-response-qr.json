@@ -1,6 +1,7 @@
 {
   "key": "order-for-mandatory-async-submissions-and-response-qr",
   "DataConfigs": {
+    "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$.Data.*",
     "entityIdPath": "$.id",

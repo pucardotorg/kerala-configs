@@ -1,6 +1,7 @@
 {
   "key": "application-profile-edit",
   "DataConfigs": {
+    "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$.Data.*",
     "entityIdPath": "$.id",

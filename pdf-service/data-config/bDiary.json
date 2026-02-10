@@ -1,6 +1,7 @@
 {
   "key": "bDiary-format",
   "DataConfigs": {
+    "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$",
     "entityIdPath": "$.*.id",
