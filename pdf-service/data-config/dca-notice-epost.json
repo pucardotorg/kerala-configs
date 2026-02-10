@@ -1,7 +1,6 @@
 {
   "key": "dca-notice-e-post",
   "DataConfigs": {
-    "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$.summonsPdf",
     "entityIdPath": "$.cmpNumber",
