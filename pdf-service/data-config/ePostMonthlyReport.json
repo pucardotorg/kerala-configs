@@ -1,7 +1,6 @@
 {
   "key": "ePostMonthlyReport",
   "DataConfigs": {
-    "serviceName": "rainmaker-common",
     "version": "1.0.0",
     "baseKeyPath": "$.ePostTrackerPdf",
     "entityIdPath": "$.courtName",
