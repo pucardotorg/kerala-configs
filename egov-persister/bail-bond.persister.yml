@@ -12,7 +12,7 @@ serviceMaps:
       transactionCodeJsonPath: $.caseId
       auditAttributeBasePath: bail
       queryMaps:
-        - query: INSERT INTO dristi_bail(id,tenant_id,case_id,bail_type,bail_amount,bail_status,court_id,case_title,case_number,cnr_number,filing_number,case_type,litigant_id,litigant_name,litigant_father_name,litigant_signed,litigant_mobile_number,shortened_url,bail_id,additional_details,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
+        - query: INSERT INTO dristi_bail(id,tenant_id,case_id,bail_type,bail_amount,bail_status,court_id,case_title,case_number,cnr_number,filing_number,case_type,litigant_id,litigant_name,litigant_father_name,litigant_signed,litigant_mobile_number,shortened_url,bail_id,as_user,additional_details,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);
           basePath: bail
           jsonMaps:
             - jsonPath: $.bail.id
@@ -34,6 +34,7 @@ serviceMaps:
             - jsonPath: $.bail.litigantMobileNumber
             - jsonPath: $.bail.shortenedURL
             - jsonPath: $.bail.bailId
+            - jsonPath: $.bail.asUser
             - jsonPath: $.bail.additionalDetails
               type: JSON
               dbType: JSONB
@@ -120,7 +121,7 @@ serviceMaps:
       transactionCodeJsonPath: $.caseId
       auditAttributeBasePath: bail
       queryMaps:
-        - query: UPDATE dristi_bail SET tenant_id=?,case_id=?,bail_type=?,bail_amount=?,bail_status=?,court_id=?,case_title=?,case_number=?,cnr_number=?,filing_number=?,case_type=?,litigant_id=?,litigant_name=?,litigant_father_name=?,litigant_signed=?,litigant_mobile_number=?,shortened_url=?,additional_details=?,is_active=?,created_by=?,last_modified_by=?,created_time=?,last_modified_time=? WHERE bail_id=?;
+        - query: UPDATE dristi_bail SET tenant_id=?,case_id=?,bail_type=?,bail_amount=?,bail_status=?,court_id=?,case_title=?,case_number=?,cnr_number=?,filing_number=?,case_type=?,litigant_id=?,litigant_name=?,litigant_father_name=?,litigant_signed=?,litigant_mobile_number=?,shortened_url=?,as_user=?,additional_details=?,is_active=?,created_by=?,last_modified_by=?,created_time=?,last_modified_time=? WHERE bail_id=?;
           basePath: bail
           jsonMaps:
             - jsonPath: $.bail.tenantId
@@ -140,6 +141,7 @@ serviceMaps:
             - jsonPath: $.bail.litigantSigned
             - jsonPath: $.bail.litigantMobileNumber
             - jsonPath: $.bail.shortenedURL
+            - jsonPath: $.bail.asUser
             - jsonPath: $.bail.additionalDetails
               type: JSON
               dbType: JSONB
