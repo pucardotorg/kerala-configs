@@ -133,7 +133,7 @@
                   },
                   "{{#policeAddresseeSelected}}",
                   {
-                    "text": "The District Police Chief",
+                    "text": "The SHO",
                     "style": "addresseeDetail"
                   },
                   "{{/policeAddresseeSelected}}",
