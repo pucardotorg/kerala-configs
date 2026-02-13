@@ -43,6 +43,12 @@
                 }
               },
               {
+                "variable": "addresseeDetailsDistrict",
+                "value": {
+                  "path": "$.addresseeDetailsDistrict"
+                }
+              },
+              {
                 "variable": "date",
                 "value": {
                   "path": "$.date"
