@@ -109,12 +109,6 @@
                     "margin": [0, 5, 0, 0]
                   },
                   "{{/caseNumber}}",
-                  "{{^caseNumber}}",
-                  {
-                    "text": "",
-                    "margin": [0, 5, 0, 0]
-                  },
-                  "{{/caseNumber}}",
                   {
                     "text": "{{processTitle}}",
                     "style": "applicationTitle"
@@ -173,7 +167,7 @@
 
                   {
                     "stack": "{{{processText}}}",
-                    "style": "bodyTextLeft"
+                    "style": "bodyTextBold"
                   },
 
                   {
