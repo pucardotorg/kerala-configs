@@ -60,6 +60,8 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.documents
               - inJsonPath: $.workflow
                 outJsonPath: $.Data.applicationDetails.workflow
+              - inJsonPath: $.asUser
+                outJsonPath: $.Data.applicationDetails.asUser
               - inJsonPath: $.auditDetails
                 outJsonPath: $.Data.auditDetails
             externalUriMapping:
@@ -134,6 +136,8 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.documents
               - inJsonPath: $.workflow
                 outJsonPath: $.Data.applicationDetails.workflow
+              - inJsonPath: $.asUser
+                outJsonPath: $.Data.applicationDetails.asUser
               - inJsonPath: $.auditDetails
                 outJsonPath: $.Data.auditDetails
             externalUriMapping:
@@ -202,6 +206,8 @@ ServiceMaps:
                 outJsonPath: $.Data.applicationDetails.documents
               - inJsonPath: $.workflow
                 outJsonPath: $.Data.applicationDetails.workflow
+              - inJsonPath: $.asUser
+                outJsonPath: $.Data.applicationDetails.asUser
               - inJsonPath: $.auditDetails
                 outJsonPath: $.Data.auditDetails
               - inJsonPath: $.orderDetails
