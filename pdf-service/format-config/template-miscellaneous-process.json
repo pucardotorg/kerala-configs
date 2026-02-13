@@ -46,12 +46,17 @@
                         "text": "The District Police Chief",
                         "style": "addresseeDetail"
                       },
+                      {
+                        "text": "{{addresseeDetailsDistrict}}",
+                        "style": "addresseeDetail"
+                      },
                       "{{/policeAddresseeSelected}}",
-
+                      "{{^policeAddresseeSelected}}",
                       {
                         "text": "{{addresseeDetails}}",
                         "style": "addresseeDetail"
                       },
+                      "{{/policeAddresseeSelected}}",
                       {
                         "text": [
                           {
@@ -167,7 +172,7 @@
 
                   {
                     "stack": "{{{processText}}}",
-                    "style": "bodyTextBold"
+                    "style": "bodyTextLeft"
                   },
 
                   {
@@ -220,7 +225,7 @@
       },
       "applicationTitle": {
         "fontSize": 14,
-        "bold": false,
+        "bold": true,
         "alignment": "center",
         "margin": [0, 20, 0, 10]
       },
