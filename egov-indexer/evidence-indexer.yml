@@ -60,6 +60,8 @@ ServiceMaps:
                 outJsonPath: $.Data.artifactDetails.comments
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.artifactDetails.additionalDetails
+              - inJsonPath: $.asUser
+                outJsonPath: $.Data.artifactDetails.asUser
               - inJsonPath: $.auditdetails
                 outJsonPath: $.Data.auditDetails
             externalUriMapping:
@@ -132,6 +134,8 @@ ServiceMaps:
                 outJsonPath: $.Data.artifactDetails.comments
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.artifactDetails.additionalDetails
+              - inJsonPath: $.asUser
+                outJsonPath: $.Data.artifactDetails.asUser
               - inJsonPath: $.auditdetails
                 outJsonPath: $.Data.auditDetails
             externalUriMapping:
