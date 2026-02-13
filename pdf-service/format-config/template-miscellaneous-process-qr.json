@@ -46,12 +46,17 @@
                         "text": "The District Police Chief",
                         "style": "addresseeDetail"
                       },
+                      {
+                        "text": "{{addresseeDetailsDistrict}}",
+                        "style": "addresseeDetail"
+                      },
                       "{{/policeAddresseeSelected}}",
-
+                      "{{^policeAddresseeSelected}}",
                       {
                         "text": "{{addresseeDetails}}",
                         "style": "addresseeDetail"
                       },
+                      "{{/policeAddresseeSelected}}",
                       {
                         "text": [
                           {
@@ -106,12 +111,6 @@
                   {
                     "text": "Case No: {{caseNumber}}",
                     "style": "header",
-                    "margin": [0, 5, 0, 0]
-                  },
-                  "{{/caseNumber}}",
-                  "{{^caseNumber}}",
-                  {
-                    "text": "",
                     "margin": [0, 5, 0, 0]
                   },
                   "{{/caseNumber}}",
@@ -226,7 +225,7 @@
       },
       "applicationTitle": {
         "fontSize": 14,
-        "bold": false,
+        "bold": true,
         "alignment": "center",
         "margin": [0, 20, 0, 10]
       },
