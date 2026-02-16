@@ -112,6 +112,12 @@
                 "value": {
                   "path": "$.partyName"
                 }
+              },
+              {
+                "variable": "allPartiesAgreed",
+                "value": {
+                  "path": "$.allPartiesAgreed"
+                }
               }
             ]
           }
