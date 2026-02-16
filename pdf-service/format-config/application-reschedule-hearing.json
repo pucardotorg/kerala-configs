@@ -157,9 +157,9 @@
                         "text": "{{proposedHearingDate}}",
                         "bold": true
                       },
-                     " {{#allParitesAgreed}}",
+                     " {{#allPartiesAgreed}}",
                       ". Other parties in the case have also agreed to this petition and the aforementioned dates.",
-                      "{{/allParitesAgreed}}"
+                      "{{/allPartiesAgreed}}"
                     ],
                     "style": "bodyText"
                   },

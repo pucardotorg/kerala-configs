@@ -108,9 +108,9 @@
                 }
               },
               {
-                "variable": "allParitesAgreed",
+                "variable": "allPartiesAgreed",
                 "value": {
-                  "path": "$.allParitesAgreed"
+                  "path": "$.allPartiesAgreed"
                 }
               }
             ]
