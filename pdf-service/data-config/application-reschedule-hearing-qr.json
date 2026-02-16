@@ -112,6 +112,12 @@
                 "value": {
                   "path": "$.partyName"
                 }
+              },
+              {
+                "variable": "allParitesAggred",
+                "value": {
+                  "path": "$.allParitesAggred"
+                }
               }
             ]
           }
