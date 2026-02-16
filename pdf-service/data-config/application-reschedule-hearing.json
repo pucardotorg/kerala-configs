@@ -113,9 +113,9 @@
                 }
               },
               {
-                "variable": "allParitesAggred",
+                "variable": "allParitesAgreed",
                 "value": {
-                  "path": "$.allParitesAggred"
+                  "path": "$.allParitesAgreed"
                 }
               }
             ]
