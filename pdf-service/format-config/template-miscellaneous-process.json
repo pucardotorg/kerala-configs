@@ -1,0 +1,269 @@
+{
+  "key": "template-miscellaneous-process",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  "{{#coverLetterSelected}}",
+                  {
+                    "stack": [
+                      {
+                        "text": "{{courtComplex}}",
+                        "style": "header"
+                      },
+                      "{{#caseNumber}}",
+                      {
+                        "text": "Case No: {{caseNumber}}",
+                        "style": "header",
+                        "margin": [0, 5, 0, 0]
+                      },
+                      "{{/caseNumber}}",
+                      "{{^caseNumber}}",
+                      {
+                        "text": "",
+                        "margin": [0, 5, 0, 0]
+                      },
+                      "{{/caseNumber}}",
+                      {
+                        "columns": [
+                          {
+                            "text": "To",
+                            "style": "bodyTextBold"
+                          },
+                          {
+                            "text": "Date: {{date}}",
+                            "style": "date"
+                          }
+                        ]
+                      },
+                      "{{#policeAddresseeSelected}}",
+                      {
+                        "text": "The District Police Chief",
+                        "style": "addresseeDetail"
+                      },
+                      {
+                        "text": "{{addresseeDetailsDistrict}}",
+                        "style": "addresseeDetail"
+                      },
+                      "{{/policeAddresseeSelected}}",
+                      "{{^policeAddresseeSelected}}",
+                      {
+                        "text": "{{addresseeDetails}}",
+                        "style": "addresseeDetail"
+                      },
+                      "{{/policeAddresseeSelected}}",
+                      {
+                        "text": [
+                          {
+                            "text": "Ref: ",
+                            "style": "bodyTextBold"
+                          },
+                          {
+                            "text": "{{caseNumber}}",
+                            "style": "bodyText"
+                          },
+                          "{{#policeAddresseeSelected}}",
+                          {
+                            "text": ", ",
+                            "style": "bodyText"
+                          },
+                          {
+                            "text": "NBW Dated: ",
+                            "style": "bodyTextBold"
+                          },
+                          {
+                            "text": "{{nbwDate}}",
+                            "style": "bodyText"
+                          },
+                          "{{/policeAddresseeSelected}}"
+                        ],
+                        "style": "bodyText",
+                        "margin": [0, 10, 0, 0]
+                      },
+                      {
+                        "stack": "{{{coverLetterText}}}",
+                        "style": "bodyTextLeft"
+                      },
+                      {
+                        "text": "Judicial Magistrate of First Class",
+                        "style": "judgeSignature",
+                        "margin": [0, 80, 0, 40]
+                      },
+
+                      {
+                        "text": "",
+                        "pageBreak": "after"
+                      }
+                    ]
+                  },
+                  "{{/coverLetterSelected}}",
+
+                  {
+                    "text": "{{courtComplex}}",
+                    "style": "header"
+                  },
+                  "{{#caseNumber}}",
+                  {
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
+                  },
+                  "{{/caseNumber}}",
+                  {
+                    "text": "{{processTitle}}",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "columns": [
+                      {
+                        "text": "To",
+                        "style": "bodyTextBold"
+                      },
+                      {
+                        "text": "Date: {{date}}",
+                        "style": "date"
+                      }
+                    ]
+                  },
+                  "{{#policeAddresseeSelected}}",
+                  {
+                    "text": "The SHO",
+                    "style": "addresseeDetail"
+                  },
+                  "{{/policeAddresseeSelected}}",
+
+                  {
+                    "text": "{{addresseeDetails}}",
+                    "style": "addresseeDetail"
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Ref: ",
+                        "style": "bodyTextBold"
+                      },
+                      {
+                        "text": "{{caseNumber}}",
+                        "style": "bodyText"
+                      },
+                      "{{#policeAddresseeSelected}}",
+                      {
+                        "text": ", ",
+                        "style": "bodyText"
+                      },
+                      {
+                        "text": "NBW Dated: ",
+                        "style": "bodyTextBold"
+                      },
+                      {
+                        "text": "{{nbwDate}}",
+                        "style": "bodyText"
+                      },
+                      "{{/policeAddresseeSelected}}"
+                    ],
+                    "style": "bodyText",
+                    "margin": [0, 10, 0, 0]
+                  },
+
+                  {
+                    "stack": "{{{processText}}}",
+                    "style": "bodyTextLeft"
+                  },
+
+                  {
+                    "text": "Date of Next Hearing: {{nextHearingDate}}",
+                    "style": "bodyText"
+                  },
+                  "{{#showAccusedNameAddress}}",
+                  {
+                    "stack": [
+                      {
+                        "text": "Name and Address: ",
+                        "style": "bodyTextBold"
+                      },
+                      "{{#accusedNameAddress}}",
+                      {
+                        "stack": [
+                          {
+                            "text": "{{name}}"
+                          },
+                          {
+                            "text": "{{formattedAddress}}"
+                          }
+                        ],
+                        "style": "bodyText",
+                        "margin": [0, 5, 0, 5]
+                      },
+                      "{{/accusedNameAddress}}"
+                    ]
+                  },
+                  "{{/showAccusedNameAddress}}",
+                  {
+                    "text": "Judicial Magistrate of First Class",
+                    "style": "judgeSignature",
+                    "margin": [0, 80, 0, 0]
+                  }
+                ],
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center"
+      },
+      "applicationTitle": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 20, 0, 10]
+      },
+      "date": {
+        "fontSize": 11,
+        "alignment": "right",
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "subjectText": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "bodyTextBold": {
+        "fontSize": 11,
+        "bold": true,
+        "margin": [0, 10, 0, 10],
+        "alignment": "left"
+      },
+      "bodyTextLeft": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10],
+        "alignment": "left"
+      },
+      "addresseeDetail": {
+        "fontSize": 11,
+        "margin": [0, 5, 0, 5]
+      },
+      "judgeSignature": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 60, 0, 0]
+      }
+    }
+  }
+}

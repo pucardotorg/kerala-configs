@@ -1,7 +1,7 @@
 {
   "key": "order-for-rejection-rescheduling-request",
   "DataConfigs": {
-    "serviceName": "rainmaker-common",
+    "serviceName": "pdf-service",
     "version": "1.0.0",
     "baseKeyPath": "$.Data.*",
     "entityIdPath": "$.id",

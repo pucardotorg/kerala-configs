@@ -1,0 +1,106 @@
+ServiceMaps:
+  serviceName: Advocate Office Management Service
+  version: 1.0.0
+  mappings:
+    - topic: add-advocate-office-member
+      configKey: INDEX
+      indexes:
+        - name: advocate-office-member-index
+          type: general
+          id: $.id
+          isBulk: false
+          timeStampField: $.auditDetails.createdTime
+          jsonPath: $.addMember
+          customJsonMapping:
+            indexMapping: { "Data": { advocateOfficeMemberDetails: { }, auditDetails: { } } }
+            fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.advocateOfficeMemberDetails.id
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.advocateOfficeMemberDetails.tenantId
+              - inJsonPath: $.officeAdvocateUserUuid
+                outJsonPath: $.Data.advocateOfficeMemberDetails.officeAdvocateUserUuid
+              - inJsonPath: $.officeAdvocateId
+                outJsonPath: $.Data.advocateOfficeMemberDetails.officeAdvocateId
+              - inJsonPath: $.officeAdvocateName
+                outJsonPath: $.Data.advocateOfficeMemberDetails.officeAdvocateName
+              - inJsonPath: $.memberType
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberType
+              - inJsonPath: $.memberUserUuid
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberUserUuid
+              - inJsonPath: $.memberId
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberId
+              - inJsonPath: $.memberName
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberName
+              - inJsonPath: $.memberMobileNumber
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberMobileNumber
+              - inJsonPath: $.memberEmail
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberEmail
+              - inJsonPath: $.accessType
+                outJsonPath: $.Data.advocateOfficeMemberDetails.accessType
+              - inJsonPath: $.allowCaseCreate
+                outJsonPath: $.Data.advocateOfficeMemberDetails.allowCaseCreate
+              - inJsonPath: $.addNewCasesAutomatically
+                outJsonPath: $.Data.advocateOfficeMemberDetails.addNewCasesAutomatically
+              - inJsonPath: $.isActive
+                outJsonPath: $.Data.advocateOfficeMemberDetails.isActive
+              - inJsonPath: $.auditDetails.createdBy
+                outJsonPath: $.Data.auditDetails.createdBy
+              - inJsonPath: $.auditDetails.lastModifiedBy
+                outJsonPath: $.Data.auditDetails.lastModifiedBy
+              - inJsonPath: $.auditDetails.createdTime
+                outJsonPath: $.Data.auditDetails.createdTime
+              - inJsonPath: $.auditDetails.lastModifiedTime
+                outJsonPath: $.Data.auditDetails.lastModifiedTime
+
+    - topic: leave-advocate-office
+      configKey: INDEX
+      indexes:
+        - name: advocate-office-member-index
+          type: general
+          id: $.id
+          isBulk: false
+          timeStampField: $.auditDetails.lastModifiedTime
+          jsonPath: $.leaveOffice
+          customJsonMapping:
+            indexMapping: { "Data": { advocateOfficeMemberDetails: { }, auditDetails: { } } }
+            fieldMapping:
+              - inJsonPath: $.id
+                outJsonPath: $.Data.advocateOfficeMemberDetails.id
+              - inJsonPath: $.tenantId
+                outJsonPath: $.Data.advocateOfficeMemberDetails.tenantId
+              - inJsonPath: $.officeAdvocateUserUuid
+                outJsonPath: $.Data.advocateOfficeMemberDetails.officeAdvocateUserUuid
+              - inJsonPath: $.officeAdvocateId
+                outJsonPath: $.Data.advocateOfficeMemberDetails.officeAdvocateId
+              - inJsonPath: $.officeAdvocateName
+                outJsonPath: $.Data.advocateOfficeMemberDetails.officeAdvocateName
+              - inJsonPath: $.memberType
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberType
+              - inJsonPath: $.memberUserUuid
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberUserUuid
+              - inJsonPath: $.memberId
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberId
+              - inJsonPath: $.memberName
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberName
+              - inJsonPath: $.memberMobileNumber
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberMobileNumber
+              - inJsonPath: $.memberEmail
+                outJsonPath: $.Data.advocateOfficeMemberDetails.memberEmail
+              - inJsonPath: $.accessType
+                outJsonPath: $.Data.advocateOfficeMemberDetails.accessType
+              - inJsonPath: $.allowCaseCreate
+                outJsonPath: $.Data.advocateOfficeMemberDetails.allowCaseCreate
+              - inJsonPath: $.addNewCasesAutomatically
+                outJsonPath: $.Data.advocateOfficeMemberDetails.addNewCasesAutomatically
+              - inJsonPath: $.isActive
+                outJsonPath: $.Data.advocateOfficeMemberDetails.isActive
+              - inJsonPath: $.auditDetails.createdBy
+                outJsonPath: $.Data.auditDetails.createdBy
+              - inJsonPath: $.auditDetails.lastModifiedBy
+                outJsonPath: $.Data.auditDetails.lastModifiedBy
+              - inJsonPath: $.auditDetails.createdTime
+                outJsonPath: $.Data.auditDetails.createdTime
+              - inJsonPath: $.auditDetails.lastModifiedTime
+                outJsonPath: $.Data.auditDetails.lastModifiedTime
+
