@@ -12,7 +12,7 @@ serviceMaps:
       transactionCodeJsonPath: $.caseFilingNumber
       auditAttributeBasePath: digitalizedDocument
       queryMaps:
-        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, order_number,order_item_id, mediation_details,shortened_url, additional_details, status, documents, tenant_id, court_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO digitalized_document(id, type, document_number, case_id, case_filing_number, order_number,order_item_id, mediation_details,shortened_url, additional_details, status, documents, tenant_id, court_id, created_by, created_time, last_modified_by, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: digitalizedDocument
           jsonMaps:
             - jsonPath: $.digitalizedDocument.id
