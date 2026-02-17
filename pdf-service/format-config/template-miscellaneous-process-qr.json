@@ -89,11 +89,6 @@
                         "stack": "{{{coverLetterText}}}",
                         "style": "bodyTextLeft"
                       },
-                      {
-                        "text": "Judicial Magistrate of First Class",
-                        "style": "judgeSignature",
-                        "margin": [0, 80, 0, 40]
-                      },
 
                       {
                         "text": "",
