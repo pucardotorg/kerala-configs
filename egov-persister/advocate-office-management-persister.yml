@@ -54,3 +54,26 @@ serviceMaps:
             - jsonPath: $.leaveOffice.auditDetails.lastModifiedTime
             - jsonPath: $.leaveOffice.officeAdvocateId
             - jsonPath: $.leaveOffice.memberId
+
+    - version: 1.0
+      description: Updates advocate office member access settings
+      fromTopic: update-advocate-office-member-access
+      isTransaction: true
+      isAuditEnabled: true
+      module: ADVOCATE-OFFICE
+      objecIdJsonPath: $.updateMemberAccess.memberId
+      tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
+      transactionCodeJsonPath: $.updateMemberAccess.officeAdvocateId
+      auditAttributeBasePath: updateMemberAccess
+      queryMaps:
+        - query: UPDATE dristi_advocate_office_member SET access_type=?, allow_case_create=?, add_new_cases_automatically=?, last_modified_by=?, last_modified_time=? WHERE office_advocate_id=? AND member_id=?;
+          basePath: updateMemberAccess
+          jsonMaps:
+            - jsonPath: $.updateMemberAccess.accessType
+            - jsonPath: $.updateMemberAccess.allowCaseCreate
+            - jsonPath: $.updateMemberAccess.addNewCasesAutomatically
+            - jsonPath: $.updateMemberAccess.auditDetails.lastModifiedBy
+            - jsonPath: $.updateMemberAccess.auditDetails.lastModifiedTime
+            - jsonPath: $.updateMemberAccess.officeAdvocateId
+            - jsonPath: $.updateMemberAccess.memberId
+
