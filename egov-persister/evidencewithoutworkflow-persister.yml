@@ -12,7 +12,7 @@ serviceMaps:
       auditAttributeBasePath: artifact
       queryMaps:
 
-        - query: INSERT INTO dristi_evidence_artifact(id, tenantId, courtId, artifactNumber, evidenceNumber, externalRefNumber, caseId, application,filingNumber, hearing, orders, mediaType, artifactType,sourceType ,sourceId, sourceName,applicableTo, comments, file, createdDate, isActive,isEvidence, status, description, artifactDetails, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime, isVoid, reason, filingType, publishedDate,shortenedUrl, witnessMobileNumbers, witnessEmails) VALUES (?, ?, ?, ?, ?,?,?,?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO dristi_evidence_artifact(id, tenantId, courtId, artifactNumber, evidenceNumber, externalRefNumber, caseId, application, asUser, filingNumber, hearing, orders, mediaType, artifactType,sourceType ,sourceId, sourceName,applicableTo, comments, file, createdDate, isActive,isEvidence, status, description, artifactDetails, additionalDetails, createdBy, lastModifiedBy, createdTime, lastModifiedTime, isVoid, reason, filingType, publishedDate,shortenedUrl, witnessMobileNumbers, witnessEmails) VALUES (?, ?, ?, ?, ?,?,?,?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: artifact
           jsonMaps:
             - jsonPath: $.artifact.id
@@ -23,6 +23,7 @@ serviceMaps:
             - jsonPath: $.artifact.externalRefNumber
             - jsonPath: $.artifact.caseId
             - jsonPath: $.artifact.application
+            - jsonPath: $.artifact.asUser
             - jsonPath: $.artifact.filingNumber
             - jsonPath: $.artifact.hearing
             - jsonPath: $.artifact.order
@@ -77,7 +78,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: artifact
       queryMaps:
-        - query: UPDATE dristi_evidence_artifact SET tenantId=?, artifactNumber=?, evidenceNumber=?, externalRefNumber=?, caseId=?, application=?, filingNumber=?, hearing=?, orders=?, mediaType=?, artifactType=?, sourceType=?, sourceId=?, sourceName=?,applicableTo=?, comments=?, file=? ,createdDate=?, isActive=?, isEvidence=?, status=?, description=?, artifactDetails=?, additionalDetails=?, lastModifiedBy=?, lastModifiedTime=?, isVoid=?, reason=?, filingType=?, publishedDate=?, shortenedUrl=?, witnessMobileNumbers=?, witnessEmails=? WHERE id=?;
+        - query: UPDATE dristi_evidence_artifact SET tenantId=?, artifactNumber=?, evidenceNumber=?, externalRefNumber=?, caseId=?, application=?, asUser=?, filingNumber=?, hearing=?, orders=?, mediaType=?, artifactType=?, sourceType=?, sourceId=?, sourceName=?,applicableTo=?, comments=?, file=? ,createdDate=?, isActive=?, isEvidence=?, status=?, description=?, artifactDetails=?, additionalDetails=?, lastModifiedBy=?, lastModifiedTime=?, isVoid=?, reason=?, filingType=?, publishedDate=?, shortenedUrl=?, witnessMobileNumbers=?, witnessEmails=? WHERE id=?;
           basePath: artifact
           jsonMaps:
             - jsonPath: $.artifact.tenantId
@@ -86,6 +87,7 @@ serviceMaps:
             - jsonPath: $.artifact.externalRefNumber
             - jsonPath: $.artifact.caseId
             - jsonPath: $.artifact.application
+            - jsonPath: $.artifact.asUser
             - jsonPath: $.artifact.filingNumber
             - jsonPath: $.artifact.hearing
             - jsonPath: $.artifact.order

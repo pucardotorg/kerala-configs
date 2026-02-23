@@ -1,7 +1,7 @@
 {
   "key": "new-hearing-date-after-rescheduling-qr",
   "DataConfigs": {
-    "serviceName": "rainmaker-common",
+    "serviceName": "pdf-service",
     "version": "1.0.0",
     "baseKeyPath": "$.Data.*",
     "entityIdPath": "$.id",

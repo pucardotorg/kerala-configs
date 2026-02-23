@@ -1,7 +1,7 @@
 {
   "key": "bill-amendment-summary",
   "DataConfigs": {
-    "serviceName": "rainmaker-common",
+    "serviceName": "pdf-service",
     "version": "1.0.0",
     "baseKeyPath": "$.Amendments.*",
     "entityIdPath":"$.id",

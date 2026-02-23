@@ -291,3 +291,28 @@ serviceMaps:
       - jsonPath: $.BusinessServices.*.states.*.actions.*.auditDetails.lastModifiedBy
 
       - jsonPath: $.BusinessServices.*.states.*.actions.*.auditDetails.lastModifiedTime
+
+  - version: 1.0
+    description: Upserts assignee in eg_wf_assignee_v2 table
+    fromTopic: upsert-wf-assignee
+    isTransaction: true
+    queryMaps:
+
+    - query: INSERT INTO eg_wf_assignee_v2(processinstanceid, tenantid, assignee, isActive, createdby, lastmodifiedby, createdtime, lastmodifiedtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (processinstanceid, assignee) DO UPDATE SET isActive = EXCLUDED.isActive, lastmodifiedby = EXCLUDED.lastmodifiedby, lastmodifiedtime = EXCLUDED.lastmodifiedtime;
+      basePath: assignees.*
+      jsonMaps:
+      - jsonPath: $.assignees.*.processInstanceId
+
+      - jsonPath: $.assignees.*.tenantId
+
+      - jsonPath: $.assignees.*.assignee
+
+      - jsonPath: $.assignees.*.isActive
+
+      - jsonPath: $.assignees.*.auditDetails.createdBy
+
+      - jsonPath: $.assignees.*.auditDetails.lastModifiedBy
+
+      - jsonPath: $.assignees.*.auditDetails.createdTime
+
+      - jsonPath: $.assignees.*.auditDetails.lastModifiedTime

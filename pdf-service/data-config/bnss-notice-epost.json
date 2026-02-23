@@ -1,7 +1,7 @@
 {
   "key": "bnss-notice-e-post",
   "DataConfigs": {
-    "serviceName": "rainmaker-common",
+    "serviceName": "pdf-service",
     "version": "1.0.0",
     "baseKeyPath": "$.summonsPdf",
     "entityIdPath": "$.cmpNumber",
