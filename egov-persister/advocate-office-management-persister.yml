@@ -7,9 +7,9 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: ADVOCATE-OFFICE
-      objecIdJsonPath: $.addMember.id
-      tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
-      transactionCodeJsonPath: $.addMember.officeAdvocateId
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.officeAdvocateId
       auditAttributeBasePath: addMember
       queryMaps:
         - query: INSERT INTO dristi_advocate_office_member(id,tenant_id,office_advocate_user_uuid,office_advocate_id,office_advocate_name,member_type,member_user_uuid,member_id,member_name,member_mobile_number,member_email,access_type,allow_case_create,add_new_cases_automatically,is_active,created_by,last_modified_by,created_time,last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (office_advocate_id, member_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time;
@@ -41,9 +41,9 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: ADVOCATE-OFFICE
-      objecIdJsonPath: $.leaveOffice.memberId
-      tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
-      transactionCodeJsonPath: $.leaveOffice.officeAdvocateId
+      objecIdJsonPath: $.memberId
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.officeAdvocateId
       auditAttributeBasePath: leaveOffice
       queryMaps:
         - query: UPDATE dristi_advocate_office_member SET is_active=?, last_modified_by=?, last_modified_time=? WHERE office_advocate_id=? AND member_id=?;
