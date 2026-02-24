@@ -483,6 +483,12 @@
         },
         "layout": "noBorders",
         "margin": [0, 20, 0, 20]
+      },
+      {
+        "image": "{{courtSeal}}",
+        "width": 80,
+        "height": 80,
+        "alignment": "right"
       }
     ],
     "styles": {

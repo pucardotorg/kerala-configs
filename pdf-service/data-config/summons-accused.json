@@ -163,6 +163,11 @@
                 }
               },
               {
+                "variable": "courtSeal",
+                "url": "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=6b949a06-ab8f-440b-9b7b-8a7fc3591f8e",
+                "type": "image"
+              },
+              {
                 "variable": "city",
                 "value": {
                   "path": "$.address.city",
