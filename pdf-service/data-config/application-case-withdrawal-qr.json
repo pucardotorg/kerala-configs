@@ -107,6 +107,24 @@
                 }
               },
               {
+                "variable": "day",
+                "value": {
+                  "path": "$.day"
+                }
+              },
+              {
+                "variable": "month",
+                "value": {
+                  "path": "$.month"
+                }
+              },
+              {
+                "variable": "year",
+                "value": {
+                  "path": "$.year"
+                }
+              },
+              {
                 "variable": "qrCodeUrl",
                 "value": {
                   "path": "$.qrCodeUrl"
