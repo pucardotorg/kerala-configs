@@ -58,6 +58,30 @@
                     "style": "header"
                   },
                   {
+                    "text": "Form No. 37",
+                    "style": "header",
+                    "alignment": "center",
+                    "bold": false
+                  },
+                  {
+                    "text": "Bail Bond",
+                    "style": "header",
+                    "bold": true,
+                    "alignment": "center",
+                    "fontSize": 18
+                  },
+                  {
+                    "text": "(Section 426 or 499, Criminal Procedure Code)",
+                    "style": "header",
+                    "alignment": "center",
+                    "italics": true,
+                    "bold": false
+                  },
+                  {
+                    "text": " ",
+                    "style": "header"
+                  },
+                  {
                     "text": "{{orderHeading}}",
                     "style": "header"
                   },
@@ -120,7 +144,7 @@
         "fontSize": 14,
         "bold": true,
         "alignment": "center",
-        "margin": [0, 20, 0, 0]
+        "margin": [0, 0, 0, 0]
       },
       "subHeader": {
         "fontSize": 14,
@@ -157,12 +181,14 @@
       "signature": {
         "fontSize": 12,
         "alignment": "left",
-        "margin": [0, 30, 0, 10]
+        "margin": [0, 80, 0, 20],
+        "minHeight": 50
       },
       "judgeSignature": {
         "fontSize": 12,
         "alignment": "left",
-        "margin": [0, 80, 0, 20]
+        "margin": [0, 80, 0, 20],
+        "minHeight": 60
       },
       "date": {
         "fontSize": 12,

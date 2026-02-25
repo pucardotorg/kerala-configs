@@ -1,7 +1,7 @@
 {
     "key": "misc-receipt",
     "DataConfigs": {
-      "serviceName": "rainmaker-common",
+      "serviceName": "pdf-service",
       "version": "1.0.0",
       "baseKeyPath": "$.Payments.*",
       "entityIdPath":"$.paymentDetails[0].receiptNumber",

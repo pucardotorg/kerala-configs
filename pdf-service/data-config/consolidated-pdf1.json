@@ -1,7 +1,7 @@
 {
   "key": "consolidated-pdf1",
   "DataConfigs": {
-    "serviceName": "rainmaker-common",
+    "serviceName": "pdf-service",
     "version": "1.0.0",
     "baseKeyPath": "$.Receipt.*",
     "isCommonTableBorderRequired": true,
