@@ -11,7 +11,7 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: ESignParameter
       queryMaps:
-        - query: INSERT INTO dristi_esign_pdf(id, tenantId, filestoreId, signPlaceHolder, signedFilestoreId, pageModule, authType , createdBy, lastModifiedBy, createdTime, lastModifiedTime,filepath) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?);
+        - query: INSERT INTO dristi_esign_pdf(id, tenantId, filestoreId, signPlaceHolder, signedFilestoreId, pageModule, authType , createdBy, lastModifiedBy, createdTime, lastModifiedTime, unsigned_filepath, request_blob, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: ESignParameter
           jsonMaps:
             - jsonPath: $.ESignParameter.id
@@ -25,8 +25,11 @@ serviceMaps:
             - jsonPath: $.ESignParameter.auditDetails.lastModifiedBy
             - jsonPath: $.ESignParameter.auditDetails.createdTime
             - jsonPath: $.ESignParameter.auditDetails.lastModifiedTime
-            - jsonPath: $.ESignParameter.filePath
-
+            - jsonPath: $.ESignParameter.unsignedFilePath
+            - jsonPath: $.ESignParameter.requestBlob
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.ESignParameter.status
 
     - version: 1.0
       description: Update e-sign request details in tables
@@ -38,10 +41,14 @@ serviceMaps:
       tenantIdJsonPath: $.tenantId
       auditAttributeBasePath: ESignParameter
       queryMaps:
-        - query: UPDATE  dristi_esign_pdf SET signedFilestoreId =?,lastModifiedBy =?,lastModifiedTime = ? where id =?;
+        - query: UPDATE  dristi_esign_pdf SET signedFilestoreId =?,lastModifiedBy =?,lastModifiedTime = ?, response_blob = ?, status = ? where id =?;
           basePath: ESignParameter
           jsonMaps:
             - jsonPath: $.ESignParameter.signedFileStoreId
             - jsonPath: $.ESignParameter.auditDetails.lastModifiedBy
             - jsonPath: $.ESignParameter.auditDetails.lastModifiedTime
+            - jsonPath: $.ESignParameter.responseBlob
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.ESignParameter.status
             - jsonPath: $.ESignParameter.id
