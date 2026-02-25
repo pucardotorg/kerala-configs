@@ -14,43 +14,138 @@
                     "style": "header"
                   },
                   {
-                    "text": "{{caseNumber}}",
-                    "style": "subHeader"
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
                   },
                   {
-                    "text": "{{caseName}}",
-                    "style": "subHeader"
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
                   },
                   {
-                    "text": "APPLICATION FOR WITHDRAWAL OF CASE",
+                    "text": "Date: {{date}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 15]
+                  },
+                  {
+                    "style": "table",
+                    "table": {
+                      "widths": ["30%", "70%"],
+                      "body": [
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "text": "Complainant {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/complainantList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        "{{#accusedList}}",
+                        [
+                          {
+                            "text": "Accused {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/accusedList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Offence",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "S.138 of the Negotiable Instruments Act, 1881",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "text": "{{applicationTitle}}",
                     "style": "applicationTitle"
                   },
                   {
-                    "text": "{{date}}",
-                    "style": "date"
-                  },
-                  {
-                    "text": "Subject: Application for Withdrawal of Case",
-                    "style": "subjectText"
-                  },
-                  {
-                    "text": "My client, {{partyName}}, {{partyType}}, hereby submits this application before this Honorable Court seeking withdrawal of the case of {{caseName}} - {{caseNo}}.",
+                    "text": "Petitioner Name: {{petitionerName}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "The reasons for the withdrawal of the case are detailed below:",
+                    "text": "{{partyName}}, the {{partyType}}, represented through Advocate {{advocateName}}, hereby submits this application before this Honorable Court seeking withdrawal of the above-mentioned case.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{reasonForWithdrawal}}",
+                    "text": "Reason for Withdrawal of case: {{reasonForWithdrawal}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "I respectfully request this Honorable Court to grant permission for the withdrawal of the case and to pass appropriate orders in this regard.",
+                    "text": "The petitioner assures and undertakes to the Honorable Court that this application is made in good faith and will not prejudice the other party.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Prayer: {{prayer}}",
+                    "text": "Therefore, the petitioner humbly requests the Honorable Court to consider this application and grant the withdrawal of the above-mentioned case",
                     "style": "bodyText"
                   },
                   {
@@ -58,21 +153,13 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Thank you for your consideration of this petition.",
-                    "style": "bodyText"
+                    "text": "Dated this {{date}} day of {{month}} {{year}}",
+                    "style": "date"
                   },
                   {
                     "text": "{{advocateSignature}}",
                     "style": "signature",
                     "margin": [0, 60, 0, 5]
-                  },
-                  {
-                    "text": "{{advocateName}}",
-                    "style": "signature"
-                  },
-                  {
-                    "text": "{{barRegistrationNumber}}",
-                    "style": "signature"
                   },
                   {
                     "text": "Advocate for {{partyName}}",
@@ -114,7 +201,7 @@
       },
       "date": {
         "fontSize": 12,
-        "alignment": "left",
+        "alignment": "right",
         "bold": true,
         "margin": [0, 0, 0, 10]
       },
@@ -140,6 +227,13 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, -10, 0, 10]
+      },
+      "table": {
+        "fontSize": 13
+      },
+      "tableText": {
+        "fontSize": 13,
+        "margin": [2, 5, 2, 5]
       }
     }
   }
