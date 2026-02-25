@@ -14,51 +14,142 @@
                     "style": "header"
                   },
                   {
-                    "text": "{{caseNumber}}",
-                    "style": "subHeader"
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
                   },
                   {
-                    "text": "Filing Number {{filingNumber}}",
-                    "style": "subHeader"
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
                   },
                   {
-                    "text": "{{caseName}}",
-                    "style": "subHeader"
+                    "text": "Date: {{date}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 15]
                   },
                   {
-                    "text": "{{applicationTitle}}",
-                    "style": "applicationTitle"
+                    "style": "table",
+                    "table": {
+                      "widths": ["30%", "70%"],
+                      "body": [
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "text": "Complainant {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/complainantList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        "{{#accusedList}}",
+                        [
+                          {
+                            "text": "Accused {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/accusedList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Offence",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "S.138 of the Negotiable Instruments Act, 1881",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ]
+                      ]
+                    }
                   },
                   {
-                    "text": "{{date}}",
-                    "style": "date"
-                  },
-                  {
-                    "text": "{{complainantName}}, herein referred to as the petitioner, represented by Advocate {{advocateName}}, respectfully submits as follows:",
+                    "text" : "Petitioner Name: {{petitionerName}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "My client, {{partyName}}, {{partyType}}, hereby submits this application before this Honorable Court to request condonation of delay in filing my {{caseName}} numbered {{caseNumber}}. The delay was unintentional and occurred without any negligence on my part.",
+                    "text": "{{partyName}}, the {{partyType}}, represented through Advocate {{advocateName}}, hereby submits this application before this Honorable Court seeking condonation of delay in filing the case/petition, as the delay was unintentional",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Reasons for Delay: ",
+                    "style": "bodyText"
+                  },
+                  {
+                    "stack": "{{{reasonForDelay}}}",
                     "style": "bodyText"
                   },
                   {
                     "text": "I sincerely apologize for the delay and assure this Honorable Court of my earnest efforts to rectify the oversight and proceed with the matter diligently. I assure this Honorable Court of my full cooperation and compliance with all procedural requirements going forward.",
-                    "style": "boldText"
+                    "style": "bodyText"
                   },
                   {
-                    "text": "Reasons for Delay: ",
-                    "style": "boldText"
+                    "text": "The petitioner assures and undertakes to the Honorable Court that this request is made in good faith and will not prejudice the other party.",
+                    "style": "bodyText"
                   },
                   {
-                    "stack" : "{{{reasonForDelay}}}",
-                    "style" : "bodyText"
-                  },
-                  {
-                    "text": "The petitioner assures and undertakes to the Hon'ble Court that this request is made in good faith and will not prejudice the other party.",
-                    "style": "boldText"
-                  },
-                  {
-                    "text": "Prayer: {{prayer}}",
+                    "text":"Therefore, the petitioner humbly requests the Honorable Court to consider this application and grant permission for the condonation of delay in filing the aforementioned case/petition.",
                     "style": "bodyText"
                   },
                   {
@@ -66,20 +157,13 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Dated this {{day}} day of {{month}}, {{year}}.",
+                    "text": "Dated this {{date}} day of {{month}} {{year}}",
                     "style": "date"
                   },
                   {
                     "text": "{{advocateSignature}}",
-                    "style": "signature"
-                  },
-                  {
-                    "text": "{{advocateName}}",
-                    "style": "signature"
-                  },
-                  {
-                    "text": "{{barRegistrationNumber}}",
-                    "style": "signature"
+                    "style": "signature",
+                    "margin": [0, 60, 0, 5]
                   },
                   {
                     "text": "Advocate for {{partyName}}",
@@ -134,7 +218,7 @@
       "date": {
         "fontSize": 12,
         "alignment": "left",
-        "margin": [0, 10, 0, 10]
+        "margin": [0, 0, 0, 10]
       },
       "bodyText": {
         "fontSize": 11,
@@ -158,6 +242,13 @@
         "color": "#000000",
         "alignment": "left",
         "margin": [0, 0, 0, 0]
+      },
+      "table": {
+        "fontSize": 13
+      },
+      "tableText": {
+        "fontSize": 13,
+        "margin": [2, 5, 2, 5]
       }
     }
   }
