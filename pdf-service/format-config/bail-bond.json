@@ -9,6 +9,54 @@
             [
               {
                 "stack": [
+                   {
+                    "text": "Form No. 37",
+                    "style": "header",
+                    "alignment": "center",
+                    "bold": false
+                  },
+                  {
+                    "text": "Bail Bond",
+                    "style": "header",
+                    "bold": true,
+                    "alignment": "center",
+                    "fontSize": 18
+                  },
+                  {
+                    "text": "(Section 426 or 499, Criminal Procedure Code)",
+                    "style": "header",
+                    "alignment": "center",
+                    "italics": true,
+                    "bold": false
+                  },
+                  {
+                    "text": " ",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Form No. 37",
+                    "style": "header",
+                    "alignment": "center",
+                    "bold": false
+                  },
+                  {
+                    "text": "Bail Bond",
+                    "style": "header",
+                    "bold": true,
+                    "alignment": "center",
+                    "fontSize": 18
+                  },
+                  {
+                    "text": "(Section 426 or 499, Criminal Procedure Code)",
+                    "style": "header",
+                    "alignment": "center",
+                    "italics": true,
+                    "bold": false
+                  },
+                  {
+                    "text": " ",
+                    "style": "header"
+                  },
                   {
                     "text": "Form No. 37",
                     "style": "header",
@@ -38,7 +86,7 @@
                     "style": "header"
                   },
                   {
-                    "text": "Case No. {{caseNumber}}",
+                    "text": "Case No. {{caseNumber}} of {{caseYear}}",
                     "style": "subHeader"
                   },
                   {

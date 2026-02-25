@@ -101,41 +101,6 @@
                 "value": {
                   "path": "$.embeddedUrl"
                 }
-              },
-              {
-                "variable": "city",
-                "value": {
-                  "path": "$.address.city",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "state",
-                "value": {
-                  "path": "$.address.state",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "locality",
-                "value": {
-                  "path": "$.address.locality",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "district",
-                "value": {
-                  "path": "$.address.district",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "pincode",
-                "value": {
-                  "path": "$.address.pincode",
-                  "defaultValue": "NA"
-                }
               }
             ]
           },
@@ -153,3 +118,4 @@
     ]
   }
 }
+
