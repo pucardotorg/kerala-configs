@@ -232,7 +232,7 @@
       "applicationTitle": {
         "fontSize": 15,
         "bold": true,
-        "alignment": "left",
+        "alignment": "center",
         "margin": [0, 20, 0, 10]
       },
       "subTitle": {
@@ -257,7 +257,7 @@
       },
       "listBodyText": {
         "fontSize": 11,
-        "margin": [25, 10, 0, 10]
+        "margin": [0, 0, 0, 0]
       },
       "reasonForApplication": {
         "fontSize": 11,
@@ -288,16 +288,11 @@
         "margin": [15, 10, 0, 5]
       },
       "list": {
-        "margin": [35, 0, 0, 5]
+        "margin": [15, 0, 0, 5]
       },
       "listItem": {
         "fontSize": 11,
         "margin": [0, 5, 0, 5]
-      },
-      "qr-code": {
-        "color": "#000000",
-        "alignment": "left",
-        "margin": [0, 0, 0, 0]
       },
       "table": {
         "fontSize": 13
@@ -305,6 +300,11 @@
       "tableText": {
         "fontSize": 13,
         "margin": [2, 5, 2, 5]
+      },
+      "qr-code": {
+        "color": "#000000",
+        "alignment": "left",
+        "margin": [0, 0, 0, 0]
       }
     }
   }

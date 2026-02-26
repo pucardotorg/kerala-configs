@@ -138,7 +138,7 @@
                   },
                   {
                     "text": "Reason for Bail:",
-                    "style": "boldText"
+                    "style": "bodyText"
                   },
                   {
                     "stack": "{{{reasonForApplication}}}",
@@ -146,7 +146,8 @@
                   },
                   {
                     "text": "List of Attached Documents:",
-                    "style": "boldText"
+                    "style": "bodyText",
+                    "bold": true
                   },
                   {
                     "text": "The following documents are hereby submitted along with this bail application:",
@@ -215,7 +216,7 @@
       "applicationTitle": {
         "fontSize": 15,
         "bold": true,
-        "alignment": "left",
+        "alignment": "center",
         "margin": [0, 20, 0, 10]
       },
       "subTitle": {
@@ -240,7 +241,7 @@
       },
       "listBodyText": {
         "fontSize": 11,
-        "margin": [25, 10, 0, 10]
+        "margin": [0, 0, 0, 0]
       },
       "reasonForApplication": {
         "fontSize": 11,
@@ -271,7 +272,7 @@
         "margin": [15, 10, 0, 5]
       },
       "list": {
-        "margin": [35, 0, 0, 5]
+        "margin": [15, 0, 0, 5]
       },
       "listItem": {
         "fontSize": 11,
