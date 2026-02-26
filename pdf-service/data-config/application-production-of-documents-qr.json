@@ -121,6 +121,12 @@
                 }
               },
               {
+                "variable": "applicationTitle",
+                "value": {
+                  "path": "$.applicationTitle"
+                }
+              },
+              {
                 "variable": "qrCodeUrl",
                 "value": {
                   "path": "$.qrCodeUrl"
