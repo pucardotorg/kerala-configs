@@ -284,7 +284,7 @@
       },
       "boldText": {
         "fontSize": 11,
-        "bold": true,
+        "bold": false,
         "margin": [15, 10, 0, 5]
       },
       "list": {

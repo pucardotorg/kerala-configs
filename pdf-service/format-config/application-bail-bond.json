@@ -227,7 +227,7 @@
       "date": {
         "fontSize": 12,
         "alignment": "right",
-        "bold": true,
+        "bold": false,
         "margin": [0, 0, 0, 10]
       },
       "subjectText": {
