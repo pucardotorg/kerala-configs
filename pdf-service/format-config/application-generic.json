@@ -14,24 +14,123 @@
                     "style": "header"
                   },
                   {
-                    "text": "{{caseNumber}}",
-                    "style": "subHeader"
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
                   },
                   {
-                    "text": "{{caseName}}",
-                    "style": "subHeader"
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
+                  },
+                  {
+                    "text": "Date: {{date}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 15]
+                  },
+                  {
+                    "style": "table",
+                    "table": {
+                      "widths": ["30%", "70%"],
+                      "body": [
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "text": "Complainant {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/complainantList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        "{{#accusedList}}",
+                        [
+                          {
+                            "text": "Accused {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/accusedList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Offence",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "S.138 of the Negotiable Instruments Act, 1881",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ]
+                      ]
+                    }
                   },
                   {
                     "text": "{{applicationName}}",
                     "style": "applicationTitle"
                   },
                   {
-                    "text": "{{date}}",
-                    "style": "date"
-                  },
-                  {
-                    "text": "Subject: {{applicationName}}",
-                    "style": "subjectText"
+                    "text": "Petitioner Name: {{petitionerName}}",
+                    "style": "bodyText"
                   },
                   {
                     "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court seeking ",
@@ -48,29 +147,17 @@
                   },
                   "{{/additionalComments}}",
                   {
-                    "text": "Prayer:",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "{{prayer}}",
-                    "style": "bodyText"
-                  },
-                  {
                     "text": "I remain available to provide any further information or clarification that the Court may require.",
                     "style": "bodyText"
+                  },
+                  {
+                    "text": "Dated this {{day}} day of {{month}} {{year}}",
+                    "style": "date"
                   },
                   {
                     "text": "{{advocateSignature}}",
                     "style": "signature",
                     "margin": [0, 60, 0, 5]
-                  },
-                  {
-                    "text": "{{advocateName}}",
-                    "style": "signature"
-                  },
-                  {
-                    "text": "{{barRegistrationNumber}}",
-                    "style": "signature"
                   },
                   {
                     "text": "Advocate for {{partyName}}",
@@ -112,8 +199,7 @@
       },
       "date": {
         "fontSize": 12,
-        "alignment": "left",
-        "bold": true,
+        "alignment": "right",
         "margin": [0, 0, 0, 10]
       },
       "subjectText": {
@@ -138,6 +224,13 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, -10, 0, 10]
+      },
+      "table": {
+        "fontSize": 13
+      },
+      "tableText": {
+        "fontSize": 13,
+        "margin": [2, 5, 2, 5]
       }
     }
   }
