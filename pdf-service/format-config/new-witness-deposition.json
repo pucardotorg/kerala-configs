@@ -70,7 +70,7 @@
                   "{{/witnessAge}}",
                   {
                     "text": "Solemnly affirmed on the {{date}} day of {{month}}, {{year}}",
-                    "style": "content"
+                    "style": "bodyText"
                   },
                   "{{#depositionType}}",
                   {
@@ -79,9 +79,17 @@
                   },
                   "{{/depositionType}}",
                   {
+                    "text": "Chief examination:",
+                    "style": "bodyText"
+                  },
+                  {
                     "stack": "{{{witnessDeposition}}}",
                     "style": "deposition",
                     "font": "ManjiriMalyalam"
+                  },
+                  {
+                    "text": "Taken down by / before me in open court, interpreted/ read over to the witness/accused and admitted by him/her to be true",
+                    "style": "bodyText"
                   },
                   {
                     "text": "{{witnessPlaceholder}}",
@@ -95,6 +103,15 @@
                   {
                     "text": "{{judgePlaceholder}}",
                     "style": "signature"
+                  },
+                  {
+                    "text": "Date: {{date}}",
+                    "style": "signature"
+                  },
+                  {
+                    "text": "Judicial Magistrate of First Class",
+                    "style": "judgeSignature",
+                    "margin": [0, 80, 0, 0]
                   }
                 ],
                 "alignment": "left",
@@ -130,6 +147,7 @@
       },
       "bodyText": {
         "fontSize": 13,
+        "alignment": "left",
         "margin": [0, 10, 0, 10]
       },
       "content": {
