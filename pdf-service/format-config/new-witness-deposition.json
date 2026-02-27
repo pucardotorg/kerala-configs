@@ -106,12 +106,11 @@
                   },
                   {
                     "text": "Date: {{date}}",
-                    "style": "signature"
+                    "style": "judgeSignature"
                   },
                   {
                     "text": "Judicial Magistrate of First Class",
-                    "style": "judgeSignature",
-                    "margin": [0, 80, 0, 0]
+                    "style": "judgeSignature"
                   }
                 ],
                 "alignment": "left",
@@ -163,6 +162,11 @@
         "fontSize": 13,
         "alignment": "right",
         "margin": [0, 80, 0, 10]
+      },
+      "judgeSignature": {
+        "fontSize": 13,
+        "alignment": "right",
+        "margin": [0, 10, 0, 0]
       }
     }
   }
