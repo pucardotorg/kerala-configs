@@ -1,0 +1,297 @@
+{
+  "key": "warrant-witness",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "FORM No. 9",
+                    "style": "form-no"
+                  },
+                  {
+                    "text": "WARRANT IN THE FIRST INSTANCE TO BRING UP A WITNESS",
+                    "style": "document-title"
+                  },
+                  {
+                    "text": "(See section 90)",
+                    "style": "reference"
+                  }
+                ],
+                "alignment": "center",
+                "margin": [
+                  0,
+                  20,
+                  0,
+                  20
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "form-body",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "To {{executorName}}.",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": [
+                  {
+                    "text": "Whereas complaint has been made before me that {{respondentName}} of {{respondentAddress}} has (or is suspected to have) committed the offence U/s. 138 of Negotiable Instruments Act, and it appears likely that {{respondentName}} can give evidence concerning the said complaint, and whereas I have good and sufficient reason to believe that he will not attend as a witness on the hearing of the said complaint unless compelled to do so;"
+                  }
+                ],
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "This is to authorise and require you to arrest {{respondentName}}, and on the {{hearingDate}} to bring him before the Special Court of Judicial Magistrate of the First Class, for the trial of cases under section 138 of Negotiable Instruments Act, 1881 at Kollam (‘24x7 ON Courts’) to be examined touching the offence complained of.",
+                "style": "form-sub-body"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [
+          0,
+          20,
+          0,
+          20
+        ]
+      },
+      {
+        "style": "footer-content",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Dated, this {{issueDate}}.",
+                "style": "footer-text"
+              }
+            ],
+            [
+              {
+                "text": "Signature",
+                "style": "footer-signature"
+              }
+            ],
+            [
+              {
+                "text": "Seal of the Court",
+                "style": "footer-seal"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [
+          0,
+          20,
+          0,
+          0
+        ]
+      },
+      {
+        "style": "tl-head",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "(See section 73)",
+                    "style": "reference"
+                  }
+                ],
+                "alignment": "center",
+                "margin": [
+                  0,
+                  50,
+                  0,
+                  20
+                ]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      },
+      {
+        "style": "form-body",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "This warrant may be endorsed as follows :-",
+                "style": "form-sub-body"
+              }
+            ],
+            [
+              {
+                "text": "If the said {{respondentName}} shall give bail himself in the sum of rupees {{bailableAmount}} with {{#oneSuretyAmount}}one surety in the sum of rupees {{oneSuretyAmount}} {{/oneSuretyAmount}} {{#twoSuretyAmount}}two sureties each in the sum of rupees {{twoSuretyAmount}} {{/twoSuretyAmount}} to attend before me on {{hearingDate}} and to continue so to attend until otherwise directed by me, he may be released",
+                "style": "form-sub-body"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [
+          0,
+          10,
+          0,
+          20
+        ]
+      },
+      {
+        "style": "footer-content",
+        "table": {
+          "widths": [
+            "*"
+          ],
+          "body": [
+            [
+              {
+                "text": "Dated, this day of {{issueDate}}.",
+                "style": "footer-text"
+              }
+            ],
+            [
+              {
+                "text": "Signature",
+                "style": "footer-signature"
+              }
+            ],
+            [
+              {
+                "text": "Seal of the Court",
+                "style": "footer-seal"
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders",
+        "margin": [
+          0,
+          20,
+          0,
+          0
+        ]
+      }
+    ],
+    "styles": {
+      "tl-head": {
+        "fillColor": "white",
+        "margin": [
+          -41,
+          -41,
+          -41,
+          0
+        ]
+      },
+      "document-title": {
+        "bold": true,
+        "margin": [
+          0,
+          10,
+          0,
+          10
+        ]
+      },
+      "form-header": {
+        "color": "#484848",
+        "fontFamily": "Roboto",
+        "fontSize": 16,
+        "bold": true,
+        "letterSpacing": 0.74
+      },
+      "form-sub-header": {
+        "color": "#484848",
+        "fontFamily": "Roboto",
+        "fontSize": 13,
+        "letterSpacing": 1.6,
+        "margin": [
+          0,
+          6,
+          0,
+          0
+        ]
+      },
+      "form-body": {
+        "fontSize": 12,
+        "color": "#484848",
+        "margin": [
+          -25,
+          18,
+          -8,
+          -8
+        ]
+      },
+      "form-sub-body": {
+        "fontSize": 12,
+        "color": "#484848"
+      },
+      "footer-content": {
+        "color": "#484848",
+        "fontSize": 11,
+        "margin": [
+          30,
+          -20,
+          0,
+          0
+        ]
+      },
+      "footer-text": {
+        "color": "#000000",
+        "alignment": "left"
+      },
+      "footer-seal": {
+        "margin": [
+          0,
+          30,
+          0,
+          20
+        ],
+        "bold": true,
+        "color": "#000000",
+        "alignment": "left"
+      },
+      "footer-signature": {
+        "margin": [
+          0,
+          50,
+          0,
+          0
+        ],
+        "bold": true,
+        "color": "#000000",
+        "alignment": "right"
+      }
+    }
+  }
+}
