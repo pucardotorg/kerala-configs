@@ -61,9 +61,9 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: ADVOCATE-OFFICE
-      objecIdJsonPath: $.updateMemberAccess.memberId
-      tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
-      transactionCodeJsonPath: $.updateMemberAccess.officeAdvocateId
+      objecIdJsonPath: $.memberId
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.officeAdvocateId
       auditAttributeBasePath: updateMemberAccess
       queryMaps:
         - query: UPDATE dristi_advocate_office_member SET access_type=?, allow_case_create=?, add_new_cases_automatically=?, last_modified_by=?, last_modified_time=? WHERE office_advocate_id=? AND member_id=?;
