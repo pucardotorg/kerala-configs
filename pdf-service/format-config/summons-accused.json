@@ -488,8 +488,7 @@
         "image": "{{courtSeal}}",
         "width": 80,
         "height": 80,
-        "absolutePosition": { "x": 440, "y": 730 },
-        "opacity": 0.5
+        "absolutePosition": { "x": 440, "y": 730 }
       }
     ],
     "styles": {
