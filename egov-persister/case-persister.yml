@@ -1076,3 +1076,30 @@ serviceMaps:
             - jsonPath: $.leaveOffice.auditDetails.lastModifiedTime
             - jsonPath: $.leaveOffice.officeAdvocateId
             - jsonPath: $.leaveOffice.memberId
+
+    - version: 1.0
+      description: Persists advocate office case members
+      fromTopic: process-case-specific-access
+      isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objecIdJsonPath: $.members.*.id
+      queryMaps:
+        - query: INSERT INTO dristi_advocate_office_case_member (id, tenant_id, office_advocate_id, office_advocate_user_uuid, office_advocate_name, case_id, member_id, member_user_uuid, member_type, member_name, is_active, created_by, last_modified_by, created_time, last_modified_time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (case_id, member_id, office_advocate_id) DO UPDATE SET is_active = EXCLUDED.is_active, last_modified_by = EXCLUDED.last_modified_by, last_modified_time = EXCLUDED.last_modified_time;
+          basePath: members.*
+          jsonMaps:
+            - jsonPath: $.members.*.id
+            - jsonPath: $.members.*.tenantId
+            - jsonPath: $.members.*.officeAdvocateId
+            - jsonPath: $.members.*.officeAdvocateUserUuid
+            - jsonPath: $.members.*.officeAdvocateName
+            - jsonPath: $.members.*.caseId
+            - jsonPath: $.members.*.memberId
+            - jsonPath: $.members.*.memberUserUuid
+            - jsonPath: $.members.*.memberType
+            - jsonPath: $.members.*.memberName
+            - jsonPath: $.members.*.isActive
+            - jsonPath: $.members.*.auditDetails.createdBy
+            - jsonPath: $.members.*.auditDetails.lastModifiedBy
+            - jsonPath: $.members.*.auditDetails.createdTime
+            - jsonPath: $.members.*.auditDetails.lastModifiedTime
