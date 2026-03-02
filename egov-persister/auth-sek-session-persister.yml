@@ -10,7 +10,7 @@ serviceMaps:
       tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
       auditAttributeBasePath: $
       queryMaps:
-        - query: INSERT INTO auth_sek_session_data (auth_token, decrypted_sek, bill_id, business_service, service_number, total_due, mobile_number, paid_by, session_time, department_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO auth_sek_session_data (auth_token, decrypted_sek, bill_id, business_service, service_number, total_due, mobile_number, paid_by, session_time, department_id, request_blob) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: $
           jsonMaps:
             - jsonPath: $.AuthSek.authToken
@@ -23,6 +23,9 @@ serviceMaps:
             - jsonPath: $.AuthSek.paidBy
             - jsonPath: $.AuthSek.sessionTime
             - jsonPath: $.AuthSek.departmentId
+            - jsonPath: $.AuthSek.requestBlob
+              type: JSON
+              dbType: JSONB
 
     - version: 1.0
       description: Treasury Payment Data
@@ -33,7 +36,7 @@ serviceMaps:
       tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
       auditAttributeBasePath: $
       queryMaps:
-        - query: INSERT INTO treasury_payment_data (department_id, grn, challan_timestamp, bank_ref_no, bank_timestamp, bank_code, status, cin, amount, party_name, remark_status, remarks, file_store_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO treasury_payment_data (department_id, grn, challan_timestamp, bank_ref_no, bank_timestamp, bank_code, status, cin, amount, party_name, remark_status, remarks, file_store_id, request_blob, response_blob) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: $
           jsonMaps:
             - jsonPath: $.TreasuryPaymentData.departmentId
@@ -49,6 +52,12 @@ serviceMaps:
             - jsonPath: $.TreasuryPaymentData.remarkStatus
             - jsonPath: $.TreasuryPaymentData.remarks
             - jsonPath: $.TreasuryPaymentData.fileStoreId
+            - jsonPath: $.TreasuryPaymentData.requestBlob
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.TreasuryPaymentData.responseBlob
+              type: JSON
+              dbType: JSONB
 
     - version: 1.0
       description: Treasury head breakup mapping
