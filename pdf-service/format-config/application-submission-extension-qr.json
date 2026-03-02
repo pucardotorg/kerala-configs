@@ -14,27 +14,130 @@
                     "style": "header"
                   },
                   {
-                    "text": "{{caseNumber}}",
-                    "style": "subHeader"
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
                   },
                   {
-                    "text": "{{caseName}}",
-                    "style": "subHeader"
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
                   },
                   {
-                    "text": "APPLICATION FOR EXTENSION OF SUBMISSION DEADLINE",
+                    "text": "Date: {{date}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 15]
+                  },
+                  {
+                    "style": "table",
+                    "table": {
+                      "widths": ["30%", "70%"],
+                      "body": [
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "text": "Complainant {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/complainantList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        "{{#accusedList}}",
+                        [
+                          {
+                            "text": "Accused {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/accusedList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Offence",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "S.138 of the Negotiable Instruments Act, 1881",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "text": "{{applicationTitle}}",
                     "style": "applicationTitle"
                   },
                   {
-                    "text": "{{date}}",
-                    "style": "date"
-                  },
-                  {
-                    "text": "Subject: Application for extension of submission timelines",
-                    "style": "subjectText"
+                    "text": "Petitioner Name: {{petitionerName}}",
+                    "style": "bodyText"
                   },
                   {
                     "text": "{{partyName}}, herein referred to as the applicant, represented by Advocate {{advocateName}}, respectfully submits as follows:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Reason for extension: {{extensionReason}}",
                     "style": "bodyText"
                   },
                   {
@@ -50,19 +153,11 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Reason for extension: {{extensionReason}}",
+                    "text": "The Applicant assures and undertakes to the Honorable Court that this request is made in good faith and will not prejudice the other party.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "The Applicant assures and undertakes that the Hon'ble Court that this request is not made lightly and will not prejudice the other party.",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "Therefore, the Applicant humbly requests the Hon'ble Court to consider this application and pray the court to grant the requested extension above mentioned.",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "Prayer: {{prayer}}",
+                    "text": "Therefore, the Applicant humbly requests the Honorable Court to consider this application and grant the requested extension mentioned above",
                     "style": "bodyText"
                   },
                   {
@@ -77,14 +172,6 @@
                     "text": "{{advocateSignature}}",
                     "style": "signature",
                     "margin": [0, 60, 0, 5]
-                  },
-                  {
-                    "text": "{{advocateName}}",
-                    "style": "signature"
-                  },
-                  {
-                    "text": "{{barRegistrationNumber}}",
-                    "style": "signature"
                   },
                   {
                     "text": "Advocate for {{partyName}}",

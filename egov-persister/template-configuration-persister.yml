@@ -7,7 +7,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: TEMPLATE
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: templateConfiguration
@@ -43,7 +43,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: TEMPLATE
-      objectIdJsonPath: $.id
+      objecIdJsonPath: $.id
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.id
       auditAttributeBasePath: templateConfiguration

@@ -13,9 +13,9 @@
           {
             "direct": [
               {
-                "variable": "courtName",
+                "variable": "courtComplex",
                 "value": {
-                  "path": "$.courtName"
+                  "path": "$.courtComplex"
                 }
               },
               {
@@ -31,15 +31,15 @@
                 }
               },
               {
-                "variable": "applicationNumber",
+                "variable": "date",
                 "value": {
-                  "path": "$.applicationNumber"
+                  "path": "$.date"
                 }
               },
               {
-                "variable": "applicationYear",
+                "variable": "applicationTitle",
                 "value": {
-                  "path": "$.applicationYear"
+                  "path": "$.applicationTitle"
                 }
               },
               {
@@ -61,33 +61,15 @@
                 }
               },
               {
-                "variable": "specifyMechanism",
+                "variable": "petitionerName",
                 "value": {
-                  "path": "$.specifyMechanism"
-                }
-              },
-              {
-                "variable": "settlementStatus",
-                "value": {
-                  "path": "$.settlementStatus"
-                }
-              },
-              {
-                "variable": "prayer",
-                "value": {
-                  "path": "$.prayer"
+                  "path": "$.petitionerName"
                 }
               },
               {
                 "variable": "additionalComments",
                 "value": {
                   "path": "$.additionalComments"
-                }
-              },
-              {
-                "variable": "location",
-                "value": {
-                  "path": "$.location"
                 }
               },
               {
@@ -121,9 +103,25 @@
                 }
               },
               {
-                "variable": "barRegistrationNumber",
+                "variable": "complainantList",
                 "value": {
-                  "path": "$.barRegistrationNumber"
+                  "path": "$.complainantList"
+                },
+                "type": "function",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              },
+              {
+                "variable": "accusedList",
+                "value": {
+                  "path": "$.accusedList"
+                },
+                "type": "function",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              },
+              {
+                "variable": "petitionerName",
+                "value": {
+                  "path": "$.petitionerName"
                 }
               },
               {
