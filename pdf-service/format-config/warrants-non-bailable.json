@@ -16,25 +16,13 @@
                     "style": "form-no"
                   },
                   {
-                    "text": "WARRANT OF ARREST",
-                    "style": "document-title"
-                  },
-                  {
-                    "text": "Non-Bailable Warrant",
+                    "text": "NON-BAILABLE WARRANT OF ARREST",
                     "style": "form-sub-header",
                     "margin": [0, 5, 0, 5]
                   },
                   {
                     "text": "(See section 72)",
                     "style": "reference"
-                  },
-                  {
-                    "text": "IN THE {{courtName}}",
-                    "style": "form-sub-header"
-                  },
-                  {
-                    "text": "Summary Trial No. {{courtCaseNumber}}",
-                    "style": "form-sub-header"
                   }
                 ],
                 "alignment": "center",
@@ -44,12 +32,6 @@
                   0,
                   20
                 ]
-              }
-            ],
-            [
-              {
-                "text": "Next Hearing Date: {{hearingDate}}",
-                "style": "form-sub-body-right"
               }
             ]
           ]
@@ -65,7 +47,7 @@
           "body": [
             [
               {
-                "text": "To SHO, {{executorName}},",
+                "text": "To SHO, {{executorName}} Police Station",
                 "style": "form-sub-body"
               }
             ],
@@ -73,11 +55,7 @@
               {
                 "text": [
                   {
-                    "text": "Whereas ",
-                    "bold": true
-                  },
-                  {
-                    "text": "{{respondentName}} of {{respondentAddress}} stands charged with the offence U/s. 138 of N.I ACT, you are hereby directed to arrest the said Accused name and to produce him before me. Herein fail not."
+                    "text": "WHEREAS {{respondentName}} of {{respondentAddress}} stands charged with the offence U/s. 138 of Negotiable Instruments Act, you are hereby directed to arrest {{respondentName}} and to produce him before me. Herein fail not."
                   }
                 ],
                 "style": "form-sub-body"
