@@ -1,5 +1,5 @@
 {
-  "key": "warrants-non-bailable",
+  "key": "warrant-witness",
   "config": {
     "content": [
       {
@@ -12,16 +12,15 @@
               {
                 "stack": [
                   {
-                    "text": "FORM NO. 2",
+                    "text": "FORM No. 9",
                     "style": "form-no"
                   },
                   {
-                    "text": "NON-BAILABLE WARRANT OF ARREST",
-                    "style": "form-sub-header",
-                    "margin": [0, 5, 0, 5]
+                    "text": "WARRANT IN THE FIRST INSTANCE TO BRING UP A WITNESS",
+                    "style": "document-title"
                   },
                   {
-                    "text": "(See section 72)",
+                    "text": "(See section 90)",
                     "style": "reference"
                   }
                 ],
@@ -47,7 +46,7 @@
           "body": [
             [
               {
-                "text": "To SHO, {{executorName}} Police Station",
+                "text": "To {{executorName}}.",
                 "style": "form-sub-body"
               }
             ],
@@ -55,11 +54,17 @@
               {
                 "text": [
                   {
-                    "text": "WHEREAS {{respondentName}} of {{respondentAddress}} stands charged with the offence U/s. 138 of Negotiable Instruments Act, you are hereby directed to arrest {{respondentName}} and to produce him before me. Herein fail not."
+                    "text": "Whereas complaint has been made before me that {{respondentName}} of {{respondentAddress}} has (or is suspected to have) committed the offence U/s. 138 of Negotiable Instruments Act, and it appears likely that {{respondentName}} can give evidence concerning the said complaint, and whereas I have good and sufficient reason to believe that he will not attend as a witness on the hearing of the said complaint unless compelled to do so;"
                   }
                 ],
                 "style": "form-sub-body"
-              }              
+              }
+            ],
+            [
+              {
+                "text": "This is to authorise and require you to arrest {{respondentName}}, and on the {{hearingDate}} to bring him before the Special Court of Judicial Magistrate of the First Class, for the trial of cases under section 138 of Negotiable Instruments Act, 1881 at Kollam (‘24x7 ON Courts’) to be examined touching the offence complained of.",
+                "style": "form-sub-body"
+              }
             ]
           ]
         },
@@ -80,7 +85,7 @@
           "body": [
             [
               {
-                "text": "Dated, this {{issueDate}}.",
+                "text": "Dated, this day of {{issueDate}}.",
                 "style": "footer-text"
               }
             ],
@@ -118,9 +123,12 @@
         ]
       },
       "document-title": {
-        "bold":true,
+        "bold": true,
         "margin": [
-          0,10,0,10
+          0,
+          10,
+          0,
+          10
         ]
       },
       "form-header": {
@@ -137,7 +145,7 @@
         "letterSpacing": 1.6,
         "margin": [
           0,
-          10,
+          6,
           0,
           0
         ]
@@ -156,11 +164,6 @@
         "fontSize": 12,
         "color": "#484848"
       },
-      "form-sub-body-right": {
-        "fontSize": 12,
-        "color": "#484848",
-        "alignment": "right"
-      },
       "footer-content": {
         "color": "#484848",
         "fontSize": 11,
@@ -172,20 +175,13 @@
         ]
       },
       "footer-text": {
-        "margin": [
-          0,
-          15,
-          0,
-          15
-        ],
-        "bold": true,
         "color": "#000000",
         "alignment": "left"
       },
       "footer-seal": {
         "margin": [
           0,
-          15,
+          30,
           0,
           20
         ],
