@@ -32,7 +32,7 @@ ServiceMaps:
               - inJsonPath: $.clerk.currentProcessInstance.state.uuid
                 outJsonPath: $.Data.status
             externalUriMapping:
-              - path: http://egov-workflow-v2.pucar-prod:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2.pucar-stg:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.clerk.applicationNumber,tenantId=$.clerk.tenantId,history=true
                 apiRequest:
                   {
@@ -68,7 +68,7 @@ ServiceMaps:
                   - inJsonPath: $.ProcessInstances
                     outJsonPath: $.Data.history
                     
-              - path: http://individual.pucar-prod:8080/individual/v1/_search
+              - path: http://individual.pucar-stg:8080/individual/v1/_search
                 queryParam: limit=1000,offset=0,tenantId=$.clerk.tenantId,includeDeleted=true
                 apiRequest:
                   {
@@ -149,7 +149,7 @@ ServiceMaps:
               - inJsonPath: $.clerk.currentProcessInstance.state.uuid
                 outJsonPath: $.Data.status
             externalUriMapping:
-              - path: http://egov-workflow-v2.pucar-prod:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2.pucar-stg:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.clerk.applicationNumber,tenantId=$.clerk.tenantId,history=true
                 apiRequest:
                   {
@@ -185,7 +185,7 @@ ServiceMaps:
                   - inJsonPath: $.ProcessInstances
                     outJsonPath: $.Data.history
 
-              - path: http://individual.pucar-prod:8080/individual/v1/_search
+              - path: http://individual.pucar-stg:8080/individual/v1/_search
                 queryParam: limit=1000,offset=0,tenantId=$.clerk.tenantId,includeDeleted=true
                 apiRequest:
                   {

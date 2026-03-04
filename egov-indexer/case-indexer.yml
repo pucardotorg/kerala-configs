@@ -85,7 +85,7 @@ ServiceMaps:
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.caseDetails.additionalDetails
             externalUriMapping:
-              - path: http://egov-workflow-v2.pucar-prod:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2.pucar-stg:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.filingNumber,tenantId=$.tenantId,history=true
                 apiRequest:
                   {
@@ -206,7 +206,7 @@ ServiceMaps:
               - inJsonPath: $.additionalDetails
                 outJsonPath: $.Data.caseDetails.additionalDetails
             externalUriMapping:
-              - path: http://egov-workflow-v2.pucar-prod:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2.pucar-stg:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.filingNumber,tenantId=$.tenantId,history=true
                 apiRequest:
                   {
@@ -327,7 +327,7 @@ ServiceMaps:
               - inJsonPath: $.judgementOrderDetails
                 outJsonPath: $.Data.caseDetails.judgementOrderDetails
             externalUriMapping:
-              - path: http://egov-workflow-v2.pucar-prod:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2.pucar-stg:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.filingNumber,tenantId=$.tenantId,history=true
                 apiRequest:
                   {
@@ -441,7 +441,7 @@ ServiceMaps:
                 outJsonPath: $.@timestamp
 
             externalUriMapping:
-              - path: http://individual.pucar-prod:8080/individual/v1/_search?limit=1&offset=0&tenantId=kl
+              - path: http://individual.pucar-stg:8080/individual/v1/_search?limit=1&offset=0&tenantId=kl
                 apiRequest: {
                   "Individual": {
                     "individualId": "$.litigants[0].individualId"
