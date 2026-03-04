@@ -130,7 +130,7 @@
                   },
                   {
                     "text": [
-                      "{{partyName}}, the {{partyType}}, submits this application before this Hon’ble Court to request",
+                      "{{designatedName}}, the {{designation}}, submits this application before this Hon’ble Court to request",
                       {
                         "text": " Issuance of certified true copies",
                         "bold": true
@@ -167,6 +167,7 @@
                     "text": "Signature of Applicant",
                     "style": "signature"
                   },
+                  "{{#requestedDocumentList}}",
                   {
                     "pageBreak": "before",
                     "style": "header",
@@ -292,7 +293,7 @@
                   {
                     "text": [
                       { "text": "Name of Requested Document: ", "bold": true },
-                      "{{requestedDocuments}}"
+                      "{{documentName}}"
                     ],
                     "margin": [0, 4]
                   },
@@ -347,7 +348,8 @@
                   {
                     "text": "Junior Superintendent",
                     "style": "zeroMargin"
-                  }
+                  },
+                  "{{/requestedDocumentList}}"
                 ],
                 "alignment": "left",
                 "margin": [0, 20, 0, 20]
