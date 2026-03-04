@@ -1,0 +1,419 @@
+{
+  "key": "application-certified-true-copies",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "{{courtComplex}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
+                  },
+                  {
+                    "text": "Date: {{date}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 15]
+                  },
+                  {
+                    "style": "table",
+                    "table": {
+                      "widths": ["30%", "70%"],
+                      "body": [
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "text": "Complainant {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/complainantList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        "{{#accusedList}}",
+                        [
+                          {
+                            "text": "Accused {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/accusedList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Offence",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "S.138 of the Negotiable Instruments Act, 1881",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "text": "{{applicationTitle}}",
+                    "style": "applicationTitle"
+                  },
+                  {
+                    "text": [
+                      "{{designatedName}}, the {{designation}}, submits this application before this Hon’ble Court to request",
+                      {
+                        "text": " Issuance of certified true copies",
+                        "bold": true
+                      },
+                      " for the following documents:"
+                    ],
+                    "style": "bodyText"
+                  },
+                  {
+                    "ol": [
+                      "{{#requestedDocumentList}}",
+                      "{{documentName}}",
+                      "{{/requestedDocumentList}}"
+                    ],
+                    "style": "bodyText",
+                    "margin": [20, 5, 0, 5]
+                  },
+                  "{{#noRepresentingParty}}",
+                  {
+                    "text": "The petitioner is not a party in the case, and has submitted an affidavit stating the reasons behind their request.",
+                    "style": "bodyText"
+                  },
+                  "{{/noRepresentingParty}}",
+                  {
+                    "text": "It is humbly prayed that the Hon’ble Court considers this request and issue the requested certified copies.",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{applicantSignature}}",
+                    "style": "signature",
+                    "margin": [0, 60, 0, 5]
+                  },
+                  {
+                    "text": "Signature of Applicant",
+                    "style": "signature"
+                  },
+                  "{{#requestedDocumentList}}",
+                  {
+                    "pageBreak": "before",
+                    "style": "header",
+                    "table": {
+                      "widths": ["*"],
+                      "body": [
+                        [
+                          {
+                            "stack": [
+                              {
+                                "text": "Endorsement on Certified Copy",
+                                "style": "header"
+                              }
+                            ],
+                            "alignment": "center",
+                            "margin": [0, 20, 0, 20]
+                          }
+                        ]
+                      ]
+                    },
+                    "layout": "noBorders"
+                  },
+                  {
+                    "text": [
+                      { "text": "Court Name: ", "bold": true },
+                      "{{courtName}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      { "text": "Case Number: ", "bold": true },
+                      "{{caseNumber}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      { "text": "Name of the Applicant: ", "bold": true },
+                      "{{applicantName}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      { "text": "Application No.: ", "bold": true },
+                      "{{applicationNumber}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      { "text": "Date of Application: ", "bold": true },
+                      "{{applicationDate}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Calling for Stamp Papers: ",
+                        "bold": true
+                      },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Production of Stamp Papers: ",
+                        "bold": true
+                      },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Calling for Additional Stamp Papers: ",
+                        "bold": true
+                      },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Production of Additional Stamp Papers: ",
+                        "bold": true
+                      },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      { "text": "Date When Copy Made Ready: ", "bold": true },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Date Notified for Appearance to Receive the Copy: ",
+                        "bold": true
+                      },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      { "text": "Date of Delivery of Copy: ", "bold": true },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  { "text": "", "margin": [0, 20] },
+                  {
+                    "text": [
+                      { "text": "Name of Requested Document: ", "bold": true },
+                      "{{documentName}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  "{{#isMagistrateApproved}}",
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Application Approval (by Magistrate): ",
+                        "bold": true
+                      },
+                      "{{applicationApprovalDate}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  "{{/isMagistrateApproved}}",
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Issuance of Certified True Copy: ",
+                        "bold": true
+                      },
+                      "{{issuanceDate}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "columns": [
+                      {
+                        "width": "50%",
+                        "stack": [
+                          {
+                            "text": "{{judgeSignature}}",
+                            "style": "judgeSignature"
+                          }
+                        ]
+                      },
+                      {
+                        "width": "50%",
+                        "stack": [
+                          {
+                            "text": "{{sealOfCourt}}",
+                            "style": "sealOfCourt"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "text": "{{cmoName}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Junior Superintendent",
+                    "style": "zeroMargin"
+                  },
+                  "{{/requestedDocumentList}}"
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "applicationTitle": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 20, 0, 10]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 0, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "advocateSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 50, 0, 5]
+      },
+      "table": {
+        "fontSize": 13
+      },
+      "tableText": {
+        "fontSize": 13,
+        "margin": [2, 5, 2, 5]
+      },
+      "judgeSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 40, 0, 10]
+      },
+      "sealOfCourt": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 40, 0, 10]
+      },
+      "zeroMargin": {
+        "fontSize": 11,
+        "margin": [0, 0, 0, 0]
+      }
+    }
+  }
+}
