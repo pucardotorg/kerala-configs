@@ -87,9 +87,8 @@
               },
               {
                 "variable": "sealOfCourt",
-                "value": {
-                  "path": "$.sealOfCourt"
-                }
+                "url": "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=f8836e1d-b9da-488d-85fd-7eec4987bafc",
+                "type": "image"
               },
               {
                 "variable": "cmoName",

@@ -174,8 +174,11 @@
                         "width": "50%",
                         "stack": [
                           {
-                            "text": "{{sealOfCourt}}",
-                            "style": "sealOfCourt"
+                            "image": "{{sealOfCourt}}",
+                            "width": 80,
+                            "height": 80,
+                            "margin": [10, 10, 10],
+                            "style": "judgeSignature"
                           }
                         ]
                       }
