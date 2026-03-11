@@ -95,6 +95,12 @@
                 "value": {
                   "path": "$.cmoName"
                 }
+              },
+              {
+                "variable": "documentName",
+                "value": {
+                  "path": "$.documentName"
+                }
               }
             ]
           }
