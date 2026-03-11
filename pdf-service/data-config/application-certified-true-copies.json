@@ -53,46 +53,27 @@
                 "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
               },
               {
-                "variable": "advocateName",
+                "variable": "selectedDocumentList",
                 "value": {
-                  "path": "$.advocateName"
-                }
-              },
-
-              {
-                "variable": "applicationTitle",
-                "value": {
-                  "path": "$.applicationTitle"
+                  "path": "$.selectedDocumentList"
                 }
               },
               {
-                "variable": "partyName",
+                "variable": "isPartyToCase",
                 "value": {
-                  "path": "$.partyName"
+                  "path": "$.isPartyToCase"
                 }
               },
               {
-                "variable": "partyType",
+                "variable": "applicantName",
                 "value": {
-                  "path": "$.partyType"
+                  "path": "$.applicantName"
                 }
               },
               {
-                "variable": "requestedDocumentList",
+                "variable": "designation",
                 "value": {
-                  "path": "$.requestedDocumentList"
-                }
-              },
-              {
-                "variable": "noRepresentingParty",
-                "value": {
-                  "path": "$.noRepresentingParty"
-                }
-              },
-              {
-                "variable": "applicantSignature",
-                "value": {
-                  "path": "$.applicantSignature"
+                  "path": "$.designation"
                 }
               }
             ]

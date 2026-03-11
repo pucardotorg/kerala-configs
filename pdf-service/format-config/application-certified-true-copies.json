@@ -125,14 +125,14 @@
                     }
                   },
                   {
-                    "text": "{{applicationTitle}}",
+                    "text": "Application for Certified True Copies",
                     "style": "applicationTitle"
                   },
                   {
                     "text": [
-                      "{{designatedName}}, the {{designation}}, submits this application before this Hon’ble Court to request",
+                      "{{designatedName}},{{#isPartyToCase}} the {{designation}}{{/isPartyToCase}}, submits this application before this Hon'ble Court to request ",
                       {
-                        "text": " Issuance of certified true copies",
+                        "text": "Issuance of certified true copies",
                         "bold": true
                       },
                       " for the following documents:"
@@ -141,27 +141,25 @@
                   },
                   {
                     "ol": [
-                      "{{#requestedDocumentList}}",
-                      "{{documentName}}",
-                      "{{/requestedDocumentList}}"
+                      "{{#selectedDocumentList}}",
+                      {
+                        "text": "{{.}}",
+                        "style": "bodyText"
+                      },
+                      "{{/selectedDocumentList}}"
                     ],
                     "style": "bodyText",
                     "margin": [20, 5, 0, 5]
                   },
-                  "{{#noRepresentingParty}}",
+                  "{{^isPartyToCase}}",
                   {
                     "text": "The petitioner is not a party in the case, and has submitted an affidavit stating the reasons behind their request.",
                     "style": "bodyText"
                   },
-                  "{{/noRepresentingParty}}",
+                  "{{/isPartyToCase}}",
                   {
-                    "text": "It is humbly prayed that the Hon’ble Court considers this request and issue the requested certified copies.",
+                    "text": "It is humbly prayed that the Hon'ble Court considers this request and issue the requested certified copies.",
                     "style": "bodyText"
-                  },
-                  {
-                    "text": "{{applicantSignature}}",
-                    "style": "signature",
-                    "margin": [0, 60, 0, 5]
                   },
                   {
                     "text": "Signature of Applicant",
