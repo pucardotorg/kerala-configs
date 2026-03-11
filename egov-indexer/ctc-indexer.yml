@@ -18,6 +18,8 @@ ServiceMaps:
                 outJsonPath: $.Data.ctcApplicationDetails.id
               - inJsonPath: $.tenantId
                 outJsonPath: $.Data.ctcApplicationDetails.tenantId
+              - inJsonPath: $.dateOfApplicationApproval
+                outJsonPath: $.Data.ctcApplicationDetails.dateOfApplicationApproval
               - inJsonPath: $.ctcApplicationNumber
                 outJsonPath: $.Data.ctcApplicationDetails.ctcApplicationNumber
               - inJsonPath: $.caseNumber
@@ -86,6 +88,8 @@ ServiceMaps:
                 outJsonPath: $.Data.ctcApplicationDetails.tenantId
               - inJsonPath: $.ctcApplicationNumber
                 outJsonPath: $.Data.ctcApplicationDetails.ctcApplicationNumber
+              - inJsonPath: $.dateOfApplicationApproval
+                outJsonPath: $.Data.ctcApplicationDetails.dateOfApplicationApproval
               - inJsonPath: $.caseNumber
                 outJsonPath: $.Data.ctcApplicationDetails.caseNumber
               - inJsonPath: $.caseTitle
