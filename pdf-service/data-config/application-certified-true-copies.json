@@ -1,0 +1,85 @@
+{
+  "key": "application-certified-true-copies",
+  "DataConfigs": {
+    "serviceName": "pdf-service",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtComplex",
+                "value": {
+                  "path": "$.courtComplex"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "complainantList",
+                "value": {
+                  "path": "$.complainantList"
+                },
+                "type": "function",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              },
+              {
+                "variable": "accusedList",
+                "value": {
+                  "path": "$.accusedList"
+                },
+                "type": "function",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              },
+              {
+                "variable": "selectedDocumentList",
+                "value": {
+                  "path": "$.selectedDocumentList"
+                }
+              },
+              {
+                "variable": "isPartyToCase",
+                "value": {
+                  "path": "$.isPartyToCase"
+                }
+              },
+              {
+                "variable": "applicantName",
+                "value": {
+                  "path": "$.applicantName"
+                }
+              },
+              {
+                "variable": "designation",
+                "value": {
+                  "path": "$.designation"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

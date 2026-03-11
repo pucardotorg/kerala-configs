@@ -1,0 +1,105 @@
+{
+  "key": "application-ctc-certification",
+  "DataConfigs": {
+    "serviceName": "pdf-service",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "caseName",
+                "value": {
+                  "path": "$.caseName"
+                }
+              },
+              {
+                "variable": "date",
+                "value": {
+                  "path": "$.date"
+                }
+              },
+              {
+                "variable": "requestedDocumentList",
+                "value": {
+                  "path": "$.requestedDocumentList"
+                }
+              },
+
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "applicantName",
+                "value": {
+                  "path": "$.applicantName"
+                }
+              },
+              {
+                "variable": "applicationNumber",
+                "value": {
+                  "path": "$.applicationNumber"
+                }
+              },
+              {
+                "variable": "applicationDate",
+                "value": {
+                  "path": "$.applicationDate"
+                }
+              },
+              {
+                "variable": "isMagistrateApproved",
+                "value": {
+                  "path": "$.isMagistrateApproved"
+                }
+              },
+              {
+                "variable": "applicationApprovalDate",
+                "value": {
+                  "path": "$.applicationApprovalDate"
+                }
+              },
+              {
+                "variable": "issuanceDate",
+                "value": {
+                  "path": "$.issuanceDate"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              },
+              {
+                "variable": "sealOfCourt",
+                "url": "https://oncourts.kerala.gov.in/minio-filestore/v1/files/id?tenantId=kl&fileStoreId=f8836e1d-b9da-488d-85fd-7eec4987bafc",
+                "type": "image"
+              },
+              {
+                "variable": "cmoName",
+                "value": {
+                  "path": "$.cmoName"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
