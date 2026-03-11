@@ -130,7 +130,7 @@
                   },
                   {
                     "text": [
-                      "{{designatedName}},{{#isPartyToCase}} the {{designation}}{{/isPartyToCase}}, submits this application before this Hon'ble Court to request ",
+                      "{{applicantName}},{{#isPartyToCase}} the {{designation}},{{/isPartyToCase}} submits this application before this Hon'ble Court to request ",
                       {
                         "text": "Issuance of certified true copies",
                         "bold": true
