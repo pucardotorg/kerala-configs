@@ -144,7 +144,7 @@
                       "{{#selectedDocumentList}}",
                       {
                         "text": "{{.}}",
-                        "style": "bodyText"
+                        "style": "documentName"
                       },
                       "{{/selectedDocumentList}}"
                     ],
@@ -202,6 +202,10 @@
       "bodyText": {
         "fontSize": 11,
         "margin": [0, 10, 0, 10]
+      },
+      "documentName": {
+        "fontSize": 11,
+        "margin": [0, 0, 0, 3]
       },
       "advocateSignature": {
         "fontSize": 12,
