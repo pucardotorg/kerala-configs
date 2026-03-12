@@ -138,7 +138,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CTC
-      objectIdJsonPath: $.ctcApplicationNumber
+      objecIdJsonPath: $.ctcApplicationNumber
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.ctcApplicationNumber
       queryMaps:
