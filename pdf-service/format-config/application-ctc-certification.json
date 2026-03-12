@@ -178,7 +178,8 @@
                             "width": 80,
                             "height": 80,
                             "margin": [10, 10, 10],
-                            "style": "judgeSignature"
+                            "style": "judgeSignature",
+                            "alignment": "right"
                           }
                         ]
                       }
