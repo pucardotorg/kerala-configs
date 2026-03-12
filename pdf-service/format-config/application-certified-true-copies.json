@@ -207,7 +207,7 @@
         "fontSize": 11,
         "margin": [0, 0, 0, 3]
       },
-      "advocateSignature": {
+      "signature": {
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, 50, 0, 5]
@@ -218,11 +218,6 @@
       "tableText": {
         "fontSize": 13,
         "margin": [2, 5, 2, 5]
-      },
-      "judgeSignature": {
-        "fontSize": 12,
-        "alignment": "left",
-        "margin": [0, 40, 0, 10]
       },
       "sealOfCourt": {
         "fontSize": 12,
