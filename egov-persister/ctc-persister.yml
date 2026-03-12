@@ -59,7 +59,7 @@ serviceMaps:
       transactionCodeJsonPath: $.ctcApplicationNumber
       auditAttributeBasePath: ctcApplication
       queryMaps:
-        - query: UPDATE dristi_ctc_applications SET date_of_application_approval=?, case_number=?, case_title=?, filing_number=?, cnr_number=?, court_id=?, applicant_name=?, mobile_number=?, is_party_to_case=?, party_designation=?, affidavit_document=?, documents=?, selected_case_bundle = ?, case_bundles=?, total_pages=?, status=?, judge_comments=?, last_modified_by=?, last_modified_time=? WHERE id=?;
+        - query: UPDATE dristi_ctc_applications SET date_of_application_approval=?, case_number=?, case_title=?, filing_number=?, cnr_number=?, court_id=?, applicant_name=?, mobile_number=?, is_party_to_case=?, party_designation=?, affidavit_document=?, documents=?, selected_case_bundle = ?, case_bundles=?, total_pages=?, status=?, judge_comments=?, payment_receipt=?, last_modified_by=?, last_modified_time=? WHERE id=?;
           basePath: ctcApplication
           jsonMaps:
             - jsonPath: $.ctcApplication.dateOfApplicationApproval
@@ -87,6 +87,9 @@ serviceMaps:
             - jsonPath: $.ctcApplication.totalPages
             - jsonPath: $.ctcApplication.status
             - jsonPath: $.ctcApplication.judgeComments
+            - jsonPath: $.ctcApplication.paymentReceipt
+              type: JSON
+              dbType: JSONB
             - jsonPath: $.ctcApplication.auditDetails.lastModifiedBy
             - jsonPath: $.ctcApplication.auditDetails.lastModifiedTime
             - jsonPath: $.ctcApplication.id
@@ -138,7 +141,7 @@ serviceMaps:
       isTransaction: true
       isAuditEnabled: true
       module: CTC
-      objectIdJsonPath: $.ctcApplicationNumber
+      objecIdJsonPath: $.ctcApplicationNumber
       tenantIdJsonPath: $.tenantId
       transactionCodeJsonPath: $.ctcApplicationNumber
       queryMaps:
