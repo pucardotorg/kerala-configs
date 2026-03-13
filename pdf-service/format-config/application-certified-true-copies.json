@@ -130,9 +130,9 @@
                   },
                   {
                     "text": [
-                      "{{applicantName}},{{#isPartyToCase}} the {{designation}},{{/isPartyToCase}} submits this application before this Hon'ble Court to request ",
+                      "{{applicantName}},{{#isPartyToCase}} the {{designation}} in case {{caseNumber}},{{/isPartyToCase}} submits this application before this Hon'ble Court to request ",
                       {
-                        "text": "Issuance of certified true copies",
+                        "text": "issuance of certified true copies",
                         "bold": true
                       },
                       " for the following documents:"
@@ -154,12 +154,12 @@
                   "{{^isPartyToCase}}",
                   {
                     "text": "The petitioner is not a party in the case, and has submitted an affidavit stating the reasons behind their request.",
-                    "style": "bodyText"
+                    "style": "subText"
                   },
                   "{{/isPartyToCase}}",
                   {
                     "text": "It is humbly prayed that the Hon'ble Court considers this request and issue the requested certified copies.",
-                    "style": "bodyText"
+                    "style": "text"
                   },
                   {
                     "text": "Signature of Applicant",
@@ -202,6 +202,14 @@
       "bodyText": {
         "fontSize": 11,
         "margin": [0, 10, 0, 10]
+      },
+      "subText": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 0]
+      },
+      "text": {
+        "fontSize": 11,
+        "margin": [0, 5, 0, 10]
       },
       "documentName": {
         "fontSize": 11,
