@@ -166,7 +166,7 @@
                         "stack": [
                           {
                             "text": "{{judgeSignature}}",
-                            "style": "judgeSignature"
+                            "style": "bodyText"
                           }
                         ]
                       },
