@@ -166,7 +166,7 @@ serviceMaps:
       transactionCodeJsonPath: $.ctcApplicationNumber
       queryMaps:
         - query: UPDATE dristi_ctc_applications SET documents=?, last_modified_by=?, last_modified_time=? WHERE ctc_application_number=?;
-          basePath: $
+          basePath: $ ctcApplication
           jsonMaps:
             - jsonPath: $.documents
               type: JSON
