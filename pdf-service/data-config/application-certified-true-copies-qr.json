@@ -1,5 +1,5 @@
 {
-  "key": "application-delay-condonation-qr",
+  "key": "application-certified-true-copies-qr",
   "DataConfigs": {
     "serviceName": "pdf-service",
     "version": "1.0.0",
@@ -37,66 +37,6 @@
                 }
               },
               {
-                "variable": "partyName",
-                "value": {
-                  "path": "$.partyName"
-                }
-              },
-              {
-                "variable": "partyType",
-                "value": {
-                  "path": "$.partyType"
-                }
-              },
-              {
-                "variable": "advocateName",
-                "value": {
-                  "path": "$.advocateName"
-                }
-              },
-              {
-                "variable": "applicationTitle",
-                "value": {
-                  "path": "$.applicationTitle"
-                }
-              },
-              {
-                "variable": "reasonForDelay",
-                "value": {
-                  "path": "$.reasonForDelay"
-                }
-              },
-              {
-                "variable": "additionalComments",
-                "value": {
-                  "path": "$.additionalComments"
-                }
-              },
-              {
-                "variable": "day",
-                "value": {
-                  "path": "$.day"
-                }
-              },
-              {
-                "variable": "month",
-                "value": {
-                  "path": "$.month"
-                }
-              },
-              {
-                "variable": "year",
-                "value": {
-                  "path": "$.year"
-                }
-              },
-              {
-                "variable": "advocateSignature",
-                "value": {
-                  "path": "$.advocateSignature"
-                }
-              },
-              {
                 "variable": "complainantList",
                 "value": {
                   "path": "$.complainantList"
@@ -113,24 +53,110 @@
                 "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
               },
               {
-                "variable": "petitionerName",
+                "variable": "advocateName",
                 "value": {
-                  "path": "$.petitionerName"
+                  "path": "$.advocateName"
+                }
+              },
+
+              {
+                "variable": "applicationTitle",
+                "value": {
+                  "path": "$.applicationTitle"
                 }
               },
               {
-                "variable": "qrCodeUrl",
+                "variable": "partyName",
                 "value": {
-                  "path": "$.qrCodeUrl"
+                  "path": "$.partyName"
                 }
-              }
-            ]
-          },
-          {
-            "qrcodeConfig": [
+              },
               {
-                "variable": "qrCodeImage",
-                "value": "{{qrCodeUrl}}"
+                "variable": "partyType",
+                "value": {
+                  "path": "$.partyType"
+                }
+              },
+              {
+                "variable": "noRepresentingParty",
+                "value": {
+                  "path": "$.noRepresentingParty"
+                }
+              },
+              {
+                "variable": "applicantSignature",
+                "value": {
+                  "path": "$.applicantSignature"
+                }
+              },
+
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "applicantName",
+                "value": {
+                  "path": "$.applicantName"
+                }
+              },
+              {
+                "variable": "applicationNumber",
+                "value": {
+                  "path": "$.applicationNumber"
+                }
+              },
+              {
+                "variable": "applicationDate",
+                "value": {
+                  "path": "$.applicationDate"
+                }
+              },
+              {
+                "variable": "requestedDocuments",
+                "value": {
+                  "path": "$.requestedDocuments"
+                },
+                "type": "function",
+                "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
+              },
+              {
+                "variable": "isMagistrateApproved",
+                "value": {
+                  "path": "$.isMagistrateApproved"
+                }
+              },
+              {
+                "variable": "applicationApprovalDate",
+                "value": {
+                  "path": "$.applicationApprovalDate"
+                }
+              },
+              {
+                "variable": "issuanceDate",
+                "value": {
+                  "path": "$.issuanceDate"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              },
+              {
+                "variable": "sealOfCourt",
+                "value": {
+                  "path": "$.sealOfCourt"
+                }
+              },
+              {
+                "variable": "cmoName",
+                "value": {
+                  "path": "$.cmoName"
+                }
               }
             ]
           }

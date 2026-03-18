@@ -1,5 +1,5 @@
 {
-  "key": "application-case-withdrawal",
+  "key": "application-certified-true-copies",
   "DataConfigs": {
     "serviceName": "pdf-service",
     "version": "1.0.0",
@@ -37,54 +37,6 @@
                 }
               },
               {
-                "variable": "applicationTitle",
-                "value": {
-                  "path": "$.applicationTitle"
-                }
-              },
-              {
-                "variable": "petitionerName",
-                "value": {
-                  "path": "$.petitionerName"
-                }
-              },
-              {
-                "variable": "partyName",
-                "value": {
-                  "path": "$.partyName"
-                }
-              },
-              {
-                "variable": "partyType",
-                "value": {
-                  "path": "$.partyType"
-                }
-              },
-              {
-                "variable": "additionalComments",
-                "value": {
-                  "path": "$.additionalComments"
-                }
-              },
-              {
-                "variable": "reasonForWithdrawal",
-                "value": {
-                  "path": "$.reasonForWithdrawal"
-                }
-              },
-              {
-                "variable": "advocateSignature",
-                "value": {
-                  "path": "$.advocateSignature"
-                }
-              },
-              {
-                "variable": "advocateName",
-                "value": {
-                  "path": "$.advocateName"
-                }
-              },
-              {
                 "variable": "complainantList",
                 "value": {
                   "path": "$.complainantList"
@@ -101,27 +53,27 @@
                 "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
               },
               {
-                "variable": "petitionerName",
+                "variable": "selectedDocumentList",
                 "value": {
-                  "path": "$.petitionerName"
+                  "path": "$.selectedDocumentList"
                 }
               },
               {
-                "variable": "day",
+                "variable": "isPartyToCase",
                 "value": {
-                  "path": "$.day"
+                  "path": "$.isPartyToCase"
                 }
               },
               {
-                "variable": "month",
+                "variable": "applicantName",
                 "value": {
-                  "path": "$.month"
+                  "path": "$.applicantName"
                 }
               },
               {
-                "variable": "year",
+                "variable": "designation",
                 "value": {
-                  "path": "$.year"
+                  "path": "$.designation"
                 }
               }
             ]

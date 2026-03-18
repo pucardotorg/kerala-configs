@@ -10,23 +10,130 @@
               {
                 "stack": [
                   {
-                    "text": "{{courtName}}",
+                    "text": "{{courtComplex}}",
                     "style": "header"
                   },
                   {
-                    "text": "{{caseNumber}} and {{caseName}}",
-                    "style": "subHeader"
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
                   },
                   {
-                    "text": "Application No. {{applicationNumber}} of {{applicationYear}}",
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
+                  },
+                  {
+                    "text": "Date: {{date}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 15]
+                  },
+                  {
+                    "style": "table",
+                    "table": {
+                      "widths": ["30%", "70%"],
+                      "body": [
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "text": "Complainant {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/complainantList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        "{{#accusedList}}",
+                        [
+                          {
+                            "text": "Accused {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/accusedList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Offence",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "S.138 of the Negotiable Instruments Act, 1881",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "text": "{{applicationTitle}}",
                     "style": "applicationTitle"
                   },
                   {
-                    "text": "Subject: Application for Settlement of Case",
-                    "style": "subjectText"
+                    "text": "Petitioner Name: {{petitionerName}}",
+                    "style": "bodyText"
                   },
                   {
-                    "text": "My client, {{partyName}}, the {{partyType}}, hereby submits this application before this Honorable Court to request approval of a settlement agreement reached between the parties.",
+                    "text": "{{partyName}}, the {{partyType}}, represented through Advocate {{advocateName}}, hereby submits this application before this Honorable Court to request approval of a settlement agreement reached between the parties.",
                     "style": "bodyText"
                   },
                   {
@@ -34,11 +141,11 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Settlement Mechanism: {{specifyMechanism}}.",
+                    "text": "The petitioner assures and undertakes to the Honorable Court that this application is made in good faith and will not prejudice the other party.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Has the Settlement already been implemented here: {{settlementStatus}}",
+                    "text": "Therefore, the petitioner humbly requests the Honorable Court to consider this application and dismiss the above mentioned case",
                     "style": "bodyText"
                   },
                   {
@@ -46,45 +153,13 @@
                     "style": "bodyText"
                   },
                   {
-                    "text": "Prayer: {{prayer}}",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "1. Approve the settlement agreement attached herewith.",
-                    "style": "ponitwiseText"
-                  },
-                  {
-                    "text": "2. Dismiss the case, {{caseName}}, Case Number {{caseNumber}}, with prejudice.",
-                    "style": "ponitwiseText"
-                  },
-                  {
-                    "text": "3. Allow both parties to bear their own costs and attorney’s fees as specified in the settlement agreement.",
-                    "style": "ponitwiseText"
-                  },
-                  {
-                    "text": "Verification:",
-                    "style": "subjectText"
-                  },
-                  {
-                    "text": "I, {{partyName}}, do hereby verify that the contents above are correct and true to the best of my knowledge and personal belief and no part of it is false and nothing material has been concealed therein.",
-                    "style": "bodyText"
-                  },
-                  {
-                    "text": "Affirmed at {{location}} on this {{day}} of {{month}}, {{year}}.",
-                    "style": "bodyText"
+                    "text": "Dated this {{day}} day of {{month}} {{year}}",
+                    "style": "date"
                   },
                   {
                     "text": "{{advocateSignature}}",
                     "style": "signature",
                     "margin": [0, 60, 0, 5]
-                  },
-                  {
-                    "text": "{{advocateName}}",
-                    "style": "signature"
-                  },
-                  {
-                    "text": "{{barRegistrationNumber}}",
-                    "style": "signature"
                   },
                   {
                     "text": "Advocate for {{partyName}}",
@@ -143,8 +218,7 @@
       },
       "date": {
         "fontSize": 12,
-        "alignment": "left",
-        "bold": true,
+        "alignment": "right",
         "margin": [0, 0, 0, 10]
       },
       "subjectText": {
@@ -179,6 +253,13 @@
         "color": "#000000",
         "alignment": "left",
         "margin": [0, 0, 0, 0]
+      },
+      "table": {
+        "fontSize": 13
+      },
+      "tableText": {
+        "fontSize": 13,
+        "margin": [2, 5, 2, 5]
       }
     }
   }

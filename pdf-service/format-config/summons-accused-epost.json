@@ -15,16 +15,8 @@
               {
                 "stack": [
                   {
-                    "text": "FORM NO.1",
+                    "text": "FORM NO. 1",
                     "style": "form-header"
-                  },
-                  {
-                    "text": "In The {{courtName}}",
-                    "style": "form-sub-header"
-                  },
-                  {
-                    "text": "Summary Trial No. {{courtCaseNumber}}",
-                    "style": "form-sub-header"
                   },
                   {
                     "text": "SUMMONS TO AN ACCUSED PERSON",
@@ -32,26 +24,11 @@
                     "alignment": "center"
                   },
                   {
-                    "text": "Filing No. {{filingNumber}}",
-                    "style": "form-sub-header",
-                    "alignment": "center"
-                  },
-                  {
-                    "text": "{{caseName}}",
-                    "style": "form-case-name",
-                    "alignment": "center"
-                  },
-                  {
                     "columns": [
                       {
                         "text": "(See section 63)",
                         "style": "form-sub-header",
-                        "alignment": "left"
-                      },
-                      {
-                        "text": "Next Date : {{hearingDate}}",
-                        "style": "form-sub-header",
-                        "alignment": "right"
+                        "alignment": "center"
                       }
                     ]
                   }
@@ -65,64 +42,22 @@
         "layout": "noBorders"
       },
       {
-        "columns": [
-          {
-            "text": "Between:",
-            "color": "#484848"
-          }
-        ]
-      },
-      {
-        "style": "form-sub-body",
-        "columns": [
-          {
-            "text": "Petitioner: {{complainantName}}",
-            "alignment": "left"
-          },
-          {
-            "text": "and",
-            "alignment": "center"
-          },
-          {
-            "text": "Accused: {{respondentName}}",
-            "alignment": "right"
-          }
-        ],
-        "margin": [0, 10]
-      },
-      {
         "style": "form-body",
         "table": {
           "widths": ["*"],
           "body": [
             [
               {
-                "text": "To,"
-              }
-            ],
-            [
-              {
-                "text": "{{respondentName}}"
-              }
-            ],
-            [
-              {
-                "text": "{{respondentAddress}}",
-                "margin": [0, 0, 0, 5]
+                "text": "To  {{respondentName}} of {{respondentAddress}}"
               }
             ],
             [
               {
                 "text": [
                   {
-                    "text": "WHEREAS ",
-                    "style": "form-sub-body"
-                  },
-                  {
-                    "text": "your attendance is necessary to answer to a charge U/s. 138 of Negotiable Instruments Act, you are hereby required to appear in person (or by pleader, as the case may be) {{courtName}} on the {{hearingDate}}. Herein fail not."
+                    "text": "WHEREAS your attendance is necessary to answer to a charge U/s. 138 of Negotiable Instruments Act, 1881), you are hereby required to appear in person (or by pleader, as the case may be) {{courtName}} on the {{hearingDate}}. Herein fail not."
                   }
-                ],
-                "leadingIndent": 20
+                ]
               }
             ]
           ]
