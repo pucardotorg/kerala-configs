@@ -14,40 +14,139 @@
                     "style": "header"
                   },
                   {
-                    "text": "{{caseNumber}}",
-                    "style": "subHeader"
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
                   },
                   {
-                    "text": "{{caseName}}",
-                    "style": "subHeader"
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
                   },
                   {
-                    "text": "APPLICATION FOR EDITING LITIGANT DETAILS",
+                    "text": "Date: {{date}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 15]
+                  },
+                  {
+                    "style": "table",
+                    "table": {
+                      "widths": ["30%", "70%"],
+                      "body": [
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "text": "Complainant {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/complainantList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        "{{#accusedList}}",
+                        [
+                          {
+                            "text": "Accused {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/accusedList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Offence",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "S.138 of the Negotiable Instruments Act, 1881",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "text": "{{applicationTitle}}",
                     "style": "applicationTitle"
                   },
                   {
-                    "text": "To,",
-                    "style": "honourStyle"
-                  },
-                  {
-                    "text": "The Honorable {{judgeName}}{{addressOfTheCourt}}",
-                    "style": "honourStyle"
-                  },
-                  {
-                    "text": "{{date}}",
-                    "style": "date"
-                  },
-                  {
-                    "text": "Subject: Application for Editing Litigant Details",
-                    "style": "subjectText"
-                  },
-                  {
-                    "text": "{{partyName}}, herein referred to as the applicant, represented by Advocate {{advocateName}}, respectfully submits as follows:",
+                    "text": "Petitioner Name: {{petitionerName}}",
                     "style": "bodyText"
                   },
                   {
-                    "text": "This Application seeks permission to edit litigant details in the above-mentioned case:",
+                    "text": "Advocate {{advocateName}}, hereby submits this application before this Honorable Court seeking permission to edit litigant details in the above-mentioned case.",
                     "style": "bodyText"
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Reason for Application: ",
+                        "style": "subjectText"
+                      },
+                      {
+                        "text": "{{reasonForEditing}}",
+                        "style": "bodyText"
+                      }
+                    ]
                   },
                   {
                     "text": "Current Details:",
@@ -136,27 +235,15 @@
                   },
                   "{{/newResedentialAddress}}",
                   {
-                    "text": [
-                      {
-                        "text": "Reason for Editing: ",
-                        "style": "subjectText"
-                      },
-                      {
-                        "text": "{{reasonForEditing}}",
-                        "style": "bodyText"
-                      }
-                    ]
-                  },
-                  {
-                    "text": "The Applicant assures and undertakes to the Hon'ble Court that this request is made in good faith and will not prejudice the other party.",
+                    "text": "The petitioner assures and undertakes to the Honorable Court that this request is made in good faith and will not prejudice the other party.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "Therefore, the Applicant humbly requests the Hon'ble Court to consider this application and grant permission to edit the aforementioned case details.",
+                    "text": "Therefore, the petitioner humbly requests the Honorable Court to consider this application and grant permission to edit the aforementioned case details.",
                     "style": "bodyText"
                   },
                   {
-                    "text": "{{prayer}}",
+                    "text": "{{{additionalComments}}}",
                     "style": "bodyText"
                   },
                   {
@@ -167,14 +254,6 @@
                     "text": "{{advocateSignature}}",
                     "style": "signature",
                     "margin": [0, 60, 0, 5]
-                  },
-                  {
-                    "text": "{{advocateName}}",
-                    "style": "signature"
-                  },
-                  {
-                    "text": "{{barRegistrationNumber}}",
-                    "style": "signature"
                   },
                   {
                     "text": "Advocate for {{partyName}}",
@@ -216,8 +295,7 @@
       },
       "date": {
         "fontSize": 12,
-        "alignment": "left",
-        "bold": true,
+        "alignment": "right",
         "margin": [0, 0, 0, 10]
       },
       "subjectText": {
@@ -247,6 +325,13 @@
         "fontSize": 12,
         "alignment": "left",
         "margin": [0, 10, 0, 10]
+      },
+      "table": {
+        "fontSize": 13
+      },
+      "tableText": {
+        "fontSize": 13,
+        "margin": [2, 5, 2, 5]
       }
     }
   }

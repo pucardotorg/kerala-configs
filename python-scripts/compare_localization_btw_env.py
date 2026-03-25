@@ -1,10 +1,15 @@
 import requests
 import csv
 import logging
+import argparse
 
-# URLs for the API requests
-SOURCE_URL =  "https://dristi-kerala-qa.pucar.org" #"https://oncourts-staging.kerala.gov.in" #  "https://dristi-kerala-qa.pucar.org"
-TARGET_URL =  "https://demo.pucar.org" #"https://oncourts.kerala.gov.in" 
+# Environment URL mapping
+ENV_URLS = {
+    "dev": "https://dristi-kerala-dev.pucar.org",
+    "qa": "https://dristi-kerala-qa.pucar.org",
+    "demo": "https://demo.pucar.org",
+    "prod": "https://oncourts.kerala.gov.in",
+}
 LOCALIZATION_SEARCH_API = "/localization/messages/v1/_search?&tenantId=kl&locale="
 
 # Neglect lists if you want to neglect code or by module add in below arrays
@@ -139,5 +144,16 @@ def process_localizations(locale):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Compare localization between two environments")
+    parser.add_argument("--source", required=True, choices=ENV_URLS.keys(), help="Source environment (dev, qa, demo, prod)")
+    parser.add_argument("--target", required=True, choices=ENV_URLS.keys(), help="Target environment (dev, qa, demo, prod)")
+    args = parser.parse_args()
+
+    SOURCE_URL = ENV_URLS[args.source]
+    TARGET_URL = ENV_URLS[args.target]
+
+    logging.info(f"Source: {args.source} ({SOURCE_URL})")
+    logging.info(f"Target: {args.target} ({TARGET_URL})")
+
     for locale in LOCALES:
         process_localizations(locale)
