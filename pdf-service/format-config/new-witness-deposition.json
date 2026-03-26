@@ -102,7 +102,7 @@
                   },
                   {
                     "text": "{{judgePlaceholder}}",
-                    "style": "signature"
+                    "style": "judgeSignature"
                   },
                   {
                     "text": "Date: {{date}}",
@@ -161,7 +161,7 @@
       "signature": {
         "fontSize": 13,
         "alignment": "right",
-        "margin": [0, 80, 120, 10]
+        "margin": [0, 80, 50, 10]
       },
       "judgeSignature": {
         "fontSize": 13,
