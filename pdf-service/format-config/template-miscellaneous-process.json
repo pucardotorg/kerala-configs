@@ -137,6 +137,10 @@
                     "style": "addresseeDetail"
                   },
                   {
+                    "stack": "{{{processText}}}",
+                    "style": "bodyTextLeft"
+                  },
+                  {
                     "text": [
                       {
                         "text": "Ref: ",
@@ -163,11 +167,6 @@
                     ],
                     "style": "bodyText",
                     "margin": [0, 10, 0, 0]
-                  },
-
-                  {
-                    "stack": "{{{processText}}}",
-                    "style": "bodyTextLeft"
                   },
 
                   {
