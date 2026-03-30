@@ -160,6 +160,15 @@
                     "decoration": "underline"
                   },
                   {
+                    "text": "Synopsis (in the format as per Criminal Appeal no.1755/2010 dated 25.09.2025 of the Hon'ble Supreme Court):",
+                    "style": "complaintSubHeader"
+                  },
+                  {
+                    "stack": "{{{synopsis}}}",
+                    "style": "bodyText",
+                    "font": "ManjiriMalyalam"
+                  },
+                  {
                     "text": "The complainant most humbly submits as follows:",
                     "style": "complaintSubHeader"
                   },
