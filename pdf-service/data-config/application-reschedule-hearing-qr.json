@@ -114,6 +114,12 @@
                 }
               },
               {
+                "variable": "partyType",
+                "value": {
+                  "path": "$.partyType"
+                }
+              },
+              {
                 "variable": "allPartiesAgreed",
                 "value": {
                   "path": "$.allPartiesAgreed"
