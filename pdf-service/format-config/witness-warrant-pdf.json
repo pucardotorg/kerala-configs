@@ -20,6 +20,22 @@
                     "style": "document-title"
                   },
                   {
+                    "text": "Before The {{courtName}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "Case No: {{courtCaseNumber}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "Date: {{issueDate}}",
+                    "style": "form-sub-header"
+                  },
+                  {
                     "text": "(See section 90)",
                     "style": "reference"
                   }
