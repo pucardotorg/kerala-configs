@@ -13,6 +13,7 @@
      var benchId = "BENCH_ID";
      var judgeId = "JUDGE_ID";
      var courtId = "KLKM52";
+     var mockEnabled = "true";
      var judgeName = "Smt. Soorya S Sukumaran";
      var WEBSOCKET_ADDRESS = "wss://dristi-kerala-qa.pucar.org/transcription"
      var invalidEmployeeRoles = ["CBO_ADMIN", "ORG_ADMIN", "ORG_STAFF", "SYSTEM"];
@@ -42,6 +43,8 @@
            return localeRegion;
          } else if (key === "LOCALE_DEFAULT") {
            return localeDefault;
+         } else if (key === "MOCKENABLED") {
+            return mockEnabled;
          } else if (key === "MDMS_CONTEXT_PATH") {
            return mdmsContext;
          } else if (key === "MOCKENABLED") {

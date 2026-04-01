@@ -24,17 +24,25 @@
                     "alignment": "center"
                   },
                   {
-                    "text": "(See section 63 and 267)",
+                    "text": "Before The {{courtName}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "Case No: {{courtCaseNumber}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "Date: {{issueDate}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "(See sections 63 and 267)",
                     "style": "form-sub-header",
                     "alignment": "center"
-                  },
-                  {
-                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE OF {{judgeName}}",
-                    "style": "form-sub-header"
-                  },
-                  {
-                    "text": "Summary Trial No. {{courtCaseNumber}}",
-                    "style": "form-sub-header"
                   }
                 ],
                 "alignment": "center",
@@ -52,25 +60,19 @@
           "body": [
             [
               {
-                "text": "To {{witnessName}} ",
+                "text": "To {{witnessName}} of {{witnessAddress}}",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": "{{witnessAddress}}",
+                "text": "WHEREAS complaint has been made before me that {{respondentName}} of {{respondentAddress}} has (or is suspected to have) committed the offence  U/s. 138 of Negotiable Instruments Act, and it appears to me that you are likely to give material evidence or to produce any document or other thing for the prosecution;",
                 "style": "form-sub-body"
               }
             ],
             [
               {
-                "text": "Whereas complaint has been made before me that {{respondentName}} of {{respondentAddress}} (or is suspected to have) committed the offence of (dishonour of a cheque), and it appears to me that you are likely to give material evidence or to produce any document or other thing for the prosecution",
-                "style": "form-sub-body"
-              }
-            ],
-            [
-              {
-                "text": "You are hereby summoned to appear before this Court on the {{hearingDate}} next at ten o’clock in the forenoon, to produce such document or thing or to testify what you know concerning the matter of the said complaint, and not to depart thence without leave of the Court ; and you are hereby warned that, if you shall without just excuse neglect or refuse to appear on the said date, a warrant will be issued to compel your attendance",
+                "text": "You are hereby summoned to appear before this Court on the {{hearingDate}} next at eleven o’clock in the forenoon, to produce such document or thing or to testify what you know concerning the matter of the said complaint, and not to depart thence without leave of the Court; and you are hereby warned that, if you shall without just excuse neglect or refuse to appear on the said date, a warrant will be issued to compel your attendance.",
                 "style": "form-sub-body"
               }
             ]

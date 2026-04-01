@@ -1,5 +1,5 @@
 {
-  "key": "application-reschedule-hearing-qr",
+  "key": "application-certified-true-copies",
   "DataConfigs": {
     "serviceName": "pdf-service",
     "version": "1.0.0",
@@ -31,9 +31,9 @@
                 }
               },
               {
-                "variable": "applicationDate",
+                "variable": "date",
                 "value": {
-                  "path": "$.applicationDate"
+                  "path": "$.date"
                 }
               },
               {
@@ -53,76 +53,27 @@
                 "format": " var i = 0; for (i=0;i< type.length;i++) {type[i]['index'] = i + 1;} return type;"
               },
               {
-                "variable": "purposeOfHearing",
+                "variable": "selectedDocumentList",
                 "value": {
-                  "path": "$.purposeOfHearing"
+                  "path": "$.selectedDocumentList"
                 }
               },
               {
-                "variable": "initialHearingDate",
+                "variable": "isPartyToCase",
                 "value": {
-                  "path": "$.initialHearingDate"
+                  "path": "$.isPartyToCase"
                 }
               },
               {
-                "variable": "reasonForReschedule",
+                "variable": "applicantName",
                 "value": {
-                  "path": "$.reasonForReschedule"
+                  "path": "$.applicantName"
                 }
               },
               {
-                "variable": "proposedHearingDate",
+                "variable": "designation",
                 "value": {
-                  "path": "$.proposedHearingDate"
-                }
-              },
-
-              {
-                "variable": "date",
-                "value": {
-                  "path": "$.date"
-                }
-              },
-              {
-                "variable": "month",
-                "value": {
-                  "path": "$.month"
-                }
-              },
-              {
-                "variable": "year",
-                "value": {
-                  "path": "$.year"
-                }
-              },
-              {
-                "variable": "advocateSignature",
-                "value": {
-                  "path": "$.advocateSignature"
-                }
-              },
-              {
-                "variable": "advocateName",
-                "value": {
-                  "path": "$.advocateName"
-                }
-              },
-              {
-                "variable": "partyName",
-                "value": {
-                  "path": "$.partyName"
-                }
-              },
-              {
-                "variable": "partyType",
-                "value": {
-                  "path": "$.partyType"
-                }
-              },
-              {
-                "variable": "allPartiesAgreed",
-                "value": {
-                  "path": "$.allPartiesAgreed"
+                  "path": "$.designation"
                 }
               }
             ]

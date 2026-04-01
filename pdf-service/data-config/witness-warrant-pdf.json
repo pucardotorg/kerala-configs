@@ -1,5 +1,5 @@
 {
-  "key": "summons-witness",
+  "key": "warrant-witness",
   "DataConfigs": {
     "serviceName": "pdf-service",
     "version": "1.0.0",
@@ -16,20 +16,6 @@
                 "variable": "cnrNumber",
                 "value": {
                   "path": "$.cnrNumber",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "witnessName",
-                "value": {
-                  "path": "$.witnessName",
-                  "defaultValue": "NA"
-                }
-              },
-              {
-                "variable": "witnessAddress",
-                "value": {
-                  "path": "$.witnessAddress",
                   "defaultValue": "NA"
                 }
               },
@@ -101,6 +87,31 @@
                 "value": {
                   "path": "$.issueDate",
                   "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "executorName",
+                "value": {
+                  "path": "$.executorName",
+                  "defaultValue": "NA"
+                }
+              },
+              {
+                "variable": "oneSuretyAmount",
+                "value": {
+                  "path": "$.oneSuretyAmount"
+                }
+              },
+              {
+                "variable": "twoSuretyAmount",
+                "value": {
+                  "path": "$.twoSuretyAmount"
+                }
+              },
+              {
+                "variable": "bailableAmount",
+                "value": {
+                  "path": "$.bailableAmount"
                 }
               }
             ]

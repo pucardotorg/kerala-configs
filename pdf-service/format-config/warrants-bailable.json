@@ -20,21 +20,24 @@
                     "style": "document-title"
                   },
                   {
-                    "text": "Bailable Warrant",
-                    "style": "form-sub-header",
-                    "margin": [0, 5, 0, 5]
+                    "text": "Before The {{courtName}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "Case No: {{courtCaseNumber}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "form-sub-header"
+                  },
+                  {
+                    "text": "Date: {{issueDate}}",
+                    "style": "form-sub-header"
                   },
                   {
                     "text": "(See section 72)",
                     "style": "reference"
-                  },
-                  {
-                    "text": "IN THE COURT OF {{courtName}} MAGISTRATE OF {{judgeName}}",
-                    "style": "form-sub-header"
-                  },
-                  {
-                    "text": "Summary Trial No. {{courtCaseNumber}}",
-                    "style": "form-sub-header"
                   }
                 ],
                 "alignment": "center",
@@ -67,11 +70,7 @@
               {
                 "text": [
                   {
-                    "text": "Whereas ",
-                    "bold": true
-                  },
-                  {
-                    "text": "{{respondentName}} of {{respondentAddress}} stands charged with the offence U/s. 138 of N.I ACT, you are hereby directed to arrest the said and to produce him before me. Herein fail not."
+                    "text": "WHEREAS {{respondentName}} of {{respondentAddress}} stands charged with the offence U/s. 138 of Negotiable Instruments Act, 1881, you are hereby directed to arrest {{respondentName}}, said and to produce him before me. Herein fail not."
                   }
                 ],
                 "style": "form-sub-body"

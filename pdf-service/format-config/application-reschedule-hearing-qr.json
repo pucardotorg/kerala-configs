@@ -116,7 +116,7 @@
                             "border": [true, true, true, true]
                           },
                           {
-                            "text": "S. 138 of the Negotiable Instruments Act, 1881",
+                            "text": "S.138 of the Negotiable Instruments Act, 1881",
                             "style": "tableText",
                             "border": [true, true, true, true]
                           }
@@ -130,7 +130,7 @@
                   },
                   {
                     "text": [
-                      "{{partyName}}, the Complainant, submits this application before this Hon’ble Court seeking to ",
+                      "{{partyName}}, the {{partyType}}, submits this application before this Hon’ble Court seeking to ",
                       {
                         "text": "advance/reschedule the hearing date,",
                         "bold": true

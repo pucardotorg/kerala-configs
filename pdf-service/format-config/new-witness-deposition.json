@@ -53,16 +53,24 @@
                   },
                   {
                     "text": "Solemnly affirmed on the {{date}} day of {{month}}, {{year}}",
-                    "style": "content"
+                    "style": "bodyText"
                   },
                   {
                     "text": "{{depositionType}}",
                     "style": "content"
                   },
                   {
+                    "text": "Chief examination:",
+                    "style": "bodyText"
+                  },
+                  {
                     "stack": "{{{witnessDeposition}}}",
                     "style": "deposition",
                     "font": "ManjiriMalyalam"
+                  },
+                  {
+                    "text": "Taken down by / before me in open court, interpreted/ read over to the witness/accused and admitted by him/her to be true",
+                    "style": "bodyText"
                   },
                   {
                     "text": "{{witnessPlaceholder}}",
@@ -75,7 +83,15 @@
                   },
                   {
                     "text": "{{judgePlaceholder}}",
-                    "style": "signature"
+                    "style": "judgeSignaturePlaceholder"
+                  },
+                  {
+                    "text": "Date: {{date}}",
+                    "style": "judgeSignature"
+                  },
+                  {
+                    "text": "Judicial Magistrate of First Class",
+                    "style": "judgeSignature"
                   }
                 ],
                 "alignment": "left",
@@ -111,6 +127,7 @@
       },
       "bodyText": {
         "fontSize": 13,
+        "alignment": "left",
         "margin": [0, 10, 0, 10]
       },
       "content": {
@@ -123,6 +140,16 @@
         "margin": [0, 5, 0, 5]
       },
       "signature": {
+        "fontSize": 13,
+        "alignment": "right",
+        "margin": [0, 80, 50, 10]
+      },
+      "judgeSignature": {
+        "fontSize": 13,
+        "alignment": "right",
+        "margin": [0, 10, 0, 0]
+      },
+      "judgeSignaturePlaceholder": {
         "fontSize": 13,
         "alignment": "right",
         "margin": [0, 80, 0, 10]

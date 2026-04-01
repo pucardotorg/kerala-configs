@@ -1,0 +1,263 @@
+{
+  "key": "application-ctc-certification",
+  "config": {
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "style": "header",
+                    "table": {
+                      "widths": ["*"],
+                      "body": [
+                        [
+                          {
+                            "stack": [
+                              {
+                                "text": "Endorsement on Certified Copy",
+                                "style": "header"
+                              }
+                            ],
+                            "alignment": "center",
+                            "margin": [0, 20, 0, 20]
+                          }
+                        ]
+                      ]
+                    },
+                    "layout": "noBorders"
+                  },
+                  {
+                    "text": [
+                      { "text": "Court Name: ", "bold": true },
+                      "{{courtName}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      { "text": "Case Number: ", "bold": true },
+                      "{{caseNumber}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      { "text": "Name of the Applicant: ", "bold": true },
+                      "{{applicantName}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      { "text": "Application No.: ", "bold": true },
+                      "{{applicationNumber}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      { "text": "Date of Application: ", "bold": true },
+                      "{{applicationDate}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Calling for Stamp Papers: ",
+                        "bold": true
+                      },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Production of Stamp Papers: ",
+                        "bold": true
+                      },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Calling for Additional Stamp Papers: ",
+                        "bold": true
+                      },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Production of Additional Stamp Papers: ",
+                        "bold": true
+                      },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      { "text": "Date When Copy Made Ready: ", "bold": true },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      {
+                        "text": "Date Notified for Appearance to Receive the Copy: ",
+                        "bold": true
+                      },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "text": [
+                      { "text": "Date of Delivery of Copy: ", "bold": true },
+                      "NA"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  { "text": "", "margin": [0, 20] },
+                  {
+                    "text": [
+                      { "text": "Name of Requested Document: ", "bold": true },
+                      "{{documentName}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  "{{#isMagistrateApproved}}",
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Application Approval (by Magistrate): ",
+                        "bold": true
+                      },
+                      "{{applicationApprovalDate}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  "{{/isMagistrateApproved}}",
+                  {
+                    "text": [
+                      {
+                        "text": "Date of Issuance of Certified True Copy: ",
+                        "bold": true
+                      },
+                      "{{issuanceDate}}"
+                    ],
+                    "margin": [0, 4]
+                  },
+                  {
+                    "columns": [
+                      {
+                        "width": "50%",
+                        "stack": [
+                          {
+                            "text": "{{judgeSignature}}",
+                            "style": "bodyText",
+                            "margin": [0, 80, 0, 0]
+                          }
+                        ]
+                      },
+                      {
+                        "width": "50%",
+                        "stack": [
+                          {
+                            "image": "{{sealOfCourt}}",
+                            "width": 80,
+                            "height": 80,
+                            "margin": [10, 10, 10],
+                            "style": "judgeSignature",
+                            "alignment": "right"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "text": "{{cmoName}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "Junior Superintendent",
+                    "style": "zeroMargin"
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "subHeader": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 5]
+      },
+      "applicationTitle": {
+        "fontSize": 15,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 20, 0, 10]
+      },
+      "date": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 0, 0, 10]
+      },
+      "bodyText": {
+        "fontSize": 11,
+        "margin": [0, 10, 0, 10]
+      },
+      "advocateSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 50, 0, 5]
+      },
+      "table": {
+        "fontSize": 13
+      },
+      "tableText": {
+        "fontSize": 13,
+        "margin": [2, 5, 2, 5]
+      },
+      "judgeSignature": {
+        "fontSize": 12,
+        "alignment": "left",
+        "margin": [0, 40, 0, 10]
+      },
+      "sealOfCourt": {
+        "fontSize": 12,
+        "alignment": "right",
+        "margin": [0, 40, 0, 10]
+      },
+      "zeroMargin": {
+        "fontSize": 11,
+        "margin": [0, 0, 0, 0]
+      }
+    }
+  }
+}
