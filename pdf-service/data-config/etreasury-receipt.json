@@ -109,32 +109,9 @@
                 "default":""
               },
               {
-                "variable":"courtFee",
-                "value":{
-                  "path":"$.courtFee"
-                },
-                "default":""
-              },
-              {
-                "variable":"advocateWelfareFund",
-                "value":{
-                  "path":"$.advocateWelfareFund"
-                },
-                "default":""
-              },
-              {
-                "variable":"advocateClerkWelfareFund",
-                "value":{
-                  "path":"$.advocateClerkWelfareFund"
-                },
-                "default":""
-              },
-              {
-                "variable":"legalBenefitFee",
-                "value":{
-                  "path":"$.legalBenefitFee"
-                },
-                "default":""
+                "variable": "feeBreakDown",
+                "value": { "path": "$.feeBreakDown" },
+                "default": []
               },
               {
                 "variable":"totalAmount",
