@@ -15,11 +15,11 @@ env_list = [
     #     "password": "Beehyv@123",
     #     "username": "mdmsv2Super",
     # },
-    {
-        "url": "dristi-kerala-qa.pucar.org",
-        "password": "Beehyv@123",
-        "username": "mdmsv2Qa",
-    },
+    # {
+    #     "url": "dristi-kerala-qa.pucar.org",
+    #     "password": "Beehyv@123",
+    #     "username": "mdmsv2Qa",
+    # },
     # {
     #     "url": "demo.pucar.org",
     #     "password": "Beehyv@123",
@@ -29,6 +29,11 @@ env_list = [
     #     "url": "oncourts.kerala.gov.in",
     #     "password": "oN24*7@56",
     #     "username": "On247loc",
+    # },
+    #     {
+    #     "url": "oncourts-staging.kerala.gov.in",
+    #     "password": "Beehyv@123",
+    #     "username": "workbenchuser",
     # },
 ]
 
