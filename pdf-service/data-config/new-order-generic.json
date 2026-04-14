@@ -111,6 +111,18 @@
                 "value": {
                   "path": "$.judgeSignature"
                 }
+              },
+              {
+                "variable": "noOfSureties",
+                "value": {
+                  "path": "$.noOfSureties"
+                }
+              },
+              {
+                "variable": "bailAmount",
+                "value": {
+                  "path": "$.bailAmount"
+                }
               }
             ]
           }

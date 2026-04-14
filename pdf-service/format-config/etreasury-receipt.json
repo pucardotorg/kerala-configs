@@ -4,12 +4,7 @@
     "defaultStyle": {
       "font": "Cambay"
     },
-    "pageMargins": [
-      80,
-      40,
-      80,
-      40
-    ],
+    "pageMargins": [80, 40, 80, 40],
     "content": [
       {
         "image": "{{logoImage}}",
@@ -26,12 +21,7 @@
           }
         ],
         "alignment": "center",
-        "margin": [
-          0,
-          10,
-          0,
-          0
-        ]
+        "margin": [0, 10, 0, 0]
       },
       {
         "table": {
@@ -57,12 +47,7 @@
       {
         "text": "Transaction Details",
         "style": "sectionHeader",
-        "margin": [
-          0,
-          20,
-          0,
-          10
-        ]
+        "margin": [0, 20, 0, 10]
       },
       {
         "table": {
@@ -144,12 +129,7 @@
       {
         "text": "Payer Details",
         "style": "sectionHeader",
-        "margin": [
-          0,
-          20,
-          0,
-          10
-        ]
+        "margin": [0, 20, 0, 10]
       },
       {
         "table": {
@@ -203,12 +183,7 @@
       {
         "text": "Case Details",
         "style": "sectionHeader",
-        "margin": [
-          0,
-          20,
-          0,
-          10
-        ]
+        "margin": [0, 20, 0, 10]
       },
       {
         "table": {
@@ -276,76 +251,31 @@
       {
         "text": "Payment Details",
         "style": "sectionHeader",
-        "margin": [
-          0,
-          20,
-          0,
-          10
-        ]
+        "margin": [0, 20, 0, 10]
       },
       {
         "table": {
           "widths": ["*", "*"],
           "body": [
+            "{{#feeBreakDown}}",
             [
               {
-                "text": "Court Fees:",
+                "text": "{{feeName}}",
                 "bold": true,
                 "border": [true, true, true, true],
                 "margin": [0, 5, 0, 5]
               },
               {
-                "text": "Rs. {{courtFee}}",
+                "text": "Rs. {{feeAmount}}",
                 "border": [true, true, true, true],
                 "margin": [0, 5, 0, 5],
                 "alignment": "left"
               }
             ],
+            "{{/feeBreakDown}}",
             [
               {
-                "text": "Fee for advocate welfare fund:",
-                "bold": true,
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5]
-              },
-              {
-                "text": "Rs. {{advocateWelfareFund}}",
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5],
-                "alignment": "left"
-              }
-            ],
-            [
-              {
-                "text": "Fee for clerk welfare fund:",
-                "bold": true,
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5]
-              },
-              {
-                "text": "Rs. {{advocateClerkWelfareFund}}",
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5],
-                "alignment": "left"
-              }
-            ],
-            [
-              {
-                "text": "Legal Benefit Fund:",
-                "bold": true,
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5]
-              },
-              {
-                "text": "Rs. {{legalBenefitFee}}",
-                "border": [true, true, true, true],
-                "margin": [0, 5, 0, 5],
-                "alignment": "left"
-              }
-            ],
-            [
-              {
-                "text": "Total",
+                "text": "Total:",
                 "bold": true,
                 "border": [true, true, true, true],
                 "margin": [0, 5, 0, 5]
@@ -365,32 +295,17 @@
       "header": {
         "fontSize": 18,
         "bold": true,
-        "margin": [
-          0,
-          0,
-          0,
-          20
-        ]
+        "margin": [0, 0, 0, 20]
       },
       "subheader": {
         "fontSize": 12,
         "bold": true,
-        "margin": [
-          0,
-          10,
-          0,
-          5
-        ]
+        "margin": [0, 10, 0, 5]
       },
       "sectionHeader": {
         "fontSize": 14,
         "bold": true,
-        "margin": [
-          0,
-          20,
-          0,
-          10
-        ]
+        "margin": [0, 20, 0, 10]
       }
     }
   }

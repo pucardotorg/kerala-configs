@@ -30,35 +30,54 @@
                     "style": "bodyText",
                     "margin": [0, 20, 0, 0]
                   },
+                  "{{#witnessName}}",
                   {
                     "text": "Name: {{witnessName}}",
                     "style": "bodyText",
                     "margin": [0, 10, 0, 10]
                   },
+                  "{{/witnessName}}",
+                  "{{#designation}}",
+                  {
+                    "text": "Designation: {{designation}}",
+                    "style": "bodyText",
+                    "margin": [0, 10, 0, 10]
+                  },
+                  "{{/designation}}",
+                  "{{#witnessFatherName}}",
                   {
                     "text": "Father's Name: {{witnessFatherName}}",
                     "style": "bodyText"
                   },
+                  "{{/witnessFatherName}}",
+                  "{{#witnessAddress}}",
                   {
                     "text": "Address: {{witnessAddress}}",
                     "style": "bodyText"
                   },
+                  "{{/witnessAddress}}",
+                  "{{#witnessDesignation}}",
                   {
                     "text": "Calling: {{witnessDesignation}}",
                     "style": "bodyText"
                   },
+                  "{{/witnessDesignation}}",
+                  "{{#witnessAge}}",
                   {
                     "text": "Age: {{witnessAge}}",
                     "style": "bodyText"
                   },
+                  "{{/witnessAge}}",
                   {
                     "text": "Solemnly affirmed on the {{date}} day of {{month}}, {{year}}",
                     "style": "bodyText"
                   },
+                  "{{#depositionType}}",
                   {
                     "text": "{{depositionType}}",
                     "style": "content"
                   },
+                  "{{/depositionType}}",
                   {
                     "text": "Chief examination:",
                     "style": "bodyText"
