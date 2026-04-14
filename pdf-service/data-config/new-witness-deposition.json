@@ -107,6 +107,12 @@
                 "value": {
                   "path": "$.judgePlaceholder"
                 }
+              },
+              {
+                "variable": "designation",
+                "value": {
+                  "path": "$.designation"
+                }
               }
             ]
           }
