@@ -813,16 +813,33 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: caseOverallStatus
       queryMaps:
-        - query: UPDATE  dristi_cases SET stage =?, secondaryStage=?, substage =?, stageBackup =?, substageBackup =?, lastmodifiedby = ?, lastmodifiedtime = ? where filingnumber =? and tenantid =?;
+        - query: UPDATE  dristi_cases SET stage =?, stageBackup =?, lastmodifiedby = ?, lastmodifiedtime = ? where filingnumber =? and tenantid =?;
           basePath: caseOverallStatus
           jsonMaps:
             - jsonPath: $.caseOverallStatus.stage
+            - jsonPath: $.caseOverallStatus.stageBackup
+            - jsonPath: $.caseOverallStatus.auditDetails.lastModifiedBy
+            - jsonPath: $.caseOverallStatus.auditDetails.lastModifiedTime
+            - jsonPath: $.caseOverallStatus.filingNumber
+            - jsonPath: $.caseOverallStatus.tenantId
+
+    - version: 1.0
+      description: Update case overall workflow in tables
+      fromTopic: case-overall-status-topic-v2
+      isTransaction: true
+      isAuditEnabled: true
+      module: CASE
+      objecIdJsonPath: $.filingNumber
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: caseOverallStatus
+      queryMaps:
+        - query: UPDATE  dristi_cases SET secondaryStage=?, lastmodifiedby = ?, lastmodifiedtime = ? where filingnumber =? and tenantid =?;
+          basePath: caseOverallStatus
+          jsonMaps:
             - jsonPath: $.caseOverallStatus.secondaryStage
               type: JSON
               dbType: JSONB
-            - jsonPath: $.caseOverallStatus.substage
-            - jsonPath: $.caseOverallStatus.stageBackup
-            - jsonPath: $.caseOverallStatus.substageBackup
             - jsonPath: $.caseOverallStatus.auditDetails.lastModifiedBy
             - jsonPath: $.caseOverallStatus.auditDetails.lastModifiedTime
             - jsonPath: $.caseOverallStatus.filingNumber
