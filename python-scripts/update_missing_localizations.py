@@ -1,7 +1,7 @@
 import csv
 import requests
 import logging
-import time
+import argparse
 
 # Logger setup for better debugging
 logging.basicConfig(
@@ -10,31 +10,36 @@ logging.basicConfig(
 
 # env list we need to update the localization
 env_list = [
-    # {
-    #     "url": "dristi-kerala-dev.pucar.org",
-    #     "password": "Beehyv@123",
-    #     "username": "mdmsv2Super",
-    # },
-    # {
-    #     "url": "dristi-kerala-qa.pucar.org",
-    #     "password": "Beehyv@123",
-    #     "username": "mdmsv2Qa",
-    # },
-    # {
-    #     "url": "demo.pucar.org",
-    #     "password": "Beehyv@123",
-    #     "username": "mdmsv2Demo",
-    # },
-    # {
-    #     "url": "oncourts.kerala.gov.in",
-    #     "password": "oN24*7@56",
-    #     "username": "On247loc",
-    # },
-    #     {
-    #     "url": "oncourts-staging.kerala.gov.in",
-    #     "password": "Beehyv@123",
-    #     "username": "workbenchuser",
-    # },
+    {
+        "env": "dev",
+        "url": "dristi-kerala-dev.pucar.org",
+        "password": "Beehyv@123",
+        "username": "mdmsv2Super",
+    },
+    {
+        "env": "qa",
+        "url": "dristi-kerala-qa.pucar.org",
+        "password": "Beehyv@123",
+        "username": "mdmsv2Qa",
+    },
+    {
+        "env": "demo",
+        "url": "demo.pucar.org",
+        "password": "Beehyv@123",
+        "username": "mdmsv2Demo",
+    },
+    {
+        "env": "uat",
+        "url": "oncourts-staging.kerala.gov.in",
+        "password": "Beehyv@123",
+        "username": "workbenchuser",
+    },
+    {
+        "env": "prod",
+        "url": "oncourts.kerala.gov.in",
+        "password": "oN24*7@56",
+        "username": "On247loc",
+    },
 ]
 
 # File data to be processed (can easily add more files as needed)
@@ -143,9 +148,17 @@ def process_file(file_module, env):
 
 
 # Main function to process all files across all environments
-def process_localizations():
-    for env in env_list:
-        logging.info(f"--- Processing environment: {env['url']} ---")
+def process_localizations(selected_envs=None):
+    targets = env_list
+    if selected_envs:
+        targets = [e for e in env_list if e["env"] in selected_envs]
+        if not targets:
+            logging.error(f"No matching environments found for: {selected_envs}")
+            logging.info(f"Available envs: {[e['env'] for e in env_list]}")
+            return
+
+    for env in targets:
+        logging.info(f"--- Processing environment: {env['env']} ({env['url']}) ---")
         token = get_auth_token(env)
         if not token:
             logging.error(f"Skipping environment {env['url']} due to auth failure")
@@ -160,4 +173,14 @@ def process_localizations():
 
 
 if __name__ == "__main__":
-    process_localizations()
+    parser = argparse.ArgumentParser(description="Update missing localizations across environments")
+    parser.add_argument(
+        "--envs",
+        type=lambda s: [e.strip() for e in s.split(",")],
+        metavar="ENV",
+        help="Comma-separated list of environments to update (e.g. dev,qa,uat). "
+             f"Available: {[e['env'] for e in env_list]}",
+        required=True,
+    )
+    args = parser.parse_args()
+    process_localizations(selected_envs=args.envs)
