@@ -813,11 +813,11 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: caseOverallStatus
       queryMaps:
-        - query: UPDATE  dristi_cases SET stage =?, stageBackup =?, lastmodifiedby = ?, lastmodifiedtime = ? where filingnumber =? and tenantid =?;
+        - query: UPDATE  dristi_cases SET stage =?, lifecycleStatus =?, lastmodifiedby = ?, lastmodifiedtime = ? where filingnumber =? and tenantid =?;
           basePath: caseOverallStatus
           jsonMaps:
             - jsonPath: $.caseOverallStatus.stage
-            - jsonPath: $.caseOverallStatus.stageBackup
+            - jsonPath: $.caseOverallStatus.lifecycleStatus
             - jsonPath: $.caseOverallStatus.auditDetails.lastModifiedBy
             - jsonPath: $.caseOverallStatus.auditDetails.lastModifiedTime
             - jsonPath: $.caseOverallStatus.filingNumber
@@ -996,11 +996,11 @@ serviceMaps:
       transactionCodeJsonPath: $.filingNumber
       auditAttributeBasePath: $
       queryMaps:
-        - query: UPDATE dristi_cases SET lprNumber = ?, isLPRCase = ?, courtCaseNumber = ?, courtCaseNumberBackup = ? WHERE filingNumber = ?;
+        - query: UPDATE dristi_cases SET lprNumber = ?, lifecycleStatus = ?, courtCaseNumber = ?, courtCaseNumberBackup = ? WHERE filingNumber = ?;
           basePath: cases
           jsonMaps:
             - jsonPath: $.cases.lprNumber
-            - jsonPath: $.cases.isLPRCase
+            - jsonPath: $.cases.lifecycleStatus
             - jsonPath: $.cases.courtCaseNumber
             - jsonPath: $.cases.courtCaseNumberBackup
             - jsonPath: $.cases.filingNumber
