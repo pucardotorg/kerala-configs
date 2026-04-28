@@ -107,6 +107,10 @@
                   {
                     "text": "Date: {{date}}",
                     "style": "judgeSignature"
+                  },
+                  {
+                    "text": "Judicial Magistrate of First Class",
+                    "style": "judgeSignature"
                   }
                 ],
                 "alignment": "left",
