@@ -15,7 +15,7 @@
         var courtId = "KLKM52";
         var judgeName = "Michael George";
         var mockEnabled = "true";
-        var mockESignEnabled = "true";
+        var mockESignEnabled = "false";
         var pucarFileStoreBlob = "https://pucarfilestoreuat.blob.core.windows.net"
         var esignUrl = "https://es-staging.cdac.in/esignlevel2/2.1/form/signdoc"
         var WEBSOCKET_ADDRESS = "wss://dristi-kerala-dev.pucar.org/transcription";

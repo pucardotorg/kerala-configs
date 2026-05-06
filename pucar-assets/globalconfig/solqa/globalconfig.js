@@ -17,6 +17,8 @@
      var judgeName = "Smt. Soorya S Sukumaran";
      var WEBSOCKET_ADDRESS = "wss://dristi-kerala-qa.pucar.org/transcription"
      var invalidEmployeeRoles = ["CBO_ADMIN", "ORG_ADMIN", "ORG_STAFF", "SYSTEM"];
+     var mockEnabled = "true";
+     var mockESignEnabled = "true";
 
      var getConfig = function (key) {
          if (key === "STATE_LEVEL_TENANT_ID") {
@@ -45,7 +47,11 @@
             return mockEnabled;
          } else if (key === "MDMS_CONTEXT_PATH") {
            return mdmsContext;
-         } else if (key === "INVALIDROLES") {
+         } else if (key === "MOCKENABLED") {
+           return mockEnabled;
+         } else if (key === "mockESignEnabled") {
+           return mockESignEnabled;
+         }else if (key === "INVALIDROLES") {
            return invalidEmployeeRoles;
          } else if (key === "BENCH_ID") {
            return benchId;
