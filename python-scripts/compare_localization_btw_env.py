@@ -7,7 +7,6 @@ import argparse
 ENV_URLS = {
     "dev": "https://dristi-kerala-dev.pucar.org",
     "qa": "https://dristi-kerala-qa.pucar.org",
-    "uat": "https://oncourts-staging.kerala.gov.in",
     "demo": "https://demo.pucar.org",
     "prod": "https://oncourts.kerala.gov.in",
 }
