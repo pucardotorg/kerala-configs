@@ -187,6 +187,30 @@
                 }
               },
               {
+                "variable": "currentAddressCompanyDetails",
+                "value": {
+                  "path": "$.currentAddressCompanyDetails"
+                }
+              },
+              {
+                "variable": "newAddressCompanyDetails",
+                "value": {
+                  "path": "$.newAddressCompanyDetails"
+                }
+              },
+              {
+                "variable": "newCompanyName",
+                "value": {
+                  "path": "$.newCompanyName"
+                }
+              },
+              {
+                "variable": "newEntityType",
+                "value": {
+                  "path": "$.newEntityType"
+                }
+              },
+              {
                 "variable": "reasonForEditing",
                 "value": {
                   "path": "$.reasonForEditing"
