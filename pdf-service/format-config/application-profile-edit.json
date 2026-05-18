@@ -172,17 +172,21 @@
                     "text": "Email ID: {{currentEmailId}}",
                     "style": "bodyText"
                   },
+                  "{{#currentPermanentAddress}}",
                   {
                     "text": "Addresses:",
                     "style": "bodyText"
                   },
-                  "{{#currentPermanentAddress}}",
                   {
                     "text": "{{address}}",
                     "style": "bodyText"
                   },
                   "{{/currentPermanentAddress}}",
                   "{{#currentResedentialAddress}}",
+                  {
+                    "text": "Addresses:",
+                    "style": "bodyText"
+                  },
                   {
                     "text": "{{address}}",
                     "style": "bodyText"
@@ -198,6 +202,10 @@
                     "style": "bodyText"
                   },
                   "{{#currentAddressCompanyDetails}}",
+                  {
+                    "text": "Addresses:",
+                    "style": "bodyText"
+                  },
                   {
                     "text": "{{address}}",
                     "style": "bodyText"
@@ -224,17 +232,21 @@
                     "text": "Email ID: {{newEmailId}}",
                     "style": "bodyText"
                   },
+                  "{{#newPermanentAddress}}",
                   {
                     "text": "Addresses:",
                     "style": "bodyText"
                   },
-                  "{{#newPermanentAddress}}",
                   {
                     "text": "{{address}}",
                     "style": "bodyText"
                   },
                   "{{/newPermanentAddress}}",
                   "{{#newResedentialAddress}}",
+                  {
+                    "text": "Addresses:",
+                    "style": "bodyText"
+                  },
                   {
                     "text": "{{address}}",
                     "style": "bodyText"
@@ -250,6 +262,10 @@
                     "style": "bodyText"
                   },
                   "{{#newAddressCompanyDetails}}",
+                  {
+                    "text": "Addresses:",
+                    "style": "bodyText"
+                  },
                   {
                     "text": "{{address}}",
                     "style": "bodyText"
