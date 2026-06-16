@@ -172,6 +172,7 @@
                     "text": "Email ID: {{currentEmailId}}",
                     "style": "bodyText"
                   },
+                  "{{#currentPermanentAddress}}",
                   {
                     "text": "Addresses:",
                     "style": "bodyText"
@@ -183,6 +184,10 @@
                   },
                   "{{/currentPermanentAddress}}",
                   "{{#currentResedentialAddress}}",
+                  {
+                    "text": "Addresses:",
+                    "style": "bodyText"
+                  },
                   {
                     "text": "{{address}}",
                     "style": "bodyText"
@@ -197,6 +202,16 @@
                     "text": " Entity Type: {{currentEntityType}}",
                     "style": "bodyText"
                   },
+                  "{{#currentAddressCompanyDetails}}",
+                  {
+                    "text": "Addresses:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{address}}",
+                    "style": "bodyText"
+                  },
+                  "{{/currentAddressCompanyDetails}}",
                   "{{/isEntity}}",
                   {
                     "text": "New Details: ",
@@ -218,6 +233,7 @@
                     "text": "Email ID: {{newEmailId}}",
                     "style": "bodyText"
                   },
+                  "{{#newPermanentAddress}}",
                   {
                     "text": "Addresses:",
                     "style": "bodyText"
@@ -230,10 +246,35 @@
                   "{{/newPermanentAddress}}",
                   "{{#newResedentialAddress}}",
                   {
+                    "text": "Addresses:",
+                    "style": "bodyText"
+                  },
+                  "{{/newResedentialAddress}}",
+                  {
                     "text": "{{address}}",
                     "style": "bodyText"
                   },
                   "{{/newResedentialAddress}}",
+                  "{{#isEntity}}",
+                  {
+                    "text": " Company Name: {{newCompanyName}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": " Entity Type: {{newEntityType}}",
+                    "style": "bodyText"
+                  },
+                  "{{#newAddressCompanyDetails}}",
+                  {
+                    "text": "Addresses:",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": "{{address}}",
+                    "style": "bodyText"
+                  },
+                  "{{/newAddressCompanyDetails}}",
+                  "{{/isEntity}}",
                   {
                     "text": "The petitioner assures and undertakes to the Honorable Court that this request is made in good faith and will not prejudice the other party.",
                     "style": "bodyText"
