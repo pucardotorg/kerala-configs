@@ -1,1 +1,110 @@
 Code,Message,Module
+ADVOCATE_REGISTERED,"Hello,
+Your registration request has been approved. You can now log in to the 24x7 ON Courts platform to access your account.
+- ON Courts",notification
+ADVOCATE_REJECTED,"Hello,
+Your registration request in ON Courts has been rejected. Please log in to oncourts.kerala.gov.in to correct and resubmit the request.
+- ON Courts",notification
+APPLICATION_SUBMITTED,"Hello,
+A {{partyType}} has made a submission in your case {{cmpNumber}}. Log in to oncourts.kerala.gov.in for details.
+- ON Courts",notification
+BAIL_BOND_INITIATED_LITIGANT,"Hello,
+Please e-Sign the Bail Bond for your case {{courtCaseNumber}} here: {{shortenedUrl}}
+- ON Courts",notification
+BAIL_BOND_INITIATED_SURETY,"Hello,
+Please e-Sign the Bail Bond as surety for case {{courtCaseNumber}} here: {{shortenedUrl}}
+- ON Courts",notification
+CASE_ADMITTED,"Hello,
+Cognizance of your case {{cmpNumberForCognizance}} has been taken. Your new case number is {{courtCaseNumber}}. Log in to oncourts.kerala.gov.in for details.
+- ON Courts",notification
+CASE_FILED,"Hello,
+Your case {{efilingNumber}} has been successfully filed and is under scrutiny. Log in to oncourts.kerala.gov.in to view updates.
+- ON Courts",notification
+CASE_STATUS_CHANGE_MESSAGE,"Hello,
+Your case {{cmpNumber}} has moved to the {{subStage}} stage. Log in to oncourts.kerala.gov.in for details.
+- ON Courts",notification
+DOCUMENT_SUBMITTED,"Hello,
+A submission has been made by your counsel in case {{cmpNumber}}. Log in to oncourts.kerala.gov.in for details.
+- ON Courts ",notification
+ERRORS_PENDING,"Hello,
+You have errors pending in case {{efilingNumber}}. Log in to oncourts.kerala.gov.in if you wish to rectify and resubmit the case.
+- ON Courts",notification
+ESIGN_PENDING,"Hello,
+The eSignature for case E-filing number {{efilingNumber}} is pending. The case will be filed after eSignature is completed.
+-ON Courts",notification
+ESIGN_PROCESS_FAILED,Case stage could not be updated. Please try again.,rainmaker-common
+EVIDENCE_ACCUSED_PUBLISHED,"Hello,
+The hearing for case {{cmpNumber}} is scheduled on {{hearingDate}} for Evidence of Accused hearing. Visit the 24x7 ON Courts platform for more details.
+-ON Courts",notification
+EVIDENCE_COMPLAINANT_PUBLISHED,"Hello,
+The hearing for case {{cmpNumber}} is scheduled on {{hearingDate}} for Evidence of Complainant hearing. Visit the 24x7 ON Courts platform for more details.
+-ON Courts",notification
+FSO_SEND_BACK,"Hello,
+Errors have been identified in case {{efilingNumber}} during scrutiny. Log in to oncourts.kerala.gov.in to rectify the file within 3 days.
+- ON Courts",notification
+HEARINGS_HELD_TODAY_MULTIPLE,"Hello,
+Your {{caseCount}} cases had hearings today. Log in to oncourts.kerala.gov.in to view hearing dates, orders, and more details.
+- ON Courts",notification
+HEARINGS_HELD_TODAY_SINGLE,"Hello,
+The next hearing of your case {{cmpNumber}} is scheduled for {{hearingDate}}. Log in to oncourts.kerala.gov.in for details.
+- ON Courts",notification
+HEARINGS_SCHEDULED_TOMORROW_MULTIPLE,"Hello,
+You have hearings scheduled tomorrow for {{caseCount}} cases. Virtual link: {{link}}
+- ON Courts",notification
+HEARINGS_SCHEDULED_TOMORROW_SINGLE,"Hello,
+You have a hearing tomorrow for case {{cmpNumber}}. Virtual link: {{link}}
+- ON Courts",notification
+HEARING_RESCHEDULED,"Hello,
+The hearing for case {{cmpNumber}} on {{oldHearingDate}} has been rescheduled to {{hearingDate}}. Log in to oncourts.kerala.gov.in for details.
+- ON Courts",notification
+HEARING_SCHEDULED,"Hello,
+Your case {{efilingNumber}} is registered as {{cmpNumber}} with hearing scheduled for {{hearingDate}}. Log in to oncourts.kerala.gov.in for details.
+- ON Courts",notification
+MANDATORY_SUBMISSION_PENDING,"Hello,
+You have a mandatory submission due in case {{cmpNumber}}. Log into oncourts.kerala.gov.in to make the submission by {{submissionDueDate}}.
+- ON Courts",notification
+NOTICE_ISSUED,"Hello,
+Notice has been issued to you to appear in court for case {{cmpNumber}}. Visit the 24x7 ON Courts platform to access the digital notice.
+- ON Courts",notification
+ORDER_ISSUED,"Hello,
+An order was issued in your case {{cmpNumber}}. Log in to oncourts.kerala.gov.in for details.
+- ON Courts",notification
+PAYMENT_COMPLETED_SUCCESSFULLY,"Hello,
+A payment has been made in your case {{cmpNumber}}. Log in to oncourts.kerala.gov.in for details.
+- ON Courts",notification
+PROCESS_FEE_PAYMENT,"Hello,
+A {{orderType}} has been issued against {{partyType}} in your case {{cmpNumber}}. Log into oncourts.kerala.gov.in to pay the fee within {{days}} days.
+- ON Courts",notification
+PROCESS_FEE_PAYMENT_PENDING,"Hello,
+You have process payment(s) pending. Please log in to oncourts.kerala.gov.in and pay immediately to ensure your cases move forward.
+- ON Courts",notification
+RPAD_SUBMISSION,"Hello,
+A RPAD envelope is due in your case {{cmpNumber}}. Please submit within {{days}} days at the 24x7 ON Court courtroom. Ignore if already done.
+- ON Courts",notification
+RPAD_SUBMISSION_PENDING,"Hello,
+You have RPAD payment(s) pending. Please pay at the 24x7 ON Court courtroom immediately to ensure your cases move forward. Ignore if already paid.
+- ON Courts",notification
+SIGN_EXAMINATION_DOCUMENT,"Hello,
+Please e-Sign the Examination Record as accused for case {{cmpNumber}} here: {{shortenedUrl}}
+- ON Courts",notification
+SUBMISSION_MADE,"Hello,
+A {{partyType}} has made a submission in your case {{cmpNumber}}. Log in to oncourts.kerala.gov.in for details.
+- ON Courts",notification
+SUMMONS_ISSUED,"Hello,
+Summons have been issued to you to appear in court for case {{cmpNumber}}. Visit the 24x7 ON Courts platform to access the digital summons.
+- ON Courts",notification
+USER_LOGIN_OTP,"Hello,
+Please use the OTP {{otpNumber}} to log in to your ON Courts account.
+- ON Courts",notification
+VAKALATNAMA_FILED,"Hello,
+The next hearing of your case {{cmpNumber}} is scheduled for {{hearingDate}}. Log in to oncourts.kerala.gov.in for case details.
+- ON Courts",notification
+WITNESS_DEPOSITION_MESSAGE,"Hello,
+Please e-Sign the deposition as a witness for case {{filingNumber}} here: {{shortenedUrl}}
+- ON Courts",notification
+sms.login.otp.msg,"Hello,
+Please use the OTP %s to log in to your ON Courts account.
+- ON Courts",egov-user
+sms.login.otp.msg,"Hello,
+Please use the OTP {{otp}} to log in to your ON Courts account.
+- ON Courts",notification
