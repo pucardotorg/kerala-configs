@@ -50,11 +50,6 @@
         "layout": "noBorders"
       },
       {
-        "text": "Next Hearing Date: {{hearingDate}}",
-        "style": "next-hearing-date",
-        "layout": "noBorders"
-      },
-      {
         "columns": [
           {
             "text": "Between:",
@@ -79,6 +74,11 @@
           }
         ],
         "margin": [0, 10]
+      },
+      {
+        "text": "Next Hearing Date: {{hearingDate}}",
+        "style": "next-hearing-date",
+        "layout": "noBorders"
       },
       {
         "table": {
