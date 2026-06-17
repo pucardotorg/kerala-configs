@@ -55,15 +55,7 @@
         "layout": "noBorders"
       },
       {
-        "text": [
-          {
-            "text": "Next Hearing Date: "
-          },
-          {
-            "text": "{{hearingDate}}",
-            "bold": false
-          }
-        ],
+        "text": "Next Hearing Date: {{hearingDate}}",
         "style": "next-hearing-date",
         "layout": "noBorders"
       },
