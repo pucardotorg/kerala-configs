@@ -197,6 +197,12 @@
                     "text": " Entity Type: {{currentEntityType}}",
                     "style": "bodyText"
                   },
+                  "{{#currentAddressCompanyDetails}}",
+                  {
+                    "text": "{{address}}",
+                    "style": "bodyText"
+                  },
+                  "{{/currentAddressCompanyDetails}}",
                   "{{/isEntity}}",
                   {
                     "text": "New Details: ",
@@ -234,6 +240,22 @@
                     "style": "bodyText"
                   },
                   "{{/newResedentialAddress}}",
+                  "{{#isEntity}}",
+                  {
+                    "text": " Company Name: {{newCompanyName}}",
+                    "style": "bodyText"
+                  },
+                  {
+                    "text": " Entity Type: {{newEntityType}}",
+                    "style": "bodyText"
+                  },
+                  "{{#newAddressCompanyDetails}}",
+                  {
+                    "text": "{{address}}",
+                    "style": "bodyText"
+                  },
+                  "{{/newAddressCompanyDetails}}",
+                  "{{/isEntity}}",
                   {
                     "text": "The petitioner assures and undertakes to the Honorable Court that this request is made in good faith and will not prejudice the other party.",
                     "style": "bodyText"
