@@ -177,7 +177,6 @@
                     "text": "Addresses:",
                     "style": "bodyText"
                   },
-                  "{{#currentPermanentAddress}}",
                   {
                     "text": "{{address}}",
                     "style": "bodyText"
@@ -238,7 +237,6 @@
                     "text": "Addresses:",
                     "style": "bodyText"
                   },
-                  "{{#newPermanentAddress}}",
                   {
                     "text": "{{address}}",
                     "style": "bodyText"
@@ -249,7 +247,6 @@
                     "text": "Addresses:",
                     "style": "bodyText"
                   },
-                  "{{/newResedentialAddress}}",
                   {
                     "text": "{{address}}",
                     "style": "bodyText"
