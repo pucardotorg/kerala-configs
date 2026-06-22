@@ -76,6 +76,11 @@
         "margin": [0, 10]
       },
       {
+        "text": "Next Hearing Date: {{hearingDate}}",
+        "style": "next-hearing-date",
+        "layout": "noBorders"
+      },
+      {
         "table": {
           "widths": ["*"],
           "body": [
@@ -411,6 +416,13 @@
       }
     ],
     "styles": {
+      "next-hearing-date": {
+        "fontSize": 12,
+        "bold": true,
+        "color": "#000000",
+        "alignment": "right",
+        "margin": [0, 0, 0, 10]
+      },
       "form-header": {
         "color": "#252525",
         "fontFamily": "Roboto",
