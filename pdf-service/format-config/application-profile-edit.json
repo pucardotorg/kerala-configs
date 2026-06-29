@@ -294,7 +294,7 @@
                     "margin": [0, 60, 0, 5]
                   },
                   {
-                    "text": "Advocate for {{partyName}}",
+                    "text": "Advocate for {{advocateRepresentingName}}",
                     "style": "signature"
                   }
                 ],
