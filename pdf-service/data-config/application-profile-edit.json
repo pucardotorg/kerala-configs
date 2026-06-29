@@ -109,6 +109,12 @@
                 }
               },
               {
+                "variable": "advocateRepresentingName",
+                "value": {
+                  "path": "$.advocateRepresentingName"
+                }
+              },
+              {
                 "variable": "currentName",
                 "value": {
                   "path": "$.currentName"
