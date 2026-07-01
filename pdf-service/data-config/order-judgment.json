@@ -1,0 +1,267 @@
+{
+  "key": "order-judgment",
+  "DataConfigs": {
+    "serviceName": "rainmaker-common",
+    "version": "1.0.0",
+    "baseKeyPath": "$.Data.*",
+    "entityIdPath": "$.id",
+    "isCommonTableBorderRequired": true,
+    "mappings": [
+      {
+        "topic": "common-pdf-generation-3",
+        "mappings": [
+          {
+            "direct": [
+              {
+                "variable": "courtName",
+                "value": {
+                  "path": "$.courtName"
+                }
+              },
+              {
+                "variable": "judgeName",
+                "value": {
+                  "path": "$.judgeName"
+                }
+              },
+              {
+                "variable": "judgeDesignation",
+                "value": {
+                  "path": "$.judgeDesignation"
+                }
+              },
+              {
+                "variable": "judgementDate",
+                "value": {
+                  "path": "$.judgementDate"
+                }
+              },
+              {
+                "variable": "caseNumber",
+                "value": {
+                  "path": "$.caseNumber"
+                }
+              },
+              {
+                "variable": "complaintName",
+                "value": {
+                  "path": "$.complaintName"
+                }
+              },
+              {
+                "variable": "complaintAge",
+                "value": {
+                  "path": "$.complaintAge"
+                }
+              },
+              {
+                "variable": "complaintAddress",
+                "value": {
+                  "path": "$.complaintAddress"
+                }
+              },
+              {
+                "variable": "complaintAdvocate",
+                "value": {
+                  "path": "$.complaintAdvocate"
+                }
+              },
+              {
+                "variable": "respondantName",
+                "value": {
+                  "path": "$.respondantName"
+                }
+              },
+              {
+                "variable": "respondantAge",
+                "value": {
+                  "path": "$.respondantAge"
+                }
+              },
+              {
+                "variable": "fatherName",
+                "value": {
+                  "path": "$.fatherName"
+                }
+              },
+              {
+                "variable": "respondantAddress",
+                "value": {
+                  "path": "$.respondantAddress"
+                }
+              },
+              {
+                "variable": "respondantAdvocate",
+                "value": {
+                  "path": "$.respondantAdvocate"
+                }
+              },
+              {
+                "variable": "sectionAct",
+                "value": {
+                  "path": "$.sectionAct"
+                }
+              },
+              {
+                "variable": "plea",
+                "value": {
+                  "path": "$.plea"
+                }
+              },
+              {
+                "variable": "finding",
+                "value": {
+                  "path": "$.finding"
+                }
+              },
+              {
+                "variable": "sentence",
+                "value": {
+                  "path": "$.sentence"
+                }
+              },
+              {
+                "variable": "accusedName",
+                "value": {
+                  "path": "$.accusedName"
+                }
+              },
+              {
+                "variable": "fathersName",
+                "value": {
+                  "path": "$.fathersName"
+                }
+              },
+              {
+                "variable": "age",
+                "value": {
+                  "path": "$.age"
+                }
+              },
+              {
+                "variable": "village",
+                "value": {
+                  "path": "$.village"
+                }
+              },
+              {
+                "variable": "taluk",
+                "value": {
+                  "path": "$.taluk"
+                }
+              },
+              {
+                "variable": "caseNo",
+                "value": {
+                  "path": "$.caseNo"
+                }
+              },
+              {
+                "variable": "occurrenceDate",
+                "value": {
+                  "path": "$.occurrenceDate"
+                }
+              },
+              {
+                "variable": "complaintDate",
+                "value": {
+                  "path": "$.complaintDate"
+                }
+              },
+              {
+                "variable": "apprehensionDate",
+                "value": {
+                  "path": "$.apprehensionDate"
+                }
+              },
+              {
+                "variable": "releaseDate",
+                "value": {
+                  "path": "$.releaseDate"
+                }
+              },
+              {
+                "variable": "trialCommencementDate",
+                "value": {
+                  "path": "$.trialCommencementDate"
+                }
+              },
+              {
+                "variable": "closeOfTrialDate",
+                "value": {
+                  "path": "$.closeOfTrialDate"
+                }
+              },
+              {
+                "variable": "sentenceOrder",
+                "value": {
+                  "path": "$.sentenceOrder"
+                }
+              },
+              {
+                "variable": "contents",
+                "value": {
+                  "path": "$.contents"
+                }
+              },
+              {
+                "variable": "judgeSignature",
+                "value": {
+                  "path": "$.judgeSignature"
+                }
+              },
+              {
+                "variable": "complainantWitnessIndex",
+                "value": {
+                  "path": "$.complainantWitnessIndex"
+                }
+              },
+              {
+                "variable": "complainantWitnessContent",
+                "value": {
+                  "path": "$.complainantWitnessContent"
+                }
+              },
+              {
+                "variable": "exhibitsComplainantIndex",
+                "value": {
+                  "path": "$.exhibitsComplainantIndex"
+                }
+              },
+              {
+                "variable": "exhibitsComplainantContent",
+                "value": {
+                  "path": "$.exhibitsComplainantContent"
+                }
+              },
+              {
+                "variable": "defenceWitnessIndex",
+                "value": {
+                  "path": "$.defenceWitnessIndex"
+                }
+              },
+              {
+                "variable": "defenceWitnessContent",
+                "value": {
+                  "path": "$.defenceWitnessContent"
+                }
+              },
+              {
+                "variable": "exhibitsDefenceIndex",
+                "value": {
+                  "path": "$.exhibitsDefenceIndex"
+                }
+              },
+              {
+                "variable": "exhibitsDefenceContent",
+                "value": {
+                  "path": "$.exhibitsDefenceContent"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
