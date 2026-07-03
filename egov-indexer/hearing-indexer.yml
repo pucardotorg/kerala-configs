@@ -11,7 +11,22 @@ ServiceMaps:
           isBulk: false
           timeStampField: $.hearing.auditDetails.createdTime
           customJsonMapping:
-            indexMapping: {"Data":{"hearing":{},"history":{ },"auditDetails":{"createdBy":"","lastModifiedBy":"","createdTime":"","lastModifiedTime":""},"currentProcessInstance":{}}}
+            indexMapping:
+              {
+                "Data":
+                  {
+                    "hearing": {},
+                    "history": {},
+                    "auditDetails":
+                      {
+                        "createdBy": "",
+                        "lastModifiedBy": "",
+                        "createdTime": "",
+                        "lastModifiedTime": "",
+                      },
+                    "currentProcessInstance": {},
+                  },
+              }
             fieldMapping:
               - inJsonPath: $.hearing
                 outJsonPath: $.Data.hearing
@@ -24,9 +39,31 @@ ServiceMaps:
               - inJsonPath: $.hearing.auditDetails.lastModifiedTime
                 outJsonPath: $.Data.auditDetails.lastModifiedTime
             externalUriMapping:
-              - path: http://egov-workflow-v2.pucar-stg:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2.pucar-prod:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.hearing.hearingId,tenantId=$.hearing.tenantId,history=true
-                apiRequest: { "RequestInfo": { "apiId": "","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "pg","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "pg" } ] } } }
+                apiRequest:
+                  {
+                    "RequestInfo":
+                      {
+                        "apiId": "",
+                        "ver": "1.0",
+                        "ts": 1502890899493,
+                        "action": "asd",
+                        "did": "4354648646",
+                        "key": "xyz",
+                        "msgId": "654654",
+                        "requesterId": "61",
+                        "authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8",
+                        "userInfo":
+                          {
+                            "id": 1,
+                            "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067",
+                            "type": "EMPLOYEE",
+                            "tenantId": "pg",
+                            "roles": [ { "name": "Employee", "code": "EMPLOYEE", "tenantId": "pg" } ],
+                          },
+                      },
+                  }
                 uriResponseMapping:
                   - inJsonPath: $.ProcessInstances
                     outJsonPath: $.Data.history
@@ -42,7 +79,22 @@ ServiceMaps:
           isBulk: false
           timeStampField: $.hearing.auditDetails.createdTime
           customJsonMapping:
-            indexMapping: {"Data":{"hearing":{},"history":{ },"auditDetails":{"createdBy":"","lastModifiedBy":"","createdTime":"","lastModifiedTime":""},"currentProcessInstance":{}}}
+            indexMapping:
+              {
+                "Data":
+                  {
+                    "hearing": {},
+                    "history": {},
+                    "auditDetails":
+                      {
+                        "createdBy": "",
+                        "lastModifiedBy": "",
+                        "createdTime": "",
+                        "lastModifiedTime": "",
+                      },
+                    "currentProcessInstance": {},
+                  },
+              }
             fieldMapping:
               - inJsonPath: $.hearing
                 outJsonPath: $.Data.hearing
@@ -55,9 +107,31 @@ ServiceMaps:
               - inJsonPath: $.hearing.auditDetails.lastModifiedTime
                 outJsonPath: $.Data.auditDetails.lastModifiedTime
             externalUriMapping:
-              - path: http://egov-workflow-v2.pucar-stg:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2.pucar-prod:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.hearing.hearingId,tenantId=$.hearing.tenantId,history=true
-                apiRequest: { "RequestInfo": { "apiId": "","ver": "1.0","ts": 1502890899493,"action": "asd","did": "4354648646","key": "xyz","msgId": "654654","requesterId": "61","authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8","userInfo": { "id": 1,"uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067","type": "EMPLOYEE","tenantId": "pg","roles": [ { "name": "Employee","code": "EMPLOYEE","tenantId": "pg" } ] } } }
+                apiRequest:
+                  {
+                    "RequestInfo":
+                      {
+                        "apiId": "",
+                        "ver": "1.0",
+                        "ts": 1502890899493,
+                        "action": "asd",
+                        "did": "4354648646",
+                        "key": "xyz",
+                        "msgId": "654654",
+                        "requesterId": "61",
+                        "authToken": "d9994555-7656-4a67-ab3a-a952a0d4dfc8",
+                        "userInfo":
+                          {
+                            "id": 1,
+                            "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067",
+                            "type": "EMPLOYEE",
+                            "tenantId": "pg",
+                            "roles": [ { "name": "Employee", "code": "EMPLOYEE", "tenantId": "pg" } ],
+                          },
+                      },
+                  }
                 uriResponseMapping:
                   - inJsonPath: $.ProcessInstances
                     outJsonPath: $.Data.history
@@ -87,7 +161,7 @@ ServiceMaps:
                 "stage": "",
                 "substage": "",
                 "filingDateTime": "",
-                "registrationDateTime": ""
+                "registrationDateTime": "",
               }
 
             fieldMapping:
@@ -109,29 +183,25 @@ ServiceMaps:
                 outJsonPath: $.filingNumber
             # TODO : need to review case search api related to ticket 2494
             externalUriMapping:
-              - path: http://case.pucar-stg:8080/case/v1/_search
-                apiRequest: {
-                  "criteria": [
-                    { "filingNumber": "$.filingNumber[0]" }
-                  ],
-                  "RequestInfo": {
-                    "apiId": "Rainmaker",
-                    "authToken": "9e737b13-14d2-45e7-8b96-09de66952e81",
-                    "msgId": "1730970507148|en_IN",
-                    "plainAccessRequest": { },
-                    "userInfo": {
-                      "userName": "newUser",
-                      "uuid": "r456t5tt4fr454tt5tt",
-                      "type": "EMPLOYEE",
-                      "roles": [
-                        {
-                          "name": "TASK_CREATOR",
-                          "code": "TASK_CREATOR"
-                        }
-                      ]
-                    }
+              - path: http://case.pucar-prod:8080/case/v1/_search
+                apiRequest:
+                  {
+                    "criteria": [ { "filingNumber": "$.filingNumber[0]" } ],
+                    "RequestInfo":
+                      {
+                        "apiId": "Rainmaker",
+                        "authToken": "9e737b13-14d2-45e7-8b96-09de66952e81",
+                        "msgId": "1730970507148|en_IN",
+                        "plainAccessRequest": {},
+                        "userInfo":
+                          {
+                            "userName": "newUser",
+                            "uuid": "r456t5tt4fr454tt5tt",
+                            "type": "EMPLOYEE",
+                            "roles": [ { "name": "TASK_CREATOR", "code": "TASK_CREATOR" } ],
+                          },
+                      },
                   }
-                }
                 uriResponseMapping:
                   - inJsonPath: $.criteria[0].responseList[0].stage
                     outJsonPath: $.stage
@@ -141,5 +211,3 @@ ServiceMaps:
                     outJsonPath: $.filingDateTime
                   - inJsonPath: $.criteria[0].responseList[0].registrationDateTime
                     outJsonPath: $.registrationDateTime
-
-

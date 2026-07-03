@@ -12,11 +12,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.reScheduleHearing
           customJsonMapping:
-            indexMapping:
-              {
-                "Data":
-                  { "reScheduleHearing": {}, "history": {}, "auditDetails": {} },
-              }
+            indexMapping: { "Data": { "reScheduleHearing": {}, "history": {}, "auditDetails": {} } }
             fieldMapping:
               - inJsonPath: $.rescheduledRequestId
                 outJsonPath: $.Data.reScheduleHearing.rescheduledRequestId
@@ -53,7 +49,7 @@ ServiceMaps:
               - inJsonPath: $.availableDates
                 outJsonPath: $.Data.reScheduleHearing.availableDates
             externalUriMapping:
-              - path: http://egov-workflow-v2.pucar-stg:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2.pucar-prod:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
                 apiRequest:
                   {
@@ -74,14 +70,7 @@ ServiceMaps:
                             "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067",
                             "type": "EMPLOYEE",
                             "tenantId": "kl",
-                            "roles":
-                              [
-                                {
-                                  "name": "Employee",
-                                  "code": "EMPLOYEE",
-                                  "tenantId": "kl",
-                                },
-                              ],
+                            "roles": [ { "name": "Employee", "code": "EMPLOYEE", "tenantId": "kl" } ],
                           },
                       },
                   }
@@ -93,7 +82,6 @@ ServiceMaps:
                   - inJsonPath: $.ProcessInstances[0].state.uuid
                     outJsonPath: $.Data.status
 
-
     - topic: update-reschedule-hearing
       configKey: INDEX
       indexes:
@@ -104,11 +92,7 @@ ServiceMaps:
           timeStampField: $.auditDetails.createdTime
           jsonPath: $.reScheduleHearing
           customJsonMapping:
-            indexMapping:
-              {
-                "Data":
-                  { "reScheduleHearing": {}, "history": {}, "auditDetails": {} },
-              }
+            indexMapping: { "Data": { "reScheduleHearing": {}, "history": {}, "auditDetails": {} } }
             fieldMapping:
               - inJsonPath: $.rescheduledRequestId
                 outJsonPath: $.Data.reScheduleHearing.rescheduledRequestId
@@ -145,7 +129,7 @@ ServiceMaps:
               - inJsonPath: $.availableDates
                 outJsonPath: $.Data.reScheduleHearing.availableDates
             externalUriMapping:
-              - path: http://egov-workflow-v2.pucar-stg:8080/egov-workflow-v2/egov-wf/process/_search
+              - path: http://egov-workflow-v2.pucar-prod:8080/egov-workflow-v2/egov-wf/process/_search
                 queryParam: businessIds=$.applicationNumber,tenantId=$.tenantId,history=true
                 apiRequest:
                   {
@@ -166,14 +150,7 @@ ServiceMaps:
                             "uuid": "1fec8102-0e02-4d0a-b283-cd80d5dab067",
                             "type": "EMPLOYEE",
                             "tenantId": "kl",
-                            "roles":
-                              [
-                                {
-                                  "name": "Employee",
-                                  "code": "EMPLOYEE",
-                                  "tenantId": "kl",
-                                },
-                              ],
+                            "roles": [ { "name": "Employee", "code": "EMPLOYEE", "tenantId": "kl" } ],
                           },
                       },
                   }
