@@ -207,3 +207,24 @@ serviceMaps:
             - jsonPath: $.orderDetailsDTO.auditDetails.lastModifiedBy
             - jsonPath: $.orderDetailsDTO.auditDetails.lastModifiedTime
             - jsonPath: $.orderDetailsDTO.orderNumber
+
+    - version: 1.0
+      description: Update partyUniqueIds on dristi_orders
+      fromTopic: update-order-partyuniqueids
+      isTransaction: true
+      isAuditEnabled: true
+      module: ORDER
+      objecIdJsonPath: $.id
+      tenantIdJsonPath: $.tenantId
+      transactionCodeJsonPath: $.filingNumber
+      auditAttributeBasePath: order
+      queryMaps:
+        - query: UPDATE dristi_orders SET partyuniqueids=?, lastmodifiedby=?, lastModifiedTime=? WHERE id=?;
+          basePath: order
+          jsonMaps:
+            - jsonPath: $.order.partyUniqueIds
+              type: JSON
+              dbType: JSONB
+            - jsonPath: $.order.auditDetails.lastModifiedBy
+            - jsonPath: $.order.auditDetails.lastModifiedTime
+            - jsonPath: $.order.id

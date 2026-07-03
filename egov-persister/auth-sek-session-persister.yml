@@ -10,7 +10,7 @@ serviceMaps:
       tenantIdJsonPath: $.RequestInfo.userInfo.tenantId
       auditAttributeBasePath: $
       queryMaps:
-        - query: INSERT INTO auth_sek_session_data (auth_token, decrypted_sek, bill_id, business_service, service_number, total_due, mobile_number, paid_by, session_time, department_id, request_blob) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        - query: INSERT INTO auth_sek_session_data (auth_token, decrypted_sek, bill_id, business_service, service_number, total_due, mobile_number, paid_by, session_time, department_id, request_blob, payment_status, completion_source, verification_timestamp, processed_status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: $
           jsonMaps:
             - jsonPath: $.AuthSek.authToken
@@ -26,6 +26,10 @@ serviceMaps:
             - jsonPath: $.AuthSek.requestBlob
               type: JSON
               dbType: JSONB
+            - jsonPath: $.AuthSek.paymentStatus
+            - jsonPath: $.AuthSek.completionSource
+            - jsonPath: $.AuthSek.verificationTimestamp
+            - jsonPath: $.AuthSek.processedStatus
 
     - version: 1.0
       description: Treasury Payment Data
