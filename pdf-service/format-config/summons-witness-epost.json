@@ -89,6 +89,18 @@
               }
             ],
             "{{/complainantList}}",
+            [
+              {
+                "text": "",
+                "style": "party-cell",
+                "border": [true, false, false, false]
+              },
+              {
+                "text": "",
+                "style": "party-cell",
+                "border": [false, false, true, false]
+              }
+            ],
             "{{#accusedList}}",
             [
               {
@@ -115,6 +127,18 @@
               }
             ],
             "{{/accusedList}}",
+            [
+              {
+                "text": "",
+                "style": "party-cell",
+                "border": [true, false, false, false]
+              },
+              {
+                "text": "",
+                "style": "party-cell",
+                "border": [false, false, true, false]
+              }
+            ],
             [
               {
                 "text": "Offence",
