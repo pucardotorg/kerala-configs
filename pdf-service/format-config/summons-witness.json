@@ -59,6 +59,79 @@
         "layout": "noBorders"
       },
       {
+        "style": "party-table",
+        "table": {
+          "widths": ["30%", "70%"],
+          "body": [
+            "{{#complainantList}}",
+            [
+              {
+                "text": "Complainant {{index}}",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "{{name}}",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              }
+            ],
+            [
+              {
+                "text": "Advocate(s)",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "{{listOfAdvocatesRepresenting}}",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              }
+            ],
+            "{{/complainantList}}",
+            "{{#accusedList}}",
+            [
+              {
+                "text": "Accused {{index}}",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "{{name}}",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              }
+            ],
+            [
+              {
+                "text": "Advocate(s)",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "{{listOfAdvocatesRepresenting}}",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              }
+            ],
+            "{{/accusedList}}",
+            [
+              {
+                "text": "Offence",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "S.138 of the Negotiable Instruments Act, 1881",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              }
+            ]
+          ]
+        },
+        "margin": [0, 10, 0, 10]
+      },
+      {
         "style": "form-body",
         "table": {
           "widths": ["*"],
@@ -71,7 +144,7 @@
             ],
             [
               {
-                "text": "WHEREAS complaint has been made before me that {{respondentName}} of {{respondentAddress}} has (or is suspected to have) committed the offence  U/s. 138 of Negotiable Instruments Act, and it appears to me that you are likely to give material evidence or to produce any document or other thing for the prosecution;",
+                "text": "In the above mentioned case, involving the above listed parties, it appears to me that you are likely to give material evidence or to produce any document or other thing;",
                 "style": "form-sub-body"
               }
             ],
@@ -122,6 +195,15 @@
         "color": "#000000",
         "alignment": "right",
         "margin": [0, 0, 0, 10]
+      },
+      "party-table": {
+        "fontSize": 12,
+        "color": "#484848"
+      },
+      "party-cell": {
+        "fontSize": 12,
+        "color": "#484848",
+        "margin": [2, 5, 2, 5]
       },
       "form-header": {
         "color": "#484848",
