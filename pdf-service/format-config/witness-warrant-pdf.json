@@ -59,6 +59,103 @@
         "layout": "noBorders"
       },
       {
+        "style": "party-table",
+        "table": {
+          "widths": ["30%", "70%"],
+          "body": [
+            "{{#complainantList}}",
+            [
+              {
+                "text": "Complainant {{index}}",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "{{name}}",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              }
+            ],
+            [
+              {
+                "text": "Advocate(s)",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "{{listOfAdvocatesRepresenting}}",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              }
+            ],
+            "{{/complainantList}}",
+            [
+              {
+                "text": "",
+                "style": "party-cell",
+                "border": [true, false, false, false]
+              },
+              {
+                "text": "",
+                "style": "party-cell",
+                "border": [false, false, true, false]
+              }
+            ],
+            "{{#accusedList}}",
+            [
+              {
+                "text": "Accused {{index}}",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "{{name}}",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              }
+            ],
+            [
+              {
+                "text": "Advocate(s)",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "{{listOfAdvocatesRepresenting}}",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              }
+            ],
+            "{{/accusedList}}",
+            [
+              {
+                "text": "",
+                "style": "party-cell",
+                "border": [true, false, false, false]
+              },
+              {
+                "text": "",
+                "style": "party-cell",
+                "border": [false, false, true, false]
+              }
+            ],
+            [
+              {
+                "text": "Offence",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              },
+              {
+                "text": "S.138 of the Negotiable Instruments Act, 1881",
+                "style": "party-cell",
+                "border": [true, true, true, true]
+              }
+            ]
+          ]
+        },
+        "margin": [0, 10, 0, 10]
+      },
+      {
         "style": "form-body",
         "table": {
           "widths": [
@@ -75,7 +172,7 @@
               {
                 "text": [
                   {
-                    "text": "Whereas complaint has been made before me that {{respondentName}} of {{respondentAddress}} has (or is suspected to have) committed the offence U/s. 138 of Negotiable Instruments Act, and it appears likely that {{respondentName}} can give evidence concerning the said complaint, and whereas I have good and sufficient reason to believe that he will not attend as a witness on the hearing of the said complaint unless compelled to do so;"
+                    "text": "In the above mentioned case, involving the above listed parties, it appears to me that {{witnessName}} is likely to give material evidence or to produce any document or other thing, and whereas I have good and sufficient reason to believe that he will not attend as a witness on the hearing of the said complaint unless compelled to do so;"
                   }
                 ],
                 "style": "form-sub-body"
@@ -83,7 +180,7 @@
             ],
             [
               {
-                "text": "This is to authorise and require you to arrest {{respondentName}}, and on the {{hearingDate}} to bring him before the Special Court of Judicial Magistrate of the First Class, for the trial of cases under section 138 of Negotiable Instruments Act, 1881 at Kollam (‘24x7 ON Courts’) to be examined touching the offence complained of.",
+                "text": "This is to authorise and require you to arrest {{witnessName}} of {{respondentAddress}}, and on the {{hearingDate}} to bring him before the Special Court of Judicial Magistrate of the First Class, for the trial of cases under section 138 of Negotiable Instruments Act, 1881 at Kollam (‘24x7 ON Courts’) to be examined touching the offence complained of.",
                 "style": "form-sub-body"
               }
             ]
@@ -140,6 +237,15 @@
         "color": "#000000",
         "alignment": "right",
         "margin": [0, 0, 0, 10]
+      },
+      "party-table": {
+        "fontSize": 12,
+        "color": "#484848"
+      },
+      "party-cell": {
+        "fontSize": 12,
+        "color": "#484848",
+        "margin": [2, 5, 2, 5]
       },
       "tl-head": {
         "fillColor": "white",
