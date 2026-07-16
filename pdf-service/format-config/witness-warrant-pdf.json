@@ -43,9 +43,9 @@
                 "alignment": "center",
                 "margin": [
                   0,
-                  20,
+                  10,
                   0,
-                  20
+                  10
                 ]
               }
             ]
@@ -92,12 +92,12 @@
             [
               {
                 "text": "",
-                "style": "party-cell",
+                "style": "empty-party-cell",
                 "border": [true, false, false, false]
               },
               {
                 "text": "",
-                "style": "party-cell",
+                "style": "empty-party-cell",
                 "border": [false, false, true, false]
               }
             ],
@@ -130,12 +130,12 @@
             [
               {
                 "text": "",
-                "style": "party-cell",
+                "style": "empty-party-cell",
                 "border": [true, false, false, false]
               },
               {
                 "text": "",
-                "style": "party-cell",
+                "style": "empty-party-cell",
                 "border": [false, false, true, false]
               }
             ],
@@ -189,9 +189,9 @@
         "layout": "noBorders",
         "margin": [
           0,
-          20,
+          15,
           0,
-          20
+          15
         ]
       },
       {
@@ -224,7 +224,7 @@
         "layout": "noBorders",
         "margin": [
           0,
-          20,
+          10,
           0,
           0
         ]
@@ -243,9 +243,14 @@
         "color": "#484848"
       },
       "party-cell": {
-        "fontSize": 12,
+        "fontSize": 10,
         "color": "#484848",
-        "margin": [2, 5, 2, 5]
+        "margin": [0, 2, 0, 2]
+      },
+      "empty-party-cell": {
+        "fontSize": 5,
+        "color": "#484848",
+        "margin": [0, 0, 0, 0]
       },
       "tl-head": {
         "fillColor": "white",
@@ -317,7 +322,7 @@
           0,
           30,
           0,
-          20
+          0
         ],
         "bold": true,
         "color": "#000000",
