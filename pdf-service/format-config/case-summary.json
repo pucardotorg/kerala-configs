@@ -1,0 +1,226 @@
+{
+  "key": "case-summary",
+  "config": {
+    "pageSize": "A4",
+    "pageMargins": [40, 40, 40, 40],
+    "content": [
+      {
+        "table": {
+          "widths": ["*"],
+          "body": [
+            [
+              {
+                "stack": [
+                  {
+                    "text": "Before {{courtName}}",
+                    "style": "header"
+                  },
+                  {
+                    "text": "Case No: {{caseNumber}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
+                  },
+                  {
+                    "text": "In the matter of: {{caseName}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 0]
+                  },
+                  {
+                    "text": "Date: {{date}}",
+                    "style": "header",
+                    "margin": [0, 5, 0, 15]
+                  },
+                  {
+                    "style": "table",
+                    "table": {
+                      "widths": ["30%", "70%"],
+                      "body": [
+                        "{{#complainantList}}",
+                        [
+                          {
+                            "text": "Complainant {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/complainantList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        "{{#accusedList}}",
+                        [
+                          {
+                            "text": "Accused {{index}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{name}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Advocate(s)",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{listOfAdvocatesRepresenting}}",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/accusedList}}",
+                        [
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [true, false, false, false]
+                          },
+                          {
+                            "text": "",
+                            "style": "tableText",
+                            "border": [false, false, true, false]
+                          }
+                        ],
+                        [
+                          {
+                            "text": "Offence",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "S.138 of the Negotiable Instruments Act, 1881",
+                            "style": "tableText",
+                            "border": [true, true, true, true]
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "text": "",
+                    "margin": [0, 0, 0, 15]
+                  },
+                  {
+                    "style": "hearingTable",
+                    "table": {
+                      "headerRows": 1,
+                      "widths": ["35%", "65%"],
+                      "body": [
+                        [
+                          {
+                            "text": "Date and Purpose of Hearing",
+                            "style": "hearingTableHeader",
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "BoTD",
+                            "style": "hearingTableHeader",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{#hearings}}",
+                        [
+                          {
+                            "stack": [
+                              {
+                                "text": "{{date}}",
+                                "style": "hearingDate"
+                              },
+                              {
+                                "text": "{{purpose}}",
+                                "style": "hearingPurpose"
+                              }
+                            ],
+                            "border": [true, true, true, true]
+                          },
+                          {
+                            "text": "{{businessOfTheDay}}",
+                            "style": "hearingBotd",
+                            "border": [true, true, true, true]
+                          }
+                        ],
+                        "{{/hearings}}"
+                      ]
+                    }
+                  }
+                ],
+                "alignment": "left",
+                "margin": [0, 20, 0, 20]
+              }
+            ]
+          ]
+        },
+        "layout": "noBorders"
+      }
+    ],
+    "styles": {
+      "header": {
+        "fontSize": 14,
+        "bold": true,
+        "alignment": "center",
+        "margin": [0, 0, 0, 0]
+      },
+      "table": {
+        "fontSize": 13
+      },
+      "tableText": {
+        "fontSize": 13,
+        "margin": [2, 5, 2, 5]
+      },
+      "hearingTable": {
+        "fontSize": 12
+      },
+      "hearingTableHeader": {
+        "fontSize": 12,
+        "bold": true,
+        "fillColor": "#EAEAEA",
+        "margin": [4, 6, 4, 6]
+      },
+      "hearingDate": {
+        "fontSize": 12,
+        "bold": true,
+        "margin": [4, 6, 4, 2]
+      },
+      "hearingPurpose": {
+        "fontSize": 11,
+        "color": "#3D3C3C",
+        "margin": [4, 0, 4, 6]
+      },
+      "hearingBotd": {
+        "fontSize": 11,
+        "alignment": "justify",
+        "margin": [4, 6, 4, 6]
+      }
+    }
+  }
+}
